@@ -26,7 +26,56 @@ export default function Index() {
     // Marcar início do tempo para cálculo de completion time
     window.formStartTime = performance.now();
 
-    // Registrar pageview
+    // Inicializar Google Analytics 4
+    if (GA4_MEASUREMENT_ID) {
+      // Carregar script do GA4
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
+      document.head.appendChild(gaScript);
+
+      // Configurar gtag
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(...args: any[]) {
+        window.dataLayer.push(args);
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', GA4_MEASUREMENT_ID, {
+        page_title: 'Seja Lojista Oficial Ecko',
+        page_location: window.location.href,
+        custom_map: {
+          'custom_parameter_1': 'traffic_source',
+          'custom_parameter_2': 'lead_type',
+          'custom_parameter_3': 'lead_quality'
+        }
+      });
+    }
+
+    // Inicializar Facebook Pixel
+    if (META_PIXEL_ID) {
+      // Carregar script do Facebook Pixel
+      !function(f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
+        if(f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if(!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+      window.fbq('init', META_PIXEL_ID);
+      window.fbq('track', 'PageView');
+    }
+
+    // Registrar pageview customizado
     const pageviewData = {
       event: "pageview",
       page: "/",
@@ -34,18 +83,17 @@ export default function Index() {
       ...getAnalyticsData(),
     };
 
-    // Log para debug (remover em produção)
+    // Log para debug
     console.log("Pageview tracked:", pageviewData);
 
-    // Aqui você pode enviar para Google Analytics, Facebook Pixel, etc.
-    // gtag('config', 'GA_MEASUREMENT_ID', pageviewData);
-    // fbq('track', 'PageView', pageviewData);
+    // Enviar pageview customizado
+    trackEvent('pageview', pageviewData);
 
     // Cleanup no unmount
     return () => {
       delete window.formStartTime;
     };
-  }, []);
+  }, [GA4_MEASUREMENT_ID, META_PIXEL_ID]);
 
   const api_form =
     import.meta.env.VITE_api_form ||
@@ -456,7 +504,7 @@ export default function Index() {
           <div className="mb-12 animate-fade-in">
             <img
               src="/images/brand/ecko-logo.webp"
-              alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
+              alt="Logo Ecko - L��der em Streetwear e Moda Urbana no Brasil"
               className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
               loading="eager"
               fetchPriority="high"
