@@ -413,9 +413,9 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Galeria de Produtos Ecko Streetwear */}
-      <section className="py-20 md:py-32 bg-white" id="galeria-produtos">
-        <div className="container mx-auto px-6">
+      {/* Galeria de Produtos Ecko Streetwear - Otimizado para mobile */}
+      <section className="py-12 sm:py-20 md:py-32 bg-white" id="galeria-produtos">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
