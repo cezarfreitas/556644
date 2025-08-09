@@ -114,15 +114,14 @@ export default function Index() {
 
           {/* Subtitle/Call Text - Otimizado para mobile */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mb-8 sm:mb-10 max-w-4xl leading-relaxed font-medium px-4 sm:px-6 animate-fade-in">
-            Tenha acesso a{" "}
             <span className="text-primary font-semibold">
-              produtos exclusivos
+              Produtos exclusivos
             </span>
             ,{" "}
             <span className="text-primary font-semibold">
-              margens de lucro atrativas
+              alto lucro
             </span>{" "}
-            e todo o prestígio de uma marca consolidada, com presença internacional e referência no mercado de moda. Amplie suas vendas e conquiste clientes que valorizam qualidade, estilo e autenticidade.
+            e o prestígio de uma marca reconhecida mundialmente. Aumente suas vendas e atraia clientes que buscam qualidade e estilo.
           </p>
 
           {/* Call to Action Button - Otimizado para mobile */}
