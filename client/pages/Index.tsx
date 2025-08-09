@@ -80,10 +80,13 @@ export default function Index() {
         s.parentNode.insertBefore(t, s)
       }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-      if (window.fbq) {
-        window.fbq('init', META_PIXEL_ID);
-        window.fbq('track', 'PageView');
-      }
+      // Aguardar script carregar e inicializar
+      setTimeout(() => {
+        if (window.fbq) {
+          window.fbq('init', META_PIXEL_ID);
+          window.fbq('track', 'PageView');
+        }
+      }, 100);
     }
 
     // Registrar pageview customizado
