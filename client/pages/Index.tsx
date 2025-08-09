@@ -234,46 +234,34 @@ export default function Index() {
                     <label className="text-sm font-medium text-gray-900">
                       Sua loja possui CNPJ? *
                     </label>
-                    <div className="flex gap-2 sm:gap-3">
-                      <label
-                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-3 sm:px-4 py-3 sm:py-3 transition-all text-sm sm:text-base ${
-                          selectedCnpj === "sim"
-                            ? "bg-primary border-primary text-white"
-                            : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
-                        }`}
-                      >
+                    <div className="space-y-2">
+                      <label className="flex items-center gap-3 cursor-pointer">
                         <input
                           type="radio"
                           name="cnpj"
                           value="sim"
-                          className="hidden"
+                          className="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
                           required
                           onChange={(e) =>
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="font-medium text-center">
+                        <span className="text-sm sm:text-base text-gray-900">
                           Sim, sou lojista com CNPJ
                         </span>
                       </label>
-                      <label
-                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-3 sm:px-4 py-3 sm:py-3 transition-all text-sm sm:text-base ${
-                          selectedCnpj === "nao-consumidor"
-                            ? "bg-primary border-primary text-white"
-                            : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
-                        }`}
-                      >
+                      <label className="flex items-center gap-3 cursor-pointer">
                         <input
                           type="radio"
                           name="cnpj"
                           value="nao-consumidor"
-                          className="hidden"
+                          className="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
                           required
                           onChange={(e) =>
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="font-medium text-center">
+                        <span className="text-sm sm:text-base text-gray-900">
                           Não, sou consumidor
                         </span>
                       </label>
