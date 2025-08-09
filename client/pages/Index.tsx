@@ -108,15 +108,6 @@ export default function Index() {
     import.meta.env.VITE_api_form ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
-  // Configurações de tracking via .env
-  const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
-  const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
-  const META_ACCESS_TOKEN = import.meta.env.VITE_META_ACCESS_TOKEN;
-  const META_CONVERSION_NAME = import.meta.env.VITE_META_CONVERSION_NAME || 'Lead';
-  const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || 'v18.0';
-  const GOOGLE_ADS_CONVERSION_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID;
-  const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_LABEL;
-
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
     const urlParams = new URLSearchParams(window.location.search);
