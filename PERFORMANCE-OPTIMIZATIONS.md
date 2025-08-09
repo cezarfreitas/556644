@@ -24,7 +24,7 @@ public/images/
 │   ├── urban-style.webp (73KB)
 │   ├── urban-fashion.webp (94KB)
 │   ├── streetwear-premium.webp (110KB)
-│   ├��─ lifestyle.webp (150KB)
+│   ├── lifestyle.webp (150KB)
 │   ├── products-exclusive.webp (164KB)
 │   ├── complete-collection.webp (87KB)
 │   └── premium-quality.webp (64KB)
