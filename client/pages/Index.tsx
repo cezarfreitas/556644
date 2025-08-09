@@ -21,6 +21,32 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Inicializar tracking na página
+  useEffect(() => {
+    // Marcar início do tempo para cálculo de completion time
+    window.formStartTime = performance.now();
+
+    // Registrar pageview
+    const pageviewData = {
+      event: "pageview",
+      page: "/",
+      title: "Seja Lojista Oficial Ecko",
+      ...getAnalyticsData()
+    };
+
+    // Log para debug (remover em produção)
+    console.log("Pageview tracked:", pageviewData);
+
+    // Aqui você pode enviar para Google Analytics, Facebook Pixel, etc.
+    // gtag('config', 'GA_MEASUREMENT_ID', pageviewData);
+    // fbq('track', 'PageView', pageviewData);
+
+    // Cleanup no unmount
+    return () => {
+      delete window.formStartTime;
+    };
+  }, []);
+
   const api_form =
     import.meta.env.VITE_api_form ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
@@ -919,7 +945,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* História da Marca Ecko - Líder em Streetwear - Otimizado para mobile */}
+      {/* História da Marca Ecko - L��der em Streetwear - Otimizado para mobile */}
       <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
