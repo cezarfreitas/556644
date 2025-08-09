@@ -36,14 +36,9 @@ export default function Index() {
           </p>
 
           {/* Call to Action Button */}
-          <button className="bg-primary hover:bg-red-600 text-white px-10 py-5 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in">
+          <button className="bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
             🚀 Seja um Lojista Oficial
           </button>
-
-          {/* Additional CTA Info */}
-          <p className="text-white/80 text-sm md:text-base mt-6 animate-fade-in">
-            💼 Sem taxas de adesão • 📦 Produtos exclusivos • 💰 Margens atrativas
-          </p>
         </div>
       </section>
     </div>
