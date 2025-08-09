@@ -119,8 +119,8 @@ export default function Index() {
                     <label className="text-sm font-medium text-gray-900">
                       Sua loja possui CNPJ? *
                     </label>
-                    <div className="grid grid-cols-2 gap-2">
-                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg p-3 transition-all ${
+                    <div className="flex gap-3">
+                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
                         selectedCnpj === "sim"
                           ? "bg-primary border-primary text-white"
                           : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
@@ -135,7 +135,7 @@ export default function Index() {
                         />
                         <span className="font-medium">Sim</span>
                       </label>
-                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg p-3 transition-all ${
+                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
                         selectedCnpj === "nao-consumidor"
                           ? "bg-primary border-primary text-white"
                           : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
