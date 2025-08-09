@@ -152,13 +152,13 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 5 Reasons Section - Redesigned */}
-      <section className="py-20 md:py-32 relative bg-gradient-to-br from-background via-muted/20 to-background">
+      {/* Benefícios para Lojistas Ecko */}
+      <section className="py-20 md:py-32 relative bg-gradient-to-br from-background via-muted/20 to-background" id="beneficios-lojistas">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fab7e336ecd0049c1ab9a4a470767e70c?format=webp&width=800"
-            alt="Background"
+            alt="Produtos Ecko Streetwear - Qualidade e Estilo"
             className="w-full h-full object-cover opacity-10"
           />
         </div>
@@ -166,10 +166,10 @@ export default function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
-                Por Que Escolher a <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Ecko?</span>
+                Vantagens de Ser Lojista <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Ecko Oficial</span>
               </h2>
               <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
-                4 vantagens que fazem a diferença no seu negócio
+                4 benefícios exclusivos que aumentam a lucratividade do seu negócio de moda urbana
               </p>
             </div>
 
@@ -537,7 +537,7 @@ export default function Index() {
                     <span className="text-sm">📧</span>
                   </div>
                   <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-sm">����</span>
+                    <span className="text-sm">🌐</span>
                   </div>
                 </div>
               </div>
