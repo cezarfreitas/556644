@@ -750,9 +750,8 @@ export default function Index() {
           width="1920"
           height="1080"
         />
-        {/* Enhanced Radial Overlay with Focus Effect */}
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/50 to-black/90"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-black/0 via-black/30 to-black/70"></div>
+        {/* Total Radial Overlay */}
+        <div className="absolute inset-0 bg-gradient-radial from-black/20 via-black/70 to-black/95"></div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8">
