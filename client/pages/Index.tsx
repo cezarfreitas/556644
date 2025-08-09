@@ -455,8 +455,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* About Ecko Section */}
-      <section className="py-20 md:py-32 bg-black">
+      {/* História da Marca Ecko - Líder em Streetwear */}
+      <section className="py-20 md:py-32 bg-black" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -464,14 +464,14 @@ export default function Index() {
               <div className="space-y-8">
                 <div className="space-y-6">
                   <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
-                    Sobre a
+                    História da Marca
                     <span className="block text-primary">Ecko</span>
                   </h2>
                   <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                    Há mais de duas décadas, a Ecko é sinônimo de streetwear autêntico no Brasil. Nascida da cultura urbana, a marca se tornou referência em moda jovem e lifestyle.
+                    Há mais de duas décadas, a Ecko é líder absoluta em streetwear e moda urbana no Brasil. Nascida da cultura de rua, a marca revolucionou o mercado de moda jovem brasileira.
                   </p>
                   <p className="text-base md:text-lg text-white/80 leading-relaxed">
-                    Com produtos que refletem a essência do street style brasileiro, a Ecko conquistou milhões de consumidores e se estabeleceu como a maior marca de streetwear do país. Nossos parceiros fazem parte dessa história de sucesso.
+                    Com produtos autênticos que refletem a essência do street style brasileiro, a Ecko conquistou milhões de consumidores e se estabeleceu como a maior marca de streetwear do país. Nossos lojistas parceiros fazem parte dessa trajetória de sucesso.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
