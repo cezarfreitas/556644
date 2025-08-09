@@ -46,7 +46,7 @@ export default function Index() {
       </header>
 
       {/* Cadastro de Lojistas - Formulário de Parceria */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900" id="cadastro-lojistas">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800" id="cadastro-lojistas">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
 
@@ -154,7 +154,7 @@ export default function Index() {
       </section>
 
       {/* Benefícios para Lojistas Ecko */}
-      <section className="py-20 md:py-32 relative bg-gradient-to-br from-slate-50 via-white to-gray-50" id="beneficios-lojistas">
+      <section className="py-20 md:py-32 relative bg-white" id="beneficios-lojistas">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -193,7 +193,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Margens Atrativas</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Condiç��es comerciais privilegiadas com margens competitivas e flexibilidade de pagamento. Maximizamos sua lucratividade com preços especiais para parceiros oficiais.
+                  Condições comerciais privilegiadas com margens competitivas e flexibilidade de pagamento. Maximizamos sua lucratividade com preços especiais para parceiros oficiais.
                 </p>
               </div>
 
@@ -231,7 +231,7 @@ export default function Index() {
       </section>
 
       {/* Galeria de Produtos Ecko Streetwear */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white" id="galeria-produtos">
+      <section className="py-20 md:py-32 bg-gray-50" id="galeria-produtos">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -342,7 +342,7 @@ export default function Index() {
       </section>
 
       {/* Depoimentos de Lojistas Parceiros Ecko */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-slate-100 via-gray-50 to-slate-100" id="depoimentos-lojistas">
+      <section className="py-20 md:py-32 bg-slate-100" id="depoimentos-lojistas">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -457,7 +457,7 @@ export default function Index() {
       </section>
 
       {/* História da Marca Ecko - Líder em Streetwear */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-gray-900 via-slate-900 to-black" id="sobre-ecko">
+      <section className="py-20 md:py-32 bg-slate-900" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -517,7 +517,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-t from-black to-gray-900 text-background py-16">
+      <footer className="bg-slate-900 text-background py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
