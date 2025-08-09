@@ -204,13 +204,6 @@ export default function Index() {
                         <p className="text-gray-700">
                           Mas não fique triste! Temos um cupom com <span className="font-bold text-primary">10% de desconto</span> para você
                         </p>
-                        <button
-                          type="button"
-                          className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg font-bold transition-colors duration-300"
-                          onClick={() => window.open('https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!', '_blank')}
-                        >
-                          Clique aqui para receber seu cupom
-                        </button>
                       </div>
                     </div>
                   )}
