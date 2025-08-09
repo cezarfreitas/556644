@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   MdStar,
   MdAttachMoney,
@@ -945,7 +945,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* História da Marca Ecko - L��der em Streetwear - Otimizado para mobile */}
+      {/* História da Marca Ecko - Líder em Streetwear - Otimizado para mobile */}
       <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
