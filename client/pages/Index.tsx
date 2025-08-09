@@ -126,13 +126,9 @@ export default function Index() {
 
           {/* Indicador para rolar para baixo */}
           <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2">
-            <div className="flex flex-col items-center text-white/90 cursor-pointer hover:text-white transition-colors duration-300 animate-scroll-bounce" onClick={() => document.getElementById('cadastro-lojistas')?.scrollIntoView({ behavior: 'smooth' })}>
+            <div className="flex flex-col items-center text-white/90 cursor-pointer hover:text-white transition-colors duration-300" onClick={() => document.getElementById('cadastro-lojistas')?.scrollIntoView({ behavior: 'smooth' })}>
               <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in">Role para baixo</span>
-              <div className="flex flex-col gap-1">
-                <FaChevronDown className="w-4 h-4 opacity-60" />
-                <FaChevronDown className="w-4 h-4 opacity-80" />
-                <FaChevronDown className="w-4 h-4 opacity-100" />
-              </div>
+              <FaChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-scroll-bounce" />
             </div>
           </div>
         </div>
