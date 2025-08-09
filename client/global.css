@@ -124,3 +124,56 @@
     transform: translateX(-50%);
   }
 }
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  /* Prevent horizontal scroll */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better touch targets for mobile */
+  button,
+  a[role="button"],
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+  }
+
+  /* Improve text readability on mobile */
+  p,
+  span,
+  div {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Better form inputs - prevent zoom on iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Smooth scrolling for mobile */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Disable hover effects on mobile for better performance */
+  .group:hover .group-hover\:scale-110 {
+    transform: none !important;
+  }
+
+  .hover\:scale-105:hover {
+    transform: none !important;
+  }
+
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
