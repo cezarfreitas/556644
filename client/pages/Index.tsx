@@ -24,11 +24,11 @@ export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Estados para validação de formulário
-  const [formErrors, setFormErrors] = useState<{[key: string]: string}>({});
+  const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
     whatsapp: "",
-    cnpj: ""
+    cnpj: "",
   });
 
   // Configurações de tracking via .env
@@ -409,7 +409,7 @@ export default function Index() {
   // Funções de formatação
   const formatWhatsApp = (value: string) => {
     // Remove tudo que não é número
-    const numbers = value.replace(/\D/g, '');
+    const numbers = value.replace(/\D/g, "");
 
     // Aplica a máscara (XX) XXXXX-XXXX
     if (numbers.length <= 2) {
@@ -423,7 +423,7 @@ export default function Index() {
 
   const formatCNPJ = (value: string) => {
     // Remove tudo que não é número
-    const numbers = value.replace(/\D/g, '');
+    const numbers = value.replace(/\D/g, "");
 
     // Aplica a máscara XX.XXX.XXX/XXXX-XX
     if (numbers.length <= 2) {
@@ -448,16 +448,17 @@ export default function Index() {
   };
 
   const validateWhatsApp = (phone: string) => {
-    const numbers = phone.replace(/\D/g, '');
+    const numbers = phone.replace(/\D/g, "");
     if (!numbers) return "WhatsApp é obrigatório";
     if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 dígitos";
-    if (numbers.length < 11 && !numbers.startsWith('11')) return "WhatsApp deve ter 11 dígitos para celular";
+    if (numbers.length < 11 && !numbers.startsWith("11"))
+      return "WhatsApp deve ter 11 dígitos para celular";
     if (numbers.length > 11) return "WhatsApp não pode ter mais de 11 dígitos";
     return "";
   };
 
   const validateCNPJ = (cnpj: string) => {
-    const numbers = cnpj.replace(/\D/g, '');
+    const numbers = cnpj.replace(/\D/g, "");
     if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
@@ -506,9 +507,9 @@ export default function Index() {
         break;
     }
 
-    setFormErrors(prev => ({
+    setFormErrors((prev) => ({
       ...prev,
-      [fieldName]: error
+      [fieldName]: error,
     }));
 
     return error === "";
@@ -530,7 +531,7 @@ export default function Index() {
   // Handlers para campos do formulário
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setFormValues(prev => ({ ...prev, name: value }));
+    setFormValues((prev) => ({ ...prev, name: value }));
 
     // Validar após delay para não validar a cada tecla
     setTimeout(() => validateField("name", value), 500);
@@ -543,7 +544,7 @@ export default function Index() {
     // Prevenir input além do limite
     if (formatted.length <= 15) {
       e.target.value = formatted;
-      setFormValues(prev => ({ ...prev, whatsapp: formatted }));
+      setFormValues((prev) => ({ ...prev, whatsapp: formatted }));
 
       // Validar após delay
       setTimeout(() => validateField("whatsapp", formatted), 500);
@@ -559,7 +560,7 @@ export default function Index() {
     // Prevenir input além do limite
     if (formatted.length <= 18) {
       e.target.value = formatted;
-      setFormValues(prev => ({ ...prev, cnpj: formatted }));
+      setFormValues((prev) => ({ ...prev, cnpj: formatted }));
 
       // Validar após delay
       setTimeout(() => validateField("cnpj", formatted), 500);
@@ -586,7 +587,7 @@ export default function Index() {
     setFormErrors({
       name: nameError,
       whatsapp: whatsappError,
-      cnpj: cnpjError
+      cnpj: cnpjError,
     });
 
     // Se houver erros, não enviar
@@ -595,8 +596,8 @@ export default function Index() {
         errors: {
           name: !!nameError,
           whatsapp: !!whatsappError,
-          cnpj: !!cnpjError
-        }
+          cnpj: !!cnpjError,
+        },
       });
       return;
     }
@@ -848,10 +849,10 @@ export default function Index() {
                         required
                         className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                           formErrors.name
-                            ? 'border-red-500 focus:ring-red-500'
+                            ? "border-red-500 focus:ring-red-500"
                             : formValues.name && !formErrors.name
-                              ? 'border-green-500 focus:ring-green-500'
-                              : 'border-input focus:ring-primary'
+                              ? "border-green-500 focus:ring-green-500"
+                              : "border-input focus:ring-primary"
                         }`}
                         placeholder="Seu nome completo"
                         value={formValues.name}
@@ -865,10 +866,10 @@ export default function Index() {
                         onBlur={(e) => {
                           validateField("name", e.target.value);
                           e.target.value &&
-                          trackEvent("form_field_complete", {
-                            field: "name",
-                            step: 1,
-                          });
+                            trackEvent("form_field_complete", {
+                              field: "name",
+                              step: 1,
+                            });
                         }}
                       />
                       {/* Ícone de validação */}
@@ -883,7 +884,9 @@ export default function Index() {
                       )}
                     </div>
                     {formErrors.name && (
-                      <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
+                      <p className="text-red-500 text-sm mt-1">
+                        {formErrors.name}
+                      </p>
                     )}
                   </div>
 
@@ -902,10 +905,10 @@ export default function Index() {
                         required
                         className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                           formErrors.whatsapp
-                            ? 'border-red-500 focus:ring-red-500'
+                            ? "border-red-500 focus:ring-red-500"
                             : formValues.whatsapp && !formErrors.whatsapp
-                              ? 'border-green-500 focus:ring-green-500'
-                              : 'border-input focus:ring-primary'
+                              ? "border-green-500 focus:ring-green-500"
+                              : "border-input focus:ring-primary"
                         }`}
                         placeholder="(11) 99999-9999"
                         maxLength={15}
@@ -919,10 +922,10 @@ export default function Index() {
                         onBlur={(e) => {
                           validateField("whatsapp", e.target.value);
                           e.target.value &&
-                          trackEvent("form_field_complete", {
-                            field: "whatsapp",
-                            step: 2,
-                          });
+                            trackEvent("form_field_complete", {
+                              field: "whatsapp",
+                              step: 2,
+                            });
                         }}
                       />
                       {/* Ícone de validação */}
@@ -937,7 +940,9 @@ export default function Index() {
                       )}
                     </div>
                     {formErrors.whatsapp && (
-                      <p className="text-red-500 text-sm mt-1">{formErrors.whatsapp}</p>
+                      <p className="text-red-500 text-sm mt-1">
+                        {formErrors.whatsapp}
+                      </p>
                     )}
                   </div>
 
@@ -1014,10 +1019,10 @@ export default function Index() {
                           required
                           className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                             formErrors.cnpj
-                              ? 'border-red-500 focus:ring-red-500'
+                              ? "border-red-500 focus:ring-red-500"
                               : formValues.cnpj && !formErrors.cnpj
-                                ? 'border-green-500 focus:ring-green-500'
-                                : 'border-input focus:ring-primary'
+                                ? "border-green-500 focus:ring-green-500"
+                                : "border-input focus:ring-primary"
                           }`}
                           placeholder="00.000.000/0000-00"
                           maxLength={18}
@@ -1031,10 +1036,10 @@ export default function Index() {
                           onBlur={(e) => {
                             validateField("cnpj", e.target.value);
                             e.target.value &&
-                            trackEvent("form_field_complete", {
-                              field: "cnpj",
-                              step: 3,
-                            });
+                              trackEvent("form_field_complete", {
+                                field: "cnpj",
+                                step: 3,
+                              });
                           }}
                         />
                         {/* Ícone de validação */}
@@ -1049,7 +1054,9 @@ export default function Index() {
                         )}
                       </div>
                       {formErrors.cnpj && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.cnpj}</p>
+                        <p className="text-red-500 text-sm mt-1">
+                          {formErrors.cnpj}
+                        </p>
                       )}
                     </div>
                   )}
