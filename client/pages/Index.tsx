@@ -211,9 +211,96 @@ export default function Index() {
 
     console.log(`Event tracked: ${eventName}`, fullEventData);
 
-    // Aqui você pode enviar para suas ferramentas de analytics
-    // gtag('event', eventName, fullEventData);
-    // fbq('track', eventName, fullEventData);
+    // Google Analytics 4
+    if (GA4_MEASUREMENT_ID && window.gtag) {
+      window.gtag('event', eventName, {
+        event_category: 'Lead Generation',
+        event_label: fullEventData.lead_type || 'unknown',
+        value: fullEventData.engagement_score || 1,
+        custom_parameters: fullEventData,
+        session_id: fullEventData.session_id,
+        traffic_source: fullEventData.traffic_source,
+        lead_quality: fullEventData.lead_quality
+      });
+    }
+
+    // Facebook Pixel
+    if (META_PIXEL_ID && window.fbq) {
+      const pixelData = {
+        content_category: 'Lojistas',
+        content_name: 'Ecko Lojista Registration',
+        lead_type: fullEventData.lead_type || 'unknown',
+        traffic_source: fullEventData.traffic_source || 'unknown',
+        value: fullEventData.engagement_score || 1,
+        currency: 'BRL',
+        custom_data: fullEventData
+      };
+
+      // Eventos específicos do Facebook
+      if (eventName === 'form_submission_success') {
+        window.fbq('track', META_CONVERSION_NAME, pixelData);
+        // Também enviar via API de conversão
+        sendMetaConversionAPI(eventName, pixelData, fullEventData);
+      } else {
+        window.fbq('trackCustom', eventName, pixelData);
+      }
+    }
+  };
+
+  // Função para API de conversão Meta
+  const sendMetaConversionAPI = async (eventName: string, pixelData: any, fullEventData: any) => {
+    if (!META_ACCESS_TOKEN || !META_PIXEL_ID) return;
+
+    try {
+      const conversionData = {
+        data: [{
+          event_name: META_CONVERSION_NAME,
+          event_time: Math.floor(Date.now() / 1000),
+          action_source: 'website',
+          event_source_url: window.location.href,
+          user_data: {
+            client_ip_address: null, // Será preenchido automaticamente
+            client_user_agent: navigator.userAgent,
+            fbc: getCookie('_fbc'), // Facebook click ID
+            fbp: getCookie('_fbp'), // Facebook browser ID
+          },
+          custom_data: {
+            content_category: 'Lojistas',
+            content_name: 'Ecko Lojista Registration',
+            lead_type: fullEventData.lead_type,
+            traffic_source: fullEventData.traffic_source,
+            value: fullEventData.engagement_score || 1,
+            currency: 'BRL'
+          },
+          event_id: fullEventData.session_id + '_' + Date.now() // Para deduplicação
+        }],
+        access_token: META_ACCESS_TOKEN
+      };
+
+      const response = await fetch(`https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(conversionData)
+      });
+
+      if (response.ok) {
+        console.log('Meta Conversion API: Success');
+      } else {
+        console.error('Meta Conversion API: Error', await response.text());
+      }
+    } catch (error) {
+      console.error('Meta Conversion API: Network error', error);
+    }
+  };
+
+  // Função auxiliar para pegar cookies
+  const getCookie = (name: string) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop()?.split(';').shift();
+    return null;
   };
 
   const handleCnpjRadioChange = (value: string) => {
