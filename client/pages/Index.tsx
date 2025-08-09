@@ -68,6 +68,16 @@ export default function Index() {
     );
   };
 
+  const nextSlideMobile = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlideMobile = () => {
+    setCurrentSlide((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
