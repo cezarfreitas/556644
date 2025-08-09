@@ -118,10 +118,10 @@ export default function Index() {
           {/* Call to Action Button - Otimizado para mobile */}
           <a
             href="#cadastro-lojistas"
-            className="group inline-flex items-center justify-center bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 sm:px-12 py-5 sm:py-6 rounded-2xl text-lg sm:text-xl md:text-2xl font-black transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl animate-fade-in uppercase tracking-wide mx-4 sm:mx-0 gap-3"
+            className="group inline-flex items-center justify-center bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 sm:px-7 py-3 sm:py-4 rounded-xl text-base sm:text-lg md:text-xl font-black transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl animate-fade-in uppercase tracking-wide mx-4 sm:mx-0 gap-2"
           >
             CADASTRE-SE AGORA
-            <FaArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
+            <FaArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </div>
       </header>
@@ -586,7 +586,7 @@ export default function Index() {
                     <span className="text-2xl">★★★★★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "O suporte da equipe Ecko é incr��vel. Eles nos ajudam com
+                    "O suporte da equipe Ecko é incrível. Eles nos ajudam com
                     materiais de marketing e sempre estão disponíveis para
                     dúvidas. Recomendo para qualquer lojista sério."
                   </blockquote>
