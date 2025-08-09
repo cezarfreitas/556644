@@ -50,34 +50,19 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
 
             {/* Text/CTA Column */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <div className="space-y-10">
+              <div className="space-y-8">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                   Pronto Para Começar Sua
                   <span className="block text-primary">Parceria com a Ecko?</span>
                 </h2>
-                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                  Preencha o formulário ao lado e nossa equipe comercial entrará em contato em até 24 horas para apresentar as condições exclusivas para lojistas oficiais.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">✓</span>
-                    </div>
-                    <span className="text-white font-medium">Sem taxas de adesão</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">✓</span>
-                    </div>
-                    <span className="text-white font-medium">Processo 100% digital</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">✓</span>
-                    </div>
-                    <span className="text-white font-medium">Resposta em até 24h</span>
-                  </div>
+                <div className="space-y-6">
+                  <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
+                    Faça parte da rede de lojistas oficiais da maior marca de streetwear do Brasil.
+                  </p>
+                  <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+                    Nossa equipe comercial entrará em contato em até 24 horas para apresentar as condições exclusivas, sem taxas de adesão e com processo 100% digital.
+                  </p>
                 </div>
               </div>
             </div>
