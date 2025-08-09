@@ -750,12 +750,12 @@ export default function Index() {
           width="1920"
           height="1080"
         />
-        {/* Overlay Test - Vermelho para Debug */}
+        {/* Overlay Radial Final */}
         <div
           className="absolute top-0 left-0 w-full h-full pointer-events-none"
           style={{
             zIndex: 2,
-            backgroundColor: 'rgba(255, 0, 0, 0.5)'
+            background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%)'
           }}
         ></div>
 
