@@ -18,12 +18,6 @@ export default function Index() {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Se for consumidor, redireciona para WhatsApp com cupom
-    if (selectedCnpj === "nao-consumidor") {
-      window.open('https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!', '_blank');
-      return;
-    }
-
     const formData = new FormData(e.currentTarget);
     const payload = {
       name: formData.get("name"),
@@ -43,10 +37,18 @@ export default function Index() {
       });
 
       if (response.ok) {
-        alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+        // Se for consumidor, abre WhatsApp após enviar dados
+        if (selectedCnpj === "nao-consumidor") {
+          alert("Dados enviados! Redirecionando para receber seu cupom de desconto.");
+          window.open('https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!', '_blank');
+        } else {
+          alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+        }
+
         e.currentTarget.reset();
         setSelectedCnpj("");
         setShowCnpjField(false);
+        setShowCouponMessage(false);
       } else {
         alert("Erro ao enviar formulário. Tente novamente.");
       }
