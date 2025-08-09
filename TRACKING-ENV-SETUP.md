@@ -5,18 +5,21 @@
 Para configurar as variáveis de ambiente usando o DevServerControl:
 
 ### **1. Google Analytics 4**
+
 ```bash
 # No terminal ou via DevServerControl
 set_env_variable VITE_GA4_MEASUREMENT_ID G-XXXXXXXXXX
 ```
 
 ### **2. Facebook/Meta Pixel**
+
 ```bash
 set_env_variable VITE_META_PIXEL_ID 123456789012345
 set_env_variable VITE_META_CONVERSION_NAME LeadLojista
 ```
 
 ### **3. Meta API de Conversão (Sensível)**
+
 ```bash
 # TOKEN SENSÍVEL - usar DevServerControl para não commitar
 set_env_variable VITE_META_ACCESS_TOKEN your_long_access_token_here
@@ -24,6 +27,7 @@ set_env_variable VITE_META_API_VERSION v18.0
 ```
 
 ### **4. Google Ads (Opcional)**
+
 ```bash
 set_env_variable VITE_GOOGLE_ADS_CONVERSION_ID AW-123456789
 set_env_variable VITE_GOOGLE_ADS_CONVERSION_LABEL AbCdEfGhIj_example
@@ -56,24 +60,28 @@ PORT=80
 ## ✅ **Como Obter Cada ID**
 
 ### **Google Analytics 4**
+
 1. Acesse [Google Analytics](https://analytics.google.com/)
 2. Admin → Propriedade → Fluxos de dados
 3. Clique no seu site
 4. Copie o "ID de medição" (formato: G-XXXXXXXXXX)
 
 ### **Facebook Pixel ID**
+
 1. Acesse [Meta Business](https://business.facebook.com/)
 2. Gerenciador de eventos → Fontes de dados
 3. Clique no seu Pixel
 4. Copie o "ID do pixel" (15 dígitos)
 
 ### **Meta Access Token**
+
 1. Acesse [Meta for Developers](https://developers.facebook.com/)
 2. Minhas apps → Sua app → Ferramentas → Explorador da API do Graph
 3. Gere um token de acesso de longa duração
 4. Permissões necessárias: `ads_management`, `business_management`
 
 ### **Google Ads Conversion**
+
 1. Acesse [Google Ads](https://ads.google.com/)
 2. Ferramentas → Medição → Conversões
 3. Clique em "+ Nova conversão"
@@ -83,6 +91,7 @@ PORT=80
 ## 🎯 **Nomes de Conversão Personalizados**
 
 ### **Meta Conversion Name**
+
 Personalize o nome do evento para suas campanhas:
 
 ```env
@@ -94,18 +103,21 @@ VITE_META_CONVERSION_NAME=SolicitacaoComercial  # Solicitação comercial
 ```
 
 **Benefícios do nome personalizado:**
+
 - ✅ Facilita identificação nas campanhas
 - ✅ Permite múltiplas landing pages
 - ✅ Otimização específica por tipo de lead
 
 ## 🔐 **Segurança**
 
-### **Variáveis Públicas (VITE_)**
+### **Variáveis Públicas (VITE\_)**
+
 - `GA4_MEASUREMENT_ID` ✅ Seguro expor
 - `META_PIXEL_ID` ✅ Seguro expor
 - `GOOGLE_ADS_CONVERSION_ID` ✅ Seguro expor
 
 ### **Variáveis Sensíveis**
+
 - `META_ACCESS_TOKEN` ⚠️ **NUNCA** commitar no git
 - Use DevServerControl para definir em produção
 - Regenere tokens regularmente
@@ -113,18 +125,21 @@ VITE_META_CONVERSION_NAME=SolicitacaoComercial  # Solicitação comercial
 ## 🧪 **Modo Debug**
 
 ### **Verificar Configuração**
+
 Adicione no console do navegador:
+
 ```javascript
 // Verificar se variáveis estão carregadas
-console.log('GA4:', window.gtag ? 'Loaded' : 'Not loaded');
-console.log('Meta Pixel:', window.fbq ? 'Loaded' : 'Not loaded');
+console.log("GA4:", window.gtag ? "Loaded" : "Not loaded");
+console.log("Meta Pixel:", window.fbq ? "Loaded" : "Not loaded");
 
 // Ver eventos sendo enviados
-window.dataLayer // GA4 events
-window.fbq.queue // Meta events (se houver)
+window.dataLayer; // GA4 events
+window.fbq.queue; // Meta events (se houver)
 ```
 
 ### **Ferramentas de Debug**
+
 - **GA4**: [Google Tag Assistant](https://tagassistant.google.com/)
 - **Meta**: [Facebook Pixel Helper](https://chrome.google.com/webstore/detail/facebook-pixel-helper)
 - **Google Ads**: Ativar modo debug no painel
@@ -132,12 +147,14 @@ window.fbq.queue // Meta events (se houver)
 ## 🚀 **Deploy em Produção**
 
 ### **1. Via DevServerControl (Recomendado)**
+
 ```bash
 # Configurar todas as variáveis via interface
 DevServerControl → set_env_variable → [NOME] → [VALOR]
 ```
 
 ### **2. Via Dockerfile**
+
 ```dockerfile
 # No Dockerfile
 ENV VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
@@ -146,6 +163,7 @@ ENV VITE_META_PIXEL_ID=123456789012345
 ```
 
 ### **3. Via Plataforma de Deploy**
+
 - **Vercel**: Settings → Environment Variables
 - **Netlify**: Site settings → Environment variables
 - **Heroku**: Settings → Config Vars

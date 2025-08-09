@@ -25,10 +25,13 @@ export default function Index() {
   const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
   const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
   const META_ACCESS_TOKEN = import.meta.env.VITE_META_ACCESS_TOKEN;
-  const META_CONVERSION_NAME = import.meta.env.VITE_META_CONVERSION_NAME || 'Lead';
-  const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || 'v18.0';
-  const GOOGLE_ADS_CONVERSION_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID;
-  const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_LABEL;
+  const META_CONVERSION_NAME =
+    import.meta.env.VITE_META_CONVERSION_NAME || "Lead";
+  const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || "v18.0";
+  const GOOGLE_ADS_CONVERSION_ID = import.meta.env
+    .VITE_GOOGLE_ADS_CONVERSION_ID;
+  const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env
+    .VITE_GOOGLE_ADS_CONVERSION_LABEL;
 
   // Inicializar tracking na página
   useEffect(() => {
@@ -38,53 +41,60 @@ export default function Index() {
     // Inicializar Google Analytics 4
     if (GA4_MEASUREMENT_ID) {
       // Carregar script do GA4
-      const gaScript = document.createElement('script');
+      const gaScript = document.createElement("script");
       gaScript.async = true;
       gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
       document.head.appendChild(gaScript);
 
       // Configurar gtag
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function(...args: any[]) {
+      window.gtag = function (...args: any[]) {
         window.dataLayer.push(args);
       };
-      window.gtag('js', new Date());
-      window.gtag('config', GA4_MEASUREMENT_ID, {
-        page_title: 'Seja Lojista Oficial Ecko',
+      window.gtag("js", new Date());
+      window.gtag("config", GA4_MEASUREMENT_ID, {
+        page_title: "Seja Lojista Oficial Ecko",
         page_location: window.location.href,
         custom_map: {
-          'custom_parameter_1': 'traffic_source',
-          'custom_parameter_2': 'lead_type',
-          'custom_parameter_3': 'lead_quality'
-        }
+          custom_parameter_1: "traffic_source",
+          custom_parameter_2: "lead_type",
+          custom_parameter_3: "lead_quality",
+        },
       });
     }
 
     // Inicializar Facebook Pixel
     if (META_PIXEL_ID) {
       // Carregar script do Facebook Pixel
-      (function(f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
-        if(f.fbq) return;
-        n = f.fbq = function() {
-          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      (function (f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
         };
-        if(!f._fbq) f._fbq = n;
+        if (!f._fbq) f._fbq = n;
         n.push = n;
         n.loaded = !0;
-        n.version = '2.0';
+        n.version = "2.0";
         n.queue = [];
         t = b.createElement(e);
         t.async = !0;
         t.src = v;
         s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
 
       // Aguardar script carregar e inicializar
       setTimeout(() => {
         if (window.fbq) {
-          window.fbq('init', META_PIXEL_ID);
-          window.fbq('track', 'PageView');
+          window.fbq("init", META_PIXEL_ID);
+          window.fbq("track", "PageView");
         }
       }, 100);
     }
@@ -101,7 +111,7 @@ export default function Index() {
     console.log("Pageview tracked:", pageviewData);
 
     // Enviar pageview customizado
-    trackEvent('pageview', pageviewData);
+    trackEvent("pageview", pageviewData);
 
     // Cleanup no unmount
     return () => {
@@ -268,28 +278,32 @@ export default function Index() {
 
     // Google Analytics 4
     if (GA4_MEASUREMENT_ID && window.gtag) {
-      window.gtag('event', eventName, {
-        event_category: 'Lead Generation',
-        event_label: fullEventData.lead_type || 'unknown',
+      window.gtag("event", eventName, {
+        event_category: "Lead Generation",
+        event_label: fullEventData.lead_type || "unknown",
         value: fullEventData.engagement_score || 1,
         custom_parameters: fullEventData,
         session_id: fullEventData.session_id,
         traffic_source: fullEventData.traffic_source,
-        lead_quality: fullEventData.lead_quality
+        lead_quality: fullEventData.lead_quality,
       });
 
       // Google Ads Conversion Tracking
-      if (eventName === 'form_submission_success' && GOOGLE_ADS_CONVERSION_ID && GOOGLE_ADS_CONVERSION_LABEL) {
-        window.gtag('event', 'conversion', {
-          'send_to': `${GOOGLE_ADS_CONVERSION_ID}/${GOOGLE_ADS_CONVERSION_LABEL}`,
-          'value': fullEventData.engagement_score || 1,
-          'currency': 'BRL',
-          'transaction_id': fullEventData.session_id,
-          'custom_parameters': {
-            'lead_type': fullEventData.lead_type,
-            'traffic_source': fullEventData.traffic_source,
-            'lead_quality': fullEventData.lead_quality
-          }
+      if (
+        eventName === "form_submission_success" &&
+        GOOGLE_ADS_CONVERSION_ID &&
+        GOOGLE_ADS_CONVERSION_LABEL
+      ) {
+        window.gtag("event", "conversion", {
+          send_to: `${GOOGLE_ADS_CONVERSION_ID}/${GOOGLE_ADS_CONVERSION_LABEL}`,
+          value: fullEventData.engagement_score || 1,
+          currency: "BRL",
+          transaction_id: fullEventData.session_id,
+          custom_parameters: {
+            lead_type: fullEventData.lead_type,
+            traffic_source: fullEventData.traffic_source,
+            lead_quality: fullEventData.lead_quality,
+          },
         });
       }
     }
@@ -297,71 +311,80 @@ export default function Index() {
     // Facebook Pixel
     if (META_PIXEL_ID && window.fbq) {
       const pixelData = {
-        content_category: 'Lojistas',
-        content_name: 'Ecko Lojista Registration',
-        lead_type: fullEventData.lead_type || 'unknown',
-        traffic_source: fullEventData.traffic_source || 'unknown',
+        content_category: "Lojistas",
+        content_name: "Ecko Lojista Registration",
+        lead_type: fullEventData.lead_type || "unknown",
+        traffic_source: fullEventData.traffic_source || "unknown",
         value: fullEventData.engagement_score || 1,
-        currency: 'BRL',
-        custom_data: fullEventData
+        currency: "BRL",
+        custom_data: fullEventData,
       };
 
       // Eventos específicos do Facebook
-      if (eventName === 'form_submission_success') {
-        window.fbq('track', META_CONVERSION_NAME, pixelData);
+      if (eventName === "form_submission_success") {
+        window.fbq("track", META_CONVERSION_NAME, pixelData);
         // Também enviar via API de conversão
         sendMetaConversionAPI(eventName, pixelData, fullEventData);
       } else {
-        window.fbq('trackCustom', eventName, pixelData);
+        window.fbq("trackCustom", eventName, pixelData);
       }
     }
   };
 
   // Função para API de conversão Meta
-  const sendMetaConversionAPI = async (eventName: string, pixelData: any, fullEventData: any) => {
+  const sendMetaConversionAPI = async (
+    eventName: string,
+    pixelData: any,
+    fullEventData: any,
+  ) => {
     if (!META_ACCESS_TOKEN || !META_PIXEL_ID) return;
 
     try {
       const conversionData = {
-        data: [{
-          event_name: META_CONVERSION_NAME,
-          event_time: Math.floor(Date.now() / 1000),
-          action_source: 'website',
-          event_source_url: window.location.href,
-          user_data: {
-            client_ip_address: null, // Será preenchido automaticamente
-            client_user_agent: navigator.userAgent,
-            fbc: getCookie('_fbc'), // Facebook click ID
-            fbp: getCookie('_fbp'), // Facebook browser ID
+        data: [
+          {
+            event_name: META_CONVERSION_NAME,
+            event_time: Math.floor(Date.now() / 1000),
+            action_source: "website",
+            event_source_url: window.location.href,
+            user_data: {
+              client_ip_address: null, // Será preenchido automaticamente
+              client_user_agent: navigator.userAgent,
+              fbc: getCookie("_fbc"), // Facebook click ID
+              fbp: getCookie("_fbp"), // Facebook browser ID
+            },
+            custom_data: {
+              content_category: "Lojistas",
+              content_name: "Ecko Lojista Registration",
+              lead_type: fullEventData.lead_type,
+              traffic_source: fullEventData.traffic_source,
+              value: fullEventData.engagement_score || 1,
+              currency: "BRL",
+            },
+            event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplicação
           },
-          custom_data: {
-            content_category: 'Lojistas',
-            content_name: 'Ecko Lojista Registration',
-            lead_type: fullEventData.lead_type,
-            traffic_source: fullEventData.traffic_source,
-            value: fullEventData.engagement_score || 1,
-            currency: 'BRL'
-          },
-          event_id: fullEventData.session_id + '_' + Date.now() // Para deduplicação
-        }],
-        access_token: META_ACCESS_TOKEN
+        ],
+        access_token: META_ACCESS_TOKEN,
       };
 
-      const response = await fetch(`https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        `https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(conversionData),
         },
-        body: JSON.stringify(conversionData)
-      });
+      );
 
       if (response.ok) {
-        console.log('Meta Conversion API: Success');
+        console.log("Meta Conversion API: Success");
       } else {
-        console.error('Meta Conversion API: Error', await response.text());
+        console.error("Meta Conversion API: Error", await response.text());
       }
     } catch (error) {
-      console.error('Meta Conversion API: Network error', error);
+      console.error("Meta Conversion API: Network error", error);
     }
   };
 
@@ -369,7 +392,7 @@ export default function Index() {
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop()?.split(';').shift();
+    if (parts.length === 2) return parts.pop()?.split(";").shift();
     return null;
   };
 

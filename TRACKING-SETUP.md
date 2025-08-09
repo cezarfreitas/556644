@@ -3,40 +3,49 @@
 ## 🎯 **Variáveis de Ambiente Necessárias**
 
 ### **1. Google Analytics 4**
+
 ```env
 VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
+
 - **Como obter**: Google Analytics > Admin > Propriedade > Fluxos de dados > Stream da Web
 - **Formato**: Sempre começa com "G-"
 
 ### **2. Google Ads (Opcional)**
+
 ```env
 VITE_GOOGLE_ADS_CONVERSION_ID=AW-123456789
 VITE_GOOGLE_ADS_CONVERSION_LABEL=AbCdEfGhIj_example
 ```
+
 - **Como obter**: Google Ads > Ferramentas > Conversões > Nova conversão
 - **Uso**: Tracking de conversões paid
 
 ### **3. Facebook/Meta Pixel**
+
 ```env
 VITE_META_PIXEL_ID=123456789012345
 VITE_META_CONVERSION_NAME=Lead
 ```
+
 - **Como obter**: Meta Business > Gerenciador de eventos > Pixels
 - **PIXEL_ID**: Número de 15 dígitos
 - **CONVERSION_NAME**: Nome personalizado do evento (ex: "LeadLojista", "CadastroEcko")
 
 ### **4. Meta API de Conversão (Recomendado)**
+
 ```env
 VITE_META_ACCESS_TOKEN=your_access_token_here
 VITE_META_API_VERSION=v18.0
 ```
+
 - **Como obter**: Meta Business > Configurações do sistema > Tokens de acesso
 - **Benefício**: Melhor tracking, reduz perda de iOS 14.5+
 
 ## 🚀 **Implementação Automática**
 
 ### **Scripts Carregados Automaticamente**
+
 1. **GA4**: `gtag.js` carregado dinamicamente
 2. **Facebook Pixel**: `fbevents.js` carregado dinamicamente
 3. **API de Conversão**: Enviado via fetch para Graph API
@@ -44,15 +53,17 @@ VITE_META_API_VERSION=v18.0
 ### **Eventos Trackados**
 
 #### **PageView (Automático)**
+
 ```javascript
 // GA4
-gtag('config', 'G-XXXXXXXXXX');
+gtag("config", "G-XXXXXXXXXX");
 
 // Facebook Pixel
-fbq('track', 'PageView');
+fbq("track", "PageView");
 ```
 
 #### **Form Submission Success**
+
 ```javascript
 // GA4
 gtag('event', 'form_submission_success', {
@@ -83,6 +94,7 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 ```
 
 #### **Custom Events**
+
 - `cnpj_selection`: Quando usuário seleciona tipo de lead
 - `form_field_focus`: Quando usuário clica em campo
 - `form_field_complete`: Quando usuário completa campo
@@ -91,6 +103,7 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 ## 📊 **Dados Enviados**
 
 ### **GA4 Custom Parameters**
+
 ```javascript
 {
   traffic_source: 'facebook|google_organic|direct',
@@ -103,6 +116,7 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 ```
 
 ### **Facebook Custom Data**
+
 ```javascript
 {
   content_category: 'Lojistas',
@@ -115,6 +129,7 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 ```
 
 ### **Meta API de Conversão**
+
 ```javascript
 {
   event_name: 'Lead', // ou nome personalizado
@@ -136,12 +151,14 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 ## 🔧 **Setup Passo a Passo**
 
 ### **1. Google Analytics 4**
+
 1. Criar conta GA4
 2. Copiar Measurement ID (G-XXXXXXXXXX)
 3. Adicionar `VITE_GA4_MEASUREMENT_ID` no .env
 4. ✅ Pronto! Script carrega automaticamente
 
 ### **2. Facebook Pixel**
+
 1. Criar Pixel no Meta Business
 2. Copiar Pixel ID (15 dígitos)
 3. Adicionar `VITE_META_PIXEL_ID` no .env
@@ -149,11 +166,13 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 5. ✅ Pronto! Script carrega automaticamente
 
 ### **3. Meta API de Conversão (Recomendado)**
+
 1. Gerar Access Token no Meta Business
 2. Adicionar `VITE_META_ACCESS_TOKEN` no .env
 3. ✅ Pronto! API é chamada automaticamente
 
 ### **4. Google Ads (Opcional)**
+
 1. Criar conversão no Google Ads
 2. Copiar Conversion ID e Label
 3. Adicionar variáveis no .env
@@ -162,18 +181,21 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 ## 🎯 **Benefícios da Implementação**
 
 ### **Tracking Robusto**
+
 - ✅ **GA4**: Analytics completo + Custom Parameters
 - ✅ **Facebook Pixel**: Otimização de campanhas
 - ✅ **Meta API**: Bypass das limitações iOS 14.5+
 - ✅ **Google Ads**: ROI preciso das campanhas paid
 
 ### **Dados Enriquecidos**
+
 - ✅ **UTM Tracking**: Origem completa das campanhas
 - ✅ **Lead Scoring**: Qualificação automática (business vs consumer)
 - ✅ **Device Data**: Mobile/desktop, browser, resolução
 - ✅ **Timing**: Tempo de preenchimento, página load time
 
 ### **Deduplicação Automática**
+
 - ✅ **Event ID**: Evita duplicação Pixel vs API
 - ✅ **Session ID**: Tracking único por sessão
 - ✅ **Timestamp**: Precisão temporal
@@ -181,6 +203,7 @@ POST https://graph.facebook.com/v18.0/{pixel-id}/events
 ## ⚡ **Modo Debug**
 
 ### **Verificar no Console**
+
 ```javascript
 // Ver eventos trackados
 console.log("Event tracked: form_submission_success", eventData);
@@ -191,6 +214,7 @@ console.log("Meta Pixel ID:", VITE_META_PIXEL_ID);
 ```
 
 ### **Ferramentas de Debug**
+
 - **GA4**: Google Tag Assistant
 - **Facebook**: Meta Pixel Helper (Chrome Extension)
 - **Google Ads**: Google Ads Debug Mode
@@ -198,11 +222,13 @@ console.log("Meta Pixel ID:", VITE_META_PIXEL_ID);
 ## 🔐 **Segurança**
 
 ### **Tokens Sensíveis**
+
 - ✅ `META_ACCESS_TOKEN`: Somente em produção via DevServerControl
 - ✅ Não commitar tokens no git
 - ✅ Usar variáveis de ambiente
 
 ### **GDPR/LGPD**
+
 - ✅ Scripts carregam somente se configurados
 - ✅ Dados anonimizados por padrão
 - ✅ Compatível com cookie consent
