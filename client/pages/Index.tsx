@@ -82,40 +82,50 @@ export default function Index() {
       });
     }
 
-    // Inicializar Facebook Pixel
+    // Inicializar Facebook Pixel com carregamento otimizado
     if (META_PIXEL_ID) {
-      // Carregar script do Facebook Pixel
-      (function (f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
-      );
+      const loadFacebookPixel = () => {
+        // Carregar script do Facebook Pixel de forma não bloqueante
+        (function (f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.defer = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js",
+        );
 
-      // Aguardar script carregar e inicializar
-      setTimeout(() => {
-        if (window.fbq) {
-          window.fbq("init", META_PIXEL_ID);
-          window.fbq("track", "PageView");
-        }
-      }, 100);
+        // Aguardar script carregar e inicializar
+        setTimeout(() => {
+          if (window.fbq) {
+            window.fbq("init", META_PIXEL_ID);
+            window.fbq("track", "PageView");
+          }
+        }, 100);
+      };
+
+      // Usar requestIdleCallback para carregar de forma não bloqueante
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadFacebookPixel);
+      } else {
+        setTimeout(loadFacebookPixel, 200);
+      }
     }
 
     // Registrar pageview customizado
