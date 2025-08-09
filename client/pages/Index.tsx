@@ -176,7 +176,7 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Reason 1 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdStar className="w-16 h-16 text-primary mx-auto" />
                 </div>
@@ -187,7 +187,7 @@ export default function Index() {
               </div>
 
               {/* Reason 2 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdAttachMoney className="w-16 h-16 text-primary mx-auto" />
                 </div>
@@ -198,7 +198,7 @@ export default function Index() {
               </div>
 
               {/* Reason 3 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdHeadset className="w-16 h-16 text-primary mx-auto" />
                 </div>
@@ -209,7 +209,7 @@ export default function Index() {
               </div>
 
               {/* Reason 4 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdWorkspacePremium className="w-16 h-16 text-primary mx-auto" />
                 </div>
@@ -248,7 +248,7 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Photo 1 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F6577c7f909a3482fa2cc99ca61e47c4a?format=webp&width=800"
                   alt="Coleção Ecko Streetwear"
@@ -258,7 +258,7 @@ export default function Index() {
               </div>
 
               {/* Photo 2 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fbe84a66a323540cea5c55c8df2ad8c0d?format=webp&width=800"
                   alt="Estilo Urbano Ecko"
@@ -268,7 +268,7 @@ export default function Index() {
               </div>
 
               {/* Photo 3 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F091edb31ccad491c905e05fbe6529ab1?format=webp&width=800"
                   alt="Moda Urbana Ecko"
@@ -278,7 +278,7 @@ export default function Index() {
               </div>
 
               {/* Photo 4 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F69e215b8632349e598a5da5645fa733f?format=webp&width=800"
                   alt="Streetwear Premium Ecko"
@@ -288,7 +288,7 @@ export default function Index() {
               </div>
 
               {/* Photo 5 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F2a63b4e4f9f541b7a0de23a2e4bc90b8?format=webp&width=800"
                   alt="Lifestyle Ecko"
@@ -298,7 +298,7 @@ export default function Index() {
               </div>
 
               {/* Photo 6 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fb7e252c481ba4795bb62418a495e2670?format=webp&width=800"
                   alt="Produtos Exclusivos Ecko"
@@ -308,7 +308,7 @@ export default function Index() {
               </div>
 
               {/* Photo 7 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F3f050f338bf04bd9872cb5d5499ebce5?format=webp&width=800"
                   alt="Coleção Completa Ecko"
@@ -318,7 +318,7 @@ export default function Index() {
               </div>
 
               {/* Photo 8 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-700 hover:shadow-xl transition-all duration-300">
+              <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fc5057fe1f9e54153b64262cb22bd8dc4?format=webp&width=800"
                   alt="Qualidade Premium Ecko"
@@ -359,7 +359,7 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Testimonial 1 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
@@ -380,7 +380,7 @@ export default function Index() {
               </div>
 
               {/* Testimonial 2 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
@@ -401,7 +401,7 @@ export default function Index() {
               </div>
 
               {/* Testimonial 3 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
@@ -422,7 +422,7 @@ export default function Index() {
               </div>
 
               {/* Testimonial 4 */}
-              <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
