@@ -122,9 +122,9 @@ export default function Index() {
 
       // Usar requestIdleCallback para carregar de forma não bloqueante
       if ("requestIdleCallback" in window) {
-        requestIdleCallback(loadFacebookPixel);
+        requestIdleCallback(loadFacebookPixel, { timeout: 5000 });
       } else {
-        setTimeout(loadFacebookPixel, 200);
+        setTimeout(loadFacebookPixel, 3000);
       }
     }
 
@@ -1482,7 +1482,7 @@ export default function Index() {
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★★★★★</span>
+                            <span className="text-2xl">★��★★★</span>
                           </div>
                           <blockquote className="text-base text-gray-900 leading-relaxed italic">
                             "{testimonial.text}"
