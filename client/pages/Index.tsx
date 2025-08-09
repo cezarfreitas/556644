@@ -522,8 +522,12 @@ export default function Index() {
             <div className="text-center mb-12">
               {/* Brand Section */}
               <div className="space-y-6 max-w-md mx-auto">
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-10 h-10 bg-primary rounded-lg"></div>
+                <div className="flex items-center justify-center space-x-3">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=800"
+                    alt="Logo Ecko - Marca de Streetwear"
+                    className="h-12 w-auto"
+                  />
                   <span className="text-2xl font-bold">Ecko</span>
                 </div>
                 <p className="text-background/80 leading-relaxed">
