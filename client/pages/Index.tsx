@@ -1006,36 +1006,48 @@ export default function Index() {
                       >
                         Agora precisamos do seu CNPJ *
                       </label>
-                      <input
-                        id="cnpj-number"
-                        name="cnpj-number"
-                        type="text"
-                        required
-                        className={`w-full px-4 py-4 sm:py-3 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
-                          formErrors.cnpj
-                            ? 'border-red-500 focus:ring-red-500'
-                            : formValues.cnpj && !formErrors.cnpj
-                              ? 'border-green-500 focus:ring-green-500'
-                              : 'border-input focus:ring-primary'
-                        }`}
-                        placeholder="00.000.000/0000-00"
-                        maxLength={18}
-                        onChange={handleCnpjChange}
-                        onFocus={() =>
-                          trackEvent("form_field_focus", {
-                            field: "cnpj",
-                            step: 3,
-                          })
-                        }
-                        onBlur={(e) => {
-                          validateField("cnpj", e.target.value);
-                          e.target.value &&
-                          trackEvent("form_field_complete", {
-                            field: "cnpj",
-                            step: 3,
-                          });
-                        }}
-                      />
+                      <div className="relative">
+                        <input
+                          id="cnpj-number"
+                          name="cnpj-number"
+                          type="text"
+                          required
+                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                            formErrors.cnpj
+                              ? 'border-red-500 focus:ring-red-500'
+                              : formValues.cnpj && !formErrors.cnpj
+                                ? 'border-green-500 focus:ring-green-500'
+                                : 'border-input focus:ring-primary'
+                          }`}
+                          placeholder="00.000.000/0000-00"
+                          maxLength={18}
+                          onChange={handleCnpjChange}
+                          onFocus={() =>
+                            trackEvent("form_field_focus", {
+                              field: "cnpj",
+                              step: 3,
+                            })
+                          }
+                          onBlur={(e) => {
+                            validateField("cnpj", e.target.value);
+                            e.target.value &&
+                            trackEvent("form_field_complete", {
+                              field: "cnpj",
+                              step: 3,
+                            });
+                          }}
+                        />
+                        {/* Ícone de validação */}
+                        {formValues.cnpj && (
+                          <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                            {formErrors.cnpj ? (
+                              <FaExclamationTriangle className="w-5 h-5 text-red-500" />
+                            ) : (
+                              <FaCheck className="w-5 h-5 text-green-500" />
+                            )}
+                          </div>
+                        )}
+                      </div>
                       {formErrors.cnpj && (
                         <p className="text-red-500 text-sm mt-1">{formErrors.cnpj}</p>
                       )}
