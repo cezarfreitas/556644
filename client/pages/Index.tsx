@@ -613,108 +613,135 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
-              {/* Testimonial 1 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-1 text-primary">
-                    <span className="text-2xl">★★★★★</span>
-                  </div>
-                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "Trabalhar com a Ecko foi um divisor de águas para minha
-                    loja. As margens são excelentes e os produtos saem
-                    rapidamente. Meus clientes sempre perguntam pelos
-                    lançamentos da marca."
-                  </blockquote>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-gray-900 font-bold text-lg">M</span>
+            {/* Slider Container */}
+            <div className="relative">
+              {/* Navigation Arrows */}
+              <div className="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
+                <button
+                  onClick={prevSlide}
+                  className="bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors duration-300 -ml-6"
+                  aria-label="Depoimento anterior"
+                >
+                  <FaChevronLeft className="w-5 h-5 text-gray-600" />
+                </button>
+              </div>
+
+              <div className="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+                <button
+                  onClick={nextSlide}
+                  className="bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors duration-300 -mr-6"
+                  aria-label="Próximo depoimento"
+                >
+                  <FaChevronRight className="w-5 h-5 text-gray-600" />
+                </button>
+              </div>
+
+              {/* Slider Content */}
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentSlide * 100}%)`
+                  }}
+                >
+                  {/* Desktop: 2 slides, Mobile: 1 slide */}
+                  {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, slideIndex) => (
+                    <div key={slideIndex} className="w-full flex-shrink-0">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+                        {testimonials.slice(slideIndex * 2, slideIndex * 2 + 2).map((testimonial) => (
+                          <div
+                            key={testimonial.id}
+                            className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                          >
+                            <div className="space-y-6">
+                              <div className="flex items-center space-x-1 text-primary">
+                                <span className="text-2xl">★★★★★</span>
+                              </div>
+                              <blockquote className="text-base sm:text-lg text-gray-900 leading-relaxed italic">
+                                "{testimonial.text}"
+                              </blockquote>
+                              <div className="flex items-center space-x-4">
+                                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                  <span className="text-gray-900 font-bold text-lg">
+                                    {testimonial.avatar}
+                                  </span>
+                                </div>
+                                <div>
+                                  <h4 className="font-bold text-gray-900">
+                                    {testimonial.name}
+                                  </h4>
+                                  <p className="text-sm text-gray-900/70">
+                                    {testimonial.store}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Marcos Silva</h4>
-                      <p className="text-sm text-gray-900/70">
-                        Street Style Store - São Paulo, SP
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Testimonial 2 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-1 text-primary">
-                    <span className="text-2xl">★★★★★</span>
-                  </div>
-                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "O suporte da equipe Ecko é incrível. Eles nos ajudam com
-                    materiais de marketing e sempre estão disponíveis para
-                    dúvidas. Recomendo para qualquer lojista sério."
-                  </blockquote>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-gray-900 font-bold text-lg">A</span>
+              {/* Mobile Slider for single testimonials */}
+              <div className="md:hidden overflow-hidden">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentSlide * 100}%)`
+                  }}
+                >
+                  {testimonials.map((testimonial) => (
+                    <div key={testimonial.id} className="w-full flex-shrink-0 px-2">
+                      <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
+                        <div className="space-y-6">
+                          <div className="flex items-center space-x-1 text-primary">
+                            <span className="text-2xl">★★★★★</span>
+                          </div>
+                          <blockquote className="text-base text-gray-900 leading-relaxed italic">
+                            "{testimonial.text}"
+                          </blockquote>
+                          <div className="flex items-center space-x-4">
+                            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-gray-900 font-bold text-lg">
+                                {testimonial.avatar}
+                              </span>
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-gray-900">
+                                {testimonial.name}
+                              </h4>
+                              <p className="text-sm text-gray-900/70">
+                                {testimonial.store}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Amanda Costa</h4>
-                      <p className="text-sm text-gray-900/70">
-                        Urban Fashion - Rio de Janeiro, RJ
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Testimonial 3 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-1 text-primary">
-                    <span className="text-2xl">★★★★★</span>
-                  </div>
-                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A
-                    marca tem um apelo incrível com o público jovem e as peças
-                    têm qualidade excepcional."
-                  </blockquote>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-gray-900 font-bold text-lg">R</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">
-                        Rafael Oliveira
-                      </h4>
-                      <p className="text-sm text-gray-900/70">
-                        Streetwear BH - Belo Horizonte, MG
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Testimonial 4 */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-1 text-primary">
-                    <span className="text-2xl">★★★★★</span>
-                  </div>
-                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "A Ecko transformou minha loja multimarca. Agora somos
-                    referência em streetwear na cidade. O processo de se tornar
-                    parceiro foi super tranquilo e rápido."
-                  </blockquote>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-gray-900 font-bold text-lg">C</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Carla Santos</h4>
-                      <p className="text-sm text-gray-900/70">
-                        Fashion Hub - Curitiba, PR
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              {/* Dots Navigation */}
+              <div className="flex justify-center mt-8 space-x-2">
+                {Array.from({
+                  length: window.innerWidth >= 768
+                    ? Math.ceil(testimonials.length / 2)
+                    : testimonials.length
+                }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                      currentSlide === index
+                        ? 'bg-primary'
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Ir para slide ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
 
