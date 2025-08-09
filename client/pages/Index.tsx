@@ -44,6 +44,129 @@ export default function Index() {
         </div>
       </section>
 
+      {/* CTA and Form Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
+
+            {/* Text/CTA Column */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                  Pronto Para Começar Sua
+                  <span className="block text-primary">Parceria com a Ecko?</span>
+                </h2>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  Preencha o formulário ao lado e nossa equipe comercial entrará em contato em até 24 horas para apresentar as condições exclusivas para lojistas oficiais.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <span className="text-foreground font-medium">Sem taxas de adesão</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <span className="text-foreground font-medium">Processo 100% digital</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <span className="text-foreground font-medium">Resposta em até 24h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Form Column */}
+            <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
+              <div className="space-y-6">
+                <div className="text-center space-y-2">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Solicite Sua Proposta
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Preencha os dados e receba nossa proposta comercial
+                  </p>
+                </div>
+
+                <form className="space-y-5">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium text-foreground">
+                      Nome *
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      placeholder="Seu nome completo"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="whatsapp" className="text-sm font-medium text-foreground">
+                      WhatsApp *
+                    </label>
+                    <input
+                      id="whatsapp"
+                      type="tel"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      placeholder="(11) 99999-9999"
+                    />
+                  </div>
+
+                  <div className="space-y-3">
+                    <label className="text-sm font-medium text-foreground">
+                      Sua loja possui CNPJ? *
+                    </label>
+                    <div className="space-y-2">
+                      <label className="flex items-center space-x-3 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="cnpj"
+                          value="sim"
+                          className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
+                          required
+                        />
+                        <span className="text-foreground">Sim</span>
+                      </label>
+                      <label className="flex items-center space-x-3 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="cnpj"
+                          value="nao-consumidor"
+                          className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
+                          required
+                        />
+                        <span className="text-foreground">Não, sou consumidor</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-primary hover:bg-red-600 text-white py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
+                  >
+                    Receber Proposta Comercial
+                  </button>
+
+                  <p className="text-xs text-muted-foreground text-center">
+                    Ao enviar, você concorda em receber contato comercial da Ecko.
+                    Seus dados estão seguros conosco.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 5 Reasons Section - Redesigned */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-background via-muted/20 to-background">
         <div className="container mx-auto px-6">
