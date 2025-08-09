@@ -120,27 +120,35 @@ export default function Index() {
                       Sua loja possui CNPJ? *
                     </label>
                     <div className="grid grid-cols-2 gap-2">
-                      <label className="flex items-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
+                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg p-3 transition-all ${
+                        selectedCnpj === "sim"
+                          ? "bg-primary border-primary text-white"
+                          : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
+                      }`}>
                         <input
                           type="radio"
                           name="cnpj"
                           value="sim"
-                          className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
+                          className="hidden"
                           required
                           onChange={(e) => handleCnpjRadioChange(e.target.value)}
                         />
-                        <span className="text-gray-900 font-medium">Sim</span>
+                        <span className="font-medium">Sim</span>
                       </label>
-                      <label className="flex items-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
+                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg p-3 transition-all ${
+                        selectedCnpj === "nao-consumidor"
+                          ? "bg-primary border-primary text-white"
+                          : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
+                      }`}>
                         <input
                           type="radio"
                           name="cnpj"
                           value="nao-consumidor"
-                          className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
+                          className="hidden"
                           required
                           onChange={(e) => handleCnpjRadioChange(e.target.value)}
                         />
-                        <span className="text-gray-900 font-medium">Não, sou consumidor</span>
+                        <span className="font-medium">Não, sou consumidor</span>
                       </label>
                     </div>
                   </div>
