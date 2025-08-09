@@ -148,9 +148,17 @@ export default function Index() {
       {/* Hero Section - Landing Page Principal */}
       <header className="relative h-screen w-full overflow-hidden">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=400"
+          srcSet="
+            https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=400 400w,
+            https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=800 800w,
+            https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=1200 1200w
+          "
+          sizes="100vw"
           alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
         />
         {/* Enhanced Overlay with Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
