@@ -19,6 +19,7 @@ export default function Index() {
   const [showCnpjField, setShowCnpjField] = useState(false);
   const [selectedCnpj, setSelectedCnpj] = useState("");
   const [showCouponMessage, setShowCouponMessage] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const api_form =
     import.meta.env.VITE_api_form ||
