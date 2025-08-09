@@ -11,6 +11,8 @@ import {
   FaStore,
   FaArrowRight,
   FaChevronDown,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 
 export default function Index() {
