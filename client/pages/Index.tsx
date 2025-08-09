@@ -306,6 +306,17 @@ export default function Index() {
         alert("Erro ao enviar formulário. Tente novamente.");
       }
     } catch (error) {
+      // Track erro de conexão
+      trackEvent('form_submission_error', {
+        error_type: 'network_error',
+        error_message: error?.message || 'Unknown error',
+        form_data: {
+          has_name: !!formData.get("name"),
+          has_whatsapp: !!formData.get("whatsapp"),
+          cnpj_selection: selectedCnpj
+        }
+      });
+
       console.error("Erro ao enviar formulário:", error);
       alert(
         "Erro ao enviar formulário. Verifique sua conexão e tente novamente.",
