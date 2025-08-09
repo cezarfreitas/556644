@@ -194,6 +194,27 @@ export default function Index() {
                     </div>
                   </div>
 
+                  {/* Mensagem de Cupom para Consumidores */}
+                  {showCouponMessage && (
+                    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                      <div className="text-center space-y-3">
+                        <p className="text-gray-900 font-medium">
+                          Este cadastro é exclusivo para lojistas com CNPJ
+                        </p>
+                        <p className="text-gray-700">
+                          Mas não fique triste! Temos um cupom com <span className="font-bold text-primary">10% de desconto</span> para você
+                        </p>
+                        <button
+                          type="button"
+                          className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg font-bold transition-colors duration-300"
+                          onClick={() => window.open('https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!', '_blank')}
+                        >
+                          Clique aqui para receber seu cupom
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Campo CNPJ Condicional */}
                   {showCnpjField && (
                     <div className="space-y-2">
