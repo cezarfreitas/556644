@@ -193,7 +193,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Margens Atrativas</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Condições comerciais privilegiadas com margens competitivas e flexibilidade de pagamento. Maximizamos sua lucratividade com preços especiais para parceiros oficiais.
+                  Condiç��es comerciais privilegiadas com margens competitivas e flexibilidade de pagamento. Maximizamos sua lucratividade com preços especiais para parceiros oficiais.
                 </p>
               </div>
 
@@ -445,7 +445,7 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-gray-600 mb-6">
                 Junte-se a mais de 500 lojistas parceiros de sucesso
               </p>
               <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
