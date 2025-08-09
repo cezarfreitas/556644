@@ -196,6 +196,13 @@ export default function Index() {
     setSelectedCnpj(value);
     setShowCnpjField(value === "sim");
     setShowCouponMessage(value === "nao-consumidor");
+
+    // Track evento de seleção CNPJ
+    trackEvent('cnpj_selection', {
+      selection: value,
+      has_cnpj: value === "sim",
+      lead_type: value === "sim" ? "business" : "consumer"
+    });
   };
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
