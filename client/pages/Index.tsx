@@ -529,35 +529,35 @@ export default function Index() {
                     alt="Logo Ecko - Marca de Streetwear"
                     className="h-12 w-auto"
                   />
-                  <span className="text-2xl font-bold">Ecko</span>
+                  <span className="text-2xl font-bold text-gray-900">Ecko</span>
                 </div>
-                <p className="text-background/80 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
-                    <FaFacebook className="text-lg text-background/80 group-hover:text-gray-900" />
+                  <a href="#" className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                    <FaFacebook className="text-lg text-gray-600 group-hover:text-white" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
-                    <FaInstagram className="text-lg text-background/80 group-hover:text-gray-900" />
+                  <a href="#" className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                    <FaInstagram className="text-lg text-gray-600 group-hover:text-white" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
-                    <FaStore className="text-lg text-background/80 group-hover:text-gray-900" />
+                  <a href="#" className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                    <FaStore className="text-lg text-gray-600 group-hover:text-white" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-background/20 pt-8">
+            <div className="border-t border-gray-300 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div className="text-background/60 text-sm">
+                <div className="text-gray-500 text-sm">
                   © 2024 Ecko. Todos os direitos reservados.
                 </div>
                 <div className="flex space-x-6 text-sm">
-                  <a href="#" className="text-background/60 hover:text-primary transition-colors">Privacidade</a>
-                  <a href="#" className="text-background/60 hover:text-primary transition-colors">Termos</a>
-                  <a href="#" className="text-background/60 hover:text-primary transition-colors">Cookies</a>
+                  <a href="#" className="text-gray-500 hover:text-primary transition-colors">Privacidade</a>
+                  <a href="#" className="text-gray-500 hover:text-primary transition-colors">Termos</a>
+                  <a href="#" className="text-gray-500 hover:text-primary transition-colors">Cookies</a>
                 </div>
               </div>
             </div>
