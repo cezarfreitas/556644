@@ -8,3 +8,5 @@ declare global {
     fbq?: (...args: any[]) => void;
   }
 }
+
+export {};
