@@ -102,23 +102,23 @@ export default function Index() {
           </div>
 
           {/* Main Heading - H1 for SEO - Otimizado para mobile */}
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 max-w-6xl leading-[1.05] sm:leading-[1.1] tracking-tight animate-slide-up px-2">
-            <span className="block mb-1 sm:mb-2">Seja um Lojista Oficial</span>
-            <span className="block text-primary drop-shadow-lg">Ecko</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-8 sm:mb-12 max-w-6xl leading-[0.95] sm:leading-[1.0] tracking-tight animate-slide-up px-2 uppercase">
+            <span className="block mb-2 sm:mb-3 drop-shadow-2xl">SEJA UM LOJISTA OFICIAL</span>
+            <span className="block text-primary drop-shadow-2xl text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">ECKO</span>
           </h1>
 
           {/* Subtítulo de Destaque */}
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 sm:mb-8 max-w-4xl leading-relaxed animate-slide-up px-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white/95 mb-6 sm:mb-8 max-w-5xl leading-tight animate-slide-up px-2">
             A maior marca de moda urbana do Brasil e reconhecida mundialmente agora na sua loja
           </h2>
 
           {/* Subtitle/Call Text - Otimizado para mobile */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mb-8 sm:mb-10 max-w-4xl leading-relaxed font-medium px-4 sm:px-6 animate-fade-in">
-            <span className="text-primary font-semibold">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-10 sm:mb-12 max-w-5xl leading-relaxed font-medium px-4 sm:px-6 animate-fade-in">
+            <span className="text-primary font-bold">
               Produtos exclusivos
             </span>
             ,{" "}
-            <span className="text-primary font-semibold">
+            <span className="text-primary font-bold">
               alto lucro
             </span>{" "}
             e o prestígio de uma marca reconhecida mundialmente. Aumente suas vendas e atraia clientes que buscam qualidade e estilo.
@@ -127,9 +127,9 @@ export default function Index() {
           {/* Call to Action Button - Otimizado para mobile */}
           <a
             href="#cadastro-lojistas"
-            className="inline-block bg-primary hover:bg-red-600 text-white px-8 sm:px-12 py-4 sm:py-6 rounded-xl text-base sm:text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide mx-4 sm:mx-0 w-auto max-w-xs sm:max-w-none text-center"
+            className="inline-block bg-primary hover:bg-red-600 text-white px-10 sm:px-14 py-5 sm:py-7 rounded-xl text-lg sm:text-xl md:text-2xl font-black transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-2xl border-3 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide mx-4 sm:mx-0 w-auto text-center"
           >
-            Cadastre-se Agora
+            CADASTRE-SE AGORA
           </a>
         </div>
       </header>
