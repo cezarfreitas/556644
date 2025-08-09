@@ -724,13 +724,9 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Dots Navigation */}
-              <div className="flex justify-center mt-8 space-x-2">
-                {Array.from({
-                  length: window.innerWidth >= 768
-                    ? Math.ceil(testimonials.length / 2)
-                    : testimonials.length
-                }).map((_, index) => (
+              {/* Dots Navigation - Desktop (paired slides) */}
+              <div className="hidden md:flex justify-center mt-8 space-x-2">
+                {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => (
                   <button
                     key={index}
                     onClick={() => goToSlide(index)}
@@ -740,6 +736,22 @@ export default function Index() {
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     aria-label={`Ir para slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Dots Navigation - Mobile (single slides) */}
+              <div className="flex md:hidden justify-center mt-8 space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                      currentSlide === index
+                        ? 'bg-primary'
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Ir para depoimento ${index + 1}`}
                   />
                 ))}
               </div>
