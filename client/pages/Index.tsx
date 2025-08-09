@@ -27,19 +27,19 @@ export default function Index() {
           </div>
 
           {/* Main Heading - H1 for SEO */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
             <span className="block mb-2">Seja Lojista Oficial</span>
             <span className="block text-primary drop-shadow-lg">Ecko</span>
-            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-white/95">Maior Marca de Streetwear do Brasil</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-gray-900/95">Maior Marca de Streetwear do Brasil</span>
           </h1>
 
           {/* Subtitle/Call Text */}
-          <p className="text-base md:text-lg lg:text-xl text-white/95 mb-10 max-w-3xl leading-relaxed font-medium px-4 animate-fade-in">
+          <p className="text-base md:text-lg lg:text-xl text-gray-900/95 mb-10 max-w-3xl leading-relaxed font-medium px-4 animate-fade-in">
             Acesso a <span className="text-primary font-semibold">produtos exclusivos</span>, <span className="text-primary font-semibold">margens atrativas</span> e todo o prestígio da marca líder em streetwear brasileiro.
           </p>
 
           {/* Call to Action Button */}
-          <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
+          <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-gray-900 px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
             Seja Parceiro Ecko Oficial
           </a>
         </div>
@@ -82,33 +82,33 @@ export default function Index() {
 
                 <form className="space-y-5">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-white">
+                    <label htmlFor="name" className="text-sm font-medium text-gray-900">
                       Nome *
                     </label>
                     <input
                       id="name"
                       type="text"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-white/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="Seu nome completo"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="whatsapp" className="text-sm font-medium text-white">
+                    <label htmlFor="whatsapp" className="text-sm font-medium text-gray-900">
                       WhatsApp *
                     </label>
                     <input
                       id="whatsapp"
                       type="tel"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-white/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
 
                   <div className="space-y-3">
-                    <label className="text-sm font-medium text-white">
+                    <label className="text-sm font-medium text-gray-900">
                       Sua loja possui CNPJ? *
                     </label>
                     <div className="space-y-2">
@@ -120,7 +120,7 @@ export default function Index() {
                           className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
                           required
                         />
-                        <span className="text-white">Sim</span>
+                        <span className="text-gray-900">Sim</span>
                       </label>
                       <label className="flex items-center space-x-3 cursor-pointer">
                         <input
@@ -130,19 +130,19 @@ export default function Index() {
                           className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
                           required
                         />
-                        <span className="text-white">Não, sou consumidor</span>
+                        <span className="text-gray-900">Não, sou consumidor</span>
                       </label>
                     </div>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-primary hover:bg-red-600 text-white py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
+                    className="w-full bg-primary hover:bg-red-600 text-gray-900 py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
                   >
                     Receber Proposta Comercial
                   </button>
 
-                  <p className="text-xs text-white/70 text-center">
+                  <p className="text-xs text-gray-900/70 text-center">
                     Ao enviar, você concorda em receber contato comercial da Ecko.
                     Seus dados estão seguros conosco.
                   </p>
@@ -180,8 +180,8 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdStar className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Produtos Exclusivos</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Produtos Exclusivos</h3>
+                <p className="text-gray-900/80 text-sm leading-relaxed">
                   Acesso prioritário às coleções limitadas, lançamentos exclusivos e produtos especiais que apenas lojistas oficiais têm direito. Seja o primeiro a oferecer as novidades para seus clientes.
                 </p>
               </div>
@@ -191,8 +191,8 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdAttachMoney className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Margens Atrativas</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Margens Atrativas</h3>
+                <p className="text-gray-900/80 text-sm leading-relaxed">
                   Condições comerciais privilegiadas com margens competitivas e flexibilidade de pagamento. Maximizamos sua lucratividade com preços especiais para parceiros oficiais.
                 </p>
               </div>
@@ -202,8 +202,8 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdHeadset className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Suporte Completo</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Suporte Completo</h3>
+                <p className="text-gray-900/80 text-sm leading-relaxed">
                   Treinamento especializado da equipe, materiais de marketing exclusivos, suporte técnico dedicado e consultoria para maximizar suas vendas e crescimento.
                 </p>
               </div>
@@ -213,8 +213,8 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdWorkspacePremium className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Prestígio da Marca</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Prestígio da Marca</h3>
+                <p className="text-gray-900/80 text-sm leading-relaxed">
                   Associe-se à marca líder em streetwear no Brasil. Credibilidade reconhecida nacionalmente que fortalece seu negócio e atrai mais clientes para sua loja.
                 </p>
               </div>
@@ -222,7 +222,7 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <button className="bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-white px-12 py-4 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+              <button className="bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-gray-900 px-12 py-4 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
                 Quero Ser Parceiro Agora
               </button>
             </div>
@@ -330,10 +330,10 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-lg text-gray-900/80 mb-6">
                 Produtos de alta qualidade que seus clientes vão amar e comprar
               </p>
-              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
                 Quero Ser Distribuidor Oficial
               </a>
             </div>
@@ -364,16 +364,16 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-white leading-relaxed italic">
+                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">M</span>
+                      <span className="text-gray-900 font-bold text-lg">M</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Marcos Silva</h4>
-                      <p className="text-sm text-white/70">Street Style Store - São Paulo, SP</p>
+                      <h4 className="font-bold text-gray-900">Marcos Silva</h4>
+                      <p className="text-sm text-gray-900/70">Street Style Store - São Paulo, SP</p>
                     </div>
                   </div>
                 </div>
@@ -385,16 +385,16 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-white leading-relaxed italic">
+                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">A</span>
+                      <span className="text-gray-900 font-bold text-lg">A</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Amanda Costa</h4>
-                      <p className="text-sm text-white/70">Urban Fashion - Rio de Janeiro, RJ</p>
+                      <h4 className="font-bold text-gray-900">Amanda Costa</h4>
+                      <p className="text-sm text-gray-900/70">Urban Fashion - Rio de Janeiro, RJ</p>
                     </div>
                   </div>
                 </div>
@@ -406,16 +406,16 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-white leading-relaxed italic">
+                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">R</span>
+                      <span className="text-gray-900 font-bold text-lg">R</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Rafael Oliveira</h4>
-                      <p className="text-sm text-white/70">Streetwear BH - Belo Horizonte, MG</p>
+                      <h4 className="font-bold text-gray-900">Rafael Oliveira</h4>
+                      <p className="text-sm text-gray-900/70">Streetwear BH - Belo Horizonte, MG</p>
                     </div>
                   </div>
                 </div>
@@ -427,16 +427,16 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-white leading-relaxed italic">
+                  <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "A Ecko transformou minha loja multimarca. Agora somos referência em streetwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">C</span>
+                      <span className="text-gray-900 font-bold text-lg">C</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">Carla Santos</h4>
-                      <p className="text-sm text-white/70">Fashion Hub - Curitiba, PR</p>
+                      <h4 className="font-bold text-gray-900">Carla Santos</h4>
+                      <p className="text-sm text-gray-900/70">Fashion Hub - Curitiba, PR</p>
                     </div>
                   </div>
                 </div>
@@ -445,10 +445,10 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-white/80 mb-6">
+              <p className="text-lg text-gray-900/80 mb-6">
                 Junte-se a mais de 500 lojistas parceiros de sucesso
               </p>
-              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
                 Quero Ser o Próximo Parceiro de Sucesso
               </a>
             </div>
@@ -478,19 +478,19 @@ export default function Index() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">20+</div>
-                    <div className="text-white/80 text-sm">Anos de Mercado</div>
+                    <div className="text-gray-900/80 text-sm">Anos de Mercado</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-                    <div className="text-white/80 text-sm">Lojistas Parceiros</div>
+                    <div className="text-gray-900/80 text-sm">Lojistas Parceiros</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1M+</div>
-                    <div className="text-white/80 text-sm">Clientes Satisfeitos</div>
+                    <div className="text-gray-900/80 text-sm">Clientes Satisfeitos</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">#1</div>
-                    <div className="text-white/80 text-sm">Marca de Streetwear</div>
+                    <div className="text-gray-900/80 text-sm">Marca de Streetwear</div>
                   </div>
                 </div>
               </div>
@@ -504,7 +504,7 @@ export default function Index() {
                     className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-2xl"
                   />
                   <div className="mt-8 space-y-4">
-                    <p className="text-white/60 text-sm italic">
+                    <p className="text-gray-900/60 text-sm italic">
                       "Autenticidade que conecta com a rua"
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
@@ -536,13 +536,13 @@ export default function Index() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
-                    <FaFacebook className="text-lg text-background/80 group-hover:text-white" />
+                    <FaFacebook className="text-lg text-background/80 group-hover:text-gray-900" />
                   </a>
                   <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
-                    <FaInstagram className="text-lg text-background/80 group-hover:text-white" />
+                    <FaInstagram className="text-lg text-background/80 group-hover:text-gray-900" />
                   </a>
                   <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
-                    <FaStore className="text-lg text-background/80 group-hover:text-white" />
+                    <FaStore className="text-lg text-background/80 group-hover:text-gray-900" />
                   </a>
                 </div>
               </div>
