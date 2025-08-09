@@ -39,7 +39,7 @@ export default function Index() {
           </p>
 
           {/* Call to Action Button */}
-          <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-gray-900 px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
+          <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
             Seja Parceiro Ecko Oficial
           </a>
         </div>
@@ -137,7 +137,7 @@ export default function Index() {
 
                   <button
                     type="submit"
-                    className="w-full bg-primary hover:bg-red-600 text-gray-900 py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
+                    className="w-full bg-primary hover:bg-red-600 text-white py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
                   >
                     Receber Proposta Comercial
                   </button>
@@ -333,7 +333,7 @@ export default function Index() {
               <p className="text-lg text-gray-600 mb-6">
                 Produtos de alta qualidade que seus clientes vão amar e comprar
               </p>
-              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
                 Quero Ser Distribuidor Oficial
               </a>
             </div>
@@ -448,7 +448,7 @@ export default function Index() {
               <p className="text-lg text-gray-600 mb-6">
                 Junte-se a mais de 500 lojistas parceiros de sucesso
               </p>
-              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
                 Quero Ser o Próximo Parceiro de Sucesso
               </a>
             </div>
