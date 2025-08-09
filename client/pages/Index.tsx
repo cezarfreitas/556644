@@ -258,11 +258,25 @@ export default function Index() {
       });
 
       if (response.ok) {
+        // Track sucesso do envio
+        trackEvent('form_submission_success', {
+          lead_type: selectedCnpj === "sim" ? "business" : "consumer",
+          form_completion_time: performance.now() - (window.formStartTime || 0),
+          has_cnpj: selectedCnpj === "sim"
+        });
+
         // Se for consumidor, abre WhatsApp após enviar dados
         if (selectedCnpj === "nao-consumidor") {
           alert(
             "Dados enviados! Redirecionando para receber seu cupom de desconto.",
           );
+
+          // Track clique do WhatsApp
+          trackEvent('whatsapp_redirect', {
+            reason: 'coupon_request',
+            lead_type: 'consumer'
+          });
+
           window.open(
             "https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!",
             "_blank",
@@ -278,6 +292,17 @@ export default function Index() {
         setShowCnpjField(false);
         setShowCouponMessage(false);
       } else {
+        // Track erro do envio
+        trackEvent('form_submission_error', {
+          error_status: response.status,
+          error_type: 'http_error',
+          form_data: {
+            has_name: !!formData.get("name"),
+            has_whatsapp: !!formData.get("whatsapp"),
+            cnpj_selection: selectedCnpj
+          }
+        });
+
         alert("Erro ao enviar formulário. Tente novamente.");
       }
     } catch (error) {
