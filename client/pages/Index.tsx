@@ -48,13 +48,22 @@ export default function Index() {
     // Marcar início do tempo para cálculo de completion time
     window.formStartTime = performance.now();
 
-    // Inicializar Google Analytics 4
+    // Inicializar Google Analytics 4 com defer para evitar blocking
     if (GA4_MEASUREMENT_ID) {
-      // Carregar script do GA4
-      const gaScript = document.createElement("script");
-      gaScript.async = true;
-      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
-      document.head.appendChild(gaScript);
+      // Usar requestIdleCallback para carregar scripts não críticos
+      const loadGA4 = () => {
+        const gaScript = document.createElement("script");
+        gaScript.async = true;
+        gaScript.defer = true;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
+        document.head.appendChild(gaScript);
+      };
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGA4);
+      } else {
+        setTimeout(loadGA4, 100);
+      }
 
       // Configurar gtag
       window.dataLayer = window.dataLayer || [];
