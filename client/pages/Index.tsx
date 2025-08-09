@@ -750,9 +750,9 @@ export default function Index() {
           width="1920"
           height="1080"
         />
-        {/* Enhanced Overlay with Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
-        <div className="absolute inset-0 bg-black/20"></div>
+        {/* Enhanced Radial Overlay */}
+        <div className="absolute inset-0 bg-gradient-radial from-black/20 via-black/60 to-black/80"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8">
@@ -1482,7 +1482,7 @@ export default function Index() {
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★��★★★</span>
+                            <span className="text-2xl">★★★★★</span>
                           </div>
                           <blockquote className="text-base text-gray-900 leading-relaxed italic">
                             "{testimonial.text}"
