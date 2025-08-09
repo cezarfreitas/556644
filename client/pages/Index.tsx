@@ -525,6 +525,47 @@ export default function Index() {
     });
   };
 
+  // Handlers para campos do formulário
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setFormValues(prev => ({ ...prev, name: value }));
+
+    // Validar após delay para não validar a cada tecla
+    setTimeout(() => validateField("name", value), 500);
+  };
+
+  const handleWhatsAppChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    const formatted = formatWhatsApp(value);
+
+    // Prevenir input além do limite
+    if (formatted.length <= 15) {
+      e.target.value = formatted;
+      setFormValues(prev => ({ ...prev, whatsapp: formatted }));
+
+      // Validar após delay
+      setTimeout(() => validateField("whatsapp", formatted), 500);
+    } else {
+      e.preventDefault();
+    }
+  };
+
+  const handleCnpjChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    const formatted = formatCNPJ(value);
+
+    // Prevenir input além do limite
+    if (formatted.length <= 18) {
+      e.target.value = formatted;
+      setFormValues(prev => ({ ...prev, cnpj: formatted }));
+
+      // Validar após delay
+      setTimeout(() => validateField("cnpj", formatted), 500);
+    } else {
+      e.preventDefault();
+    }
+  };
+
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
