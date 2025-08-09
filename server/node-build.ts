@@ -5,7 +5,7 @@ import * as path from "path";
 import { URL } from "url";
 
 const app = createServer();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 // In production, serve the built SPA files
 // Fix for Node.js 18 compatibility
