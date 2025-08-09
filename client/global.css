@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -109,13 +109,18 @@
   }
 
   section:not(:last-child)::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 100px;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(156, 163, 175, 0.3), transparent);
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(156, 163, 175, 0.3),
+      transparent
+    );
     transform: translateX(-50%);
   }
 }

@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { MdStar, MdAttachMoney, MdHeadset, MdWorkspacePremium } from "react-icons/md";
+import {
+  MdStar,
+  MdAttachMoney,
+  MdHeadset,
+  MdWorkspacePremium,
+} from "react-icons/md";
 import { FaFacebook, FaInstagram, FaStore } from "react-icons/fa";
 
 export default function Index() {
@@ -7,7 +12,9 @@ export default function Index() {
   const [selectedCnpj, setSelectedCnpj] = useState("");
   const [showCouponMessage, setShowCouponMessage] = useState(false);
 
-  const api_form = import.meta.env.VITE_api_form || "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
+  const api_form =
+    import.meta.env.VITE_api_form ||
+    "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
@@ -26,7 +33,7 @@ export default function Index() {
       cnpj: showCnpjField ? formData.get("cnpj-number") : null,
       marca: "Ecko",
       origem: "Landing Page Lojistas",
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
 
     console.log("Payload sendo enviado:", payload);
@@ -43,10 +50,17 @@ export default function Index() {
       if (response.ok) {
         // Se for consumidor, abre WhatsApp após enviar dados
         if (selectedCnpj === "nao-consumidor") {
-          alert("Dados enviados! Redirecionando para receber seu cupom de desconto.");
-          window.open('https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!', '_blank');
+          alert(
+            "Dados enviados! Redirecionando para receber seu cupom de desconto.",
+          );
+          window.open(
+            "https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!",
+            "_blank",
+          );
         } else {
-          alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+          alert(
+            "Formulário enviado com sucesso! Entraremos em contato em breve.",
+          );
         }
 
         e.currentTarget.reset();
@@ -58,7 +72,9 @@ export default function Index() {
       }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
-      alert("Erro ao enviar formulário. Verifique sua conexão e tente novamente.");
+      alert(
+        "Erro ao enviar formulário. Verifique sua conexão e tente novamente.",
+      );
     }
   };
   return (
@@ -89,16 +105,29 @@ export default function Index() {
           <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
             <span className="block mb-2">Seja Lojista Oficial</span>
             <span className="block text-primary drop-shadow-lg">Ecko</span>
-            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-white/95">Maior Marca de Streetwear do Brasil</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-white/95">
+              Maior Marca de Streetwear do Brasil
+            </span>
           </h1>
 
           {/* Subtitle/Call Text */}
           <p className="text-base md:text-lg lg:text-xl text-white/95 mb-10 max-w-3xl leading-relaxed font-medium px-4 animate-fade-in">
-            Acesso a <span className="text-primary font-semibold">produtos exclusivos</span>, <span className="text-primary font-semibold">margens atrativas</span> e todo o prestígio da marca líder em streetwear brasileiro.
+            Acesso a{" "}
+            <span className="text-primary font-semibold">
+              produtos exclusivos
+            </span>
+            ,{" "}
+            <span className="text-primary font-semibold">
+              margens atrativas
+            </span>{" "}
+            e todo o prestígio da marca líder em streetwear brasileiro.
           </p>
 
           {/* Call to Action Button */}
-          <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
+          <a
+            href="#cadastro-lojistas"
+            className="inline-block bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide"
+          >
             Seja Parceiro Ecko Oficial
           </a>
         </div>
@@ -108,7 +137,6 @@ export default function Index() {
       <section className="py-20 md:py-32 bg-white" id="cadastro-lojistas">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
-
             {/* Text/CTA Column */}
             <div className="space-y-10">
               <div className="space-y-8">
@@ -118,10 +146,13 @@ export default function Index() {
                 </h2>
                 <div className="space-y-6">
                   <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
-                    Faça parte da rede de distribuidores oficiais da maior marca de streetwear e moda urbana do Brasil.
+                    Faça parte da rede de distribuidores oficiais da maior marca
+                    de streetwear e moda urbana do Brasil.
                   </p>
                   <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                    Resposta comercial em até 24 horas. Processo 100% digital, sem taxas de adesão. Condições exclusivas para lojistas parceiros.
+                    Resposta comercial em até 24 horas. Processo 100% digital,
+                    sem taxas de adesão. Condições exclusivas para lojistas
+                    parceiros.
                   </p>
                 </div>
               </div>
@@ -135,13 +166,17 @@ export default function Index() {
                     Solicite Sua Proposta Comercial
                   </h3>
                   <p className="text-gray-600">
-                    Preencha o formulário e receba condições exclusivas para lojistas Ecko
+                    Preencha o formulário e receba condições exclusivas para
+                    lojistas Ecko
                   </p>
                 </div>
 
                 <form className="space-y-5" onSubmit={handleFormSubmit}>
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-gray-900">
+                    <label
+                      htmlFor="name"
+                      className="text-sm font-medium text-gray-900"
+                    >
                       Nome *
                     </label>
                     <input
@@ -155,7 +190,10 @@ export default function Index() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="whatsapp" className="text-sm font-medium text-gray-900">
+                    <label
+                      htmlFor="whatsapp"
+                      className="text-sm font-medium text-gray-900"
+                    >
                       WhatsApp *
                     </label>
                     <input
@@ -173,33 +211,43 @@ export default function Index() {
                       Sua loja possui CNPJ? *
                     </label>
                     <div className="flex gap-3">
-                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
-                        selectedCnpj === "sim"
-                          ? "bg-primary border-primary text-white"
-                          : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
-                      }`}>
+                      <label
+                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
+                          selectedCnpj === "sim"
+                            ? "bg-primary border-primary text-white"
+                            : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
+                        }`}
+                      >
                         <input
                           type="radio"
                           name="cnpj"
                           value="sim"
                           className="hidden"
                           required
-                          onChange={(e) => handleCnpjRadioChange(e.target.value)}
+                          onChange={(e) =>
+                            handleCnpjRadioChange(e.target.value)
+                          }
                         />
-                        <span className="font-medium">Sim, sou lojista com CNPJ</span>
+                        <span className="font-medium">
+                          Sim, sou lojista com CNPJ
+                        </span>
                       </label>
-                      <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
-                        selectedCnpj === "nao-consumidor"
-                          ? "bg-primary border-primary text-white"
-                          : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
-                      }`}>
+                      <label
+                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
+                          selectedCnpj === "nao-consumidor"
+                            ? "bg-primary border-primary text-white"
+                            : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
+                        }`}
+                      >
                         <input
                           type="radio"
                           name="cnpj"
                           value="nao-consumidor"
                           className="hidden"
                           required
-                          onChange={(e) => handleCnpjRadioChange(e.target.value)}
+                          onChange={(e) =>
+                            handleCnpjRadioChange(e.target.value)
+                          }
                         />
                         <span className="font-medium">Não, sou consumidor</span>
                       </label>
@@ -214,7 +262,11 @@ export default function Index() {
                           Este cadastro é exclusivo para lojistas com CNPJ
                         </p>
                         <p className="text-gray-700">
-                          Mas não fique triste! Temos um cupom com <span className="font-bold text-primary">10% de desconto</span> para você
+                          Mas não fique triste! Temos um cupom com{" "}
+                          <span className="font-bold text-primary">
+                            10% de desconto
+                          </span>{" "}
+                          para você
                         </p>
                       </div>
                     </div>
@@ -223,7 +275,10 @@ export default function Index() {
                   {/* Campo CNPJ Condicional */}
                   {showCnpjField && (
                     <div className="space-y-2">
-                      <label htmlFor="cnpj-number" className="text-sm font-medium text-gray-900">
+                      <label
+                        htmlFor="cnpj-number"
+                        className="text-sm font-medium text-gray-900"
+                      >
                         Agora precisamos do seu CNPJ *
                       </label>
                       <input
@@ -241,12 +296,14 @@ export default function Index() {
                     type="submit"
                     className="w-full bg-primary hover:bg-red-600 text-white py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
                   >
-                    {showCouponMessage ? "Receber Cupom de 10% Desconto" : "Receber Proposta Comercial"}
+                    {showCouponMessage
+                      ? "Receber Cupom de 10% Desconto"
+                      : "Receber Proposta Comercial"}
                   </button>
 
                   <p className="text-xs text-gray-900/70 text-center">
-                    Ao enviar, você concorda em receber contato comercial da Ecko.
-                    Seus dados estão seguros conosco.
+                    Ao enviar, você concorda em receber contato comercial da
+                    Ecko. Seus dados estão seguros conosco.
                   </p>
                 </form>
               </div>
@@ -256,7 +313,10 @@ export default function Index() {
       </section>
 
       {/* Benefícios para Lojistas Ecko */}
-      <section className="py-20 md:py-32 relative bg-gray-50" id="beneficios-lojistas">
+      <section
+        className="py-20 md:py-32 relative bg-gray-50"
+        id="beneficios-lojistas"
+      >
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -269,10 +329,14 @@ export default function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
-                Vantagens de Ser Lojista <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Ecko Oficial</span>
+                Vantagens de Ser Lojista{" "}
+                <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                  Ecko Oficial
+                </span>
               </h2>
               <p className="text-gray-600 text-xl max-w-2xl mx-auto">
-                4 benefícios exclusivos que aumentam a lucratividade do seu negócio de moda urbana
+                4 benefícios exclusivos que aumentam a lucratividade do seu
+                negócio de moda urbana
               </p>
             </div>
 
@@ -282,9 +346,14 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdStar className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Produtos Exclusivos</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Produtos Exclusivos
+                </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed">
-                  Acesso prioritário às coleções limitadas, lançamentos exclusivos e produtos especiais que apenas lojistas oficiais têm direito. Seja o primeiro a oferecer as novidades para seus clientes.
+                  Acesso prioritário às coleções limitadas, lançamentos
+                  exclusivos e produtos especiais que apenas lojistas oficiais
+                  têm direito. Seja o primeiro a oferecer as novidades para seus
+                  clientes.
                 </p>
               </div>
 
@@ -293,9 +362,13 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdAttachMoney className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Margens Atrativas</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Margens Atrativas
+                </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed">
-                  Condições comerciais privilegiadas com margens competitivas e flexibilidade de pagamento. Maximizamos sua lucratividade com preços especiais para parceiros oficiais.
+                  Condições comerciais privilegiadas com margens competitivas e
+                  flexibilidade de pagamento. Maximizamos sua lucratividade com
+                  preços especiais para parceiros oficiais.
                 </p>
               </div>
 
@@ -304,9 +377,13 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdHeadset className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Suporte Completo</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Suporte Completo
+                </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed">
-                  Treinamento especializado da equipe, materiais de marketing exclusivos, suporte técnico dedicado e consultoria para maximizar suas vendas e crescimento.
+                  Treinamento especializado da equipe, materiais de marketing
+                  exclusivos, suporte técnico dedicado e consultoria para
+                  maximizar suas vendas e crescimento.
                 </p>
               </div>
 
@@ -315,9 +392,13 @@ export default function Index() {
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdWorkspacePremium className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Prestígio da Marca</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Prestígio da Marca
+                </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed">
-                  Associe-se à marca líder em streetwear no Brasil. Credibilidade reconhecida nacionalmente que fortalece seu negócio e atrai mais clientes para sua loja.
+                  Associe-se à marca líder em streetwear no Brasil.
+                  Credibilidade reconhecida nacionalmente que fortalece seu
+                  negócio e atrai mais clientes para sua loja.
                 </p>
               </div>
             </div>
@@ -344,7 +425,8 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-gray-600 text-xl max-w-2xl mx-auto">
-                Coleções exclusivas de streetwear e moda urbana brasileira com qualidade premium
+                Coleções exclusivas de streetwear e moda urbana brasileira com
+                qualidade premium
               </p>
             </div>
 
@@ -435,7 +517,10 @@ export default function Index() {
               <p className="text-lg text-gray-600 mb-6">
                 Produtos de alta qualidade que seus clientes vão amar e comprar
               </p>
-              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+              <a
+                href="#cadastro-lojistas"
+                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300"
+              >
                 Quero Ser Distribuidor Oficial
               </a>
             </div>
@@ -455,7 +540,8 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-gray-600 text-xl max-w-2xl mx-auto">
-                Histórias reais de sucesso de parceiros que triplicaram o faturamento com a Ecko
+                Histórias reais de sucesso de parceiros que triplicaram o
+                faturamento com a Ecko
               </p>
             </div>
 
@@ -467,7 +553,10 @@ export default function Index() {
                     <span className="text-2xl">★★★★★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca."
+                    "Trabalhar com a Ecko foi um divisor de águas para minha
+                    loja. As margens são excelentes e os produtos saem
+                    rapidamente. Meus clientes sempre perguntam pelos
+                    lançamentos da marca."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -475,7 +564,9 @@ export default function Index() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900">Marcos Silva</h4>
-                      <p className="text-sm text-gray-900/70">Street Style Store - São Paulo, SP</p>
+                      <p className="text-sm text-gray-900/70">
+                        Street Style Store - São Paulo, SP
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -488,7 +579,9 @@ export default function Index() {
                     <span className="text-2xl">★★★★★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério."
+                    "O suporte da equipe Ecko é incrível. Eles nos ajudam com
+                    materiais de marketing e sempre estão disponíveis para
+                    dúvidas. Recomendo para qualquer lojista sério."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -496,7 +589,9 @@ export default function Index() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900">Amanda Costa</h4>
-                      <p className="text-sm text-gray-900/70">Urban Fashion - Rio de Janeiro, RJ</p>
+                      <p className="text-sm text-gray-900/70">
+                        Urban Fashion - Rio de Janeiro, RJ
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -509,15 +604,21 @@ export default function Index() {
                     <span className="text-2xl">★★★★★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional."
+                    "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A
+                    marca tem um apelo incrível com o público jovem e as peças
+                    têm qualidade excepcional."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                       <span className="text-gray-900 font-bold text-lg">R</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900">Rafael Oliveira</h4>
-                      <p className="text-sm text-gray-900/70">Streetwear BH - Belo Horizonte, MG</p>
+                      <h4 className="font-bold text-gray-900">
+                        Rafael Oliveira
+                      </h4>
+                      <p className="text-sm text-gray-900/70">
+                        Streetwear BH - Belo Horizonte, MG
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -530,7 +631,9 @@ export default function Index() {
                     <span className="text-2xl">★★★★★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                    "A Ecko transformou minha loja multimarca. Agora somos referência em streetwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido."
+                    "A Ecko transformou minha loja multimarca. Agora somos
+                    referência em streetwear na cidade. O processo de se tornar
+                    parceiro foi super tranquilo e rápido."
                   </blockquote>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -538,7 +641,9 @@ export default function Index() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900">Carla Santos</h4>
-                      <p className="text-sm text-gray-900/70">Fashion Hub - Curitiba, PR</p>
+                      <p className="text-sm text-gray-900/70">
+                        Fashion Hub - Curitiba, PR
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -550,7 +655,10 @@ export default function Index() {
               <p className="text-lg text-gray-600 mb-6">
                 Junte-se a mais de 500 lojistas parceiros de sucesso
               </p>
-              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+              <a
+                href="#cadastro-lojistas"
+                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300"
+              >
                 Quero Ser o Próximo Parceiro de Sucesso
               </a>
             </div>
@@ -571,28 +679,51 @@ export default function Index() {
                     <span className="block text-primary">Ecko</span>
                   </h2>
                   <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
-                    Há mais de duas décadas, a Ecko é líder absoluta em streetwear e moda urbana no Brasil. Nascida da cultura de rua, a marca revolucionou o mercado de moda jovem brasileira.
+                    Há mais de duas décadas, a Ecko é líder absoluta em
+                    streetwear e moda urbana no Brasil. Nascida da cultura de
+                    rua, a marca revolucionou o mercado de moda jovem
+                    brasileira.
                   </p>
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com produtos autênticos que refletem a essência do street style brasileiro, a Ecko conquistou milhões de consumidores e se estabeleceu como a maior marca de streetwear do país. Nossos lojistas parceiros fazem parte dessa trajetória de sucesso.
+                    Com produtos autênticos que refletem a essência do street
+                    style brasileiro, a Ecko conquistou milhões de consumidores
+                    e se estabeleceu como a maior marca de streetwear do país.
+                    Nossos lojistas parceiros fazem parte dessa trajetória de
+                    sucesso.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">20+</div>
-                    <div className="text-gray-900/80 text-sm">Anos de Mercado</div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                      20+
+                    </div>
+                    <div className="text-gray-900/80 text-sm">
+                      Anos de Mercado
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-                    <div className="text-gray-900/80 text-sm">Lojistas Parceiros</div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                      500+
+                    </div>
+                    <div className="text-gray-900/80 text-sm">
+                      Lojistas Parceiros
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1M+</div>
-                    <div className="text-gray-900/80 text-sm">Clientes Satisfeitos</div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                      1M+
+                    </div>
+                    <div className="text-gray-900/80 text-sm">
+                      Clientes Satisfeitos
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">#1</div>
-                    <div className="text-gray-900/80 text-sm">Marca de Streetwear</div>
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                      #1
+                    </div>
+                    <div className="text-gray-900/80 text-sm">
+                      Marca de Streetwear
+                    </div>
                   </div>
                 </div>
               </div>
@@ -634,16 +765,26 @@ export default function Index() {
                   <span className="text-2xl font-bold text-gray-900">Ecko</span>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.
+                  A maior marca de streetwear do Brasil. Conectando a cultura
+                  urbana através da moda autêntica.
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <a href="#" className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                  >
                     <FaFacebook className="text-lg text-gray-600 group-hover:text-white" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                  >
                     <FaInstagram className="text-lg text-gray-600 group-hover:text-white" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                  >
                     <FaStore className="text-lg text-gray-600 group-hover:text-white" />
                   </a>
                 </div>
@@ -657,9 +798,24 @@ export default function Index() {
                   © 2024 Ecko. Todos os direitos reservados.
                 </div>
                 <div className="flex space-x-6 text-sm">
-                  <a href="#" className="text-gray-500 hover:text-primary transition-colors">Privacidade</a>
-                  <a href="#" className="text-gray-500 hover:text-primary transition-colors">Termos</a>
-                  <a href="#" className="text-gray-500 hover:text-primary transition-colors">Cookies</a>
+                  <a
+                    href="#"
+                    className="text-gray-500 hover:text-primary transition-colors"
+                  >
+                    Privacidade
+                  </a>
+                  <a
+                    href="#"
+                    className="text-gray-500 hover:text-primary transition-colors"
+                  >
+                    Termos
+                  </a>
+                  <a
+                    href="#"
+                    className="text-gray-500 hover:text-primary transition-colors"
+                  >
+                    Cookies
+                  </a>
                 </div>
               </div>
             </div>
