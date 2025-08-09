@@ -625,7 +625,7 @@ export default function Index() {
 
             {/* Slider Container */}
             <div className="relative">
-              {/* Navigation Arrows */}
+              {/* Desktop Navigation Arrows */}
               <div className="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
                 <button
                   onClick={prevSlide}
@@ -643,6 +643,27 @@ export default function Index() {
                   aria-label="Próximo depoimento"
                 >
                   <FaChevronRight className="w-5 h-5 text-gray-600" />
+                </button>
+              </div>
+
+              {/* Mobile Navigation Arrows */}
+              <div className="flex md:hidden absolute left-2 top-1/2 transform -translate-y-1/2 z-10">
+                <button
+                  onClick={prevSlideMobile}
+                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300"
+                  aria-label="Depoimento anterior"
+                >
+                  <FaChevronLeft className="w-4 h-4 text-gray-600" />
+                </button>
+              </div>
+
+              <div className="flex md:hidden absolute right-2 top-1/2 transform -translate-y-1/2 z-10">
+                <button
+                  onClick={nextSlideMobile}
+                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300"
+                  aria-label="Próximo depoimento"
+                >
+                  <FaChevronRight className="w-4 h-4 text-gray-600" />
                 </button>
               </div>
 
