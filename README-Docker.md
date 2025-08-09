@@ -18,8 +18,8 @@ docker-compose down
 ### 2. Build Manual Docker
 
 ```bash
-# Dockerfile corrigido (recomendado)
-docker build -f Dockerfile.fixed -t ecko-landing \
+# Dockerfile seguro (recomendado) - preserva todas as dependências
+docker build -f Dockerfile.safe -t ecko-landing \
   --build-arg VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads \
   .
 
