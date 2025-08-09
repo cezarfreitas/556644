@@ -1,14 +1,20 @@
-# Build stage
-FROM node:18-alpine AS builder
+# Single stage build - mais simples e confiável
+FROM node:18-alpine
+
+# Install wget for healthcheck
+RUN apk add --no-cache wget
 
 # Set working directory
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
+COPY package.json ./
 
-# Install dependencies with fallback for peer dependencies
-RUN npm ci || npm ci --legacy-peer-deps
+# Create package-lock.json clean
+RUN npm install --package-lock-only
+
+# Install all dependencies first
+RUN npm ci --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -20,23 +26,8 @@ ENV VITE_api_form=$VITE_api_form
 # Build the application
 RUN npm run build
 
-# Production stage
-FROM node:18-alpine AS production
-
-# Install wget for healthcheck
-RUN apk add --no-cache wget
-
-# Set working directory
-WORKDIR /app
-
-# Copy package files
-COPY package*.json ./
-
-# Install only production dependencies
-RUN npm ci --omit=dev && npm cache clean --force
-
-# Copy built application from builder stage
-COPY --from=builder /app/dist ./dist
+# Remove dev dependencies after build
+RUN npm prune --omit=dev
 
 # Create non-root user
 RUN addgroup -g 1001 -S nodejs
