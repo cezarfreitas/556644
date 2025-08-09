@@ -20,7 +20,7 @@ if [ $? -eq 0 ]; then
     
     if [ $? -eq 0 ]; then
         echo "✅ Container started successfully!"
-        echo "🌐 Application should be available at: http://localhost:3000"
+        echo "🌐 Application should be available at: http://localhost:80"
         echo ""
         echo "📝 To check logs: docker logs -f ecko-landing-test"
         echo "🛑 To stop: docker stop ecko-landing-test && docker rm ecko-landing-test"
