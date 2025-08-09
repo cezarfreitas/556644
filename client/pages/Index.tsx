@@ -445,7 +445,7 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-slate-600 mb-6">
                 Junte-se a mais de 500 lojistas parceiros de sucesso
               </p>
               <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
