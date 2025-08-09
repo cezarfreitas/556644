@@ -30,8 +30,8 @@ logs
 .prettierrc.*
 jest.config.*
 tsconfig.json
-vite.config.ts
-vite.config.server.ts
+# Keep vite.config.server.ts for server build
+# vite.config.server.ts
 
 # Docker files
 Dockerfile*
