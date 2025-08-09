@@ -72,10 +72,10 @@ export default function Index() {
               <div className="space-y-6">
                 <div className="text-center space-y-2">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                    Solicite Sua Proposta
+                    Solicite Sua Proposta Comercial
                   </h3>
                   <p className="text-muted-foreground">
-                    Preencha os dados e receba nossa proposta comercial
+                    Preencha o formulário e receba condições exclusivas para lojistas Ecko
                   </p>
                 </div>
 
