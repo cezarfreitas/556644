@@ -193,19 +193,18 @@
 
   /* Animação do indicador de scroll */
   @keyframes scroll-bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%, 100% {
       transform: translateY(0);
+      opacity: 0.8;
     }
-    40% {
-      transform: translateY(-8px);
-    }
-    60% {
-      transform: translateY(-4px);
+    50% {
+      transform: translateY(8px);
+      opacity: 1;
     }
   }
 
   .animate-scroll-bounce {
-    animation: scroll-bounce 2s infinite;
+    animation: scroll-bounce 1.5s ease-in-out infinite;
   }
 
   /* Optimize benefit cards for mobile */
