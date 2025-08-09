@@ -58,57 +58,57 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="flex justify-center items-center gap-12 md:gap-16 lg:gap-20 flex-wrap">
+            <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-16 overflow-x-auto pb-4">
               {/* Reason 1 */}
-              <div className="text-center group min-w-[200px]">
+              <div className="text-center group min-w-[180px] flex-shrink-0">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">1</span>
+                  <Star className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Produtos Exclusivos</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">Produtos Exclusivos</h3>
                 <p className="text-muted-foreground text-sm">
                   Coleções limitadas exclusivas
                 </p>
               </div>
 
               {/* Reason 2 */}
-              <div className="text-center group min-w-[200px]">
+              <div className="text-center group min-w-[180px] flex-shrink-0">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">2</span>
+                  <DollarSign className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Margens Atrativas</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">Margens Atrativas</h3>
                 <p className="text-muted-foreground text-sm">
                   Condições comerciais privilegiadas
                 </p>
               </div>
 
               {/* Reason 3 */}
-              <div className="text-center group min-w-[200px]">
+              <div className="text-center group min-w-[180px] flex-shrink-0">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">3</span>
+                  <HeadphonesIcon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Suporte Completo</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">Suporte Completo</h3>
                 <p className="text-muted-foreground text-sm">
                   Treinamento e materiais de marketing
                 </p>
               </div>
 
               {/* Reason 4 */}
-              <div className="text-center group min-w-[200px]">
+              <div className="text-center group min-w-[180px] flex-shrink-0">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">4</span>
+                  <Award className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Prestígio da Marca</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">Prestígio da Marca</h3>
                 <p className="text-muted-foreground text-sm">
                   Credibilidade reconhecida no mercado
                 </p>
               </div>
 
               {/* Reason 5 */}
-              <div className="text-center group min-w-[200px]">
+              <div className="text-center group min-w-[180px] flex-shrink-0">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">5</span>
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Crescimento Acelerado</h3>
+                <h3 className="text-lg font-bold text-foreground mb-2">Crescimento Acelerado</h3>
                 <p className="text-muted-foreground text-sm">
                   Estratégias comprovadas de vendas
                 </p>
