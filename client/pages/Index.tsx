@@ -519,66 +519,25 @@ export default function Index() {
       <footer className="bg-foreground text-background py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              {/* Brand Column */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-primary rounded-lg"></div>
-                  <span className="text-xl font-bold">Ecko</span>
+            <div className="text-center mb-12">
+              {/* Brand Section */}
+              <div className="space-y-6 max-w-md mx-auto">
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-10 h-10 bg-primary rounded-lg"></div>
+                  <span className="text-2xl font-bold">Ecko</span>
                 </div>
-                <p className="text-background/80 text-sm leading-relaxed">
+                <p className="text-background/80 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.
                 </p>
-                <div className="flex space-x-4">
-                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-sm">📱</span>
+                <div className="flex justify-center space-x-4">
+                  <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+                    <span className="text-lg">📱</span>
                   </div>
-                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-sm">📧</span>
+                  <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+                    <span className="text-lg">📧</span>
                   </div>
-                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-sm">🌐</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Products Column */}
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-background">Produtos</h4>
-                <div className="space-y-2 text-sm">
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Camisetas</a>
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Moletons</a>
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Jaquetas</a>
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Acessórios</a>
-                </div>
-              </div>
-
-              {/* Partners Column */}
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-background">Parceiros</h4>
-                <div className="space-y-2 text-sm">
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Seja um Lojista</a>
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Suporte</a>
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Materiais</a>
-                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Contato</a>
-                </div>
-              </div>
-
-              {/* Contact Column */}
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-background">Contato</h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-primary">📱</span>
-                    <span className="text-background/80">(11) 9999-9999</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-primary">📧</span>
-                    <span className="text-background/80">parceiros@ecko.com.br</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-primary">🏢</span>
-                    <span className="text-background/80">São Paulo, SP</span>
+                  <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+                    <span className="text-lg">🌐</span>
                   </div>
                 </div>
               </div>
