@@ -750,8 +750,8 @@ export default function Index() {
           width="1920"
           height="1080"
         />
-        {/* Total Radial Overlay */}
-        <div className="absolute inset-0 bg-gradient-radial from-black/20 via-black/70 to-black/95"></div>
+        {/* Overlay Sólido Total para Verificação */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8">
