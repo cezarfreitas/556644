@@ -406,7 +406,7 @@ export default function Index() {
     return null;
   };
 
-  // Funções de formataç��o
+  // Funções de formatação
   const formatWhatsApp = (value: string) => {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
