@@ -6,6 +6,8 @@ declare global {
     formStartTime?: number;
     gtag?: (...args: any[]) => void;
     fbq?: (...args: any[]) => void;
+    dataLayer?: any[];
+    _fbq?: any;
   }
 }
 
