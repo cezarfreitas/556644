@@ -495,13 +495,13 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Logo/Brand */}
+              {/* Imagem da Marca */}
               <div className="text-center lg:text-right">
                 <div className="inline-block">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=800"
-                    alt="Logo Ecko"
-                    className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-2xl"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F00996af352d543d8aa438c836091677a?format=webp&width=800"
+                    alt="Ecko Streetwear - Autenticidade da Marca"
+                    className="w-full max-w-md rounded-xl shadow-2xl"
                   />
                   <div className="mt-8 space-y-4">
                     <p className="text-gray-900/60 text-sm italic">
