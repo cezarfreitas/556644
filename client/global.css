@@ -4,6 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimizations */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Image optimization */
+img {
+  content-visibility: auto;
+}
+
+/* Layout optimization for critical elements */
+.hero-section {
+  contain-intrinsic-size: 100vh;
+}
+
 @layer base {
   /**
    * Tailwind CSS theme
