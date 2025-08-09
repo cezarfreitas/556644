@@ -32,29 +32,29 @@ export default function Index() {
       name: "Marcos Silva",
       store: "Street Style Store - São Paulo, SP",
       avatar: "M",
-      text: "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca."
+      text: "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca.",
     },
     {
       id: 2,
       name: "Amanda Costa",
       store: "Urban Fashion - Rio de Janeiro, RJ",
       avatar: "A",
-      text: "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério."
+      text: "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério.",
     },
     {
       id: 3,
       name: "Rafael Oliveira",
       store: "Streetwear BH - Belo Horizonte, MG",
       avatar: "R",
-      text: "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional."
+      text: "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional.",
     },
     {
       id: 4,
       name: "Carla Santos",
       store: "Fashion Hub - Curitiba, PR",
       avatar: "C",
-      text: "A Ecko transformou minha loja multimarca. Agora somos referência em streetwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido."
-    }
+      text: "A Ecko transformou minha loja multimarca. Agora somos referência em streetwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido.",
+    },
   ];
 
   // Slider functions
@@ -64,7 +64,7 @@ export default function Index() {
 
   const prevSlide = () => {
     setCurrentSlide((prev) =>
-      prev === 0 ? Math.ceil(testimonials.length / 2) - 1 : prev - 1
+      prev === 0 ? Math.ceil(testimonials.length / 2) - 1 : prev - 1,
     );
   };
 
@@ -74,7 +74,7 @@ export default function Index() {
 
   const prevSlideMobile = () => {
     setCurrentSlide((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
+      prev === 0 ? testimonials.length - 1 : prev - 1,
     );
   };
 
@@ -672,42 +672,46 @@ export default function Index() {
                 <div
                   className="flex transition-transform duration-500 ease-in-out"
                   style={{
-                    transform: `translateX(-${currentSlide * 100}%)`
+                    transform: `translateX(-${currentSlide * 100}%)`,
                   }}
                 >
-                  {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, slideIndex) => (
+                  {Array.from({
+                    length: Math.ceil(testimonials.length / 2),
+                  }).map((_, slideIndex) => (
                     <div key={slideIndex} className="w-full flex-shrink-0">
                       <div className="grid grid-cols-2 gap-8">
-                        {testimonials.slice(slideIndex * 2, slideIndex * 2 + 2).map((testimonial) => (
-                          <div
-                            key={testimonial.id}
-                            className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-                          >
-                            <div className="space-y-6">
-                              <div className="flex items-center space-x-1 text-primary">
-                                <span className="text-2xl">★★★★★</span>
-                              </div>
-                              <blockquote className="text-lg text-gray-900 leading-relaxed italic">
-                                "{testimonial.text}"
-                              </blockquote>
-                              <div className="flex items-center space-x-4">
-                                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                                  <span className="text-gray-900 font-bold text-lg">
-                                    {testimonial.avatar}
-                                  </span>
+                        {testimonials
+                          .slice(slideIndex * 2, slideIndex * 2 + 2)
+                          .map((testimonial) => (
+                            <div
+                              key={testimonial.id}
+                              className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                            >
+                              <div className="space-y-6">
+                                <div className="flex items-center space-x-1 text-primary">
+                                  <span className="text-2xl">★★★★★</span>
                                 </div>
-                                <div>
-                                  <h4 className="font-bold text-gray-900">
-                                    {testimonial.name}
-                                  </h4>
-                                  <p className="text-sm text-gray-900/70">
-                                    {testimonial.store}
-                                  </p>
+                                <blockquote className="text-lg text-gray-900 leading-relaxed italic">
+                                  "{testimonial.text}"
+                                </blockquote>
+                                <div className="flex items-center space-x-4">
+                                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span className="text-gray-900 font-bold text-lg">
+                                      {testimonial.avatar}
+                                    </span>
+                                  </div>
+                                  <div>
+                                    <h4 className="font-bold text-gray-900">
+                                      {testimonial.name}
+                                    </h4>
+                                    <p className="text-sm text-gray-900/70">
+                                      {testimonial.store}
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
                       </div>
                     </div>
                   ))}
@@ -719,11 +723,14 @@ export default function Index() {
                 <div
                   className="flex transition-transform duration-500 ease-in-out"
                   style={{
-                    transform: `translateX(-${currentSlide * 100}%)`
+                    transform: `translateX(-${currentSlide * 100}%)`,
                   }}
                 >
                   {testimonials.map((testimonial) => (
-                    <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
+                    <div
+                      key={testimonial.id}
+                      className="w-full flex-shrink-0 px-4"
+                    >
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
@@ -756,18 +763,20 @@ export default function Index() {
 
               {/* Dots Navigation - Desktop (paired slides) */}
               <div className="hidden md:flex justify-center mt-8 space-x-2">
-                {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                      currentSlide === index
-                        ? 'bg-primary'
-                        : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                    aria-label={`Ir para slide ${index + 1}`}
-                  />
-                ))}
+                {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
+                  (_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                        currentSlide === index
+                          ? "bg-primary"
+                          : "bg-gray-300 hover:bg-gray-400"
+                      }`}
+                      aria-label={`Ir para slide ${index + 1}`}
+                    />
+                  ),
+                )}
               </div>
 
               {/* Dots Navigation - Mobile (single slides) */}
@@ -778,8 +787,8 @@ export default function Index() {
                     onClick={() => goToSlide(index)}
                     className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                       currentSlide === index
-                        ? 'bg-primary'
-                        : 'bg-gray-300 hover:bg-gray-400'
+                        ? "bg-primary"
+                        : "bg-gray-300 hover:bg-gray-400"
                     }`}
                     aria-label={`Ir para depoimento ${index + 1}`}
                   />
