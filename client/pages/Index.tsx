@@ -69,13 +69,13 @@ export default function Index() {
             </div>
 
             {/* Form Column */}
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 shadow-lg">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center space-y-2">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                     Solicite Sua Proposta Comercial
                   </h3>
-                  <p className="text-white/70">
+                  <p className="text-gray-600">
                     Preencha o formulário e receba condições exclusivas para lojistas Ecko
                   </p>
                 </div>
