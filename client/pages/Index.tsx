@@ -18,6 +18,12 @@ export default function Index() {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Se for consumidor, redireciona para WhatsApp com cupom
+    if (selectedCnpj === "nao-consumidor") {
+      window.open('https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!', '_blank');
+      return;
+    }
+
     const formData = new FormData(e.currentTarget);
     const payload = {
       name: formData.get("name"),
