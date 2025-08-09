@@ -85,7 +85,7 @@ export default function Index() {
               </div>
 
               {/* Reason 2 */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300">
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
@@ -101,7 +101,7 @@ export default function Index() {
               </div>
 
               {/* Reason 3 */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300">
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
@@ -117,7 +117,7 @@ export default function Index() {
               </div>
 
               {/* Reason 4 */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 md:col-span-1 lg:col-span-1">
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
@@ -133,7 +133,7 @@ export default function Index() {
               </div>
 
               {/* Reason 5 - New */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 md:col-span-1 lg:col-span-1">
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
                 <div className="relative">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
