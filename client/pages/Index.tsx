@@ -5,7 +5,7 @@ import {
   MdHeadset,
   MdWorkspacePremium,
 } from "react-icons/md";
-import { FaFacebook, FaInstagram, FaStore, FaArrowRight } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaStore, FaArrowRight, FaChevronDown } from "react-icons/fa";
 
 export default function Index() {
   const [showCnpjField, setShowCnpjField] = useState(false);
