@@ -454,6 +454,152 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* About Ecko Section */}
+      <section className="py-20 md:py-32 bg-black">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Content */}
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                    Sobre a
+                    <span className="block text-primary">Ecko</span>
+                  </h2>
+                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                    Há mais de duas décadas, a Ecko é sinônimo de streetwear autêntico no Brasil. Nascida da cultura urbana, a marca se tornou referência em moda jovem e lifestyle.
+                  </p>
+                  <p className="text-base md:text-lg text-white/80 leading-relaxed">
+                    Com produtos que refletem a essência do street style brasileiro, a Ecko conquistou milhões de consumidores e se estabeleceu como a maior marca de streetwear do país. Nossos parceiros fazem parte dessa história de sucesso.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">20+</div>
+                    <div className="text-white/80 text-sm">Anos de Mercado</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+                    <div className="text-white/80 text-sm">Lojistas Parceiros</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1M+</div>
+                    <div className="text-white/80 text-sm">Clientes Satisfeitos</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">#1</div>
+                    <div className="text-white/80 text-sm">Marca de Streetwear</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Logo/Brand */}
+              <div className="text-center lg:text-right">
+                <div className="inline-block">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=800"
+                    alt="Logo Ecko"
+                    className="h-32 md:h-40 lg:h-48 w-auto mx-auto drop-shadow-2xl"
+                  />
+                  <div className="mt-8 space-y-4">
+                    <p className="text-white/60 text-sm italic">
+                      "Autenticidade que conecta com a rua"
+                    </p>
+                    <div className="w-16 h-0.5 bg-primary mx-auto"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              {/* Brand Column */}
+              <div className="space-y-6">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-primary rounded-lg"></div>
+                  <span className="text-xl font-bold">Ecko</span>
+                </div>
+                <p className="text-background/80 text-sm leading-relaxed">
+                  A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.
+                </p>
+                <div className="flex space-x-4">
+                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+                    <span className="text-sm">📱</span>
+                  </div>
+                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+                    <span className="text-sm">📧</span>
+                  </div>
+                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+                    <span className="text-sm">🌐</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Products Column */}
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-background">Produtos</h4>
+                <div className="space-y-2 text-sm">
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Camisetas</a>
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Moletons</a>
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Jaquetas</a>
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Acessórios</a>
+                </div>
+              </div>
+
+              {/* Partners Column */}
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-background">Parceiros</h4>
+                <div className="space-y-2 text-sm">
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Seja um Lojista</a>
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Suporte</a>
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Materiais</a>
+                  <a href="#" className="block text-background/80 hover:text-primary transition-colors">Contato</a>
+                </div>
+              </div>
+
+              {/* Contact Column */}
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-background">Contato</h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-primary">📱</span>
+                    <span className="text-background/80">(11) 9999-9999</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-primary">📧</span>
+                    <span className="text-background/80">parceiros@ecko.com.br</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-primary">🏢</span>
+                    <span className="text-background/80">São Paulo, SP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="border-t border-background/20 pt-8">
+              <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div className="text-background/60 text-sm">
+                  © 2024 Ecko. Todos os direitos reservados.
+                </div>
+                <div className="flex space-x-6 text-sm">
+                  <a href="#" className="text-background/60 hover:text-primary transition-colors">Privacidade</a>
+                  <a href="#" className="text-background/60 hover:text-primary transition-colors">Termos</a>
+                  <a href="#" className="text-background/60 hover:text-primary transition-colors">Cookies</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
