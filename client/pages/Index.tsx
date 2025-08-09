@@ -417,14 +417,14 @@ export default function Index() {
       <section className="py-12 sm:py-20 md:py-32 bg-white" id="galeria-produtos">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
+            <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Produtos Ecko
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Streetwear
                 </span>
               </h2>
-              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+              <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-4">
                 Coleções exclusivas de streetwear e moda urbana brasileira com
                 qualidade premium
               </p>
