@@ -764,6 +764,9 @@ export default function Index() {
               className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
               loading="eager"
               fetchPriority="high"
+              decoding="async"
+              width="200"
+              height="80"
             />
           </div>
 
@@ -853,7 +856,7 @@ export default function Index() {
                     Solicite Seu Atendimento
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600">
-                    Preencha o formulário e um analista da Ecko entrar�� em
+                    Preencha o formulário e um analista da Ecko entrará em
                     contato para apresentar nosso catálogo digital exclusivo com
                     preços e condições especiais para lojistas oficiais.
                   </p>
