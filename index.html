@@ -46,13 +46,15 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ecko.com.br/lojistas" />
 
-    <!-- Performance Resource Hints -->
+    <!-- Critical Image Preloads - HIGHEST PRIORITY for LCP -->
     <link
       rel="preload"
       href="/images/hero/hero-background.webp"
       as="image"
       type="image/webp"
       fetchpriority="high"
+      imagesizes="100vw"
+      imagesrcset="/images/hero/hero-background.webp 1920w"
     />
     <link
       rel="preload"
