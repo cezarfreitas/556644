@@ -133,23 +133,23 @@ export default function Index() {
         </div>
       </header>
 
-      {/* Cadastro de Lojistas - Formulário de Parceria */}
-      <section className="py-20 md:py-32 bg-white" id="cadastro-lojistas">
-        <div className="container mx-auto px-6">
+      {/* Cadastro de Lojistas - Formulário de Parceria - Otimizado para mobile */}
+      <section className="py-12 sm:py-20 md:py-32 bg-white" id="cadastro-lojistas">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
-            {/* Text/CTA Column */}
-            <div className="space-y-10">
-              <div className="space-y-8">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            {/* Text/CTA Column - Otimizado para mobile */}
+            <div className="space-y-6 sm:space-y-10">
+              <div className="space-y-6 sm:space-y-8">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Cadastre-se Como Lojista Oficial
                   <span className="block text-primary">Ecko Agora</span>
                 </h2>
-                <div className="space-y-6">
-                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
+                <div className="space-y-4 sm:space-y-6">
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
                     Faça parte da rede de distribuidores oficiais da maior marca
                     de streetwear e moda urbana do Brasil.
                   </p>
-                  <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                     Resposta comercial em até 24 horas. Processo 100% digital,
                     sem taxas de adesão. Condições exclusivas para lojistas
                     parceiros.
@@ -158,14 +158,14 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Form Column */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+            {/* Form Column - Otimizado para mobile */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-8 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center space-y-2">
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                     Solicite Sua Proposta Comercial
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
                     Preencha o formulário e receba condições exclusivas para
                     lojistas Ecko
                   </p>
