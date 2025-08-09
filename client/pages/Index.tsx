@@ -125,6 +125,7 @@ export default function Index() {
                           value="sim"
                           className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
                           required
+                          onChange={(e) => handleCnpjRadioChange(e.target.value)}
                         />
                         <span className="text-gray-900">Sim</span>
                       </label>
@@ -135,11 +136,28 @@ export default function Index() {
                           value="nao-consumidor"
                           className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
                           required
+                          onChange={(e) => handleCnpjRadioChange(e.target.value)}
                         />
                         <span className="text-gray-900">Não, sou consumidor</span>
                       </label>
                     </div>
                   </div>
+
+                  {/* Campo CNPJ Condicional */}
+                  {showCnpjField && (
+                    <div className="space-y-2">
+                      <label htmlFor="cnpj-number" className="text-sm font-medium text-gray-900">
+                        Agora precisamos do seu CNPJ *
+                      </label>
+                      <input
+                        id="cnpj-number"
+                        type="text"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        placeholder="00.000.000/0000-00"
+                      />
+                    </div>
+                  )}
 
                   <button
                     type="submit"
