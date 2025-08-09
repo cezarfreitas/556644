@@ -21,6 +21,15 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Configurações de tracking via .env
+  const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
+  const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
+  const META_ACCESS_TOKEN = import.meta.env.VITE_META_ACCESS_TOKEN;
+  const META_CONVERSION_NAME = import.meta.env.VITE_META_CONVERSION_NAME || 'Lead';
+  const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || 'v18.0';
+  const GOOGLE_ADS_CONVERSION_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID;
+  const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_LABEL;
+
   // Inicializar tracking na página
   useEffect(() => {
     // Marcar início do tempo para cálculo de completion time
