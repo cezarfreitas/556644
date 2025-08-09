@@ -1480,9 +1480,11 @@ export default function Index() {
                       aria-label={`Ir para slide ${index + 1}`}
                       title={`Ir para slide ${index + 1}`}
                     >
-                      <span className={`w-3 h-3 rounded-full ${
-                        currentSlide === index ? "bg-white" : "bg-gray-600"
-                      }`}></span>
+                      <span
+                        className={`w-3 h-3 rounded-full ${
+                          currentSlide === index ? "bg-white" : "bg-gray-600"
+                        }`}
+                      ></span>
                     </button>
                   ),
                 )}
@@ -1502,9 +1504,11 @@ export default function Index() {
                     aria-label={`Ir para depoimento ${index + 1}`}
                     title={`Ir para depoimento ${index + 1}`}
                   >
-                    <span className={`w-3 h-3 rounded-full ${
-                      currentSlide === index ? "bg-white" : "bg-gray-600"
-                    }`}></span>
+                    <span
+                      className={`w-3 h-3 rounded-full ${
+                        currentSlide === index ? "bg-white" : "bg-gray-600"
+                      }`}
+                    ></span>
                   </button>
                 ))}
               </div>
