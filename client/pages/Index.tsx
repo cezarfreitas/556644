@@ -533,7 +533,7 @@ export default function Index() {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
 
-    // Validar após delay para não validar a cada tecla
+    // Validar após delay para n��o validar a cada tecla
     setTimeout(() => validateField("name", value), 500);
   };
 
@@ -700,7 +700,7 @@ export default function Index() {
         alert("Erro ao enviar formul��rio. Tente novamente.");
       }
     } catch (error) {
-      // Track erro de conexão
+      // Track erro de conex��o
       trackEvent("form_submission_error", {
         error_type: "network_error",
         error_message: error?.message || "Unknown error",
@@ -1478,7 +1478,12 @@ export default function Index() {
                           : "bg-gray-300 hover:bg-gray-400"
                       }`}
                       aria-label={`Ir para slide ${index + 1}`}
-                    />
+                      title={`Ir para slide ${index + 1}`}
+                    >
+                      <span className={`w-3 h-3 rounded-full ${
+                        currentSlide === index ? "bg-white" : "bg-gray-600"
+                      }`}></span>
+                    </button>
                   ),
                 )}
               </div>
