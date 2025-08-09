@@ -42,72 +42,109 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 4 Reasons Section */}
-      <section className="py-16 md:py-24 bg-background">
+      {/* 5 Reasons Section - Redesigned */}
+      <section className="py-20 md:py-32 bg-gradient-to-br from-background via-muted/20 to-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                4 Motivos Para Se Tornar
-                <span className="block text-primary">Lojista Ecko Oficial</span>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
+                Por Que Escolher a
+                <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                  Ecko?
+                </span>
               </h2>
-              <p className="text-muted-foreground text-lg">
-                Descubra as vantagens exclusivas de fazer parte da nossa rede de parceiros.
+              <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
+                5 vantagens que fazem a diferença no seu negócio
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Reason 1 */}
-              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-xl">1</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Produtos Exclusivos</h3>
-                  <p className="text-muted-foreground">
-                    Acesso prioritário às coleções limitadas e lançamentos exclusivos da marca.
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Produtos Exclusivos</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Acesso prioritário às coleções limitadas e lançamentos exclusivos que só lojistas oficiais possuem.
                   </p>
                 </div>
               </div>
 
               {/* Reason 2 */}
-              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-xl">2</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Margens Atrativas</h3>
-                  <p className="text-muted-foreground">
-                    Condições comerciais privilegiadas com margens competitivas no mercado.
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Margens Atrativas</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Condições comerciais privilegiadas com margens competitivas que garantem maior lucratividade.
                   </p>
                 </div>
               </div>
 
               {/* Reason 3 */}
-              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-xl">3</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Suporte Completo</h3>
-                  <p className="text-muted-foreground">
-                    Treinamento, materiais de marketing e suporte técnico especializado.
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Suporte Completo</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Treinamento especializado, materiais de marketing e suporte técnico dedicado para seu sucesso.
                   </p>
                 </div>
               </div>
 
               {/* Reason 4 */}
-              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold text-xl">4</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Prestígio da Marca</h3>
-                  <p className="text-muted-foreground">
-                    Associe-se à marca líder em streetwear e potencialize seu negócio.
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 md:col-span-1 lg:col-span-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Prestígio da Marca</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Associe-se à marca líder em streetwear e potencialize seu negócio com credibilidade reconhecida.
                   </p>
                 </div>
               </div>
+
+              {/* Reason 5 - New */}
+              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 md:col-span-1 lg:col-span-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Crescimento Acelerado</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Estratégias comprovadas de vendas e marketing para acelerar o crescimento do seu negócio.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <button className="bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-white px-12 py-4 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                Quero Ser Parceiro Agora
+              </button>
             </div>
           </div>
         </div>
