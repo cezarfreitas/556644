@@ -90,7 +90,7 @@ export default function Index() {
         </div>
       </header>
 
-      {/* Cadastro de Lojistas - Formul��rio de Parceria */}
+      {/* Cadastro de Lojistas - Formulário de Parceria */}
       <section className="py-20 md:py-32 bg-white" id="cadastro-lojistas">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
@@ -200,6 +200,7 @@ export default function Index() {
                       </label>
                       <input
                         id="cnpj-number"
+                        name="cnpj-number"
                         type="text"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
