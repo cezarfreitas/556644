@@ -342,12 +342,12 @@ export default function Index() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Vantagens de Ser Lojista{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  Ecko Oficial
+                  Oficial Ecko
                 </span>
               </h2>
               <p className="text-gray-600 text-xl max-w-2xl mx-auto">
                 4 benefícios exclusivos que aumentam a lucratividade do seu
-                negócio de moda urbana
+                negócio de moda.
               </p>
             </div>
 
@@ -361,10 +361,9 @@ export default function Index() {
                   Produtos Exclusivos
                 </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed text-center">
-                  Acesso prioritário às coleções limitadas, lançamentos
-                  exclusivos e produtos especiais que apenas lojistas oficiais
-                  têm direito. Seja o primeiro a oferecer as novidades para seus
-                  clientes.
+                  Acesso prioritário a coleções limitadas, lançamentos
+                  exclusivos e produtos especiais disponíveis apenas para lojistas oficiais.
+                  Seja o primeiro a oferecer novidades aos seus clientes.
                 </p>
               </div>
 
@@ -377,8 +376,8 @@ export default function Index() {
                   Margens Atrativas
                 </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed text-center">
-                  Condições comerciais privilegiadas com margens competitivas e
-                  flexibilidade de pagamento. Maximizamos sua lucratividade com
+                  Condições comerciais diferenciadas, com margens competitivas e
+                  flexibilidade de pagamento. Mais lucro para sua loja com
                   preços especiais para parceiros oficiais.
                 </p>
               </div>
@@ -392,9 +391,9 @@ export default function Index() {
                   Suporte Completo
                 </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed text-center">
-                  Treinamento especializado da equipe, materiais de marketing
-                  exclusivos, suporte técnico dedicado e consultoria para
-                  maximizar suas vendas e crescimento.
+                  Treinamento especializado, materiais de marketing exclusivos,
+                  suporte técnico e consultoria para potencializar suas vendas
+                  e crescimento.
                 </p>
               </div>
 
@@ -407,9 +406,8 @@ export default function Index() {
                   Prestígio da Marca
                 </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed text-center">
-                  Associe-se à marca líder em streetwear no Brasil.
-                  Credibilidade reconhecida nacionalmente que fortalece seu
-                  negócio e atrai mais clientes para sua loja.
+                  Associe-se a uma das marcas de moda urbana mais reconhecidas do Brasil e do mundo.
+                  Credibilidade que fortalece seu negócio e atrai mais clientes para sua loja.
                 </p>
               </div>
             </div>
