@@ -123,6 +123,14 @@ export default function Index() {
             CADASTRE-SE AGORA
             <FaArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
+
+          {/* Indicador para rolar para baixo */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="flex flex-col items-center text-white/80 cursor-pointer" onClick={() => document.getElementById('cadastro-lojistas')?.scrollIntoView({ behavior: 'smooth' })}>
+              <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide">Role para baixo</span>
+              <FaChevronDown className="w-5 h-5 animate-pulse" />
+            </div>
+          </div>
         </div>
       </header>
 
