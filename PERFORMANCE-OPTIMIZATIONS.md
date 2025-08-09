@@ -3,6 +3,7 @@
 ## 🚀 Implementações para Google PageSpeed
 
 ### 1. **Imagens Otimizadas**
+
 - ✅ Todas as imagens migradas de CDN externo para local
 - ✅ Formato WebP para melhor compressão
 - ✅ Lazy loading implementado (exceto imagens críticas)
@@ -10,6 +11,7 @@
 - ✅ Alt text otimizado para acessibilidade e SEO
 
 **Estrutura de Imagens:**
+
 ```
 public/images/
 ├── hero/
@@ -31,18 +33,21 @@ public/images/
 ```
 
 ### 2. **Resource Hints e Preloading**
+
 - ✅ Preload de imagens críticas (hero background e logo)
 - ✅ DNS prefetch para domínios externos
 - ✅ Preconnect para recursos críticos
 - ✅ Fetchpriority otimizado
 
 ### 3. **CSS Performance**
+
 - ✅ Font smoothing otimizado
 - ✅ Text rendering otimizado
 - ✅ Content visibility para imagens
 - ✅ Layout optimizations
 
 ### 4. **Loading Strategy**
+
 - ✅ **Critical images**: loading="eager" + fetchpriority="high"
   - Hero background
   - Logo principal
@@ -52,6 +57,7 @@ public/images/
   - Background de benefícios
 
 ### 5. **Benefícios Alcançados**
+
 - 🎯 **Redução de dependências externas**: 0 requests para CDNs externos
 - 🎯 **Faster First Paint**: Imagens críticas precarregadas
 - 🎯 **Melhor compressão**: WebP vs JPEG/PNG
@@ -59,25 +65,30 @@ public/images/
 - 🎯 **SEO friendly**: Alt texts otimizados
 
 ### 6. **Métricas Esperadas**
+
 - **LCP (Largest Contentful Paint)**: Melhoria significativa
 - **FID (First Input Delay)**: Mantido otimizado
 - **CLS (Cumulative Layout Shift)**: Mantido baixo
 - **Performance Score**: Aumento esperado de 15-25 pontos
 
 ### 7. **Deploy Considerations**
+
 - ✅ Todas as imagens incluídas no repositório
 - ✅ Caminhos relativos (/images/...)
 - ✅ Compatível com qualquer plataforma de deploy
 - ✅ Sem dependências de CDN externo
 
 ### 8. **Monitoramento**
+
 Para monitorar performance após deploy:
+
 1. Google PageSpeed Insights
 2. Web Vitals Chrome Extension
 3. Lighthouse CI
 4. GTmetrix
 
 ### 9. **Otimizações Futuras**
+
 - [ ] Implementar responsive images (srcset)
 - [ ] Service Worker para cache
 - [ ] Critical CSS inlining

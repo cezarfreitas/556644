@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
   className?: string;
-  loading?: 'lazy' | 'eager';
-  fetchpriority?: 'high' | 'low' | 'auto';
+  loading?: "lazy" | "eager";
+  fetchpriority?: "high" | "low" | "auto";
   sizes?: string;
   quality?: number;
 }
@@ -13,21 +13,21 @@ interface OptimizedImageProps {
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
-  className = '',
-  loading = 'lazy',
-  fetchpriority = 'auto',
-  sizes = '100vw',
-  quality = 80
+  className = "",
+  loading = "lazy",
+  fetchpriority = "auto",
+  sizes = "100vw",
+  quality = 80,
 }) => {
-  const basePath = src.replace(/\.(webp|jpg|jpeg|png)$/, '');
-  const extension = src.match(/\.(webp|jpg|jpeg|png)$/)?.[1] || 'webp';
+  const basePath = src.replace(/\.(webp|jpg|jpeg|png)$/, "");
+  const extension = src.match(/\.(webp|jpg|jpeg|png)$/)?.[1] || "webp";
 
   // Generate responsive image URLs
   const generateSrcSet = (basePath: string, extension: string) => {
     const widths = [320, 640, 768, 1024, 1280, 1920];
     return widths
-      .map(width => `${basePath}-${width}w.${extension} ${width}w`)
-      .join(', ');
+      .map((width) => `${basePath}-${width}w.${extension} ${width}w`)
+      .join(", ");
   };
 
   return (
