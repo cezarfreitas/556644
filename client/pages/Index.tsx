@@ -64,19 +64,19 @@ export default function Index() {
                     <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="text-foreground font-medium">Sem taxas de adesão</span>
+                    <span className="text-white font-medium">Sem taxas de adesão</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="text-foreground font-medium">Processo 100% digital</span>
+                    <span className="text-white font-medium">Processo 100% digital</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="text-foreground font-medium">Resposta em até 24h</span>
+                    <span className="text-white font-medium">Resposta em até 24h</span>
                   </div>
                 </div>
               </div>
