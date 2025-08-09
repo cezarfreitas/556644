@@ -340,19 +340,19 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Customer Testimonials Section */}
-      <section className="py-20 md:py-32 bg-muted/30">
+      {/* Depoimentos de Lojistas Parceiros Ecko */}
+      <section className="py-20 md:py-32 bg-muted/30" id="depoimentos-lojistas">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
-                O Que Nossos
+                Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  Parceiros Dizem
+                  Ecko Oficiais
                 </span>
               </h2>
               <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
-                Depoimentos reais de lojistas que cresceram com a Ecko
+                Histórias reais de sucesso de parceiros que triplicaram o faturamento com a Ecko
               </p>
             </div>
 
