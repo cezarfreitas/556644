@@ -843,22 +843,34 @@ export default function Index() {
                       name="name"
                       type="text"
                       required
-                      className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
+                      className={`w-full px-4 py-4 sm:py-3 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                        formErrors.name
+                          ? 'border-red-500 focus:ring-red-500'
+                          : formValues.name && !formErrors.name
+                            ? 'border-green-500 focus:ring-green-500'
+                            : 'border-input focus:ring-primary'
+                      }`}
                       placeholder="Seu nome completo"
+                      value={formValues.name}
+                      onChange={handleNameChange}
                       onFocus={() =>
                         trackEvent("form_field_focus", {
                           field: "name",
                           step: 1,
                         })
                       }
-                      onBlur={(e) =>
+                      onBlur={(e) => {
+                        validateField("name", e.target.value);
                         e.target.value &&
                         trackEvent("form_field_complete", {
                           field: "name",
                           step: 1,
-                        })
-                      }
+                        });
+                      }}
                     />
+                    {formErrors.name && (
+                      <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
