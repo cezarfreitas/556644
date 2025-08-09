@@ -24,8 +24,12 @@ export default function Index() {
       whatsapp: formData.get("whatsapp"),
       hasCnpj: selectedCnpj,
       cnpj: showCnpjField ? formData.get("cnpj-number") : null,
+      marca: "Ecko",
+      origem: "Landing Page Lojistas",
       timestamp: new Date().toISOString()
     };
+
+    console.log("Payload sendo enviado:", payload);
 
     try {
       const response = await fetch(api_form, {
