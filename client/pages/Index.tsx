@@ -171,7 +171,7 @@ export default function Index() {
                   </p>
                 </div>
 
-                <form className="space-y-5" onSubmit={handleFormSubmit}>
+                <form className="space-y-4 sm:space-y-5" onSubmit={handleFormSubmit}>
                   <div className="space-y-2">
                     <label
                       htmlFor="name"
@@ -184,7 +184,7 @@ export default function Index() {
                       name="name"
                       type="text"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -201,7 +201,7 @@ export default function Index() {
                       name="whatsapp"
                       type="tel"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
@@ -210,9 +210,9 @@ export default function Index() {
                     <label className="text-sm font-medium text-gray-900">
                       Sua loja possui CNPJ? *
                     </label>
-                    <div className="flex gap-3">
+                    <div className="flex gap-2 sm:gap-3">
                       <label
-                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
+                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-3 sm:px-4 py-3 sm:py-3 transition-all text-sm sm:text-base ${
                           selectedCnpj === "sim"
                             ? "bg-primary border-primary text-white"
                             : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
@@ -228,12 +228,12 @@ export default function Index() {
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="font-medium">
+                        <span className="font-medium text-center">
                           Sim, sou lojista com CNPJ
                         </span>
                       </label>
                       <label
-                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
+                        className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-3 sm:px-4 py-3 sm:py-3 transition-all text-sm sm:text-base ${
                           selectedCnpj === "nao-consumidor"
                             ? "bg-primary border-primary text-white"
                             : "bg-gray-50 hover:bg-gray-100 border-gray-200 text-gray-900"
@@ -249,7 +249,7 @@ export default function Index() {
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="font-medium">Não, sou consumidor</span>
+                        <span className="font-medium text-center">Não, sou consumidor</span>
                       </label>
                     </div>
                   </div>
