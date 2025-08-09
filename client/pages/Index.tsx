@@ -411,7 +411,7 @@ export default function Index() {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
 
-    // Aplica a m��scara (XX) XXXXX-XXXX
+    // Aplica a máscara (XX) XXXXX-XXXX
     if (numbers.length <= 2) {
       return `(${numbers}`;
     } else if (numbers.length <= 7) {
@@ -1489,13 +1489,18 @@ export default function Index() {
                   <button
                     key={index}
                     onClick={() => goToSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                    className={`w-12 h-12 rounded-full transition-colors duration-300 flex items-center justify-center ${
                       currentSlide === index
                         ? "bg-primary"
                         : "bg-gray-300 hover:bg-gray-400"
                     }`}
                     aria-label={`Ir para depoimento ${index + 1}`}
-                  />
+                    title={`Ir para depoimento ${index + 1}`}
+                  >
+                    <span className={`w-3 h-3 rounded-full ${
+                      currentSlide === index ? "bg-white" : "bg-gray-600"
+                    }`}></span>
+                  </button>
                 ))}
               </div>
             </div>
