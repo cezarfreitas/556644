@@ -31,7 +31,7 @@ export default function Index() {
       event: "pageview",
       page: "/",
       title: "Seja Lojista Oficial Ecko",
-      ...getAnalyticsData()
+      ...getAnalyticsData(),
     };
 
     // Log para debug (remover em produção)
@@ -54,26 +54,36 @@ export default function Index() {
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const referrer = document.referrer || 'direct';
+    const referrer = document.referrer || "direct";
 
     return {
       // UTM Parameters
-      utm_source: urlParams.get('utm_source') || null,
-      utm_medium: urlParams.get('utm_medium') || null,
-      utm_campaign: urlParams.get('utm_campaign') || null,
-      utm_term: urlParams.get('utm_term') || null,
-      utm_content: urlParams.get('utm_content') || null,
+      utm_source: urlParams.get("utm_source") || null,
+      utm_medium: urlParams.get("utm_medium") || null,
+      utm_campaign: urlParams.get("utm_campaign") || null,
+      utm_term: urlParams.get("utm_term") || null,
+      utm_content: urlParams.get("utm_content") || null,
 
       // Traffic Source
       referrer: referrer,
-      traffic_source: referrer === '' ? 'direct' :
-                     referrer.includes('google') ? 'google_organic' :
-                     referrer.includes('facebook') ? 'facebook' :
-                     referrer.includes('instagram') ? 'instagram' :
-                     referrer.includes('whatsapp') ? 'whatsapp' :
-                     referrer.includes('youtube') ? 'youtube' :
-                     referrer.includes('tiktok') ? 'tiktok' :
-                     urlParams.get('utm_source') ? 'paid_campaign' : 'referral',
+      traffic_source:
+        referrer === ""
+          ? "direct"
+          : referrer.includes("google")
+            ? "google_organic"
+            : referrer.includes("facebook")
+              ? "facebook"
+              : referrer.includes("instagram")
+                ? "instagram"
+                : referrer.includes("whatsapp")
+                  ? "whatsapp"
+                  : referrer.includes("youtube")
+                    ? "youtube"
+                    : referrer.includes("tiktok")
+                      ? "tiktok"
+                      : urlParams.get("utm_source")
+                        ? "paid_campaign"
+                        : "referral",
 
       // Page Information
       page_url: window.location.href,
@@ -82,39 +92,46 @@ export default function Index() {
 
       // Device/Browser Information
       user_agent: navigator.userAgent,
-      language: navigator.language || navigator.languages?.[0] || 'pt-BR',
+      language: navigator.language || navigator.languages?.[0] || "pt-BR",
       screen_resolution: `${screen.width}x${screen.height}`,
       viewport_size: `${window.innerWidth}x${window.innerHeight}`,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
 
       // Session Information
-      session_id: sessionStorage.getItem('session_id') ||
-                  (() => {
-                    const id = Date.now().toString(36) + Math.random().toString(36).substr(2);
-                    sessionStorage.setItem('session_id', id);
-                    return id;
-                  })(),
+      session_id:
+        sessionStorage.getItem("session_id") ||
+        (() => {
+          const id =
+            Date.now().toString(36) + Math.random().toString(36).substr(2);
+          sessionStorage.setItem("session_id", id);
+          return id;
+        })(),
 
       // Timing
       page_load_time: performance.now(),
       timestamp: new Date().toISOString(),
-      local_time: new Date().toLocaleString('pt-BR'),
+      local_time: new Date().toLocaleString("pt-BR"),
 
       // Additional tracking
       is_mobile: /Mobi|Android/i.test(navigator.userAgent),
       is_tablet: /Tablet|iPad/i.test(navigator.userAgent),
       is_desktop: !/Mobi|Android|Tablet|iPad/i.test(navigator.userAgent),
-      browser: navigator.userAgent.includes('Chrome') ? 'Chrome' :
-               navigator.userAgent.includes('Firefox') ? 'Firefox' :
-               navigator.userAgent.includes('Safari') ? 'Safari' :
-               navigator.userAgent.includes('Edge') ? 'Edge' : 'Other',
+      browser: navigator.userAgent.includes("Chrome")
+        ? "Chrome"
+        : navigator.userAgent.includes("Firefox")
+          ? "Firefox"
+          : navigator.userAgent.includes("Safari")
+            ? "Safari"
+            : navigator.userAgent.includes("Edge")
+              ? "Edge"
+              : "Other",
 
       // Marketing tags
-      gclid: urlParams.get('gclid') || null, // Google Ads
-      fbclid: urlParams.get('fbclid') || null, // Facebook Ads
+      gclid: urlParams.get("gclid") || null, // Google Ads
+      fbclid: urlParams.get("fbclid") || null, // Facebook Ads
 
       // Cookie consent (se houver)
-      cookie_consent: localStorage.getItem('cookie_consent') || null,
+      cookie_consent: localStorage.getItem("cookie_consent") || null,
     };
   };
 
@@ -180,9 +197,9 @@ export default function Index() {
     const fullEventData = {
       event: eventName,
       timestamp: new Date().toISOString(),
-      session_id: sessionStorage.getItem('session_id'),
+      session_id: sessionStorage.getItem("session_id"),
       page: window.location.pathname,
-      ...eventData
+      ...eventData,
     };
 
     console.log(`Event tracked: ${eventName}`, fullEventData);
@@ -198,10 +215,10 @@ export default function Index() {
     setShowCouponMessage(value === "nao-consumidor");
 
     // Track evento de seleção CNPJ
-    trackEvent('cnpj_selection', {
+    trackEvent("cnpj_selection", {
       selection: value,
       has_cnpj: value === "sim",
-      lead_type: value === "sim" ? "business" : "consumer"
+      lead_type: value === "sim" ? "business" : "consumer",
     });
   };
 
@@ -230,7 +247,8 @@ export default function Index() {
       // Dados específicos do lead
       lead_quality: selectedCnpj === "sim" ? "high" : "medium",
       lead_type: selectedCnpj === "sim" ? "business" : "consumer",
-      form_completion_time: performance.now() - (window.formStartTime || performance.now()),
+      form_completion_time:
+        performance.now() - (window.formStartTime || performance.now()),
 
       // Informações de conversão
       conversion_page: "/",
@@ -259,10 +277,10 @@ export default function Index() {
 
       if (response.ok) {
         // Track sucesso do envio
-        trackEvent('form_submission_success', {
+        trackEvent("form_submission_success", {
           lead_type: selectedCnpj === "sim" ? "business" : "consumer",
           form_completion_time: performance.now() - (window.formStartTime || 0),
-          has_cnpj: selectedCnpj === "sim"
+          has_cnpj: selectedCnpj === "sim",
         });
 
         // Se for consumidor, abre WhatsApp após enviar dados
@@ -272,9 +290,9 @@ export default function Index() {
           );
 
           // Track clique do WhatsApp
-          trackEvent('whatsapp_redirect', {
-            reason: 'coupon_request',
-            lead_type: 'consumer'
+          trackEvent("whatsapp_redirect", {
+            reason: "coupon_request",
+            lead_type: "consumer",
           });
 
           window.open(
@@ -293,28 +311,28 @@ export default function Index() {
         setShowCouponMessage(false);
       } else {
         // Track erro do envio
-        trackEvent('form_submission_error', {
+        trackEvent("form_submission_error", {
           error_status: response.status,
-          error_type: 'http_error',
+          error_type: "http_error",
           form_data: {
             has_name: !!formData.get("name"),
             has_whatsapp: !!formData.get("whatsapp"),
-            cnpj_selection: selectedCnpj
-          }
+            cnpj_selection: selectedCnpj,
+          },
         });
 
         alert("Erro ao enviar formul��rio. Tente novamente.");
       }
     } catch (error) {
       // Track erro de conexão
-      trackEvent('form_submission_error', {
-        error_type: 'network_error',
-        error_message: error?.message || 'Unknown error',
+      trackEvent("form_submission_error", {
+        error_type: "network_error",
+        error_message: error?.message || "Unknown error",
         form_data: {
           has_name: !!formData.get("name"),
           has_whatsapp: !!formData.get("whatsapp"),
-          cnpj_selection: selectedCnpj
-        }
+          cnpj_selection: selectedCnpj,
+        },
       });
 
       console.error("Erro ao enviar formulário:", error);
@@ -454,8 +472,19 @@ export default function Index() {
                       required
                       className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
                       placeholder="Seu nome completo"
-                      onFocus={() => trackEvent('form_field_focus', { field: 'name', step: 1 })}
-                      onBlur={(e) => e.target.value && trackEvent('form_field_complete', { field: 'name', step: 1 })}
+                      onFocus={() =>
+                        trackEvent("form_field_focus", {
+                          field: "name",
+                          step: 1,
+                        })
+                      }
+                      onBlur={(e) =>
+                        e.target.value &&
+                        trackEvent("form_field_complete", {
+                          field: "name",
+                          step: 1,
+                        })
+                      }
                     />
                   </div>
 
@@ -473,8 +502,19 @@ export default function Index() {
                       required
                       className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
                       placeholder="(11) 99999-9999"
-                      onFocus={() => trackEvent('form_field_focus', { field: 'whatsapp', step: 2 })}
-                      onBlur={(e) => e.target.value && trackEvent('form_field_complete', { field: 'whatsapp', step: 2 })}
+                      onFocus={() =>
+                        trackEvent("form_field_focus", {
+                          field: "whatsapp",
+                          step: 2,
+                        })
+                      }
+                      onBlur={(e) =>
+                        e.target.value &&
+                        trackEvent("form_field_complete", {
+                          field: "whatsapp",
+                          step: 2,
+                        })
+                      }
                     />
                   </div>
 

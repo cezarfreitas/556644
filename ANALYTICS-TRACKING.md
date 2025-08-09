@@ -5,6 +5,7 @@
 ### 🎯 **Dados Capturados Automaticamente**
 
 #### **1. UTM Parameters (Campanhas)**
+
 ```javascript
 {
   utm_source: 'google|facebook|instagram',      // Origem da campanha
@@ -16,6 +17,7 @@
 ```
 
 #### **2. Origem de Tráfego**
+
 ```javascript
 {
   referrer: 'https://google.com/search',        // URL de origem
@@ -33,6 +35,7 @@
 ```
 
 #### **3. Dados de Sessão**
+
 ```javascript
 {
   session_id: 'abc123def456',                   // ID único da sessão
@@ -44,6 +47,7 @@
 ```
 
 #### **4. Informações do Dispositivo**
+
 ```javascript
 {
   user_agent: 'Mozilla/5.0...',                // String completa do navegador
@@ -59,6 +63,7 @@
 ```
 
 #### **5. Dados de Marketing**
+
 ```javascript
 {
   gclid: 'abc123',                             // Google Ads Click ID
@@ -70,6 +75,7 @@
 ### 🎯 **Dados de Formulário e Conversão**
 
 #### **6. Qualificação do Lead**
+
 ```javascript
 {
   lead_quality: 'high|medium|low',             // Baseado no CNPJ
@@ -80,6 +86,7 @@
 ```
 
 #### **7. Dados de Conversão**
+
 ```javascript
 {
   conversion_page: '/',                        // Página da conversão
@@ -92,7 +99,9 @@
 ## 📈 **Eventos Trackados**
 
 ### **1. PageView**
+
 Disparado quando a página carrega:
+
 ```javascript
 {
   event: 'pageview',
@@ -103,6 +112,7 @@ Disparado quando a página carrega:
 ```
 
 ### **2. Form Field Events**
+
 ```javascript
 // Quando usuário clica em um campo
 {
@@ -120,6 +130,7 @@ Disparado quando a página carrega:
 ```
 
 ### **3. CNPJ Selection**
+
 ```javascript
 {
   event: 'cnpj_selection',
@@ -130,6 +141,7 @@ Disparado quando a página carrega:
 ```
 
 ### **4. Form Submission**
+
 ```javascript
 // Sucesso
 {
@@ -154,6 +166,7 @@ Disparado quando a página carrega:
 ```
 
 ### **5. WhatsApp Redirect**
+
 ```javascript
 {
   event: 'whatsapp_redirect',
@@ -165,6 +178,7 @@ Disparado quando a página carrega:
 ## 🔧 **Implementação no Backend**
 
 ### **Payload Completo Enviado**
+
 O payload enviado para a API incluirá todos os dados:
 
 ```javascript
@@ -174,13 +188,13 @@ O payload enviado para a API incluirá todos os dados:
   whatsapp: "11999999999",
   hasCnpj: "sim",
   cnpj: "12.345.678/0001-90",
-  
+
   // Dados da campanha
   marca: "Ecko",
   origem: "Landing Page Lojistas",
   campaign_type: "Lead Generation",
   lead_source: "Website Form",
-  
+
   // Analytics completos (40+ campos)
   utm_source: "facebook",
   utm_campaign: "lojistas_q4",
@@ -191,12 +205,12 @@ O payload enviado para a API incluirá todos os dados:
   is_mobile: true,
   browser: "Chrome",
   // ... todos os outros campos
-  
+
   // Qualificação
   lead_quality: "high",
   lead_type: "business",
   engagement_score: 10,
-  
+
   // Timestamps
   form_timestamp: "2024-01-01T10:00:00Z",
   server_timestamp: null // Preenchido no backend
@@ -206,59 +220,66 @@ O payload enviado para a API incluirá todos os dados:
 ## 📊 **Integrações Sugeridas**
 
 ### **Google Analytics 4**
+
 ```javascript
-gtag('config', 'GA_MEASUREMENT_ID', {
+gtag("config", "GA_MEASUREMENT_ID", {
   custom_map: {
-    'custom_parameter_1': 'traffic_source',
-    'custom_parameter_2': 'lead_type'
-  }
+    custom_parameter_1: "traffic_source",
+    custom_parameter_2: "lead_type",
+  },
 });
 
-gtag('event', 'form_submission_success', {
-  event_category: 'Lead Generation',
+gtag("event", "form_submission_success", {
+  event_category: "Lead Generation",
   event_label: lead_type,
-  value: engagement_score
+  value: engagement_score,
 });
 ```
 
 ### **Facebook Pixel**
+
 ```javascript
-fbq('track', 'Lead', {
-  content_category: 'Lojistas',
+fbq("track", "Lead", {
+  content_category: "Lojistas",
   lead_type: lead_type,
   traffic_source: traffic_source,
-  value: engagement_score
+  value: engagement_score,
 });
 ```
 
 ### **Google Ads**
+
 ```javascript
-gtag('event', 'conversion', {
-  'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
-  'value': 1.0,
-  'currency': 'BRL',
-  'transaction_id': session_id
+gtag("event", "conversion", {
+  send_to: "AW-CONVERSION_ID/CONVERSION_LABEL",
+  value: 1.0,
+  currency: "BRL",
+  transaction_id: session_id,
 });
 ```
 
 ## 🎯 **Análises Possíveis**
 
 ### **1. Origem de Tráfego**
+
 - Qual canal gera mais leads qualificados?
 - ROI por canal de marketing
 - Performance por campanha UTM
 
 ### **2. Comportamento do Usuário**
+
 - Tempo médio de preenchimento do formulário
 - Taxa de abandono por campo
 - Dispositivos que mais convertem
 
 ### **3. Qualificação de Leads**
+
 - % de leads business vs consumer
 - Score médio de engagement
 - Conversão por origem de tráfego
 
 ### **4. Performance Técnica**
+
 - Tempo de carregamento da página
 - Taxa de erro de formulário
 - Performance por dispositivo/navegador
