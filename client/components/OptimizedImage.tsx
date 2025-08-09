@@ -36,7 +36,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       alt={alt}
       className={className}
       loading={loading}
-      fetchpriority={fetchpriority}
+      fetchPriority={fetchPriority}
       sizes={sizes}
       // Note: srcSet would require multiple image sizes to be generated
       // For now, we'll use the single optimized image
