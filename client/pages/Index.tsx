@@ -114,17 +114,6 @@ export default function Index() {
             A maior marca de moda urbana do Brasil e reconhecida mundialmente agora na sua loja
           </h2>
 
-          {/* Subtitle/Call Text - Otimizado para mobile */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-4xl leading-relaxed font-medium px-4 sm:px-6 animate-fade-in">
-            <span className="text-primary font-bold">
-              Produtos exclusivos
-            </span>
-            ,{" "}
-            <span className="text-primary font-bold">
-              alto lucro
-            </span>{" "}
-            e o prestígio de uma marca reconhecida mundialmente. Aumente suas vendas e atraia clientes que buscam qualidade e estilo.
-          </p>
 
           {/* Call to Action Button - Otimizado para mobile */}
           <a
