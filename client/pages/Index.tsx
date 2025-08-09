@@ -59,7 +59,7 @@ export default function Index() {
         document.head.appendChild(gaScript);
       };
 
-      if ('requestIdleCallback' in window) {
+      if ("requestIdleCallback" in window) {
         requestIdleCallback(loadGA4);
       } else {
         setTimeout(loadGA4, 100);
@@ -121,7 +121,7 @@ export default function Index() {
       };
 
       // Usar requestIdleCallback para carregar de forma não bloqueante
-      if ('requestIdleCallback' in window) {
+      if ("requestIdleCallback" in window) {
         requestIdleCallback(loadFacebookPixel);
       } else {
         setTimeout(loadFacebookPixel, 200);
@@ -798,7 +798,10 @@ export default function Index() {
                 requestAnimationFrame(() => {
                   const element = document.getElementById("cadastro-lojistas");
                   if (element) {
-                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
                   }
                 });
               }}

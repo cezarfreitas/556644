@@ -19,12 +19,12 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          icons: ['react-icons/md', 'react-icons/fa'],
+          vendor: ["react", "react-dom"],
+          icons: ["react-icons/md", "react-icons/fa"],
         },
       },
     },
-    minify: 'terser',
+    minify: "terser",
     terserOptions: {
       compress: {
         drop_console: true,
