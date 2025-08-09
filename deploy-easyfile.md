@@ -30,7 +30,7 @@ VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034
 
 O container inclui health check automático:
 
-- Verifica se a aplicação responde na porta 3000
+- Verifica se a aplicação responde na porta 80
 - Intervalo: 30 segundos
 - Timeout: 10 segundos
 - Período inicial: 60 segundos
