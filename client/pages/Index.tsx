@@ -364,7 +364,7 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                  <blockquote className="text-lg text-white leading-relaxed italic">
                     "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca."
                   </blockquote>
                   <div className="flex items-center space-x-4">
@@ -372,8 +372,8 @@ export default function Index() {
                       <span className="text-white font-bold text-lg">M</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground">Marcos Silva</h4>
-                      <p className="text-sm text-muted-foreground">Street Style Store - São Paulo, SP</p>
+                      <h4 className="font-bold text-white">Marcos Silva</h4>
+                      <p className="text-sm text-white/70">Street Style Store - São Paulo, SP</p>
                     </div>
                   </div>
                 </div>
