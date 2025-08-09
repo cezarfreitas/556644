@@ -68,10 +68,10 @@ Se `Dockerfile.easyfile` não funcionar, tente na ordem:
 docker build -f Dockerfile.easyfile -t ecko-landing:easyfile .
 
 # Test local
-docker run -p 3000:3000 -e NODE_ENV=production ecko-landing:easyfile
+docker run -p 80:80 -e NODE_ENV=production ecko-landing:easyfile
 
 # Verificar se está funcionando
-curl http://localhost:3000
+curl http://localhost:80
 ```
 
 ### 7. Arquivos Importantes
