@@ -52,11 +52,11 @@ export default function Index() {
             {/* Text/CTA Column */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   Pronto Para Começar Sua
                   <span className="block text-primary">Parceria com a Ecko?</span>
                 </h2>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                   Preencha o formulário ao lado e nossa equipe comercial entrará em contato em até 24 horas para apresentar as condições exclusivas para lojistas oficiais.
                 </p>
                 <div className="space-y-4">
