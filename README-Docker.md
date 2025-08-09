@@ -18,12 +18,12 @@ docker-compose down
 ### 2. Build Manual Docker
 
 ```bash
-# Opção 1: Dockerfile simples (recomendado)
-docker build -f Dockerfile.simple -t ecko-landing \
+# Dockerfile corrigido (recomendado)
+docker build -f Dockerfile.fixed -t ecko-landing \
   --build-arg VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads \
   .
 
-# Opção 2: Dockerfile minimal (se o simples falhar)
+# Fallback: Dockerfile minimal
 docker build -f Dockerfile.minimal -t ecko-landing \
   --build-arg VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads \
   .
