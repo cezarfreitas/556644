@@ -22,6 +22,33 @@ img {
   contain-intrinsic-size: 100vh;
 }
 
+/* Form validation styles */
+.form-input-valid {
+  @apply border-green-500 focus:ring-green-500;
+}
+
+.form-input-invalid {
+  @apply border-red-500 focus:ring-red-500;
+}
+
+.form-error-message {
+  @apply text-red-500 text-sm mt-1 animate-fade-in;
+}
+
+.form-success-icon {
+  @apply text-green-500;
+}
+
+/* Input focus effects */
+.form-input {
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 @layer base {
   /**
    * Tailwind CSS theme
