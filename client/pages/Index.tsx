@@ -46,7 +46,7 @@ export default function Index() {
       </header>
 
       {/* Cadastro de Lojistas - Formulário de Parceria */}
-      <section className="py-20 md:py-32 bg-black" id="cadastro-lojistas">
+      <section className="py-20 md:py-32 bg-white" id="cadastro-lojistas">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
 
@@ -154,7 +154,7 @@ export default function Index() {
       </section>
 
       {/* Benefícios para Lojistas Ecko */}
-      <section className="py-20 md:py-32 relative bg-black" id="beneficios-lojistas">
+      <section className="py-20 md:py-32 relative bg-gray-50" id="beneficios-lojistas">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -231,7 +231,7 @@ export default function Index() {
       </section>
 
       {/* Galeria de Produtos Ecko Streetwear */}
-      <section className="py-20 md:py-32 bg-black" id="galeria-produtos">
+      <section className="py-20 md:py-32 bg-white" id="galeria-produtos">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -342,7 +342,7 @@ export default function Index() {
       </section>
 
       {/* Depoimentos de Lojistas Parceiros Ecko */}
-      <section className="py-20 md:py-32 bg-black" id="depoimentos-lojistas">
+      <section className="py-20 md:py-32 bg-gray-100" id="depoimentos-lojistas">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
@@ -457,7 +457,7 @@ export default function Index() {
       </section>
 
       {/* História da Marca Ecko - Líder em Streetwear */}
-      <section className="py-20 md:py-32 bg-black" id="sobre-ecko">
+      <section className="py-20 md:py-32 bg-white" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -517,7 +517,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-background py-16">
+      <footer className="bg-gray-100 text-foreground py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
