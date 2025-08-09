@@ -761,7 +761,7 @@ export default function Index() {
         ></div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8">
+        <div className="relative flex flex-col items-center justify-center h-full text-center px-4 md:px-8" style={{ zIndex: 10 }}>
           {/* Logo */}
           <div className="mb-12 animate-fade-in">
             <img
