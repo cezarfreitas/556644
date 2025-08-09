@@ -42,168 +42,70 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Reasons and Registration Section */}
+      {/* 4 Reasons Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto">
-
-            {/* 4 Reasons Column */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  4 Motivos Para Se Tornar
-                  <span className="block text-primary">Lojista Ecko Oficial</span>
-                </h2>
-                <p className="text-muted-foreground text-lg">
-                  Descubra as vantagens exclusivas de fazer parte da nossa rede de parceiros.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                {/* Reason 1 */}
-                <div className="flex items-start space-x-4 p-4 rounded-lg bg-card border border-border">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">1</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Produtos Exclusivos</h3>
-                    <p className="text-muted-foreground">
-                      Acesso prioritário às coleções limitadas e lançamentos exclusivos da marca.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Reason 2 */}
-                <div className="flex items-start space-x-4 p-4 rounded-lg bg-card border border-border">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">2</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Margens Atrativas</h3>
-                    <p className="text-muted-foreground">
-                      Condições comerciais privilegiadas com margens competitivas no mercado.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Reason 3 */}
-                <div className="flex items-start space-x-4 p-4 rounded-lg bg-card border border-border">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">3</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Suporte Completo</h3>
-                    <p className="text-muted-foreground">
-                      Treinamento, materiais de marketing e suporte técnico especializado.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Reason 4 */}
-                <div className="flex items-start space-x-4 p-4 rounded-lg bg-card border border-border">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">4</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Prestígio da Marca</h3>
-                    <p className="text-muted-foreground">
-                      Associe-se à marca líder em streetwear e potencialize seu negócio.
-                    </p>
-                  </div>
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center space-y-4 mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                4 Motivos Para Se Tornar
+                <span className="block text-primary">Lojista Ecko Oficial</span>
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Descubra as vantagens exclusivas de fazer parte da nossa rede de parceiros.
+              </p>
             </div>
 
-            {/* Registration Form Column */}
-            <div className="lg:pl-8">
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
-                <div className="space-y-6">
-                  <div className="text-center space-y-2">
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                      Cadastre-se Agora
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Preencha o formulário e nossa equipe entrará em contato
-                    </p>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Reason 1 */}
+              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Produtos Exclusivos</h3>
+                  <p className="text-muted-foreground">
+                    Acesso prioritário às coleções limitadas e lançamentos exclusivos da marca.
+                  </p>
+                </div>
+              </div>
 
-                  <form className="space-y-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium text-foreground">
-                        Nome Completo *
-                      </label>
-                      <input
-                        id="name"
-                        type="text"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Seu nome completo"
-                      />
-                    </div>
+              {/* Reason 2 */}
+              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-xl">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Margens Atrativas</h3>
+                  <p className="text-muted-foreground">
+                    Condições comerciais privilegiadas com margens competitivas no mercado.
+                  </p>
+                </div>
+              </div>
 
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium text-foreground">
-                        E-mail *
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="seu@email.com"
-                      />
-                    </div>
+              {/* Reason 3 */}
+              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-xl">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Suporte Completo</h3>
+                  <p className="text-muted-foreground">
+                    Treinamento, materiais de marketing e suporte técnico especializado.
+                  </p>
+                </div>
+              </div>
 
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium text-foreground">
-                        WhatsApp *
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="(11) 99999-9999"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="company" className="text-sm font-medium text-foreground">
-                        Nome da Empresa
-                      </label>
-                      <input
-                        id="company"
-                        type="text"
-                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Sua empresa (opcional)"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="city" className="text-sm font-medium text-foreground">
-                        Cidade *
-                      </label>
-                      <input
-                        id="city"
-                        type="text"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Sua cidade"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-red-600 text-white py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
-                    >
-                      Quero Ser Parceiro Ecko
-                    </button>
-
-                    <p className="text-xs text-muted-foreground text-center mt-4">
-                      Ao enviar, você concorda em receber contato comercial da Ecko.
-                      Seus dados estão seguros conosco.
-                    </p>
-                  </form>
+              {/* Reason 4 */}
+              <div className="flex items-start space-x-4 p-6 rounded-lg bg-card border border-border">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-xl">4</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Prestígio da Marca</h3>
+                  <p className="text-muted-foreground">
+                    Associe-se à marca líder em streetwear e potencialize seu negócio.
+                  </p>
                 </div>
               </div>
             </div>
