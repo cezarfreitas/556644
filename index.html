@@ -80,24 +80,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Critical CSS Inline -->
+    <!-- Critical CSS Inline - Otimizado para LCP -->
     <style>
       /* Critical Above-the-fold styles */
       html {
         scroll-behavior: smooth;
+        font-display: swap;
       }
       body {
         margin: 0;
         padding: 0;
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background-color: #fff;
         color: #000;
         line-height: 1.6;
+        font-display: swap;
       }
       * {
         box-sizing: border-box;
       }
+
+      /* Otimizado para LCP */
       .hero-section {
         min-height: 100vh;
         position: relative;
@@ -105,7 +108,11 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        contain: layout style paint;
+        content-visibility: auto;
+        contain-intrinsic-size: 100vh;
       }
+
       .hero-bg {
         position: absolute;
         top: 0;
@@ -114,21 +121,20 @@
         height: 100%;
         object-fit: cover;
         z-index: 1;
+        will-change: auto;
+        image-rendering: crisp-edges;
       }
+
       .hero-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0.4),
-          rgba(0, 0, 0, 0.7)
-        );
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
         z-index: 2;
       }
+
       .hero-content {
         position: relative;
         z-index: 10;
@@ -136,6 +142,22 @@
         color: white;
         padding: 1rem;
       }
+
+      /* Preload skeleton para reduzir CLS */
+      .logo-skeleton {
+        width: 200px;
+        height: 80px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 8px;
+        margin: 0 auto 3rem;
+      }
+
+      .text-skeleton {
+        background: rgba(255,255,255,0.1);
+        border-radius: 4px;
+        margin: 0.5rem auto;
+      }
+
       .btn-primary {
         background: linear-gradient(to right, #eb1414, #dc2626);
         color: #fff;
@@ -143,15 +165,27 @@
         border-radius: 0.75rem;
         text-decoration: none;
         font-weight: 700;
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        will-change: transform;
       }
+
       .btn-primary:hover {
         transform: scale(1.05);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
       }
+
+      /* Otimizações de animação */
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
       @media (max-width: 640px) {
         .hero-content {
           padding: 0.5rem;
@@ -159,6 +193,10 @@
         .btn-primary {
           padding: 0.75rem 1rem;
           font-size: 0.875rem;
+        }
+        .logo-skeleton {
+          width: 160px;
+          height: 64px;
         }
       }
     </style>
