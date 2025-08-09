@@ -2,31 +2,43 @@
 
 ## Construir e executar com Docker
 
-### 1. Build da imagem Docker
+### 1. Usando Docker Compose (Recomendado)
 
 ```bash
-docker build -t ecko-landing .
-```
-
-### 2. Executar o container
-
-```bash
-docker run -p 3000:3000 \
-  -e VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads \
-  ecko-landing
-```
-
-### 3. Usando Docker Compose (Recomendado)
-
-```bash
-# Executar em produção
-docker-compose up -d
+# Build e executar
+docker-compose up --build -d
 
 # Ver logs
 docker-compose logs -f
 
-# Parar e remover containers
+# Parar
 docker-compose down
+```
+
+### 2. Build Manual Docker
+
+```bash
+# Build com variáveis de ambiente
+docker build -t ecko-landing \
+  --build-arg VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads \
+  .
+
+# Executar
+docker run -p 3000:3000 \
+  -e NODE_ENV=production \
+  -e PORT=3000 \
+  ecko-landing
+```
+
+### 3. Debug e Teste
+
+```bash
+# Use o script de build e teste
+bash docker-build.sh
+
+# Para debug manual
+docker logs -f <container_name>
+docker exec -it <container_name> sh
 ```
 
 ## Deploy em produção
