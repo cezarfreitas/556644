@@ -44,8 +44,8 @@ export default function Index() {
         </div>
       </header>
 
-      {/* CTA and Form Section */}
-      <section className="py-16 md:py-24 bg-black">
+      {/* Cadastro de Lojistas - Formulário de Parceria */}
+      <section className="py-20 md:py-32 bg-black" id="cadastro-lojistas">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
 
@@ -53,15 +53,15 @@ export default function Index() {
             <div className="space-y-10">
               <div className="space-y-8">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Pronto Para Começar Sua
-                  <span className="block text-primary">Parceria com a Ecko?</span>
+                  Cadastre-se Como Lojista Oficial
+                  <span className="block text-primary">Ecko Agora</span>
                 </h2>
                 <div className="space-y-6">
                   <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
-                    Faça parte da rede de lojistas oficiais da maior marca de streetwear do Brasil.
+                    Faça parte da rede de distribuidores oficiais da maior marca de streetwear e moda urbana do Brasil.
                   </p>
                   <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-                    Nossa equipe comercial entrará em contato em até 24 horas para apresentar as condições exclusivas, sem taxas de adesão e com processo 100% digital.
+                    Resposta comercial em até 24 horas. Processo 100% digital, sem taxas de adesão. Condições exclusivas para lojistas parceiros.
                   </p>
                 </div>
               </div>
@@ -537,7 +537,7 @@ export default function Index() {
                     <span className="text-sm">📧</span>
                   </div>
                   <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-sm">🌐</span>
+                    <span className="text-sm">����</span>
                   </div>
                 </div>
               </div>
