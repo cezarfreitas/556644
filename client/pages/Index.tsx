@@ -3,11 +3,11 @@ import { MdStar, MdAttachMoney, MdHeadset, MdWorkspacePremium } from "react-icon
 export default function Index() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section with Full Height Image and Overlay */}
-      <section className="relative h-screen w-full overflow-hidden">
+      {/* Hero Section - Landing Page Principal */}
+      <header className="relative h-screen w-full overflow-hidden">
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=800"
-          alt="Lojistas Ecko - Parceiros de Sucesso da Maior Marca de Streetwear do Brasil"
+          alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Enhanced Overlay with Gradient */}
@@ -20,12 +20,12 @@ export default function Index() {
           <div className="mb-12 animate-fade-in">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=800"
-              alt="Logo Ecko Unltd - Marca de Streetwear e Moda Urbana Brasileira"
+              alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
               className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
             />
           </div>
 
-          {/* Main Heading */}
+          {/* Main Heading - H1 for SEO */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
             <span className="block mb-2">Seja Lojista Oficial</span>
             <span className="block text-primary drop-shadow-lg">Ecko</span>
@@ -34,15 +34,15 @@ export default function Index() {
 
           {/* Subtitle/Call Text */}
           <p className="text-base md:text-lg lg:text-xl text-white/95 mb-10 max-w-3xl leading-relaxed font-medium px-4 animate-fade-in">
-            Acesso a <span className="text-primary font-semibold">produtos exclusivos</span>, <span className="text-primary font-semibold">margens atrativas</span> e todo o prestígio da marca líder em streetwear.
+            Acesso a <span className="text-primary font-semibold">produtos exclusivos</span>, <span className="text-primary font-semibold">margens atrativas</span> e todo o prestígio da marca líder em streetwear brasileiro.
           </p>
 
           {/* Call to Action Button */}
-          <button className="bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
+          <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
             Seja Parceiro Ecko Oficial
-          </button>
+          </a>
         </div>
-      </section>
+      </header>
 
       {/* CTA and Form Section */}
       <section className="py-16 md:py-24 bg-black">
