@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { MdStar, MdAttachMoney, MdHeadset, MdWorkspacePremium } from "react-icons/md";
 import { FaFacebook, FaInstagram, FaStore } from "react-icons/fa";
 
 export default function Index() {
+  const [showCnpjField, setShowCnpjField] = useState(false);
+
+  const handleCnpjRadioChange = (value: string) => {
+    setShowCnpjField(value === "sim");
+  };
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Landing Page Principal */}
