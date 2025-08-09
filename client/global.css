@@ -4,26 +4,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Performance optimizations */
+/* Performance optimizations - Critical path */
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  font-display: swap; /* Para melhor carregamento de fonts */
+  text-rendering: optimizeSpeed; /* Mudado de optimizeLegibility para speed */
+  font-display: swap;
 }
 
-/* Image optimization */
-img {
+/* Image optimization - Non-critical first */
+img:not(.hero-bg):not([fetchpriority="high"]) {
   content-visibility: auto;
   loading: lazy;
   decoding: async;
+}
+
+/* Critical images - No lazy loading */
+img.hero-bg,
+img[fetchpriority="high"] {
+  loading: eager;
+  decoding: async;
+  image-rendering: crisp-edges;
 }
 
 /* Layout optimization for critical elements */
 .hero-section {
   contain-intrinsic-size: 100vh;
   contain: layout style paint;
+  content-visibility: auto;
 }
 
 /* Otimizações para evitar layout shifts */
@@ -31,19 +40,32 @@ img {
   contain: layout;
 }
 
-/* Reduzir reflow em animações */
-.animate-fade-in,
-.animate-slide-up,
-.animate-scroll-bounce {
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  transform: translateZ(0);
+/* Reduzir reflow em animações - APENAS quando necessário */
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+  will-change: opacity;
 }
 
-/* Otimizar transições */
-.transition-all,
-.transition-transform,
-.transition-colors {
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
+  will-change: transform, opacity;
+}
+
+.animate-scroll-bounce {
+  animation: scroll-bounce 1.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Remove will-change após animação para melhor performance */
+.animate-fade-in.animation-complete,
+.animate-slide-up.animation-complete {
+  will-change: auto;
+}
+
+/* Otimizar transições apenas quando hover/focus */
+.transition-all:hover,
+.transition-transform:hover,
+.transition-colors:hover {
   will-change: transform;
 }
 
@@ -51,6 +73,7 @@ img {
 .hero-bg {
   content-visibility: auto;
   contain-intrinsic-size: 100vh;
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 /* Form validation styles */
