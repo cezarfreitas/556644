@@ -339,6 +339,121 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Customer Testimonials Section */}
+      <section className="py-20 md:py-32 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
+                O Que Nossos
+                <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                  Parceiros Dizem
+                </span>
+              </h2>
+              <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
+                Depoimentos reais de lojistas que cresceram com a Ecko
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Testimonial 1 */}
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-1 text-primary">
+                    <span className="text-2xl">★★★★★</span>
+                  </div>
+                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                    "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca."
+                  </blockquote>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">M</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground">Marcos Silva</h4>
+                      <p className="text-sm text-muted-foreground">Street Style Store - São Paulo, SP</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-1 text-primary">
+                    <span className="text-2xl">★★★★★</span>
+                  </div>
+                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                    "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério."
+                  </blockquote>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">A</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground">Amanda Costa</h4>
+                      <p className="text-sm text-muted-foreground">Urban Fashion - Rio de Janeiro, RJ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-1 text-primary">
+                    <span className="text-2xl">★★★★★</span>
+                  </div>
+                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                    "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional."
+                  </blockquote>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">R</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground">Rafael Oliveira</h4>
+                      <p className="text-sm text-muted-foreground">Streetwear BH - Belo Horizonte, MG</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 4 */}
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-1 text-primary">
+                    <span className="text-2xl">★★★★★</span>
+                  </div>
+                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                    "A Ecko transformou minha loja multimarca. Agora somos referência em streetwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido."
+                  </blockquote>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">C</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground">Carla Santos</h4>
+                      <p className="text-sm text-muted-foreground">Fashion Hub - Curitiba, PR</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <p className="text-lg text-muted-foreground mb-6">
+                Junte-se a centenas de lojistas de sucesso
+              </p>
+              <button className="bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+                Quero Ser o Próximo Parceiro
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
