@@ -755,12 +755,16 @@ export default function Index() {
           className="absolute top-0 left-0 w-full h-full pointer-events-none"
           style={{
             zIndex: 2,
-            background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%)'
+            background:
+              "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%)",
           }}
         ></div>
 
         {/* Hero Content */}
-        <div className="relative flex flex-col items-center justify-center h-full text-center px-4 md:px-8" style={{ zIndex: 10 }}>
+        <div
+          className="relative flex flex-col items-center justify-center h-full text-center px-4 md:px-8"
+          style={{ zIndex: 10 }}
+        >
           {/* Logo */}
           <div className="mb-12 animate-fade-in">
             <img
