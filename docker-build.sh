@@ -13,9 +13,9 @@ if [ $? -eq 0 ]; then
     echo "🚀 Starting container..."
     docker run -d \
       --name ecko-landing-test \
-      -p 3000:3000 \
+      -p 80:80 \
       -e NODE_ENV=production \
-      -e PORT=3000 \
+      -e PORT=80 \
       ecko-landing:test
     
     if [ $? -eq 0 ]; then
