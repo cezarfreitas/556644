@@ -296,16 +296,27 @@ img[fetchpriority="high"] {
     animation: arrow-pulse 1s ease-in-out infinite;
   }
 
-  /* Animação do indicador de scroll */
+  /* Animação do indicador de scroll - Melhorada */
   @keyframes scroll-bounce {
     0%,
     100% {
       transform: translateY(0);
-      opacity: 0.8;
+      opacity: 0.7;
     }
     50% {
-      transform: translateY(8px);
+      transform: translateY(12px);
       opacity: 1;
+    }
+  }
+
+  /* Animação adicional para desktop */
+  @keyframes scroll-float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
     }
   }
 
