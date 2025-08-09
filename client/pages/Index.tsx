@@ -58,94 +58,60 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
-              <style jsx>{`
-                .scrollbar-hide {
-                  -ms-overflow-style: none;
-                  scrollbar-width: none;
-                }
-                .scrollbar-hide::-webkit-scrollbar {
-                  display: none;
-                }
-              `}</style>
+            <div className="flex justify-center items-center gap-12 md:gap-16 lg:gap-20 flex-wrap">
               {/* Reason 1 */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
-                <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Produtos Exclusivos</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Acesso prioritário às coleções limitadas e lançamentos exclusivos que só lojistas oficiais possuem.
-                  </p>
+              <div className="text-center group min-w-[200px]">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">1</span>
                 </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Produtos Exclusivos</h3>
+                <p className="text-muted-foreground text-sm">
+                  Coleções limitadas exclusivas
+                </p>
               </div>
 
               {/* Reason 2 */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
-                <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Margens Atrativas</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Condições comerciais privilegiadas com margens competitivas que garantem maior lucratividade.
-                  </p>
+              <div className="text-center group min-w-[200px]">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">2</span>
                 </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Margens Atrativas</h3>
+                <p className="text-muted-foreground text-sm">
+                  Condições comerciais privilegiadas
+                </p>
               </div>
 
               {/* Reason 3 */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
-                <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Suporte Completo</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Treinamento especializado, materiais de marketing e suporte técnico dedicado para seu sucesso.
-                  </p>
+              <div className="text-center group min-w-[200px]">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">3</span>
                 </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Suporte Completo</h3>
+                <p className="text-muted-foreground text-sm">
+                  Treinamento e materiais de marketing
+                </p>
               </div>
 
               {/* Reason 4 */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
-                <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Prestígio da Marca</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Associe-se à marca líder em streetwear e potencialize seu negócio com credibilidade reconhecida.
-                  </p>
+              <div className="text-center group min-w-[200px]">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">4</span>
                 </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Prestígio da Marca</h3>
+                <p className="text-muted-foreground text-sm">
+                  Credibilidade reconhecida no mercado
+                </p>
               </div>
 
-              {/* Reason 5 - New */}
-              <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[300px] flex-shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl"></div>
-                <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform duration-300">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Crescimento Acelerado</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Estratégias comprovadas de vendas e marketing para acelerar o crescimento do seu negócio.
-                  </p>
+              {/* Reason 5 */}
+              <div className="text-center group min-w-[200px]">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">5</span>
                 </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Crescimento Acelerado</h3>
+                <p className="text-muted-foreground text-sm">
+                  Estratégias comprovadas de vendas
+                </p>
               </div>
             </div>
 
