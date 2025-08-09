@@ -63,7 +63,7 @@ export default function Index() {
     // Inicializar Facebook Pixel
     if (META_PIXEL_ID) {
       // Carregar script do Facebook Pixel
-      !function(f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
+      (function(f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
         if(f.fbq) return;
         n = f.fbq = function() {
           n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
@@ -78,7 +78,7 @@ export default function Index() {
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s)
-      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
       // Aguardar script carregar e inicializar
       setTimeout(() => {
