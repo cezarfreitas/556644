@@ -6,7 +6,7 @@ export default function Index() {
   const [showCnpjField, setShowCnpjField] = useState(false);
   const [selectedCnpj, setSelectedCnpj] = useState("");
 
-  const api_form = "https://api.exemplo.com/lojistas"; // URL da API para envio do formulário
+  const api_form = import.meta.env.VITE_api_form || "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
