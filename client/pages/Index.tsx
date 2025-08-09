@@ -25,14 +25,14 @@ export default function Index() {
 
           {/* Main Heading */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
-            <span className="block mb-2">Seja um Lojista Oficial e Revenda</span>
+            <span className="block mb-2">Seja Lojista Oficial</span>
             <span className="block text-primary drop-shadow-lg">Ecko Unltd</span>
-            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-white/95">Parceiro Autorizado da Maior Marca de Streetwear do Brasil</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-white/95">Maior Marca de Streetwear do Brasil</span>
           </h1>
 
           {/* Subtitle/Call Text */}
-          <p className="text-base md:text-lg lg:text-xl text-white/95 mb-10 max-w-4xl leading-relaxed font-medium px-4 animate-fade-in">
-            Torne-se um <span className="text-primary font-semibold">distribuidor autorizado Ecko</span> e tenha acesso a <span className="text-primary font-semibold">coleções exclusivas de streetwear</span>, <span className="text-primary font-semibold">margens de lucro atrativas</span> e suporte completo da marca líder em moda urbana brasileira. Oportunidade única de negócio para lojistas e empreendedores.
+          <p className="text-base md:text-lg lg:text-xl text-white/95 mb-10 max-w-3xl leading-relaxed font-medium px-4 animate-fade-in">
+            Acesso a <span className="text-primary font-semibold">produtos exclusivos</span>, <span className="text-primary font-semibold">margens atrativas</span> e todo o prestígio da marca líder em streetwear.
           </p>
 
           {/* Call to Action Button */}
