@@ -103,24 +103,26 @@ export default function Index() {
 
           {/* Main Heading - H1 for SEO - Otimizado para mobile */}
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 max-w-6xl leading-[1.05] sm:leading-[1.1] tracking-tight animate-slide-up px-2">
-            <span className="block mb-1 sm:mb-2">Seja Lojista Oficial</span>
+            <span className="block mb-1 sm:mb-2">Seja um Lojista Oficial</span>
             <span className="block text-primary drop-shadow-lg">Ecko</span>
-            <span className="block text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-3 sm:mt-4 text-white/95">
-              Maior Marca de Streetwear do Brasil
-            </span>
           </h1>
 
+          {/* Subtítulo de Destaque */}
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 sm:mb-8 max-w-4xl leading-relaxed animate-slide-up px-2">
+            A maior marca de moda urbana do Brasil e reconhecida mundialmente agora na sua loja
+          </h2>
+
           {/* Subtitle/Call Text - Otimizado para mobile */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mb-8 sm:mb-10 max-w-3xl leading-relaxed font-medium px-4 sm:px-6 animate-fade-in">
-            Acesso a{" "}
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mb-8 sm:mb-10 max-w-4xl leading-relaxed font-medium px-4 sm:px-6 animate-fade-in">
+            Tenha acesso a{" "}
             <span className="text-primary font-semibold">
               produtos exclusivos
             </span>
             ,{" "}
             <span className="text-primary font-semibold">
-              margens atrativas
+              margens de lucro atrativas
             </span>{" "}
-            e todo o prestígio da marca líder em streetwear brasileiro.
+            e todo o prestígio de uma marca consolidada, com presença internacional e referência no mercado de moda. Amplie suas vendas e conquiste clientes que valorizam qualidade, estilo e autenticidade.
           </p>
 
           {/* Call to Action Button - Otimizado para mobile */}
@@ -128,7 +130,7 @@ export default function Index() {
             href="#cadastro-lojistas"
             className="inline-block bg-primary hover:bg-red-600 text-white px-8 sm:px-12 py-4 sm:py-6 rounded-xl text-base sm:text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide mx-4 sm:mx-0 w-auto max-w-xs sm:max-w-none text-center"
           >
-            Seja Parceiro Ecko Oficial
+            Cadastre-se Agora
           </a>
         </div>
       </header>
