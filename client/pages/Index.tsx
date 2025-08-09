@@ -117,8 +117,8 @@ export default function Index() {
                     <label className="text-sm font-medium text-gray-900">
                       Sua loja possui CNPJ? *
                     </label>
-                    <div className="space-y-2">
-                      <label className="flex items-center space-x-3 cursor-pointer">
+                    <div className="grid grid-cols-2 gap-3">
+                      <label className="flex items-center justify-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
                         <input
                           type="radio"
                           name="cnpj"
@@ -127,9 +127,9 @@ export default function Index() {
                           required
                           onChange={(e) => handleCnpjRadioChange(e.target.value)}
                         />
-                        <span className="text-gray-900">Sim</span>
+                        <span className="text-gray-900 font-medium">Sim</span>
                       </label>
-                      <label className="flex items-center space-x-3 cursor-pointer">
+                      <label className="flex items-center justify-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
                         <input
                           type="radio"
                           name="cnpj"
@@ -138,7 +138,7 @@ export default function Index() {
                           required
                           onChange={(e) => handleCnpjRadioChange(e.target.value)}
                         />
-                        <span className="text-gray-900">Não, sou consumidor</span>
+                        <span className="text-gray-900 font-medium">Não, sou consumidor</span>
                       </label>
                     </div>
                   </div>
