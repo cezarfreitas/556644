@@ -5,26 +5,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        VITE_api_form: https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads
+      - PORT=3000
     restart: unless-stopped
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "wget",
-          "--no-verbose",
-          "--tries=1",
-          "--spider",
-          "http://localhost:3000",
-        ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
 
   # Para desenvolvimento - descomente se necessário
   # ecko-landing-dev:
