@@ -53,15 +53,15 @@ export default function Index() {
             {/* Text/CTA Column */}
             <div className="space-y-10">
               <div className="space-y-8">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Cadastre-se Como Lojista Oficial
                   <span className="block text-primary">Ecko Agora</span>
                 </h2>
                 <div className="space-y-6">
-                  <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
                     Faça parte da rede de distribuidores oficiais da maior marca de streetwear e moda urbana do Brasil.
                   </p>
-                  <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                     Resposta comercial em até 24 horas. Processo 100% digital, sem taxas de adesão. Condições exclusivas para lojistas parceiros.
                   </p>
                 </div>
@@ -166,10 +166,10 @@ export default function Index() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Vantagens de Ser Lojista <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Ecko Oficial</span>
               </h2>
-              <p className="text-white/80 text-xl max-w-2xl mx-auto">
+              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
                 4 benefícios exclusivos que aumentam a lucratividade do seu negócio de moda urbana
               </p>
             </div>
@@ -235,13 +235,13 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Produtos Ecko
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Streetwear
                 </span>
               </h2>
-              <p className="text-white/80 text-xl max-w-2xl mx-auto">
+              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
                 Coleções exclusivas de streetwear e moda urbana brasileira com qualidade premium
               </p>
             </div>
@@ -346,13 +346,13 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Ecko Oficiais
                 </span>
               </h2>
-              <p className="text-white/80 text-xl max-w-2xl mx-auto">
+              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
                 Histórias reais de sucesso de parceiros que triplicaram o faturamento com a Ecko
               </p>
             </div>
@@ -464,14 +464,14 @@ export default function Index() {
               {/* Content */}
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                     História da Marca
                     <span className="block text-primary">Ecko</span>
                   </h2>
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
                     Há mais de duas décadas, a Ecko é líder absoluta em streetwear e moda urbana no Brasil. Nascida da cultura de rua, a marca revolucionou o mercado de moda jovem brasileira.
                   </p>
-                  <p className="text-base md:text-lg text-white/80 leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                     Com produtos autênticos que refletem a essência do street style brasileiro, a Ecko conquistou milhões de consumidores e se estabeleceu como a maior marca de streetwear do país. Nossos lojistas parceiros fazem parte dessa trajetória de sucesso.
                   </p>
                 </div>
