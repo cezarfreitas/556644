@@ -76,6 +76,11 @@ img[fetchpriority="high"] {
   transform: translateZ(0); /* Force GPU acceleration */
 }
 
+/* Gradiente radial personalizado para hero overlay */
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+}
+
 /* Form validation styles */
 .form-input-valid {
   @apply border-green-500 focus:ring-green-500;
