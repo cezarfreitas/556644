@@ -1405,9 +1405,9 @@ export default function Index() {
                                     </span>
                                   </div>
                                   <div>
-                                    <h4 className="font-bold text-gray-900">
+                                    <h3 className="font-bold text-gray-900">
                                       {testimonial.name}
-                                    </h4>
+                                    </h3>
                                     <p className="text-sm text-gray-900/70">
                                       {testimonial.store}
                                     </p>
@@ -1450,9 +1450,9 @@ export default function Index() {
                               </span>
                             </div>
                             <div>
-                              <h4 className="font-bold text-gray-900">
+                              <h3 className="font-bold text-gray-900">
                                 {testimonial.name}
-                              </h4>
+                              </h3>
                               <p className="text-sm text-gray-900/70">
                                 {testimonial.store}
                               </p>
@@ -1472,7 +1472,7 @@ export default function Index() {
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                      className={`w-12 h-12 rounded-full transition-colors duration-300 flex items-center justify-center ${
                         currentSlide === index
                           ? "bg-primary"
                           : "bg-gray-300 hover:bg-gray-400"
