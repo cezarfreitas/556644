@@ -406,7 +406,7 @@ export default function Index() {
     return null;
   };
 
-  // Funções de formatação
+  // Funções de formataç��o
   const formatWhatsApp = (value: string) => {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
@@ -700,7 +700,7 @@ export default function Index() {
         alert("Erro ao enviar formulário. Tente novamente.");
       }
     } catch (error) {
-      // Track erro de conex��o
+      // Track erro de conexão
       trackEvent("form_submission_error", {
         error_type: "network_error",
         error_message: error?.message || "Unknown error",
