@@ -198,23 +198,23 @@ export default function Index() {
               </div>
 
               {/* Reason 3 */}
-              <div className="bg-card border border-border rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdHeadset className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Suporte Completo</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">Suporte Completo</h3>
+                <p className="text-white/80 text-sm leading-relaxed">
                   Treinamento especializado da equipe, materiais de marketing exclusivos, suporte técnico dedicado e consultoria para maximizar suas vendas e crescimento.
                 </p>
               </div>
 
               {/* Reason 4 */}
-              <div className="bg-card border border-border rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+              <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdWorkspacePremium className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Prestígio da Marca</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">Prestígio da Marca</h3>
+                <p className="text-white/80 text-sm leading-relaxed">
                   Associe-se à marca líder em streetwear no Brasil. Credibilidade reconhecida nacionalmente que fortalece seu negócio e atrai mais clientes para sua loja.
                 </p>
               </div>
