@@ -750,11 +750,13 @@ export default function Index() {
           width="1920"
           height="1080"
         />
-        {/* Overlay Radial Total com Style Inline */}
+        {/* Overlay Radial Total - Debug Version */}
         <div
-          className="absolute inset-0"
+          className="absolute top-0 left-0 w-full h-full pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%)'
+            zIndex: 2,
+            background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%)',
+            content: '""'
           }}
         ></div>
 
