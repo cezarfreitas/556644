@@ -62,8 +62,19 @@
       fetchpriority="high"
     />
 
-    <!-- DNS Prefetch for external domains -->
+    <!-- Advanced DNS Prefetch and Preconnect -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//connect.facebook.net" />
+    <link rel="dns-prefetch" href="//graph.facebook.com" />
+
+    <!-- Module Preload for critical JavaScript -->
+    <link rel="modulepreload" href="/client/App.tsx" />
+
+    <!-- Prefetch non-critical images -->
+    <link rel="prefetch" href="/images/benefits/background.webp" as="image" />
+    <link rel="prefetch" href="/images/gallery/collection-1.webp" as="image" />
 
     <!-- Preconnect for critical external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
