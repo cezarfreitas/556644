@@ -404,6 +404,114 @@ export default function Index() {
     return null;
   };
 
+  // Funções de formatação
+  const formatWhatsApp = (value: string) => {
+    // Remove tudo que não é número
+    const numbers = value.replace(/\D/g, '');
+
+    // Aplica a máscara (XX) XXXXX-XXXX
+    if (numbers.length <= 2) {
+      return `(${numbers}`;
+    } else if (numbers.length <= 7) {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+    } else {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+    }
+  };
+
+  const formatCNPJ = (value: string) => {
+    // Remove tudo que não é número
+    const numbers = value.replace(/\D/g, '');
+
+    // Aplica a máscara XX.XXX.XXX/XXXX-XX
+    if (numbers.length <= 2) {
+      return numbers;
+    } else if (numbers.length <= 5) {
+      return `${numbers.slice(0, 2)}.${numbers.slice(2)}`;
+    } else if (numbers.length <= 8) {
+      return `${numbers.slice(0, 2)}.${numbers.slice(2, 5)}.${numbers.slice(5)}`;
+    } else if (numbers.length <= 12) {
+      return `${numbers.slice(0, 2)}.${numbers.slice(2, 5)}.${numbers.slice(5, 8)}/${numbers.slice(8)}`;
+    } else {
+      return `${numbers.slice(0, 2)}.${numbers.slice(2, 5)}.${numbers.slice(5, 8)}/${numbers.slice(8, 12)}-${numbers.slice(12, 14)}`;
+    }
+  };
+
+  // Funções de validação
+  const validateName = (name: string) => {
+    if (!name.trim()) return "Nome é obrigatório";
+    if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
+    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(name)) return "Nome deve conter apenas letras";
+    return "";
+  };
+
+  const validateWhatsApp = (phone: string) => {
+    const numbers = phone.replace(/\D/g, '');
+    if (!numbers) return "WhatsApp é obrigatório";
+    if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 dígitos";
+    if (numbers.length < 11 && !numbers.startsWith('11')) return "WhatsApp deve ter 11 dígitos para celular";
+    if (numbers.length > 11) return "WhatsApp não pode ter mais de 11 dígitos";
+    return "";
+  };
+
+  const validateCNPJ = (cnpj: string) => {
+    const numbers = cnpj.replace(/\D/g, '');
+    if (!numbers) return "CNPJ é obrigatório";
+    if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
+
+    // Validação de CNPJ
+    if (numbers === "00000000000000") return "CNPJ inválido";
+
+    // Algoritmo de validação de CNPJ
+    let sum = 0;
+    let weight = 2;
+
+    for (let i = 11; i >= 0; i--) {
+      sum += parseInt(numbers.charAt(i)) * weight;
+      weight = weight === 9 ? 2 : weight + 1;
+    }
+
+    const digit1 = sum % 11 < 2 ? 0 : 11 - (sum % 11);
+    if (parseInt(numbers.charAt(12)) !== digit1) return "CNPJ inválido";
+
+    sum = 0;
+    weight = 2;
+
+    for (let i = 12; i >= 0; i--) {
+      sum += parseInt(numbers.charAt(i)) * weight;
+      weight = weight === 9 ? 2 : weight + 1;
+    }
+
+    const digit2 = sum % 11 < 2 ? 0 : 11 - (sum % 11);
+    if (parseInt(numbers.charAt(13)) !== digit2) return "CNPJ inválido";
+
+    return "";
+  };
+
+  // Função para validar campo em tempo real
+  const validateField = (fieldName: string, value: string) => {
+    let error = "";
+
+    switch (fieldName) {
+      case "name":
+        error = validateName(value);
+        break;
+      case "whatsapp":
+        error = validateWhatsApp(value);
+        break;
+      case "cnpj":
+        error = validateCNPJ(value);
+        break;
+    }
+
+    setFormErrors(prev => ({
+      ...prev,
+      [fieldName]: error
+    }));
+
+    return error === "";
+  };
+
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
     setShowCnpjField(value === "sim");
