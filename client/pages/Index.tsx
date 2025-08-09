@@ -658,7 +658,7 @@ export default function Index() {
           has_cnpj: selectedCnpj === "sim",
         });
 
-        // Se for consumidor, abre WhatsApp ap��s enviar dados
+        // Se for consumidor, abre WhatsApp após enviar dados
         if (selectedCnpj === "nao-consumidor") {
           alert(
             "Dados enviados! Redirecionando para receber seu cupom de desconto.",
@@ -894,36 +894,48 @@ export default function Index() {
                     >
                       WhatsApp *
                     </label>
-                    <input
-                      id="whatsapp"
-                      name="whatsapp"
-                      type="tel"
-                      required
-                      className={`w-full px-4 py-4 sm:py-3 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
-                        formErrors.whatsapp
-                          ? 'border-red-500 focus:ring-red-500'
-                          : formValues.whatsapp && !formErrors.whatsapp
-                            ? 'border-green-500 focus:ring-green-500'
-                            : 'border-input focus:ring-primary'
-                      }`}
-                      placeholder="(11) 99999-9999"
-                      maxLength={15}
-                      onChange={handleWhatsAppChange}
-                      onFocus={() =>
-                        trackEvent("form_field_focus", {
-                          field: "whatsapp",
-                          step: 2,
-                        })
-                      }
-                      onBlur={(e) => {
-                        validateField("whatsapp", e.target.value);
-                        e.target.value &&
-                        trackEvent("form_field_complete", {
-                          field: "whatsapp",
-                          step: 2,
-                        });
-                      }}
-                    />
+                    <div className="relative">
+                      <input
+                        id="whatsapp"
+                        name="whatsapp"
+                        type="tel"
+                        required
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                          formErrors.whatsapp
+                            ? 'border-red-500 focus:ring-red-500'
+                            : formValues.whatsapp && !formErrors.whatsapp
+                              ? 'border-green-500 focus:ring-green-500'
+                              : 'border-input focus:ring-primary'
+                        }`}
+                        placeholder="(11) 99999-9999"
+                        maxLength={15}
+                        onChange={handleWhatsAppChange}
+                        onFocus={() =>
+                          trackEvent("form_field_focus", {
+                            field: "whatsapp",
+                            step: 2,
+                          })
+                        }
+                        onBlur={(e) => {
+                          validateField("whatsapp", e.target.value);
+                          e.target.value &&
+                          trackEvent("form_field_complete", {
+                            field: "whatsapp",
+                            step: 2,
+                          });
+                        }}
+                      />
+                      {/* Ícone de validação */}
+                      {formValues.whatsapp && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          {formErrors.whatsapp ? (
+                            <FaExclamationTriangle className="w-5 h-5 text-red-500" />
+                          ) : (
+                            <FaCheck className="w-5 h-5 text-green-500" />
+                          )}
+                        </div>
+                      )}
+                    </div>
                     {formErrors.whatsapp && (
                       <p className="text-red-500 text-sm mt-1">{formErrors.whatsapp}</p>
                     )}
