@@ -697,10 +697,10 @@ export default function Index() {
           },
         });
 
-        alert("Erro ao enviar formul��rio. Tente novamente.");
+        alert("Erro ao enviar formulário. Tente novamente.");
       }
     } catch (error) {
-      // Track erro de conex���o
+      // Track erro de conex��o
       trackEvent("form_submission_error", {
         error_type: "network_error",
         error_message: error?.message || "Unknown error",
