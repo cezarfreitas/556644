@@ -7,7 +7,9 @@ const app = createServer();
 const port = process.env.PORT || 3000;
 
 // In production, serve the built SPA files
-const __dirname = import.meta.dirname;
+// Fix for Node.js 18 compatibility
+const __filename = new URL(import.meta.url).pathname;
+const __dirname = path.dirname(__filename);
 const distPath = path.join(__dirname, "../spa");
 
 // Serve static files
