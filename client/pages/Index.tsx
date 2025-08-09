@@ -169,9 +169,16 @@ export default function Index() {
           {/* Logo */}
           <div className="mb-12 animate-fade-in">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=200"
+              srcSet="
+                https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=100 100w,
+                https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=200 200w
+              "
+              sizes="(max-width: 768px) 80px, (max-width: 1024px) 96px, 112px"
               alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
               className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
+              loading="eager"
+              fetchpriority="high"
             />
           </div>
 
