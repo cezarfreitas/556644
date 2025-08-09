@@ -13,6 +13,8 @@ import {
   FaChevronDown,
   FaChevronLeft,
   FaChevronRight,
+  FaCheck,
+  FaExclamationTriangle,
 } from "react-icons/fa";
 
 export default function Index() {
