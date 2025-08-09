@@ -75,7 +75,7 @@ export default function Index() {
                   <h3 className="text-2xl md:text-3xl font-bold text-white">
                     Solicite Sua Proposta Comercial
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-white/70">
                     Preencha o formulário e receba condições exclusivas para lojistas Ecko
                   </p>
                 </div>
@@ -89,7 +89,7 @@ export default function Index() {
                       id="name"
                       type="text"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-white/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -102,7 +102,7 @@ export default function Index() {
                       id="whatsapp"
                       type="tel"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-white/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
@@ -142,7 +142,7 @@ export default function Index() {
                     Receber Proposta Comercial
                   </button>
 
-                  <p className="text-xs text-muted-foreground text-center">
+                  <p className="text-xs text-white/70 text-center">
                     Ao enviar, você concorda em receber contato comercial da Ecko.
                     Seus dados estão seguros conosco.
                   </p>
@@ -394,7 +394,7 @@ export default function Index() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white">Amanda Costa</h4>
-                      <p className="text-sm text-muted-foreground">Urban Fashion - Rio de Janeiro, RJ</p>
+                      <p className="text-sm text-white/70">Urban Fashion - Rio de Janeiro, RJ</p>
                     </div>
                   </div>
                 </div>
@@ -415,7 +415,7 @@ export default function Index() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white">Rafael Oliveira</h4>
-                      <p className="text-sm text-muted-foreground">Streetwear BH - Belo Horizonte, MG</p>
+                      <p className="text-sm text-white/70">Streetwear BH - Belo Horizonte, MG</p>
                     </div>
                   </div>
                 </div>
@@ -436,7 +436,7 @@ export default function Index() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white">Carla Santos</h4>
-                      <p className="text-sm text-muted-foreground">Fashion Hub - Curitiba, PR</p>
+                      <p className="text-sm text-white/70">Fashion Hub - Curitiba, PR</p>
                     </div>
                   </div>
                 </div>
