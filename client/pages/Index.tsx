@@ -102,9 +102,11 @@ export default function Index() {
           </div>
 
           {/* Main Heading - H1 for SEO - Otimizado para mobile */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-4 sm:mb-6 max-w-6xl leading-tight tracking-tight animate-slide-up px-2 uppercase">
-            <span className="block mb-1 sm:mb-2 drop-shadow-2xl">SEJA UM LOJISTA OFICIAL</span>
-            <span className="block text-primary drop-shadow-2xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">ECKO</span>
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-4 sm:mb-6 max-w-6xl leading-tight tracking-tight animate-slide-up px-2 uppercase">
+            <span className="block mb-1 sm:mb-2 drop-shadow-2xl">SEJA UM LOJISTA</span>
+            <span className="block drop-shadow-2xl">
+              OFICIAL <span className="text-primary">ECKO</span>
+            </span>
           </h1>
 
           {/* Subtítulo de Destaque */}
