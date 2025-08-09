@@ -820,7 +820,7 @@ export default function Index() {
               <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in">
                 Role para baixo
               </span>
-              <FaChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-scroll-bounce" />
+              <FaChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-scroll-bounce animate-pulse" />
             </div>
           </div>
         </div>
