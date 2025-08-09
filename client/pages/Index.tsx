@@ -5,7 +5,13 @@ import {
   MdHeadset,
   MdWorkspacePremium,
 } from "react-icons/md";
-import { FaFacebook, FaInstagram, FaStore, FaArrowRight, FaChevronDown } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaStore,
+  FaArrowRight,
+  FaChevronDown,
+} from "react-icons/fa";
 
 export default function Index() {
   const [showCnpjField, setShowCnpjField] = useState(false);
@@ -103,7 +109,9 @@ export default function Index() {
 
           {/* Main Heading - H1 for SEO - Otimizado para mobile */}
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-4 sm:mb-6 max-w-6xl leading-tight tracking-tight animate-slide-up px-2 uppercase">
-            <span className="block mb-1 sm:mb-2 drop-shadow-2xl">SEJA UM LOJISTA</span>
+            <span className="block mb-1 sm:mb-2 drop-shadow-2xl">
+              SEJA UM LOJISTA
+            </span>
             <span className="block drop-shadow-2xl">
               OFICIAL <span className="text-primary">ECKO</span>
             </span>
@@ -111,9 +119,9 @@ export default function Index() {
 
           {/* Subtítulo de Destaque */}
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white/95 mb-8 sm:mb-10 max-w-4xl leading-tight animate-slide-up px-2">
-            A maior marca de moda urbana do Brasil e reconhecida mundialmente agora na sua loja
+            A maior marca de moda urbana do Brasil e reconhecida mundialmente
+            agora na sua loja
           </h2>
-
 
           {/* Call to Action Button - Otimizado para mobile */}
           <a
@@ -126,8 +134,17 @@ export default function Index() {
 
           {/* Indicador para rolar para baixo */}
           <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2">
-            <div className="flex flex-col items-center text-white/90 cursor-pointer hover:text-white transition-colors duration-300" onClick={() => document.getElementById('cadastro-lojistas')?.scrollIntoView({ behavior: 'smooth' })}>
-              <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in">Role para baixo</span>
+            <div
+              className="flex flex-col items-center text-white/90 cursor-pointer hover:text-white transition-colors duration-300"
+              onClick={() =>
+                document
+                  .getElementById("cadastro-lojistas")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in">
+                Role para baixo
+              </span>
               <FaChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-scroll-bounce" />
             </div>
           </div>

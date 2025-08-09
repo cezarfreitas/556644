@@ -179,7 +179,8 @@
 
   /* Animação da seta do botão CTA */
   @keyframes arrow-pulse {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateX(0px);
     }
     50% {
@@ -193,7 +194,8 @@
 
   /* Animação do indicador de scroll */
   @keyframes scroll-bounce {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
       opacity: 0.8;
     }
