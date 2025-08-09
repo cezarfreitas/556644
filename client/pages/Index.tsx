@@ -342,14 +342,14 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Reason 1 */}
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
-                <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <MdStar className="w-16 h-16 text-primary mx-auto" />
+              <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105">
+                <div className="mb-4 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <MdStar className="w-12 sm:w-16 h-12 sm:h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
                   Produtos Exclusivos
                 </h3>
-                <p className="text-gray-900/80 text-sm leading-relaxed">
+                <p className="text-gray-900/80 text-xs sm:text-sm leading-relaxed">
                   Acesso prioritário às coleções limitadas, lançamentos
                   exclusivos e produtos especiais que apenas lojistas oficiais
                   têm direito. Seja o primeiro a oferecer as novidades para seus
@@ -580,7 +580,7 @@ export default function Index() {
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "O suporte da equipe Ecko é incrível. Eles nos ajudam com
-                    materiais de marketing e sempre estão disponíveis para
+                    materiais de marketing e sempre estão dispon��veis para
                     dúvidas. Recomendo para qualquer lojista sério."
                   </blockquote>
                   <div className="flex items-center space-x-4">
