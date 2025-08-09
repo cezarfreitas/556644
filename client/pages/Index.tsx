@@ -462,7 +462,7 @@ export default function Index() {
     if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
-    // Validação de CNPJ
+    // Validaç��o de CNPJ
     if (numbers === "00000000000000") return "CNPJ inválido";
 
     // Algoritmo de validação de CNPJ
@@ -1175,7 +1175,7 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <button className="bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-gray-900 px-12 py-4 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+              <button className="bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-white sm:text-gray-900 px-12 py-4 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
                 Quero Ser Parceiro Agora
               </button>
             </div>
