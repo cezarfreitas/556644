@@ -172,7 +172,7 @@ export default function Index() {
                           required
                           onChange={(e) => handleCnpjRadioChange(e.target.value)}
                         />
-                        <span className="font-medium">Sim</span>
+                        <span className="font-medium">Sim, tenho CNPJ</span>
                       </label>
                       <label className={`flex items-center justify-center cursor-pointer border-2 rounded-lg px-4 py-3 transition-all ${
                         selectedCnpj === "nao-consumidor"
