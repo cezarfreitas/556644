@@ -63,8 +63,8 @@ export default function Index() {
             <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-20 overflow-x-auto pb-4">
               {/* Reason 1 */}
               <div className="text-center group min-w-[200px] flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <FiStar className="w-10 h-10 text-white" />
+                <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <MdStar className="w-16 h-16 text-primary mx-auto" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Produtos Exclusivos</h3>
                 <p className="text-muted-foreground text-sm">
@@ -74,8 +74,8 @@ export default function Index() {
 
               {/* Reason 2 */}
               <div className="text-center group min-w-[200px] flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <FiDollarSign className="w-10 h-10 text-white" />
+                <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <MdAttachMoney className="w-16 h-16 text-primary mx-auto" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Margens Atrativas</h3>
                 <p className="text-muted-foreground text-sm">
@@ -85,8 +85,8 @@ export default function Index() {
 
               {/* Reason 3 */}
               <div className="text-center group min-w-[200px] flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <FiHeadphones className="w-10 h-10 text-white" />
+                <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <MdHeadset className="w-16 h-16 text-primary mx-auto" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Suporte Completo</h3>
                 <p className="text-muted-foreground text-sm">
@@ -96,8 +96,8 @@ export default function Index() {
 
               {/* Reason 4 */}
               <div className="text-center group min-w-[200px] flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <FiAward className="w-10 h-10 text-white" />
+                <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <MdWorkspacePremium className="w-16 h-16 text-primary mx-auto" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Prestígio da Marca</h3>
                 <p className="text-muted-foreground text-sm">
