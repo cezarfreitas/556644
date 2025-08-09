@@ -294,7 +294,7 @@ export default function Index() {
 
                   <button
                     type="submit"
-                    className="w-full bg-primary hover:bg-red-600 text-white py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
+                    className="w-full bg-primary hover:bg-red-600 text-white py-4 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-colors duration-300 mt-6 min-h-[48px]"
                   >
                     {showCouponMessage
                       ? "Receber Cupom de 10% Desconto"
