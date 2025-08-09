@@ -1552,7 +1552,7 @@ export default function Index() {
                     Com produtos autênticos que refletem a essência do street
                     style brasileiro, a Ecko conquistou milhões de consumidores
                     e se estabeleceu como a maior marca de streetwear do país.
-                    Nossos lojistas parceiros fazem parte dessa trajet��ria de
+                    Nossos lojistas parceiros fazem parte dessa trajetória de
                     sucesso.
                   </p>
                 </div>
