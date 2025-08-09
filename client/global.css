@@ -102,4 +102,20 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+
+  /* Professional section separators */
+  section:not(:last-child) {
+    position: relative;
+  }
+
+  section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(156, 163, 175, 0.3), transparent);
+    transform: translateX(-50%);
+  }
 }
