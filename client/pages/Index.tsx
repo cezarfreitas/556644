@@ -570,6 +570,35 @@ export default function Index() {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
+
+    // Validar todos os campos antes de enviar
+    const nameValue = formData.get("name") as string;
+    const whatsappValue = formData.get("whatsapp") as string;
+    const cnpjValue = formData.get("cnpj-number") as string;
+
+    const nameError = validateName(nameValue);
+    const whatsappError = validateWhatsApp(whatsappValue);
+    const cnpjError = showCnpjField ? validateCNPJ(cnpjValue) : "";
+
+    // Atualizar erros
+    setFormErrors({
+      name: nameError,
+      whatsapp: whatsappError,
+      cnpj: cnpjError
+    });
+
+    // Se houver erros, não enviar
+    if (nameError || whatsappError || cnpjError) {
+      trackEvent("form_validation_error", {
+        errors: {
+          name: !!nameError,
+          whatsapp: !!whatsappError,
+          cnpj: !!cnpjError
+        }
+      });
+      return;
+    }
+
     const analyticsData = getAnalyticsData();
 
     const payload = {
