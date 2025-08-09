@@ -183,11 +183,10 @@ export default function Index() {
               <div className="space-y-6">
                 <div className="text-center space-y-2">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
-                    Solicite Sua Proposta Comercial
+                    Solicite Seu Atendimento
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600">
-                    Preencha o formulário e receba condições exclusivas para
-                    lojistas Ecko
+                    Preencha o formulário e um analista da Ecko entrará em contato para apresentar nosso catálogo digital exclusivo com preços e condições especiais para lojistas oficiais.
                   </p>
                 </div>
 
@@ -246,7 +245,7 @@ export default function Index() {
                           }
                         />
                         <span className="text-sm sm:text-base text-gray-900">
-                          Sim, sou lojista com CNPJ
+                          ✅ Sim, sou lojista com CNPJ
                         </span>
                       </label>
                       <label className="flex items-center gap-2 cursor-pointer">
@@ -261,7 +260,7 @@ export default function Index() {
                           }
                         />
                         <span className="text-sm sm:text-base text-gray-900">
-                          Não, sou consumidor
+                          ❌ Não, sou consumidor
                         </span>
                       </label>
                     </div>
@@ -311,12 +310,11 @@ export default function Index() {
                   >
                     {showCouponMessage
                       ? "Receber Cupom de 10% Desconto"
-                      : "Receber Proposta Comercial"}
+                      : "CADASTRE-SE AGORA"}
                   </button>
 
                   <p className="text-xs text-gray-900/70 text-center">
-                    Ao enviar, você concorda em receber contato comercial da
-                    Ecko. Seus dados estão seguros conosco.
+                    Ao enviar, você concorda em receber informações comerciais da Ecko. Seus dados estão seguros conosco.
                   </p>
                 </form>
               </div>
