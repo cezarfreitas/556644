@@ -666,25 +666,25 @@ export default function Index() {
         </div>
       </section>
 
-      {/* História da Marca Ecko - Líder em Streetwear */}
-      <section className="py-20 md:py-32 bg-white" id="sobre-ecko">
+      {/* História da Marca Ecko - Líder em Streetwear - Otimizado para mobile */}
+      <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
               {/* Content */}
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+              <div className="space-y-6 sm:space-y-8">
+                <div className="space-y-4 sm:space-y-6">
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                     História da Marca
                     <span className="block text-primary">Ecko</span>
                   </h2>
-                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
                     Há mais de duas décadas, a Ecko é líder absoluta em
                     streetwear e moda urbana no Brasil. Nascida da cultura de
                     rua, a marca revolucionou o mercado de moda jovem
                     brasileira.
                   </p>
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com produtos autênticos que refletem a essência do street
                     style brasileiro, a Ecko conquistou milhões de consumidores
                     e se estabeleceu como a maior marca de streetwear do país.
@@ -692,7 +692,7 @@ export default function Index() {
                     sucesso.
                   </p>
                 </div>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       20+
