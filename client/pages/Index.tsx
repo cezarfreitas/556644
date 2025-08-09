@@ -228,6 +228,117 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Photo Gallery Section */}
+      <section className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
+                Galeria de
+                <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                  Fotos
+                </span>
+              </h2>
+              <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
+                Conheça o estilo e qualidade dos produtos Ecko
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Photo 1 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F6577c7f909a3482fa2cc99ca61e47c4a?format=webp&width=800"
+                  alt="Coleção Ecko Streetwear"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+
+              {/* Photo 2 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fbe84a66a323540cea5c55c8df2ad8c0d?format=webp&width=800"
+                  alt="Estilo Urbano Ecko"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+
+              {/* Photo 3 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F091edb31ccad491c905e05fbe6529ab1?format=webp&width=800"
+                  alt="Moda Urbana Ecko"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+
+              {/* Photo 4 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F69e215b8632349e598a5da5645fa733f?format=webp&width=800"
+                  alt="Streetwear Premium Ecko"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+
+              {/* Photo 5 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F2a63b4e4f9f541b7a0de23a2e4bc90b8?format=webp&width=800"
+                  alt="Lifestyle Ecko"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+
+              {/* Photo 6 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fb7e252c481ba4795bb62418a495e2670?format=webp&width=800"
+                  alt="Produtos Exclusivos Ecko"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+
+              {/* Photo 7 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F3f050f338bf04bd9872cb5d5499ebce5?format=webp&width=800"
+                  alt="Coleção Completa Ecko"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+
+              {/* Photo 8 */}
+              <div className="group relative overflow-hidden rounded-xl bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fc5057fe1f9e54153b64262cb22bd8dc4?format=webp&width=800"
+                  alt="Qualidade Premium Ecko"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <p className="text-lg text-muted-foreground mb-6">
+                Veja a qualidade e estilo que seus clientes vão amar
+              </p>
+              <button className="bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+                Quero Revender Ecko
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
