@@ -5,7 +5,7 @@ import {
   MdHeadset,
   MdWorkspacePremium,
 } from "react-icons/md";
-import { FaFacebook, FaInstagram, FaStore } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaStore, FaArrowRight } from "react-icons/fa";
 
 export default function Index() {
   const [showCnpjField, setShowCnpjField] = useState(false);
@@ -607,7 +607,7 @@ export default function Index() {
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-1 text-primary">
-                    <span className="text-2xl">★★★��★</span>
+                    <span className="text-2xl">★★★★★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A
