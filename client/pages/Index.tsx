@@ -117,8 +117,8 @@ export default function Index() {
                     <label className="text-sm font-medium text-gray-900">
                       Sua loja possui CNPJ? *
                     </label>
-                    <div className="grid grid-cols-2 gap-3">
-                      <label className="flex items-center justify-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
+                    <div className="grid grid-cols-2 gap-2">
+                      <label className="flex items-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
                         <input
                           type="radio"
                           name="cnpj"
@@ -129,7 +129,7 @@ export default function Index() {
                         />
                         <span className="text-gray-900 font-medium">Sim</span>
                       </label>
-                      <label className="flex items-center justify-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
+                      <label className="flex items-center space-x-2 cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg p-3 transition-colors">
                         <input
                           type="radio"
                           name="cnpj"
@@ -407,7 +407,7 @@ export default function Index() {
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-1 text-primary">
-                    <span className="text-2xl">★★★★★</span>
+                    <span className="text-2xl">★★��★★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério."
