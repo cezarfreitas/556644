@@ -234,8 +234,8 @@ export default function Index() {
                     <label className="text-sm font-medium text-gray-900">
                       Sua loja possui CNPJ? *
                     </label>
-                    <div className="space-y-2">
-                      <label className="flex items-center gap-3 cursor-pointer">
+                    <div className="flex gap-4 sm:gap-6">
+                      <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="radio"
                           name="cnpj"
@@ -250,7 +250,7 @@ export default function Index() {
                           Sim, sou lojista com CNPJ
                         </span>
                       </label>
-                      <label className="flex items-center gap-3 cursor-pointer">
+                      <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="radio"
                           name="cnpj"
