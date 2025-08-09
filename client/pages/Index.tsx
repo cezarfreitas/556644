@@ -90,7 +90,7 @@ export default function Index() {
         </div>
       </header>
 
-      {/* Cadastro de Lojistas - Formulário de Parceria */}
+      {/* Cadastro de Lojistas - Formul��rio de Parceria */}
       <section className="py-20 md:py-32 bg-white" id="cadastro-lojistas">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
@@ -125,13 +125,14 @@ export default function Index() {
                   </p>
                 </div>
 
-                <form className="space-y-5">
+                <form className="space-y-5" onSubmit={handleFormSubmit}>
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-gray-900">
                       Nome *
                     </label>
                     <input
                       id="name"
+                      name="name"
                       type="text"
                       required
                       className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
@@ -145,6 +146,7 @@ export default function Index() {
                     </label>
                     <input
                       id="whatsapp"
+                      name="whatsapp"
                       type="tel"
                       required
                       className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
