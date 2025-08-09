@@ -29,8 +29,8 @@ logs
 .eslintrc.*
 .prettierrc.*
 jest.config.*
-tsconfig.json
-# Keep vite.config.server.ts for server build
+# Keep vite configs needed for build
+# vite.config.ts
 # vite.config.server.ts
 
 # Docker files
