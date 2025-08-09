@@ -177,6 +177,20 @@
     padding-right: 1rem;
   }
 
+  /* Animação da seta do botão CTA */
+  @keyframes arrow-pulse {
+    0%, 100% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(4px);
+    }
+  }
+
+  .group:hover .group-hover\:translate-x-1 {
+    animation: arrow-pulse 1s ease-in-out infinite;
+  }
+
   /* Optimize benefit cards for mobile */
   @media (max-width: 640px) {
     .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div {
