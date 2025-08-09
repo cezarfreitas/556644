@@ -175,6 +175,23 @@ export default function Index() {
     setCurrentSlide(index);
   };
 
+  // Função para trackear eventos específicos
+  const trackEvent = (eventName: string, eventData: any = {}) => {
+    const fullEventData = {
+      event: eventName,
+      timestamp: new Date().toISOString(),
+      session_id: sessionStorage.getItem('session_id'),
+      page: window.location.pathname,
+      ...eventData
+    };
+
+    console.log(`Event tracked: ${eventName}`, fullEventData);
+
+    // Aqui você pode enviar para suas ferramentas de analytics
+    // gtag('event', eventName, fullEventData);
+    // fbq('track', eventName, fullEventData);
+  };
+
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
     setShowCnpjField(value === "sim");
