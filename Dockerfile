@@ -8,13 +8,10 @@ RUN apk add --no-cache wget
 WORKDIR /app
 
 # Copy package files
-COPY package.json ./
-
-# Create package-lock.json clean
-RUN npm install --package-lock-only
+COPY package.json package-lock.json* ./
 
 # Install all dependencies first
-RUN npm ci --legacy-peer-deps
+RUN npm ci --legacy-peer-deps --no-audit --no-fund
 
 # Copy source code
 COPY . .
