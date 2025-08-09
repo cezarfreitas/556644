@@ -430,7 +430,7 @@ export default function Index() {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
 
-    // Aplica a máscara (XX) XXXXX-XXXX
+    // Aplica a m��scara (XX) XXXXX-XXXX
     if (numbers.length <= 2) {
       return `(${numbers}`;
     } else if (numbers.length <= 7) {
@@ -817,7 +817,7 @@ export default function Index() {
                 });
               }}
             >
-              <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in">
+              <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in animate-pulse">
                 Role para baixo
               </span>
               <FaChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-scroll-bounce animate-pulse" />
