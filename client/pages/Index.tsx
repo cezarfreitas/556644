@@ -1244,6 +1244,9 @@ export default function Index() {
                   alt="Coleção Ecko Streetwear"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
+                  decoding="async"
+                  width="300"
+                  height="256"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
               </div>
