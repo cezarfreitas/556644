@@ -10,15 +10,46 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-display: swap; /* Para melhor carregamento de fonts */
 }
 
 /* Image optimization */
 img {
   content-visibility: auto;
+  loading: lazy;
+  decoding: async;
 }
 
 /* Layout optimization for critical elements */
 .hero-section {
+  contain-intrinsic-size: 100vh;
+  contain: layout style paint;
+}
+
+/* Otimizações para evitar layout shifts */
+.container {
+  contain: layout;
+}
+
+/* Reduzir reflow em animações */
+.animate-fade-in,
+.animate-slide-up,
+.animate-scroll-bounce {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Otimizar transições */
+.transition-all,
+.transition-transform,
+.transition-colors {
+  will-change: transform;
+}
+
+/* Melhorar performance de imagens críticas */
+.hero-bg {
+  content-visibility: auto;
   contain-intrinsic-size: 100vh;
 }
 
