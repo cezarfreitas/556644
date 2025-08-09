@@ -110,7 +110,7 @@ export default function Index() {
           </h1>
 
           {/* Subtítulo de Destaque */}
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white/95 mb-4 sm:mb-6 max-w-4xl leading-tight animate-slide-up px-2">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white/95 mb-8 sm:mb-10 max-w-4xl leading-tight animate-slide-up px-2">
             A maior marca de moda urbana do Brasil e reconhecida mundialmente agora na sua loja
           </h2>
 
@@ -607,7 +607,7 @@ export default function Index() {
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-1 text-primary">
-                    <span className="text-2xl">★★★★★</span>
+                    <span className="text-2xl">★★★��★</span>
                   </div>
                   <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                     "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A
