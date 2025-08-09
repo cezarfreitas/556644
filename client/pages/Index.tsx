@@ -62,46 +62,46 @@ export default function Index() {
 
             <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-20 overflow-x-auto pb-4">
               {/* Reason 1 */}
-              <div className="text-center group min-w-[200px] flex-shrink-0">
+              <div className="text-center group min-w-[280px] flex-shrink-0">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdStar className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Produtos Exclusivos</h3>
-                <p className="text-muted-foreground text-sm">
-                  Coleções limitadas exclusivas
+                <h3 className="text-xl font-bold text-foreground mb-3">Produtos Exclusivos</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Acesso prioritário às coleções limitadas, lançamentos exclusivos e produtos especiais que apenas lojistas oficiais têm direito. Seja o primeiro a oferecer as novidades para seus clientes.
                 </p>
               </div>
 
               {/* Reason 2 */}
-              <div className="text-center group min-w-[200px] flex-shrink-0">
+              <div className="text-center group min-w-[280px] flex-shrink-0">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdAttachMoney className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Margens Atrativas</h3>
-                <p className="text-muted-foreground text-sm">
-                  Condições comerciais privilegiadas
+                <h3 className="text-xl font-bold text-foreground mb-3">Margens Atrativas</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Condições comerciais privilegiadas com margens competitivas e flexibilidade de pagamento. Maximizamos sua lucratividade com preços especiais para parceiros oficiais.
                 </p>
               </div>
 
               {/* Reason 3 */}
-              <div className="text-center group min-w-[200px] flex-shrink-0">
+              <div className="text-center group min-w-[280px] flex-shrink-0">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdHeadset className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Suporte Completo</h3>
-                <p className="text-muted-foreground text-sm">
-                  Treinamento e materiais de marketing
+                <h3 className="text-xl font-bold text-foreground mb-3">Suporte Completo</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Treinamento especializado da equipe, materiais de marketing exclusivos, suporte técnico dedicado e consultoria para maximizar suas vendas e crescimento.
                 </p>
               </div>
 
               {/* Reason 4 */}
-              <div className="text-center group min-w-[200px] flex-shrink-0">
+              <div className="text-center group min-w-[280px] flex-shrink-0">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdWorkspacePremium className="w-16 h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Prestígio da Marca</h3>
-                <p className="text-muted-foreground text-sm">
-                  Credibilidade reconhecida no mercado
+                <h3 className="text-xl font-bold text-foreground mb-3">Prestígio da Marca</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Associe-se à marca líder em streetwear no Brasil. Credibilidade reconhecida nacionalmente que fortalece seu negócio e atrai mais clientes para sua loja.
                 </p>
               </div>
             </div>
