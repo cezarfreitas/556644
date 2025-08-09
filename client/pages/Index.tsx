@@ -303,7 +303,7 @@ export default function Index() {
           }
         });
 
-        alert("Erro ao enviar formulário. Tente novamente.");
+        alert("Erro ao enviar formul��rio. Tente novamente.");
       }
     } catch (error) {
       // Track erro de conexão
@@ -332,7 +332,7 @@ export default function Index() {
           alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
         />
         {/* Enhanced Overlay with Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
@@ -347,7 +347,7 @@ export default function Index() {
               alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
               className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
               loading="eager"
-              fetchpriority="high"
+              fetchPriority="high"
             />
           </div>
 
