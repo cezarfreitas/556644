@@ -3,6 +3,7 @@
 ## Configuração Recomendada
 
 ### 1. Dockerfile
+
 Use o arquivo `Dockerfile.easyfile` para o deploy:
 
 ```bash
@@ -11,6 +12,7 @@ Dockerfile: Dockerfile.easyfile
 ```
 
 ### 2. Variáveis de Ambiente
+
 Configure essas variáveis na EasyFile:
 
 ```env
@@ -20,11 +22,14 @@ VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034
 ```
 
 ### 3. Porta de Exposição
+
 - **Porta interna do container:** 3000
 - **Porta externa:** Configure conforme sua preferência na EasyFile
 
 ### 4. Health Check
+
 O container inclui health check automático:
+
 - Verifica se a aplicação responde na porta 3000
 - Intervalo: 30 segundos
 - Timeout: 10 segundos
@@ -34,18 +39,24 @@ O container inclui health check automático:
 ### 5. Problemas Comuns e Soluções
 
 #### Erro de Build
+
 Se o build falhar:
+
 1. Verifique se a EasyFile tem memória suficiente (recomendado: min 1GB)
 2. Use `Dockerfile.safe` se houver problemas com dependências
 
 #### Erro de Runtime
+
 Se o container não iniciar:
+
 1. Verifique as variáveis de ambiente
 2. Certifique-se de que a porta 3000 está sendo exposta
 3. Verifique os logs do container na EasyFile
 
 #### Alternativas de Dockerfile
+
 Se `Dockerfile.easyfile` não funcionar, tente na ordem:
+
 1. `Dockerfile.safe` (mais conservador)
 2. `Dockerfile.simple` (mais básico)
 3. `Dockerfile` (padrão)
@@ -64,12 +75,15 @@ curl http://localhost:3000
 ```
 
 ### 7. Arquivos Importantes
+
 - `dist/server/node-build.mjs`: Servidor principal
 - `dist/spa/`: Arquivos estáticos do frontend
 - `package.json`: Dependências e scripts
 
 ### 8. Logs para Debug
+
 Se houver problemas, verifique:
+
 - Logs de build na EasyFile
 - Logs de runtime do container
 - Health check status
