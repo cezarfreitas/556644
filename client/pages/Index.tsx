@@ -1,3 +1,5 @@
+import { Star, DollarSign, HeadphonesIcon, Award, TrendingUp } from "lucide-react";
+
 export default function Index() {
   return (
     <div className="min-h-screen bg-background">
