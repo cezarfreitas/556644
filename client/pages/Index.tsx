@@ -646,28 +646,27 @@ export default function Index() {
                 </button>
               </div>
 
-              {/* Slider Content */}
-              <div className="overflow-hidden">
+              {/* Desktop Slider Content - 2 columns */}
+              <div className="hidden md:block overflow-hidden">
                 <div
                   className="flex transition-transform duration-500 ease-in-out"
                   style={{
                     transform: `translateX(-${currentSlide * 100}%)`
                   }}
                 >
-                  {/* Desktop: 2 slides, Mobile: 1 slide */}
                   {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, slideIndex) => (
                     <div key={slideIndex} className="w-full flex-shrink-0">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+                      <div className="grid grid-cols-2 gap-8">
                         {testimonials.slice(slideIndex * 2, slideIndex * 2 + 2).map((testimonial) => (
                           <div
                             key={testimonial.id}
-                            className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                            className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                           >
                             <div className="space-y-6">
                               <div className="flex items-center space-x-1 text-primary">
                                 <span className="text-2xl">★★★★★</span>
                               </div>
-                              <blockquote className="text-base sm:text-lg text-gray-900 leading-relaxed italic">
+                              <blockquote className="text-lg text-gray-900 leading-relaxed italic">
                                 "{testimonial.text}"
                               </blockquote>
                               <div className="flex items-center space-x-4">
@@ -694,7 +693,7 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Mobile Slider for single testimonials */}
+              {/* Mobile Slider Content - 1 column */}
               <div className="md:hidden overflow-hidden">
                 <div
                   className="flex transition-transform duration-500 ease-in-out"
@@ -703,7 +702,7 @@ export default function Index() {
                   }}
                 >
                   {testimonials.map((testimonial) => (
-                    <div key={testimonial.id} className="w-full flex-shrink-0 px-2">
+                    <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
