@@ -445,11 +445,11 @@ export default function Index() {
             {/* Call to Action */}
             <div className="text-center mt-16">
               <p className="text-lg text-muted-foreground mb-6">
-                Junte-se a centenas de lojistas de sucesso
+                Junte-se a mais de 500 lojistas parceiros de sucesso
               </p>
-              <button className="bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
-                Quero Ser o Próximo Parceiro
-              </button>
+              <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
+                Quero Ser o Próximo Parceiro de Sucesso
+              </a>
             </div>
           </div>
         </div>
