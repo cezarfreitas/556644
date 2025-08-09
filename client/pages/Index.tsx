@@ -56,63 +56,52 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
-                5 vantagens que fazem a diferença no seu negócio
+                4 vantagens que fazem a diferença no seu negócio
               </p>
             </div>
 
-            <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-16 overflow-x-auto pb-4">
+            <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-20 overflow-x-auto pb-4">
               {/* Reason 1 */}
-              <div className="text-center group min-w-[180px] flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-8 h-8 text-white" />
+              <div className="text-center group min-w-[200px] flex-shrink-0">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <FiStar className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Produtos Exclusivos</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Produtos Exclusivos</h3>
                 <p className="text-muted-foreground text-sm">
                   Coleções limitadas exclusivas
                 </p>
               </div>
 
               {/* Reason 2 */}
-              <div className="text-center group min-w-[180px] flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <DollarSign className="w-8 h-8 text-white" />
+              <div className="text-center group min-w-[200px] flex-shrink-0">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <FiDollarSign className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Margens Atrativas</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Margens Atrativas</h3>
                 <p className="text-muted-foreground text-sm">
                   Condições comerciais privilegiadas
                 </p>
               </div>
 
               {/* Reason 3 */}
-              <div className="text-center group min-w-[180px] flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <HeadphonesIcon className="w-8 h-8 text-white" />
+              <div className="text-center group min-w-[200px] flex-shrink-0">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <FiHeadphones className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Suporte Completo</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Suporte Completo</h3>
                 <p className="text-muted-foreground text-sm">
                   Treinamento e materiais de marketing
                 </p>
               </div>
 
               {/* Reason 4 */}
-              <div className="text-center group min-w-[180px] flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-8 h-8 text-white" />
+              <div className="text-center group min-w-[200px] flex-shrink-0">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <FiAward className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Prestígio da Marca</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Prestígio da Marca</h3>
                 <p className="text-muted-foreground text-sm">
                   Credibilidade reconhecida no mercado
-                </p>
-              </div>
-
-              {/* Reason 5 */}
-              <div className="text-center group min-w-[180px] flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">Crescimento Acelerado</h3>
-                <p className="text-muted-foreground text-sm">
-                  Estratégias comprovadas de vendas
                 </p>
               </div>
             </div>
