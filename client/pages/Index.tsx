@@ -411,7 +411,7 @@ export default function Index() {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
 
-    // Aplica a máscara (XX) XXXXX-XXXX
+    // Aplica a m��scara (XX) XXXXX-XXXX
     if (numbers.length <= 2) {
       return `(${numbers}`;
     } else if (numbers.length <= 7) {
@@ -1600,8 +1600,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer - Otimizado para mobile */}
-      <footer className="bg-gray-100 text-foreground py-12 sm:py-16">
+      {/* Footer - Accessible Version with Proper Contrast */}
+      <footer className="bg-gray-900 text-white py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -1614,59 +1614,71 @@ export default function Index() {
                     className="h-12 w-auto"
                     loading="lazy"
                   />
-                  <span className="text-2xl font-bold text-gray-900">Ecko</span>
+                  <span className="text-2xl font-bold text-white">Ecko</span>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
                   urbana através da moda autêntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                    href="https://www.facebook.com/ecko"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                    aria-label="Siga a Ecko no Facebook - Abre em nova aba"
+                    title="Siga a Ecko no Facebook"
                   >
-                    <FaFacebook className="text-lg text-gray-600 group-hover:text-white" />
+                    <FaFacebook className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                    href="https://www.instagram.com/ecko"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gray-700 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                    aria-label="Siga a Ecko no Instagram - Abre em nova aba"
+                    title="Siga a Ecko no Instagram"
                   >
-                    <FaInstagram className="text-lg text-gray-600 group-hover:text-white" />
+                    <FaInstagram className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                    href="https://wa.me/5511999999999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gray-700 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                    aria-label="Entre em contato via WhatsApp - Abre em nova aba"
+                    title="Entre em contato via WhatsApp"
                   >
-                    <FaStore className="text-lg text-gray-600 group-hover:text-white" />
+                    <FaStore className="w-6 h-6 text-white" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-300 pt-8">
+            <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div className="text-gray-500 text-sm">
+                <div className="text-gray-300 text-sm">
                   © 2024 Ecko. Todos os direitos reservados.
                 </div>
                 <div className="flex space-x-6 text-sm">
                   <a
                     href="#"
-                    className="text-gray-500 hover:text-primary transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Privacidade
+                    Política de Privacidade
                   </a>
                   <a
                     href="#"
-                    className="text-gray-500 hover:text-primary transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Termos
+                    Termos de Uso
                   </a>
                   <a
                     href="#"
-                    className="text-gray-500 hover:text-primary transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Cookies
+                    Política de Cookies
                   </a>
                 </div>
               </div>
