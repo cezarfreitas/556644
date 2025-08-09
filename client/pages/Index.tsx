@@ -72,7 +72,7 @@ export default function Index() {
             <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center space-y-2">
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">
                     Solicite Sua Proposta Comercial
                   </h3>
                   <p className="text-muted-foreground">
@@ -82,33 +82,33 @@ export default function Index() {
 
                 <form className="space-y-5">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-foreground">
+                    <label htmlFor="name" className="text-sm font-medium text-white">
                       Nome *
                     </label>
                     <input
                       id="name"
                       type="text"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="Seu nome completo"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="whatsapp" className="text-sm font-medium text-foreground">
+                    <label htmlFor="whatsapp" className="text-sm font-medium text-white">
                       WhatsApp *
                     </label>
                     <input
                       id="whatsapp"
                       type="tel"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-input bg-background text-white placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
 
                   <div className="space-y-3">
-                    <label className="text-sm font-medium text-foreground">
+                    <label className="text-sm font-medium text-white">
                       Sua loja possui CNPJ? *
                     </label>
                     <div className="space-y-2">
@@ -120,7 +120,7 @@ export default function Index() {
                           className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
                           required
                         />
-                        <span className="text-foreground">Sim</span>
+                        <span className="text-white">Sim</span>
                       </label>
                       <label className="flex items-center space-x-3 cursor-pointer">
                         <input
@@ -130,7 +130,7 @@ export default function Index() {
                           className="w-4 h-4 text-primary focus:ring-primary focus:ring-2"
                           required
                         />
-                        <span className="text-foreground">Não, sou consumidor</span>
+                        <span className="text-white">Não, sou consumidor</span>
                       </label>
                     </div>
                   </div>
@@ -385,7 +385,7 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                  <blockquote className="text-lg text-white leading-relaxed italic">
                     "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério."
                   </blockquote>
                   <div className="flex items-center space-x-4">
@@ -393,7 +393,7 @@ export default function Index() {
                       <span className="text-white font-bold text-lg">A</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground">Amanda Costa</h4>
+                      <h4 className="font-bold text-white">Amanda Costa</h4>
                       <p className="text-sm text-muted-foreground">Urban Fashion - Rio de Janeiro, RJ</p>
                     </div>
                   </div>
@@ -406,7 +406,7 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                  <blockquote className="text-lg text-white leading-relaxed italic">
                     "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional."
                   </blockquote>
                   <div className="flex items-center space-x-4">
@@ -414,7 +414,7 @@ export default function Index() {
                       <span className="text-white font-bold text-lg">R</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground">Rafael Oliveira</h4>
+                      <h4 className="font-bold text-white">Rafael Oliveira</h4>
                       <p className="text-sm text-muted-foreground">Streetwear BH - Belo Horizonte, MG</p>
                     </div>
                   </div>
@@ -427,7 +427,7 @@ export default function Index() {
                   <div className="flex items-center space-x-1 text-primary">
                     <span className="text-2xl">★★★★★</span>
                   </div>
-                  <blockquote className="text-lg text-foreground leading-relaxed italic">
+                  <blockquote className="text-lg text-white leading-relaxed italic">
                     "A Ecko transformou minha loja multimarca. Agora somos referência em streetwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido."
                   </blockquote>
                   <div className="flex items-center space-x-4">
@@ -435,7 +435,7 @@ export default function Index() {
                       <span className="text-white font-bold text-lg">C</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground">Carla Santos</h4>
+                      <h4 className="font-bold text-white">Carla Santos</h4>
                       <p className="text-sm text-muted-foreground">Fashion Hub - Curitiba, PR</p>
                     </div>
                   </div>
