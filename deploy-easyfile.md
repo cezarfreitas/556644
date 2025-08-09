@@ -13,18 +13,18 @@ Dockerfile: Dockerfile.easyfile
 
 ### 2. Variáveis de Ambiente
 
-Configure essas variáveis na EasyFile:
+Configure essas variáveis no Easypanel:
 
 ```env
 NODE_ENV=production
-PORT=3000
+PORT=80
 VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads
 ```
 
 ### 3. Porta de Exposição
 
-- **Porta interna do container:** 3000
-- **Porta externa:** Configure conforme sua preferência na EasyFile
+- **Porta interna do container:** 80 (padrão Easypanel)
+- **Porta externa:** 80 (configuração automática do Easypanel)
 
 ### 4. Health Check
 
