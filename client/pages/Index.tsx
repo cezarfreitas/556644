@@ -235,7 +235,7 @@ export default function Index() {
                     type="submit"
                     className="w-full bg-primary hover:bg-red-600 text-white py-4 rounded-lg font-bold text-lg transition-colors duration-300 mt-6"
                   >
-                    Receber Proposta Comercial
+                    {showCouponMessage ? "Receber Cupom de 10% Desconto" : "Receber Proposta Comercial"}
                   </button>
 
                   <p className="text-xs text-gray-900/70 text-center">
