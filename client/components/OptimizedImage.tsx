@@ -15,7 +15,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   className = "",
   loading = "lazy",
-  fetchpriority = "auto",
+  fetchPriority = "auto",
   sizes = "100vw",
   quality = 80,
 }) => {
