@@ -235,13 +235,13 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Produtos Ecko
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Streetwear
                 </span>
               </h2>
-              <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
+              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
                 Coleções exclusivas de streetwear e moda urbana brasileira com qualidade premium
               </p>
             </div>
