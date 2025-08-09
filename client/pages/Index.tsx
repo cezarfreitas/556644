@@ -891,9 +891,10 @@ export default function Index() {
               <div className="text-center lg:text-right">
                 <div className="inline-block">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F00996af352d543d8aa438c836091677a?format=webp&width=800"
+                    src="/images/brand/brand-story.webp"
                     alt="Ecko Streetwear - Autenticidade da Marca"
                     className="w-full max-w-md rounded-xl shadow-2xl"
+                    loading="lazy"
                   />
                   <div className="mt-8 space-y-4">
                     <p className="text-gray-900/60 text-sm italic">
