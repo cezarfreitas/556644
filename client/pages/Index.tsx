@@ -793,11 +793,15 @@ export default function Index() {
           <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2">
             <div
               className="flex flex-col items-center text-white/90 cursor-pointer hover:text-white transition-colors duration-300"
-              onClick={() =>
-                document
-                  .getElementById("cadastro-lojistas")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => {
+                // Usar requestAnimationFrame para evitar reflow forçado
+                requestAnimationFrame(() => {
+                  const element = document.getElementById("cadastro-lojistas");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                });
+              }}
             >
               <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in">
                 Role para baixo
