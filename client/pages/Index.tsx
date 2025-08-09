@@ -286,7 +286,7 @@ export default function Index() {
                         name="cnpj-number"
                         type="text"
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
                         placeholder="00.000.000/0000-00"
                       />
                     </div>
