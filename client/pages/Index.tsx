@@ -25,6 +25,73 @@ export default function Index() {
     import.meta.env.VITE_api_form ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
+  // Função para capturar dados de visitação e analytics
+  const getAnalyticsData = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const referrer = document.referrer || 'direct';
+
+    return {
+      // UTM Parameters
+      utm_source: urlParams.get('utm_source') || null,
+      utm_medium: urlParams.get('utm_medium') || null,
+      utm_campaign: urlParams.get('utm_campaign') || null,
+      utm_term: urlParams.get('utm_term') || null,
+      utm_content: urlParams.get('utm_content') || null,
+
+      // Traffic Source
+      referrer: referrer,
+      traffic_source: referrer === '' ? 'direct' :
+                     referrer.includes('google') ? 'google_organic' :
+                     referrer.includes('facebook') ? 'facebook' :
+                     referrer.includes('instagram') ? 'instagram' :
+                     referrer.includes('whatsapp') ? 'whatsapp' :
+                     referrer.includes('youtube') ? 'youtube' :
+                     referrer.includes('tiktok') ? 'tiktok' :
+                     urlParams.get('utm_source') ? 'paid_campaign' : 'referral',
+
+      // Page Information
+      page_url: window.location.href,
+      page_title: document.title,
+      landing_page: window.location.pathname,
+
+      // Device/Browser Information
+      user_agent: navigator.userAgent,
+      language: navigator.language || navigator.languages?.[0] || 'pt-BR',
+      screen_resolution: `${screen.width}x${screen.height}`,
+      viewport_size: `${window.innerWidth}x${window.innerHeight}`,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+
+      // Session Information
+      session_id: sessionStorage.getItem('session_id') ||
+                  (() => {
+                    const id = Date.now().toString(36) + Math.random().toString(36).substr(2);
+                    sessionStorage.setItem('session_id', id);
+                    return id;
+                  })(),
+
+      // Timing
+      page_load_time: performance.now(),
+      timestamp: new Date().toISOString(),
+      local_time: new Date().toLocaleString('pt-BR'),
+
+      // Additional tracking
+      is_mobile: /Mobi|Android/i.test(navigator.userAgent),
+      is_tablet: /Tablet|iPad/i.test(navigator.userAgent),
+      is_desktop: !/Mobi|Android|Tablet|iPad/i.test(navigator.userAgent),
+      browser: navigator.userAgent.includes('Chrome') ? 'Chrome' :
+               navigator.userAgent.includes('Firefox') ? 'Firefox' :
+               navigator.userAgent.includes('Safari') ? 'Safari' :
+               navigator.userAgent.includes('Edge') ? 'Edge' : 'Other',
+
+      // Marketing tags
+      gclid: urlParams.get('gclid') || null, // Google Ads
+      fbclid: urlParams.get('fbclid') || null, // Facebook Ads
+
+      // Cookie consent (se houver)
+      cookie_consent: localStorage.getItem('cookie_consent') || null,
+    };
+  };
+
   // Testimonials data
   const testimonials = [
     {
