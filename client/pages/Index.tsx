@@ -528,24 +528,24 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Depoimentos de Lojistas Parceiros Ecko */}
-      <section className="py-20 md:py-32 bg-gray-100" id="depoimentos-lojistas">
+      {/* Depoimentos de Lojistas Parceiros Ecko - Otimizado para mobile */}
+      <section className="py-12 sm:py-20 md:py-32 bg-gray-100" id="depoimentos-lojistas">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
+            <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Ecko Oficiais
                 </span>
               </h2>
-              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+              <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-4">
                 Histórias reais de sucesso de parceiros que triplicaram o
                 faturamento com a Ecko
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
               {/* Testimonial 1 */}
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="space-y-6">
