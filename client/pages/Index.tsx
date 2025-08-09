@@ -159,14 +159,41 @@ export default function Index() {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
+    const analyticsData = getAnalyticsData();
+
     const payload = {
+      // Dados do formulário
       name: formData.get("name"),
       whatsapp: formData.get("whatsapp"),
       hasCnpj: selectedCnpj,
       cnpj: showCnpjField ? formData.get("cnpj-number") : null,
+
+      // Dados da marca/campanha
       marca: "Ecko",
       origem: "Landing Page Lojistas",
-      timestamp: new Date().toISOString(),
+      campaign_type: "Lead Generation",
+      lead_source: "Website Form",
+
+      // Analytics e tracking completo
+      ...analyticsData,
+
+      // Dados específicos do lead
+      lead_quality: selectedCnpj === "sim" ? "high" : "medium",
+      lead_type: selectedCnpj === "sim" ? "business" : "consumer",
+      form_completion_time: performance.now() - (window.formStartTime || performance.now()),
+
+      // Informações de conversão
+      conversion_page: "/",
+      conversion_element: "main_form",
+      conversion_position: "hero_section",
+
+      // Dados de interesse
+      interest_level: "high", // Preencheu formulário completo
+      engagement_score: selectedCnpj === "sim" ? 10 : 7, // Score baseado no tipo
+
+      // Timestamps diferentes
+      form_timestamp: new Date().toISOString(),
+      server_timestamp: null, // Será preenchido no backend
     };
 
     console.log("Payload sendo enviado:", payload);
