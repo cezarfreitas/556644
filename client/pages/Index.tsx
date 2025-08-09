@@ -739,13 +739,16 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Landing Page Principal */}
-      <header className="relative h-screen w-full overflow-hidden">
+      <header className="relative h-screen w-full overflow-hidden hero-section">
         <img
           src="/images/hero/hero-background.webp"
           alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover hero-bg"
           loading="eager"
           fetchPriority="high"
+          decoding="async"
+          width="1920"
+          height="1080"
         />
         {/* Enhanced Overlay with Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
@@ -850,7 +853,7 @@ export default function Index() {
                     Solicite Seu Atendimento
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600">
-                    Preencha o formulário e um analista da Ecko entrará em
+                    Preencha o formulário e um analista da Ecko entrar�� em
                     contato para apresentar nosso catálogo digital exclusivo com
                     preços e condições especiais para lojistas oficiais.
                   </p>
