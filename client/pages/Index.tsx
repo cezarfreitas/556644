@@ -60,7 +60,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-20 overflow-x-auto pb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
               {/* Reason 1 */}
               <div className="text-center group min-w-[280px] flex-shrink-0">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
