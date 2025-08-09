@@ -153,7 +153,15 @@ export default function Index() {
       </section>
 
       {/* 5 Reasons Section - Redesigned */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-background via-muted/20 to-background">
+      <section className="py-20 md:py-32 relative bg-gradient-to-br from-background via-muted/20 to-background">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fab7e336ecd0049c1ab9a4a470767e70c?format=webp&width=800"
+            alt="Background"
+            className="w-full h-full object-cover opacity-10"
+          />
+        </div>
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
