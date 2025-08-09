@@ -1,4 +1,4 @@
-import { Star, DollarSign, HeadphonesIcon, Award, TrendingUp } from "lucide-react";
+import { FiStar, FiDollarSign, FiHeadphones, FiAward } from "react-icons/fi";
 
 export default function Index() {
   return (
