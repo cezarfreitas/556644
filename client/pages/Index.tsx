@@ -418,6 +418,8 @@ export default function Index() {
                       required
                       className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
                       placeholder="Seu nome completo"
+                      onFocus={() => trackEvent('form_field_focus', { field: 'name', step: 1 })}
+                      onBlur={(e) => e.target.value && trackEvent('form_field_complete', { field: 'name', step: 1 })}
                     />
                   </div>
 
