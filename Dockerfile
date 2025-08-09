@@ -13,6 +13,10 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+# Build argument for API URL
+ARG VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads
+ENV VITE_api_form=$VITE_api_form
+
 # Build the application
 RUN npm run build
 
