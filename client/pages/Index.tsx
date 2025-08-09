@@ -62,7 +62,7 @@ export default function Index() {
                     Faça parte da rede de distribuidores oficiais da maior marca de streetwear e moda urbana do Brasil.
                   </p>
                   <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-                    Resposta comercial em até 24 horas. Processo 100% digital, sem taxas de adesão. Condições exclusivas para lojistas parceiros.
+                    Resposta comercial em até 24 horas. Processo 100% digital, sem taxas de adesão. Condiç��es exclusivas para lojistas parceiros.
                   </p>
                 </div>
               </div>
@@ -535,15 +535,15 @@ export default function Index() {
                   A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-lg">📱</span>
-                  </div>
-                  <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-lg">📧</span>
-                  </div>
-                  <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                    <span className="text-lg">🌐</span>
-                  </div>
+                  <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                    <FaFacebook className="text-lg text-background/80 group-hover:text-white" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                    <FaInstagram className="text-lg text-background/80 group-hover:text-white" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group">
+                    <FaStore className="text-lg text-background/80 group-hover:text-white" />
+                  </a>
                 </div>
               </div>
             </div>
