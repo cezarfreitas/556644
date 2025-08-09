@@ -3,11 +3,13 @@
 ## Construir e executar com Docker
 
 ### 1. Build da imagem Docker
+
 ```bash
 docker build -t ecko-landing .
 ```
 
 ### 2. Executar o container
+
 ```bash
 docker run -p 3000:3000 \
   -e VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads \
@@ -15,6 +17,7 @@ docker run -p 3000:3000 \
 ```
 
 ### 3. Usando Docker Compose (Recomendado)
+
 ```bash
 # Executar em produção
 docker-compose up -d
@@ -29,6 +32,7 @@ docker-compose down
 ## Deploy em produção
 
 ### Variáveis de ambiente necessárias:
+
 - `VITE_api_form`: URL da API para envio dos formulários
 - `NODE_ENV`: Define o ambiente (production/development)
 - `PORT`: Porta do servidor (padrão: 3000)
@@ -36,6 +40,7 @@ docker-compose down
 ### Build para diferentes ambientes:
 
 #### Produção
+
 ```bash
 docker build -t ecko-landing:production .
 docker run -p 3000:3000 \
@@ -45,6 +50,7 @@ docker run -p 3000:3000 \
 ```
 
 #### Development (para testes)
+
 ```bash
 docker build -t ecko-landing:dev --target builder .
 docker run -p 8080:8080 \
@@ -91,11 +97,13 @@ docker-compose exec ecko-landing sh
 ## Troubleshooting
 
 ### Container não inicia
+
 1. Verificar logs: `docker-compose logs ecko-landing`
 2. Verificar variáveis de ambiente
 3. Verificar se a porta 3000 não está em uso
 
 ### Problemas de rede
+
 1. Verificar se a API está acessível
 2. Verificar configurações de firewall
 3. Testar conectividade: `docker-compose exec ecko-landing wget -O- http://localhost:3000`
