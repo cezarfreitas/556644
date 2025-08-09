@@ -166,10 +166,10 @@ export default function Index() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Vantagens de Ser Lojista <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Ecko Oficial</span>
               </h2>
-              <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
+              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
                 4 benefícios exclusivos que aumentam a lucratividade do seu negócio de moda urbana
               </p>
             </div>
