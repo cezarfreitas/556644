@@ -33,7 +33,7 @@ export default function Index() {
 
           {/* Call to Action Button */}
           <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300 transform hover:scale-105">
-            Começar Agora
+            Seja um Lojista Oficial
           </button>
         </div>
       </section>
