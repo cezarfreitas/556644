@@ -176,4 +176,21 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  /* Optimize benefit cards for mobile */
+  @media (max-width: 640px) {
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div {
+      margin-bottom: 1.5rem;
+    }
+
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div h3 {
+      font-size: 1.125rem !important;
+      line-height: 1.4;
+    }
+
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div p {
+      font-size: 0.875rem !important;
+      line-height: 1.5;
+    }
+  }
 }
