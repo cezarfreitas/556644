@@ -658,7 +658,7 @@ export default function Index() {
           has_cnpj: selectedCnpj === "sim",
         });
 
-        // Se for consumidor, abre WhatsApp após enviar dados
+        // Se for consumidor, abre WhatsApp ap��s enviar dados
         if (selectedCnpj === "nao-consumidor") {
           alert(
             "Dados enviados! Redirecionando para receber seu cupom de desconto.",
@@ -840,36 +840,48 @@ export default function Index() {
                     >
                       Nome *
                     </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      className={`w-full px-4 py-4 sm:py-3 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
-                        formErrors.name
-                          ? 'border-red-500 focus:ring-red-500'
-                          : formValues.name && !formErrors.name
-                            ? 'border-green-500 focus:ring-green-500'
-                            : 'border-input focus:ring-primary'
-                      }`}
-                      placeholder="Seu nome completo"
-                      value={formValues.name}
-                      onChange={handleNameChange}
-                      onFocus={() =>
-                        trackEvent("form_field_focus", {
-                          field: "name",
-                          step: 1,
-                        })
-                      }
-                      onBlur={(e) => {
-                        validateField("name", e.target.value);
-                        e.target.value &&
-                        trackEvent("form_field_complete", {
-                          field: "name",
-                          step: 1,
-                        });
-                      }}
-                    />
+                    <div className="relative">
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                          formErrors.name
+                            ? 'border-red-500 focus:ring-red-500'
+                            : formValues.name && !formErrors.name
+                              ? 'border-green-500 focus:ring-green-500'
+                              : 'border-input focus:ring-primary'
+                        }`}
+                        placeholder="Seu nome completo"
+                        value={formValues.name}
+                        onChange={handleNameChange}
+                        onFocus={() =>
+                          trackEvent("form_field_focus", {
+                            field: "name",
+                            step: 1,
+                          })
+                        }
+                        onBlur={(e) => {
+                          validateField("name", e.target.value);
+                          e.target.value &&
+                          trackEvent("form_field_complete", {
+                            field: "name",
+                            step: 1,
+                          });
+                        }}
+                      />
+                      {/* Ícone de validação */}
+                      {formValues.name && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          {formErrors.name ? (
+                            <FaExclamationTriangle className="w-5 h-5 text-red-500" />
+                          ) : (
+                            <FaCheck className="w-5 h-5 text-green-500" />
+                          )}
+                        </div>
+                      )}
+                    </div>
                     {formErrors.name && (
                       <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
                     )}
