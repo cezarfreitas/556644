@@ -6,9 +6,46 @@ export default function Index() {
   const [showCnpjField, setShowCnpjField] = useState(false);
   const [selectedCnpj, setSelectedCnpj] = useState("");
 
+  const api_form = "https://api.exemplo.com/lojistas"; // URL da API para envio do formulário
+
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
     setShowCnpjField(value === "sim");
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      name: formData.get("name"),
+      whatsapp: formData.get("whatsapp"),
+      hasCnpj: selectedCnpj,
+      cnpj: showCnpjField ? formData.get("cnpj-number") : null,
+      timestamp: new Date().toISOString()
+    };
+
+    try {
+      const response = await fetch(api_form, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+        e.currentTarget.reset();
+        setSelectedCnpj("");
+        setShowCnpjField(false);
+      } else {
+        alert("Erro ao enviar formulário. Tente novamente.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      alert("Erro ao enviar formulário. Verifique sua conexão e tente novamente.");
+    }
   };
   return (
     <div className="min-h-screen bg-background">
