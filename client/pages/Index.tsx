@@ -26,7 +26,7 @@ export default function Index() {
           {/* Main Heading */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
             <span className="block mb-2">Seja Lojista Oficial</span>
-            <span className="block text-primary drop-shadow-lg">Ecko Unltd</span>
+            <span className="block text-primary drop-shadow-lg">Ecko</span>
             <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-white/95">Maior Marca de Streetwear do Brasil</span>
           </h1>
 
@@ -37,7 +37,7 @@ export default function Index() {
 
           {/* Call to Action Button */}
           <button className="bg-primary hover:bg-red-600 text-white px-12 py-6 rounded-xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-primary hover:border-red-600 animate-fade-in uppercase tracking-wide">
-            🚀 Seja Parceiro Ecko Oficial
+            Seja Parceiro Ecko Oficial
           </button>
         </div>
       </section>
