@@ -148,13 +148,7 @@ export default function Index() {
       {/* Hero Section - Landing Page Principal */}
       <header className="relative h-screen w-full overflow-hidden">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=400"
-          srcSet="
-            https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=400 400w,
-            https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=800 800w,
-            https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fae2a014372bf423c820f388035b17757?format=webp&width=1200 1200w
-          "
-          sizes="100vw"
+          src="/images/hero/hero-background.webp"
           alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
@@ -169,12 +163,7 @@ export default function Index() {
           {/* Logo */}
           <div className="mb-12 animate-fade-in">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=200"
-              srcSet="
-                https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=100 100w,
-                https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F9b9fe333925c45958af92d68622d968d?format=webp&width=200 200w
-              "
-              sizes="(max-width: 768px) 80px, (max-width: 1024px) 96px, 112px"
+              src="/images/brand/ecko-logo.webp"
               alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
               className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
               loading="eager"
@@ -849,7 +838,7 @@ export default function Index() {
                     Com produtos autênticos que refletem a essência do street
                     style brasileiro, a Ecko conquistou milhões de consumidores
                     e se estabeleceu como a maior marca de streetwear do país.
-                    Nossos lojistas parceiros fazem parte dessa trajetória de
+                    Nossos lojistas parceiros fazem parte dessa trajet��ria de
                     sucesso.
                   </p>
                 </div>
