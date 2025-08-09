@@ -985,9 +985,34 @@ export default function Index() {
                         name="cnpj-number"
                         type="text"
                         required
-                        className="w-full px-4 py-4 sm:py-3 rounded-lg border border-input bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-base sm:text-sm"
+                        className={`w-full px-4 py-4 sm:py-3 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                          formErrors.cnpj
+                            ? 'border-red-500 focus:ring-red-500'
+                            : formValues.cnpj && !formErrors.cnpj
+                              ? 'border-green-500 focus:ring-green-500'
+                              : 'border-input focus:ring-primary'
+                        }`}
                         placeholder="00.000.000/0000-00"
+                        maxLength={18}
+                        onChange={handleCnpjChange}
+                        onFocus={() =>
+                          trackEvent("form_field_focus", {
+                            field: "cnpj",
+                            step: 3,
+                          })
+                        }
+                        onBlur={(e) => {
+                          validateField("cnpj", e.target.value);
+                          e.target.value &&
+                          trackEvent("form_field_complete", {
+                            field: "cnpj",
+                            step: 3,
+                          });
+                        }}
                       />
+                      {formErrors.cnpj && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.cnpj}</p>
+                      )}
                     </div>
                   )}
 
