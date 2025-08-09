@@ -313,6 +313,13 @@ img[fetchpriority="high"] {
     animation: scroll-bounce 1.5s ease-in-out infinite;
   }
 
+  /* Garantir que a animação funcione em desktop e mobile */
+  @media (min-width: 640px) {
+    .animate-scroll-bounce {
+      animation: scroll-bounce 1.5s ease-in-out infinite;
+    }
+  }
+
   /* Optimize benefit cards for mobile */
   @media (max-width: 640px) {
     .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > div {
