@@ -21,6 +21,14 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Estados para validação de formulário
+  const [formErrors, setFormErrors] = useState<{[key: string]: string}>({});
+  const [formValues, setFormValues] = useState({
+    name: "",
+    whatsapp: "",
+    cnpj: ""
+  });
+
   // Configurações de tracking via .env
   const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
   const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
