@@ -105,6 +105,8 @@ export default function Index() {
   const META_ACCESS_TOKEN = import.meta.env.VITE_META_ACCESS_TOKEN;
   const META_CONVERSION_NAME = import.meta.env.VITE_META_CONVERSION_NAME || 'Lead';
   const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || 'v18.0';
+  const GOOGLE_ADS_CONVERSION_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID;
+  const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_LABEL;
 
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
@@ -504,7 +506,7 @@ export default function Index() {
           <div className="mb-12 animate-fade-in">
             <img
               src="/images/brand/ecko-logo.webp"
-              alt="Logo Ecko - L��der em Streetwear e Moda Urbana no Brasil"
+              alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
               className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
               loading="eager"
               fetchPriority="high"
