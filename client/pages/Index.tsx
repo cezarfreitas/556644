@@ -22,13 +22,13 @@ export default function Index() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 max-w-4xl">
-            Bem-vindo ao Futuro
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-5xl leading-tight">
+            Seja um Lojista Oficial Ecko e Lucre com uma das Maiores Marcas do Brasil
           </h1>
 
           {/* Subtitle/Call Text */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-            Descubra uma nova experiência que vai transformar a sua visão sobre o que é possível
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-4xl leading-relaxed">
+            Ao se tornar um lojista oficial Ecko, você garante acesso a produtos exclusivos, condições comerciais privilegiadas e todo o prestígio de uma das marcas mais fortes e respeitadas do mercado brasileiro.
           </p>
 
           {/* Call to Action Button */}
