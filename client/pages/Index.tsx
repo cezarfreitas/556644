@@ -1,4 +1,5 @@
 import { MdStar, MdAttachMoney, MdHeadset, MdWorkspacePremium } from "react-icons/md";
+import { FaFacebook, FaInstagram, FaStore } from "react-icons/fa";
 
 export default function Index() {
   return (
