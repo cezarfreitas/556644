@@ -749,9 +749,9 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 text-foreground py-16">
-        <div className="container mx-auto px-6">
+      {/* Footer - Otimizado para mobile */}
+      <footer className="bg-gray-100 text-foreground py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               {/* Brand Section */}
