@@ -50,8 +50,8 @@ Se o build falhar:
 Se o container não iniciar:
 
 1. Verifique as variáveis de ambiente
-2. Certifique-se de que a porta 3000 está sendo exposta
-3. Verifique os logs do container na EasyFile
+2. Certifique-se de que a porta 80 está sendo exposta
+3. Verifique os logs do container no Easypanel
 
 #### Alternativas de Dockerfile
 
