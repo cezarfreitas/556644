@@ -3,7 +3,7 @@
 # Script para build e teste do Docker
 
 echo "🔨 Building Docker image..."
-docker build -f Dockerfile.fixed -t ecko-landing:test \
+docker build -f Dockerfile.safe -t ecko-landing:test \
   --build-arg VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads \
   .
 
