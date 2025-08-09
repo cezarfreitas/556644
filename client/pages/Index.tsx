@@ -60,9 +60,9 @@ export default function Index() {
       };
 
       if ("requestIdleCallback" in window) {
-        requestIdleCallback(loadGA4);
+        requestIdleCallback(loadGA4, { timeout: 5000 });
       } else {
-        setTimeout(loadGA4, 100);
+        setTimeout(loadGA4, 2000); // Delay maior para permitir LCP
       }
 
       // Configurar gtag
@@ -352,7 +352,7 @@ export default function Index() {
       // Eventos específicos do Facebook
       if (eventName === "form_submission_success") {
         window.fbq("track", META_CONVERSION_NAME, pixelData);
-        // Também enviar via API de conversão
+        // Também enviar via API de convers��o
         sendMetaConversionAPI(eventName, pixelData, fullEventData);
       } else {
         window.fbq("trackCustom", eventName, pixelData);
@@ -1595,7 +1595,7 @@ export default function Index() {
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com produtos autênticos que refletem a essência do street
                     style brasileiro, a Ecko conquistou milhões de consumidores
-                    e se estabeleceu como a maior marca de streetwear do país.
+                    e se estabeleceu como a maior marca de streetwear do pa��s.
                     Nossos lojistas parceiros fazem parte dessa trajetória de
                     sucesso.
                   </p>
