@@ -186,7 +186,9 @@ export default function Index() {
                     Solicite Seu Atendimento
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600">
-                    Preencha o formulário e um analista da Ecko entrará em contato para apresentar nosso catálogo digital exclusivo com preços e condições especiais para lojistas oficiais.
+                    Preencha o formulário e um analista da Ecko entrará em
+                    contato para apresentar nosso catálogo digital exclusivo com
+                    preços e condições especiais para lojistas oficiais.
                   </p>
                 </div>
 
@@ -314,7 +316,8 @@ export default function Index() {
                   </button>
 
                   <p className="text-xs text-gray-900/70 text-center">
-                    Ao enviar, você concorda em receber informações comerciais da Ecko. Seus dados estão seguros conosco.
+                    Ao enviar, você concorda em receber informações comerciais
+                    da Ecko. Seus dados estão seguros conosco.
                   </p>
                 </form>
               </div>
@@ -362,8 +365,9 @@ export default function Index() {
                 </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed text-center">
                   Acesso prioritário a coleções limitadas, lançamentos
-                  exclusivos e produtos especiais disponíveis apenas para lojistas oficiais.
-                  Seja o primeiro a oferecer novidades aos seus clientes.
+                  exclusivos e produtos especiais disponíveis apenas para
+                  lojistas oficiais. Seja o primeiro a oferecer novidades aos
+                  seus clientes.
                 </p>
               </div>
 
@@ -392,8 +396,8 @@ export default function Index() {
                 </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed text-center">
                   Treinamento especializado, materiais de marketing exclusivos,
-                  suporte técnico e consultoria para potencializar suas vendas
-                  e crescimento.
+                  suporte técnico e consultoria para potencializar suas vendas e
+                  crescimento.
                 </p>
               </div>
 
@@ -406,8 +410,9 @@ export default function Index() {
                   Prestígio da Marca
                 </h3>
                 <p className="text-gray-900/80 text-sm leading-relaxed text-center">
-                  Associe-se a uma das marcas de moda urbana mais reconhecidas do Brasil e do mundo.
-                  Credibilidade que fortalece seu negócio e atrai mais clientes para sua loja.
+                  Associe-se a uma das marcas de moda urbana mais reconhecidas
+                  do Brasil e do mundo. Credibilidade que fortalece seu negócio
+                  e atrai mais clientes para sua loja.
                 </p>
               </div>
             </div>
@@ -437,7 +442,9 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-4">
-                Descubra as coleções oficiais Ecko, com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.
+                Descubra as coleções oficiais Ecko, com design autêntico e
+                qualidade premium. Produtos únicos que valorizam sua loja e
+                encantam seus clientes.
               </p>
             </div>
 
