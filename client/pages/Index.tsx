@@ -166,10 +166,10 @@ export default function Index() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
                 Vantagens de Ser Lojista <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">Ecko Oficial</span>
               </h2>
-              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+              <p className="text-white/80 text-xl max-w-2xl mx-auto">
                 4 benefícios exclusivos que aumentam a lucratividade do seu negócio de moda urbana
               </p>
             </div>
@@ -235,13 +235,13 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
                 Produtos Ecko
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Streetwear
                 </span>
               </h2>
-              <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+              <p className="text-white/80 text-xl max-w-2xl mx-auto">
                 Coleções exclusivas de streetwear e moda urbana brasileira com qualidade premium
               </p>
             </div>
@@ -330,7 +330,7 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-white/80 mb-6">
                 Produtos de alta qualidade que seus clientes vão amar e comprar
               </p>
               <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
@@ -346,13 +346,13 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
                 Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Ecko Oficiais
                 </span>
               </h2>
-              <p className="text-slate-600 text-xl max-w-2xl mx-auto">
+              <p className="text-white/80 text-xl max-w-2xl mx-auto">
                 Histórias reais de sucesso de parceiros que triplicaram o faturamento com a Ecko
               </p>
             </div>
@@ -445,7 +445,7 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-slate-600 mb-6">
+              <p className="text-lg text-white/80 mb-6">
                 Junte-se a mais de 500 lojistas parceiros de sucesso
               </p>
               <a href="#cadastro-lojistas" className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300">
