@@ -1,4 +1,4 @@
-import { FiStar, FiDollarSign, FiHeadphones, FiAward } from "react-icons/fi";
+import { MdStar, MdAttachMoney, MdHeadset, MdWorkspacePremium } from "react-icons/md";
 
 export default function Index() {
   return (
