@@ -272,6 +272,21 @@ export default function Index() {
         traffic_source: fullEventData.traffic_source,
         lead_quality: fullEventData.lead_quality
       });
+
+      // Google Ads Conversion Tracking
+      if (eventName === 'form_submission_success' && GOOGLE_ADS_CONVERSION_ID && GOOGLE_ADS_CONVERSION_LABEL) {
+        window.gtag('event', 'conversion', {
+          'send_to': `${GOOGLE_ADS_CONVERSION_ID}/${GOOGLE_ADS_CONVERSION_LABEL}`,
+          'value': fullEventData.engagement_score || 1,
+          'currency': 'BRL',
+          'transaction_id': fullEventData.session_id,
+          'custom_parameters': {
+            'lead_type': fullEventData.lead_type,
+            'traffic_source': fullEventData.traffic_source,
+            'lead_quality': fullEventData.lead_quality
+          }
+        });
+      }
     }
 
     // Facebook Pixel
