@@ -27,14 +27,14 @@ export default function Index() {
           </div>
 
           {/* Main Heading - H1 for SEO */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8 max-w-6xl leading-[1.1] tracking-tight animate-slide-up">
             <span className="block mb-2">Seja Lojista Oficial</span>
             <span className="block text-primary drop-shadow-lg">Ecko</span>
-            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-gray-900/95">Maior Marca de Streetwear do Brasil</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 text-white/95">Maior Marca de Streetwear do Brasil</span>
           </h1>
 
           {/* Subtitle/Call Text */}
-          <p className="text-base md:text-lg lg:text-xl text-gray-900/95 mb-10 max-w-3xl leading-relaxed font-medium px-4 animate-fade-in">
+          <p className="text-base md:text-lg lg:text-xl text-white/95 mb-10 max-w-3xl leading-relaxed font-medium px-4 animate-fade-in">
             Acesso a <span className="text-primary font-semibold">produtos exclusivos</span>, <span className="text-primary font-semibold">margens atrativas</span> e todo o prestígio da marca líder em streetwear brasileiro.
           </p>
 
