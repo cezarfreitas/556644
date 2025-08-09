@@ -62,7 +62,7 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
               {/* Reason 1 */}
-              <div className="text-center group min-w-[280px] flex-shrink-0">
+              <div className="text-center group">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdStar className="w-16 h-16 text-primary mx-auto" />
                 </div>
@@ -73,7 +73,7 @@ export default function Index() {
               </div>
 
               {/* Reason 2 */}
-              <div className="text-center group min-w-[280px] flex-shrink-0">
+              <div className="text-center group">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdAttachMoney className="w-16 h-16 text-primary mx-auto" />
                 </div>
@@ -84,7 +84,7 @@ export default function Index() {
               </div>
 
               {/* Reason 3 */}
-              <div className="text-center group min-w-[280px] flex-shrink-0">
+              <div className="text-center group">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdHeadset className="w-16 h-16 text-primary mx-auto" />
                 </div>
@@ -95,7 +95,7 @@ export default function Index() {
               </div>
 
               {/* Reason 4 */}
-              <div className="text-center group min-w-[280px] flex-shrink-0">
+              <div className="text-center group">
                 <div className="mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdWorkspacePremium className="w-16 h-16 text-primary mx-auto" />
                 </div>
