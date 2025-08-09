@@ -134,7 +134,10 @@ export default function Index() {
       </header>
 
       {/* Cadastro de Lojistas - Formulário de Parceria - Otimizado para mobile */}
-      <section className="py-12 sm:py-20 md:py-32 bg-white" id="cadastro-lojistas">
+      <section
+        className="py-12 sm:py-20 md:py-32 bg-white"
+        id="cadastro-lojistas"
+      >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
             {/* Text/CTA Column - Otimizado para mobile */}
@@ -171,7 +174,10 @@ export default function Index() {
                   </p>
                 </div>
 
-                <form className="space-y-4 sm:space-y-5" onSubmit={handleFormSubmit}>
+                <form
+                  className="space-y-4 sm:space-y-5"
+                  onSubmit={handleFormSubmit}
+                >
                   <div className="space-y-2">
                     <label
                       htmlFor="name"
@@ -249,7 +255,9 @@ export default function Index() {
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="font-medium text-center">Não, sou consumidor</span>
+                        <span className="font-medium text-center">
+                          Não, sou consumidor
+                        </span>
                       </label>
                     </div>
                   </div>
@@ -414,7 +422,10 @@ export default function Index() {
       </section>
 
       {/* Galeria de Produtos Ecko Streetwear - Otimizado para mobile */}
-      <section className="py-12 sm:py-20 md:py-32 bg-white" id="galeria-produtos">
+      <section
+        className="py-12 sm:py-20 md:py-32 bg-white"
+        id="galeria-produtos"
+      >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
@@ -529,7 +540,10 @@ export default function Index() {
       </section>
 
       {/* Depoimentos de Lojistas Parceiros Ecko - Otimizado para mobile */}
-      <section className="py-12 sm:py-20 md:py-32 bg-gray-100" id="depoimentos-lojistas">
+      <section
+        className="py-12 sm:py-20 md:py-32 bg-gray-100"
+        id="depoimentos-lojistas"
+      >
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
