@@ -431,14 +431,13 @@ export default function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
-                Produtos Ecko
+                Coleções Exclusivas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  Streetwear
+                  Ecko
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-4">
-                Coleções exclusivas de streetwear e moda urbana brasileira com
-                qualidade premium
+                Descubra as coleções oficiais Ecko, com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.
               </p>
             </div>
 
@@ -526,14 +525,11 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <p className="text-lg text-gray-600 mb-6">
-                Produtos de alta qualidade que seus clientes vão amar e comprar
-              </p>
               <a
                 href="#cadastro-lojistas"
                 className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300"
               >
-                Quero Ser Distribuidor Oficial
+                Quero Ser Lojista Oficial
               </a>
             </div>
           </div>
