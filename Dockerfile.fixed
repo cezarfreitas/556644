@@ -23,8 +23,8 @@ ENV VITE_api_form=$VITE_api_form
 # Build the application
 RUN npm run build
 
-# Remove only dev dependencies that are safe to remove
-RUN npm prune --omit=dev --production
+# Remove only dev dependencies
+RUN npm prune --omit=dev
 
 # Clean npm cache
 RUN npm cache clean --force
