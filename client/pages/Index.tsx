@@ -830,7 +830,7 @@ export default function Index() {
           </div>
 
           {/* Scroll Indicator - Enhanced */}
-          <div className="absolute bottom-8 w-full flex justify-center animate-fade-in">
+          <div className="w-full flex justify-center animate-fade-in mt-auto pb-8">
             <div
               className="flex flex-col items-center cursor-pointer group"
               onClick={() => {
