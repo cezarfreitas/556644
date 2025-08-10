@@ -2467,7 +2467,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* História da Marca Ecko - L��der em Streetwear - Otimizado para mobile */}
+      {/* História da Marca Ecko - Líder em Streetwear - Otimizado para mobile */}
       <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
@@ -2568,7 +2568,7 @@ export default function Index() {
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana através da moda aut���ntica.
+                  urbana através da moda aut��ntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
