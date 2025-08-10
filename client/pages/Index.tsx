@@ -993,48 +993,115 @@ export default function Index() {
     setFormErrors({});
   };
 
-  // Track ViewContent event
+  // Facebook Standard Events Tracking Functions
+
+  // Track ViewContent event (Facebook Standard Event)
   const trackViewContent = (
     contentType: string,
     contentId: string,
     contentName: string,
   ) => {
-    console.log("🎯 Tracking ViewContent:", {
-      contentType,
-      contentId,
-      contentName,
-    });
+    console.log("📱 Facebook Event: ViewContent -", contentName);
 
-    const viewContentData = {
+    const eventData = {
       content_type: contentType,
       content_ids: [contentId],
       content_name: contentName,
       currency: "BRL",
       value: 0,
-      ...getAnalyticsData(),
     };
 
-    // Meta Pixel ViewContent
+    // Facebook Standard Event: ViewContent
     if (META_PIXEL_ID && window.fbq) {
-      window.fbq("track", "ViewContent", {
-        content_type: contentType,
-        content_ids: [contentId],
-        content_name: contentName,
-        currency: "BRL",
-        value: 0,
-      });
-      console.log("✅ Meta Pixel: ViewContent tracked -", contentName);
-    } else {
-      console.warn("❌ Meta Pixel ViewContent não enviado: fbq não disponível");
+      window.fbq("track", "ViewContent", eventData);
+      console.log("✅ Facebook ViewContent tracked:", eventData);
     }
 
-    // Custom ViewContent tracking
-    trackEvent("view_content", viewContentData);
+    // Custom tracking
+    trackEvent("view_content", { ...eventData, ...getAnalyticsData() });
 
-    // Meta Conversion API ViewContent
+    // Meta Conversion API
     if (META_ACCESS_TOKEN && META_PIXEL_ID) {
-      console.log("📡 Enviando ViewContent para Meta Conversion API...");
-      sendMetaConversionAPI("view_content", viewContentData, viewContentData);
+      sendMetaConversionAPI("ViewContent", eventData, { ...eventData, ...getAnalyticsData() });
+    }
+  };
+
+  // Track Lead event (Facebook Standard Event)
+  const trackLead = (contentName: string = "Lojista Registration") => {
+    console.log("📱 Facebook Event: Lead -", contentName);
+
+    const eventData = {
+      content_name: contentName,
+      content_category: "Lojistas",
+      currency: "BRL",
+      value: 1,
+    };
+
+    // Facebook Standard Event: Lead
+    if (META_PIXEL_ID && window.fbq) {
+      window.fbq("track", "Lead", eventData);
+      console.log("✅ Facebook Lead tracked:", eventData);
+    }
+
+    // Custom tracking
+    trackEvent("lead", { ...eventData, ...getAnalyticsData() });
+
+    // Meta Conversion API
+    if (META_ACCESS_TOKEN && META_PIXEL_ID) {
+      sendMetaConversionAPI("Lead", eventData, { ...eventData, ...getAnalyticsData() });
+    }
+  };
+
+  // Track CompleteRegistration event (Facebook Standard Event)
+  const trackCompleteRegistration = (method: string = "form") => {
+    console.log("📱 Facebook Event: CompleteRegistration -", method);
+
+    const eventData = {
+      content_name: "Lojista Registration",
+      content_category: "Lojistas",
+      currency: "BRL",
+      value: 1,
+      status: "completed",
+    };
+
+    // Facebook Standard Event: CompleteRegistration
+    if (META_PIXEL_ID && window.fbq) {
+      window.fbq("track", "CompleteRegistration", eventData);
+      console.log("✅ Facebook CompleteRegistration tracked:", eventData);
+    }
+
+    // Custom tracking
+    trackEvent("complete_registration", { ...eventData, ...getAnalyticsData() });
+
+    // Meta Conversion API
+    if (META_ACCESS_TOKEN && META_PIXEL_ID) {
+      sendMetaConversionAPI("CompleteRegistration", eventData, { ...eventData, ...getAnalyticsData() });
+    }
+  };
+
+  // Track SubmitApplication event (Facebook Standard Event)
+  const trackSubmitApplication = () => {
+    console.log("📱 Facebook Event: SubmitApplication");
+
+    const eventData = {
+      content_name: "Lojista Application",
+      content_category: "Business Applications",
+      currency: "BRL",
+      value: 1,
+    };
+
+    // Facebook Standard Event: SubmitApplication
+    if (META_PIXEL_ID && window.fbq) {
+      window.fbq("track", "SubmitApplication", eventData);
+      console.log("✅ Facebook SubmitApplication tracked:", eventData);
+    }
+
+    // Custom tracking
+    trackEvent("submit_application", { ...eventData, ...getAnalyticsData() });
+
+    // Meta Conversion API
+    if (META_ACCESS_TOKEN && META_PIXEL_ID) {
+      sendMetaConversionAPI("SubmitApplication", eventData, { ...eventData, ...getAnalyticsData() });
     }
   };
   return (
