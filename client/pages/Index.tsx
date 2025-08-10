@@ -339,7 +339,7 @@ export default function Index() {
       name: "Amanda Costa",
       store: "Urban Fashion - Rio de Janeiro, RJ",
       avatar: "A",
-      text: "O suporte da equipe Ecko �� incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério.",
+      text: "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério.",
     },
     {
       id: 3,
@@ -987,7 +987,7 @@ export default function Index() {
     }
   };
 
-  // Handlers para campos do formulário
+  // Handlers para campos do formul��rio
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
@@ -1429,7 +1429,7 @@ export default function Index() {
           <div className="mb-6">
             <img
               src="/images/brand/ecko-logo.webp"
-              alt="Logo Ecko"
+              alt={`Logo ${BRAND_NAME}`}
               className="h-20 w-auto mx-auto"
               loading="eager"
               fetchPriority="high"
