@@ -914,7 +914,8 @@ export default function Index() {
                         Marca Internacional
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Representa uma marca de streetwear reconhecida mundialmente.
+                        Representa uma marca de streetwear reconhecida
+                        mundialmente.
                       </p>
                     </div>
                   </div>
@@ -942,7 +943,8 @@ export default function Index() {
                         Plataforma Online
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Acesse nosso catálogo digital com preços exclusivos para lojistas.
+                        Acesse nosso catálogo digital com preços exclusivos para
+                        lojistas.
                       </p>
                     </div>
                   </div>
@@ -956,7 +958,8 @@ export default function Index() {
                         Apoio às Vendas
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Treinamento, materiais de marketing e suporte comercial especializado.
+                        Treinamento, materiais de marketing e suporte comercial
+                        especializado.
                       </p>
                     </div>
                   </div>
@@ -1250,7 +1253,8 @@ export default function Index() {
                       🔒 Seus dados estão protegidos e seguros
                     </p>
                     <p className="text-xs text-gray-500">
-                      Ao enviar, você concorda em receber informações sobre nossa parceria.
+                      Ao enviar, você concorda em receber informações sobre
+                      nossa parceria.
                     </p>
                   </div>
                 </form>
