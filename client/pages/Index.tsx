@@ -1640,7 +1640,7 @@ export default function Index() {
                                 <div className="flex items-center space-x-1 text-primary">
                                   <span className="text-2xl">★★★★★</span>
                                 </div>
-                                <blockquote className="text-lg text-gray-700 leading-relaxed italic">
+                                <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
                                 </blockquote>
                                 <div className="flex items-center space-x-4">
