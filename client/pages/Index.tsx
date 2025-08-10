@@ -1588,8 +1588,13 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Slider Container */}
-            <div className="relative">
+            {/* Slider Container with touch support */}
+            <div
+              className="relative"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               {/* Desktop Navigation Arrows */}
               <div className="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
                 <button
