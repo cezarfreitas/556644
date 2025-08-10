@@ -65,7 +65,11 @@ export default function Index() {
     import.meta.env.VITE_WHATSAPP_URL || "https://eckoshop.com.br";
 
   // Debug: Log social media URLs to verify they're loaded correctly
-  console.log("Social Media URLs:", {
+  console.log("🔧 Environment Variables Debug:");
+  console.log("VITE_FACEBOOK_URL:", import.meta.env.VITE_FACEBOOK_URL);
+  console.log("VITE_INSTAGRAM_URL:", import.meta.env.VITE_INSTAGRAM_URL);
+  console.log("VITE_WHATSAPP_URL:", import.meta.env.VITE_WHATSAPP_URL);
+  console.log("📱 Final Social Media URLs:", {
     facebook: FACEBOOK_URL,
     instagram: INSTAGRAM_URL,
     whatsapp: WHATSAPP_URL,
