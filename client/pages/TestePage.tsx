@@ -14,13 +14,15 @@ export default function TestePage() {
         GA4_MEASUREMENT_ID: import.meta.env.VITE_GA4_MEASUREMENT_ID,
         GTM_ID: import.meta.env.VITE_GTM_ID,
         META_PIXEL_ID: import.meta.env.VITE_META_PIXEL_ID,
-        META_ACCESS_TOKEN: import.meta.env.VITE_META_ACCESS_TOKEN ? "Present" : "Missing"
+        META_ACCESS_TOKEN: import.meta.env.VITE_META_ACCESS_TOKEN
+          ? "Present"
+          : "Missing",
       });
 
       console.log("Window objects:", {
         gtag: typeof window.gtag,
         fbq: typeof window.fbq,
-        dataLayer: Array.isArray(window.dataLayer)
+        dataLayer: Array.isArray(window.dataLayer),
       });
 
       setPageStatus("✅ Página carregada com sucesso");
@@ -292,9 +294,9 @@ export default function TestePage() {
   // Simple test to verify component is working
   const testComponent = () => {
     console.log("🧪 Component test button clicked");
-    setTestResults(prev => ({
+    setTestResults((prev) => ({
       ...prev,
-      component: "✅ Componente funcionando corretamente!"
+      component: "✅ Componente funcionando corretamente!",
     }));
   };
 
