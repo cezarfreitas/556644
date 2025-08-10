@@ -1245,6 +1245,14 @@ export default function Index() {
                           </div>
                         </label>
                       </div>
+                      {formErrors.cnpj && !showCnpjField && (
+                        <div className="mt-1 p-2 bg-red-900/20 border border-red-500/30 rounded-lg">
+                          <p className="text-red-300 text-sm flex items-center gap-2">
+                            <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
+                            {formErrors.cnpj}
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     {/* Mensagem de Cupom para Consumidores */}
