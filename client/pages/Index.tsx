@@ -712,13 +712,24 @@ export default function Index() {
 
     try {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
+
+      // Create a more robust fetch request with better error handling
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
       const response = await fetch(API_FORM_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json",
         },
         body: JSON.stringify(payload),
+        signal: controller.signal,
+        mode: "cors", // Explicitly set CORS mode
+        credentials: "omit", // Don't send credentials to avoid CORS issues
       });
+
+      clearTimeout(timeoutId);
 
       if (response.ok) {
         // Track sucesso do envio
