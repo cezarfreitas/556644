@@ -696,10 +696,36 @@ export default function Index() {
     return "";
   };
 
+  // Track InitiateCheckout event (Facebook Standard Event)
+  const trackInitiateCheckout = (contentName: string) => {
+    console.log("📱 Facebook Event: InitiateCheckout -", contentName);
+
+    const eventData = {
+      content_name: contentName,
+      content_category: "Lojistas",
+      currency: "BRL",
+      value: 0,
+    };
+
+    // Facebook Standard Event: InitiateCheckout
+    if (META_PIXEL_ID && window.fbq) {
+      window.fbq("track", "InitiateCheckout", eventData);
+      console.log("✅ Facebook InitiateCheckout tracked:", eventData);
+    }
+
+    // Custom tracking
+    trackEvent("initiate_checkout", { ...eventData, ...getAnalyticsData() });
+  };
+
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
     setShowCnpjField(value === "sim");
     setShowCouponMessage(value === "nao-consumidor");
+
+    // Facebook Standard Event for business type selection
+    if (value === "sim") {
+      trackInitiateCheckout("Business Registration - CNPJ Selected");
+    }
 
     // Track evento de seleção CNPJ
     trackEvent("cnpj_selection", {
