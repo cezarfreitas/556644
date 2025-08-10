@@ -725,11 +725,11 @@ export default function Index() {
           has_cnpj: selectedCnpj === "sim",
         });
 
-        // Se for consumidor, abre WhatsApp após enviar dados
+        setSubmitStatus('success');
+
+        // Se for consumidor, prepara mensagem específica e abre WhatsApp
         if (selectedCnpj === "nao-consumidor") {
-          alert(
-            "Dados enviados! Redirecionando para receber seu cupom de desconto.",
-          );
+          setSubmitMessage("🎉 Dados enviados com sucesso! Clique no botão abaixo para receber seu cupom de 10% de desconto via WhatsApp.");
 
           // Track clique do WhatsApp
           trackEvent("whatsapp_redirect", {
@@ -737,20 +737,23 @@ export default function Index() {
             lead_type: "consumer",
           });
 
-          window.open(
-            "https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!",
-            "_blank",
-          );
+          // Delay para mostrar mensagem antes de abrir WhatsApp
+          setTimeout(() => {
+            window.open(
+              "https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!",
+              "_blank",
+            );
+          }, 1000);
         } else {
-          alert(
-            "Formulário enviado com sucesso! Entraremos em contato em breve.",
-          );
+          setSubmitMessage("✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.");
         }
 
+        // Reset form
         e.currentTarget.reset();
         setSelectedCnpj("");
         setShowCnpjField(false);
         setShowCouponMessage(false);
+        setFormErrors({});
       } else {
         // Track erro do envio
         trackEvent("form_submission_error", {
@@ -763,7 +766,8 @@ export default function Index() {
           },
         });
 
-        alert("Erro ao enviar formulário. Tente novamente.");
+        setSubmitStatus('error');
+        setSubmitMessage("❌ Erro ao enviar formulário. Por favor, verifique os dados e tente novamente.");
       }
     } catch (error) {
       // Track erro de conexão
@@ -1473,7 +1477,7 @@ export default function Index() {
                 </div>
                 <div className="mt-6 space-y-3">
                   <p className="text-gray-400 text-sm italic">
-                    "Viva a experiência Ecko em nosso showroom exclusivo"
+                    "Viva a experi��ncia Ecko em nosso showroom exclusivo"
                   </p>
                   <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                 </div>
