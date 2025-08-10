@@ -771,7 +771,7 @@ export default function Index() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fe8944e5525914e1f8994c2dc4f9b44eb?format=webp&width=800"
+            src="/images/hero/hero-background.webp"
             alt="Ecko Streetwear Background"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
