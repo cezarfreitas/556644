@@ -765,6 +765,7 @@ export default function Index() {
               </h1>
             </div>
 
+<<<<<<< HEAD
             {/* Subtitle */}
             <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Faça parte da{" "}
@@ -803,6 +804,85 @@ export default function Index() {
               <div
                 className="flex flex-col items-center cursor-pointer group"
                 onClick={() => {
+=======
+        {/* Floating Elements Background */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ zIndex: 3 }}
+        >
+          {/* Geometric Shapes */}
+          <div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-12 h-12 bg-primary/20 rounded-lg rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-40 left-20 w-16 h-16 border border-white/10 rotate-12 animate-bounce-slow"></div>
+          <div className="absolute bottom-20 right-40 w-8 h-8 bg-white/10 rounded-full animate-pulse"></div>
+        </div>
+
+        {/* Hero Content - Redesigned */}
+        <div
+          className="relative flex flex-col items-center justify-center h-full w-full px-4 md:px-8 text-center"
+          style={{ zIndex: 10 }}
+        >
+          {/* Logo com Efeito Glow */}
+          <div className="mb-12 animate-fade-in relative">
+            <div className="absolute inset-0 bg-primary/30 rounded-full blur-2xl scale-150 animate-pulse"></div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F45492654d05e45aa9c0a6985c655603d?format=webp&width=800"
+              alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
+              className="relative h-20 sm:h-24 md:h-28 lg:h-32 w-auto mx-auto drop-shadow-2xl filter brightness-110 hover:scale-105 transition-transform duration-500"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width="200"
+              height="80"
+            />
+          </div>
+
+          {/* Main Heading - Completamente Novo */}
+          <div className="text-center mb-8 animate-slide-up">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.85] tracking-tight mb-4">
+              <span className="block text-white drop-shadow-2xl mb-2 filter contrast-125">
+                SEJA UM
+              </span>
+              <span className="block text-white drop-shadow-2xl filter contrast-125 bg-gradient-to-r from-primary via-red-500 to-orange-500 bg-clip-text text-transparent [text-shadow:_0_4px_12px_rgba(0,0,0,0.8)]">
+                LOJISTA OFICIAL
+              </span>
+              <span className="block text-white drop-shadow-2xl mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl filter contrast-125">
+                ECKO
+              </span>
+            </h1>
+          </div>
+
+          {/* Enhanced Subtitle */}
+          <p className="text-lg sm:text-xl md:text-2xl text-white text-center max-w-4xl leading-relaxed mb-8 sm:mb-12 animate-slide-up px-4 drop-shadow-lg filter contrast-125">
+            Faça parte da{" "}
+            <span className="font-bold text-white bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+              rede de distribuidores oficiais
+            </span>{" "}
+            da maior marca de moda urbana do Brasil,{" "}
+            <span className="font-semibold text-white">
+              reconhecida mundialmente
+            </span>
+          </p>
+
+          {/* Primary CTA Button */}
+          <div className="flex justify-center mb-8 sm:mb-16 animate-fade-in">
+            <a
+              href="#cadastro-lojistas"
+              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-primary via-red-600 to-red-700 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-10 py-5 rounded-2xl text-lg font-black transition-all duration-500 transform hover:scale-110 hover:shadow-2xl shadow-xl uppercase tracking-wide gap-3 border-2 border-white/30 hover:border-white/50 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              <span className="relative">CADASTRE-SE AGORA</span>
+              <FaArrowRight className="relative w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
+            </a>
+          </div>
+
+          {/* Scroll Indicator - Enhanced */}
+          <div className="absolute bottom-8 w-full flex justify-center animate-fade-in">
+            <div
+              className="flex flex-col items-center cursor-pointer group"
+              onClick={() => {
+                requestAnimationFrame(() => {
+>>>>>>> 11361af1976de16a7e07db865ccacf6ed2659086
                   const element = document.getElementById("cadastro-lojistas");
                   if (element) {
                     element.scrollIntoView({
@@ -810,6 +890,7 @@ export default function Index() {
                       block: "start",
                     });
                   }
+<<<<<<< HEAD
                 }}
               >
                 <div className="text-gray-500 group-hover:text-gray-700 transition-colors duration-300 text-center">
@@ -819,12 +900,43 @@ export default function Index() {
                   <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
                     <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
                   </div>
+=======
+                });
+              }}
+            >
+              <div className="text-white group-hover:text-white transition-colors duration-300 text-center mb-3">
+                <div className="text-xs uppercase tracking-widest font-medium mb-1 drop-shadow-md">
+                  Role para baixo
+                </div>
+                <div className="w-12 h-6 border-2 border-white/60 rounded-full flex justify-center">
+                  <div className="w-1 h-2 bg-white rounded-full mt-1 animate-bounce drop-shadow-sm"></div>
+>>>>>>> 11361af1976de16a7e07db865ccacf6ed2659086
                 </div>
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
+=======
+
+        {/* Particle Effect Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ zIndex: 5 }}
+        >
+          <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/30 rounded-full animate-twinkle"></div>
+          <div
+            className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/50 rounded-full animate-twinkle"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-white/40 rounded-full animate-twinkle"
+            style={{ animationDelay: "2s" }}
+          ></div>
+        </div>
+      </header>
+>>>>>>> 11361af1976de16a7e07db865ccacf6ed2659086
 
       {/* Cadastro de Lojistas - Formulário de Parceria - Otimizado para mobile */}
       <section
@@ -1672,12 +1784,11 @@ export default function Index() {
               <div className="space-y-6 max-w-md mx-auto">
                 <div className="flex items-center justify-center space-x-3">
                   <img
-                    src="/images/brand/ecko-logo.webp"
-                    alt="Logo Ecko - Marca de Streetwear"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F45492654d05e45aa9c0a6985c655603d?format=webp&width=800"
+                    alt="Logo - Marca de Streetwear"
                     className="h-12 w-auto"
                     loading="lazy"
                   />
-                  <span className="text-2xl font-bold text-white">Ecko</span>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
@@ -1685,22 +1796,22 @@ export default function Index() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href="https://www.facebook.com/ecko"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300"
-                    aria-label="Siga a Ecko no Facebook - Abre em nova aba"
-                    title="Siga a Ecko no Facebook"
+                    aria-label="Siga no Facebook - Abre em nova aba"
+                    title="Siga no Facebook"
                   >
                     <FaFacebook className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href="https://www.instagram.com/ecko"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors duration-300"
-                    aria-label="Siga a Ecko no Instagram - Abre em nova aba"
-                    title="Siga a Ecko no Instagram"
+                    aria-label="Siga no Instagram - Abre em nova aba"
+                    title="Siga no Instagram"
                   >
                     <FaInstagram className="w-6 h-6 text-white" />
                   </a>
@@ -1722,7 +1833,7 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div className="text-gray-300 text-sm">
-                  © 2024 Ecko. Todos os direitos reservados.
+                  © 2024. Todos os direitos reservados.
                 </div>
                 <div className="flex space-x-6 text-sm">
                   <a
