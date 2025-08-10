@@ -416,7 +416,7 @@ export default function Index() {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target.id === "galeria-produtos") {
             console.log(
-              "��� Galeria de produtos ficou visível, disparando ViewContent",
+              "👁️ Galeria de produtos ficou visível, disparando ViewContent",
             );
             trackViewContent(
               "product_gallery",
@@ -1462,7 +1462,7 @@ export default function Index() {
 
   // Track CompleteRegistration event (Facebook Standard Event)
   const trackCompleteRegistration = (method: string = "form") => {
-    console.log("�� Facebook Event: CompleteRegistration -", method);
+    console.log("📱 Facebook Event: CompleteRegistration -", method);
 
     const eventData = {
       content_name: "Lojista Registration",
