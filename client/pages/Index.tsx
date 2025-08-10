@@ -119,11 +119,29 @@ export default function Index() {
         // Aguardar script carregar e inicializar
         setTimeout(() => {
           if (window.fbq) {
-            window.fbq("init", META_PIXEL_ID);
+            window.fbq("init", META_PIXEL_ID, {
+              // Enable automatic configuration for better cookie setting
+              autoConfig: true,
+              debug: false, // Set to true for debugging
+            });
             window.fbq("track", "PageView");
             console.log("✅ Meta Pixel: PageView tracked on page load");
+
+            // Log cookie status after initialization
+            setTimeout(() => {
+              const fbc = getCookie("_fbc");
+              const fbp = getCookie("_fbp");
+              console.log("Meta Pixel Cookie Status:", {
+                fbc: fbc ? "Set" : "Missing",
+                fbp: fbp ? "Set" : "Missing",
+                fbc_value: fbc?.substring(0, 20) + "..." || "None",
+                fbp_value: fbp?.substring(0, 20) + "..." || "None",
+              });
+            }, 1000);
+          } else {
+            console.error("❌ Meta Pixel: fbq not available after load");
           }
-        }, 100);
+        }, 500); // Increased timeout to ensure script loads
       };
 
       // Usar requestIdleCallback para carregar de forma não bloqueante
@@ -1063,7 +1081,7 @@ export default function Index() {
       form_completion_time:
         performance.now() - (window.formStartTime || performance.now()),
 
-      // Informações de conversão
+      // Informa��ões de conversão
       conversion_page: "/",
       conversion_element: "main_form",
       conversion_position: "hero_section",
