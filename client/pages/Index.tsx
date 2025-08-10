@@ -1734,9 +1734,9 @@ export default function Index() {
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      20+
+                      30+
                     </div>
-                    <div className="text-gray-600 text-sm">Anos de Mercado</div>
+                    <div className="text-gray-600 text-sm">Anos de História</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
