@@ -754,20 +754,9 @@ export default function Index() {
           />
         </div>
 
-        {/* Overlay System - Optimized */}
+        {/* Simple Solid Overlay for Testing */}
         <div className="absolute inset-0">
-          {/* Base Dark Overlay */}
-          <div className="absolute inset-0 bg-black/60"></div>
-          {/* Center Spotlight for Logo and Text */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 70% 60% at center center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.9) 100%)",
-            }}
-          ></div>
-          {/* Brand Color Accent */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
         {/* Floating Elements Background */}
