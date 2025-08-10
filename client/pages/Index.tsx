@@ -783,8 +783,8 @@ export default function Index() {
         <div className="relative flex flex-col items-center justify-center h-full px-4 md:px-8 py-8 sm:py-16" style={{ zIndex: 10 }}>
           {/* Top Badge */}
           <div className="mb-8 animate-fade-in">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
-              <span className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-md border border-white/40">
+              <span className="text-white text-sm font-semibold tracking-wide uppercase drop-shadow-lg">
                 🔥 Oportunidade Exclusiva
               </span>
             </div>
@@ -884,10 +884,10 @@ export default function Index() {
                 });
               }}
             >
-              <div className="text-white/70 group-hover:text-white transition-colors duration-300 text-center mb-3">
-                <div className="text-xs uppercase tracking-widest font-medium mb-1">Role para baixo</div>
-                <div className="w-12 h-6 border-2 border-white/30 rounded-full flex justify-center">
-                  <div className="w-1 h-2 bg-white/50 rounded-full mt-1 animate-bounce"></div>
+              <div className="text-white group-hover:text-white transition-colors duration-300 text-center mb-3">
+                <div className="text-xs uppercase tracking-widest font-medium mb-1 drop-shadow-md">Role para baixo</div>
+                <div className="w-12 h-6 border-2 border-white/60 rounded-full flex justify-center">
+                  <div className="w-1 h-2 bg-white rounded-full mt-1 animate-bounce drop-shadow-sm"></div>
                 </div>
               </div>
             </div>
