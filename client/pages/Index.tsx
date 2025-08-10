@@ -1575,7 +1575,7 @@ export default function Index() {
           {/* Mobile Subtitle */}
           <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
             <span className="font-bold text-white">Cadastre-se agora</span> e
-            tenha acesso à nossa plataforma digital com pre��os exclusivos para
+            tenha acesso à nossa plataforma digital com preços exclusivos para
             lojistas.
           </p>
 
@@ -2568,7 +2568,7 @@ export default function Index() {
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana através da moda aut��ntica.
+                  urbana através da moda aut���ntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
