@@ -724,6 +724,11 @@ export default function Index() {
     try {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
 
+      // Validate endpoint before making request
+      if (!isValidUrl(API_FORM_ENDPOINT)) {
+        throw new Error("Invalid API endpoint URL");
+      }
+
       // Create a more robust fetch request with better error handling
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
