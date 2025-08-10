@@ -433,7 +433,7 @@ export default function Index() {
               value: fullEventData.engagement_score || 1,
               currency: "BRL",
             },
-            event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplica��ão
+            event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplicação
           },
         ],
         access_token: META_ACCESS_TOKEN,
