@@ -1209,14 +1209,14 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Coleções Exclusivas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Ecko
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-4">
-                Descubra as coleções oficiais Ecko, com design autêntico e
+                Descubra as coleç��es oficiais Ecko, com design autêntico e
                 qualidade premium. Produtos únicos que valorizam sua loja e
                 encantam seus clientes.
               </p>
