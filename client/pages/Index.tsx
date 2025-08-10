@@ -1035,6 +1035,7 @@ export default function Index() {
                   </h3>
                 </div>
 
+                {submitStatus === 'idle' && (
                 <form
                   className="space-y-3"
                   onSubmit={handleFormSubmit}
@@ -1298,6 +1299,7 @@ export default function Index() {
                     </button>
                   </div>
                 </form>
+                )}
 
                 {/* Mensagens de Sucesso/Erro */}
                 {submitStatus !== 'idle' && (
