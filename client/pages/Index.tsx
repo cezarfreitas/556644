@@ -1151,9 +1151,9 @@ export default function Index() {
                         <p className="text-white font-medium">
                           Este cadastro é exclusivo para lojistas com CNPJ
                         </p>
-                        <p className="text-gray-700">
+                        <p className="text-gray-200">
                           Mas não fique triste! Temos um cupom com{" "}
-                          <span className="font-bold text-primary">
+                          <span className="font-bold text-yellow-300">
                             10% de desconto
                           </span>{" "}
                           para voc��
