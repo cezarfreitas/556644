@@ -735,111 +735,82 @@ export default function Index() {
     try {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
 
-      // Use a hidden form submission to bypass CORS restrictions completely
-      const form = document.createElement("form");
-      form.method = "POST";
-      form.action = API_FORM_ENDPOINT;
-      form.style.display = "none";
+      // Create FormData with individual fields instead of JSON
+      const formData = new FormData();
 
-      // Add essential form fields as individual inputs
-      const formFields = {
-        name: payload.name,
-        whatsapp: payload.whatsapp,
-        hasCnpj: payload.hasCnpj,
-        cnpj: payload.cnpj,
-        marca: payload.marca,
-        origem: payload.origem,
-        campaign_type: payload.campaign_type,
-        lead_source: payload.lead_source,
-        lead_quality: payload.lead_quality,
-        lead_type: payload.lead_type,
-        page_url: payload.page_url,
-        page_title: payload.page_title,
-        user_agent: payload.user_agent,
-        language: payload.language,
-        timezone: payload.timezone,
-        session_id: payload.session_id,
-        timestamp: payload.timestamp,
-        is_mobile: payload.is_mobile,
-        is_desktop: payload.is_desktop,
-        browser: payload.browser,
-        form_completion_time: payload.form_completion_time,
-        engagement_score: payload.engagement_score,
-        utm_source: payload.utm_source,
-        utm_medium: payload.utm_medium,
-        utm_campaign: payload.utm_campaign,
-        traffic_source: payload.traffic_source,
-        referrer: payload.referrer
-      };
+      // Add essential form fields
+      formData.append('name', payload.name || '');
+      formData.append('whatsapp', payload.whatsapp || '');
+      formData.append('hasCnpj', payload.hasCnpj || '');
+      formData.append('cnpj', payload.cnpj || '');
+      formData.append('marca', payload.marca || '');
+      formData.append('origem', payload.origem || '');
+      formData.append('campaign_type', payload.campaign_type || '');
+      formData.append('lead_source', payload.lead_source || '');
+      formData.append('lead_quality', payload.lead_quality || '');
+      formData.append('lead_type', payload.lead_type || '');
+      formData.append('page_url', payload.page_url || '');
+      formData.append('page_title', payload.page_title || '');
+      formData.append('user_agent', payload.user_agent || '');
+      formData.append('language', payload.language || '');
+      formData.append('timezone', payload.timezone || '');
+      formData.append('session_id', payload.session_id || '');
+      formData.append('timestamp', payload.timestamp || '');
+      formData.append('is_mobile', String(payload.is_mobile || false));
+      formData.append('is_desktop', String(payload.is_desktop || false));
+      formData.append('browser', payload.browser || '');
+      formData.append('form_completion_time', String(payload.form_completion_time || 0));
+      formData.append('engagement_score', String(payload.engagement_score || 0));
+      formData.append('utm_source', payload.utm_source || '');
+      formData.append('utm_medium', payload.utm_medium || '');
+      formData.append('utm_campaign', payload.utm_campaign || '');
+      formData.append('traffic_source', payload.traffic_source || '');
+      formData.append('referrer', payload.referrer || '');
 
-      // Add each field as a hidden input
-      Object.entries(formFields).forEach(([key, value]) => {
-        const input = document.createElement("input");
-        input.type = "hidden";
-        input.name = key;
-        input.value = value !== null && value !== undefined ? String(value) : "";
-        form.appendChild(input);
+      // Use fetch with FormData (no Content-Type header needed for FormData)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000);
+
+      const response = await fetch(API_FORM_ENDPOINT, {
+        method: "POST",
+        body: formData, // Send as FormData instead of JSON
+        signal: controller.signal,
+        mode: "no-cors", // Keep no-cors to avoid CORS issues
+        credentials: "omit",
       });
 
-      // Create a hidden iframe to capture the response without redirecting
-      const iframe = document.createElement("iframe");
-      iframe.name = "form-submission-frame";
-      iframe.style.display = "none";
-      form.target = iframe.name;
+      clearTimeout(timeoutId);
 
-      document.body.appendChild(iframe);
-      document.body.appendChild(form);
+      // Track sucesso do envio
+      trackEvent("form_submission_success", {
+        lead_type: selectedCnpj === "sim" ? "business" : "consumer",
+        form_completion_time: performance.now() - (window.formStartTime || 0),
+        has_cnpj: selectedCnpj === "sim",
+      });
 
-      // Set up timeout and success tracking
-      let submitted = false;
+      console.log("Form submitted successfully with FormData");
+      setSubmitStatus("success");
 
-      const submitForm = () => {
-        if (!submitted) {
-          submitted = true;
-          form.submit();
+      // Mensagem de sucesso simples
+      setSubmitMessage(
+        "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
+      );
 
-          // Clean up after a short delay
-          setTimeout(() => {
-            document.body.removeChild(form);
-            document.body.removeChild(iframe);
-          }, 1000);
+      // Reset form values
+      setFormValues({ name: "", whatsapp: "", cnpj: "" });
+      setSelectedCnpj("");
+      setShowCnpjField(false);
+      setShowCouponMessage(false);
+      setFormErrors({});
 
-          // Track sucesso do envio
-          trackEvent("form_submission_success", {
-            lead_type: selectedCnpj === "sim" ? "business" : "consumer",
-            form_completion_time:
-              performance.now() - (window.formStartTime || 0),
-            has_cnpj: selectedCnpj === "sim",
-          });
-
-          console.log("Form submitted successfully via iframe method");
-          setSubmitStatus("success");
-
-          // Mensagem de sucesso simples
-          setSubmitMessage(
-            "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
-          );
-
-          // Reset form values
-          setFormValues({ name: "", whatsapp: "", cnpj: "" });
-          setSelectedCnpj("");
-          setShowCnpjField(false);
-          setShowCouponMessage(false);
-          setFormErrors({});
-
-          // Reset the form element safely
-          try {
-            if (e.currentTarget) {
-              e.currentTarget.reset();
-            }
-          } catch (resetError) {
-            console.log("Form reset not needed, values already cleared");
-          }
+      // Reset the form element safely
+      try {
+        if (e.currentTarget) {
+          e.currentTarget.reset();
         }
-      };
-
-      // Submit the form
-      submitForm();
+      } catch (resetError) {
+        console.log("Form reset not needed, values already cleared");
+      }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
 
