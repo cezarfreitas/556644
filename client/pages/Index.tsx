@@ -538,24 +538,68 @@ export default function Index() {
       // Build proper user_data with required fields for Meta API
       const userData: any = {
         client_user_agent: navigator.userAgent,
+        client_ip_address: null, // Meta will populate this server-side
       };
 
       // Add Facebook cookies if available (required for better matching)
       const fbc = getCookie("_fbc");
       const fbp = getCookie("_fbp");
-      if (fbc) userData.fbc = fbc;
-      if (fbp) userData.fbp = fbp;
 
-      // Add client IP placeholder (Meta will populate this server-side)
-      userData.client_ip_address = null;
+      // Ensure we have Facebook cookies - critical for conversion attribution
+      if (fbc) {
+        userData.fbc = fbc;
+        console.log("Meta API: Facebook click ID found (_fbc)");
+      } else {
+        console.warn("Meta API: Missing Facebook click ID (_fbc) - this may reduce attribution accuracy");
+      }
+
+      if (fbp) {
+        userData.fbp = fbp;
+        console.log("Meta API: Facebook browser ID found (_fbp)");
+      } else {
+        console.warn("Meta API: Missing Facebook browser ID (_fbp) - this may reduce attribution accuracy");
+        // Try to get from fbq if available
+        if (window.fbq && window.fbq.getState) {
+          try {
+            const fbState = window.fbq.getState();
+            if (fbState && fbState.pixels && fbState.pixels[META_PIXEL_ID]) {
+              const pixelState = fbState.pixels[META_PIXEL_ID];
+              if (pixelState.userData && pixelState.userData.fbp) {
+                userData.fbp = pixelState.userData.fbp;
+                console.log("Meta API: Retrieved fbp from pixel state");
+              }
+            }
+          } catch (e) {
+            console.warn("Could not retrieve fbp from pixel state:", e);
+          }
+        }
+      }
 
       // Add hashed phone number if available from form data
       if (fullEventData?.whatsapp) {
-        // Simple hash for phone (Meta expects SHA256, but this is better than plain text)
         const phoneNumbers = fullEventData.whatsapp.replace(/\D/g, '');
         if (phoneNumbers.length >= 10) {
           userData.ph = phoneNumbers; // Meta will hash this server-side
+          console.log("Meta API: Phone number added for better matching");
         }
+      }
+
+      // Add email if available (for better matching)
+      if (fullEventData?.email) {
+        userData.em = fullEventData.email.toLowerCase().trim();
+        console.log("Meta API: Email added for better matching");
+      }
+
+      // Add first name and last name if available
+      if (fullEventData?.name) {
+        const nameParts = fullEventData.name.trim().split(' ');
+        if (nameParts.length >= 1) {
+          userData.fn = nameParts[0].toLowerCase();
+        }
+        if (nameParts.length >= 2) {
+          userData.ln = nameParts.slice(1).join(' ').toLowerCase();
+        }
+        console.log("Meta API: Name data added for better matching");
       }
 
       // Build custom_data based on event type
@@ -601,6 +645,12 @@ export default function Index() {
 
       if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN.length < 20) {
         throw new Error("Invalid Access Token");
+      }
+
+      // Validate we have at least some user data for attribution
+      const hasUserData = userData.fbc || userData.fbp || userData.ph || userData.em;
+      if (!hasUserData) {
+        console.warn("Meta API: Warning - No strong user identifiers found (fbc, fbp, phone, email). Attribution may be limited.");
       }
 
       console.log("Meta Conversion API: Validated data for sending:", {
