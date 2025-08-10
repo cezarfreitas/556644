@@ -73,6 +73,7 @@ export default function TestePage() {
 
   // Test Google Tag Manager
   const testGTM = () => {
+    console.log("🟢 GTM test button clicked");
     try {
       if (GTM_ID && window.dataLayer) {
         window.dataLayer.push({
