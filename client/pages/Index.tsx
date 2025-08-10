@@ -741,12 +741,43 @@ export default function Index() {
       form.action = API_FORM_ENDPOINT;
       form.style.display = "none";
 
+      // Add essential form fields as individual inputs
+      const formFields = {
+        name: payload.name,
+        whatsapp: payload.whatsapp,
+        hasCnpj: payload.hasCnpj,
+        cnpj: payload.cnpj,
+        marca: payload.marca,
+        origem: payload.origem,
+        campaign_type: payload.campaign_type,
+        lead_source: payload.lead_source,
+        lead_quality: payload.lead_quality,
+        lead_type: payload.lead_type,
+        page_url: payload.page_url,
+        page_title: payload.page_title,
+        user_agent: payload.user_agent,
+        language: payload.language,
+        timezone: payload.timezone,
+        session_id: payload.session_id,
+        timestamp: payload.timestamp,
+        is_mobile: payload.is_mobile,
+        is_desktop: payload.is_desktop,
+        browser: payload.browser,
+        form_completion_time: payload.form_completion_time,
+        engagement_score: payload.engagement_score,
+        utm_source: payload.utm_source,
+        utm_medium: payload.utm_medium,
+        utm_campaign: payload.utm_campaign,
+        traffic_source: payload.traffic_source,
+        referrer: payload.referrer
+      };
+
       // Add each field as a hidden input
-      Object.entries(payload).forEach(([key, value]) => {
+      Object.entries(formFields).forEach(([key, value]) => {
         const input = document.createElement("input");
         input.type = "hidden";
         input.name = key;
-        input.value = typeof value === "string" ? value : JSON.stringify(value);
+        input.value = value !== null && value !== undefined ? String(value) : "";
         form.appendChild(input);
       });
 
