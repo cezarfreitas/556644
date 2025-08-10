@@ -23,7 +23,7 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Estados para validaç��o de formulário
+  // Estados para validação de formulário
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
@@ -656,7 +656,7 @@ export default function Index() {
 
       // Timestamps diferentes
       form_timestamp: new Date().toISOString(),
-      server_timestamp: null, // Ser�� preenchido no backend
+      server_timestamp: null, // Será preenchido no backend
     };
 
     console.log("Payload sendo enviado:", payload);
@@ -970,7 +970,7 @@ export default function Index() {
                           formErrors.name
                             ? "border-red-500 "
                             : formValues.name && !formErrors.name
-                              ? "border-green-500 focus:ring-green-500"
+                              ? "border-green-500 "
                               : "border-input "
                         }`}
                         placeholder="Seu nome completo"
@@ -1026,7 +1026,7 @@ export default function Index() {
                           formErrors.whatsapp
                             ? "border-red-500 "
                             : formValues.whatsapp && !formErrors.whatsapp
-                              ? "border-green-500 focus:ring-green-500"
+                              ? "border-green-500 "
                               : "border-input "
                         }`}
                         placeholder="(11) 99999-9999"
@@ -1140,7 +1140,7 @@ export default function Index() {
                             formErrors.cnpj
                               ? "border-red-500 "
                               : formValues.cnpj && !formErrors.cnpj
-                                ? "border-green-500 focus:ring-green-500"
+                                ? "border-green-500 "
                                 : "border-input "
                           }`}
                           placeholder="00.000.000/0000-00"
