@@ -1359,65 +1359,6 @@ export default function Index() {
                       {submitMessage}
                     </div>
 
-                    {submitStatus === "success" &&
-                      selectedCnpj === "nao-consumidor" && (
-                        <div className="space-y-4">
-                          <button
-                            onClick={() => {
-                              // Track clique manual do WhatsApp
-                              trackEvent("whatsapp_manual_click", {
-                                reason: "coupon_request",
-                                lead_type: "consumer",
-                                action: "manual_button_click",
-                              });
-                              window.open(
-                                "https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!",
-                                "_blank",
-                              );
-                            }}
-                            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300 mr-4"
-                          >
-                            🎁 Receber Cupom no WhatsApp
-                          </button>
-                        </div>
-                      )}
-
-                    {/* Special button for alternative submission (when API is down) */}
-                    {submitStatus === 'success' && submitMessage.includes('WhatsApp') && (
-                      <div className="space-y-4">
-                        <button
-                          onClick={() => {
-                            const name = formValues.name;
-                            const whatsapp = formValues.whatsapp;
-                            const cnpj = formValues.cnpj;
-                            const hasCnpj = selectedCnpj === "sim" ? "Sim" : "Não";
-
-                            const whatsappMessage = `
-🔥 *NOVO LEAD - LOJISTA ECKO*
-
-👤 *Nome:* ${name}
-📱 *WhatsApp:* ${whatsapp}
-🏢 *Tem CNPJ:* ${hasCnpj}
-${showCnpjField ? `📄 *CNPJ:* ${cnpj}` : ""}
-💰 *Tipo:* ${selectedCnpj === "sim" ? "Lojista (Business)" : "Consumidor Final"}
-
-🌐 *Origem:* Landing Page Lojistas
-⏰ *Data:* ${new Date().toLocaleString("pt-BR")}
-                            `.trim();
-
-                            trackEvent("alternative_whatsapp_click", {
-                              method: "manual_button_click",
-                              lead_type: selectedCnpj === "sim" ? "business" : "consumer",
-                            });
-
-                            window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
-                          }}
-                          className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-300 w-full"
-                        >
-                          📱 Enviar Dados via WhatsApp
-                        </button>
-                      </div>
-                    )}
 
                     <button
                       onClick={handleBackToForm}
