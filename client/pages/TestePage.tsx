@@ -206,18 +206,56 @@ export default function TestePage() {
 
       console.log("Testing Meta Conversion API with data:", conversionData);
 
-      const response = await fetch(
-        `https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+      // First, try standard fetch
+      setTestResults((prev) => ({
+        ...prev,
+        metaAPI: "🔄 Enviando para Meta Conversion API...",
+      }));
+
+      let response: Response;
+
+      try {
+        response = await fetch(
+          `https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(conversionData),
+            mode: "cors",
+            credentials: "omit",
           },
-          body: JSON.stringify(conversionData),
-          mode: "cors", // Explicitly set CORS mode
-          credentials: "omit",
-        },
-      );
+        );
+      } catch (fetchError) {
+        console.warn("Direct fetch failed, trying alternative method:", fetchError);
+
+        // Alternative: Try with no-cors mode
+        try {
+          response = await fetch(
+            `https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(conversionData),
+              mode: "no-cors",
+              credentials: "omit",
+            },
+          );
+
+          // With no-cors, we can't read the response, but if it doesn't throw, it likely worked
+          setTestResults((prev) => ({
+            ...prev,
+            metaAPI: "⚠️ Meta Conversion API: Enviado via no-cors mode. Verifique no Events Manager se o evento chegou com test code: " + META_TEST_EVENT_CODE,
+          }));
+          return;
+
+        } catch (noCorsError) {
+          throw new Error(`Fetch failed: ${fetchError.message}. No-cors also failed: ${noCorsError.message}`);
+        }
+      }
 
       // Handle CORS issues - Meta API may block browser requests
       let responseData: string = "";
