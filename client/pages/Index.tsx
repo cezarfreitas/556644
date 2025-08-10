@@ -1006,7 +1006,7 @@ export default function Index() {
     if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
-    // Valida��ão de CNPJ
+    // Validação de CNPJ
     if (numbers === "00000000000000") return "CNPJ inválido";
 
     // Algoritmo de validação de CNPJ
@@ -1462,7 +1462,7 @@ export default function Index() {
 
   // Track CompleteRegistration event (Facebook Standard Event)
   const trackCompleteRegistration = (method: string = "form") => {
-    console.log("���� Facebook Event: CompleteRegistration -", method);
+    console.log("📱 Facebook Event: CompleteRegistration -", method);
 
     const eventData = {
       content_name: "Lojista Registration",
