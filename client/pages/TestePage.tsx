@@ -149,11 +149,30 @@ export default function TestePage() {
 
   // Test Meta Conversion API
   const testMetaConversionAPI = async () => {
+    console.log("🔵 Meta Conversion API test started");
+
     try {
-      if (!META_ACCESS_TOKEN || !META_PIXEL_ID) {
+      // Enhanced validation
+      console.log("Checking Meta API configuration:", {
+        META_ACCESS_TOKEN: META_ACCESS_TOKEN ? "Present" : "Missing",
+        META_PIXEL_ID: META_PIXEL_ID || "Missing",
+        META_TEST_EVENT_CODE: META_TEST_EVENT_CODE,
+        META_CONVERSION_NAME: META_CONVERSION_NAME,
+        META_API_VERSION: META_API_VERSION
+      });
+
+      if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN === "token_sensivel") {
         setTestResults((prev) => ({
           ...prev,
-          metaAPI: "❌ Meta API: Missing access token or pixel ID",
+          metaAPI: "❌ Meta API: Access Token não configurado ou usando valor placeholder. Configure VITE_META_ACCESS_TOKEN via DevServerControl.",
+        }));
+        return;
+      }
+
+      if (!META_PIXEL_ID || META_PIXEL_ID === "123456789012345") {
+        setTestResults((prev) => ({
+          ...prev,
+          metaAPI: "❌ Meta API: Pixel ID não configurado ou usando valor placeholder. Configure VITE_META_PIXEL_ID com seu ID real.",
         }));
         return;
       }
