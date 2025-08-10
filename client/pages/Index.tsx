@@ -1425,7 +1425,7 @@ export default function Index() {
                                 <div className="flex items-center space-x-1 text-primary">
                                   <span className="text-2xl">★★★★★</span>
                                 </div>
-                                <blockquote className="text-lg text-white leading-relaxed italic">
+                                <blockquote className="text-lg text-gray-700 leading-relaxed italic">
                                   "{testimonial.text}"
                                 </blockquote>
                                 <div className="flex items-center space-x-4">
@@ -1435,10 +1435,10 @@ export default function Index() {
                                     </span>
                                   </div>
                                   <div>
-                                    <h3 className="font-bold text-white">
+                                    <h3 className="font-bold text-gray-900">
                                       {testimonial.name}
                                     </h3>
-                                    <p className="text-sm text-white/70">
+                                    <p className="text-sm text-gray-600">
                                       {testimonial.store}
                                     </p>
                                   </div>
@@ -1470,7 +1470,7 @@ export default function Index() {
                           <div className="flex items-center space-x-1 text-primary">
                             <span className="text-2xl">★★��★★</span>
                           </div>
-                          <blockquote className="text-base text-white leading-relaxed italic">
+                          <blockquote className="text-base text-gray-700 leading-relaxed italic">
                             "{testimonial.text}"
                           </blockquote>
                           <div className="flex items-center space-x-4">
@@ -1480,10 +1480,10 @@ export default function Index() {
                               </span>
                             </div>
                             <div>
-                              <h3 className="font-bold text-white">
+                              <h3 className="font-bold text-gray-900">
                                 {testimonial.name}
                               </h3>
-                              <p className="text-sm text-white/70">
+                              <p className="text-sm text-gray-600">
                                 {testimonial.store}
                               </p>
                             </div>
