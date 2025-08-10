@@ -1400,6 +1400,157 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Conheça o nosso Show Room - Otimizado para mobile */}
+      <section
+        className="py-12 sm:py-20 md:py-32 bg-gray-900"
+        id="showroom"
+      >
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white">
+                Conheça o nosso
+                <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                  Show Room
+                </span>
+              </h2>
+              <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto px-3">
+                Espaço exclusivo onde você pode tocar, sentir e experimentar toda a qualidade e autenticidade dos produtos Ecko antes de levar para sua loja.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Content */}
+              <div className="space-y-6 sm:space-y-8">
+                <div className="space-y-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">
+                    Experiência Completa do Produto
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    No nosso showroom, você tem acesso exclusivo a toda nossa coleção. Conheça de perto a qualidade dos tecidos, o acabamento perfeito e os detalhes únicos que fazem da Ecko a marca líder em streetwear.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <FaStore className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">
+                        Catálogo Completo
+                      </h4>
+                      <p className="text-gray-400 text-sm">
+                        Acesso a todos os produtos disponíveis para lojistas, incluindo lançamentos e edições limitadas.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <MdHeadset className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">
+                        Consultoria Personalizada
+                      </h4>
+                      <p className="text-gray-400 text-sm">
+                        Nossa equipe especializada te ajuda a escolher os produtos ideais para o seu público e região.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <MdWorkspacePremium className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">
+                        Materiais de Apoio
+                      </h4>
+                      <p className="text-gray-400 text-sm">
+                        Receba materiais exclusivos de marketing, displays e estratégias de vendas para sua loja.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                  <div className="text-center space-y-3">
+                    <h4 className="text-lg font-bold text-white">
+                      📍 Localização do Showroom
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      Av. Paulista, 1000 - São Paulo, SP<br />
+                      <span className="text-primary font-semibold">
+                        Seg à Sex: 9h às 18h | Sáb: 9h às 14h
+                      </span>
+                    </p>
+                    <div className="pt-2">
+                      <a
+                        href="https://wa.me/5511999999999?text=Olá, gostaria de agendar uma visita ao showroom!"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold text-sm transition-colors duration-300 gap-2"
+                      >
+                        <FaStore className="w-4 h-4" />
+                        Agendar Visita
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="text-center">
+                <div className="relative">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fe8944e5525914e1f8994c2dc4f9b44eb?format=webp&width=800"
+                    alt="Showroom Ecko - Espaço exclusivo para lojistas"
+                    className="w-full max-w-lg rounded-2xl shadow-2xl mx-auto"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                </div>
+                <div className="mt-6 space-y-3">
+                  <p className="text-gray-400 text-sm italic">
+                    "Viva a experiência Ecko em nosso showroom exclusivo"
+                  </p>
+                  <div className="w-16 h-0.5 bg-primary mx-auto"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <div className="space-y-4">
+                <p className="text-lg text-gray-300">
+                  Pronto para conhecer de perto a qualidade Ecko?
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://wa.me/5511999999999?text=Olá, gostaria de agendar uma visita ao showroom!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
+                  >
+                    <FaStore className="w-5 h-5" />
+                    Agendar Visita ao Showroom
+                  </a>
+                  <a
+                    href="#cadastro-lojistas"
+                    className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
+                  >
+                    <FaArrowRight className="w-5 h-5" />
+                    Quero Ser Lojista
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Depoimentos de Lojistas Parceiros Ecko - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32 bg-gray-100"
