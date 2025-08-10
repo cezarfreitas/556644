@@ -768,6 +768,14 @@ export default function Index() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80"></div>
           {/* Brand Color Accent */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-red-900/20"></div>
+          {/* Soft Center Radial Highlight for Text and Logo */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.6) 100%)",
+            }}
+          ></div>
         </div>
 
         {/* Floating Elements Background */}
