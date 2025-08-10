@@ -482,7 +482,7 @@ export default function Index() {
           },
         ],
         access_token: META_ACCESS_TOKEN,
-        test_event_code: "TEST12345", // Add test code for debugging
+        test_event_code: META_TEST_EVENT_CODE, // Test code from environment
       };
 
       console.log("Meta Conversion API: Sending data:", {
