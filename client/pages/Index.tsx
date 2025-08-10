@@ -798,30 +798,6 @@ export default function Index() {
               </a>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className="pt-16">
-              <div
-                className="flex flex-col items-center justify-center cursor-pointer group"
-                onClick={() => {
-                  const element = document.getElementById("cadastro-lojistas");
-                  if (element) {
-                    element.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }
-                }}
-              >
-                <div className="text-gray-500 group-hover:text-gray-700 transition-colors duration-300 text-center">
-                  <div className="text-xs uppercase tracking-widest font-medium mb-2">
-                    Role para baixo
-                  </div>
-                  <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-                    <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
