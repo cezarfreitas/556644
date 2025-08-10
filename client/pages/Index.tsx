@@ -157,8 +157,19 @@ export default function Index() {
     import.meta.env.VITE_api_form ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
+  // Validate endpoint URL
+  const isValidUrl = (url: string) => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
   // Log endpoint being used (for debugging)
   console.log("Form API Endpoint:", API_FORM_ENDPOINT);
+  console.log("Endpoint is valid URL:", isValidUrl(API_FORM_ENDPOINT));
 
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
