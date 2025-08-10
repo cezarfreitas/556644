@@ -61,6 +61,25 @@ export default function Index() {
   const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL;
   const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL;
 
+  // Brand and Company Configuration
+  const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Ecko";
+  const COMPANY_NAME = import.meta.env.VITE_COMPANY_NAME || "IDE | Negócios digitais";
+  const COMPANY_URL = import.meta.env.VITE_COMPANY_URL || "https://www.idenegociosdigitais.com.br";
+  const PAGE_TITLE = import.meta.env.VITE_PAGE_TITLE || "Seja Lojista Oficial Ecko";
+
+  // API URLs
+  const FACEBOOK_CONNECT_URL = import.meta.env.VITE_FACEBOOK_CONNECT_URL || "https://connect.facebook.net/en_US/fbevents.js";
+  const FACEBOOK_GRAPH_API_URL = import.meta.env.VITE_FACEBOOK_GRAPH_API_URL || "https://graph.facebook.com";
+
+  // Default Values
+  const DEFAULT_META_API_VERSION = import.meta.env.VITE_DEFAULT_META_API_VERSION || "v18.0";
+  const DEFAULT_CURRENCY = import.meta.env.VITE_DEFAULT_CURRENCY || "BRL";
+
+  // Developer Info
+  const DEVELOPER_NAME = import.meta.env.VITE_DEVELOPER_NAME || "IDE | Negócios digitais";
+  const DEVELOPER_URL = import.meta.env.VITE_DEVELOPER_URL || "https://www.idenegociosdigitais.com.br";
+  const DEVELOPER_SITE = import.meta.env.VITE_DEVELOPER_SITE || "www.idenegociosdigitais.com.br";
+
   // Inicializar tracking na página
   useEffect(() => {
     // Marcar início do tempo para cálculo de completion time
@@ -90,7 +109,7 @@ export default function Index() {
       };
       window.gtag("js", new Date());
       window.gtag("config", GA4_MEASUREMENT_ID, {
-        page_title: "Seja Lojista Oficial Ecko",
+        page_title: PAGE_TITLE,
         page_location: window.location.href,
         custom_map: {
           custom_parameter_1: "traffic_source",
@@ -126,7 +145,7 @@ export default function Index() {
           window,
           document,
           "script",
-          "https://connect.facebook.net/en_US/fbevents.js",
+          FACEBOOK_CONNECT_URL,
         );
 
         // Aguardar script carregar e inicializar
@@ -177,7 +196,7 @@ export default function Index() {
     const pageviewData = {
       event: "pageview",
       page: "/",
-      title: "Seja Lojista Oficial Ecko",
+      title: PAGE_TITLE,
       ...getAnalyticsData(),
     };
 
@@ -206,6 +225,7 @@ export default function Index() {
   // Form API endpoint from environment variable
   const API_FORM_ENDPOINT =
     import.meta.env.VITE_api_form ||
+    import.meta.env.VITE_FALLBACK_API_FORM ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
   // Validate endpoint URL
@@ -319,7 +339,7 @@ export default function Index() {
       name: "Amanda Costa",
       store: "Urban Fashion - Rio de Janeiro, RJ",
       avatar: "A",
-      text: "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério.",
+      text: "O suporte da equipe Ecko �� incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério.",
     },
     {
       id: 3,
@@ -643,7 +663,7 @@ export default function Index() {
 
       // Build custom_data based on event type
       const customData: any = {
-        currency: "BRL",
+        currency: DEFAULT_CURRENCY,
         value: pixelData?.value || 1,
       };
 
@@ -719,8 +739,8 @@ export default function Index() {
       console.log("Request Payload (without token):", JSON.stringify(requestPayload, null, 2));
 
       // Ensure API version format is correct
-      const apiVersion = META_API_VERSION || "v18.0";
-      const apiUrl = `https://graph.facebook.com/${apiVersion}/${META_PIXEL_ID}/events`;
+      const apiVersion = META_API_VERSION || DEFAULT_META_API_VERSION;
+      const apiUrl = `${FACEBOOK_GRAPH_API_URL}/${apiVersion}/${META_PIXEL_ID}/events`;
 
       console.log("Meta Conversion API: Making request to:", apiUrl);
       console.log("Meta Conversion API: Payload size:", JSON.stringify(conversionData).length, "characters");
@@ -1097,7 +1117,7 @@ export default function Index() {
       cnpj: showCnpjField ? formData.get("cnpj-number") : null,
 
       // Dados da marca/campanha
-      marca: "Ecko",
+      marca: BRAND_NAME,
       origem: "Landing Page Lojistas",
       campaign_type: "Lead Generation",
       lead_source: "Website Form",
@@ -2479,15 +2499,15 @@ export default function Index() {
                   </span>{" "}
                   por{" "}
                   <a
-                    href="https://www.idenegociosdigitais.com.br"
+                    href={DEVELOPER_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors duration-300"
                   >
-                    IDE | Negócios digitais
+                    {DEVELOPER_NAME}
                   </a>
                   <br />
-                  www.idenegociosdigitais.com.br
+                  {DEVELOPER_SITE}
                 </div>
               </div>
             </div>
