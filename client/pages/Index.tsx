@@ -756,9 +756,9 @@ export default function Index() {
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
                 <span className="block">SEJA UM</span>
-                <span className="block bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                   LOJISTA OFICIAL
                 </span>
                 <span className="block">ECKO</span>
@@ -766,9 +766,9 @@ export default function Index() {
             </div>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
               Faça parte da{" "}
-              <span className="font-bold text-primary">
+              <span className="font-bold text-white">
                 rede de distribuidores oficiais
               </span>{" "}
               da maior marca de moda urbana do Brasil,{" "}
@@ -779,7 +779,7 @@ export default function Index() {
             <div className="pt-8">
               <a
                 href="#cadastro-lojistas"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white px-12 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
+                className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary hover:text-red-700 px-12 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
               >
                 CADASTRE-SE AGORA
                 <svg
