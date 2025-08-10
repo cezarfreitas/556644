@@ -354,7 +354,7 @@ export default function Index() {
       // Eventos específicos do Facebook
       if (eventName === "form_submission_success") {
         window.fbq("track", META_CONVERSION_NAME, pixelData);
-        // Também enviar via API de convers��o
+        // Também enviar via API de conversão
         sendMetaConversionAPI(eventName, pixelData, fullEventData);
       } else {
         window.fbq("trackCustom", eventName, pixelData);
@@ -419,7 +419,7 @@ export default function Index() {
     }
   };
 
-  // Fun��ão auxiliar para pegar cookies
+  // Função auxiliar para pegar cookies
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -432,7 +432,7 @@ export default function Index() {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
 
-    // Aplica a m��scara (XX) XXXXX-XXXX
+    // Aplica a máscara (XX) XXXXX-XXXX
     if (numbers.length <= 2) {
       return `(${numbers}`;
     } else if (numbers.length <= 7) {
@@ -483,7 +483,7 @@ export default function Index() {
     if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
-    // Validaç��o de CNPJ
+    // Validação de CNPJ
     if (numbers === "00000000000000") return "CNPJ inválido";
 
     // Algoritmo de validação de CNPJ
@@ -642,7 +642,7 @@ export default function Index() {
       form_completion_time:
         performance.now() - (window.formStartTime || performance.now()),
 
-      // Informa��ões de conversão
+      // Informações de conversão
       conversion_page: "/",
       conversion_element: "main_form",
       conversion_position: "hero_section",
@@ -675,7 +675,7 @@ export default function Index() {
           has_cnpj: selectedCnpj === "sim",
         });
 
-        // Se for consumidor, abre WhatsApp ap��s enviar dados
+        // Se for consumidor, abre WhatsApp após enviar dados
         if (selectedCnpj === "nao-consumidor") {
           alert(
             "Dados enviados! Redirecionando para receber seu cupom de desconto.",
@@ -1148,7 +1148,7 @@ export default function Index() {
                           <span className="font-bold text-yellow-300">
                             10% de desconto
                           </span>{" "}
-                          para voc��
+                          para você
                         </p>
                       </div>
                     </div>
@@ -1236,7 +1236,7 @@ export default function Index() {
 
                   <div className="text-center space-y-1 pt-3">
                     <p className="text-xs text-gray-400">
-                      �� Seus dados estão protegidos e seguros
+                      🔒 Seus dados estão protegidos e seguros
                     </p>
                     <p className="text-xs text-gray-500">
                       Ao enviar, você concorda em receber informações sobre
@@ -1265,7 +1265,7 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                Descubra as coleç��es oficiais Ecko, com design autêntico e
+                Descubra as coleções oficiais Ecko, com design autêntico e
                 qualidade premium. Produtos únicos que valorizam sua loja e
                 encantam seus clientes.
               </p>
@@ -1668,7 +1668,7 @@ export default function Index() {
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★★��★★</span>
+                            <span className="text-2xl">★★★★★</span>
                           </div>
                           <blockquote className="text-base text-gray-700 leading-relaxed italic">
                             "{testimonial.text}"
@@ -1900,7 +1900,7 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
                 <div className="text-gray-300 text-sm">
-                  © 2024. Todos os direitos reservados.
+                  �� 2024. Todos os direitos reservados.
                 </div>
                 <div className="flex space-x-6 text-sm">
                   <a
@@ -1919,7 +1919,7 @@ export default function Index() {
                     href="#"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Pol���tica de Cookies
+                    Política de Cookies
                   </a>
                 </div>
               </div>
