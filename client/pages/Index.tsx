@@ -43,7 +43,8 @@ export default function Index() {
   const META_CONVERSION_NAME =
     import.meta.env.VITE_META_CONVERSION_NAME || "Lead";
   const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || "v18.0";
-  const META_TEST_EVENT_CODE = import.meta.env.VITE_META_TEST_EVENT_CODE || "TEST12345";
+  const META_TEST_EVENT_CODE =
+    import.meta.env.VITE_META_TEST_EVENT_CODE || "TEST12345";
   const GOOGLE_ADS_CONVERSION_ID = import.meta.env
     .VITE_GOOGLE_ADS_CONVERSION_ID;
   const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env

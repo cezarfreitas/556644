@@ -9,10 +9,13 @@ export default function TestePage() {
   const GTM_ID = import.meta.env.VITE_GTM_ID;
   const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
   const META_ACCESS_TOKEN = import.meta.env.VITE_META_ACCESS_TOKEN;
-  const META_CONVERSION_NAME = import.meta.env.VITE_META_CONVERSION_NAME || "Lead";
+  const META_CONVERSION_NAME =
+    import.meta.env.VITE_META_CONVERSION_NAME || "Lead";
   const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || "v18.0";
-  const META_TEST_EVENT_CODE = import.meta.env.VITE_META_TEST_EVENT_CODE || "TEST12345";
-  const GOOGLE_ADS_CONVERSION_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID;
+  const META_TEST_EVENT_CODE =
+    import.meta.env.VITE_META_TEST_EVENT_CODE || "TEST12345";
+  const GOOGLE_ADS_CONVERSION_ID = import.meta.env
+    .VITE_GOOGLE_ADS_CONVERSION_ID;
 
   // Helper function to get cookie
   const getCookie = (name: string) => {
@@ -30,23 +33,23 @@ export default function TestePage() {
           event_category: "Testing",
           event_label: "GA4 Test",
           value: 1,
-          custom_parameter: "test_data"
+          custom_parameter: "test_data",
         });
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          ga4: "✅ GA4 event sent successfully"
+          ga4: "✅ GA4 event sent successfully",
         }));
         console.log("GA4 test event sent");
       } else {
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          ga4: "❌ GA4 not configured or gtag not available"
+          ga4: "❌ GA4 not configured or gtag not available",
         }));
       }
     } catch (error) {
-      setTestResults(prev => ({
+      setTestResults((prev) => ({
         ...prev,
-        ga4: `❌ GA4 error: ${error.message}`
+        ga4: `❌ GA4 error: ${error.message}`,
       }));
     }
   };
@@ -62,24 +65,24 @@ export default function TestePage() {
           event_label: "Test Label",
           custom_data: {
             test_parameter: "test_value",
-            timestamp: new Date().toISOString()
-          }
+            timestamp: new Date().toISOString(),
+          },
         });
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          gtm: "✅ GTM DataLayer event sent successfully"
+          gtm: "✅ GTM DataLayer event sent successfully",
         }));
         console.log("GTM test event sent");
       } else {
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          gtm: "❌ GTM not configured or dataLayer not available"
+          gtm: "❌ GTM not configured or dataLayer not available",
         }));
       }
     } catch (error) {
-      setTestResults(prev => ({
+      setTestResults((prev) => ({
         ...prev,
-        gtm: `❌ GTM error: ${error.message}`
+        gtm: `❌ GTM error: ${error.message}`,
       }));
     }
   };
@@ -93,23 +96,23 @@ export default function TestePage() {
           content_name: "Meta Pixel Test",
           value: 1,
           currency: "BRL",
-          test_parameter: "pixel_test"
+          test_parameter: "pixel_test",
         });
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          metaPixel: "✅ Meta Pixel event sent successfully"
+          metaPixel: "✅ Meta Pixel event sent successfully",
         }));
         console.log("Meta Pixel test event sent");
       } else {
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          metaPixel: "❌ Meta Pixel not configured or fbq not available"
+          metaPixel: "❌ Meta Pixel not configured or fbq not available",
         }));
       }
     } catch (error) {
-      setTestResults(prev => ({
+      setTestResults((prev) => ({
         ...prev,
-        metaPixel: `❌ Meta Pixel error: ${error.message}`
+        metaPixel: `❌ Meta Pixel error: ${error.message}`,
       }));
     }
   };
@@ -118,9 +121,9 @@ export default function TestePage() {
   const testMetaConversionAPI = async () => {
     try {
       if (!META_ACCESS_TOKEN || !META_PIXEL_ID) {
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          metaAPI: "❌ Meta API: Missing access token or pixel ID"
+          metaAPI: "❌ Meta API: Missing access token or pixel ID",
         }));
         return;
       }
@@ -143,13 +146,13 @@ export default function TestePage() {
               content_name: "Meta Conversion API Test",
               value: 1,
               currency: "BRL",
-              test_mode: true
+              test_mode: true,
             },
             event_id: "test_" + Date.now(),
           },
         ],
         access_token: META_ACCESS_TOKEN,
-        test_event_code: META_TEST_EVENT_CODE
+        test_event_code: META_TEST_EVENT_CODE,
       };
 
       console.log("Testing Meta Conversion API with data:", conversionData);
@@ -163,7 +166,7 @@ export default function TestePage() {
           },
           body: JSON.stringify(conversionData),
           mode: "cors", // Explicitly set CORS mode
-          credentials: "omit"
+          credentials: "omit",
         },
       );
 
@@ -179,7 +182,7 @@ export default function TestePage() {
         console.warn("CORS blocked response reading:", readError);
 
         // If it's a CORS error but request went through, consider it potentially successful
-        if (response.type === 'opaque' || response.type === 'opaqueredirect') {
+        if (response.type === "opaque" || response.type === "opaqueredirect") {
           responseData = "Request sent (CORS blocked response reading)";
         } else {
           responseData = `CORS Error: ${readError.message}`;
@@ -188,36 +191,36 @@ export default function TestePage() {
 
       // Evaluate success based on what we can determine
       if (response.ok && canReadResponse) {
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          metaAPI: `✅ Meta Conversion API: Success - ${responseData}`
+          metaAPI: `✅ Meta Conversion API: Success - ${responseData}`,
         }));
         console.log("Meta Conversion API test success:", responseData);
       } else if (!canReadResponse && response.status === 0) {
         // Status 0 usually means CORS blocked the request entirely
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          metaAPI: `⚠️ Meta Conversion API: CORS blocked request. Use server-side testing or disable CORS in browser for testing.`
+          metaAPI: `⚠️ Meta Conversion API: CORS blocked request. Use server-side testing or disable CORS in browser for testing.`,
         }));
         console.warn("Meta Conversion API blocked by CORS policy");
       } else if (!canReadResponse) {
         // Request may have gone through but response is blocked
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          metaAPI: `⚠️ Meta Conversion API: Request sent but response blocked by CORS. Check Meta Events Manager for delivery.`
+          metaAPI: `⚠️ Meta Conversion API: Request sent but response blocked by CORS. Check Meta Events Manager for delivery.`,
         }));
         console.warn("Meta Conversion API response blocked by CORS");
       } else {
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          metaAPI: `❌ Meta Conversion API: Error ${response.status} - ${responseData}`
+          metaAPI: `❌ Meta Conversion API: Error ${response.status} - ${responseData}`,
         }));
         console.error("Meta Conversion API test error:", responseData);
       }
     } catch (error) {
-      setTestResults(prev => ({
+      setTestResults((prev) => ({
         ...prev,
-        metaAPI: `❌ Meta Conversion API: Network error - ${error.message}`
+        metaAPI: `❌ Meta Conversion API: Network error - ${error.message}`,
       }));
       console.error("Meta Conversion API test network error:", error);
     }
@@ -231,23 +234,23 @@ export default function TestePage() {
           send_to: `${GOOGLE_ADS_CONVERSION_ID}/test_conversion`,
           value: 1,
           currency: "BRL",
-          transaction_id: "test_" + Date.now()
+          transaction_id: "test_" + Date.now(),
         });
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          googleAds: "✅ Google Ads conversion sent successfully"
+          googleAds: "✅ Google Ads conversion sent successfully",
         }));
         console.log("Google Ads test conversion sent");
       } else {
-        setTestResults(prev => ({
+        setTestResults((prev) => ({
           ...prev,
-          googleAds: "❌ Google Ads not configured or gtag not available"
+          googleAds: "❌ Google Ads not configured or gtag not available",
         }));
       }
     } catch (error) {
-      setTestResults(prev => ({
+      setTestResults((prev) => ({
         ...prev,
-        googleAds: `❌ Google Ads error: ${error.message}`
+        googleAds: `❌ Google Ads error: ${error.message}`,
       }));
     }
   };
@@ -273,19 +276,24 @@ export default function TestePage() {
 
           {/* Environment Info */}
           <div className="bg-gray-100 rounded-xl p-6 mb-8">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">📊 Configurações Atuais</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">
+              📊 Configurações Atuais
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
-                <strong>GA4 ID:</strong> {GA4_MEASUREMENT_ID || "❌ Não configurado"}
+                <strong>GA4 ID:</strong>{" "}
+                {GA4_MEASUREMENT_ID || "❌ Não configurado"}
               </div>
               <div>
                 <strong>GTM ID:</strong> {GTM_ID || "❌ Não configurado"}
               </div>
               <div>
-                <strong>Meta Pixel ID:</strong> {META_PIXEL_ID || "❌ Não configurado"}
+                <strong>Meta Pixel ID:</strong>{" "}
+                {META_PIXEL_ID || "❌ Não configurado"}
               </div>
               <div>
-                <strong>Meta Access Token:</strong> {META_ACCESS_TOKEN ? "✅ Configurado" : "❌ Não configurado"}
+                <strong>Meta Access Token:</strong>{" "}
+                {META_ACCESS_TOKEN ? "✅ Configurado" : "❌ Não configurado"}
               </div>
               <div>
                 <strong>Meta Conversion Name:</strong> {META_CONVERSION_NAME}
@@ -294,14 +302,14 @@ export default function TestePage() {
                 <strong>Meta Test Event Code:</strong> {META_TEST_EVENT_CODE}
               </div>
               <div>
-                <strong>Google Ads ID:</strong> {GOOGLE_ADS_CONVERSION_ID || "��� Não configurado"}
+                <strong>Google Ads ID:</strong>{" "}
+                {GOOGLE_ADS_CONVERSION_ID || "��� Não configurado"}
               </div>
             </div>
           </div>
 
           {/* Test Buttons */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            
             {/* GA4 Test */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
               <h3 className="text-lg font-bold text-blue-800 mb-4 flex items-center gap-2">
@@ -410,19 +418,41 @@ export default function TestePage() {
                 Limpar Tudo
               </button>
             </div>
-
           </div>
 
           {/* Instructions */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-            <h2 className="text-xl font-bold text-blue-800 mb-4">📋 Instruções de Teste</h2>
+            <h2 className="text-xl font-bold text-blue-800 mb-4">
+              📋 Instruções de Teste
+            </h2>
             <div className="text-blue-700 space-y-2">
-              <p><strong>1. Meta Conversion API:</strong> Use o test event code "{META_TEST_EVENT_CODE}" no Events Manager</p>
-              <p className="text-sm ml-4">⚠️ <em>Nota: CORS pode bloquear respostas do navegador. Verifique eventos no Events Manager mesmo com erro de CORS.</em></p>
-              <p><strong>2. GA4:</strong> Verifique os eventos no Real-time reports do Google Analytics</p>
-              <p><strong>3. GTM:</strong> Use o Preview mode do GTM para ver os eventos</p>
-              <p><strong>4. Meta Pixel:</strong> Use o Facebook Pixel Helper extension</p>
-              <p><strong>5. Google Ads:</strong> Verifique as conversões no painel do Google Ads</p>
+              <p>
+                <strong>1. Meta Conversion API:</strong> Use o test event code "
+                {META_TEST_EVENT_CODE}" no Events Manager
+              </p>
+              <p className="text-sm ml-4">
+                ⚠️{" "}
+                <em>
+                  Nota: CORS pode bloquear respostas do navegador. Verifique
+                  eventos no Events Manager mesmo com erro de CORS.
+                </em>
+              </p>
+              <p>
+                <strong>2. GA4:</strong> Verifique os eventos no Real-time
+                reports do Google Analytics
+              </p>
+              <p>
+                <strong>3. GTM:</strong> Use o Preview mode do GTM para ver os
+                eventos
+              </p>
+              <p>
+                <strong>4. Meta Pixel:</strong> Use o Facebook Pixel Helper
+                extension
+              </p>
+              <p>
+                <strong>5. Google Ads:</strong> Verifique as conversões no
+                painel do Google Ads
+              </p>
             </div>
           </div>
 
