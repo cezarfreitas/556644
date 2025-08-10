@@ -794,9 +794,22 @@ export default function Index() {
           {/* Mobile CTA */}
           <a
             href="#cadastro-lojistas"
-            className="w-full max-w-sm bg-primary hover:bg-red-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl border border-white"
+            className="inline-flex items-center justify-center max-w-xs bg-primary hover:bg-red-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
           >
             Começar Agora!
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </a>
         </div>
 
