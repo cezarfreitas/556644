@@ -396,7 +396,7 @@ img[fetchpriority="high"] {
   }
 
   .animate-heartbeat {
-    animation: heartbeat 1.2s ease-in-out infinite !important;
+    animation: heartbeat 1.5s ease-in-out infinite !important;
     transform-origin: center !important;
     display: inline-block !important;
     will-change: transform;
