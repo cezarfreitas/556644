@@ -783,12 +783,12 @@ export default function Index() {
 
         {/* Desktop Layout (md+) */}
         <div className="hidden md:flex items-center justify-center h-full">
-          <div className="w-full max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
+          <div className="w-full max-w-5xl mx-auto px-8 flex items-center justify-center">
 
-            {/* Left Column - Content */}
-            <div className="text-left space-y-8">
+            {/* Centered Content */}
+            <div className="text-center space-y-8">
               {/* Desktop Logo */}
-              <div className="mb-8">
+              <div className="mb-8 flex justify-center">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
                   alt="Logo Ecko"
@@ -810,7 +810,7 @@ export default function Index() {
               </div>
 
               {/* Desktop Subtitle */}
-              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
+              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                 Faça parte da{" "}
                 <span className="font-bold text-white">rede de distribuidores oficiais</span>{" "}
                 da maior marca de moda urbana do Brasil,{" "}
@@ -818,7 +818,7 @@ export default function Index() {
               </p>
 
               {/* Desktop CTA */}
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center">
                 <a
                   href="#cadastro-lojistas"
                   className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary hover:text-red-700 px-10 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
@@ -841,13 +841,6 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right Column - Visual Elements */}
-            <div className="relative hidden lg:block">
-              <div className="relative">
-                {/* Background decorative elements */}
-                <div className="absolute inset-0 bg-white/5 rounded-3xl backdrop-blur-sm"></div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
