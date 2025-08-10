@@ -992,12 +992,12 @@ export default function Index() {
                         type="text"
                         required
                         autoComplete="name"
-                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-200 transition-all duration-300 text-base hover:bg-white/20 ${
+                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white backdrop-blur-sm text-gray-900 placeholder:text-gray-500 transition-all duration-300 text-base hover:bg-gray-50 ${
                           formErrors.name
-                            ? "border-red-300 shadow-red-300/20 shadow-lg"
+                            ? "border-red-500 shadow-red-500/20 shadow-lg"
                             : formValues.name && !formErrors.name
-                              ? "border-green-300 shadow-green-300/20 shadow-lg"
-                              : "border-white/30 hover:border-white/50"
+                              ? "border-green-500 shadow-green-500/20 shadow-lg"
+                              : "border-gray-300 hover:border-gray-400"
                         }`}
                         placeholder="Digite seu nome completo"
                         value={formValues.name}
