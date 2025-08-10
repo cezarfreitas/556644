@@ -992,12 +992,12 @@ export default function Index() {
                         type="text"
                         required
                         autoComplete="name"
-                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-200 transition-all duration-300 text-base hover:bg-white/20 ${
                           formErrors.name
-                            ? "border-red-400 shadow-red-400/20 shadow-lg"
+                            ? "border-red-300 shadow-red-300/20 shadow-lg"
                             : formValues.name && !formErrors.name
-                              ? "border-green-400 shadow-green-400/20 shadow-lg"
-                              : "border-gray-600 hover:border-gray-500"
+                              ? "border-green-300 shadow-green-300/20 shadow-lg"
+                              : "border-white/30 hover:border-white/50"
                         }`}
                         placeholder="Digite seu nome completo"
                         value={formValues.name}
@@ -1051,12 +1051,12 @@ export default function Index() {
                         type="tel"
                         required
                         autoComplete="tel"
-                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-200 transition-all duration-300 text-base hover:bg-white/20 ${
                           formErrors.whatsapp
-                            ? "border-red-400 shadow-red-400/20 shadow-lg"
+                            ? "border-red-300 shadow-red-300/20 shadow-lg"
                             : formValues.whatsapp && !formErrors.whatsapp
-                              ? "border-green-400 shadow-green-400/20 shadow-lg"
-                              : "border-gray-600 hover:border-gray-500"
+                              ? "border-green-300 shadow-green-300/20 shadow-lg"
+                              : "border-white/30 hover:border-white/50"
                         }`}
                         placeholder="(11) 99999-9999"
                         maxLength={15}
@@ -1101,7 +1101,7 @@ export default function Index() {
                       Tipo de Cadastro
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      <label className="flex items-center gap-2 p-2 border-2 border-gray-600 rounded-lg cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
+                      <label className="flex items-center gap-2 p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
                         <input
                           type="radio"
                           name="cnpj"
@@ -1121,7 +1121,7 @@ export default function Index() {
                           </span>
                         </div>
                       </label>
-                      <label className="flex items-center gap-2 p-2 border-2 border-gray-600 rounded-lg cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
+                      <label className="flex items-center gap-2 p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
                         <input
                           type="radio"
                           name="cnpj"
@@ -1177,12 +1177,12 @@ export default function Index() {
                           name="cnpj-number"
                           type="text"
                           required
-                          className={`w-full px-3 py-3 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
+                          className={`w-full px-3 py-3 sm:py-3 pr-12 rounded-lg border bg-white/10 text-white placeholder:text-gray-200  transition-all text-base sm:text-sm ${
                             formErrors.cnpj
-                              ? "border-red-500"
+                              ? "border-red-300"
                               : formValues.cnpj && !formErrors.cnpj
-                                ? "border-green-500"
-                                : "border-gray-600"
+                                ? "border-green-300"
+                                : "border-white/30"
                           }`}
                           placeholder="00.000.000/0000-00"
                           maxLength={18}
@@ -1244,7 +1244,7 @@ export default function Index() {
 
                   <div className="text-center space-y-1 pt-3">
                     <p className="text-xs text-gray-400">
-                      🔒 Seus dados estão protegidos e seguros
+                      �� Seus dados estão protegidos e seguros
                     </p>
                     <p className="text-xs text-gray-500">
                       Ao enviar, você concorda em receber informações sobre
