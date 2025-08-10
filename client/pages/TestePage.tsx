@@ -433,6 +433,25 @@ export default function TestePage() {
               )}
             </div>
 
+            {/* Component Test */}
+            <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-purple-800 mb-4 flex items-center gap-2">
+                🧪 Teste do Componente
+              </h3>
+              <button
+                onClick={testComponent}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+              >
+                <FaCheck className="w-4 h-4" />
+                Testar Componente
+              </button>
+              {testResults.component && (
+                <div className="mt-3 p-3 bg-white rounded-lg text-sm">
+                  {testResults.component}
+                </div>
+              )}
+            </div>
+
             {/* Clear Results */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
