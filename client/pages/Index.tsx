@@ -61,6 +61,13 @@ export default function Index() {
   const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/ecko";
   const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/5511999999999";
 
+  // Debug: Log social media URLs to verify they're loaded correctly
+  console.log("Social Media URLs:", {
+    facebook: FACEBOOK_URL,
+    instagram: INSTAGRAM_URL,
+    whatsapp: WHATSAPP_URL
+  });
+
   // Brand and Company Configuration
   const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Ecko";
   const COMPANY_NAME =
