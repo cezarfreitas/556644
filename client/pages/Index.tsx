@@ -1634,7 +1634,7 @@ export default function Index() {
                           .map((testimonial) => (
                             <div
                               key={testimonial.id}
-                              className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                              className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
