@@ -777,8 +777,14 @@ export default function Index() {
       setShowCouponMessage(false);
       setFormErrors({});
 
-      // Reset the form element
-      e.currentTarget.reset();
+      // Reset the form element safely
+      try {
+        if (e.currentTarget) {
+          e.currentTarget.reset();
+        }
+      } catch (resetError) {
+        console.log("Form reset not needed, values already cleared");
+      }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
 
