@@ -783,9 +783,8 @@ export default function Index() {
 
           {/* Mobile Subtitle */}
           <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
-            Faça parte da{" "}
-            <span className="font-bold text-white">rede de distribuidores oficiais</span>{" "}
-            da maior marca de moda urbana do Brasil
+            Aproveite a oportunidade de vender uma das maiores marcas do Brasil e do mundo.
+            <span className="font-bold text-white">Cadastre-se agora</span> e tenha acesso à nossa plataforma digital com preços exclusivos para lojistas.
           </p>
 
           {/* Mobile CTA */}
@@ -827,10 +826,8 @@ export default function Index() {
 
               {/* Desktop Subtitle */}
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-                Faça parte da{" "}
-                <span className="font-bold text-white">rede de distribuidores oficiais</span>{" "}
-                da maior marca de moda urbana do Brasil,{" "}
-                <span className="font-semibold">reconhecida mundialmente</span>
+                Aproveite a oportunidade de vender uma das maiores marcas do Brasil e do mundo.
+                <span className="font-bold text-white">Cadastre-se agora</span> e tenha acesso à nossa plataforma digital com preços exclusivos para lojistas.
               </p>
 
               {/* Desktop CTA */}
