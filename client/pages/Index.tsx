@@ -846,26 +846,6 @@ export default function Index() {
               <div className="relative">
                 {/* Background decorative elements */}
                 <div className="absolute inset-0 bg-white/5 rounded-3xl backdrop-blur-sm"></div>
-                <div className="relative p-8 text-center">
-                  <div className="space-y-6">
-                    <div className="text-white/80 text-sm uppercase tracking-widest font-semibold">
-                      Marca #1 em Streetwear
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                        <div className="text-2xl font-black text-white">1000+</div>
-                        <div className="text-xs text-white/80 uppercase">Lojistas</div>
-                      </div>
-                      <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                        <div className="text-2xl font-black text-white">25+</div>
-                        <div className="text-xs text-white/80 uppercase">Anos</div>
-                      </div>
-                    </div>
-                    <div className="text-white/70 text-sm leading-relaxed">
-                      Junte-se à rede de distribuidores que já faturam milhões com a marca mais respeitada do streetwear nacional
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
