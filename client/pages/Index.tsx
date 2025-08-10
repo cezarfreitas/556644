@@ -35,7 +35,7 @@ export default function Index() {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
-  // Função auxiliar para pegar cookies (movida para cima para disponibilidade)
+  // Fun��ão auxiliar para pegar cookies (movida para cima para disponibilidade)
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -104,8 +104,8 @@ export default function Index() {
 
   // HUB Multimarcas Info
   const HUB_NAME = import.meta.env.VITE_HUB_NAME || "HUB Multimarcas";
-  const HUB_COMPANY = import.meta.env.VITE_HUB_COMPANY || "Grupo NTK";
-  const HUB_DESCRIPTION = import.meta.env.VITE_HUB_DESCRIPTION || "Uma iniciativa do Grupo NTK para democratizar o acesso dos lojistas às grandes marcas do mercado.";
+  const HUB_COMPANY = import.meta.env.VITE_HUB_COMPANY || "NTK Grupo Textil";
+  const HUB_DESCRIPTION = import.meta.env.VITE_HUB_DESCRIPTION || "Uma iniciativa do NTK Grupo Textil para democratizar o acesso dos lojistas às grandes marcas do mercado.";
 
   // Inicializar tracking na página
   useEffect(() => {
@@ -996,7 +996,7 @@ export default function Index() {
     if (!numbers) return "WhatsApp é obrigatório";
     if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 dígitos";
     if (numbers.length < 11 && !numbers.startsWith("11"))
-      return "WhatsApp deve ter 11 dígitos para celular";
+      return "WhatsApp deve ter 11 d��gitos para celular";
     if (numbers.length > 11) return "WhatsApp não pode ter mais de 11 dígitos";
     return "";
   };
