@@ -1972,7 +1972,7 @@ export default function Index() {
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Coleções Exclusivas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  Ecko
+                  {BRAND_NAME}
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
