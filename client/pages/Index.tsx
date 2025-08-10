@@ -1449,7 +1449,7 @@ export default function Index() {
               <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-1">
                 LOJISTA OFICIAL
               </span>
-              <span className="block">ECKO</span>
+              <span className="block">{BRAND_NAME.toUpperCase()}</span>
             </h1>
           </div>
 
@@ -1511,7 +1511,7 @@ export default function Index() {
                   <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-2">
                     LOJISTA OFICIAL
                   </span>
-                  <span className="block">ECKO</span>
+                  <span className="block">{BRAND_NAME.toUpperCase()}</span>
                 </h1>
               </div>
 
