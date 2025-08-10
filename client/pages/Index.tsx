@@ -973,15 +973,16 @@ export default function Index() {
                 </div>
 
                 <form
-                  className="space-y-4 sm:space-y-5"
+                  className="space-y-6"
                   onSubmit={handleFormSubmit}
+                  noValidate
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <label
                       htmlFor="name"
-                      className="text-sm font-medium text-white"
+                      className="block text-sm font-semibold text-white"
                     >
-                      Nome *
+                      Nome Completo
                     </label>
                     <div className="relative">
                       <input
@@ -989,14 +990,15 @@ export default function Index() {
                         name="name"
                         type="text"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
+                        autoComplete="name"
+                        className={`w-full px-4 py-5 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.name
-                            ? "border-red-500"
+                            ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.name && !formErrors.name
-                              ? "border-green-500"
-                              : "border-gray-600"
+                              ? "border-green-400 shadow-green-400/20 shadow-lg"
+                              : "border-gray-600 hover:border-gray-500"
                         }`}
-                        placeholder="Seu nome completo"
+                        placeholder="Digite seu nome completo"
                         value={formValues.name}
                         onChange={handleNameChange}
                         onFocus={() =>
@@ -1026,9 +1028,12 @@ export default function Index() {
                       )}
                     </div>
                     {formErrors.name && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {formErrors.name}
-                      </p>
+                      <div className="mt-2 p-3 bg-red-900/20 border border-red-500/30 rounded-lg">
+                        <p className="text-red-300 text-sm flex items-center gap-2">
+                          <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
+                          {formErrors.name}
+                        </p>
+                      </div>
                     )}
                   </div>
 
