@@ -894,6 +894,49 @@ export default function Index() {
                   <span className="block text-primary">LOJISTA OFICIAL</span>
                   <span className="block text-primary font-black">ECKO AGORA MESMO</span>
                 </h2>
+
+                {/* 4 Motivos */}
+                <div className="mt-8 space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">1</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-1">Produtos Exclusivos</h3>
+                      <p className="text-gray-300 text-sm">Acesso a coleções limitadas e lançamentos em primeira mão</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">2</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-1">Margens Atrativas</h3>
+                      <p className="text-gray-300 text-sm">Preços especiais e condições diferenciadas para lojistas</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">3</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-1">Suporte Completo</h3>
+                      <p className="text-gray-300 text-sm">Treinamento, materiais de marketing e apoio comercial</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">4</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-1">Prestígio da Marca</h3>
+                      <p className="text-gray-300 text-sm">Associe-se à marca #1 em streetwear no Brasil</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
