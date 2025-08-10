@@ -105,7 +105,9 @@ export default function Index() {
   // HUB Multimarcas Info
   const HUB_NAME = import.meta.env.VITE_HUB_NAME || "HUB Multimarcas";
   const HUB_COMPANY = import.meta.env.VITE_HUB_COMPANY || "NTK Grupo Textil";
-  const HUB_DESCRIPTION = import.meta.env.VITE_HUB_DESCRIPTION || "Uma iniciativa do NTK Grupo Textil para democratizar o acesso dos lojistas às grandes marcas do mercado.";
+  const HUB_DESCRIPTION =
+    import.meta.env.VITE_HUB_DESCRIPTION ||
+    "Uma iniciativa do NTK Grupo Textil para democratizar o acesso dos lojistas às grandes marcas do mercado.";
 
   // Inicializar tracking na página
   useEffect(() => {
