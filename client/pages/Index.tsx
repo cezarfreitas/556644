@@ -307,16 +307,20 @@ export default function Index() {
 
   // Track ViewContent when gallery is viewed
   useEffect(() => {
+    console.log("👁️ Configurando Intersection Observer para galeria de produtos");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target.id === "galeria-produtos") {
+            console.log("📸 Galeria de produtos ficou visível, disparando ViewContent");
             trackViewContent(
               "product_gallery",
               "ecko_collection",
               "Coleções Exclusivas Ecko",
             );
             observer.unobserve(entry.target); // Track only once
+            console.log("✅ ViewContent da galeria disparado (só uma vez)");
           }
         });
       },
@@ -326,6 +330,9 @@ export default function Index() {
     const galleryElement = document.getElementById("galeria-produtos");
     if (galleryElement) {
       observer.observe(galleryElement);
+      console.log("🎯 Observer configurado para elemento galeria-produtos");
+    } else {
+      console.warn("❌ Elemento galeria-produtos não encontrado");
     }
 
     return () => {
