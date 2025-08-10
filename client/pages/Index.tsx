@@ -193,12 +193,9 @@ export default function Index() {
         }, 500); // Increased timeout to ensure script loads
       };
 
-      // Usar requestIdleCallback para carregar de forma não bloqueante
-      if ("requestIdleCallback" in window) {
-        requestIdleCallback(loadFacebookPixel, { timeout: 5000 });
-      } else {
-        setTimeout(loadFacebookPixel, 3000);
-      }
+      // Load Facebook Pixel immediately for better cookie setting
+      // Don't delay for ViewContent tracking as it needs cookies
+      loadFacebookPixel();
     }
 
     // Registrar pageview customizado
