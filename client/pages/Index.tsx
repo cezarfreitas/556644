@@ -2600,6 +2600,26 @@ export default function Index() {
               </div>
             </div>
 
+            {/* HUB Multimarcas Section */}
+            <div className="border-t border-gray-800 pt-8 pb-8">
+              <div className="text-center max-w-4xl mx-auto">
+                <h3 className="text-xl font-bold text-white mb-4">
+                  HUB Multimarcas
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Uma iniciativa do <span className="text-primary font-semibold">Grupo NTK</span> para
+                  democratizar o acesso dos lojistas às grandes marcas do mercado.
+                  Conectamos empreendedores com as melhores oportunidades de negócio,
+                  oferecendo suporte completo para o crescimento do seu comércio.
+                </p>
+                <div className="mt-4">
+                  <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-xs">
+                    Grupo NTK - Conectando marcas e lojistas
+                  </span>
+                </div>
+              </div>
+            </div>
+
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 pt-8">
               <div className="text-center space-y-2">
