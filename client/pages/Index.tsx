@@ -2555,7 +2555,7 @@ export default function Index() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href={FACEBOOK_URL || "#"}
+                    href={FACEBOOK_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
@@ -2565,7 +2565,7 @@ export default function Index() {
                     <FaFacebook className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href={INSTAGRAM_URL || "#"}
+                    href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
@@ -2575,7 +2575,7 @@ export default function Index() {
                     <FaInstagram className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href={WHATSAPP_URL || "#"}
+                    href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
