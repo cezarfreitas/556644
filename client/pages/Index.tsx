@@ -310,6 +310,32 @@ export default function Index() {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
+  // Track ViewContent when gallery is viewed
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target.id === 'galeria-produtos') {
+            trackViewContent('product_gallery', 'ecko_collection', 'Coleções Exclusivas Ecko');
+            observer.unobserve(entry.target); // Track only once
+          }
+        });
+      },
+      { threshold: 0.3 } // Trigger when 30% visible
+    );
+
+    const galleryElement = document.getElementById('galeria-produtos');
+    if (galleryElement) {
+      observer.observe(galleryElement);
+    }
+
+    return () => {
+      if (galleryElement) {
+        observer.unobserve(galleryElement);
+      }
+    };
+  }, []);
+
   // Optimized slider functions with unified behavior
   const nextSlide = () => {
     const isMobile = window.innerWidth < 768;
