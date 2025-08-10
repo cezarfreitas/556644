@@ -662,14 +662,25 @@ export default function Index() {
         console.error("❌ Meta Conversion API: Error");
         console.error("Status:", response.status, response.statusText);
         console.error("Event:", standardEventName);
-        console.error("Request Data:", JSON.stringify(conversionData, null, 2));
 
-        if (parsedResponse) {
+        // Log request data without access token
+        const safeRequestData = { ...conversionData };
+        safeRequestData.access_token = `[HIDDEN - ${META_ACCESS_TOKEN?.length || 0} chars]`;
+        console.error("Request Data (token hidden):", JSON.stringify(safeRequestData, null, 2));
+
+        if (!canReadResponse) {
+          console.error("Cannot read response due to CORS restrictions");
+          console.error("This is normal for cross-origin requests to Facebook API");
+          console.error("Check Meta Events Manager to see if events were received");
+        } else if (parsedResponse) {
           console.error("Parsed Error Response:", parsedResponse);
           if (parsedResponse.error) {
             console.error("Error Details:", parsedResponse.error);
             if (parsedResponse.error.error_user_msg) {
               console.error("User Message:", parsedResponse.error.error_user_msg);
+            }
+            if (parsedResponse.error.error_user_title) {
+              console.error("Error Title:", parsedResponse.error.error_user_title);
             }
           }
         } else {
