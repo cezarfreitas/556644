@@ -149,7 +149,7 @@ export default function TestePage() {
           },
         ],
         access_token: META_ACCESS_TOKEN,
-        test_event_code: "TEST12345"
+        test_event_code: META_TEST_EVENT_CODE
       };
 
       console.log("Testing Meta Conversion API with data:", conversionData);
