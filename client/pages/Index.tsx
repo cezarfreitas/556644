@@ -607,6 +607,15 @@ export default function Index() {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Prevenir dupla submissão
+    if (isSubmitting) {
+      console.log("Form already submitting, preventing double submission");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
     const formData = new FormData(e.currentTarget);
 
     // Validar todos os campos antes de enviar
