@@ -793,7 +793,7 @@ export default function Index() {
             href="#cadastro-lojistas"
             className="w-full max-w-xs bg-white hover:bg-gray-100 text-primary hover:text-red-700 py-3 px-6 rounded-xl text-sm font-bold transition-all duration-300 uppercase tracking-wide text-center"
           >
-            CADASTRE-SE AGORA
+            CADASTRAR
           </a>
         </div>
 
@@ -839,7 +839,7 @@ export default function Index() {
                   href="#cadastro-lojistas"
                   className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary hover:text-red-700 px-10 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
                 >
-                  CADASTRE-SE AGORA
+                  CADASTRAR
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -1139,7 +1139,7 @@ export default function Index() {
                   >
                     {showCouponMessage
                       ? "Receber Cupom de 10% Desconto"
-                      : "CADASTRE-SE AGORA"}
+                      : "CADASTRAR"}
                   </button>
 
                   <p className="text-xs text-gray-900/70 text-center">
