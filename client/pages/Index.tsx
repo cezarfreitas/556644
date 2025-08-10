@@ -554,7 +554,14 @@ export default function Index() {
         },
       );
 
-      const responseData = await response.text();
+      // Read the response body only once and handle potential errors
+      let responseData: string;
+      try {
+        responseData = await response.text();
+      } catch (readError) {
+        responseData = "Unable to read response body";
+        console.warn("Response body read error:", readError);
+      }
 
       if (response.ok) {
         console.log("✅ Meta Conversion API: Success");
