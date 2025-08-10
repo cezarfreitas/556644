@@ -25,7 +25,7 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Estados para valida��ão de formulário
+  // Estados para validação de formulário
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
@@ -773,7 +773,7 @@ export default function Index() {
           </div>
 
           {/* Mobile Intro Text */}
-          <p className="text-xs text-white/80 text-center mb-4 px-4 drop-shadow-md">
+          <p className="text-xs text-white/80 text-center mb-4 px-3 drop-shadow-md">
             Aproveite a oportunidade de vender uma das maiores marcas do Brasil
             e do mundo.
           </p>
@@ -890,7 +890,7 @@ export default function Index() {
         className="py-12 sm:py-20 md:py-32 bg-black"
         id="cadastro-lojistas"
       >
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto items-center">
             {/* Text/CTA Column - Otimizado para mobile */}
             <div className="space-y-6 sm:space-y-10">
@@ -993,7 +993,7 @@ export default function Index() {
                         type="text"
                         required
                         autoComplete="name"
-                        className={`w-full px-4 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.name
                             ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.name && !formErrors.name
@@ -1053,7 +1053,7 @@ export default function Index() {
                         type="tel"
                         required
                         autoComplete="tel"
-                        className={`w-full px-4 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.whatsapp
                             ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.whatsapp && !formErrors.whatsapp
@@ -1180,7 +1180,7 @@ export default function Index() {
                           name="cnpj-number"
                           type="text"
                           required
-                          className={`w-full px-4 py-3 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
+                          className={`w-full px-3 py-3 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
                             formErrors.cnpj
                               ? "border-red-500"
                               : formValues.cnpj && !formErrors.cnpj
@@ -1266,7 +1266,7 @@ export default function Index() {
         className="py-12 sm:py-20 md:py-32 bg-white"
         id="galeria-produtos"
       >
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
@@ -1275,7 +1275,7 @@ export default function Index() {
                   Ecko
                 </span>
               </h2>
-              <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-4">
+              <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 Descubra as coleç��es oficiais Ecko, com design autêntico e
                 qualidade premium. Produtos únicos que valorizam sua loja e
                 encantam seus clientes.
@@ -1411,7 +1411,7 @@ export default function Index() {
                   Ecko Oficiais
                 </span>
               </h2>
-              <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-4">
+              <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 Histórias reais de sucesso de parceiros que triplicaram o
                 faturamento com a Ecko
               </p>
@@ -1523,7 +1523,7 @@ export default function Index() {
                   {testimonials.map((testimonial) => (
                     <div
                       key={testimonial.id}
-                      className="w-full flex-shrink-0 px-4"
+                      className="w-full flex-shrink-0 px-3"
                     >
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
@@ -1704,7 +1704,7 @@ export default function Index() {
 
       {/* Footer - Accessible Version with Proper Contrast */}
       <footer className="bg-gray-900 text-white py-12 sm:py-16">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               {/* Brand Section */}
