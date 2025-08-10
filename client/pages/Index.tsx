@@ -30,8 +30,10 @@ export default function Index() {
 
   // Estados para controle de submissão
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [submitMessage, setSubmitMessage] = useState("");
 
   // Configurações de tracking via .env
   const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
@@ -614,7 +616,7 @@ export default function Index() {
     }
 
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     const formData = new FormData(e.currentTarget);
 
@@ -726,13 +728,17 @@ export default function Index() {
           has_cnpj: selectedCnpj === "sim",
         });
 
-        setSubmitStatus('success');
+        setSubmitStatus("success");
 
         // Mensagem de sucesso baseada no tipo de lead
         if (selectedCnpj === "nao-consumidor") {
-          setSubmitMessage("🎉 Dados enviados com sucesso! Clique no botão abaixo se desejar entrar em contato via WhatsApp para receber seu cupom de 10% de desconto.");
+          setSubmitMessage(
+            "🎉 Dados enviados com sucesso! Clique no botão abaixo se desejar entrar em contato via WhatsApp para receber seu cupom de 10% de desconto.",
+          );
         } else {
-          setSubmitMessage("✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.");
+          setSubmitMessage(
+            "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
+          );
         }
 
         // Reset form
@@ -753,8 +759,10 @@ export default function Index() {
           },
         });
 
-        setSubmitStatus('error');
-        setSubmitMessage("❌ Erro ao enviar formulário. Por favor, verifique os dados e tente novamente.");
+        setSubmitStatus("error");
+        setSubmitMessage(
+          "❌ Erro ao enviar formulário. Por favor, verifique os dados e tente novamente.",
+        );
       }
     } catch (error) {
       // Track erro de conexão
@@ -769,8 +777,10 @@ export default function Index() {
       });
 
       console.error("Erro ao enviar formulário:", error);
-      setSubmitStatus('error');
-      setSubmitMessage("🔌 Erro de conexão. Verifique sua internet e tente novamente.");
+      setSubmitStatus("error");
+      setSubmitMessage(
+        "🔌 Erro de conexão. Verifique sua internet e tente novamente.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -778,8 +788,8 @@ export default function Index() {
 
   // Função para voltar ao formulário
   const handleBackToForm = () => {
-    setSubmitStatus('idle');
-    setSubmitMessage('');
+    setSubmitStatus("idle");
+    setSubmitMessage("");
     setIsSubmitting(false);
   };
   return (
@@ -1016,239 +1026,62 @@ export default function Index() {
               <div className="space-y-6">
                 <div className="text-center">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
-                    {submitStatus === 'idle' ? 'Falar no Whatsapp agora!' :
-                     submitStatus === 'success' ? 'Formulário Enviado!' :
-                     'Ops! Algo deu errado'}
+                    {submitStatus === "idle"
+                      ? "Falar no Whatsapp agora!"
+                      : submitStatus === "success"
+                        ? "Formulário Enviado!"
+                        : "Ops! Algo deu errado"}
                   </h3>
                 </div>
 
-                {submitStatus === 'idle' && (
-                <form
-                  className="space-y-3"
-                  onSubmit={handleFormSubmit}
-                  noValidate
-                >
-                  <div className="space-y-1">
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-semibold text-white"
-                    >
-                      Nome Completo
-                    </label>
-                    <div className="relative">
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        autoComplete="name"
-                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white backdrop-blur-sm text-gray-900 placeholder:text-gray-500 transition-all duration-300 text-base hover:bg-gray-50 ${
-                          formErrors.name
-                            ? "border-red-500 shadow-red-500/20 shadow-lg"
-                            : formValues.name && !formErrors.name
-                              ? "border-green-500 shadow-green-500/20 shadow-lg"
-                              : "border-gray-300 hover:border-gray-400"
-                        }`}
-                        placeholder="Digite seu nome completo"
-                        value={formValues.name}
-                        onChange={handleNameChange}
-                        onFocus={() =>
-                          trackEvent("form_field_focus", {
-                            field: "name",
-                            step: 1,
-                          })
-                        }
-                        onBlur={(e) => {
-                          e.target.value &&
-                            trackEvent("form_field_complete", {
-                              field: "name",
-                              step: 1,
-                            });
-                        }}
-                      />
-                      {/* Ícone de validação */}
-                      {formValues.name && (
-                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                          {formErrors.name ? (
-                            <FaExclamationTriangle className="w-5 h-5 text-red-500" />
-                          ) : (
-                            <FaCheck className="w-5 h-5 text-green-500" />
-                          )}
-                        </div>
-                      )}
-                    </div>
-                    {formErrors.name && (
-                      <div className="mt-1 p-2 bg-red-900/20 border border-red-500/30 rounded-lg">
-                        <p className="text-red-300 text-sm flex items-center gap-2">
-                          <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
-                          {formErrors.name}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="space-y-1">
-                    <label
-                      htmlFor="whatsapp"
-                      className="block text-sm font-semibold text-white"
-                    >
-                      WhatsApp para Contato
-                    </label>
-                    <div className="relative">
-                      <input
-                        id="whatsapp"
-                        name="whatsapp"
-                        type="tel"
-                        required
-                        autoComplete="tel"
-                        className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white backdrop-blur-sm text-gray-900 placeholder:text-gray-500 transition-all duration-300 text-base hover:bg-gray-50 ${
-                          formErrors.whatsapp
-                            ? "border-red-500 shadow-red-500/20 shadow-lg"
-                            : formValues.whatsapp && !formErrors.whatsapp
-                              ? "border-green-500 shadow-green-500/20 shadow-lg"
-                              : "border-gray-300 hover:border-gray-400"
-                        }`}
-                        placeholder="(11) 99999-9999"
-                        maxLength={15}
-                        onChange={handleWhatsAppChange}
-                        onFocus={() =>
-                          trackEvent("form_field_focus", {
-                            field: "whatsapp",
-                            step: 2,
-                          })
-                        }
-                        onBlur={(e) => {
-                          e.target.value &&
-                            trackEvent("form_field_complete", {
-                              field: "whatsapp",
-                              step: 2,
-                            });
-                        }}
-                      />
-                      {/* Ícone de validação */}
-                      {formValues.whatsapp && (
-                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                          {formErrors.whatsapp ? (
-                            <FaExclamationTriangle className="w-5 h-5 text-red-500" />
-                          ) : (
-                            <FaCheck className="w-5 h-5 text-green-500" />
-                          )}
-                        </div>
-                      )}
-                    </div>
-                    {formErrors.whatsapp && (
-                      <div className="mt-1 p-2 bg-red-900/20 border border-red-500/30 rounded-lg">
-                        <p className="text-red-300 text-sm flex items-center gap-2">
-                          <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
-                          {formErrors.whatsapp}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="space-y-3">
-                    <label className="block text-sm font-semibold text-white">
-                      Tipo de Cadastro
-                    </label>
-                    <div className="grid grid-cols-2 gap-2">
-                      <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
-                        <input
-                          type="radio"
-                          name="cnpj"
-                          value="sim"
-                          className="w-5 h-5 text-primary border-gray-300"
-                          required
-                          onChange={(e) =>
-                            handleCnpjRadioChange(e.target.value)
-                          }
-                        />
-                        <div>
-                          <span className="text-sm sm:text-base font-medium text-white block">
-                            Sou Lojista (Tenho CNPJ)
-                          </span>
-                        </div>
-                      </label>
-                      <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
-                        <input
-                          type="radio"
-                          name="cnpj"
-                          value="nao-consumidor"
-                          className="w-5 h-5 text-primary border-gray-300"
-                          required
-                          onChange={(e) =>
-                            handleCnpjRadioChange(e.target.value)
-                          }
-                        />
-                        <div>
-                          <span className="text-sm sm:text-base font-medium text-white block">
-                            Sou Consumidor Final
-                          </span>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-
-                  {/* Mensagem de Cupom para Consumidores */}
-                  {showCouponMessage && (
-                    <div className="bg-white/10 border border-white/30 rounded-lg p-4">
-                      <div className="text-center space-y-1">
-                        <p className="text-white font-medium">
-                          Este cadastro é exclusivo para lojistas com CNPJ
-                        </p>
-                        <p className="text-gray-200">
-                          Mas não fique triste! Temos um cupom com{" "}
-                          <span className="font-bold text-yellow-300">
-                            10% de desconto
-                          </span>{" "}
-                          para você
-                        </p>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Campo CNPJ Condicional */}
-                  {showCnpjField && (
+                {submitStatus === "idle" && (
+                  <form
+                    className="space-y-3"
+                    onSubmit={handleFormSubmit}
+                    noValidate
+                  >
                     <div className="space-y-1">
                       <label
-                        htmlFor="cnpj-number"
-                        className="text-sm font-medium text-white"
+                        htmlFor="name"
+                        className="block text-sm font-semibold text-white"
                       >
-                        Agora precisamos do seu CNPJ *
+                        Nome Completo
                       </label>
                       <div className="relative">
                         <input
-                          id="cnpj-number"
-                          name="cnpj-number"
+                          id="name"
+                          name="name"
                           type="text"
                           required
-                          className={`w-full px-3 py-3 sm:py-3 pr-12 rounded-lg border bg-white text-gray-900 placeholder:text-gray-500  transition-all text-base sm:text-sm ${
-                            formErrors.cnpj
-                              ? "border-red-500"
-                              : formValues.cnpj && !formErrors.cnpj
-                                ? "border-green-500"
-                                : "border-gray-300"
+                          autoComplete="name"
+                          className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white backdrop-blur-sm text-gray-900 placeholder:text-gray-500 transition-all duration-300 text-base hover:bg-gray-50 ${
+                            formErrors.name
+                              ? "border-red-500 shadow-red-500/20 shadow-lg"
+                              : formValues.name && !formErrors.name
+                                ? "border-green-500 shadow-green-500/20 shadow-lg"
+                                : "border-gray-300 hover:border-gray-400"
                           }`}
-                          placeholder="00.000.000/0000-00"
-                          maxLength={18}
-                          onChange={handleCnpjChange}
+                          placeholder="Digite seu nome completo"
+                          value={formValues.name}
+                          onChange={handleNameChange}
                           onFocus={() =>
                             trackEvent("form_field_focus", {
-                              field: "cnpj",
-                              step: 3,
+                              field: "name",
+                              step: 1,
                             })
                           }
                           onBlur={(e) => {
                             e.target.value &&
                               trackEvent("form_field_complete", {
-                                field: "cnpj",
-                                step: 3,
+                                field: "name",
+                                step: 1,
                               });
                           }}
                         />
                         {/* Ícone de validação */}
-                        {formValues.cnpj && (
+                        {formValues.name && (
                           <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                            {formErrors.cnpj ? (
+                            {formErrors.name ? (
                               <FaExclamationTriangle className="w-5 h-5 text-red-500" />
                             ) : (
                               <FaCheck className="w-5 h-5 text-green-500" />
@@ -1256,77 +1089,268 @@ export default function Index() {
                           </div>
                         )}
                       </div>
-                      {formErrors.cnpj && (
-                        <p className="text-red-500 text-sm mt-1">
-                          {formErrors.cnpj}
-                        </p>
+                      {formErrors.name && (
+                        <div className="mt-1 p-2 bg-red-900/20 border border-red-500/30 rounded-lg">
+                          <p className="text-red-300 text-sm flex items-center gap-2">
+                            <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
+                            {formErrors.name}
+                          </p>
+                        </div>
                       )}
                     </div>
-                  )}
 
-                  <div className="pt-1">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className={`group relative w-full py-3 rounded-xl font-bold text-lg transition-all duration-300 transform shadow-lg overflow-hidden ${
-                        isSubmitting
-                          ? 'bg-gray-600 cursor-not-allowed'
-                          : 'bg-black hover:bg-gray-900 hover:scale-[1.02] hover:shadow-xl'
-                      } text-white`}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                      <span className="relative flex items-center justify-center gap-2">
-                        {isSubmitting ? (
-                          <>
-                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                            Enviando...
-                          </>
-                        ) : showCouponMessage ? (
-                          <>
-                            <FaGift className="w-5 h-5" />
-                            Receber Acesso Exclusivo
-                          </>
-                        ) : (
-                          <>
-                            <FaRocket className="w-5 h-5" />
-                            Começar Agora!
-                          </>
+                    <div className="space-y-1">
+                      <label
+                        htmlFor="whatsapp"
+                        className="block text-sm font-semibold text-white"
+                      >
+                        WhatsApp para Contato
+                      </label>
+                      <div className="relative">
+                        <input
+                          id="whatsapp"
+                          name="whatsapp"
+                          type="tel"
+                          required
+                          autoComplete="tel"
+                          className={`w-full px-3 py-3 pr-12 rounded-xl border-2 bg-white backdrop-blur-sm text-gray-900 placeholder:text-gray-500 transition-all duration-300 text-base hover:bg-gray-50 ${
+                            formErrors.whatsapp
+                              ? "border-red-500 shadow-red-500/20 shadow-lg"
+                              : formValues.whatsapp && !formErrors.whatsapp
+                                ? "border-green-500 shadow-green-500/20 shadow-lg"
+                                : "border-gray-300 hover:border-gray-400"
+                          }`}
+                          placeholder="(11) 99999-9999"
+                          maxLength={15}
+                          onChange={handleWhatsAppChange}
+                          onFocus={() =>
+                            trackEvent("form_field_focus", {
+                              field: "whatsapp",
+                              step: 2,
+                            })
+                          }
+                          onBlur={(e) => {
+                            e.target.value &&
+                              trackEvent("form_field_complete", {
+                                field: "whatsapp",
+                                step: 2,
+                              });
+                          }}
+                        />
+                        {/* Ícone de validação */}
+                        {formValues.whatsapp && (
+                          <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                            {formErrors.whatsapp ? (
+                              <FaExclamationTriangle className="w-5 h-5 text-red-500" />
+                            ) : (
+                              <FaCheck className="w-5 h-5 text-green-500" />
+                            )}
+                          </div>
                         )}
-                      </span>
-                    </button>
-                  </div>
-                </form>
+                      </div>
+                      {formErrors.whatsapp && (
+                        <div className="mt-1 p-2 bg-red-900/20 border border-red-500/30 rounded-lg">
+                          <p className="text-red-300 text-sm flex items-center gap-2">
+                            <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
+                            {formErrors.whatsapp}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="space-y-3">
+                      <label className="block text-sm font-semibold text-white">
+                        Tipo de Cadastro
+                      </label>
+                      <div className="grid grid-cols-2 gap-2">
+                        <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
+                          <input
+                            type="radio"
+                            name="cnpj"
+                            value="sim"
+                            className="w-5 h-5 text-primary border-gray-300"
+                            required
+                            onChange={(e) =>
+                              handleCnpjRadioChange(e.target.value)
+                            }
+                          />
+                          <div>
+                            <span className="text-sm sm:text-base font-medium text-white block">
+                              Sou Lojista (Tenho CNPJ)
+                            </span>
+                          </div>
+                        </label>
+                        <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
+                          <input
+                            type="radio"
+                            name="cnpj"
+                            value="nao-consumidor"
+                            className="w-5 h-5 text-primary border-gray-300"
+                            required
+                            onChange={(e) =>
+                              handleCnpjRadioChange(e.target.value)
+                            }
+                          />
+                          <div>
+                            <span className="text-sm sm:text-base font-medium text-white block">
+                              Sou Consumidor Final
+                            </span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* Mensagem de Cupom para Consumidores */}
+                    {showCouponMessage && (
+                      <div className="bg-white/10 border border-white/30 rounded-lg p-4">
+                        <div className="text-center space-y-1">
+                          <p className="text-white font-medium">
+                            Este cadastro é exclusivo para lojistas com CNPJ
+                          </p>
+                          <p className="text-gray-200">
+                            Mas não fique triste! Temos um cupom com{" "}
+                            <span className="font-bold text-yellow-300">
+                              10% de desconto
+                            </span>{" "}
+                            para você
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Campo CNPJ Condicional */}
+                    {showCnpjField && (
+                      <div className="space-y-1">
+                        <label
+                          htmlFor="cnpj-number"
+                          className="text-sm font-medium text-white"
+                        >
+                          Agora precisamos do seu CNPJ *
+                        </label>
+                        <div className="relative">
+                          <input
+                            id="cnpj-number"
+                            name="cnpj-number"
+                            type="text"
+                            required
+                            className={`w-full px-3 py-3 sm:py-3 pr-12 rounded-lg border bg-white text-gray-900 placeholder:text-gray-500  transition-all text-base sm:text-sm ${
+                              formErrors.cnpj
+                                ? "border-red-500"
+                                : formValues.cnpj && !formErrors.cnpj
+                                  ? "border-green-500"
+                                  : "border-gray-300"
+                            }`}
+                            placeholder="00.000.000/0000-00"
+                            maxLength={18}
+                            onChange={handleCnpjChange}
+                            onFocus={() =>
+                              trackEvent("form_field_focus", {
+                                field: "cnpj",
+                                step: 3,
+                              })
+                            }
+                            onBlur={(e) => {
+                              e.target.value &&
+                                trackEvent("form_field_complete", {
+                                  field: "cnpj",
+                                  step: 3,
+                                });
+                            }}
+                          />
+                          {/* Ícone de validação */}
+                          {formValues.cnpj && (
+                            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                              {formErrors.cnpj ? (
+                                <FaExclamationTriangle className="w-5 h-5 text-red-500" />
+                              ) : (
+                                <FaCheck className="w-5 h-5 text-green-500" />
+                              )}
+                            </div>
+                          )}
+                        </div>
+                        {formErrors.cnpj && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.cnpj}
+                          </p>
+                        )}
+                      </div>
+                    )}
+
+                    <div className="pt-1">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className={`group relative w-full py-3 rounded-xl font-bold text-lg transition-all duration-300 transform shadow-lg overflow-hidden ${
+                          isSubmitting
+                            ? "bg-gray-600 cursor-not-allowed"
+                            : "bg-black hover:bg-gray-900 hover:scale-[1.02] hover:shadow-xl"
+                        } text-white`}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        <span className="relative flex items-center justify-center gap-2">
+                          {isSubmitting ? (
+                            <>
+                              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                              Enviando...
+                            </>
+                          ) : showCouponMessage ? (
+                            <>
+                              <FaGift className="w-5 h-5" />
+                              Receber Acesso Exclusivo
+                            </>
+                          ) : (
+                            <>
+                              <FaRocket className="w-5 h-5" />
+                              Começar Agora!
+                            </>
+                          )}
+                        </span>
+                      </button>
+                    </div>
+                  </form>
                 )}
 
                 {/* Mensagens de Sucesso/Erro */}
-                {submitStatus !== 'idle' && (
-                  <div className={`text-center p-6 rounded-xl ${
-                    submitStatus === 'success' ? 'bg-green-100 border border-green-300' : 'bg-red-100 border border-red-300'
-                  }`}>
-                    <div className={`text-lg font-semibold mb-4 ${
-                      submitStatus === 'success' ? 'text-green-800' : 'text-red-800'
-                    }`}>
+                {submitStatus !== "idle" && (
+                  <div
+                    className={`text-center p-6 rounded-xl ${
+                      submitStatus === "success"
+                        ? "bg-green-100 border border-green-300"
+                        : "bg-red-100 border border-red-300"
+                    }`}
+                  >
+                    <div
+                      className={`text-lg font-semibold mb-4 ${
+                        submitStatus === "success"
+                          ? "text-green-800"
+                          : "text-red-800"
+                      }`}
+                    >
                       {submitMessage}
                     </div>
 
-                    {submitStatus === 'success' && selectedCnpj === "nao-consumidor" && (
-                      <div className="space-y-4">
-                        <button
-                          onClick={() => {
-                            // Track clique manual do WhatsApp
-                            trackEvent("whatsapp_manual_click", {
-                              reason: "coupon_request",
-                              lead_type: "consumer",
-                              action: "manual_button_click"
-                            });
-                            window.open("https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!", "_blank");
-                          }}
-                          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300 mr-4"
-                        >
-                          🎁 Receber Cupom no WhatsApp
-                        </button>
-                      </div>
-                    )}
+                    {submitStatus === "success" &&
+                      selectedCnpj === "nao-consumidor" && (
+                        <div className="space-y-4">
+                          <button
+                            onClick={() => {
+                              // Track clique manual do WhatsApp
+                              trackEvent("whatsapp_manual_click", {
+                                reason: "coupon_request",
+                                lead_type: "consumer",
+                                action: "manual_button_click",
+                              });
+                              window.open(
+                                "https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!",
+                                "_blank",
+                              );
+                            }}
+                            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300 mr-4"
+                          >
+                            🎁 Receber Cupom no WhatsApp
+                          </button>
+                        </div>
+                      )}
 
                     <button
                       onClick={handleBackToForm}
