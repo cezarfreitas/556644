@@ -966,7 +966,7 @@ export default function Index() {
                         name="name"
                         type="text"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70  transition-all text-base sm:text-sm ${
                           formErrors.name
                             ? "border-red-500 "
                             : formValues.name && !formErrors.name
@@ -1022,7 +1022,7 @@ export default function Index() {
                         name="whatsapp"
                         type="tel"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70  transition-all text-base sm:text-sm ${
                           formErrors.whatsapp
                             ? "border-red-500 "
                             : formValues.whatsapp && !formErrors.whatsapp
@@ -1136,7 +1136,7 @@ export default function Index() {
                           name="cnpj-number"
                           type="text"
                           required
-                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70  transition-all text-base sm:text-sm ${
                             formErrors.cnpj
                               ? "border-red-500 "
                               : formValues.cnpj && !formErrors.cnpj
