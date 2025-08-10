@@ -1207,7 +1207,7 @@ export default function Index() {
 
                     <div className="space-y-3">
                       <label className="block text-sm font-semibold text-white">
-                        Tipo de Cadastro
+                        Tipo de Cadastro *
                       </label>
                       <div className="grid grid-cols-2 gap-2">
                         <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
