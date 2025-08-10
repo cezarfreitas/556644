@@ -1595,45 +1595,24 @@ export default function Index() {
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              {/* Desktop Navigation Arrows */}
-              <div className="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
+              {/* Navigation Arrows - Unified for all devices */}
+              <div className="absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 z-10">
                 <button
                   onClick={prevSlide}
-                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300 -ml-6"
+                  className="group bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 md:p-4 hover:bg-white hover:scale-110 transition-all duration-300 md:-ml-6"
                   aria-label="Depoimento anterior"
                 >
-                  <FaChevronLeft className="w-5 h-5 text-gray-600" />
+                  <FaChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-primary transition-colors" />
                 </button>
               </div>
 
-              <div className="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+              <div className="absolute right-2 md:right-0 top-1/2 transform -translate-y-1/2 z-10">
                 <button
                   onClick={nextSlide}
-                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300 -mr-6"
+                  className="group bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 md:p-4 hover:bg-white hover:scale-110 transition-all duration-300 md:-mr-6"
                   aria-label="Próximo depoimento"
                 >
-                  <FaChevronRight className="w-5 h-5 text-gray-600" />
-                </button>
-              </div>
-
-              {/* Mobile Navigation Arrows */}
-              <div className="flex md:hidden absolute left-2 top-1/2 transform -translate-y-1/2 z-10">
-                <button
-                  onClick={prevSlideMobile}
-                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300"
-                  aria-label="Depoimento anterior"
-                >
-                  <FaChevronLeft className="w-4 h-4 text-gray-600" />
-                </button>
-              </div>
-
-              <div className="flex md:hidden absolute right-2 top-1/2 transform -translate-y-1/2 z-10">
-                <button
-                  onClick={nextSlideMobile}
-                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300"
-                  aria-label="Próximo depoimento"
-                >
-                  <FaChevronRight className="w-4 h-4 text-gray-600" />
+                  <FaChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-primary transition-colors" />
                 </button>
               </div>
 
