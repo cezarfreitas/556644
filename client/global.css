@@ -377,7 +377,8 @@ img[fetchpriority="high"] {
 
   /* Realistic Heartbeat animation */
   @keyframes heartbeat {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1);
     }
     14% {
@@ -403,7 +404,8 @@ img[fetchpriority="high"] {
 
   /* Add a subtle glow animation for the heart */
   @keyframes heart-glow {
-    0%, 100% {
+    0%,
+    100% {
       text-shadow:
         0 0 5px rgba(239, 68, 68, 0.5),
         0 0 10px rgba(239, 68, 68, 0.3),
@@ -428,17 +430,22 @@ img[fetchpriority="high"] {
   }
 
   .heart-container:before {
-    content: '';
+    content: "";
     position: absolute;
     inset: -2px;
-    background: radial-gradient(circle, rgba(239, 68, 68, 0.2) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(239, 68, 68, 0.2) 0%,
+      transparent 70%
+    );
     border-radius: 50%;
     animation: heart-aura 4s ease-in-out infinite;
     z-index: -1;
   }
 
   @keyframes heart-aura {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(0.8);
       opacity: 0.3;
     }

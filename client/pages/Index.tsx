@@ -57,15 +57,18 @@ export default function Index() {
     .VITE_GOOGLE_ADS_CONVERSION_LABEL;
 
   // Social Media URLs
-  const FACEBOOK_URL = import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com/ecko";
-  const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/ecko";
-  const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/5511999999999";
+  const FACEBOOK_URL =
+    import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com/ecko";
+  const INSTAGRAM_URL =
+    import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/ecko";
+  const WHATSAPP_URL =
+    import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/5511999999999";
 
   // Debug: Log social media URLs to verify they're loaded correctly
   console.log("Social Media URLs:", {
     facebook: FACEBOOK_URL,
     instagram: INSTAGRAM_URL,
-    whatsapp: WHATSAPP_URL
+    whatsapp: WHATSAPP_URL,
   });
 
   // Brand and Company Configuration
@@ -768,13 +771,22 @@ export default function Index() {
 
       // Validate we have at least some user data for attribution
       const hasUserData =
-        userData.fbc || userData.fbp || userData.ph || userData.em || userData.external_id;
+        userData.fbc ||
+        userData.fbp ||
+        userData.ph ||
+        userData.em ||
+        userData.external_id;
       if (!hasUserData) {
         console.warn(
           "Meta API: Warning - No user identifiers found. This request may fail.",
         );
       } else {
-        console.log("Meta API: User identifiers available:", Object.keys(userData).filter(key => key !== 'client_user_agent' && key !== 'client_ip_address'));
+        console.log(
+          "Meta API: User identifiers available:",
+          Object.keys(userData).filter(
+            (key) => key !== "client_user_agent" && key !== "client_ip_address",
+          ),
+        );
       }
 
       console.log("Meta Conversion API: Validated data for sending:", {
@@ -2599,9 +2611,9 @@ export default function Index() {
                   <span
                     className="text-red-500 inline-block animate-heartbeat"
                     style={{
-                      animation: 'heartbeat 1.2s ease-in-out infinite',
-                      transformOrigin: 'center',
-                      display: 'inline-block'
+                      animation: "heartbeat 1.2s ease-in-out infinite",
+                      transformOrigin: "center",
+                      display: "inline-block",
                     }}
                   >
                     ❤️
