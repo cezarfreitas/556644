@@ -161,24 +161,51 @@ export default function TestePage() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(conversionData),
+          mode: "cors", // Explicitly set CORS mode
+          credentials: "omit"
         },
       );
 
-      // Read the response body only once
-      let responseData: string;
+      // Handle CORS issues - Meta API may block browser requests
+      let responseData: string = "";
+      let canReadResponse = true;
+
       try {
+        // Try to read response - may fail due to CORS
         responseData = await response.text();
       } catch (readError) {
-        responseData = "Unable to read response body";
-        console.warn("Response body read error:", readError);
+        canReadResponse = false;
+        console.warn("CORS blocked response reading:", readError);
+
+        // If it's a CORS error but request went through, consider it potentially successful
+        if (response.type === 'opaque' || response.type === 'opaqueredirect') {
+          responseData = "Request sent (CORS blocked response reading)";
+        } else {
+          responseData = `CORS Error: ${readError.message}`;
+        }
       }
 
-      if (response.ok) {
+      // Evaluate success based on what we can determine
+      if (response.ok && canReadResponse) {
         setTestResults(prev => ({
           ...prev,
           metaAPI: `✅ Meta Conversion API: Success - ${responseData}`
         }));
         console.log("Meta Conversion API test success:", responseData);
+      } else if (!canReadResponse && response.status === 0) {
+        // Status 0 usually means CORS blocked the request entirely
+        setTestResults(prev => ({
+          ...prev,
+          metaAPI: `⚠️ Meta Conversion API: CORS blocked request. Use server-side testing or disable CORS in browser for testing.`
+        }));
+        console.warn("Meta Conversion API blocked by CORS policy");
+      } else if (!canReadResponse) {
+        // Request may have gone through but response is blocked
+        setTestResults(prev => ({
+          ...prev,
+          metaAPI: `⚠️ Meta Conversion API: Request sent but response blocked by CORS. Check Meta Events Manager for delivery.`
+        }));
+        console.warn("Meta Conversion API response blocked by CORS");
       } else {
         setTestResults(prev => ({
           ...prev,
