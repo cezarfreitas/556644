@@ -501,40 +501,68 @@ export default function Index() {
       return;
     }
 
-    console.log("Meta Conversion API: Starting conversion send...");
+    console.log("Meta Conversion API: Starting conversion send for event:", eventName);
 
     try {
+      // Map Facebook standard event names correctly
+      const getStandardEventName = (name: string) => {
+        const eventMap: { [key: string]: string } = {
+          'ViewContent': 'ViewContent',
+          'Lead': 'Lead',
+          'CompleteRegistration': 'CompleteRegistration',
+          'SubmitApplication': 'SubmitApplication',
+          'InitiateCheckout': 'InitiateCheckout',
+          'view_content': 'ViewContent',
+          'lead': 'Lead',
+          'form_submission_success': 'Lead'
+        };
+        return eventMap[name] || 'Lead';
+      };
+
+      const standardEventName = getStandardEventName(eventName);
+
+      // Build proper user_data (required for API)
+      const userData: any = {
+        client_user_agent: navigator.userAgent,
+      };
+
+      // Add Facebook cookies if available
+      const fbc = getCookie("_fbc");
+      const fbp = getCookie("_fbp");
+      if (fbc) userData.fbc = fbc;
+      if (fbp) userData.fbp = fbp;
+
+      // Build custom_data based on event type
+      const customData: any = {
+        currency: "BRL",
+        value: pixelData?.value || 1,
+      };
+
+      // Add event-specific data
+      if (pixelData?.content_name) customData.content_name = pixelData.content_name;
+      if (pixelData?.content_category) customData.content_category = pixelData.content_category;
+      if (pixelData?.content_type) customData.content_type = pixelData.content_type;
+      if (pixelData?.content_ids) customData.content_ids = pixelData.content_ids;
+
       const conversionData = {
         data: [
           {
-            event_name: META_CONVERSION_NAME,
+            event_name: standardEventName,
             event_time: Math.floor(Date.now() / 1000),
             action_source: "website",
             event_source_url: window.location.href,
-            user_data: {
-              client_ip_address: null, // Será preenchido automaticamente
-              client_user_agent: navigator.userAgent,
-              fbc: getCookie("_fbc"), // Facebook click ID
-              fbp: getCookie("_fbp"), // Facebook browser ID
-            },
-            custom_data: {
-              content_category: "Lojistas",
-              content_name: "Ecko Lojista Registration",
-              lead_type: fullEventData.lead_type,
-              traffic_source: fullEventData.traffic_source,
-              value: fullEventData.engagement_score || 1,
-              currency: "BRL",
-              // Additional test data
-              content_type: "lead",
-              content_ids: [fullEventData.session_id],
-              num_items: 1,
-            },
-            event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplicação
+            user_data: userData,
+            custom_data: customData,
+            event_id: `${fullEventData?.session_id || 'session'}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
           },
         ],
         access_token: META_ACCESS_TOKEN,
-        test_event_code: META_TEST_EVENT_CODE, // Test code from environment
       };
+
+      // Add test event code only if available
+      if (META_TEST_EVENT_CODE) {
+        conversionData.test_event_code = META_TEST_EVENT_CODE;
+      }
 
       console.log("Meta Conversion API: Sending data:", {
         pixel_id: META_PIXEL_ID,
