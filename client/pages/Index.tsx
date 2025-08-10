@@ -941,6 +941,38 @@ export default function Index() {
     setIsSubmitting(false);
     setFormErrors({});
   };
+
+  // Track ViewContent event
+  const trackViewContent = (contentType: string, contentId: string, contentName: string) => {
+    const viewContentData = {
+      content_type: contentType,
+      content_ids: [contentId],
+      content_name: contentName,
+      currency: "BRL",
+      value: 0,
+      ...getAnalyticsData(),
+    };
+
+    // Meta Pixel ViewContent
+    if (META_PIXEL_ID && window.fbq) {
+      window.fbq('track', 'ViewContent', {
+        content_type: contentType,
+        content_ids: [contentId],
+        content_name: contentName,
+        currency: 'BRL',
+        value: 0
+      });
+      console.log("Meta Pixel ViewContent tracked:", contentName);
+    }
+
+    // Custom ViewContent tracking
+    trackEvent("view_content", viewContentData);
+
+    // Meta Conversion API ViewContent
+    if (META_ACCESS_TOKEN && META_PIXEL_ID) {
+      sendMetaConversionAPI("view_content", viewContentData, viewContentData);
+    }
+  };
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Mobile & Desktop Optimized */}
