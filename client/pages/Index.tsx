@@ -979,7 +979,7 @@ export default function Index() {
                   onSubmit={handleFormSubmit}
                   noValidate
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     <label
                       htmlFor="name"
                       className="block text-sm font-semibold text-white"
@@ -1039,7 +1039,7 @@ export default function Index() {
                     )}
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     <label
                       htmlFor="whatsapp"
                       className="block text-sm font-semibold text-white"
@@ -1150,7 +1150,7 @@ export default function Index() {
                   {/* Mensagem de Cupom para Consumidores */}
                   {showCouponMessage && (
                     <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                      <div className="text-center space-y-2">
+                      <div className="text-center space-y-1">
                         <p className="text-white font-medium">
                           Este cadastro é exclusivo para lojistas com CNPJ
                         </p>
@@ -1167,7 +1167,7 @@ export default function Index() {
 
                   {/* Campo CNPJ Condicional */}
                   {showCnpjField && (
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <label
                         htmlFor="cnpj-number"
                         className="text-sm font-medium text-white"
