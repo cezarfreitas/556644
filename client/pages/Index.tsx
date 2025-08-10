@@ -781,7 +781,7 @@ export default function Index() {
         <div className="relative flex flex-col items-center justify-center h-full w-full px-4 md:px-8 text-center" style={{ zIndex: 10 }}>
 
           {/* Logo com Efeito Glow */}
-          <div className="mb-12 animate-fade-in relative">
+          <div className="mb-12 animate-fade-in relative flex justify-center">
             <div className="absolute inset-0 bg-primary/30 rounded-full blur-2xl scale-150 animate-pulse"></div>
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
@@ -796,7 +796,7 @@ export default function Index() {
           </div>
 
           {/* Main Heading - Completamente Novo */}
-          <div className="text-center mb-8 animate-slide-up">
+          <div className="w-full text-center mb-8 animate-slide-up">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.85] tracking-tight mb-4">
               <span className="block text-white drop-shadow-2xl mb-2 filter contrast-125">
                 SEJA UM
@@ -812,13 +812,13 @@ export default function Index() {
 
 
           {/* Enhanced Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white text-center max-w-4xl leading-relaxed mb-8 sm:mb-12 animate-slide-up px-4 drop-shadow-lg filter contrast-125">
+          <p className="text-lg sm:text-xl md:text-2xl text-white text-center max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 animate-slide-up px-4 drop-shadow-lg filter contrast-125">
             Faça parte da <span className="font-bold text-white bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">rede de distribuidores oficiais</span> da maior marca
             de moda urbana do Brasil, <span className="font-semibold text-white">reconhecida mundialmente</span>
           </p>
 
           {/* Primary CTA Button */}
-          <div className="flex justify-center mb-8 sm:mb-16 animate-fade-in">
+          <div className="w-full flex justify-center mb-8 sm:mb-16 animate-fade-in">
             <a
               href="#cadastro-lojistas"
               className="group relative inline-flex items-center justify-center bg-gradient-to-r from-primary via-red-600 to-red-700 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-10 py-5 rounded-2xl text-lg font-black transition-all duration-500 transform hover:scale-110 hover:shadow-2xl shadow-xl uppercase tracking-wide gap-3 border-2 border-white/30 hover:border-white/50 overflow-hidden"
