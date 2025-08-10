@@ -1668,9 +1668,9 @@ export default function Index() {
               </div>
 
               {/* Mobile Slider Content - 1 column */}
-              <div className="md:hidden overflow-hidden">
+              <div className="md:hidden overflow-hidden rounded-2xl">
                 <div
-                  className="flex transition-transform duration-500 ease-in-out"
+                  className="flex transition-transform duration-700 ease-out"
                   style={{
                     transform: `translateX(-${currentSlide * 100}%)`,
                   }}
