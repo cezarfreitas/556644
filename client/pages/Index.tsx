@@ -60,9 +60,9 @@ export default function Index() {
   const FACEBOOK_URL =
     import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com/ecko";
   const INSTAGRAM_URL =
-    import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/ecko";
+    import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/ecko_unltd_br/";
   const WHATSAPP_URL =
-    import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/5511999999999";
+    import.meta.env.VITE_WHATSAPP_URL || "https://eckoshop.com.br";
 
   // Debug: Log social media URLs to verify they're loaded correctly
   console.log("Social Media URLs:", {
