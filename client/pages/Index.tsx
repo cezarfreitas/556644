@@ -820,27 +820,6 @@ export default function Index() {
             </h1>
           </div>
 
-          {/* Stats Cards */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12 animate-slide-up">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20">
-              <div className="text-center">
-                <div className="text-2xl font-black text-white drop-shadow-lg">#1</div>
-                <div className="text-xs text-white uppercase tracking-wide drop-shadow-md">Marca Streetwear</div>
-              </div>
-            </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30">
-              <div className="text-center">
-                <div className="text-2xl font-black text-white drop-shadow-lg">1000+</div>
-                <div className="text-xs text-white uppercase tracking-wide drop-shadow-md">Lojistas Oficiais</div>
-              </div>
-            </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30">
-              <div className="text-center">
-                <div className="text-2xl font-black text-white drop-shadow-lg">25+</div>
-                <div className="text-xs text-white uppercase tracking-wide drop-shadow-md">Anos no Mercado</div>
-              </div>
-            </div>
-          </div>
 
           {/* Enhanced Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-white text-center max-w-4xl leading-relaxed mb-8 sm:mb-12 animate-slide-up px-4 drop-shadow-lg filter contrast-125">
