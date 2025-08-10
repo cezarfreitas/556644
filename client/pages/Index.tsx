@@ -365,8 +365,8 @@ export default function Index() {
     if (GTM_ID && window.dataLayer) {
       window.dataLayer.push({
         event: eventName,
-        event_category: 'Lead Generation',
-        event_label: fullEventData.lead_type || 'unknown',
+        event_category: "Lead Generation",
+        event_label: fullEventData.lead_type || "unknown",
         event_value: fullEventData.engagement_score || 1,
         custom_parameters: fullEventData,
         // Specific GTM parameters
@@ -377,10 +377,10 @@ export default function Index() {
         gtm_session_id: fullEventData.session_id,
         gtm_engagement_score: fullEventData.engagement_score,
         gtm_form_completion_time: fullEventData.form_completion_time,
-        gtm_timestamp: fullEventData.timestamp
+        gtm_timestamp: fullEventData.timestamp,
       });
 
-      console.log('GTM DataLayer event pushed:', eventName);
+      console.log("GTM DataLayer event pushed:", eventName);
     }
 
     // Google Analytics 4
@@ -475,20 +475,20 @@ export default function Index() {
               // Additional test data
               content_type: "lead",
               content_ids: [fullEventData.session_id],
-              num_items: 1
+              num_items: 1,
             },
             event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplicação
           },
         ],
         access_token: META_ACCESS_TOKEN,
-        test_event_code: "TEST12345" // Add test code for debugging
+        test_event_code: "TEST12345", // Add test code for debugging
       };
 
       console.log("Meta Conversion API: Sending data:", {
         pixel_id: META_PIXEL_ID,
         event_name: META_CONVERSION_NAME,
         test_mode: true,
-        conversion_data: conversionData
+        conversion_data: conversionData,
       });
 
       const response = await fetch(
@@ -511,10 +511,10 @@ export default function Index() {
         // Push success to GTM if available
         if (window.dataLayer) {
           window.dataLayer.push({
-            event: 'meta_conversion_success',
+            event: "meta_conversion_success",
             meta_pixel_id: META_PIXEL_ID,
             meta_event_name: META_CONVERSION_NAME,
-            meta_response: responseData
+            meta_response: responseData,
           });
         }
       } else {
@@ -525,9 +525,9 @@ export default function Index() {
         // Push error to GTM if available
         if (window.dataLayer) {
           window.dataLayer.push({
-            event: 'meta_conversion_error',
+            event: "meta_conversion_error",
             meta_error_status: response.status,
-            meta_error_response: responseData
+            meta_error_response: responseData,
           });
         }
       }
@@ -537,8 +537,8 @@ export default function Index() {
       // Push network error to GTM if available
       if (window.dataLayer) {
         window.dataLayer.push({
-          event: 'meta_conversion_network_error',
-          meta_error: error?.message || 'Unknown error'
+          event: "meta_conversion_network_error",
+          meta_error: error?.message || "Unknown error",
         });
       }
     }
