@@ -499,7 +499,7 @@ export default function Index() {
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
-    if (!/^[a-zA-ZÀ-��\s]+$/.test(name)) return "Nome deve conter apenas letras";
+    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(name)) return "Nome deve conter apenas letras";
     return "";
   };
 
@@ -693,7 +693,8 @@ export default function Index() {
     console.log("Payload sendo enviado:", payload);
 
     try {
-      const response = await fetch(api_form, {
+      console.log("Submitting form to:", API_FORM_ENDPOINT);
+      const response = await fetch(API_FORM_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
