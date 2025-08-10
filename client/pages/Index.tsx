@@ -890,6 +890,59 @@ export default function Index() {
     }
   };
 
+  // Alternative submission method when API is not available
+  const handleAlternativeSubmission = (payload: any, formData: FormData) => {
+    const name = formData.get("name") as string;
+    const whatsapp = formData.get("whatsapp") as string;
+    const cnpj = formData.get("cnpj-number") as string;
+    const hasasCnpj = selectedCnpj === "sim" ? "Sim" : "Não";
+
+    // Create WhatsApp message with form data
+    const whatsappMessage = `
+🔥 *NOVO LEAD - LOJISTA ECKO*
+
+👤 *Nome:* ${name}
+📱 *WhatsApp:* ${whatsapp}
+🏢 *Tem CNPJ:* ${hasasCnpj}
+${showCnpjField ? `📄 *CNPJ:* ${cnpj}` : ""}
+💰 *Tipo:* ${selectedCnpj === "sim" ? "Lojista (Business)" : "Consumidor Final"}
+
+🌐 *Origem:* Landing Page Lojistas
+⏰ *Data:* ${new Date().toLocaleString("pt-BR")}
+
+---
+*Entrar em contato em até 24h*
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Track the alternative submission
+    trackEvent("form_submission_alternative", {
+      method: "whatsapp_redirect",
+      lead_type: selectedCnpj === "sim" ? "business" : "consumer",
+      has_cnpj: selectedCnpj === "sim",
+    });
+
+    setSubmitStatus("success");
+    setSubmitMessage(
+      `📱 Como nosso sistema está em manutenção, seus dados foram preparados para envio via WhatsApp.
+
+Clique no botão abaixo para enviar suas informações diretamente para nossa equipe:`
+    );
+
+    // Reset form
+    setSelectedCnpj("");
+    setShowCnpjField(false);
+    setShowCouponMessage(false);
+    setFormErrors({});
+    setIsSubmitting(false);
+
+    // Auto redirect after 2 seconds for better UX
+    setTimeout(() => {
+      window.open(whatsappUrl, "_blank");
+    }, 2000);
+  };
+
   // Função para voltar ao formulário
   const handleBackToForm = () => {
     setSubmitStatus("idle");
