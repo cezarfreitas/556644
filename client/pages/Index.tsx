@@ -772,7 +772,7 @@ export default function Index() {
 
           {/* Mobile Heading */}
           <div className="mb-6">
-            <h1 className="text-2xl font-black text-white leading-tight">
+            <h1 className="text-2xl font-black text-white leading-tight drop-shadow-2xl">
               <span className="block mb-1">SEJA UM</span>
               <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-1">
                 LOJISTA OFICIAL
@@ -782,7 +782,7 @@ export default function Index() {
           </div>
 
           {/* Mobile Subtitle */}
-          <p className="text-sm text-white/90 leading-relaxed mb-8 px-2">
+          <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
             Faça parte da{" "}
             <span className="font-bold text-white">rede de distribuidores oficiais</span>{" "}
             da maior marca de moda urbana do Brasil
@@ -816,7 +816,7 @@ export default function Index() {
 
               {/* Desktop Heading */}
               <div>
-                <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9]">
+                <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] drop-shadow-2xl">
                   <span className="block mb-2">SEJA UM</span>
                   <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-2">
                     LOJISTA OFICIAL
@@ -826,7 +826,7 @@ export default function Index() {
               </div>
 
               {/* Desktop Subtitle */}
-              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
                 Faça parte da{" "}
                 <span className="font-bold text-white">rede de distribuidores oficiais</span>{" "}
                 da maior marca de moda urbana do Brasil,{" "}
