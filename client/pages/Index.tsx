@@ -490,6 +490,9 @@ export default function Index() {
     }
   };
 
+  // Cache to prevent duplicate requests
+  const metaApiRequestCache = new Set<string>();
+
   // Função para API de conversão Meta com teste e debug melhorado
   const sendMetaConversionAPI = async (
     eventName: string,
@@ -500,6 +503,17 @@ export default function Index() {
       console.log("Meta Conversion API: Missing access token or pixel ID");
       return;
     }
+
+    // Create cache key to prevent duplicate requests
+    const cacheKey = `${eventName}_${fullEventData?.session_id || 'unknown'}_${Math.floor(Date.now() / 5000)}`;
+    if (metaApiRequestCache.has(cacheKey)) {
+      console.log("Meta Conversion API: Skipping duplicate request for", eventName);
+      return;
+    }
+    metaApiRequestCache.add(cacheKey);
+
+    // Clean cache after 30 seconds
+    setTimeout(() => metaApiRequestCache.delete(cacheKey), 30000);
 
     console.log("Meta Conversion API: Starting conversion send for event:", eventName);
 
@@ -775,7 +789,7 @@ export default function Index() {
     if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
-    // Validação de CNPJ
+    // Valida��ão de CNPJ
     if (numbers === "00000000000000") return "CNPJ inválido";
 
     // Algoritmo de validação de CNPJ
