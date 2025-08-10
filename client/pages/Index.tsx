@@ -1710,52 +1710,48 @@ export default function Index() {
                 </div>
               </div>
 
-              {/* Dots Navigation - Desktop (paired slides) */}
-              <div className="hidden md:flex justify-center mt-8 space-x-2">
-                {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
-                  (_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToSlide(index)}
-                      className={`w-12 h-12 rounded-full transition-colors duration-300 flex items-center justify-center ${
-                        currentSlide === index
-                          ? "bg-primary"
-                          : "bg-gray-300 hover:bg-gray-400"
-                      }`}
-                      aria-label={`Ir para slide ${index + 1}`}
-                      title={`Ir para slide ${index + 1}`}
-                    >
-                      <span
-                        className={`w-3 h-3 rounded-full ${
-                          currentSlide === index ? "bg-white" : "bg-gray-600"
-                        }`}
-                      ></span>
-                    </button>
-                  ),
-                )}
-              </div>
-
-              {/* Dots Navigation - Mobile (single slides) */}
-              <div className="flex md:hidden justify-center mt-8 space-x-2">
-                {testimonials.map((_, index) => (
+              {/* Unified Dots Navigation with progress indicators */}
+              <div className="flex justify-center mt-8 space-x-3">
+                {Array.from({
+                  length: typeof window !== 'undefined' && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2)
+                }).map((_, index) => (
                   <button
                     key={index}
                     onClick={() => goToSlide(index)}
-                    className={`w-12 h-12 rounded-full transition-colors duration-300 flex items-center justify-center ${
+                    className={`relative overflow-hidden rounded-full transition-all duration-300 flex items-center justify-center ${
                       currentSlide === index
-                        ? "bg-primary"
-                        : "bg-gray-300 hover:bg-gray-400"
+                        ? "w-12 h-12 bg-primary shadow-lg scale-110"
+                        : "w-10 h-10 bg-gray-300 hover:bg-gray-400 hover:scale-105"
                     }`}
-                    aria-label={`Ir para depoimento ${index + 1}`}
-                    title={`Ir para depoimento ${index + 1}`}
+                    aria-label={`Ir para slide ${index + 1}`}
+                    title={`Ir para slide ${index + 1}`}
                   >
+                    {currentSlide === index && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+                    )}
                     <span
-                      className={`w-3 h-3 rounded-full ${
-                        currentSlide === index ? "bg-white" : "bg-gray-600"
+                      className={`w-3 h-3 rounded-full transition-all ${
+                        currentSlide === index ? "bg-white scale-110" : "bg-gray-600"
                       }`}
                     ></span>
                   </button>
                 ))}
+              </div>
+
+              {/* Progress Bar */}
+              <div className="mt-6 max-w-md mx-auto">
+                <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-primary to-red-600 transition-all duration-300 ease-out"
+                    style={{
+                      width: `${((currentSlide + 1) / (typeof window !== 'undefined' && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2))) * 100}%`
+                    }}
+                  ></div>
+                </div>
+                <div className="flex justify-between mt-2 text-xs text-gray-500">
+                  <span>{currentSlide + 1}</span>
+                  <span>de {typeof window !== 'undefined' && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2)}</span>
+                </div>
               </div>
             </div>
 
