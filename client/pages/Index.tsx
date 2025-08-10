@@ -25,7 +25,7 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Estados para valida��ão de formulário
+  // Estados para validação de formulário
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
@@ -979,7 +979,7 @@ export default function Index() {
                   onSubmit={handleFormSubmit}
                   noValidate
                 >
-                  <div className="space-y-3">
+                  <div className="space-y-2">
                     <label
                       htmlFor="name"
                       className="block text-sm font-semibold text-white"
@@ -1039,7 +1039,7 @@ export default function Index() {
                     )}
                   </div>
 
-                  <div className="space-y-3">
+                  <div className="space-y-2">
                     <label
                       htmlFor="whatsapp"
                       className="block text-sm font-semibold text-white"
@@ -1150,7 +1150,7 @@ export default function Index() {
                   {/* Mensagem de Cupom para Consumidores */}
                   {showCouponMessage && (
                     <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                      <div className="text-center space-y-3">
+                      <div className="text-center space-y-2">
                         <p className="text-white font-medium">
                           Este cadastro é exclusivo para lojistas com CNPJ
                         </p>
