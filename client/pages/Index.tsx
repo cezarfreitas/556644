@@ -727,23 +727,9 @@ export default function Index() {
 
         setSubmitStatus('success');
 
-        // Se for consumidor, prepara mensagem específica e abre WhatsApp
+        // Mensagem de sucesso baseada no tipo de lead
         if (selectedCnpj === "nao-consumidor") {
-          setSubmitMessage("🎉 Dados enviados com sucesso! Clique no botão abaixo para receber seu cupom de 10% de desconto via WhatsApp.");
-
-          // Track clique do WhatsApp
-          trackEvent("whatsapp_redirect", {
-            reason: "coupon_request",
-            lead_type: "consumer",
-          });
-
-          // Delay para mostrar mensagem antes de abrir WhatsApp
-          setTimeout(() => {
-            window.open(
-              "https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!",
-              "_blank",
-            );
-          }, 1000);
+          setSubmitMessage("🎉 Dados enviados com sucesso! Clique no botão abaixo se desejar entrar em contato via WhatsApp para receber seu cupom de 10% de desconto.");
         } else {
           setSubmitMessage("✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.");
         }
