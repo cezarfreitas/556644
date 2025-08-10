@@ -1617,9 +1617,9 @@ export default function Index() {
               </div>
 
               {/* Desktop Slider Content - 2 columns */}
-              <div className="hidden md:block overflow-hidden">
+              <div className="hidden md:block overflow-hidden rounded-2xl">
                 <div
-                  className="flex transition-transform duration-500 ease-in-out"
+                  className="flex transition-transform duration-700 ease-out"
                   style={{
                     transform: `translateX(-${currentSlide * 100}%)`,
                   }}
