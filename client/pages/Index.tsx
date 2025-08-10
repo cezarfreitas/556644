@@ -791,9 +791,6 @@ export default function Index() {
       if (error.name === "AbortError") {
         errorType = "timeout_error";
         userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
-      } else if (error.message?.includes("Failed to fetch")) {
-        errorType = "fetch_blocked_error";
-        userMessage = "🚫 Erro de rede. Tentamos uma abordagem alternativa, mas falhou. Recarregue a página e tente novamente.";
       } else if (error.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage = "🔒 Erro de segurança. Recarregue a página e tente novamente.";
