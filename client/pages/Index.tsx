@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import {
   MdStar,
   MdAttachMoney,
-  MdHeadset,
-  MdWorkspacePremium,
 } from "react-icons/md";
 import {
   FaFacebook,
