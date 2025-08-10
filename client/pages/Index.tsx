@@ -780,7 +780,7 @@ export default function Index() {
         </div>
 
         {/* Hero Content - Redesigned */}
-        <div className="relative flex flex-col items-center justify-center h-full px-4 md:px-8" style={{ zIndex: 10 }}>
+        <div className="relative flex flex-col items-center justify-center h-full w-full px-4 md:px-8 text-center" style={{ zIndex: 10 }}>
 
           {/* Logo com Efeito Glow */}
           <div className="mb-12 animate-fade-in relative">
