@@ -66,7 +66,7 @@ export default function TestePage() {
         });
         setTestResults((prev) => ({
           ...prev,
-          ga4: "✅ GA4 event sent successfully",
+          ga4: "�� GA4 event sent successfully",
         }));
         console.log("GA4 test event sent");
       } else {
@@ -708,8 +708,13 @@ export default function TestePage() {
                 eventos
               </p>
               <p>
-                <strong>4. Meta Pixel:</strong> Use o Facebook Pixel Helper
-                extension
+                <strong>4. Meta Pixel:</strong> Use o Facebook Pixel Helper extension
+              </p>
+              <p className="text-sm ml-4">
+                • <strong>PageView:</strong> Dispara automaticamente na página principal
+              </p>
+              <p className="text-sm ml-4">
+                • <strong>ViewContent:</strong> Dispara quando usuário vê a galeria de produtos
               </p>
               <p>
                 <strong>5. Google Ads:</strong> Verifique as conversões no
