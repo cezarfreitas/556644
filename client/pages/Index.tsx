@@ -771,7 +771,10 @@ export default function Index() {
         </div>
 
         {/* Floating Elements Background */}
-        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 3 }}>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ zIndex: 3 }}
+        >
           {/* Geometric Shapes */}
           <div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/10 rounded-full animate-pulse"></div>
           <div className="absolute top-40 right-20 w-12 h-12 bg-primary/20 rounded-lg rotate-45 animate-spin-slow"></div>
@@ -780,8 +783,10 @@ export default function Index() {
         </div>
 
         {/* Hero Content - Redesigned */}
-        <div className="relative flex flex-col items-center justify-center h-full w-full px-4 md:px-8 text-center" style={{ zIndex: 10 }}>
-
+        <div
+          className="relative flex flex-col items-center justify-center h-full w-full px-4 md:px-8 text-center"
+          style={{ zIndex: 10 }}
+        >
           {/* Logo com Efeito Glow */}
           <div className="mb-12 animate-fade-in relative">
             <div className="absolute inset-0 bg-primary/30 rounded-full blur-2xl scale-150 animate-pulse"></div>
@@ -812,11 +817,16 @@ export default function Index() {
             </h1>
           </div>
 
-
           {/* Enhanced Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-white text-center max-w-4xl leading-relaxed mb-8 sm:mb-12 animate-slide-up px-4 drop-shadow-lg filter contrast-125">
-            Faça parte da <span className="font-bold text-white bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">rede de distribuidores oficiais</span> da maior marca
-            de moda urbana do Brasil, <span className="font-semibold text-white">reconhecida mundialmente</span>
+            Faça parte da{" "}
+            <span className="font-bold text-white bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+              rede de distribuidores oficiais
+            </span>{" "}
+            da maior marca de moda urbana do Brasil,{" "}
+            <span className="font-semibold text-white">
+              reconhecida mundialmente
+            </span>
           </p>
 
           {/* Primary CTA Button */}
@@ -848,7 +858,9 @@ export default function Index() {
               }}
             >
               <div className="text-white group-hover:text-white transition-colors duration-300 text-center mb-3">
-                <div className="text-xs uppercase tracking-widest font-medium mb-1 drop-shadow-md">Role para baixo</div>
+                <div className="text-xs uppercase tracking-widest font-medium mb-1 drop-shadow-md">
+                  Role para baixo
+                </div>
                 <div className="w-12 h-6 border-2 border-white/60 rounded-full flex justify-center">
                   <div className="w-1 h-2 bg-white rounded-full mt-1 animate-bounce drop-shadow-sm"></div>
                 </div>
@@ -858,10 +870,19 @@ export default function Index() {
         </div>
 
         {/* Particle Effect Overlay */}
-        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 5 }}>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ zIndex: 5 }}
+        >
           <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/30 rounded-full animate-twinkle"></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/50 rounded-full animate-twinkle" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-white/40 rounded-full animate-twinkle" style={{ animationDelay: '2s' }}></div>
+          <div
+            className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/50 rounded-full animate-twinkle"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-white/40 rounded-full animate-twinkle"
+            style={{ animationDelay: "2s" }}
+          ></div>
         </div>
       </header>
 

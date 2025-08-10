@@ -342,7 +342,8 @@ img[fetchpriority="high"] {
   }
 
   @keyframes bounce-slow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
@@ -351,7 +352,8 @@ img[fetchpriority="high"] {
   }
 
   @keyframes twinkle {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.3;
       transform: scale(0.8);
     }
