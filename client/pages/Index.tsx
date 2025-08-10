@@ -1721,17 +1721,14 @@ export default function Index() {
                     <span className="block text-primary">Ecko</span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-                    Há mais de duas décadas, a Ecko é líder absoluta em
-                    streetwear e moda urbana no Brasil. Nascida da cultura de
-                    rua, a marca revolucionou o mercado de moda jovem
-                    brasileira.
+                    Nascida nas ruas de Nova York em 1993, a Ecko Unltd. chegou ao Brasil
+                    para revolucionar o streetwear nacional. Mais que uma marca, somos um
+                    movimento cultural que une música, arte urbana e moda autêntica.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com produtos autênticos que refletem a essência do street
-                    style brasileiro, a Ecko conquistou milhões de consumidores
-                    e se estabeleceu como a maior marca de streetwear do país.
-                    Nossos lojistas parceiros fazem parte dessa trajetória de
-                    sucesso.
+                    De graffitis nas paredes às passarelas, nossa essência permanece a mesma:
+                    criar produtos que expressam a identidade e atitude da nova geração.
+                    Cada peça conta uma história, cada design carrega a alma das ruas.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
