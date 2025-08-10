@@ -152,7 +152,7 @@ export default function Index() {
     import.meta.env.VITE_api_form ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
-  // Função para capturar dados de visitação e analytics
+  // Fun��ão para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const referrer = document.referrer || "direct";
@@ -1772,8 +1772,8 @@ export default function Index() {
               <div className="text-center lg:text-right">
                 <div className="inline-block">
                   <img
-                    src="/images/brand/brand-story.webp"
-                    alt="Ecko Streetwear - Autenticidade da Marca"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F74fe21aa8c244f93abb57269c4175b37?format=webp&width=800"
+                    alt="Ecko Streetwear - Autenticidade da Marca - Cultura Urbana"
                     className="w-full max-w-md rounded-xl shadow-2xl"
                     loading="lazy"
                   />
