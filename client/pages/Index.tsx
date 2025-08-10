@@ -206,7 +206,7 @@ export default function Index() {
     // Enviar pageview customizado
     trackEvent("pageview", pageviewData);
 
-    // Verificar se Meta Pixel carregou após 2 segundos
+    // Verificar se Meta Pixel carregou ap��s 2 segundos
     setTimeout(() => {
       if (window.fbq) {
         console.log("✅ Meta Pixel carregado e funcionando");
@@ -2358,7 +2358,7 @@ export default function Index() {
                 <div className="space-y-3 sm:space-y-6">
                   <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                     História da Marca
-                    <span className="block text-primary">Ecko</span>
+                    <span className="block text-primary">{BRAND_NAME}</span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
                     Nascida nas ruas de Nova York em 1993, a Ecko Unltd. chegou
