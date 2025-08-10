@@ -1803,7 +1803,7 @@ export default function Index() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                    className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Siga no Facebook - Abre em nova aba"
                     title="Siga no Facebook"
                   >
@@ -1813,7 +1813,7 @@ export default function Index() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-700 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                    className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Siga no Instagram - Abre em nova aba"
                     title="Siga no Instagram"
                   >
@@ -1823,7 +1823,7 @@ export default function Index() {
                     href="https://wa.me/5511999999999"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-700 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                    className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Entre em contato via WhatsApp - Abre em nova aba"
                     title="Entre em contato via WhatsApp"
                   >
