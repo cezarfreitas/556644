@@ -503,6 +503,25 @@ export default function TestePage() {
               )}
             </div>
 
+            {/* Meta API Configuration Test */}
+            <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-orange-800 mb-4 flex items-center gap-2">
+                🔍 Meta API Config
+              </h3>
+              <button
+                onClick={testMetaConfig}
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+              >
+                <FaCheck className="w-4 h-4" />
+                Verificar Config
+              </button>
+              {testResults.metaConfig && (
+                <div className="mt-3 p-3 bg-white rounded-lg text-sm break-words">
+                  {testResults.metaConfig}
+                </div>
+              )}
+            </div>
+
             {/* Meta Conversion API Test */}
             <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6">
               <h3 className="text-lg font-bold text-indigo-800 mb-4 flex items-center gap-2">
