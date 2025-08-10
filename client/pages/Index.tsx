@@ -838,6 +838,7 @@ export default function Index() {
     setSubmitStatus("idle");
     setSubmitMessage("");
     setIsSubmitting(false);
+    setFormErrors({});
   };
   return (
     <div className="min-h-screen bg-background">
