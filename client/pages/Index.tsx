@@ -25,7 +25,7 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Estados para validação de formulário
+  // Estados para valida��ão de formulário
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
@@ -1103,8 +1103,8 @@ export default function Index() {
                     <label className="block text-sm font-semibold text-white">
                       Tipo de Cadastro
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <label className="flex items-center gap-3 p-3 border-2 border-gray-600 rounded-lg cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <label className="flex items-center gap-2 p-2 border-2 border-gray-600 rounded-lg cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
                         <input
                           type="radio"
                           name="cnpj"
@@ -1124,7 +1124,7 @@ export default function Index() {
                           </span>
                         </div>
                       </label>
-                      <label className="flex items-center gap-3 p-3 border-2 border-gray-600 rounded-lg cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
+                      <label className="flex items-center gap-2 p-2 border-2 border-gray-600 rounded-lg cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
                         <input
                           type="radio"
                           name="cnpj"
@@ -1423,7 +1423,7 @@ export default function Index() {
               <div className="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
                 <button
                   onClick={prevSlide}
-                  className="bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors duration-300 -ml-6"
+                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300 -ml-6"
                   aria-label="Depoimento anterior"
                 >
                   <FaChevronLeft className="w-5 h-5 text-gray-600" />
@@ -1433,7 +1433,7 @@ export default function Index() {
               <div className="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
                 <button
                   onClick={nextSlide}
-                  className="bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors duration-300 -mr-6"
+                  className="bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-300 -mr-6"
                   aria-label="Próximo depoimento"
                 >
                   <FaChevronRight className="w-5 h-5 text-gray-600" />
