@@ -438,13 +438,18 @@ export default function Index() {
     }
   };
 
-  // Função para API de conversão Meta
+  // Função para API de conversão Meta com teste e debug melhorado
   const sendMetaConversionAPI = async (
     eventName: string,
     pixelData: any,
     fullEventData: any,
   ) => {
-    if (!META_ACCESS_TOKEN || !META_PIXEL_ID) return;
+    if (!META_ACCESS_TOKEN || !META_PIXEL_ID) {
+      console.log("Meta Conversion API: Missing access token or pixel ID");
+      return;
+    }
+
+    console.log("Meta Conversion API: Starting conversion send...");
 
     try {
       const conversionData = {
@@ -467,12 +472,24 @@ export default function Index() {
               traffic_source: fullEventData.traffic_source,
               value: fullEventData.engagement_score || 1,
               currency: "BRL",
+              // Additional test data
+              content_type: "lead",
+              content_ids: [fullEventData.session_id],
+              num_items: 1
             },
             event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplicação
           },
         ],
         access_token: META_ACCESS_TOKEN,
+        test_event_code: "TEST12345" // Add test code for debugging
       };
+
+      console.log("Meta Conversion API: Sending data:", {
+        pixel_id: META_PIXEL_ID,
+        event_name: META_CONVERSION_NAME,
+        test_mode: true,
+        conversion_data: conversionData
+      });
 
       const response = await fetch(
         `https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`,
@@ -485,13 +502,45 @@ export default function Index() {
         },
       );
 
+      const responseData = await response.text();
+
       if (response.ok) {
-        console.log("Meta Conversion API: Success");
+        console.log("✅ Meta Conversion API: Success");
+        console.log("Meta Conversion API Response:", responseData);
+
+        // Push success to GTM if available
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'meta_conversion_success',
+            meta_pixel_id: META_PIXEL_ID,
+            meta_event_name: META_CONVERSION_NAME,
+            meta_response: responseData
+          });
+        }
       } else {
-        console.error("Meta Conversion API: Error", await response.text());
+        console.error("❌ Meta Conversion API: Error");
+        console.error("Status:", response.status);
+        console.error("Response:", responseData);
+
+        // Push error to GTM if available
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'meta_conversion_error',
+            meta_error_status: response.status,
+            meta_error_response: responseData
+          });
+        }
       }
     } catch (error) {
-      console.error("Meta Conversion API: Network error", error);
+      console.error("❌ Meta Conversion API: Network error", error);
+
+      // Push network error to GTM if available
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'meta_conversion_network_error',
+          meta_error: error?.message || 'Unknown error'
+        });
+      }
     }
   };
 
