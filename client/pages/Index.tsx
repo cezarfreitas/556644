@@ -1835,7 +1835,7 @@ export default function Index() {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 pt-8">
-              <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+              <div className="text-gray-300 text-sm">
                 <div className="text-gray-300 text-sm">
                   �� 2024. Todos os direitos reservados.
                 </div>
