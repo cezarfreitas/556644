@@ -738,130 +738,6 @@ export default function Index() {
   };
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section - Landing Page Principal */}
-      <header className="relative h-screen w-full overflow-hidden hero-section">
-        {/* Background Image com Parallax Effect */}
-        <div className="absolute inset-0">
-          <img
-            src="/images/hero/hero-background.webp"
-            alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
-            className="absolute inset-0 w-full h-full object-cover hero-bg scale-105 transition-transform duration-1000"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            width="1920"
-            height="1080"
-          />
-        </div>
-
-        {/* Optimized Overlay System */}
-        <div className="absolute inset-0" style={{ zIndex: 2 }}>
-          {/* Base overlay for readability */}
-          <div className="absolute inset-0 bg-black/60"></div>
-          {/* Center spotlight effect */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 80% 70% at center center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%)",
-            }}
-          ></div>
-        </div>
-
-        {/* Floating Elements Background */}
-        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 3 }}>
-          {/* Geometric Shapes */}
-          <div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/10 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-12 h-12 bg-primary/20 rounded-lg rotate-45 animate-spin-slow"></div>
-          <div className="absolute bottom-40 left-20 w-16 h-16 border border-white/10 rotate-12 animate-bounce-slow"></div>
-          <div className="absolute bottom-20 right-40 w-8 h-8 bg-white/10 rounded-full animate-pulse"></div>
-        </div>
-
-        {/* Hero Content - Redesigned */}
-        <div className="relative flex flex-col items-center justify-center h-full w-full px-4 md:px-8 text-center" style={{ zIndex: 10 }}>
-
-          {/* Logo com Efeito Glow */}
-          <div className="mb-12 animate-fade-in relative flex justify-center">
-            <div className="absolute inset-0 bg-primary/30 rounded-full blur-2xl scale-150 animate-pulse"></div>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
-              alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
-              className="relative h-20 sm:h-24 md:h-28 lg:h-32 w-auto mx-auto drop-shadow-2xl filter brightness-110 hover:scale-105 transition-transform duration-500"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              width="200"
-              height="80"
-            />
-          </div>
-
-          {/* Main Heading - Completamente Novo */}
-          <div className="w-full text-center mb-8 animate-slide-up">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.85] tracking-tight mb-4">
-              <span className="block text-white drop-shadow-2xl mb-2 filter contrast-125">
-                SEJA UM
-              </span>
-              <span className="block text-white drop-shadow-2xl filter contrast-125 bg-gradient-to-r from-primary via-red-500 to-orange-500 bg-clip-text text-transparent [text-shadow:_0_4px_12px_rgba(0,0,0,0.8)]">
-                LOJISTA OFICIAL
-              </span>
-              <span className="block text-white drop-shadow-2xl mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl filter contrast-125">
-                ECKO
-              </span>
-            </h1>
-          </div>
-
-
-          {/* Enhanced Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white text-center max-w-4xl mx-auto leading-relaxed mb-8 sm:mb-12 animate-slide-up px-4 drop-shadow-lg filter contrast-125">
-            Faça parte da <span className="font-bold text-white bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">rede de distribuidores oficiais</span> da maior marca
-            de moda urbana do Brasil, <span className="font-semibold text-white">reconhecida mundialmente</span>
-          </p>
-
-          {/* Primary CTA Button */}
-          <div className="w-full flex justify-center mb-8 sm:mb-16 animate-fade-in">
-            <a
-              href="#cadastro-lojistas"
-              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-primary via-red-600 to-red-700 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-10 py-5 rounded-2xl text-lg font-black transition-all duration-500 transform hover:scale-110 hover:shadow-2xl shadow-xl uppercase tracking-wide gap-3 border-2 border-white/30 hover:border-white/50 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              <span className="relative">CADASTRE-SE AGORA</span>
-              <FaArrowRight className="relative w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
-            </a>
-          </div>
-
-          {/* Scroll Indicator - Enhanced */}
-          <div className="w-full flex justify-center animate-fade-in mt-auto pb-8">
-            <div
-              className="flex flex-col items-center cursor-pointer group"
-              onClick={() => {
-                requestAnimationFrame(() => {
-                  const element = document.getElementById("cadastro-lojistas");
-                  if (element) {
-                    element.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }
-                });
-              }}
-            >
-              <div className="text-white group-hover:text-white transition-colors duration-300 text-center mb-3">
-                <div className="text-xs uppercase tracking-widest font-medium mb-1 drop-shadow-md">Role para baixo</div>
-                <div className="w-12 h-6 border-2 border-white/60 rounded-full flex justify-center">
-                  <div className="w-1 h-2 bg-white rounded-full mt-1 animate-bounce drop-shadow-sm"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Particle Effect Overlay */}
-        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 5 }}>
-          <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/30 rounded-full animate-twinkle"></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/50 rounded-full animate-twinkle" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-white/40 rounded-full animate-twinkle" style={{ animationDelay: '2s' }}></div>
-        </div>
-      </header>
 
       {/* Cadastro de Lojistas - Formulário de Parceria - Otimizado para mobile */}
       <section
@@ -1524,7 +1400,7 @@ export default function Index() {
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★★★★★</span>
+                            <span className="text-2xl">★★��★★</span>
                           </div>
                           <blockquote className="text-base text-gray-900 leading-relaxed italic">
                             "{testimonial.text}"
