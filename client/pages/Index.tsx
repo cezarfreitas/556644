@@ -424,7 +424,7 @@ export default function Index() {
               value: fullEventData.engagement_score || 1,
               currency: "BRL",
             },
-            event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplicação
+            event_id: fullEventData.session_id + "_" + Date.now(), // Para deduplica��ão
           },
         ],
         access_token: META_ACCESS_TOKEN,
@@ -852,7 +852,7 @@ export default function Index() {
               {/* Desktop Logo */}
               <div className="mb-8 flex justify-center">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
+                  src="/images/brand/ecko-logo.webp"
                   alt="Logo Ecko"
                   className="h-20 lg:h-24 w-auto"
                   loading="eager"
