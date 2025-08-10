@@ -1711,12 +1711,11 @@ export default function Index() {
               <div className="space-y-6 max-w-md mx-auto">
                 <div className="flex items-center justify-center space-x-3">
                   <img
-                    src="/images/brand/ecko-logo.webp"
-                    alt="Logo Ecko - Marca de Streetwear"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F45492654d05e45aa9c0a6985c655603d?format=webp&width=800"
+                    alt="Logo - Marca de Streetwear"
                     className="h-12 w-auto"
                     loading="lazy"
                   />
-                  <span className="text-2xl font-bold text-white">Ecko</span>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
@@ -1724,22 +1723,22 @@ export default function Index() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href="https://www.facebook.com/ecko"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300"
-                    aria-label="Siga a Ecko no Facebook - Abre em nova aba"
-                    title="Siga a Ecko no Facebook"
+                    aria-label="Siga no Facebook - Abre em nova aba"
+                    title="Siga no Facebook"
                   >
                     <FaFacebook className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href="https://www.instagram.com/ecko"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors duration-300"
-                    aria-label="Siga a Ecko no Instagram - Abre em nova aba"
-                    title="Siga a Ecko no Instagram"
+                    aria-label="Siga no Instagram - Abre em nova aba"
+                    title="Siga no Instagram"
                   >
                     <FaInstagram className="w-6 h-6 text-white" />
                   </a>
@@ -1761,7 +1760,7 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div className="text-gray-300 text-sm">
-                  © 2024 Ecko. Todos os direitos reservados.
+                  © 2024. Todos os direitos reservados.
                 </div>
                 <div className="flex space-x-6 text-sm">
                   <a
