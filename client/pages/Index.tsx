@@ -56,6 +56,11 @@ export default function Index() {
   const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env
     .VITE_GOOGLE_ADS_CONVERSION_LABEL;
 
+  // Social Media URLs
+  const FACEBOOK_URL = import.meta.env.VITE_FACEBOOK_URL;
+  const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL;
+  const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL;
+
   // Inicializar tracking na página
   useEffect(() => {
     // Marcar início do tempo para cálculo de completion time
