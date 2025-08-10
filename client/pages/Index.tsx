@@ -441,7 +441,7 @@ export default function Index() {
   };
 
   const formatCNPJ = (value: string) => {
-    // Remove tudo que não é número
+    // Remove tudo que n��o é número
     const numbers = value.replace(/\D/g, "");
 
     // Aplica a máscara XX.XXX.XXX/XXXX-XX
@@ -971,7 +971,7 @@ export default function Index() {
                             ? "border-red-500 focus:ring-red-500"
                             : formValues.name && !formErrors.name
                               ? "border-green-500 focus:ring-green-500"
-                              : "border-input focus:ring-primary"
+                              : "border-input "
                         }`}
                         placeholder="Seu nome completo"
                         value={formValues.name}
@@ -1027,7 +1027,7 @@ export default function Index() {
                             ? "border-red-500 focus:ring-red-500"
                             : formValues.whatsapp && !formErrors.whatsapp
                               ? "border-green-500 focus:ring-green-500"
-                              : "border-input focus:ring-primary"
+                              : "border-input "
                         }`}
                         placeholder="(11) 99999-9999"
                         maxLength={15}
@@ -1075,7 +1075,7 @@ export default function Index() {
                           type="radio"
                           name="cnpj"
                           value="sim"
-                          className="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                          className="w-4 h-4 text-primary border-gray-300 "
                           required
                           onChange={(e) =>
                             handleCnpjRadioChange(e.target.value)
@@ -1090,7 +1090,7 @@ export default function Index() {
                           type="radio"
                           name="cnpj"
                           value="nao-consumidor"
-                          className="w-4 h-4 text-primary border-gray-300 focus:ring-primary"
+                          className="w-4 h-4 text-primary border-gray-300 "
                           required
                           onChange={(e) =>
                             handleCnpjRadioChange(e.target.value)
@@ -1141,7 +1141,7 @@ export default function Index() {
                               ? "border-red-500 focus:ring-red-500"
                               : formValues.cnpj && !formErrors.cnpj
                                 ? "border-green-500 focus:ring-green-500"
-                                : "border-input focus:ring-primary"
+                                : "border-input "
                           }`}
                           placeholder="00.000.000/0000-00"
                           maxLength={18}
