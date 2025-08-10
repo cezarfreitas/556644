@@ -123,6 +123,7 @@ export default function Index() {
           if (window.fbq) {
             window.fbq("init", META_PIXEL_ID);
             window.fbq("track", "PageView");
+            console.log("✅ Meta Pixel: PageView tracked on page load");
           }
         }, 100);
       };
