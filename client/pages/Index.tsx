@@ -735,56 +735,79 @@ export default function Index() {
     try {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
 
-      // Create a more robust fetch request with better error handling
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+      // Use a hidden form submission to bypass CORS restrictions completely
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = API_FORM_ENDPOINT;
+      form.style.display = 'none';
 
-      const response = await fetch(API_FORM_ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-        signal: controller.signal,
-        mode: "no-cors", // Use no-cors to avoid CORS blocking
-        credentials: "omit",
+      // Add each field as a hidden input
+      Object.entries(payload).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = typeof value === 'string' ? value : JSON.stringify(value);
+        form.appendChild(input);
       });
 
-      clearTimeout(timeoutId);
+      // Create a hidden iframe to capture the response without redirecting
+      const iframe = document.createElement('iframe');
+      iframe.name = 'form-submission-frame';
+      iframe.style.display = 'none';
+      form.target = iframe.name;
 
-      // With no-cors mode, we can't reliably check response.ok
-      // But if we reach here without throwing, the request was sent successfully
-      console.log("Form submitted successfully (no-cors mode)");
+      document.body.appendChild(iframe);
+      document.body.appendChild(form);
 
-      // Track sucesso do envio
-      trackEvent("form_submission_success", {
-        lead_type: selectedCnpj === "sim" ? "business" : "consumer",
-        form_completion_time: performance.now() - (window.formStartTime || 0),
-        has_cnpj: selectedCnpj === "sim",
-      });
+      // Set up timeout and success tracking
+      let submitted = false;
 
-      setSubmitStatus("success");
+      const submitForm = () => {
+        if (!submitted) {
+          submitted = true;
+          form.submit();
 
-      // Mensagem de sucesso simples
-      setSubmitMessage(
-        "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
-      );
+          // Clean up after a short delay
+          setTimeout(() => {
+            document.body.removeChild(form);
+            document.body.removeChild(iframe);
+          }, 1000);
 
-      // Reset form values
-      setFormValues({ name: "", whatsapp: "", cnpj: "" });
-      setSelectedCnpj("");
-      setShowCnpjField(false);
-      setShowCouponMessage(false);
-      setFormErrors({});
+          // Track sucesso do envio
+          trackEvent("form_submission_success", {
+            lead_type: selectedCnpj === "sim" ? "business" : "consumer",
+            form_completion_time: performance.now() - (window.formStartTime || 0),
+            has_cnpj: selectedCnpj === "sim",
+          });
 
-      // Reset the form element safely
-      try {
-        if (e.currentTarget) {
-          e.currentTarget.reset();
+          console.log("Form submitted successfully via iframe method");
+          setSubmitStatus("success");
+
+          // Mensagem de sucesso simples
+          setSubmitMessage(
+            "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
+          );
+
+          // Reset form values
+          setFormValues({ name: "", whatsapp: "", cnpj: "" });
+          setSelectedCnpj("");
+          setShowCnpjField(false);
+          setShowCouponMessage(false);
+          setFormErrors({});
+
+          // Reset the form element safely
+          try {
+            if (e.currentTarget) {
+              e.currentTarget.reset();
+            }
+          } catch (resetError) {
+            console.log("Form reset not needed, values already cleared");
+          }
         }
-      } catch (resetError) {
-        console.log("Form reset not needed, values already cleared");
-      }
+      };
+
+      // Submit the form
+      submitForm();
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
 
