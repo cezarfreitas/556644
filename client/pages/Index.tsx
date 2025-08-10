@@ -848,8 +848,8 @@ export default function Index() {
             de moda urbana do Brasil, <span className="font-semibold text-white">reconhecida mundialmente</span>
           </p>
 
-          {/* Dual CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8 sm:mb-16 animate-fade-in">
+          {/* Primary CTA Button */}
+          <div className="flex justify-center mb-8 sm:mb-16 animate-fade-in">
             <a
               href="#cadastro-lojistas"
               className="group relative inline-flex items-center justify-center bg-gradient-to-r from-primary via-red-600 to-red-700 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-10 py-5 rounded-2xl text-lg font-black transition-all duration-500 transform hover:scale-110 hover:shadow-2xl shadow-xl uppercase tracking-wide gap-3 border-2 border-white/30 hover:border-white/50 overflow-hidden"
@@ -857,14 +857,6 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               <span className="relative">CADASTRE-SE AGORA</span>
               <FaArrowRight className="relative w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
-            </a>
-
-            <a
-              href="#beneficios-lojistas"
-              className="group inline-flex items-center justify-center bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-8 py-5 rounded-2xl text-lg font-semibold transition-all duration-300 border border-white/30 hover:border-white/50 gap-2"
-            >
-              Saiba Mais
-              <FaChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
             </a>
           </div>
 
