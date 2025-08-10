@@ -145,9 +145,12 @@ export default function Index() {
     };
   }, [GA4_MEASUREMENT_ID, META_PIXEL_ID]);
 
-  const api_form =
-    import.meta.env.VITE_api_form ||
+  // Form API endpoint from environment variable
+  const API_FORM_ENDPOINT = import.meta.env.VITE_api_form ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
+
+  // Log endpoint being used (for debugging)
+  console.log("Form API Endpoint:", API_FORM_ENDPOINT);
 
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
@@ -496,7 +499,7 @@ export default function Index() {
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
-    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(name)) return "Nome deve conter apenas letras";
+    if (!/^[a-zA-ZÀ-��\s]+$/.test(name)) return "Nome deve conter apenas letras";
     return "";
   };
 
