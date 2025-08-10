@@ -761,6 +761,7 @@ export default function Index() {
           has_cnpj: selectedCnpj === "sim",
         });
 
+        console.log("Form submitted successfully");
         setSubmitStatus("success");
 
         // Mensagem de sucesso simples
@@ -768,12 +769,15 @@ export default function Index() {
           "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
         );
 
-        // Reset form
-        e.currentTarget.reset();
+        // Reset form values
+        setFormValues({ name: "", whatsapp: "", cnpj: "" });
         setSelectedCnpj("");
         setShowCnpjField(false);
         setShowCouponMessage(false);
         setFormErrors({});
+
+        // Reset the form element
+        e.currentTarget.reset();
       } else {
         // Track erro do envio
         trackEvent("form_submission_error", {
@@ -786,6 +790,7 @@ export default function Index() {
           },
         });
 
+        console.log("Form submission failed with status:", response.status);
         setSubmitStatus("error");
         setSubmitMessage(
           "❌ Erro ao enviar formulário. Por favor, verifique os dados e tente novamente.",
