@@ -782,9 +782,10 @@ export default function Index() {
       });
 
       console.error("Erro ao enviar formulário:", error);
-      alert(
-        "Erro ao enviar formulário. Verifique sua conexão e tente novamente.",
-      );
+      setSubmitStatus('error');
+      setSubmitMessage("🔌 Erro de conexão. Verifique sua internet e tente novamente.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
@@ -1477,7 +1478,7 @@ export default function Index() {
                 </div>
                 <div className="mt-6 space-y-3">
                   <p className="text-gray-400 text-sm italic">
-                    "Viva a experi��ncia Ecko em nosso showroom exclusivo"
+                    "Viva a experiência Ecko em nosso showroom exclusivo"
                   </p>
                   <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                 </div>
