@@ -582,10 +582,17 @@ export default function Index() {
         },
       );
 
-      // Read the response body only once and handle potential errors
-      let responseData: string;
+      // Enhanced error handling with detailed response reading
+      let responseData: string = "";
+      let parsedResponse: any = null;
+
       try {
         responseData = await response.text();
+        try {
+          parsedResponse = JSON.parse(responseData);
+        } catch (parseError) {
+          console.warn("Response is not valid JSON:", responseData);
+        }
       } catch (readError) {
         responseData = "Unable to read response body";
         console.warn("Response body read error:", readError);
@@ -593,28 +600,44 @@ export default function Index() {
 
       if (response.ok) {
         console.log("✅ Meta Conversion API: Success");
-        console.log("Meta Conversion API Response:", responseData);
+        console.log("Event:", standardEventName);
+        console.log("Response:", parsedResponse || responseData);
 
         // Push success to GTM if available
         if (window.dataLayer) {
           window.dataLayer.push({
             event: "meta_conversion_success",
             meta_pixel_id: META_PIXEL_ID,
-            meta_event_name: META_CONVERSION_NAME,
+            meta_event_name: standardEventName,
             meta_response: responseData,
           });
         }
       } else {
         console.error("❌ Meta Conversion API: Error");
-        console.error("Status:", response.status);
-        console.error("Response:", responseData);
+        console.error("Status:", response.status, response.statusText);
+        console.error("Event:", standardEventName);
+        console.error("Request Data:", JSON.stringify(conversionData, null, 2));
 
-        // Push error to GTM if available
+        if (parsedResponse) {
+          console.error("Parsed Error Response:", parsedResponse);
+          if (parsedResponse.error) {
+            console.error("Error Details:", parsedResponse.error);
+            if (parsedResponse.error.error_user_msg) {
+              console.error("User Message:", parsedResponse.error.error_user_msg);
+            }
+          }
+        } else {
+          console.error("Raw Response:", responseData);
+        }
+
+        // Push detailed error to GTM if available
         if (window.dataLayer) {
           window.dataLayer.push({
             event: "meta_conversion_error",
             meta_error_status: response.status,
             meta_error_response: responseData,
+            meta_event_name: standardEventName,
+            meta_error_details: parsedResponse?.error || null,
           });
         }
       }
