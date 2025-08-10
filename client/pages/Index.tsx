@@ -594,9 +594,16 @@ export default function Index() {
         event_name: standardEventName,
         api_version: META_API_VERSION,
         test_event_code: META_TEST_EVENT_CODE || "None",
-        user_data_fields: Object.keys(userData).length,
-        custom_data_fields: Object.keys(customData).length,
+        user_data_fields: Object.keys(userData),
+        custom_data_fields: Object.keys(customData),
+        access_token_length: META_ACCESS_TOKEN?.length || 0,
       });
+
+      // Create request payload without access token in logs
+      const requestPayload = { ...conversionData };
+      delete requestPayload.access_token; // Remove from logging
+
+      console.log("Request Payload (without token):", JSON.stringify(requestPayload, null, 2));
 
       const response = await fetch(
         `https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`,
@@ -606,6 +613,8 @@ export default function Index() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(conversionData),
+          mode: "cors", // Explicitly set CORS mode
+          credentials: "omit",
         },
       );
 
