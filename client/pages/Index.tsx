@@ -736,24 +736,24 @@ export default function Index() {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
 
       // Use a hidden form submission to bypass CORS restrictions completely
-      const form = document.createElement('form');
-      form.method = 'POST';
+      const form = document.createElement("form");
+      form.method = "POST";
       form.action = API_FORM_ENDPOINT;
-      form.style.display = 'none';
+      form.style.display = "none";
 
       // Add each field as a hidden input
       Object.entries(payload).forEach(([key, value]) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
+        const input = document.createElement("input");
+        input.type = "hidden";
         input.name = key;
-        input.value = typeof value === 'string' ? value : JSON.stringify(value);
+        input.value = typeof value === "string" ? value : JSON.stringify(value);
         form.appendChild(input);
       });
 
       // Create a hidden iframe to capture the response without redirecting
-      const iframe = document.createElement('iframe');
-      iframe.name = 'form-submission-frame';
-      iframe.style.display = 'none';
+      const iframe = document.createElement("iframe");
+      iframe.name = "form-submission-frame";
+      iframe.style.display = "none";
       form.target = iframe.name;
 
       document.body.appendChild(iframe);
@@ -776,7 +776,8 @@ export default function Index() {
           // Track sucesso do envio
           trackEvent("form_submission_success", {
             lead_type: selectedCnpj === "sim" ? "business" : "consumer",
-            form_completion_time: performance.now() - (window.formStartTime || 0),
+            form_completion_time:
+              performance.now() - (window.formStartTime || 0),
             has_cnpj: selectedCnpj === "sim",
           });
 
