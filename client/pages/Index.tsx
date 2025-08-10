@@ -617,6 +617,27 @@ export default function Index() {
           cnpj: !!cnpjError,
         },
       });
+
+      // Rolar para o primeiro campo com erro
+      setTimeout(() => {
+        if (nameError) {
+          document.getElementById("name")?.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        } else if (whatsappError) {
+          document.getElementById("whatsapp")?.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        } else if (cnpjError) {
+          document.getElementById("cnpj-number")?.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        }
+      }, 100);
+
       return;
     }
 
