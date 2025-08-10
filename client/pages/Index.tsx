@@ -762,6 +762,9 @@ export default function Index() {
     const value = e.target.value;
     const formatted = formatWhatsApp(value);
 
+    // Track first interaction
+    trackFormInteraction("whatsapp");
+
     // Prevenir input além do limite
     if (formatted.length <= 15) {
       e.target.value = formatted;
