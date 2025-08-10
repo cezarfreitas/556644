@@ -918,6 +918,20 @@ export default function Index() {
 
       clearTimeout(timeoutId);
 
+      // Facebook Standard Events for form success
+      console.log("🎯 Disparando eventos padrões Facebook para sucesso do formulário");
+
+      // 1. Lead event (someone showed interest)
+      trackLead("Lojista Interest Form");
+
+      // 2. SubmitApplication event (form submission)
+      trackSubmitApplication();
+
+      // 3. CompleteRegistration event if they have CNPJ (business registration)
+      if (selectedCnpj === "sim") {
+        trackCompleteRegistration("business_form");
+      }
+
       // Track sucesso do envio
       trackEvent("form_submission_success", {
         lead_type: selectedCnpj === "sim" ? "business" : "consumer",
