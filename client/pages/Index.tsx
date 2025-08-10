@@ -723,7 +723,6 @@ export default function Index() {
     try {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
 
-
       // Create a more robust fetch request with better error handling
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
@@ -732,7 +731,7 @@ export default function Index() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(payload),
         signal: controller.signal,
@@ -783,17 +782,18 @@ export default function Index() {
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
 
-
       // Detect specific error types for better user messaging
       let errorType = "network_error";
-      let userMessage = "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
+      let userMessage =
+        "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
 
       if (error.name === "AbortError") {
         errorType = "timeout_error";
         userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
       } else if (error.message?.includes("CORS")) {
         errorType = "cors_error";
-        userMessage = "🔒 Erro de segurança. Recarregue a página e tente novamente.";
+        userMessage =
+          "🔒 Erro de segurança. Recarregue a página e tente novamente.";
       }
 
       // Track erro de conexão
@@ -814,7 +814,6 @@ export default function Index() {
       setIsSubmitting(false);
     }
   };
-
 
   // Função para voltar ao formulário
   const handleBackToForm = () => {
@@ -1358,7 +1357,6 @@ export default function Index() {
                     >
                       {submitMessage}
                     </div>
-
 
                     <button
                       onClick={handleBackToForm}
