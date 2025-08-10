@@ -987,7 +987,7 @@ export default function Index() {
     }
   };
 
-  // Handlers para campos do formul��rio
+  // Handlers para campos do formulário
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
@@ -1491,7 +1491,7 @@ export default function Index() {
               <div className="mb-8 flex justify-center">
                 <img
                   src="/images/brand/ecko-logo.webp"
-                  alt="Logo Ecko"
+                  alt={`Logo ${BRAND_NAME}`}
                   className="h-20 lg:h-24 w-auto"
                   loading="eager"
                   fetchPriority="high"
