@@ -911,11 +911,10 @@ export default function Index() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white mb-1">
-                        Produtos Exclusivos
+                        1️⃣ Marca Internacional
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Acesso a coleções limitadas e lançamentos em primeira
-                        mão
+                        Representa uma marca de streetwear reconhecida mundialmente.
                       </p>
                     </div>
                   </div>
@@ -926,10 +925,10 @@ export default function Index() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white mb-1">
-                        Margens Atrativas
+                        2️⃣ Pronta Entrega
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Preços especiais e condições diferenciadas para lojistas
+                        Mais de 100.000 itens disponíveis para envio imediato.
                       </p>
                     </div>
                   </div>
@@ -940,10 +939,10 @@ export default function Index() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white mb-1">
-                        Suporte Completo
+                        3️⃣ Plataforma Online
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Treinamento, materiais de marketing e apoio comercial
+                        Acesse nosso catálogo digital com preços exclusivos para lojistas.
                       </p>
                     </div>
                   </div>
@@ -954,10 +953,10 @@ export default function Index() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white mb-1">
-                        Prestígio da Marca
+                        4️⃣ Apoio às Vendas
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Associe-se à marca #1 em streetwear no Brasil
+                        Treinamento, materiais de marketing e suporte comercial especializado.
                       </p>
                     </div>
                   </div>
