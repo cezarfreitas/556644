@@ -15,6 +15,8 @@ import {
   FaChevronRight,
   FaCheck,
   FaExclamationTriangle,
+  FaGift,
+  FaRocket,
 } from "react-icons/fa";
 
 export default function Index() {
