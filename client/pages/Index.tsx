@@ -102,6 +102,11 @@ export default function Index() {
   const DEVELOPER_SITE =
     import.meta.env.VITE_DEVELOPER_SITE || "www.idenegociosdigitais.com.br";
 
+  // HUB Multimarcas Info
+  const HUB_NAME = import.meta.env.VITE_HUB_NAME || "HUB Multimarcas";
+  const HUB_COMPANY = import.meta.env.VITE_HUB_COMPANY || "Grupo NTK";
+  const HUB_DESCRIPTION = import.meta.env.VITE_HUB_DESCRIPTION || "Uma iniciativa do Grupo NTK para democratizar o acesso dos lojistas às grandes marcas do mercado.";
+
   // Inicializar tracking na página
   useEffect(() => {
     // Marcar início do tempo para cálculo de completion time
