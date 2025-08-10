@@ -707,18 +707,23 @@ export default function Index() {
 
       console.log("Request Payload (without token):", JSON.stringify(requestPayload, null, 2));
 
-      const response = await fetch(
-        `https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL_ID}/events`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(conversionData),
-          mode: "cors", // Explicitly set CORS mode
-          credentials: "omit",
+      // Ensure API version format is correct
+      const apiVersion = META_API_VERSION || "v18.0";
+      const apiUrl = `https://graph.facebook.com/${apiVersion}/${META_PIXEL_ID}/events`;
+
+      console.log("Meta Conversion API: Making request to:", apiUrl);
+      console.log("Meta Conversion API: Payload size:", JSON.stringify(conversionData).length, "characters");
+
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "User-Agent": navigator.userAgent,
         },
-      );
+        body: JSON.stringify(conversionData),
+        mode: "cors",
+        credentials: "omit",
+      });
 
       // Enhanced error handling with CORS considerations
       let responseData: string = "";
