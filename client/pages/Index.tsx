@@ -161,15 +161,22 @@ export default function Index() {
   const isValidUrl = (url: string) => {
     try {
       new URL(url);
-      return true;
+      return !url.includes("your-api-endpoint.com"); // Exclude placeholder URLs
     } catch {
       return false;
     }
   };
 
+  // Check if we have a valid endpoint
+  const hasValidEndpoint = isValidUrl(API_FORM_ENDPOINT);
+
   // Log endpoint being used (for debugging)
   console.log("Form API Endpoint:", API_FORM_ENDPOINT);
-  console.log("Endpoint is valid URL:", isValidUrl(API_FORM_ENDPOINT));
+  console.log("Endpoint is valid URL:", hasValidEndpoint);
+
+  if (!hasValidEndpoint) {
+    console.warn("⚠️ No valid API endpoint configured. Form will use alternative submission method.");
+  }
 
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
@@ -579,7 +586,7 @@ export default function Index() {
     });
   };
 
-  // Handlers para campos do formulário
+  // Handlers para campos do formul��rio
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
@@ -1949,7 +1956,7 @@ export default function Index() {
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana através da moda autêntica.
+                  urbana atrav��s da moda autêntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
