@@ -562,7 +562,7 @@ export default function Index() {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
 
-    // Removido validação em tempo real
+    // Removido validaç��o em tempo real
   };
 
   const handleWhatsAppChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -1502,38 +1502,144 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Simplified Testimonials Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {testimonials.slice(0, 6).map((testimonial) => (
+            {/* Testimonials Carousel */}
+            <div
+              className="relative"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 hover:bg-white hover:scale-110 transition-all duration-300"
+                aria-label="Depoimento anterior"
+              >
+                <FaChevronLeft className="w-5 h-5 text-gray-600 hover:text-primary transition-colors" />
+              </button>
+
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 hover:bg-white hover:scale-110 transition-all duration-300"
+                aria-label="Próximo depoimento"
+              >
+                <FaChevronRight className="w-5 h-5 text-gray-600 hover:text-primary transition-colors" />
+              </button>
+
+              {/* Desktop Carousel - 2 columns */}
+              <div className="hidden md:block overflow-hidden rounded-2xl">
                 <div
-                  key={testimonial.id}
-                  className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
+                  className="flex transition-transform duration-700 ease-out"
+                  style={{
+                    transform: `translateX(-${currentSlide * 100}%)`,
+                  }}
                 >
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-1 text-primary">
-                      <span className="text-2xl">★★★★★</span>
-                    </div>
-                    <blockquote className="text-base md:text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
-                      "{testimonial.text}"
-                    </blockquote>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-lg">
-                          {testimonial.avatar}
-                        </span>
+                  {Array.from({
+                    length: Math.ceil(testimonials.length / 2),
+                  }).map((_, slideIndex) => (
+                    <div key={slideIndex} className="w-full flex-shrink-0">
+                      <div className="grid grid-cols-2 gap-8">
+                        {testimonials
+                          .slice(slideIndex * 2, slideIndex * 2 + 2)
+                          .map((testimonial) => (
+                            <div
+                              key={testimonial.id}
+                              className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
+                            >
+                              <div className="space-y-6">
+                                <div className="flex items-center space-x-1 text-primary">
+                                  <span className="text-2xl">★★★★★</span>
+                                </div>
+                                <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
+                                  "{testimonial.text}"
+                                </blockquote>
+                                <div className="flex items-center space-x-4">
+                                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span className="text-white font-bold text-lg">
+                                      {testimonial.avatar}
+                                    </span>
+                                  </div>
+                                  <div>
+                                    <h3 className="font-bold text-gray-900">
+                                      {testimonial.name}
+                                    </h3>
+                                    <p className="text-sm text-gray-600">
+                                      {testimonial.store}
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
                       </div>
-                      <div>
-                        <h3 className="font-bold text-gray-900">
-                          {testimonial.name}
-                        </h3>
-                        <p className="text-sm text-gray-600">
-                          {testimonial.store}
-                        </p>
-                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Mobile Carousel - 1 column */}
+              <div className="md:hidden overflow-hidden rounded-2xl">
+                <div
+                  className="flex transition-transform duration-700 ease-out"
+                  style={{
+                    transform: `translateX(-${currentSlide * 100}%)`,
+                  }}
+                >
+                  {testimonials.map((testimonial) => (
+                    <div
+                      key={testimonial.id}
+                      className="w-full flex-shrink-0 px-3"
+                    >
+                      <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
+                        <div className="space-y-6">
+                          <div className="flex items-center space-x-1 text-primary">
+                            <span className="text-2xl">★★★★★</span>
+                          </div>
+                          <blockquote className="text-base text-gray-700 leading-relaxed italic">
+                            "{testimonial.text}"
+                          </blockquote>
+                          <div className="flex items-center space-x-4">
+                            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-white font-bold text-lg">
+                                {testimonial.avatar}
+                              </span>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900">
+                                {testimonial.name}
+                              </h3>
+                              <p className="text-sm text-gray-600">
+                                {testimonial.store}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Dots Navigation */}
+              <div className="flex justify-center mt-8 space-x-2">
+                {Array.from({
+                  length:
+                    typeof window !== "undefined" && window.innerWidth < 768
+                      ? testimonials.length
+                      : Math.ceil(testimonials.length / 2),
+                }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      currentSlide === index
+                        ? "bg-primary scale-125"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                    aria-label={`Ir para slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Call to Action */}
