@@ -1312,7 +1312,15 @@ export default function Index() {
                     {submitStatus === 'success' && selectedCnpj === "nao-consumidor" && (
                       <div className="space-y-4">
                         <button
-                          onClick={() => window.open("https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!", "_blank")}
+                          onClick={() => {
+                            // Track clique manual do WhatsApp
+                            trackEvent("whatsapp_manual_click", {
+                              reason: "coupon_request",
+                              lead_type: "consumer",
+                              action: "manual_button_click"
+                            });
+                            window.open("https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!", "_blank");
+                          }}
                           className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300 mr-4"
                         >
                           🎁 Receber Cupom no WhatsApp
