@@ -571,7 +571,7 @@ export default function Index() {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
 
-    // Removido validaç��o em tempo real
+    // Removido validação em tempo real
   };
 
   const handleWhatsAppChange = (e: React.ChangeEvent<HTMLInputElement>) => {
