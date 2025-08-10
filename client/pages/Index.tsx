@@ -2596,8 +2596,13 @@ export default function Index() {
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
-                  <span className="text-red-500 inline-block animate-heartbeat">
-                    ❤️
+                  <span className="relative inline-block mx-1">
+                    <span className="text-red-500 text-lg inline-block animate-heartbeat heart-glow relative z-10">
+                      ❤️
+                    </span>
+                    <span className="absolute inset-0 text-red-400 text-lg animate-pulse opacity-30">
+                      ❤️
+                    </span>
                   </span>{" "}
                   por{" "}
                   <a
