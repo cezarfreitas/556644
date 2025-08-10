@@ -1105,7 +1105,7 @@ export default function Index() {
                           }
                         />
                         <span className="text-sm sm:text-base text-white">
-                          ✅ Sim, sou lojista com CNPJ
+                          Sim, sou lojista com CNPJ
                         </span>
                       </label>
                       <label className="flex items-center gap-2 cursor-pointer">
@@ -1120,7 +1120,7 @@ export default function Index() {
                           }
                         />
                         <span className="text-sm sm:text-base text-white">
-                          ❌ Não, sou consumidor
+                          Não, sou consumidor
                         </span>
                       </label>
                     </div>
