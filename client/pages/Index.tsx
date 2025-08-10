@@ -425,7 +425,7 @@ export default function Index() {
     return null;
   };
 
-  // Funções de formata��ão
+  // Funções de formatação
   const formatWhatsApp = (value: string) => {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
@@ -794,7 +794,7 @@ export default function Index() {
           {/* Mobile CTA */}
           <a
             href="#cadastro-lojistas"
-            className="w-full max-w-xs bg-primary hover:bg-red-600 text-white hover:text-white py-4 px-6 rounded-xl text-base font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl border border-primary"
+            className="w-full max-w-xs bg-primary hover:bg-red-600 text-white hover:text-white py-4 px-6 rounded-xl text-base font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl border border-white"
           >
             Começar Agora!
           </a>
@@ -842,7 +842,7 @@ export default function Index() {
               <div className="pt-4 flex justify-center">
                 <a
                   href="#cadastro-lojistas"
-                  className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white hover:text-white px-10 py-4 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-primary gap-2"
+                  className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white hover:text-white px-10 py-4 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
                 >
                   Começar Agora!
                   <svg
