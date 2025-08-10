@@ -1217,7 +1217,7 @@ export default function Index() {
                   <div className="pt-1">
                     <button
                       type="submit"
-                      className="group relative w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
+                      className="group relative w-full bg-black hover:bg-gray-900 text-white py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                       <span className="relative flex items-center justify-center gap-2">
