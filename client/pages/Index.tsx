@@ -752,16 +752,10 @@ export default function Index() {
 
         setSubmitStatus("success");
 
-        // Mensagem de sucesso baseada no tipo de lead
-        if (selectedCnpj === "nao-consumidor") {
-          setSubmitMessage(
-            "🎉 Dados enviados com sucesso! Clique no botão abaixo se desejar entrar em contato via WhatsApp para receber seu cupom de 10% de desconto.",
-          );
-        } else {
-          setSubmitMessage(
-            "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
-          );
-        }
+        // Mensagem de sucesso simples
+        setSubmitMessage(
+          "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
+        );
 
         // Reset form
         e.currentTarget.reset();
@@ -1456,7 +1450,7 @@ export default function Index() {
                             const name = formValues.name;
                             const whatsapp = formValues.whatsapp;
                             const cnpj = formValues.cnpj;
-                            const hasCnpj = selectedCnpj === "sim" ? "Sim" : "N��o";
+                            const hasCnpj = selectedCnpj === "sim" ? "Sim" : "Não";
 
                             const whatsappMessage = `
 🔥 *NOVO LEAD - LOJISTA ECKO*
