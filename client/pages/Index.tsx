@@ -1100,7 +1100,7 @@ export default function Index() {
                     <label className="block text-sm font-semibold text-white">
                       Tipo de Cadastro
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-2 gap-2">
                       <label className="flex items-center gap-2 p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
                         <input
                           type="radio"
