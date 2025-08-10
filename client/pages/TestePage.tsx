@@ -310,6 +310,9 @@ export default function TestePage() {
             <p className="text-lg text-gray-600">
               Teste todos os sistemas de rastreamento configurados
             </p>
+            <div className="mt-4 p-3 bg-gray-100 rounded-lg">
+              <p className="text-sm font-medium">Status: {pageStatus}</p>
+            </div>
           </div>
 
           {/* Environment Info */}
@@ -519,7 +522,7 @@ export default function TestePage() {
               href="/"
               className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              ← Voltar para Home
+              �� Voltar para Home
             </a>
           </div>
         </div>
