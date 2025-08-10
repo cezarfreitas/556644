@@ -681,6 +681,17 @@ export default function Index() {
       return;
     }
 
+    // Verificar se uma opção de CNPJ foi selecionada
+    if (!selectedCnpj) {
+      setFormErrors({
+        name: nameError,
+        whatsapp: whatsappError,
+        cnpj: "Por favor, selecione uma opção de cadastro",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
     const analyticsData = getAnalyticsData();
 
     const payload = {
@@ -716,7 +727,7 @@ export default function Index() {
 
       // Timestamps diferentes
       form_timestamp: new Date().toISOString(),
-      server_timestamp: null, // Ser�� preenchido no backend
+      server_timestamp: null, // Será preenchido no backend
     };
 
     console.log("Payload sendo enviado:", payload);
