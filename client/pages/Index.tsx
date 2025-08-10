@@ -1074,7 +1074,7 @@ export default function Index() {
                 <div className="text-center">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     {submitStatus === "idle"
-                      ? "Falar no Whatsapp agora!"
+                      ? "Cadastre-se como Lojista!"
                       : submitStatus === "success"
                         ? "Formulário Enviado!"
                         : "Ops! Algo deu errado"}
