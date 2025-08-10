@@ -2021,7 +2021,15 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="text-center">
                 <div className="text-gray-300 text-sm">
-                  �� {new Date().getFullYear()}. Todos os direitos reservados.
+                  © {new Date().getFullYear()}. Todos os direitos reservados.
+                </div>
+                <div>
+                  <a
+                    href="/teste"
+                    className="text-gray-400 hover:text-white text-xs underline transition-colors"
+                  >
+                    🧪 Página de Teste - Tracking Systems
+                  </a>
                 </div>
               </div>
             </div>
