@@ -291,6 +291,9 @@ export default function TestePage() {
                 <strong>Meta Conversion Name:</strong> {META_CONVERSION_NAME}
               </div>
               <div>
+                <strong>Meta Test Event Code:</strong> {META_TEST_EVENT_CODE}
+              </div>
+              <div>
                 <strong>Google Ads ID:</strong> {GOOGLE_ADS_CONVERSION_ID || "❌ Não configurado"}
               </div>
             </div>
