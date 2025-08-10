@@ -893,31 +893,16 @@ export default function Index() {
                   Cadastre-se e Seja um Lojista Oficial
                   <span className="block text-primary">Ecko Agora Mesmo</span>
                 </h2>
-                <div className="space-y-4 sm:space-y-6">
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed font-medium">
-                    Faça parte da rede de distribuidores oficiais da maior marca
-                    de moda urbana do Brasil, reconhecida mundialmente.
-                  </p>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                    Condições exclusivas para lojistas parceiros e processo 100%
-                    digital.
-                  </p>
-                </div>
               </div>
             </div>
 
             {/* Form Column - Otimizado para mobile */}
             <div className="bg-gray-900 border border-gray-700 rounded-2xl p-4 sm:p-8 shadow-lg">
               <div className="space-y-6">
-                <div className="text-center space-y-2">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
-                    Solicite Seu Atendimento
+                <div className="text-center">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-normal text-white">
+                    Quero Receber acesso!
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-300">
-                    Preencha o formulário e um analista da Ecko entrará em
-                    contato para apresentar nosso catálogo digital exclusivo com
-                    preços e condições especiais para lojistas oficiais.
-                  </p>
                 </div>
 
                 <form
