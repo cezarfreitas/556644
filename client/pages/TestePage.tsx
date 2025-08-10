@@ -357,6 +357,42 @@ export default function TestePage() {
     }));
   };
 
+  // Test Meta API configuration without making requests
+  const testMetaConfig = () => {
+    console.log("🔍 Meta API configuration check");
+
+    let configStatus = [];
+    let isConfigValid = true;
+
+    // Check Access Token
+    if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN === "token_sensivel") {
+      configStatus.push("❌ Access Token: Configure via DevServerControl");
+      isConfigValid = false;
+    } else {
+      configStatus.push("✅ Access Token: Configurado");
+    }
+
+    // Check Pixel ID
+    if (!META_PIXEL_ID || META_PIXEL_ID === "123456789012345") {
+      configStatus.push("❌ Pixel ID: Configure um ID real no .env");
+      isConfigValid = false;
+    } else {
+      configStatus.push("✅ Pixel ID: " + META_PIXEL_ID);
+    }
+
+    // Check Test Event Code
+    configStatus.push("✅ Test Event Code: " + META_TEST_EVENT_CODE);
+
+    const result = isConfigValid
+      ? "✅ Configuração Meta API: Tudo correto! " + configStatus.join(" | ")
+      : "❌ Configuração Meta API: " + configStatus.join(" | ");
+
+    setTestResults((prev) => ({
+      ...prev,
+      metaConfig: result,
+    }));
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-6">
