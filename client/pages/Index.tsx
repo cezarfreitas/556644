@@ -63,22 +63,34 @@ export default function Index() {
 
   // Brand and Company Configuration
   const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Ecko";
-  const COMPANY_NAME = import.meta.env.VITE_COMPANY_NAME || "IDE | Negócios digitais";
-  const COMPANY_URL = import.meta.env.VITE_COMPANY_URL || "https://www.idenegociosdigitais.com.br";
-  const PAGE_TITLE = import.meta.env.VITE_PAGE_TITLE || "Seja Lojista Oficial Ecko";
+  const COMPANY_NAME =
+    import.meta.env.VITE_COMPANY_NAME || "IDE | Negócios digitais";
+  const COMPANY_URL =
+    import.meta.env.VITE_COMPANY_URL ||
+    "https://www.idenegociosdigitais.com.br";
+  const PAGE_TITLE =
+    import.meta.env.VITE_PAGE_TITLE || "Seja Lojista Oficial Ecko";
 
   // API URLs
-  const FACEBOOK_CONNECT_URL = import.meta.env.VITE_FACEBOOK_CONNECT_URL || "https://connect.facebook.net/en_US/fbevents.js";
-  const FACEBOOK_GRAPH_API_URL = import.meta.env.VITE_FACEBOOK_GRAPH_API_URL || "https://graph.facebook.com";
+  const FACEBOOK_CONNECT_URL =
+    import.meta.env.VITE_FACEBOOK_CONNECT_URL ||
+    "https://connect.facebook.net/en_US/fbevents.js";
+  const FACEBOOK_GRAPH_API_URL =
+    import.meta.env.VITE_FACEBOOK_GRAPH_API_URL || "https://graph.facebook.com";
 
   // Default Values
-  const DEFAULT_META_API_VERSION = import.meta.env.VITE_DEFAULT_META_API_VERSION || "v18.0";
+  const DEFAULT_META_API_VERSION =
+    import.meta.env.VITE_DEFAULT_META_API_VERSION || "v18.0";
   const DEFAULT_CURRENCY = import.meta.env.VITE_DEFAULT_CURRENCY || "BRL";
 
   // Developer Info
-  const DEVELOPER_NAME = import.meta.env.VITE_DEVELOPER_NAME || "IDE | Negócios digitais";
-  const DEVELOPER_URL = import.meta.env.VITE_DEVELOPER_URL || "https://www.idenegociosdigitais.com.br";
-  const DEVELOPER_SITE = import.meta.env.VITE_DEVELOPER_SITE || "www.idenegociosdigitais.com.br";
+  const DEVELOPER_NAME =
+    import.meta.env.VITE_DEVELOPER_NAME || "IDE | Negócios digitais";
+  const DEVELOPER_URL =
+    import.meta.env.VITE_DEVELOPER_URL ||
+    "https://www.idenegociosdigitais.com.br";
+  const DEVELOPER_SITE =
+    import.meta.env.VITE_DEVELOPER_SITE || "www.idenegociosdigitais.com.br";
 
   // Inicializar tracking na página
   useEffect(() => {
@@ -141,12 +153,7 @@ export default function Index() {
           t.src = v;
           s = b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t, s);
-        })(
-          window,
-          document,
-          "script",
-          FACEBOOK_CONNECT_URL,
-        );
+        })(window, document, "script", FACEBOOK_CONNECT_URL);
 
         // Aguardar script carregar e inicializar
         setTimeout(() => {
@@ -172,7 +179,9 @@ export default function Index() {
 
               // If fbp is missing, try to generate one as fallback
               if (!fbp) {
-                console.warn("Meta Pixel: fbp cookie missing, attempting to generate fallback");
+                console.warn(
+                  "Meta Pixel: fbp cookie missing, attempting to generate fallback",
+                );
                 const fallbackFbp = `fb.1.${Date.now()}.${Math.random().toString(36).substr(2, 9)}`;
                 document.cookie = `_fbp=${fallbackFbp}; path=/; max-age=31536000; samesite=lax`;
                 console.log("Meta Pixel: Generated fallback fbp:", fallbackFbp);
@@ -564,9 +573,12 @@ export default function Index() {
     }
 
     // Create cache key to prevent duplicate requests
-    const cacheKey = `${eventName}_${fullEventData?.session_id || 'unknown'}_${Math.floor(Date.now() / 5000)}`;
+    const cacheKey = `${eventName}_${fullEventData?.session_id || "unknown"}_${Math.floor(Date.now() / 5000)}`;
     if (metaApiRequestCache.has(cacheKey)) {
-      console.log("Meta Conversion API: Skipping duplicate request for", eventName);
+      console.log(
+        "Meta Conversion API: Skipping duplicate request for",
+        eventName,
+      );
       return;
     }
     metaApiRequestCache.add(cacheKey);
@@ -574,22 +586,25 @@ export default function Index() {
     // Clean cache after 30 seconds
     setTimeout(() => metaApiRequestCache.delete(cacheKey), 30000);
 
-    console.log("Meta Conversion API: Starting conversion send for event:", eventName);
+    console.log(
+      "Meta Conversion API: Starting conversion send for event:",
+      eventName,
+    );
 
     try {
       // Map Facebook standard event names correctly
       const getStandardEventName = (name: string) => {
         const eventMap: { [key: string]: string } = {
-          'ViewContent': 'ViewContent',
-          'Lead': 'Lead',
-          'CompleteRegistration': 'CompleteRegistration',
-          'SubmitApplication': 'SubmitApplication',
-          'InitiateCheckout': 'InitiateCheckout',
-          'view_content': 'ViewContent',
-          'lead': 'Lead',
-          'form_submission_success': 'Lead'
+          ViewContent: "ViewContent",
+          Lead: "Lead",
+          CompleteRegistration: "CompleteRegistration",
+          SubmitApplication: "SubmitApplication",
+          InitiateCheckout: "InitiateCheckout",
+          view_content: "ViewContent",
+          lead: "Lead",
+          form_submission_success: "Lead",
         };
-        return eventMap[name] || 'Lead';
+        return eventMap[name] || "Lead";
       };
 
       const standardEventName = getStandardEventName(eventName);
@@ -609,14 +624,18 @@ export default function Index() {
         userData.fbc = fbc;
         console.log("Meta API: Facebook click ID found (_fbc)");
       } else {
-        console.warn("Meta API: Missing Facebook click ID (_fbc) - this may reduce attribution accuracy");
+        console.warn(
+          "Meta API: Missing Facebook click ID (_fbc) - this may reduce attribution accuracy",
+        );
       }
 
       if (fbp) {
         userData.fbp = fbp;
         console.log("Meta API: Facebook browser ID found (_fbp)");
       } else {
-        console.warn("Meta API: Missing Facebook browser ID (_fbp) - this may reduce attribution accuracy");
+        console.warn(
+          "Meta API: Missing Facebook browser ID (_fbp) - this may reduce attribution accuracy",
+        );
         // Try to get from fbq if available
         if (window.fbq && window.fbq.getState) {
           try {
@@ -636,7 +655,7 @@ export default function Index() {
 
       // Add hashed phone number if available from form data
       if (fullEventData?.whatsapp) {
-        const phoneNumbers = fullEventData.whatsapp.replace(/\D/g, '');
+        const phoneNumbers = fullEventData.whatsapp.replace(/\D/g, "");
         if (phoneNumbers.length >= 10) {
           userData.ph = phoneNumbers; // Meta will hash this server-side
           console.log("Meta API: Phone number added for better matching");
@@ -651,12 +670,12 @@ export default function Index() {
 
       // Add first name and last name if available
       if (fullEventData?.name) {
-        const nameParts = fullEventData.name.trim().split(' ');
+        const nameParts = fullEventData.name.trim().split(" ");
         if (nameParts.length >= 1) {
           userData.fn = nameParts[0].toLowerCase();
         }
         if (nameParts.length >= 2) {
-          userData.ln = nameParts.slice(1).join(' ').toLowerCase();
+          userData.ln = nameParts.slice(1).join(" ").toLowerCase();
         }
         console.log("Meta API: Name data added for better matching");
       }
@@ -668,10 +687,14 @@ export default function Index() {
       };
 
       // Add event-specific data
-      if (pixelData?.content_name) customData.content_name = pixelData.content_name;
-      if (pixelData?.content_category) customData.content_category = pixelData.content_category;
-      if (pixelData?.content_type) customData.content_type = pixelData.content_type;
-      if (pixelData?.content_ids) customData.content_ids = pixelData.content_ids;
+      if (pixelData?.content_name)
+        customData.content_name = pixelData.content_name;
+      if (pixelData?.content_category)
+        customData.content_category = pixelData.content_category;
+      if (pixelData?.content_type)
+        customData.content_type = pixelData.content_type;
+      if (pixelData?.content_ids)
+        customData.content_ids = pixelData.content_ids;
 
       // Build event data with all required fields for Facebook Conversion API
       const eventData: any = {
@@ -681,7 +704,7 @@ export default function Index() {
         event_source_url: window.location.href,
         user_data: userData,
         custom_data: customData,
-        event_id: `${fullEventData?.session_id || 'session'}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        event_id: `${fullEventData?.session_id || "session"}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       };
 
       // Add optional fields that may improve delivery
@@ -713,9 +736,12 @@ export default function Index() {
       }
 
       // Validate we have at least some user data for attribution
-      const hasUserData = userData.fbc || userData.fbp || userData.ph || userData.em;
+      const hasUserData =
+        userData.fbc || userData.fbp || userData.ph || userData.em;
       if (!hasUserData) {
-        console.warn("Meta API: Warning - No strong user identifiers found (fbc, fbp, phone, email). Attribution may be limited.");
+        console.warn(
+          "Meta API: Warning - No strong user identifiers found (fbc, fbp, phone, email). Attribution may be limited.",
+        );
       }
 
       console.log("Meta Conversion API: Validated data for sending:", {
@@ -736,14 +762,21 @@ export default function Index() {
       const requestPayload = { ...conversionData };
       delete requestPayload.access_token; // Remove from logging
 
-      console.log("Request Payload (without token):", JSON.stringify(requestPayload, null, 2));
+      console.log(
+        "Request Payload (without token):",
+        JSON.stringify(requestPayload, null, 2),
+      );
 
       // Ensure API version format is correct
       const apiVersion = META_API_VERSION || DEFAULT_META_API_VERSION;
       const apiUrl = `${FACEBOOK_GRAPH_API_URL}/${apiVersion}/${META_PIXEL_ID}/events`;
 
       console.log("Meta Conversion API: Making request to:", apiUrl);
-      console.log("Meta Conversion API: Payload size:", JSON.stringify(conversionData).length, "characters");
+      console.log(
+        "Meta Conversion API: Payload size:",
+        JSON.stringify(conversionData).length,
+        "characters",
+      );
 
       const response = await fetch(apiUrl, {
         method: "POST",
@@ -763,7 +796,7 @@ export default function Index() {
 
       try {
         // Check if we can read the response (CORS may block this)
-        if (response.type === 'opaque') {
+        if (response.type === "opaque") {
           canReadResponse = false;
           responseData = "Response is opaque (CORS blocked)";
         } else {
@@ -772,7 +805,10 @@ export default function Index() {
             try {
               parsedResponse = JSON.parse(responseData);
             } catch (parseError) {
-              console.warn("Response is not valid JSON:", responseData.substring(0, 100));
+              console.warn(
+                "Response is not valid JSON:",
+                responseData.substring(0, 100),
+              );
             }
           }
         }
@@ -804,21 +840,34 @@ export default function Index() {
         // Log request data without access token
         const safeRequestData = { ...conversionData };
         safeRequestData.access_token = `[HIDDEN - ${META_ACCESS_TOKEN?.length || 0} chars]`;
-        console.error("Request Data (token hidden):", JSON.stringify(safeRequestData, null, 2));
+        console.error(
+          "Request Data (token hidden):",
+          JSON.stringify(safeRequestData, null, 2),
+        );
 
         if (!canReadResponse) {
           console.error("Cannot read response due to CORS restrictions");
-          console.error("This is normal for cross-origin requests to Facebook API");
-          console.error("Check Meta Events Manager to see if events were received");
+          console.error(
+            "This is normal for cross-origin requests to Facebook API",
+          );
+          console.error(
+            "Check Meta Events Manager to see if events were received",
+          );
         } else if (parsedResponse) {
           console.error("Parsed Error Response:", parsedResponse);
           if (parsedResponse.error) {
             console.error("Error Details:", parsedResponse.error);
             if (parsedResponse.error.error_user_msg) {
-              console.error("User Message:", parsedResponse.error.error_user_msg);
+              console.error(
+                "User Message:",
+                parsedResponse.error.error_user_msg,
+              );
             }
             if (parsedResponse.error.error_user_title) {
-              console.error("Error Title:", parsedResponse.error.error_user_title);
+              console.error(
+                "Error Title:",
+                parsedResponse.error.error_user_title,
+              );
             }
           }
         } else {
@@ -1203,7 +1252,9 @@ export default function Index() {
       clearTimeout(timeoutId);
 
       // Facebook Standard Events for form success
-      console.log("🎯 Disparando eventos padrões Facebook para sucesso do formulário");
+      console.log(
+        "🎯 Disparando eventos padrões Facebook para sucesso do formulário",
+      );
 
       // 1. Lead event (someone showed interest)
       trackLead("Lojista Interest Form");
@@ -1320,7 +1371,10 @@ export default function Index() {
 
     // Meta Conversion API
     if (META_ACCESS_TOKEN && META_PIXEL_ID) {
-      sendMetaConversionAPI("ViewContent", eventData, { ...eventData, ...getAnalyticsData() });
+      sendMetaConversionAPI("ViewContent", eventData, {
+        ...eventData,
+        ...getAnalyticsData(),
+      });
     }
   };
 
@@ -1346,7 +1400,10 @@ export default function Index() {
 
     // Meta Conversion API
     if (META_ACCESS_TOKEN && META_PIXEL_ID) {
-      sendMetaConversionAPI("Lead", eventData, { ...eventData, ...getAnalyticsData() });
+      sendMetaConversionAPI("Lead", eventData, {
+        ...eventData,
+        ...getAnalyticsData(),
+      });
     }
   };
 
@@ -1369,11 +1426,17 @@ export default function Index() {
     }
 
     // Custom tracking
-    trackEvent("complete_registration", { ...eventData, ...getAnalyticsData() });
+    trackEvent("complete_registration", {
+      ...eventData,
+      ...getAnalyticsData(),
+    });
 
     // Meta Conversion API
     if (META_ACCESS_TOKEN && META_PIXEL_ID) {
-      sendMetaConversionAPI("CompleteRegistration", eventData, { ...eventData, ...getAnalyticsData() });
+      sendMetaConversionAPI("CompleteRegistration", eventData, {
+        ...eventData,
+        ...getAnalyticsData(),
+      });
     }
   };
 
@@ -1399,7 +1462,10 @@ export default function Index() {
 
     // Meta Conversion API
     if (META_ACCESS_TOKEN && META_PIXEL_ID) {
-      sendMetaConversionAPI("SubmitApplication", eventData, { ...eventData, ...getAnalyticsData() });
+      sendMetaConversionAPI("SubmitApplication", eventData, {
+        ...eventData,
+        ...getAnalyticsData(),
+      });
     }
   };
   return (
