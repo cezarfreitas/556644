@@ -739,38 +739,64 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Landing Page Principal */}
-      <header className="relative h-screen w-full overflow-hidden hero-section">
-        <img
-          src="/images/hero/hero-background.webp"
-          alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
-          className="absolute inset-0 w-full h-full object-cover hero-bg"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          width="1920"
-          height="1080"
-        />
-        {/* Overlay Radial Final */}
-        <div
-          className="absolute top-0 left-0 w-full h-full pointer-events-none"
-          style={{
-            zIndex: 2,
-            background:
-              "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%)",
-          }}
-        ></div>
+      <header className="relative min-h-screen w-full overflow-hidden hero-section">
+        {/* Background Image com Parallax Effect */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/hero/hero-background.webp"
+            alt="Lojistas Ecko Oficiais - Maior Marca de Streetwear do Brasil"
+            className="absolute inset-0 w-full h-full object-cover hero-bg scale-105 transition-transform duration-1000"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width="1920"
+            height="1080"
+          />
+        </div>
 
-        {/* Hero Content */}
-        <div
-          className="relative flex flex-col items-center justify-center h-full text-center px-4 md:px-8"
-          style={{ zIndex: 10 }}
-        >
-          {/* Logo */}
-          <div className="mb-12 animate-fade-in">
+        {/* Multiple Overlay Layers para Depth */}
+        <div className="absolute inset-0">
+          {/* Primary Radial Overlay */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.95) 100%)",
+            }}
+          ></div>
+          {/* Secondary Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60"></div>
+          {/* Brand Color Accent */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-red-900/10"></div>
+        </div>
+
+        {/* Floating Elements Background */}
+        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 3 }}>
+          {/* Geometric Shapes */}
+          <div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-12 h-12 bg-primary/20 rounded-lg rotate-45 animate-spin-slow"></div>
+          <div className="absolute bottom-40 left-20 w-16 h-16 border border-white/10 rotate-12 animate-bounce-slow"></div>
+          <div className="absolute bottom-20 right-40 w-8 h-8 bg-white/10 rounded-full animate-pulse"></div>
+        </div>
+
+        {/* Hero Content - Redesigned */}
+        <div className="relative flex flex-col items-center justify-center min-h-screen px-4 md:px-8 py-20" style={{ zIndex: 10 }}>
+          {/* Top Badge */}
+          <div className="mb-8 animate-fade-in">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+              <span className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+                🔥 Oportunidade Exclusiva
+              </span>
+            </div>
+          </div>
+
+          {/* Logo com Efeito Glow */}
+          <div className="mb-12 animate-fade-in relative">
+            <div className="absolute inset-0 bg-primary/30 rounded-full blur-2xl scale-150 animate-pulse"></div>
             <img
               src="/images/brand/ecko-logo.webp"
               alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
-              className="h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-2xl"
+              className="relative h-20 sm:h-24 md:h-28 lg:h-32 w-auto mx-auto drop-shadow-2xl filter brightness-110 hover:scale-105 transition-transform duration-500"
               loading="eager"
               fetchPriority="high"
               decoding="async"
@@ -779,37 +805,74 @@ export default function Index() {
             />
           </div>
 
-          {/* Main Heading - H1 for SEO - Otimizado para mobile */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-4 sm:mb-6 max-w-6xl leading-tight tracking-tight animate-slide-up px-2 uppercase">
-            <span className="block mb-1 sm:mb-2 drop-shadow-2xl">
-              SEJA UM LOJISTA
-            </span>
-            <span className="block drop-shadow-2xl">
-              OFICIAL <span className="text-primary">ECKO</span>
-            </span>
-          </h1>
+          {/* Main Heading - Completamente Novo */}
+          <div className="text-center mb-8 animate-slide-up">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.85] tracking-tight mb-4">
+              <span className="block text-white drop-shadow-2xl mb-2">
+                SEJA UM
+              </span>
+              <span className="block bg-gradient-to-r from-primary via-red-500 to-orange-500 bg-clip-text text-transparent drop-shadow-2xl">
+                LOJISTA OFICIAL
+              </span>
+              <span className="block text-white drop-shadow-2xl mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                ECKO
+              </span>
+            </h1>
+          </div>
 
-          {/* Subtítulo de Destaque */}
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white/95 mb-8 sm:mb-10 max-w-4xl leading-tight animate-slide-up px-2">
-            A maior marca de moda urbana do Brasil e reconhecida mundialmente
-            agora na sua loja
-          </h2>
+          {/* Stats Cards */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12 animate-slide-up">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20">
+              <div className="text-center">
+                <div className="text-2xl font-black text-primary">#1</div>
+                <div className="text-xs text-white/80 uppercase tracking-wide">Marca Streetwear</div>
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20">
+              <div className="text-center">
+                <div className="text-2xl font-black text-primary">1000+</div>
+                <div className="text-xs text-white/80 uppercase tracking-wide">Lojistas Oficiais</div>
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20">
+              <div className="text-center">
+                <div className="text-2xl font-black text-primary">25+</div>
+                <div className="text-xs text-white/80 uppercase tracking-wide">Anos no Mercado</div>
+              </div>
+            </div>
+          </div>
 
-          {/* Call to Action Button - Otimizado para mobile */}
-          <a
-            href="#cadastro-lojistas"
-            className="group inline-flex items-center justify-center bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white px-6 sm:px-7 py-3 sm:py-4 rounded-xl text-base sm:text-lg md:text-xl font-black transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-xl animate-fade-in uppercase tracking-wide mx-4 sm:mx-0 gap-2"
-          >
-            CADASTRE-SE AGORA
-            <FaArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          {/* Enhanced Subtitle */}
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 text-center max-w-4xl leading-relaxed mb-12 animate-slide-up px-4">
+            Faça parte da <span className="font-bold text-primary bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent">rede de distribuidores oficiais</span> da maior marca
+            de moda urbana do Brasil, <span className="font-semibold">reconhecida mundialmente</span>
+          </p>
 
-          {/* Indicador para rolar para baixo */}
-          <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2">
+          {/* Dual CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in">
+            <a
+              href="#cadastro-lojistas"
+              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-primary via-red-600 to-red-700 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-10 py-5 rounded-2xl text-lg font-black transition-all duration-500 transform hover:scale-110 hover:shadow-2xl shadow-xl uppercase tracking-wide gap-3 border-2 border-white/30 hover:border-white/50 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              <span className="relative">CADASTRE-SE AGORA</span>
+              <FaArrowRight className="relative w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
+            </a>
+
+            <a
+              href="#beneficios-lojistas"
+              className="group inline-flex items-center justify-center bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-8 py-5 rounded-2xl text-lg font-semibold transition-all duration-300 border border-white/30 hover:border-white/50 gap-2"
+            >
+              Saiba Mais
+              <FaChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+            </a>
+          </div>
+
+          {/* Scroll Indicator - Enhanced */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fade-in">
             <div
-              className="flex flex-col items-center text-white/90 cursor-pointer hover:text-white transition-colors duration-300"
+              className="flex flex-col items-center cursor-pointer group"
               onClick={() => {
-                // Usar requestAnimationFrame para evitar reflow forçado
                 requestAnimationFrame(() => {
                   const element = document.getElementById("cadastro-lojistas");
                   if (element) {
@@ -821,12 +884,21 @@ export default function Index() {
                 });
               }}
             >
-              <span className="text-xs sm:text-sm font-medium mb-2 uppercase tracking-wide animate-fade-in animate-pulse">
-                Role para baixo
-              </span>
-              <FaChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-scroll-bounce animate-pulse" />
+              <div className="text-white/70 group-hover:text-white transition-colors duration-300 text-center mb-3">
+                <div className="text-xs uppercase tracking-widest font-medium mb-1">Role para baixo</div>
+                <div className="w-12 h-6 border-2 border-white/30 rounded-full flex justify-center">
+                  <div className="w-1 h-2 bg-white/50 rounded-full mt-1 animate-bounce"></div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Particle Effect Overlay */}
+        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 5 }}>
+          <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/30 rounded-full animate-twinkle"></div>
+          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/50 rounded-full animate-twinkle" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-white/40 rounded-full animate-twinkle" style={{ animationDelay: '2s' }}></div>
         </div>
       </header>
 
