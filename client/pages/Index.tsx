@@ -1280,11 +1280,21 @@ export default function Index() {
                   <div className="pt-1">
                     <button
                       type="submit"
-                      className="group relative w-full bg-black hover:bg-gray-900 text-white py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
+                      disabled={isSubmitting}
+                      className={`group relative w-full py-3 rounded-xl font-bold text-lg transition-all duration-300 transform shadow-lg overflow-hidden ${
+                        isSubmitting
+                          ? 'bg-gray-600 cursor-not-allowed'
+                          : 'bg-black hover:bg-gray-900 hover:scale-[1.02] hover:shadow-xl'
+                      } text-white`}
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                       <span className="relative flex items-center justify-center gap-2">
-                        {showCouponMessage ? (
+                        {isSubmitting ? (
+                          <>
+                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            Enviando...
+                          </>
+                        ) : showCouponMessage ? (
                           <>
                             <FaGift className="w-5 h-5" />
                             Receber Acesso Exclusivo
