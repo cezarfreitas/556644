@@ -23,7 +23,7 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Estados para validação de formulário
+  // Estados para validaç��o de formulário
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
@@ -441,7 +441,7 @@ export default function Index() {
   };
 
   const formatCNPJ = (value: string) => {
-    // Remove tudo que n��o é número
+    // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
 
     // Aplica a máscara XX.XXX.XXX/XXXX-XX
@@ -656,7 +656,7 @@ export default function Index() {
 
       // Timestamps diferentes
       form_timestamp: new Date().toISOString(),
-      server_timestamp: null, // Será preenchido no backend
+      server_timestamp: null, // Ser�� preenchido no backend
     };
 
     console.log("Payload sendo enviado:", payload);
@@ -968,7 +968,7 @@ export default function Index() {
                         required
                         className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                           formErrors.name
-                            ? "border-red-500 focus:ring-red-500"
+                            ? "border-red-500 "
                             : formValues.name && !formErrors.name
                               ? "border-green-500 focus:ring-green-500"
                               : "border-input "
@@ -1024,7 +1024,7 @@ export default function Index() {
                         required
                         className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                           formErrors.whatsapp
-                            ? "border-red-500 focus:ring-red-500"
+                            ? "border-red-500 "
                             : formValues.whatsapp && !formErrors.whatsapp
                               ? "border-green-500 focus:ring-green-500"
                               : "border-input "
@@ -1138,7 +1138,7 @@ export default function Index() {
                           required
                           className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                             formErrors.cnpj
-                              ? "border-red-500 focus:ring-red-500"
+                              ? "border-red-500 "
                               : formValues.cnpj && !formErrors.cnpj
                                 ? "border-green-500 focus:ring-green-500"
                                 : "border-input "
