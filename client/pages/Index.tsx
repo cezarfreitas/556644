@@ -738,64 +738,135 @@ export default function Index() {
   };
   return (
     <div className="min-h-screen bg-background">
-      {/* New Full-Screen Section */}
-      <section className="relative h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary via-red-600 to-red-700">
-        <div className="w-full max-w-6xl mx-auto px-4 md:px-8 text-center">
-          {/* Content Container */}
-          <div className="space-y-8">
-            {/* Logo/Brand */}
-            <div className="flex justify-center mb-8">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
-                alt="Logo Ecko"
-                className="h-16 sm:h-20 md:h-24 w-auto"
-                loading="eager"
-                fetchPriority="high"
-              />
-            </div>
+      {/* Hero Section - Mobile & Desktop Optimized */}
+      <section className="relative h-screen w-full bg-gradient-to-br from-primary via-red-600 to-red-700">
 
-            {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
-                <span className="block">SEJA UM</span>
-                <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                  LOJISTA OFICIAL
-                </span>
-                <span className="block">ECKO</span>
-              </h1>
-            </div>
+        {/* Mobile Layout (< md) */}
+        <div className="md:hidden flex flex-col items-center justify-center h-full px-6 py-8 text-center">
+          {/* Mobile Logo */}
+          <div className="mb-6">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
+              alt="Logo Ecko"
+              className="h-12 w-auto mx-auto"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </div>
 
-            {/* Subtitle */}
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Faça parte da{" "}
-              <span className="font-bold text-white">
-                rede de distribuidores oficiais
-              </span>{" "}
-              da maior marca de moda urbana do Brasil,{" "}
-              <span className="font-semibold">reconhecida mundialmente</span>
-            </p>
+          {/* Mobile Heading */}
+          <div className="mb-6">
+            <h1 className="text-2xl font-black text-white leading-tight">
+              <span className="block mb-1">SEJA UM</span>
+              <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-1">
+                LOJISTA OFICIAL
+              </span>
+              <span className="block">ECKO</span>
+            </h1>
+          </div>
 
-            {/* CTA Button */}
-            <div className="pt-8">
-              <a
-                href="#cadastro-lojistas"
-                className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary hover:text-red-700 px-12 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
-              >
-                CADASTRE-SE AGORA
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+          {/* Mobile Subtitle */}
+          <p className="text-sm text-white/90 leading-relaxed mb-8 px-2">
+            Faça parte da{" "}
+            <span className="font-bold text-white">rede de distribuidores oficiais</span>{" "}
+            da maior marca de moda urbana do Brasil
+          </p>
+
+          {/* Mobile CTA */}
+          <a
+            href="#cadastro-lojistas"
+            className="w-full max-w-xs bg-white hover:bg-gray-100 text-primary hover:text-red-700 py-3 px-6 rounded-xl text-sm font-bold transition-all duration-300 uppercase tracking-wide text-center"
+          >
+            CADASTRE-SE AGORA
+          </a>
+        </div>
+
+        {/* Desktop Layout (md+) */}
+        <div className="hidden md:flex items-center justify-center h-full">
+          <div className="w-full max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
+
+            {/* Left Column - Content */}
+            <div className="text-left space-y-8">
+              {/* Desktop Logo */}
+              <div className="mb-8">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
+                  alt="Logo Ecko"
+                  className="h-20 lg:h-24 w-auto"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
+
+              {/* Desktop Heading */}
+              <div>
+                <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9]">
+                  <span className="block mb-2">SEJA UM</span>
+                  <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-2">
+                    LOJISTA OFICIAL
+                  </span>
+                  <span className="block">ECKO</span>
+                </h1>
+              </div>
+
+              {/* Desktop Subtitle */}
+              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
+                Faça parte da{" "}
+                <span className="font-bold text-white">rede de distribuidores oficiais</span>{" "}
+                da maior marca de moda urbana do Brasil,{" "}
+                <span className="font-semibold">reconhecida mundialmente</span>
+              </p>
+
+              {/* Desktop CTA */}
+              <div className="pt-4">
+                <a
+                  href="#cadastro-lojistas"
+                  className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary hover:text-red-700 px-10 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
+                  CADASTRE-SE AGORA
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Column - Visual Elements */}
+            <div className="relative hidden lg:block">
+              <div className="relative">
+                {/* Background decorative elements */}
+                <div className="absolute inset-0 bg-white/5 rounded-3xl backdrop-blur-sm"></div>
+                <div className="relative p-8 text-center">
+                  <div className="space-y-6">
+                    <div className="text-white/80 text-sm uppercase tracking-widest font-semibold">
+                      Marca #1 em Streetwear
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                        <div className="text-2xl font-black text-white">1000+</div>
+                        <div className="text-xs text-white/80 uppercase">Lojistas</div>
+                      </div>
+                      <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                        <div className="text-2xl font-black text-white">25+</div>
+                        <div className="text-xs text-white/80 uppercase">Anos</div>
+                      </div>
+                    </div>
+                    <div className="text-white/70 text-sm leading-relaxed">
+                      Junte-se à rede de distribuidores que já faturam milhões com a marca mais respeitada do streetwear nacional
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
