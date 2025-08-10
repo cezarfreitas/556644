@@ -2375,15 +2375,21 @@ export default function Index() {
                   © {new Date().getFullYear()}. Todos os direitos reservados.
                 </div>
                 <div className="text-gray-400 text-xs">
-                  Desenvolvido com amor por IDE | Negócios digitais<br />
+                  Desenvolvido com{" "}
+                  <span className="text-red-500 inline-block animate-pulse">
+                    ❤️
+                  </span>{" "}
+                  por{" "}
                   <a
                     href="https://www.idenegociosdigitais.com.br"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors duration-300"
                   >
-                    www.idenegociosdigitais.com.br
+                    IDE | Negócios digitais
                   </a>
+                  <br />
+                  www.idenegociosdigitais.com.br
                 </div>
               </div>
             </div>
