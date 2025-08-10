@@ -754,28 +754,20 @@ export default function Index() {
           />
         </div>
 
-        {/* Multiple Overlay Layers para Better Readability */}
+        {/* Overlay System - Optimized */}
         <div className="absolute inset-0">
-          {/* Primary Dark Overlay for Text Readability */}
+          {/* Base Dark Overlay */}
+          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Center Spotlight for Logo and Text */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.95) 100%)",
+                "radial-gradient(ellipse 70% 60% at center center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.9) 100%)",
             }}
           ></div>
-          {/* Secondary Strong Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80"></div>
           {/* Brand Color Accent */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-red-900/20"></div>
-          {/* Soft Center Radial Highlight for Text and Logo */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 60% 50% at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.8) 100%)",
-            }}
-          ></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10"></div>
         </div>
 
         {/* Floating Elements Background */}
