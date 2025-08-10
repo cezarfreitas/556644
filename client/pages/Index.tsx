@@ -627,6 +627,7 @@ export default function Index() {
 
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setSubmitMessage(""); // Clear any previous messages
 
     const formData = new FormData(e.currentTarget);
 
@@ -715,7 +716,7 @@ export default function Index() {
 
       // Timestamps diferentes
       form_timestamp: new Date().toISOString(),
-      server_timestamp: null, // Será preenchido no backend
+      server_timestamp: null, // Ser�� preenchido no backend
     };
 
     console.log("Payload sendo enviado:", payload);
