@@ -213,20 +213,20 @@ export default function TestePage() {
         META_API_VERSION: META_API_VERSION,
       });
 
-      if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN === "token_sensivel") {
+      if (!META_ACCESS_TOKEN) {
         setTestResults((prev) => ({
           ...prev,
           metaAPI:
-            "❌ Meta API: Access Token não configurado ou usando valor placeholder. Configure VITE_META_ACCESS_TOKEN via DevServerControl.",
+            "❌ Meta API: Access Token não configurado. Configure VITE_META_ACCESS_TOKEN via DevServerControl.",
         }));
         return;
       }
 
-      if (!META_PIXEL_ID || META_PIXEL_ID === "123456789012345") {
+      if (!META_PIXEL_ID) {
         setTestResults((prev) => ({
           ...prev,
           metaAPI:
-            "❌ Meta API: Pixel ID não configurado ou usando valor placeholder. Configure VITE_META_PIXEL_ID com seu ID real.",
+            "❌ Meta API: Pixel ID não configurado. Configure VITE_META_PIXEL_ID no .env com seu ID real.",
         }));
         return;
       }
