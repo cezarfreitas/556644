@@ -1303,20 +1303,24 @@ export default function Index() {
 
       clearTimeout(timeoutId);
 
-      // Facebook Standard Events for form success
-      console.log(
-        "🎯 Disparando eventos padrões Facebook para sucesso do formulário",
-      );
-
-      // 1. Lead event (someone showed interest)
-      trackLead("Lojista Interest Form");
-
-      // 2. SubmitApplication event (form submission)
-      trackSubmitApplication();
-
-      // 3. CompleteRegistration event if they have CNPJ (business registration)
+      // Facebook Standard Events - only for business leads (with CNPJ)
       if (selectedCnpj === "sim") {
+        console.log(
+          "🎯 Disparando eventos padrões Facebook para lead com CNPJ",
+        );
+
+        // 1. Lead event (someone showed interest)
+        trackLead("Lojista Interest Form");
+
+        // 2. SubmitApplication event (form submission)
+        trackSubmitApplication();
+
+        // 3. CompleteRegistration event (business registration)
         trackCompleteRegistration("business_form");
+      } else {
+        console.log(
+          "ℹ️ Usuário sem CNPJ - eventos de conversão Facebook não enviados",
+        );
       }
 
       // Track sucesso do envio
