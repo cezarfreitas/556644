@@ -758,7 +758,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/60"></div>
 
         {/* Mobile Layout (< md) */}
-        <div className="md:hidden flex flex-col items-center justify-center h-full px-6 py-8 text-center">
+        <div className="md:hidden flex flex-col items-center justify-center h-full px-6 py-8 text-center relative z-10">
           {/* Mobile Logo */}
           <div className="mb-6">
             <img
@@ -798,7 +798,7 @@ export default function Index() {
         </div>
 
         {/* Desktop Layout (md+) */}
-        <div className="hidden md:flex items-center justify-center h-full">
+        <div className="hidden md:flex items-center justify-center h-full relative z-10">
           <div className="w-full max-w-5xl mx-auto px-8 flex items-center justify-center">
 
             {/* Centered Content */}
