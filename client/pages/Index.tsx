@@ -889,9 +889,10 @@ export default function Index() {
             {/* Text/CTA Column - Otimizado para mobile */}
             <div className="space-y-6 sm:space-y-10">
               <div className="space-y-6 sm:space-y-8">
-                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Cadastre-se e Seja um Lojista Oficial
-                  <span className="block text-primary">Ecko Agora Mesmo</span>
+                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[0.9] uppercase tracking-wide">
+                  <span className="block">CADASTRE-SE E SEJA UM</span>
+                  <span className="block text-primary">LOJISTA OFICIAL</span>
+                  <span className="block text-primary font-black">ECKO AGORA MESMO</span>
                 </h2>
               </div>
             </div>
