@@ -1116,9 +1116,6 @@ export default function Index() {
                           <span className="text-sm sm:text-base font-medium text-white block">
                             Sou Lojista (Tenho CNPJ)
                           </span>
-                          <span className="text-xs sm:text-sm text-gray-400">
-                            Para lojistas com CNPJ ativo
-                          </span>
                         </div>
                       </label>
                       <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
@@ -1135,9 +1132,6 @@ export default function Index() {
                         <div>
                           <span className="text-sm sm:text-base font-medium text-white block">
                             Sou Consumidor Final
-                          </span>
-                          <span className="text-xs sm:text-sm text-gray-400">
-                            Não tenho CNPJ/empresa
                           </span>
                         </div>
                       </label>
@@ -1927,7 +1921,7 @@ export default function Index() {
                     href="#"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Pol��tica de Cookies
+                    Pol���tica de Cookies
                   </a>
                 </div>
               </div>
