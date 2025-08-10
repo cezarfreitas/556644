@@ -303,7 +303,7 @@ export default function TestePage() {
               </div>
               <div>
                 <strong>Google Ads ID:</strong>{" "}
-                {GOOGLE_ADS_CONVERSION_ID || "��� Não configurado"}
+                {GOOGLE_ADS_CONVERSION_ID || "❌ Não configurado"}
               </div>
             </div>
           </div>
