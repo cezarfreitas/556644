@@ -546,9 +546,13 @@ export default function TestePage() {
             </h2>
             <div className="text-blue-700 space-y-2">
               <p>
-                <strong>1. Meta Conversion API:</strong> Use o test event code "
-                {META_TEST_EVENT_CODE}" no Events Manager
+                <strong>1. Meta Conversion API:</strong> Configure primeiro as variáveis:
               </p>
+              <div className="text-sm ml-4 bg-blue-50 p-3 rounded-lg space-y-1">
+                <p>• <strong>Access Token:</strong> Configure via DevServerControl: VITE_META_ACCESS_TOKEN</p>
+                <p>• <strong>Pixel ID:</strong> Configure no .env: VITE_META_PIXEL_ID</p>
+                <p>• <strong>Test Event Code:</strong> Use "{META_TEST_EVENT_CODE}" no Events Manager</p>
+              </div>
               <p className="text-sm ml-4">
                 ⚠️{" "}
                 <em>
