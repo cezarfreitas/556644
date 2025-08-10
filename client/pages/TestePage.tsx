@@ -543,16 +543,46 @@ export default function TestePage() {
               <h3 className="text-lg font-bold text-purple-800 mb-4 flex items-center gap-2">
                 👁️ Meta Pixel
               </h3>
-              <button
-                onClick={testMetaPixel}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
-              >
-                <FaPlay className="w-4 h-4" />
-                Testar Meta Pixel
-              </button>
-              {testResults.metaPixel && (
-                <div className="mt-3 p-3 bg-white rounded-lg text-sm">
-                  {testResults.metaPixel}
+              <div className="space-y-2">
+                <button
+                  onClick={testMetaPixel}
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+                >
+                  <FaPlay className="w-3 h-3" />
+                  Custom Event
+                </button>
+                <button
+                  onClick={testMetaPageView}
+                  className="w-full bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+                >
+                  <FaPlay className="w-3 h-3" />
+                  PageView
+                </button>
+                <button
+                  onClick={testMetaViewContent}
+                  className="w-full bg-purple-400 hover:bg-purple-500 text-white py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+                >
+                  <FaPlay className="w-3 h-3" />
+                  ViewContent
+                </button>
+              </div>
+              {(testResults.metaPixel || testResults.metaPageView || testResults.metaViewContent) && (
+                <div className="mt-3 space-y-2">
+                  {testResults.metaPixel && (
+                    <div className="p-2 bg-white rounded-lg text-xs">
+                      {testResults.metaPixel}
+                    </div>
+                  )}
+                  {testResults.metaPageView && (
+                    <div className="p-2 bg-white rounded-lg text-xs">
+                      {testResults.metaPageView}
+                    </div>
+                  )}
+                  {testResults.metaViewContent && (
+                    <div className="p-2 bg-white rounded-lg text-xs">
+                      {testResults.metaViewContent}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
