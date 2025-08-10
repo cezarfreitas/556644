@@ -788,6 +788,13 @@ export default function Index() {
       setIsSubmitting(false);
     }
   };
+
+  // Função para voltar ao formulário
+  const handleBackToForm = () => {
+    setSubmitStatus('idle');
+    setSubmitMessage('');
+    setIsSubmitting(false);
+  };
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Mobile & Desktop Optimized */}
