@@ -881,7 +881,7 @@ export default function Index() {
 
       {/* Cadastro de Lojistas - Formulário de Parceria - Otimizado para mobile */}
       <section
-        className="py-12 sm:py-20 md:py-32 bg-white"
+        className="py-12 sm:py-20 md:py-32 bg-black"
         id="cadastro-lojistas"
       >
         <div className="container mx-auto px-4 sm:px-6">
