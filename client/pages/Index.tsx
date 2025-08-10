@@ -687,6 +687,10 @@ export default function Index() {
         user_data_fields: Object.keys(userData),
         custom_data_fields: Object.keys(customData),
         access_token_length: META_ACCESS_TOKEN?.length || 0,
+        has_fbc: !!userData.fbc,
+        has_fbp: !!userData.fbp,
+        has_phone: !!userData.ph,
+        user_data_count: Object.keys(userData).length,
       });
 
       // Create request payload without access token in logs
@@ -2017,7 +2021,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/complete-collection.webp"
-                  alt="Coleção Completa Ecko"
+                  alt="Cole��ão Completa Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
