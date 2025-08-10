@@ -1835,7 +1835,7 @@ export default function Index() {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 pt-8">
-              <div className="text-gray-300 text-sm">
+              <div className="text-center">
                 <div className="text-gray-300 text-sm">
                   �� {new Date().getFullYear()}. Todos os direitos reservados.
                 </div>
