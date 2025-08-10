@@ -1345,7 +1345,7 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Ecko Oficiais
