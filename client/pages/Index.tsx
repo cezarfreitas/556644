@@ -1224,7 +1224,7 @@ export default function Index() {
                               });
                           }}
                         />
-                        {/* Ícone de validação */}
+                        {/* Ícone de validaç��o */}
                         {formValues.cnpj && (
                           <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                             {formErrors.cnpj ? (
@@ -1837,7 +1837,7 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="text-gray-300 text-sm">
                 <div className="text-gray-300 text-sm">
-                  �� 2024. Todos os direitos reservados.
+                  �� {new Date().getFullYear()}. Todos os direitos reservados.
                 </div>
               </div>
             </div>
