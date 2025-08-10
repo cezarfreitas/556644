@@ -414,6 +414,7 @@ export default function TestePage() {
             <h2 className="text-xl font-bold text-blue-800 mb-4">📋 Instruções de Teste</h2>
             <div className="text-blue-700 space-y-2">
               <p><strong>1. Meta Conversion API:</strong> Use o test event code "TEST12345" no Events Manager</p>
+              <p className="text-sm ml-4">⚠️ <em>Nota: CORS pode bloquear respostas do navegador. Verifique eventos no Events Manager mesmo com erro de CORS.</em></p>
               <p><strong>2. GA4:</strong> Verifique os eventos no Real-time reports do Google Analytics</p>
               <p><strong>3. GTM:</strong> Use o Preview mode do GTM para ver os eventos</p>
               <p><strong>4. Meta Pixel:</strong> Use o Facebook Pixel Helper extension</p>
