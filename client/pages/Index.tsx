@@ -645,7 +645,7 @@ export default function Index() {
       form_completion_time:
         performance.now() - (window.formStartTime || performance.now()),
 
-      // Informações de conversão
+      // Informa��ões de conversão
       conversion_page: "/",
       conversion_element: "main_form",
       conversion_position: "hero_section",
@@ -1097,40 +1097,50 @@ export default function Index() {
                     )}
                   </div>
 
-                  <div className="space-y-3">
-                    <label className="text-sm font-medium text-white">
-                      Sua loja possui CNPJ? *
+                  <div className="space-y-4">
+                    <label className="block text-sm font-semibold text-white">
+                      Tipo de Cadastro
                     </label>
-                    <div className="flex gap-4 sm:gap-6">
-                      <label className="flex items-center gap-2 cursor-pointer">
+                    <div className="grid grid-cols-1 gap-3">
+                      <label className="flex items-center gap-3 p-4 border-2 border-gray-600 rounded-xl cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
                         <input
                           type="radio"
                           name="cnpj"
                           value="sim"
-                          className="w-4 h-4 text-primary border-gray-300 "
+                          className="w-5 h-5 text-primary border-gray-300"
                           required
                           onChange={(e) =>
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="text-sm sm:text-base text-white">
-                          Sim, sou lojista com CNPJ
-                        </span>
+                        <div>
+                          <span className="text-base font-medium text-white block">
+                            Sou Lojista (Tenho CNPJ)
+                          </span>
+                          <span className="text-sm text-gray-400">
+                            Para lojistas com CNPJ ativo
+                          </span>
+                        </div>
                       </label>
-                      <label className="flex items-center gap-2 cursor-pointer">
+                      <label className="flex items-center gap-3 p-4 border-2 border-gray-600 rounded-xl cursor-pointer transition-all duration-300 hover:border-gray-500 hover:bg-gray-800/30">
                         <input
                           type="radio"
                           name="cnpj"
                           value="nao-consumidor"
-                          className="w-4 h-4 text-primary border-gray-300 "
+                          className="w-5 h-5 text-primary border-gray-300"
                           required
                           onChange={(e) =>
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="text-sm sm:text-base text-white">
-                          Não, sou consumidor
-                        </span>
+                        <div>
+                          <span className="text-base font-medium text-white block">
+                            Sou Consumidor Final
+                          </span>
+                          <span className="text-sm text-gray-400">
+                            Não tenho CNPJ/empresa
+                          </span>
+                        </div>
                       </label>
                     </div>
                   </div>
