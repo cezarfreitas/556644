@@ -1791,7 +1791,7 @@ export default function Index() {
               {/* Content */}
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-3 sm:space-y-6">
-                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                     História da Marca
                     <span className="block text-primary">Ecko</span>
                   </h2>
@@ -1804,7 +1804,7 @@ export default function Index() {
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com produtos autênticos que refletem a essência do street
                     style brasileiro, a Ecko conquistou milhões de consumidores
-                    e se estabeleceu como a maior marca de streetwear do pa��s.
+                    e se estabeleceu como a maior marca de streetwear do país.
                     Nossos lojistas parceiros fazem parte dessa trajetória de
                     sucesso.
                   </p>
@@ -1814,13 +1814,13 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       20+
                     </div>
-                    <div className="text-white/80 text-sm">Anos de Mercado</div>
+                    <div className="text-gray-600 text-sm">Anos de Mercado</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       500+
                     </div>
-                    <div className="text-white/80 text-sm">
+                    <div className="text-gray-600 text-sm">
                       Lojistas Parceiros
                     </div>
                   </div>
@@ -1828,7 +1828,7 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       1M+
                     </div>
-                    <div className="text-white/80 text-sm">
+                    <div className="text-gray-600 text-sm">
                       Clientes Satisfeitos
                     </div>
                   </div>
@@ -1836,7 +1836,7 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       #1
                     </div>
-                    <div className="text-white/80 text-sm">
+                    <div className="text-gray-600 text-sm">
                       Marca de Streetwear
                     </div>
                   </div>
@@ -1853,7 +1853,7 @@ export default function Index() {
                     loading="lazy"
                   />
                   <div className="mt-8 space-y-3">
-                    <p className="text-white/60 text-sm italic">
+                    <p className="text-gray-500 text-sm italic">
                       "Autenticidade que conecta com a rua"
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
