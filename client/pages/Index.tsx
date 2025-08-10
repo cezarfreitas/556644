@@ -1177,12 +1177,12 @@ export default function Index() {
                           name="cnpj-number"
                           type="text"
                           required
-                          className={`w-full px-3 py-3 sm:py-3 pr-12 rounded-lg border bg-white/10 text-white placeholder:text-gray-200  transition-all text-base sm:text-sm ${
+                          className={`w-full px-3 py-3 sm:py-3 pr-12 rounded-lg border bg-white text-gray-900 placeholder:text-gray-500  transition-all text-base sm:text-sm ${
                             formErrors.cnpj
-                              ? "border-red-300"
+                              ? "border-red-500"
                               : formValues.cnpj && !formErrors.cnpj
-                                ? "border-green-300"
-                                : "border-white/30"
+                                ? "border-green-500"
+                                : "border-gray-300"
                           }`}
                           placeholder="00.000.000/0000-00"
                           maxLength={18}
