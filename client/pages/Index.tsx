@@ -1445,7 +1445,7 @@ export default function Index() {
               <div className="text-center">
                 <div className="relative">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fe8944e5525914e1f8994c2dc4f9b44eb?format=webp&width=800"
+                    src="/images/gallery/showroom.webp"
                     alt="Showroom Ecko - Espaço exclusivo para lojistas"
                     className="w-full max-w-lg rounded-2xl shadow-2xl mx-auto"
                     loading="lazy"
