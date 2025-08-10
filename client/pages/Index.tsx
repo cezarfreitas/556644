@@ -317,13 +317,17 @@ export default function Index() {
 
   // Track ViewContent when gallery is viewed
   useEffect(() => {
-    console.log("👁️ Configurando Intersection Observer para galeria de produtos");
+    console.log(
+      "👁️ Configurando Intersection Observer para galeria de produtos",
+    );
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target.id === "galeria-produtos") {
-            console.log("📸 Galeria de produtos ficou visível, disparando ViewContent");
+            console.log(
+              "📸 Galeria de produtos ficou visível, disparando ViewContent",
+            );
             trackViewContent(
               "product_gallery",
               "ecko_collection",
@@ -990,7 +994,11 @@ export default function Index() {
     contentId: string,
     contentName: string,
   ) => {
-    console.log("🎯 Tracking ViewContent:", { contentType, contentId, contentName });
+    console.log("🎯 Tracking ViewContent:", {
+      contentType,
+      contentId,
+      contentName,
+    });
 
     const viewContentData = {
       content_type: contentType,
