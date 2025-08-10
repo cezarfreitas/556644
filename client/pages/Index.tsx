@@ -1246,7 +1246,7 @@ export default function Index() {
                     </button>
                   </div>
 
-                  <div className="text-center space-y-2 pt-4">
+                  <div className="text-center space-y-1 pt-3">
                     <p className="text-xs text-gray-400">
                       🔒 Seus dados estão protegidos e seguros
                     </p>
