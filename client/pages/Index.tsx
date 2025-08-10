@@ -723,12 +723,6 @@ export default function Index() {
     try {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
 
-      // Check if we have a valid endpoint, if not use alternative method
-      if (!hasValidEndpoint) {
-        console.log("No valid API endpoint, using alternative submission method");
-        handleAlternativeSubmission(payload, formData);
-        return;
-      }
 
       // Create a more robust fetch request with better error handling
       const controller = new AbortController();
@@ -1462,7 +1456,7 @@ export default function Index() {
                             const name = formValues.name;
                             const whatsapp = formValues.whatsapp;
                             const cnpj = formValues.cnpj;
-                            const hasCnpj = selectedCnpj === "sim" ? "Sim" : "Não";
+                            const hasCnpj = selectedCnpj === "sim" ? "Sim" : "N��o";
 
                             const whatsappMessage = `
 🔥 *NOVO LEAD - LOJISTA ECKO*
