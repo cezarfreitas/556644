@@ -586,7 +586,7 @@ export default function Index() {
     });
   };
 
-  // Handlers para campos do formul��rio
+  // Handlers para campos do formulário
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
@@ -731,9 +731,11 @@ export default function Index() {
     try {
       console.log("Submitting form to:", API_FORM_ENDPOINT);
 
-      // Validate endpoint before making request
-      if (!isValidUrl(API_FORM_ENDPOINT)) {
-        throw new Error("Invalid API endpoint URL");
+      // Check if we have a valid endpoint, if not use alternative method
+      if (!hasValidEndpoint) {
+        console.log("No valid API endpoint, using alternative submission method");
+        handleAlternativeSubmission(payload, formData);
+        return;
       }
 
       // Create a more robust fetch request with better error handling
@@ -1956,7 +1958,7 @@ export default function Index() {
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana atrav��s da moda autêntica.
+                  urbana através da moda autêntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
