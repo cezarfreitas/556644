@@ -618,20 +618,30 @@ export default function Index() {
         },
       );
 
-      // Enhanced error handling with detailed response reading
+      // Enhanced error handling with CORS considerations
       let responseData: string = "";
       let parsedResponse: any = null;
+      let canReadResponse = true;
 
       try {
-        responseData = await response.text();
-        try {
-          parsedResponse = JSON.parse(responseData);
-        } catch (parseError) {
-          console.warn("Response is not valid JSON:", responseData);
+        // Check if we can read the response (CORS may block this)
+        if (response.type === 'opaque') {
+          canReadResponse = false;
+          responseData = "Response is opaque (CORS blocked)";
+        } else {
+          responseData = await response.text();
+          if (responseData) {
+            try {
+              parsedResponse = JSON.parse(responseData);
+            } catch (parseError) {
+              console.warn("Response is not valid JSON:", responseData.substring(0, 100));
+            }
+          }
         }
       } catch (readError) {
-        responseData = "Unable to read response body";
-        console.warn("Response body read error:", readError);
+        canReadResponse = false;
+        responseData = "Unable to read response body (CORS or network error)";
+        console.warn("Response body read error:", readError.message);
       }
 
       if (response.ok) {
