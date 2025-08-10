@@ -28,6 +28,11 @@ export default function Index() {
     cnpj: "",
   });
 
+  // Estados para controle de submissão
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
+
   // Configurações de tracking via .env
   const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
   const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
