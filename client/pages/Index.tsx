@@ -797,7 +797,6 @@ export default function Index() {
                 </svg>
               </a>
             </div>
-
           </div>
         </div>
       </section>
