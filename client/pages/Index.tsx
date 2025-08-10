@@ -853,6 +853,11 @@ export default function Index() {
           return; // Exit the catch block, let xhr handle the response
         } catch (fallbackError) {
           console.error("Fallback method also failed:", fallbackError);
+
+          // As last resort, use alternative submission method
+          console.log("All network methods failed, using alternative submission");
+          handleAlternativeSubmission(payload, formData);
+          return;
         }
       }
 
@@ -1910,7 +1915,7 @@ Clique no botão abaixo para enviar suas informações diretamente para nossa eq
         </div>
       </section>
 
-      {/* História da Marca Ecko - Líder em Streetwear - Otimizado para mobile */}
+      {/* História da Marca Ecko - L��der em Streetwear - Otimizado para mobile */}
       <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-ecko">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
