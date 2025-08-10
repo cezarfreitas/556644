@@ -43,6 +43,7 @@ export default function TestePage() {
 
   // Test Google Analytics 4
   const testGA4 = () => {
+    console.log("🔵 GA4 test button clicked");
     try {
       if (GA4_MEASUREMENT_ID && window.gtag) {
         window.gtag("event", "test_event", {
