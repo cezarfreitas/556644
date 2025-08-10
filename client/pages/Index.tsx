@@ -1320,7 +1320,7 @@ export default function Index() {
       // Detect specific error types for better user messaging
       let errorType = "network_error";
       let userMessage =
-        "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
+        "🔌 Erro de conex��o. Verifique sua internet e tente novamente.";
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
@@ -1386,12 +1386,15 @@ export default function Index() {
     // Custom tracking
     trackEvent("view_content", { ...eventData, ...getAnalyticsData() });
 
-    // Meta Conversion API
+    // Meta Conversion API - delay to ensure cookies are set
     if (META_ACCESS_TOKEN && META_PIXEL_ID) {
-      sendMetaConversionAPI("ViewContent", eventData, {
-        ...eventData,
-        ...getAnalyticsData(),
-      });
+      // Add small delay to ensure Facebook cookies are properly set
+      setTimeout(() => {
+        sendMetaConversionAPI("ViewContent", eventData, {
+          ...eventData,
+          ...getAnalyticsData(),
+        });
+      }, 1500); // 1.5 second delay to ensure Facebook Pixel has set cookies
     }
   };
 
