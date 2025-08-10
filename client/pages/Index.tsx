@@ -443,7 +443,7 @@ export default function Index() {
   };
 
   const formatCNPJ = (value: string) => {
-    // Remove tudo que não é número
+    // Remove tudo que não é n��mero
     const numbers = value.replace(/\D/g, "");
 
     // Aplica a máscara XX.XXX.XXX/XXXX-XX
@@ -966,7 +966,7 @@ export default function Index() {
             </div>
 
             {/* Form Column - Otimizado para mobile */}
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl p-4 sm:p-8 shadow-lg">
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl p-4 sm:p-6 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-normal text-white">
