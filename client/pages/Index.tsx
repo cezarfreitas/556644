@@ -564,11 +564,26 @@ export default function Index() {
         conversionData.test_event_code = META_TEST_EVENT_CODE;
       }
 
-      console.log("Meta Conversion API: Sending data:", {
+      // Validate essential data before sending
+      if (!standardEventName) {
+        throw new Error("Invalid event name");
+      }
+
+      if (!META_PIXEL_ID || META_PIXEL_ID.length < 10) {
+        throw new Error("Invalid Pixel ID");
+      }
+
+      if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN.length < 20) {
+        throw new Error("Invalid Access Token");
+      }
+
+      console.log("Meta Conversion API: Validated data for sending:", {
         pixel_id: META_PIXEL_ID,
-        event_name: META_CONVERSION_NAME,
-        test_mode: true,
-        conversion_data: conversionData,
+        event_name: standardEventName,
+        api_version: META_API_VERSION,
+        test_event_code: META_TEST_EVENT_CODE || "None",
+        user_data_fields: Object.keys(userData).length,
+        custom_data_fields: Object.keys(customData).length,
       });
 
       const response = await fetch(
