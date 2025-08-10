@@ -40,11 +40,9 @@ export default function Index() {
   const GTM_ID = import.meta.env.VITE_GTM_ID;
   const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
   const META_ACCESS_TOKEN = import.meta.env.VITE_META_ACCESS_TOKEN;
-  const META_CONVERSION_NAME =
-    import.meta.env.VITE_META_CONVERSION_NAME || "Lead";
-  const META_API_VERSION = import.meta.env.VITE_META_API_VERSION || "v18.0";
-  const META_TEST_EVENT_CODE =
-    import.meta.env.VITE_META_TEST_EVENT_CODE || "TEST12345";
+  const META_CONVERSION_NAME = import.meta.env.VITE_META_CONVERSION_NAME;
+  const META_API_VERSION = import.meta.env.VITE_META_API_VERSION;
+  const META_TEST_EVENT_CODE = import.meta.env.VITE_META_TEST_EVENT_CODE;
   const GOOGLE_ADS_CONVERSION_ID = import.meta.env
     .VITE_GOOGLE_ADS_CONVERSION_ID;
   const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env
@@ -1581,7 +1579,7 @@ export default function Index() {
                       onClick={handleBackToForm}
                       className="mt-4 bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300"
                     >
-                      ← Voltar ao Formulário
+                      ��� Voltar ao Formulário
                     </button>
                   </div>
                 )}
