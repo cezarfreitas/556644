@@ -149,6 +149,12 @@ export default function Index() {
     // Enviar pageview customizado
     trackEvent("pageview", pageviewData);
 
+    // Meta Pixel PageView event
+    if (META_PIXEL_ID && window.fbq) {
+      window.fbq('track', 'PageView');
+      console.log("Meta Pixel PageView tracked");
+    }
+
     // Cleanup no unmount
     return () => {
       delete window.formStartTime;
