@@ -776,10 +776,28 @@ export default function Index() {
         );
       }
     } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+
+      // Detect specific error types for better user messaging
+      let errorType = "network_error";
+      let userMessage = "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
+
+      if (error.name === "AbortError") {
+        errorType = "timeout_error";
+        userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
+      } else if (error.message?.includes("Failed to fetch")) {
+        errorType = "fetch_blocked_error";
+        userMessage = "🚫 Erro de rede. Verifique se não há bloqueadores ativos e tente novamente.";
+      } else if (error.message?.includes("CORS")) {
+        errorType = "cors_error";
+        userMessage = "🔒 Erro de segurança. Recarregue a página e tente novamente.";
+      }
+
       // Track erro de conexão
       trackEvent("form_submission_error", {
-        error_type: "network_error",
+        error_type: errorType,
         error_message: error?.message || "Unknown error",
+        error_name: error?.name || "Unknown",
         form_data: {
           has_name: !!formData.get("name"),
           has_whatsapp: !!formData.get("whatsapp"),
@@ -787,11 +805,8 @@ export default function Index() {
         },
       });
 
-      console.error("Erro ao enviar formulário:", error);
       setSubmitStatus("error");
-      setSubmitMessage(
-        "🔌 Erro de conexão. Verifique sua internet e tente novamente.",
-      );
+      setSubmitMessage(userMessage);
     } finally {
       setIsSubmitting(false);
     }
