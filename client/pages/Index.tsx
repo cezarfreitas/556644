@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  MdStar,
-  MdAttachMoney,
-} from "react-icons/md";
+import { MdStar, MdAttachMoney } from "react-icons/md";
 import {
   FaFacebook,
   FaInstagram,
@@ -1267,7 +1264,6 @@ export default function Index() {
                       </span>
                     </button>
                   </div>
-
                 </form>
               </div>
             </div>
@@ -1712,14 +1708,16 @@ export default function Index() {
                     <span className="block text-primary">Ecko</span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-                    Nascida nas ruas de Nova York em 1993, a Ecko Unltd. chegou ao Brasil
-                    para revolucionar o streetwear nacional. Mais que uma marca, somos um
-                    movimento cultural que une música, arte urbana e moda autêntica.
+                    Nascida nas ruas de Nova York em 1993, a Ecko Unltd. chegou
+                    ao Brasil para revolucionar o streetwear nacional. Mais que
+                    uma marca, somos um movimento cultural que une música, arte
+                    urbana e moda autêntica.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    De graffitis nas paredes às passarelas, nossa essência permanece a mesma:
-                    criar produtos que expressam a identidade e atitude da nova geração.
-                    Cada peça conta uma história, cada design carrega a alma das ruas.
+                    De graffitis nas paredes às passarelas, nossa essência
+                    permanece a mesma: criar produtos que expressam a identidade
+                    e atitude da nova geração. Cada peça conta uma história,
+                    cada design carrega a alma das ruas.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
@@ -1727,7 +1725,9 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       30+
                     </div>
-                    <div className="text-gray-600 text-sm">Anos de História</div>
+                    <div className="text-gray-600 text-sm">
+                      Anos de História
+                    </div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
@@ -1767,7 +1767,8 @@ export default function Index() {
                   />
                   <div className="mt-8 space-y-3">
                     <p className="text-gray-500 text-sm italic">
-                      "Desde 1993, conectando gerações através do streetwear autêntico"
+                      "Desde 1993, conectando gerações através do streetwear
+                      autêntico"
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                   </div>
