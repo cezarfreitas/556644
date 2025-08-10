@@ -275,7 +275,9 @@ export default function Index() {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => {
         const isMobile = window.innerWidth < 768;
-        const maxSlides = isMobile ? testimonials.length : Math.ceil(testimonials.length / 2);
+        const maxSlides = isMobile
+          ? testimonials.length
+          : Math.ceil(testimonials.length / 2);
         return (prev + 1) % maxSlides;
       });
     }, 5000); // Auto advance every 5 seconds
@@ -286,14 +288,18 @@ export default function Index() {
   // Optimized slider functions with unified behavior
   const nextSlide = () => {
     const isMobile = window.innerWidth < 768;
-    const maxSlides = isMobile ? testimonials.length : Math.ceil(testimonials.length / 2);
+    const maxSlides = isMobile
+      ? testimonials.length
+      : Math.ceil(testimonials.length / 2);
     setCurrentSlide((prev) => (prev + 1) % maxSlides);
   };
 
   const prevSlide = () => {
     const isMobile = window.innerWidth < 768;
-    const maxSlides = isMobile ? testimonials.length : Math.ceil(testimonials.length / 2);
-    setCurrentSlide((prev) => prev === 0 ? maxSlides - 1 : prev - 1);
+    const maxSlides = isMobile
+      ? testimonials.length
+      : Math.ceil(testimonials.length / 2);
+    setCurrentSlide((prev) => (prev === 0 ? maxSlides - 1 : prev - 1));
   };
 
   const goToSlide = (index: number) => {
@@ -543,7 +549,6 @@ export default function Index() {
     return "";
   };
 
-
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
     setShowCnpjField(value === "sim");
@@ -631,17 +636,17 @@ export default function Index() {
         if (nameError) {
           document.getElementById("name")?.scrollIntoView({
             behavior: "smooth",
-            block: "center"
+            block: "center",
           });
         } else if (whatsappError) {
           document.getElementById("whatsapp")?.scrollIntoView({
             behavior: "smooth",
-            block: "center"
+            block: "center",
           });
         } else if (cnpjError) {
           document.getElementById("cnpj-number")?.scrollIntoView({
             behavior: "smooth",
-            block: "center"
+            block: "center",
           });
         }
       }, 100);
@@ -1418,10 +1423,7 @@ export default function Index() {
       </section>
 
       {/* Conheça o nosso Show Room - Otimizado para mobile */}
-      <section
-        className="py-12 sm:py-20 md:py-32 bg-gray-900"
-        id="showroom"
-      >
+      <section className="py-12 sm:py-20 md:py-32 bg-gray-900" id="showroom">
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
@@ -1432,7 +1434,9 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                Espaço exclusivo onde você pode tocar, sentir e experimentar toda a qualidade e autenticidade dos produtos Ecko antes de levar para sua loja.
+                Espaço exclusivo onde você pode tocar, sentir e experimentar
+                toda a qualidade e autenticidade dos produtos Ecko antes de
+                levar para sua loja.
               </p>
             </div>
 
@@ -1444,7 +1448,10 @@ export default function Index() {
                     Experiência Completa do Produto
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    No nosso showroom, você tem acesso exclusivo a toda nossa coleção. Conheça de perto a qualidade dos tecidos, o acabamento perfeito e os detalhes únicos que fazem da Ecko a marca líder em streetwear.
+                    No nosso showroom, você tem acesso exclusivo a toda nossa
+                    coleção. Conheça de perto a qualidade dos tecidos, o
+                    acabamento perfeito e os detalhes únicos que fazem da Ecko a
+                    marca líder em streetwear.
                   </p>
                 </div>
 
@@ -1458,7 +1465,8 @@ export default function Index() {
                         Catálogo Completo
                       </h4>
                       <p className="text-gray-400 text-sm">
-                        Acesso a todos os produtos disponíveis para lojistas, incluindo lançamentos e edições limitadas.
+                        Acesso a todos os produtos disponíveis para lojistas,
+                        incluindo lançamentos e edições limitadas.
                       </p>
                     </div>
                   </div>
@@ -1472,7 +1480,8 @@ export default function Index() {
                         Consultoria Personalizada
                       </h4>
                       <p className="text-gray-400 text-sm">
-                        Nossa equipe especializada te ajuda a escolher os produtos ideais para o seu público e região.
+                        Nossa equipe especializada te ajuda a escolher os
+                        produtos ideais para o seu público e região.
                       </p>
                     </div>
                   </div>
@@ -1486,7 +1495,8 @@ export default function Index() {
                         Materiais de Apoio
                       </h4>
                       <p className="text-gray-400 text-sm">
-                        Receba materiais exclusivos de marketing, displays e estratégias de vendas para sua loja.
+                        Receba materiais exclusivos de marketing, displays e
+                        estratégias de vendas para sua loja.
                       </p>
                     </div>
                   </div>
@@ -1498,7 +1508,8 @@ export default function Index() {
                       📍 Localização do Showroom
                     </h4>
                     <p className="text-gray-300 text-sm">
-                      Av. Paulista, 1000 - São Paulo, SP<br />
+                      Av. Paulista, 1000 - São Paulo, SP
+                      <br />
                       <span className="text-primary font-semibold">
                         Seg à Sex: 9h às 18h | Sáb: 9h às 14h
                       </span>
@@ -1713,7 +1724,10 @@ export default function Index() {
               {/* Unified Dots Navigation with progress indicators */}
               <div className="flex justify-center mt-8 space-x-3">
                 {Array.from({
-                  length: typeof window !== 'undefined' && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2)
+                  length:
+                    typeof window !== "undefined" && window.innerWidth < 768
+                      ? testimonials.length
+                      : Math.ceil(testimonials.length / 2),
                 }).map((_, index) => (
                   <button
                     key={index}
@@ -1731,7 +1745,9 @@ export default function Index() {
                     )}
                     <span
                       className={`w-3 h-3 rounded-full transition-all ${
-                        currentSlide === index ? "bg-white scale-110" : "bg-gray-600"
+                        currentSlide === index
+                          ? "bg-white scale-110"
+                          : "bg-gray-600"
                       }`}
                     ></span>
                   </button>
@@ -1744,13 +1760,18 @@ export default function Index() {
                   <div
                     className="h-full bg-gradient-to-r from-primary to-red-600 transition-all duration-300 ease-out"
                     style={{
-                      width: `${((currentSlide + 1) / (typeof window !== 'undefined' && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2))) * 100}%`
+                      width: `${((currentSlide + 1) / (typeof window !== "undefined" && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2))) * 100}%`,
                     }}
                   ></div>
                 </div>
                 <div className="flex justify-between mt-2 text-xs text-gray-500">
                   <span>{currentSlide + 1}</span>
-                  <span>de {typeof window !== 'undefined' && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2)}</span>
+                  <span>
+                    de{" "}
+                    {typeof window !== "undefined" && window.innerWidth < 768
+                      ? testimonials.length
+                      : Math.ceil(testimonials.length / 2)}
+                  </span>
                 </div>
               </div>
             </div>
