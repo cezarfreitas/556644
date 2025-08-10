@@ -2184,7 +2184,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/complete-collection.webp"
-                  alt="Cole��ão Completa Ecko"
+                  alt="Coleção Completa Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -2568,7 +2568,7 @@ export default function Index() {
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana através da moda aut���ntica.
+                  urbana através da moda aut��ntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
