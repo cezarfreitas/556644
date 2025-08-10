@@ -790,7 +790,7 @@ export default function Index() {
           {/* Mobile Logo */}
           <div className="mb-6">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
+              src="/images/brand/ecko-logo.webp"
               alt="Logo Ecko"
               className="h-20 w-auto mx-auto"
               loading="eager"
