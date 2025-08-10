@@ -512,29 +512,6 @@ export default function Index() {
     return "";
   };
 
-  // Função para validar campo em tempo real
-  const validateField = (fieldName: string, value: string) => {
-    let error = "";
-
-    switch (fieldName) {
-      case "name":
-        error = validateName(value);
-        break;
-      case "whatsapp":
-        error = validateWhatsApp(value);
-        break;
-      case "cnpj":
-        error = validateCNPJ(value);
-        break;
-    }
-
-    setFormErrors((prev) => ({
-      ...prev,
-      [fieldName]: error,
-    }));
-
-    return error === "";
-  };
 
   const handleCnpjRadioChange = (value: string) => {
     setSelectedCnpj(value);
