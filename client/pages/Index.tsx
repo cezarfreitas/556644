@@ -754,9 +754,18 @@ export default function Index() {
           />
         </div>
 
-        {/* Simple Solid Overlay for Testing */}
+        {/* Optimized Overlay System */}
         <div className="absolute inset-0" style={{ zIndex: 2 }}>
-          <div className="absolute inset-0 bg-black/80"></div>
+          {/* Base overlay for readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Center spotlight effect */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 80% 70% at center center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%)",
+            }}
+          ></div>
         </div>
 
         {/* Floating Elements Background */}
