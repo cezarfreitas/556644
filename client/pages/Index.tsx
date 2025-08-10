@@ -1482,16 +1482,7 @@ export default function Index() {
                 <p className="text-lg text-gray-300">
                   Pronto para conhecer de perto a qualidade Ecko?
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="https://wa.me/5511999999999?text=Olá, gostaria de agendar uma visita ao showroom!"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
-                  >
-                    <FaStore className="w-5 h-5" />
-                    Agendar Visita ao Showroom
-                  </a>
+                <div className="flex justify-center">
                   <a
                     href="#cadastro-lojistas"
                     className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
