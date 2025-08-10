@@ -1839,26 +1839,6 @@ export default function Index() {
                 <div className="text-gray-300 text-sm">
                   �� 2024. Todos os direitos reservados.
                 </div>
-                <div className="flex space-x-6 text-sm">
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Política de Privacidade
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Termos de Uso
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Política de Cookies
-                  </a>
-                </div>
               </div>
             </div>
           </div>
