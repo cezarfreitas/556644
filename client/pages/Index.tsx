@@ -361,6 +361,28 @@ export default function Index() {
 
     console.log(`Event tracked: ${eventName}`, fullEventData);
 
+    // Google Tag Manager DataLayer
+    if (GTM_ID && window.dataLayer) {
+      window.dataLayer.push({
+        event: eventName,
+        event_category: 'Lead Generation',
+        event_label: fullEventData.lead_type || 'unknown',
+        event_value: fullEventData.engagement_score || 1,
+        custom_parameters: fullEventData,
+        // Specific GTM parameters
+        gtm_event_name: eventName,
+        gtm_lead_type: fullEventData.lead_type,
+        gtm_lead_quality: fullEventData.lead_quality,
+        gtm_traffic_source: fullEventData.traffic_source,
+        gtm_session_id: fullEventData.session_id,
+        gtm_engagement_score: fullEventData.engagement_score,
+        gtm_form_completion_time: fullEventData.form_completion_time,
+        gtm_timestamp: fullEventData.timestamp
+      });
+
+      console.log('GTM DataLayer event pushed:', eventName);
+    }
+
     // Google Analytics 4
     if (GA4_MEASUREMENT_ID && window.gtag) {
       window.gtag("event", eventName, {
