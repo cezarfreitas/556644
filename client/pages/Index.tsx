@@ -997,7 +997,7 @@ export default function Index() {
             <div className="bg-primary border border-red-700 rounded-2xl p-4 sm:p-6 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-normal text-white">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     Falar no Whatsapp agora!
                   </h3>
                 </div>
