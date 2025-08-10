@@ -275,7 +275,17 @@ export default function TestePage() {
 
   // Clear all results
   const clearResults = () => {
+    console.log("🧹 Clear results button clicked");
     setTestResults({});
+  };
+
+  // Simple test to verify component is working
+  const testComponent = () => {
+    console.log("🧪 Component test button clicked");
+    setTestResults(prev => ({
+      ...prev,
+      component: "✅ Componente funcionando corretamente!"
+    }));
   };
 
   return (
