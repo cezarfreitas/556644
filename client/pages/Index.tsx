@@ -1222,19 +1222,36 @@ export default function Index() {
                     </div>
                   )}
 
-                  <button
-                    type="submit"
-                    className="w-full bg-primary hover:bg-red-600 text-white py-4 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-colors duration-300 mt-6 min-h-[48px]"
-                  >
-                    {showCouponMessage
-                      ? "Receber Cupom de 10% Desconto"
-                      : "CADASTRAR"}
-                  </button>
+                  <div className="pt-2">
+                    <button
+                      type="submit"
+                      className="group relative w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                      <span className="relative flex items-center justify-center gap-2">
+                        {showCouponMessage ? (
+                          <>
+                            <FaGift className="w-5 h-5" />
+                            Receber Acesso Exclusivo
+                          </>
+                        ) : (
+                          <>
+                            <FaRocket className="w-5 h-5" />
+                            Começar Agora!
+                          </>
+                        )}
+                      </span>
+                    </button>
+                  </div>
 
-                  <p className="text-xs text-white/70 text-center">
-                    Ao enviar, você concorda em receber informações comerciais
-                    da Ecko. Seus dados estão seguros conosco.
-                  </p>
+                  <div className="text-center space-y-2 pt-4">
+                    <p className="text-xs text-gray-400">
+                      🔒 Seus dados estão protegidos e seguros
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      Ao enviar, você concorda em receber informações sobre nossa parceria.
+                    </p>
+                  </div>
                 </form>
               </div>
             </div>
