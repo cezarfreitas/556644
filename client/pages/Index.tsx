@@ -1256,7 +1256,7 @@ export default function Index() {
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
-        userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
+        userMessage = "⏱��� Tempo limite excedido. Tente novamente.";
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
@@ -1410,7 +1410,7 @@ export default function Index() {
         <div className="absolute inset-0">
           <img
             src="/images/hero/hero-background.webp"
-            alt="Ecko Streetwear Background"
+            alt={`${BRAND_NAME} Streetwear Background`}
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
@@ -2449,7 +2449,7 @@ export default function Index() {
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana através da moda autêntica.
+                  urbana através da moda aut��ntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
