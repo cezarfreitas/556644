@@ -738,7 +738,6 @@ export default function Index() {
   };
   return (
     <div className="min-h-screen bg-background">
-
       {/* New Full-Screen Section */}
       <section className="relative h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-100 via-white to-gray-50">
         <div className="w-full max-w-6xl mx-auto px-4 md:px-8 text-center">
@@ -768,8 +767,12 @@ export default function Index() {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Faça parte da <span className="font-bold text-primary">rede de distribuidores oficiais</span> da maior marca
-              de moda urbana do Brasil, <span className="font-semibold">reconhecida mundialmente</span>
+              Faça parte da{" "}
+              <span className="font-bold text-primary">
+                rede de distribuidores oficiais
+              </span>{" "}
+              da maior marca de moda urbana do Brasil,{" "}
+              <span className="font-semibold">reconhecida mundialmente</span>
             </p>
 
             {/* CTA Button */}
@@ -779,8 +782,18 @@ export default function Index() {
                 className="inline-flex items-center justify-center bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white px-12 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
               >
                 CADASTRE-SE AGORA
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </a>
             </div>
@@ -800,7 +813,9 @@ export default function Index() {
                 }}
               >
                 <div className="text-gray-500 group-hover:text-gray-700 transition-colors duration-300 text-center">
-                  <div className="text-xs uppercase tracking-widest font-medium mb-2">Role para baixo</div>
+                  <div className="text-xs uppercase tracking-widest font-medium mb-2">
+                    Role para baixo
+                  </div>
                   <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
                     <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
                   </div>
