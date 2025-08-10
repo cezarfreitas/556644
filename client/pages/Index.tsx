@@ -648,18 +648,24 @@ export default function Index() {
       if (pixelData?.content_type) customData.content_type = pixelData.content_type;
       if (pixelData?.content_ids) customData.content_ids = pixelData.content_ids;
 
+      // Build event data with all required fields for Facebook Conversion API
+      const eventData: any = {
+        event_name: standardEventName,
+        event_time: Math.floor(Date.now() / 1000),
+        action_source: "website",
+        event_source_url: window.location.href,
+        user_data: userData,
+        custom_data: customData,
+        event_id: `${fullEventData?.session_id || 'session'}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      };
+
+      // Add optional fields that may improve delivery
+      if (document.referrer) {
+        eventData.referrer_url = document.referrer;
+      }
+
       const conversionData = {
-        data: [
-          {
-            event_name: standardEventName,
-            event_time: Math.floor(Date.now() / 1000),
-            action_source: "website",
-            event_source_url: window.location.href,
-            user_data: userData,
-            custom_data: customData,
-            event_id: `${fullEventData?.session_id || 'session'}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          },
-        ],
+        data: [eventData],
         access_token: META_ACCESS_TOKEN,
       };
 
