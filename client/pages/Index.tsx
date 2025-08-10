@@ -781,14 +781,6 @@ export default function Index() {
 
         {/* Hero Content - Redesigned */}
         <div className="relative flex flex-col items-center justify-center h-full px-4 md:px-8 py-8 sm:py-16" style={{ zIndex: 10 }}>
-          {/* Top Badge */}
-          <div className="mb-8 animate-fade-in">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-md border border-white/40">
-              <span className="text-white text-sm font-semibold tracking-wide uppercase drop-shadow-lg">
-                🔥 Oportunidade Exclusiva
-              </span>
-            </div>
-          </div>
 
           {/* Logo com Efeito Glow */}
           <div className="mb-12 animate-fade-in relative">
