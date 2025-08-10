@@ -739,7 +739,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* New Full-Screen Section */}
-      <section className="relative h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-100 via-white to-gray-50">
+      <section className="relative h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary via-red-600 to-red-700">
         <div className="w-full max-w-6xl mx-auto px-4 md:px-8 text-center">
           {/* Content Container */}
           <div className="space-y-8">
