@@ -1101,7 +1101,7 @@ export default function Index() {
                       Tipo de Cadastro
                     </label>
                     <div className="grid grid-cols-2 gap-2">
-                      <label className="flex items-center gap-2 p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
+                      <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
                         <input
                           type="radio"
                           name="cnpj"
@@ -1113,15 +1113,15 @@ export default function Index() {
                           }
                         />
                         <div>
-                          <span className="text-base font-medium text-white block">
+                          <span className="text-sm sm:text-base font-medium text-white block">
                             Sou Lojista (Tenho CNPJ)
                           </span>
-                          <span className="text-sm text-gray-400">
+                          <span className="text-xs sm:text-sm text-gray-400">
                             Para lojistas com CNPJ ativo
                           </span>
                         </div>
                       </label>
-                      <label className="flex items-center gap-2 p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
+                      <label className="flex items-center gap-1 sm:gap-2 p-1 sm:p-2 border-2 border-white/30 rounded-lg cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-white/10">
                         <input
                           type="radio"
                           name="cnpj"
@@ -1133,10 +1133,10 @@ export default function Index() {
                           }
                         />
                         <div>
-                          <span className="text-base font-medium text-white block">
+                          <span className="text-sm sm:text-base font-medium text-white block">
                             Sou Consumidor Final
                           </span>
-                          <span className="text-sm text-gray-400">
+                          <span className="text-xs sm:text-sm text-gray-400">
                             Não tenho CNPJ/empresa
                           </span>
                         </div>
