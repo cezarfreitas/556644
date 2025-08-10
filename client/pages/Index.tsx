@@ -772,7 +772,8 @@ export default function Index() {
 
           {/* Mobile Intro Text */}
           <p className="text-xs text-white/80 text-center mb-4 px-4 drop-shadow-md">
-            Aproveite a oportunidade de vender uma das maiores marcas do Brasil e do mundo.
+            Aproveite a oportunidade de vender uma das maiores marcas do Brasil
+            e do mundo.
           </p>
 
           {/* Mobile Heading */}
@@ -788,7 +789,9 @@ export default function Index() {
 
           {/* Mobile Subtitle */}
           <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
-            <span className="font-bold text-white">Cadastre-se agora</span> e tenha acesso à nossa plataforma digital com preços exclusivos para lojistas.
+            <span className="font-bold text-white">Cadastre-se agora</span> e
+            tenha acesso à nossa plataforma digital com preços exclusivos para
+            lojistas.
           </p>
 
           {/* Mobile CTA */}
@@ -816,7 +819,6 @@ export default function Index() {
         {/* Desktop Layout (md+) */}
         <div className="hidden md:flex items-center justify-center h-full relative z-10">
           <div className="w-full max-w-5xl mx-auto px-8 flex items-center justify-center">
-
             {/* Centered Content */}
             <div className="text-center space-y-8">
               {/* Desktop Logo */}
@@ -832,7 +834,8 @@ export default function Index() {
 
               {/* Desktop Intro Text */}
               <p className="text-lg text-white/80 text-center mb-6 drop-shadow-md">
-                Aproveite a oportunidade de vender uma das maiores marcas do Brasil e do mundo.
+                Aproveite a oportunidade de vender uma das maiores marcas do
+                Brasil e do mundo.
               </p>
 
               {/* Desktop Heading */}
@@ -848,7 +851,9 @@ export default function Index() {
 
               {/* Desktop Subtitle */}
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-                <span className="font-bold text-white">Cadastre-se agora</span> e tenha acesso à nossa plataforma digital com preços exclusivos para lojistas.
+                <span className="font-bold text-white">Cadastre-se agora</span>{" "}
+                e tenha acesso à nossa plataforma digital com preços exclusivos
+                para lojistas.
               </p>
 
               {/* Desktop CTA */}
@@ -874,7 +879,6 @@ export default function Index() {
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -892,7 +896,9 @@ export default function Index() {
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white leading-[0.9] uppercase tracking-wide">
                   <span className="block">SEJA UM</span>
                   <span className="block text-primary">LOJISTA OFICIAL</span>
-                  <span className="block text-primary font-black">ECKO AGORA MESMO</span>
+                  <span className="block text-primary font-black">
+                    ECKO AGORA MESMO
+                  </span>
                 </h2>
 
                 {/* 4 Motivos */}
@@ -902,8 +908,13 @@ export default function Index() {
                       <span className="text-white font-bold text-sm">1</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Produtos Exclusivos</h3>
-                      <p className="text-gray-300 text-sm">Acesso a coleções limitadas e lançamentos em primeira mão</p>
+                      <h3 className="text-lg font-bold text-white mb-1">
+                        Produtos Exclusivos
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        Acesso a coleções limitadas e lançamentos em primeira
+                        mão
+                      </p>
                     </div>
                   </div>
 
@@ -912,8 +923,12 @@ export default function Index() {
                       <span className="text-white font-bold text-sm">2</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Margens Atrativas</h3>
-                      <p className="text-gray-300 text-sm">Preços especiais e condições diferenciadas para lojistas</p>
+                      <h3 className="text-lg font-bold text-white mb-1">
+                        Margens Atrativas
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        Preços especiais e condições diferenciadas para lojistas
+                      </p>
                     </div>
                   </div>
 
@@ -922,8 +937,12 @@ export default function Index() {
                       <span className="text-white font-bold text-sm">3</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Suporte Completo</h3>
-                      <p className="text-gray-300 text-sm">Treinamento, materiais de marketing e apoio comercial</p>
+                      <h3 className="text-lg font-bold text-white mb-1">
+                        Suporte Completo
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        Treinamento, materiais de marketing e apoio comercial
+                      </p>
                     </div>
                   </div>
 
@@ -932,8 +951,12 @@ export default function Index() {
                       <span className="text-white font-bold text-sm">4</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Prestígio da Marca</h3>
-                      <p className="text-gray-300 text-sm">Associe-se à marca #1 em streetwear no Brasil</p>
+                      <h3 className="text-lg font-bold text-white mb-1">
+                        Prestígio da Marca
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        Associe-se à marca #1 em streetwear no Brasil
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1199,7 +1222,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
 
       {/* Galeria de Produtos Ecko Streetwear - Otimizado para mobile */}
       <section
@@ -1591,9 +1613,7 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       20+
                     </div>
-                    <div className="text-white/80 text-sm">
-                      Anos de Mercado
-                    </div>
+                    <div className="text-white/80 text-sm">Anos de Mercado</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
