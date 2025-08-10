@@ -270,29 +270,60 @@ export default function Index() {
     },
   ];
 
-  // Slider functions
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => {
+        const isMobile = window.innerWidth < 768;
+        const maxSlides = isMobile ? testimonials.length : Math.ceil(testimonials.length / 2);
+        return (prev + 1) % maxSlides;
+      });
+    }, 5000); // Auto advance every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  // Optimized slider functions with unified behavior
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % Math.ceil(testimonials.length / 2));
+    const isMobile = window.innerWidth < 768;
+    const maxSlides = isMobile ? testimonials.length : Math.ceil(testimonials.length / 2);
+    setCurrentSlide((prev) => (prev + 1) % maxSlides);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? Math.ceil(testimonials.length / 2) - 1 : prev - 1,
-    );
-  };
-
-  const nextSlideMobile = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevSlideMobile = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1,
-    );
+    const isMobile = window.innerWidth < 768;
+    const maxSlides = isMobile ? testimonials.length : Math.ceil(testimonials.length / 2);
+    setCurrentSlide((prev) => prev === 0 ? maxSlides - 1 : prev - 1);
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+  };
+
+  // Touch/Swipe handlers for mobile optimization
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
   };
 
   // Função para trackear eventos específicos
