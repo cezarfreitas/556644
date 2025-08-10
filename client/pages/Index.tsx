@@ -739,33 +739,39 @@ export default function Index() {
       const formData = new FormData();
 
       // Add essential form fields
-      formData.append('name', payload.name || '');
-      formData.append('whatsapp', payload.whatsapp || '');
-      formData.append('hasCnpj', payload.hasCnpj || '');
-      formData.append('cnpj', payload.cnpj || '');
-      formData.append('marca', payload.marca || '');
-      formData.append('origem', payload.origem || '');
-      formData.append('campaign_type', payload.campaign_type || '');
-      formData.append('lead_source', payload.lead_source || '');
-      formData.append('lead_quality', payload.lead_quality || '');
-      formData.append('lead_type', payload.lead_type || '');
-      formData.append('page_url', payload.page_url || '');
-      formData.append('page_title', payload.page_title || '');
-      formData.append('user_agent', payload.user_agent || '');
-      formData.append('language', payload.language || '');
-      formData.append('timezone', payload.timezone || '');
-      formData.append('session_id', payload.session_id || '');
-      formData.append('timestamp', payload.timestamp || '');
-      formData.append('is_mobile', String(payload.is_mobile || false));
-      formData.append('is_desktop', String(payload.is_desktop || false));
-      formData.append('browser', payload.browser || '');
-      formData.append('form_completion_time', String(payload.form_completion_time || 0));
-      formData.append('engagement_score', String(payload.engagement_score || 0));
-      formData.append('utm_source', payload.utm_source || '');
-      formData.append('utm_medium', payload.utm_medium || '');
-      formData.append('utm_campaign', payload.utm_campaign || '');
-      formData.append('traffic_source', payload.traffic_source || '');
-      formData.append('referrer', payload.referrer || '');
+      formData.append("name", payload.name || "");
+      formData.append("whatsapp", payload.whatsapp || "");
+      formData.append("hasCnpj", payload.hasCnpj || "");
+      formData.append("cnpj", payload.cnpj || "");
+      formData.append("marca", payload.marca || "");
+      formData.append("origem", payload.origem || "");
+      formData.append("campaign_type", payload.campaign_type || "");
+      formData.append("lead_source", payload.lead_source || "");
+      formData.append("lead_quality", payload.lead_quality || "");
+      formData.append("lead_type", payload.lead_type || "");
+      formData.append("page_url", payload.page_url || "");
+      formData.append("page_title", payload.page_title || "");
+      formData.append("user_agent", payload.user_agent || "");
+      formData.append("language", payload.language || "");
+      formData.append("timezone", payload.timezone || "");
+      formData.append("session_id", payload.session_id || "");
+      formData.append("timestamp", payload.timestamp || "");
+      formData.append("is_mobile", String(payload.is_mobile || false));
+      formData.append("is_desktop", String(payload.is_desktop || false));
+      formData.append("browser", payload.browser || "");
+      formData.append(
+        "form_completion_time",
+        String(payload.form_completion_time || 0),
+      );
+      formData.append(
+        "engagement_score",
+        String(payload.engagement_score || 0),
+      );
+      formData.append("utm_source", payload.utm_source || "");
+      formData.append("utm_medium", payload.utm_medium || "");
+      formData.append("utm_campaign", payload.utm_campaign || "");
+      formData.append("traffic_source", payload.traffic_source || "");
+      formData.append("referrer", payload.referrer || "");
 
       // Use fetch with FormData (no Content-Type header needed for FormData)
       const controller = new AbortController();
