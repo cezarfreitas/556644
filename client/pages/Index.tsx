@@ -735,10 +735,25 @@ export default function Index() {
     });
   };
 
+  // Track form field focus (first interaction)
+  const trackFormInteraction = (fieldName: string) => {
+    if (!window.formInteractionTracked) {
+      console.log("📱 Facebook Event: First form interaction -", fieldName);
+
+      // Facebook Standard Event: Lead (first interest)
+      trackLead("Form Interaction Started");
+
+      window.formInteractionTracked = true;
+    }
+  };
+
   // Handlers para campos do formulário
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
+
+    // Track first interaction
+    trackFormInteraction("name");
 
     // Removido validação em tempo real
   };
