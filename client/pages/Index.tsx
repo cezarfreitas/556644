@@ -2357,7 +2357,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★��</span>
+                                  <span className="text-2xl">★★★★★</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
@@ -2568,7 +2568,7 @@ export default function Index() {
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana através da moda aut��ntica.
+                  urbana através da moda aut���ntica.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
