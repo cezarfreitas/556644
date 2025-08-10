@@ -2608,8 +2608,6 @@ export default function Index() {
                   >
                     {DEVELOPER_NAME}
                   </a>
-                  <br />
-                  {DEVELOPER_SITE}
                 </div>
               </div>
             </div>
