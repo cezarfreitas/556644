@@ -417,7 +417,7 @@ export default function Index() {
     }
   };
 
-  // Função auxiliar para pegar cookies
+  // Fun��ão auxiliar para pegar cookies
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -738,6 +738,78 @@ export default function Index() {
   };
   return (
     <div className="min-h-screen bg-background">
+
+      {/* New Full-Screen Section */}
+      <section className="relative h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-100 via-white to-gray-50">
+        <div className="w-full max-w-6xl mx-auto px-4 md:px-8 text-center">
+          {/* Content Container */}
+          <div className="space-y-8">
+            {/* Logo/Brand */}
+            <div className="flex justify-center mb-8">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F1bdcfc5ac380432c865cf74ae656ca97?format=webp&width=800"
+                alt="Logo Ecko"
+                className="h-16 sm:h-20 md:h-24 w-auto"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+
+            {/* Main Heading */}
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
+                <span className="block">SEJA UM</span>
+                <span className="block bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                  LOJISTA OFICIAL
+                </span>
+                <span className="block">ECKO</span>
+              </h1>
+            </div>
+
+            {/* Subtitle */}
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Faça parte da <span className="font-bold text-primary">rede de distribuidores oficiais</span> da maior marca
+              de moda urbana do Brasil, <span className="font-semibold">reconhecida mundialmente</span>
+            </p>
+
+            {/* CTA Button */}
+            <div className="pt-8">
+              <a
+                href="#cadastro-lojistas"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white px-12 py-4 rounded-2xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide gap-3"
+              >
+                CADASTRE-SE AGORA
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="pt-16">
+              <div
+                className="flex flex-col items-center cursor-pointer group"
+                onClick={() => {
+                  const element = document.getElementById("cadastro-lojistas");
+                  if (element) {
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
+              >
+                <div className="text-gray-500 group-hover:text-gray-700 transition-colors duration-300 text-center">
+                  <div className="text-xs uppercase tracking-widest font-medium mb-2">Role para baixo</div>
+                  <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+                    <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Cadastro de Lojistas - Formulário de Parceria - Otimizado para mobile */}
       <section
