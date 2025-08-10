@@ -151,7 +151,7 @@ export default function TestePage() {
   const testMetaPageView = () => {
     try {
       if (META_PIXEL_ID && window.fbq) {
-        window.fbq('track', 'PageView');
+        window.fbq("track", "PageView");
         setTestResults((prev) => ({
           ...prev,
           metaPageView: "✅ Meta Pixel PageView sent successfully",
@@ -175,12 +175,12 @@ export default function TestePage() {
   const testMetaViewContent = () => {
     try {
       if (META_PIXEL_ID && window.fbq) {
-        window.fbq('track', 'ViewContent', {
-          content_type: 'product_gallery',
-          content_ids: ['test_gallery'],
-          content_name: 'Test Product Gallery',
-          currency: 'BRL',
-          value: 0
+        window.fbq("track", "ViewContent", {
+          content_type: "product_gallery",
+          content_ids: ["test_gallery"],
+          content_name: "Test Product Gallery",
+          currency: "BRL",
+          value: 0,
         });
         setTestResults((prev) => ({
           ...prev,
@@ -212,13 +212,14 @@ export default function TestePage() {
         META_PIXEL_ID: META_PIXEL_ID || "Missing",
         META_TEST_EVENT_CODE: META_TEST_EVENT_CODE,
         META_CONVERSION_NAME: META_CONVERSION_NAME,
-        META_API_VERSION: META_API_VERSION
+        META_API_VERSION: META_API_VERSION,
       });
 
       if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN === "token_sensivel") {
         setTestResults((prev) => ({
           ...prev,
-          metaAPI: "❌ Meta API: Access Token não configurado ou usando valor placeholder. Configure VITE_META_ACCESS_TOKEN via DevServerControl.",
+          metaAPI:
+            "❌ Meta API: Access Token não configurado ou usando valor placeholder. Configure VITE_META_ACCESS_TOKEN via DevServerControl.",
         }));
         return;
       }
@@ -226,7 +227,8 @@ export default function TestePage() {
       if (!META_PIXEL_ID || META_PIXEL_ID === "123456789012345") {
         setTestResults((prev) => ({
           ...prev,
-          metaAPI: "❌ Meta API: Pixel ID não configurado ou usando valor placeholder. Configure VITE_META_PIXEL_ID com seu ID real.",
+          metaAPI:
+            "❌ Meta API: Pixel ID não configurado ou usando valor placeholder. Configure VITE_META_PIXEL_ID com seu ID real.",
         }));
         return;
       }
@@ -282,7 +284,10 @@ export default function TestePage() {
           },
         );
       } catch (fetchError) {
-        console.warn("Direct fetch failed, trying alternative method:", fetchError);
+        console.warn(
+          "Direct fetch failed, trying alternative method:",
+          fetchError,
+        );
 
         // Alternative: Try with no-cors mode
         try {
@@ -302,12 +307,15 @@ export default function TestePage() {
           // With no-cors, we can't read the response, but if it doesn't throw, it likely worked
           setTestResults((prev) => ({
             ...prev,
-            metaAPI: "⚠️ Meta Conversion API: Enviado via no-cors mode. Verifique no Events Manager se o evento chegou com test code: " + META_TEST_EVENT_CODE,
+            metaAPI:
+              "⚠️ Meta Conversion API: Enviado via no-cors mode. Verifique no Events Manager se o evento chegou com test code: " +
+              META_TEST_EVENT_CODE,
           }));
           return;
-
         } catch (noCorsError) {
-          throw new Error(`Fetch failed: ${fetchError.message}. No-cors also failed: ${noCorsError.message}`);
+          throw new Error(
+            `Fetch failed: ${fetchError.message}. No-cors also failed: ${noCorsError.message}`,
+          );
         }
       }
 
@@ -566,7 +574,9 @@ export default function TestePage() {
                   ViewContent
                 </button>
               </div>
-              {(testResults.metaPixel || testResults.metaPageView || testResults.metaViewContent) && (
+              {(testResults.metaPixel ||
+                testResults.metaPageView ||
+                testResults.metaViewContent) && (
                 <div className="mt-3 space-y-2">
                   {testResults.metaPixel && (
                     <div className="p-2 bg-white rounded-lg text-xs">
@@ -685,12 +695,22 @@ export default function TestePage() {
             </h2>
             <div className="text-blue-700 space-y-2">
               <p>
-                <strong>1. Meta Conversion API:</strong> Configure primeiro as variáveis:
+                <strong>1. Meta Conversion API:</strong> Configure primeiro as
+                variáveis:
               </p>
               <div className="text-sm ml-4 bg-blue-50 p-3 rounded-lg space-y-1">
-                <p>• <strong>Access Token:</strong> Configure via DevServerControl: VITE_META_ACCESS_TOKEN</p>
-                <p>• <strong>Pixel ID:</strong> Configure no .env: VITE_META_PIXEL_ID</p>
-                <p>• <strong>Test Event Code:</strong> Use "{META_TEST_EVENT_CODE}" no Events Manager</p>
+                <p>
+                  • <strong>Access Token:</strong> Configure via
+                  DevServerControl: VITE_META_ACCESS_TOKEN
+                </p>
+                <p>
+                  • <strong>Pixel ID:</strong> Configure no .env:
+                  VITE_META_PIXEL_ID
+                </p>
+                <p>
+                  • <strong>Test Event Code:</strong> Use "
+                  {META_TEST_EVENT_CODE}" no Events Manager
+                </p>
               </div>
               <p className="text-sm ml-4">
                 ⚠️{" "}
@@ -708,13 +728,16 @@ export default function TestePage() {
                 eventos
               </p>
               <p>
-                <strong>4. Meta Pixel:</strong> Use o Facebook Pixel Helper extension
+                <strong>4. Meta Pixel:</strong> Use o Facebook Pixel Helper
+                extension
               </p>
               <p className="text-sm ml-4">
-                • <strong>PageView:</strong> Dispara automaticamente na página principal
+                • <strong>PageView:</strong> Dispara automaticamente na página
+                principal
               </p>
               <p className="text-sm ml-4">
-                • <strong>ViewContent:</strong> Dispara quando usuário vê a galeria de produtos
+                • <strong>ViewContent:</strong> Dispara quando usuário vê a
+                galeria de produtos
               </p>
               <p>
                 <strong>5. Google Ads:</strong> Verifique as conversões no

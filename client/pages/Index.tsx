@@ -151,7 +151,7 @@ export default function Index() {
 
     // Meta Pixel PageView event
     if (META_PIXEL_ID && window.fbq) {
-      window.fbq('track', 'PageView');
+      window.fbq("track", "PageView");
       console.log("Meta Pixel PageView tracked");
     }
 
@@ -315,16 +315,20 @@ export default function Index() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.target.id === 'galeria-produtos') {
-            trackViewContent('product_gallery', 'ecko_collection', 'Coleções Exclusivas Ecko');
+          if (entry.isIntersecting && entry.target.id === "galeria-produtos") {
+            trackViewContent(
+              "product_gallery",
+              "ecko_collection",
+              "Coleções Exclusivas Ecko",
+            );
             observer.unobserve(entry.target); // Track only once
           }
         });
       },
-      { threshold: 0.3 } // Trigger when 30% visible
+      { threshold: 0.3 }, // Trigger when 30% visible
     );
 
-    const galleryElement = document.getElementById('galeria-produtos');
+    const galleryElement = document.getElementById("galeria-produtos");
     if (galleryElement) {
       observer.observe(galleryElement);
     }
@@ -969,7 +973,11 @@ export default function Index() {
   };
 
   // Track ViewContent event
-  const trackViewContent = (contentType: string, contentId: string, contentName: string) => {
+  const trackViewContent = (
+    contentType: string,
+    contentId: string,
+    contentName: string,
+  ) => {
     const viewContentData = {
       content_type: contentType,
       content_ids: [contentId],
@@ -981,12 +989,12 @@ export default function Index() {
 
     // Meta Pixel ViewContent
     if (META_PIXEL_ID && window.fbq) {
-      window.fbq('track', 'ViewContent', {
+      window.fbq("track", "ViewContent", {
         content_type: contentType,
         content_ids: [contentId],
         content_name: contentName,
-        currency: 'BRL',
-        value: 0
+        currency: "BRL",
+        value: 0,
       });
       console.log("Meta Pixel ViewContent tracked:", contentName);
     }
