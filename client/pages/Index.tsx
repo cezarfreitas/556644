@@ -2596,11 +2596,11 @@ export default function Index() {
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
-                  <span className="relative inline-block mx-1">
-                    <span className="text-red-500 text-lg inline-block animate-heartbeat heart-glow relative z-10">
+                  <span className="heart-container relative inline-block mx-1">
+                    <span className="text-red-500 text-xl inline-block animate-heartbeat heart-glow relative z-10 font-normal">
                       ❤️
                     </span>
-                    <span className="absolute inset-0 text-red-400 text-lg animate-pulse opacity-30">
+                    <span className="absolute inset-0 text-red-400 text-xl animate-pulse opacity-20 blur-[0.5px]">
                       ❤️
                     </span>
                   </span>{" "}
