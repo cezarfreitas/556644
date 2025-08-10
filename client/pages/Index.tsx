@@ -975,7 +975,7 @@ export default function Index() {
                 </div>
 
                 <form
-                  className="space-y-4"
+                  className="space-y-3"
                   onSubmit={handleFormSubmit}
                   noValidate
                 >
@@ -1099,7 +1099,7 @@ export default function Index() {
                     )}
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <label className="block text-sm font-semibold text-white">
                       Tipo de Cadastro
                     </label>
@@ -1268,7 +1268,7 @@ export default function Index() {
       >
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+            <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Coleções Exclusivas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
@@ -1404,7 +1404,7 @@ export default function Index() {
       >
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+            <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
@@ -1627,7 +1627,7 @@ export default function Index() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
               {/* Content */}
               <div className="space-y-6 sm:space-y-8">
-                <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-6">
                   <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
                     História da Marca
                     <span className="block text-primary">Ecko</span>
@@ -1689,7 +1689,7 @@ export default function Index() {
                     className="w-full max-w-md rounded-xl shadow-2xl"
                     loading="lazy"
                   />
-                  <div className="mt-8 space-y-4">
+                  <div className="mt-8 space-y-3">
                     <p className="text-white/60 text-sm italic">
                       "Autenticidade que conecta com a rua"
                     </p>
@@ -1758,7 +1758,7 @@ export default function Index() {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 pt-8">
-              <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
                 <div className="text-gray-300 text-sm">
                   © 2024. Todos os direitos reservados.
                 </div>
