@@ -1801,7 +1801,7 @@ export default function Index() {
                   />
                   <div className="mt-8 space-y-3">
                     <p className="text-gray-500 text-sm italic">
-                      "Desde 1993, conectando gera��ões através do streetwear
+                      "Desde 1993, conectando gerações através do streetwear
                       autêntico"
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
