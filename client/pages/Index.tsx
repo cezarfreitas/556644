@@ -973,6 +973,8 @@ export default function Index() {
     contentId: string,
     contentName: string,
   ) => {
+    console.log("🎯 Tracking ViewContent:", { contentType, contentId, contentName });
+
     const viewContentData = {
       content_type: contentType,
       content_ids: [contentId],
@@ -991,7 +993,9 @@ export default function Index() {
         currency: "BRL",
         value: 0,
       });
-      console.log("Meta Pixel ViewContent tracked:", contentName);
+      console.log("✅ Meta Pixel: ViewContent tracked -", contentName);
+    } else {
+      console.warn("❌ Meta Pixel ViewContent não enviado: fbq não disponível");
     }
 
     // Custom ViewContent tracking
@@ -999,6 +1003,7 @@ export default function Index() {
 
     // Meta Conversion API ViewContent
     if (META_ACCESS_TOKEN && META_PIXEL_ID) {
+      console.log("📡 Enviando ViewContent para Meta Conversion API...");
       sendMetaConversionAPI("view_content", viewContentData, viewContentData);
     }
   };
