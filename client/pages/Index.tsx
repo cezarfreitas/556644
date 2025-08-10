@@ -1312,7 +1312,7 @@ export default function Index() {
 
       // Mensagem de sucesso simples
       setSubmitMessage(
-        "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
+        "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informaç��es sobre a parceria.",
       );
 
       // Reset form values
@@ -2596,7 +2596,14 @@ export default function Index() {
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
-                  <span className="text-red-500 inline-block animate-heartbeat">
+                  <span
+                    className="text-red-500 inline-block animate-heartbeat"
+                    style={{
+                      animation: 'heartbeat 1.2s ease-in-out infinite',
+                      transformOrigin: 'center',
+                      display: 'inline-block'
+                    }}
+                  >
                     ❤️
                   </span>{" "}
                   por{" "}
