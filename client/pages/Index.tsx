@@ -1329,7 +1329,7 @@ export default function Index() {
 
       // Mensagem de sucesso simples
       setSubmitMessage(
-        "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informaç��es sobre a parceria.",
+        "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
       );
 
       // Reset form values
