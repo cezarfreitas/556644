@@ -1357,7 +1357,7 @@ export default function Index() {
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
-        userMessage = "⏱��� Tempo limite excedido. Tente novamente.";
+        userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
