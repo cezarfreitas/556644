@@ -178,6 +178,20 @@ export default function Index() {
     console.warn("⚠️ No valid API endpoint configured. Form will use alternative submission method.");
   }
 
+  // Simple connection test
+  const testConnection = async () => {
+    try {
+      const response = await fetch('https://httpbin.org/status/200', {
+        method: 'GET',
+        mode: 'no-cors',
+        cache: 'no-cache'
+      });
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
     const urlParams = new URLSearchParams(window.location.search);
