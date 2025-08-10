@@ -648,6 +648,14 @@ export default function Index() {
             console.warn("Could not retrieve fbp from pixel state:", e);
           }
         }
+
+        // If still no fbp, generate one as last resort
+        if (!userData.fbp) {
+          const generatedFbp = `fb.1.${Date.now()}.${Math.random().toString(36).substr(2, 9)}`;
+          document.cookie = `_fbp=${generatedFbp}; path=/; max-age=31536000; samesite=lax; secure`;
+          userData.fbp = generatedFbp;
+          console.log("Meta API: Generated fallback fbp:", generatedFbp);
+        }
       }
 
       // Add hashed phone number if available from form data
