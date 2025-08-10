@@ -1037,12 +1037,12 @@ export default function Index() {
                     )}
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     <label
                       htmlFor="whatsapp"
-                      className="text-sm font-medium text-white"
+                      className="block text-sm font-semibold text-white"
                     >
-                      WhatsApp *
+                      WhatsApp para Contato
                     </label>
                     <div className="relative">
                       <input
@@ -1050,12 +1050,13 @@ export default function Index() {
                         name="whatsapp"
                         type="tel"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
+                        autoComplete="tel"
+                        className={`w-full px-4 py-5 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.whatsapp
-                            ? "border-red-500"
+                            ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.whatsapp && !formErrors.whatsapp
-                              ? "border-green-500"
-                              : "border-gray-600"
+                              ? "border-green-400 shadow-green-400/20 shadow-lg"
+                              : "border-gray-600 hover:border-gray-500"
                         }`}
                         placeholder="(11) 99999-9999"
                         maxLength={15}
@@ -1087,9 +1088,12 @@ export default function Index() {
                       )}
                     </div>
                     {formErrors.whatsapp && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {formErrors.whatsapp}
-                      </p>
+                      <div className="mt-2 p-3 bg-red-900/20 border border-red-500/30 rounded-lg">
+                        <p className="text-red-300 text-sm flex items-center gap-2">
+                          <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
+                          {formErrors.whatsapp}
+                        </p>
+                      </div>
                     )}
                   </div>
 
