@@ -554,8 +554,7 @@ export default function Index() {
     const value = e.target.value;
     setFormValues((prev) => ({ ...prev, name: value }));
 
-    // Validar após delay para não validar a cada tecla
-    setTimeout(() => validateField("name", value), 500);
+    // Removido validação em tempo real
   };
 
   const handleWhatsAppChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -567,8 +566,7 @@ export default function Index() {
       e.target.value = formatted;
       setFormValues((prev) => ({ ...prev, whatsapp: formatted }));
 
-      // Validar após delay
-      setTimeout(() => validateField("whatsapp", formatted), 500);
+      // Removido validação em tempo real
     } else {
       e.preventDefault();
     }
@@ -583,8 +581,7 @@ export default function Index() {
       e.target.value = formatted;
       setFormValues((prev) => ({ ...prev, cnpj: formatted }));
 
-      // Validar após delay
-      setTimeout(() => validateField("cnpj", formatted), 500);
+      // Removido validação em tempo real
     } else {
       e.preventDefault();
     }
@@ -968,7 +965,7 @@ export default function Index() {
             </div>
 
             {/* Form Column - Otimizado para mobile */}
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl p-4 sm:p-6 shadow-lg">
+            <div className="bg-primary border border-red-700 rounded-2xl p-4 sm:p-6 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-normal text-white">
@@ -1012,7 +1009,6 @@ export default function Index() {
                           })
                         }
                         onBlur={(e) => {
-                          validateField("name", e.target.value);
                           e.target.value &&
                             trackEvent("form_field_complete", {
                               field: "name",
@@ -1072,7 +1068,6 @@ export default function Index() {
                           })
                         }
                         onBlur={(e) => {
-                          validateField("whatsapp", e.target.value);
                           e.target.value &&
                             trackEvent("form_field_complete", {
                               field: "whatsapp",
@@ -1199,7 +1194,6 @@ export default function Index() {
                             })
                           }
                           onBlur={(e) => {
-                            validateField("cnpj", e.target.value);
                             e.target.value &&
                               trackEvent("form_field_complete", {
                                 field: "cnpj",
