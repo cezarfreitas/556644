@@ -1579,7 +1579,7 @@ export default function Index() {
                       onClick={handleBackToForm}
                       className="mt-4 bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300"
                     >
-                      ��� Voltar ao Formulário
+                      ← Voltar ao Formulário
                     </button>
                   </div>
                 )}
@@ -2119,14 +2119,6 @@ export default function Index() {
               <div className="text-center">
                 <div className="text-gray-300 text-sm">
                   © {new Date().getFullYear()}. Todos os direitos reservados.
-                </div>
-                <div>
-                  <a
-                    href="/teste"
-                    className="text-gray-400 hover:text-white text-xs underline transition-colors"
-                  >
-                    🧪 Página de Teste - Tracking Systems
-                  </a>
                 </div>
               </div>
             </div>
