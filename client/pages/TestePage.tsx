@@ -164,7 +164,14 @@ export default function TestePage() {
         },
       );
 
-      const responseData = await response.text();
+      // Read the response body only once
+      let responseData: string;
+      try {
+        responseData = await response.text();
+      } catch (readError) {
+        responseData = "Unable to read response body";
+        console.warn("Response body read error:", readError);
+      }
 
       if (response.ok) {
         setTestResults(prev => ({
