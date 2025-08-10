@@ -167,30 +167,8 @@ export default function Index() {
     }
   };
 
-  // Check if we have a valid endpoint
-  const hasValidEndpoint = isValidUrl(API_FORM_ENDPOINT);
-
   // Log endpoint being used (for debugging)
   console.log("Form API Endpoint:", API_FORM_ENDPOINT);
-  console.log("Endpoint is valid URL:", hasValidEndpoint);
-
-  if (!hasValidEndpoint) {
-    console.warn("⚠️ No valid API endpoint configured. Form will use alternative submission method.");
-  }
-
-  // Simple connection test
-  const testConnection = async () => {
-    try {
-      const response = await fetch('https://httpbin.org/status/200', {
-        method: 'GET',
-        mode: 'no-cors',
-        cache: 'no-cache'
-      });
-      return true;
-    } catch {
-      return false;
-    }
-  };
 
   // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
