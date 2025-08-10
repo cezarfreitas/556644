@@ -3,21 +3,31 @@ import { FaPlay, FaCheck, FaExclamationTriangle } from "react-icons/fa";
 
 export default function TestePage() {
   const [testResults, setTestResults] = useState<{ [key: string]: string }>({});
+  const [pageStatus, setPageStatus] = useState<string>("Carregando...");
 
   // Debug: Log component mounting
   useEffect(() => {
     console.log("🧪 TestePage mounted");
-    console.log("Environment variables:", {
-      GA4_MEASUREMENT_ID: import.meta.env.VITE_GA4_MEASUREMENT_ID,
-      GTM_ID: import.meta.env.VITE_GTM_ID,
-      META_PIXEL_ID: import.meta.env.VITE_META_PIXEL_ID,
-      META_ACCESS_TOKEN: import.meta.env.VITE_META_ACCESS_TOKEN ? "Present" : "Missing"
-    });
-    console.log("Window objects:", {
-      gtag: typeof window.gtag,
-      fbq: typeof window.fbq,
-      dataLayer: Array.isArray(window.dataLayer)
-    });
+
+    try {
+      console.log("Environment variables:", {
+        GA4_MEASUREMENT_ID: import.meta.env.VITE_GA4_MEASUREMENT_ID,
+        GTM_ID: import.meta.env.VITE_GTM_ID,
+        META_PIXEL_ID: import.meta.env.VITE_META_PIXEL_ID,
+        META_ACCESS_TOKEN: import.meta.env.VITE_META_ACCESS_TOKEN ? "Present" : "Missing"
+      });
+
+      console.log("Window objects:", {
+        gtag: typeof window.gtag,
+        fbq: typeof window.fbq,
+        dataLayer: Array.isArray(window.dataLayer)
+      });
+
+      setPageStatus("✅ Página carregada com sucesso");
+    } catch (error) {
+      console.error("❌ Erro no carregamento:", error);
+      setPageStatus(`❌ Erro: ${error.message}`);
+    }
   }, []);
 
   // Environment variables
