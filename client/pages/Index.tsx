@@ -889,16 +889,16 @@ export default function Index() {
             {/* Text/CTA Column - Otimizado para mobile */}
             <div className="space-y-6 sm:space-y-10">
               <div className="space-y-6 sm:space-y-8">
-                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                   Cadastre-se e Seja um Lojista Oficial
                   <span className="block text-primary">Ecko Agora Mesmo</span>
                 </h2>
                 <div className="space-y-4 sm:space-y-6">
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed font-medium">
                     Faça parte da rede de distribuidores oficiais da maior marca
                     de moda urbana do Brasil, reconhecida mundialmente.
                   </p>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
                     Condições exclusivas para lojistas parceiros e processo 100%
                     digital.
                   </p>
@@ -1086,7 +1086,7 @@ export default function Index() {
                           <span className="font-bold text-primary">
                             10% de desconto
                           </span>{" "}
-                          para você
+                          para voc��
                         </p>
                       </div>
                     </div>
