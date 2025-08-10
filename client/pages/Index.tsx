@@ -1751,7 +1751,7 @@ export default function Index() {
               <div className="space-y-6 max-w-md mx-auto">
                 <div className="flex items-center justify-center space-x-3">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F45492654d05e45aa9c0a6985c655603d?format=webp&width=800"
+                    src="/images/brand/ecko-logo.webp"
                     alt="Logo - Marca de Streetwear"
                     className="h-12 w-auto"
                     loading="lazy"
