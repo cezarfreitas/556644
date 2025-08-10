@@ -425,7 +425,7 @@ export default function TestePage() {
     let isConfigValid = true;
 
     // Check Access Token
-    if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN === "token_sensivel") {
+    if (!META_ACCESS_TOKEN) {
       configStatus.push("❌ Access Token: Configure via DevServerControl");
       isConfigValid = false;
     } else {
@@ -433,8 +433,8 @@ export default function TestePage() {
     }
 
     // Check Pixel ID
-    if (!META_PIXEL_ID || META_PIXEL_ID === "123456789012345") {
-      configStatus.push("❌ Pixel ID: Configure um ID real no .env");
+    if (!META_PIXEL_ID) {
+      configStatus.push("❌ Pixel ID: Configure no .env");
       isConfigValid = false;
     } else {
       configStatus.push("✅ Pixel ID: " + META_PIXEL_ID);
