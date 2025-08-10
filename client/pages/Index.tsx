@@ -783,63 +783,6 @@ export default function Index() {
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
 
-      // Try fallback method using XMLHttpRequest if fetch fails
-      if (error.message?.includes("Failed to fetch") || error.message?.includes("fetch")) {
-        console.log("Trying fallback XMLHttpRequest method...");
-        try {
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", API_FORM_ENDPOINT, true);
-          xhr.setRequestHeader("Content-Type", "application/json");
-          xhr.setRequestHeader("Accept", "application/json");
-
-          xhr.onload = function() {
-            if (xhr.status >= 200 && xhr.status < 300) {
-              // Success with fallback method
-              setSubmitStatus("success");
-              if (selectedCnpj === "nao-consumidor") {
-                setSubmitMessage(
-                  "🎉 Dados enviados com sucesso! Clique no botão abaixo se desejar entrar em contato via WhatsApp para receber seu cupom de 10% de desconto.",
-                );
-              } else {
-                setSubmitMessage(
-                  "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
-                );
-              }
-
-              // Reset form
-              e.currentTarget.reset();
-              setSelectedCnpj("");
-              setShowCnpjField(false);
-              setShowCouponMessage(false);
-              setFormErrors({});
-
-              trackEvent("form_submission_success_fallback", {
-                lead_type: selectedCnpj === "sim" ? "business" : "consumer",
-                method: "XMLHttpRequest"
-              });
-
-              setIsSubmitting(false);
-              return;
-            } else {
-              throw new Error(`HTTP ${xhr.status}: ${xhr.statusText}`);
-            }
-          };
-
-          xhr.onerror = function() {
-            throw new Error("XMLHttpRequest fallback also failed");
-          };
-
-          xhr.send(JSON.stringify(payload));
-          return; // Exit the catch block, let xhr handle the response
-        } catch (fallbackError) {
-          console.error("Fallback method also failed:", fallbackError);
-
-          // As last resort, use alternative submission method
-          console.log("All network methods failed, using alternative submission");
-          handleAlternativeSubmission(payload, formData);
-          return;
-        }
-      }
 
       // Detect specific error types for better user messaging
       let errorType = "network_error";
