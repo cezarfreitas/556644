@@ -2649,14 +2649,7 @@ export default function Index() {
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
-                  <span
-                    className="text-red-500 inline-block animate-heartbeat"
-                    style={{
-                      animation: "heartbeat 1.2s ease-in-out infinite",
-                      transformOrigin: "center",
-                      display: "inline-block",
-                    }}
-                  >
+                  <span className="text-red-500 animate-heartbeat">
                     ❤️
                   </span>{" "}
                   por{" "}
