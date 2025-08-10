@@ -908,7 +908,7 @@ export default function Index() {
 
 👤 *Nome:* ${name}
 📱 *WhatsApp:* ${whatsapp}
-�� *Tem CNPJ:* ${hasasCnpj}
+🏢 *Tem CNPJ:* ${hasasCnpj}
 ${showCnpjField ? `📄 *CNPJ:* ${cnpj}` : ""}
 💰 *Tipo:* ${selectedCnpj === "sim" ? "Lojista (Business)" : "Consumidor Final"}
 
@@ -935,10 +935,14 @@ ${showCnpjField ? `📄 *CNPJ:* ${cnpj}` : ""}
 Clique no botão abaixo para enviar suas informações diretamente para nossa equipe:`
     );
 
-    // Reset form
-    setSelectedCnpj("");
-    setShowCnpjField(false);
-    setShowCouponMessage(false);
+    // Store form values for later use in the WhatsApp button
+    setFormValues({
+      name: name,
+      whatsapp: whatsapp,
+      cnpj: cnpj || "",
+    });
+
+    // Don't reset form completely - keep values for WhatsApp submission
     setFormErrors({});
     setIsSubmitting(false);
 
