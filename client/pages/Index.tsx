@@ -2588,6 +2588,8 @@ export default function Index() {
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Siga no Facebook - Abre em nova aba"
                     title="Siga no Facebook"
+                    data-social="facebook"
+                    data-url={FACEBOOK_URL}
                   >
                     <FaFacebook className="w-6 h-6 text-white" />
                   </a>
@@ -2598,6 +2600,8 @@ export default function Index() {
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Siga no Instagram - Abre em nova aba"
                     title="Siga no Instagram"
+                    data-social="instagram"
+                    data-url={INSTAGRAM_URL}
                   >
                     <FaInstagram className="w-6 h-6 text-white" />
                   </a>
@@ -2608,6 +2612,8 @@ export default function Index() {
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Entre em contato via WhatsApp - Abre em nova aba"
                     title="Entre em contato via WhatsApp"
+                    data-social="whatsapp"
+                    data-url={WHATSAPP_URL}
                   >
                     <FaStore className="w-6 h-6 text-white" />
                   </a>
