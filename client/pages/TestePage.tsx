@@ -147,6 +147,60 @@ export default function TestePage() {
     }
   };
 
+  // Test Meta Pixel PageView
+  const testMetaPageView = () => {
+    try {
+      if (META_PIXEL_ID && window.fbq) {
+        window.fbq('track', 'PageView');
+        setTestResults((prev) => ({
+          ...prev,
+          metaPageView: "✅ Meta Pixel PageView sent successfully",
+        }));
+        console.log("Meta Pixel PageView sent");
+      } else {
+        setTestResults((prev) => ({
+          ...prev,
+          metaPageView: "❌ Meta Pixel not configured or fbq not available",
+        }));
+      }
+    } catch (error) {
+      setTestResults((prev) => ({
+        ...prev,
+        metaPageView: `❌ Meta PageView error: ${error.message}`,
+      }));
+    }
+  };
+
+  // Test Meta Pixel ViewContent
+  const testMetaViewContent = () => {
+    try {
+      if (META_PIXEL_ID && window.fbq) {
+        window.fbq('track', 'ViewContent', {
+          content_type: 'product_gallery',
+          content_ids: ['test_gallery'],
+          content_name: 'Test Product Gallery',
+          currency: 'BRL',
+          value: 0
+        });
+        setTestResults((prev) => ({
+          ...prev,
+          metaViewContent: "✅ Meta Pixel ViewContent sent successfully",
+        }));
+        console.log("Meta Pixel ViewContent sent");
+      } else {
+        setTestResults((prev) => ({
+          ...prev,
+          metaViewContent: "❌ Meta Pixel not configured or fbq not available",
+        }));
+      }
+    } catch (error) {
+      setTestResults((prev) => ({
+        ...prev,
+        metaViewContent: `❌ Meta ViewContent error: ${error.message}`,
+      }));
+    }
+  };
+
   // Test Meta Conversion API
   const testMetaConversionAPI = async () => {
     console.log("🔵 Meta Conversion API test started");
