@@ -966,12 +966,12 @@ export default function Index() {
                         name="name"
                         type="text"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70  transition-all text-base sm:text-sm ${
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
                           formErrors.name
-                            ? "border-red-500 "
+                            ? "border-red-500"
                             : formValues.name && !formErrors.name
-                              ? "border-green-500 "
-                              : "border-input "
+                              ? "border-green-500"
+                              : "border-gray-600"
                         }`}
                         placeholder="Seu nome completo"
                         value={formValues.name}
@@ -1022,12 +1022,12 @@ export default function Index() {
                         name="whatsapp"
                         type="tel"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70  transition-all text-base sm:text-sm ${
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
                           formErrors.whatsapp
-                            ? "border-red-500 "
+                            ? "border-red-500"
                             : formValues.whatsapp && !formErrors.whatsapp
-                              ? "border-green-500 "
-                              : "border-input "
+                              ? "border-green-500"
+                              : "border-gray-600"
                         }`}
                         placeholder="(11) 99999-9999"
                         maxLength={15}
@@ -1136,12 +1136,12 @@ export default function Index() {
                           name="cnpj-number"
                           type="text"
                           required
-                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70  transition-all text-base sm:text-sm ${
+                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
                             formErrors.cnpj
-                              ? "border-red-500 "
+                              ? "border-red-500"
                               : formValues.cnpj && !formErrors.cnpj
-                                ? "border-green-500 "
-                                : "border-input "
+                                ? "border-green-500"
+                                : "border-gray-600"
                           }`}
                           placeholder="00.000.000/0000-00"
                           maxLength={18}
