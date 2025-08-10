@@ -910,7 +910,7 @@ export default function Index() {
             <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-8 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center space-y-2">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     Solicite Seu Atendimento
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600">
@@ -927,7 +927,7 @@ export default function Index() {
                   <div className="space-y-2">
                     <label
                       htmlFor="name"
-                      className="text-sm font-medium text-gray-900"
+                      className="text-sm font-medium text-white"
                     >
                       Nome *
                     </label>
@@ -937,7 +937,7 @@ export default function Index() {
                         name="name"
                         type="text"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                           formErrors.name
                             ? "border-red-500 focus:ring-red-500"
                             : formValues.name && !formErrors.name
@@ -983,7 +983,7 @@ export default function Index() {
                   <div className="space-y-2">
                     <label
                       htmlFor="whatsapp"
-                      className="text-sm font-medium text-gray-900"
+                      className="text-sm font-medium text-white"
                     >
                       WhatsApp *
                     </label>
@@ -993,7 +993,7 @@ export default function Index() {
                         name="whatsapp"
                         type="tel"
                         required
-                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                        className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                           formErrors.whatsapp
                             ? "border-red-500 focus:ring-red-500"
                             : formValues.whatsapp && !formErrors.whatsapp
@@ -1037,7 +1037,7 @@ export default function Index() {
                   </div>
 
                   <div className="space-y-3">
-                    <label className="text-sm font-medium text-gray-900">
+                    <label className="text-sm font-medium text-white">
                       Sua loja possui CNPJ? *
                     </label>
                     <div className="flex gap-4 sm:gap-6">
@@ -1052,7 +1052,7 @@ export default function Index() {
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="text-sm sm:text-base text-gray-900">
+                        <span className="text-sm sm:text-base text-white">
                           ✅ Sim, sou lojista com CNPJ
                         </span>
                       </label>
@@ -1067,7 +1067,7 @@ export default function Index() {
                             handleCnpjRadioChange(e.target.value)
                           }
                         />
-                        <span className="text-sm sm:text-base text-gray-900">
+                        <span className="text-sm sm:text-base text-white">
                           ❌ Não, sou consumidor
                         </span>
                       </label>
@@ -1078,7 +1078,7 @@ export default function Index() {
                   {showCouponMessage && (
                     <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                       <div className="text-center space-y-3">
-                        <p className="text-gray-900 font-medium">
+                        <p className="text-white font-medium">
                           Este cadastro é exclusivo para lojistas com CNPJ
                         </p>
                         <p className="text-gray-700">
@@ -1097,7 +1097,7 @@ export default function Index() {
                     <div className="space-y-2">
                       <label
                         htmlFor="cnpj-number"
-                        className="text-sm font-medium text-gray-900"
+                        className="text-sm font-medium text-white"
                       >
                         Agora precisamos do seu CNPJ *
                       </label>
@@ -1107,7 +1107,7 @@ export default function Index() {
                           name="cnpj-number"
                           type="text"
                           required
-                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-gray-900 placeholder:text-gray-900/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
+                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-background text-white placeholder:text-white/70 focus:ring-2 focus:border-transparent transition-all text-base sm:text-sm ${
                             formErrors.cnpj
                               ? "border-red-500 focus:ring-red-500"
                               : formValues.cnpj && !formErrors.cnpj
@@ -1160,7 +1160,7 @@ export default function Index() {
                       : "CADASTRAR"}
                   </button>
 
-                  <p className="text-xs text-gray-900/70 text-center">
+                  <p className="text-xs text-white/70 text-center">
                     Ao enviar, você concorda em receber informações comerciais
                     da Ecko. Seus dados estão seguros conosco.
                   </p>
@@ -1188,7 +1188,7 @@ export default function Index() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-6 mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">
                 Vantagens de Ser Lojista{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Oficial Ecko
@@ -1206,10 +1206,10 @@ export default function Index() {
                 <div className="mb-5 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdStar className="w-14 sm:w-16 h-14 sm:h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 text-center">
                   Produtos Exclusivos
                 </h3>
-                <p className="text-gray-900/80 text-sm leading-relaxed text-center">
+                <p className="text-white/80 text-sm leading-relaxed text-center">
                   Acesso prioritário a coleções limitadas, lançamentos
                   exclusivos e produtos especiais disponíveis apenas para
                   lojistas oficiais. Seja o primeiro a oferecer novidades aos
@@ -1222,10 +1222,10 @@ export default function Index() {
                 <div className="mb-5 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdAttachMoney className="w-14 sm:w-16 h-14 sm:h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 text-center">
                   Margens Atrativas
                 </h3>
-                <p className="text-gray-900/80 text-sm leading-relaxed text-center">
+                <p className="text-white/80 text-sm leading-relaxed text-center">
                   Condições comerciais diferenciadas, com margens competitivas e
                   flexibilidade de pagamento. Mais lucro para sua loja com
                   preços especiais para parceiros oficiais.
@@ -1237,10 +1237,10 @@ export default function Index() {
                 <div className="mb-5 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdHeadset className="w-14 sm:w-16 h-14 sm:h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 text-center">
                   Suporte Completo
                 </h3>
-                <p className="text-gray-900/80 text-sm leading-relaxed text-center">
+                <p className="text-white/80 text-sm leading-relaxed text-center">
                   Treinamento especializado, materiais de marketing exclusivos,
                   suporte técnico e consultoria para potencializar suas vendas e
                   crescimento.
@@ -1252,10 +1252,10 @@ export default function Index() {
                 <div className="mb-5 sm:mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <MdWorkspacePremium className="w-14 sm:w-16 h-14 sm:h-16 text-primary mx-auto" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 text-center">
                   Prestígio da Marca
                 </h3>
-                <p className="text-gray-900/80 text-sm leading-relaxed text-center">
+                <p className="text-white/80 text-sm leading-relaxed text-center">
                   Associe-se a uma das marcas de moda urbana mais reconhecidas
                   do Brasil e do mundo. Credibilidade que fortalece seu negócio
                   e atrai mais clientes para sua loja.
@@ -1265,7 +1265,7 @@ export default function Index() {
 
             {/* Call to Action */}
             <div className="text-center mt-16">
-              <button className="bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-white sm:text-gray-900 px-12 py-4 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+              <button className="bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-white sm:text-white px-12 py-4 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
                 Quero Ser Parceiro Agora
               </button>
             </div>
@@ -1281,7 +1281,7 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white">
                 Coleções Exclusivas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Ecko
@@ -1417,7 +1417,7 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white">
                 Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
                   Ecko Oficiais
@@ -1497,20 +1497,20 @@ export default function Index() {
                                 <div className="flex items-center space-x-1 text-primary">
                                   <span className="text-2xl">★★★★★</span>
                                 </div>
-                                <blockquote className="text-lg text-gray-900 leading-relaxed italic">
+                                <blockquote className="text-lg text-white leading-relaxed italic">
                                   "{testimonial.text}"
                                 </blockquote>
                                 <div className="flex items-center space-x-4">
                                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span className="text-gray-900 font-bold text-lg">
+                                    <span className="text-white font-bold text-lg">
                                       {testimonial.avatar}
                                     </span>
                                   </div>
                                   <div>
-                                    <h3 className="font-bold text-gray-900">
+                                    <h3 className="font-bold text-white">
                                       {testimonial.name}
                                     </h3>
-                                    <p className="text-sm text-gray-900/70">
+                                    <p className="text-sm text-white/70">
                                       {testimonial.store}
                                     </p>
                                   </div>
@@ -1542,20 +1542,20 @@ export default function Index() {
                           <div className="flex items-center space-x-1 text-primary">
                             <span className="text-2xl">★★��★★</span>
                           </div>
-                          <blockquote className="text-base text-gray-900 leading-relaxed italic">
+                          <blockquote className="text-base text-white leading-relaxed italic">
                             "{testimonial.text}"
                           </blockquote>
                           <div className="flex items-center space-x-4">
                             <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                              <span className="text-gray-900 font-bold text-lg">
+                              <span className="text-white font-bold text-lg">
                                 {testimonial.avatar}
                               </span>
                             </div>
                             <div>
-                              <h3 className="font-bold text-gray-900">
+                              <h3 className="font-bold text-white">
                                 {testimonial.name}
                               </h3>
-                              <p className="text-sm text-gray-900/70">
+                              <p className="text-sm text-white/70">
                                 {testimonial.store}
                               </p>
                             </div>
@@ -1640,7 +1640,7 @@ export default function Index() {
               {/* Content */}
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-4 sm:space-y-6">
-                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
                     História da Marca
                     <span className="block text-primary">Ecko</span>
                   </h2>
@@ -1663,7 +1663,7 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       20+
                     </div>
-                    <div className="text-gray-900/80 text-sm">
+                    <div className="text-white/80 text-sm">
                       Anos de Mercado
                     </div>
                   </div>
@@ -1671,7 +1671,7 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       500+
                     </div>
-                    <div className="text-gray-900/80 text-sm">
+                    <div className="text-white/80 text-sm">
                       Lojistas Parceiros
                     </div>
                   </div>
@@ -1679,7 +1679,7 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       1M+
                     </div>
-                    <div className="text-gray-900/80 text-sm">
+                    <div className="text-white/80 text-sm">
                       Clientes Satisfeitos
                     </div>
                   </div>
@@ -1687,7 +1687,7 @@ export default function Index() {
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                       #1
                     </div>
-                    <div className="text-gray-900/80 text-sm">
+                    <div className="text-white/80 text-sm">
                       Marca de Streetwear
                     </div>
                   </div>
@@ -1704,7 +1704,7 @@ export default function Index() {
                     loading="lazy"
                   />
                   <div className="mt-8 space-y-4">
-                    <p className="text-gray-900/60 text-sm italic">
+                    <p className="text-white/60 text-sm italic">
                       "Autenticidade que conecta com a rua"
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
