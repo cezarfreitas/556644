@@ -239,7 +239,7 @@ export default function Index() {
     // Enviar pageview customizado
     trackEvent("pageview", pageviewData);
 
-    // Verificar se Meta Pixel carregou ap��s 2 segundos
+    // Verificar se Meta Pixel carregou após 2 segundos
     setTimeout(() => {
       if (window.fbq) {
         console.log("✅ Meta Pixel carregado e funcionando");
@@ -1462,7 +1462,7 @@ export default function Index() {
 
   // Track CompleteRegistration event (Facebook Standard Event)
   const trackCompleteRegistration = (method: string = "form") => {
-    console.log("📱 Facebook Event: CompleteRegistration -", method);
+    console.log("�� Facebook Event: CompleteRegistration -", method);
 
     const eventData = {
       content_name: "Lojista Registration",
