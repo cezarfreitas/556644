@@ -156,7 +156,8 @@ export default function Index() {
         })(window, document, "script", FACEBOOK_CONNECT_URL);
 
         // Aguardar script carregar e inicializar
-        setTimeout(() => {
+        // Initialize immediately when script loads
+        const initPixel = () => {
           if (window.fbq) {
             window.fbq("init", META_PIXEL_ID, {
               // Enable automatic configuration for better cookie setting
@@ -166,31 +167,42 @@ export default function Index() {
             window.fbq("track", "PageView");
             console.log("✅ Meta Pixel: PageView tracked on page load");
 
-            // Log cookie status after initialization
+            // Ensure _fbp cookie is set immediately
             setTimeout(() => {
+              let fbp = getCookie("_fbp");
+              if (!fbp) {
+                // Force generate _fbp if not set by pixel
+                const generatedFbp = `fb.1.${Date.now()}.${Math.random().toString(36).substr(2, 9)}`;
+                document.cookie = `_fbp=${generatedFbp}; path=/; max-age=31536000; samesite=lax; secure`;
+                fbp = generatedFbp;
+                console.log("Meta Pixel: Force generated _fbp:", generatedFbp);
+              }
+
               const fbc = getCookie("_fbc");
-              const fbp = getCookie("_fbp");
               console.log("Meta Pixel Cookie Status:", {
                 fbc: fbc ? "Set" : "Missing",
                 fbp: fbp ? "Set" : "Missing",
                 fbc_value: fbc?.substring(0, 20) + "..." || "None",
                 fbp_value: fbp?.substring(0, 20) + "..." || "None",
               });
-
-              // If fbp is missing, try to generate one as fallback
-              if (!fbp) {
-                console.warn(
-                  "Meta Pixel: fbp cookie missing, attempting to generate fallback",
-                );
-                const fallbackFbp = `fb.1.${Date.now()}.${Math.random().toString(36).substr(2, 9)}`;
-                document.cookie = `_fbp=${fallbackFbp}; path=/; max-age=31536000; samesite=lax`;
-                console.log("Meta Pixel: Generated fallback fbp:", fallbackFbp);
-              }
-            }, 1000);
+            }, 100);
           } else {
             console.error("❌ Meta Pixel: fbq not available after load");
           }
-        }, 500); // Increased timeout to ensure script loads
+        };
+
+        // Try multiple times to ensure initialization
+        let attempts = 0;
+        const maxAttempts = 10;
+        const checkAndInit = () => {
+          if (window.fbq || attempts >= maxAttempts) {
+            initPixel();
+          } else {
+            attempts++;
+            setTimeout(checkAndInit, 100);
+          }
+        };
+        checkAndInit();
       };
 
       // Load Facebook Pixel immediately for better cookie setting
@@ -2309,7 +2321,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★★</span>
+                                  <span className="text-2xl">★★★★��</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
