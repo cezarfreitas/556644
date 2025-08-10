@@ -755,8 +755,8 @@ export default function Index() {
         </div>
 
         {/* Simple Solid Overlay for Testing */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0" style={{ zIndex: 2 }}>
+          <div className="absolute inset-0 bg-black/80"></div>
         </div>
 
         {/* Floating Elements Background */}
