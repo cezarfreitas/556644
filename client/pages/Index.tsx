@@ -152,7 +152,7 @@ export default function Index() {
     import.meta.env.VITE_api_form ||
     "https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads";
 
-  // Fun��ão para capturar dados de visitação e analytics
+  // Função para capturar dados de visitação e analytics
   const getAnalyticsData = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const referrer = document.referrer || "direct";
@@ -1779,7 +1779,7 @@ export default function Index() {
                   />
                   <div className="mt-8 space-y-3">
                     <p className="text-gray-500 text-sm italic">
-                      "Autenticidade que conecta com a rua"
+                      "Desde 1993, conectando gerações através do streetwear autêntico"
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                   </div>
