@@ -1030,7 +1030,7 @@ export default function Index() {
                       )}
                     </div>
                     {formErrors.name && (
-                      <div className="mt-2 p-3 bg-red-900/20 border border-red-500/30 rounded-lg">
+                      <div className="mt-1 p-2 bg-red-900/20 border border-red-500/30 rounded-lg">
                         <p className="text-red-300 text-sm flex items-center gap-2">
                           <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
                           {formErrors.name}
@@ -1090,7 +1090,7 @@ export default function Index() {
                       )}
                     </div>
                     {formErrors.whatsapp && (
-                      <div className="mt-2 p-3 bg-red-900/20 border border-red-500/30 rounded-lg">
+                      <div className="mt-1 p-2 bg-red-900/20 border border-red-500/30 rounded-lg">
                         <p className="text-red-300 text-sm flex items-center gap-2">
                           <FaExclamationTriangle className="w-4 h-4 flex-shrink-0" />
                           {formErrors.whatsapp}
