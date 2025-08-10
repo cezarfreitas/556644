@@ -145,6 +145,14 @@ export default function Index() {
                 fbc_value: fbc?.substring(0, 20) + "..." || "None",
                 fbp_value: fbp?.substring(0, 20) + "..." || "None",
               });
+
+              // If fbp is missing, try to generate one as fallback
+              if (!fbp) {
+                console.warn("Meta Pixel: fbp cookie missing, attempting to generate fallback");
+                const fallbackFbp = `fb.1.${Date.now()}.${Math.random().toString(36).substr(2, 9)}`;
+                document.cookie = `_fbp=${fallbackFbp}; path=/; max-age=31536000; samesite=lax`;
+                console.log("Meta Pixel: Generated fallback fbp:", fallbackFbp);
+              }
             }, 1000);
           } else {
             console.error("❌ Meta Pixel: fbq not available after load");
