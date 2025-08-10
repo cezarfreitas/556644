@@ -770,6 +770,11 @@ export default function Index() {
             />
           </div>
 
+          {/* Mobile Intro Text */}
+          <p className="text-xs text-white/80 text-center mb-4 px-4 drop-shadow-md">
+            Aproveite a oportunidade de vender uma das maiores marcas do Brasil e do mundo.
+          </p>
+
           {/* Mobile Heading */}
           <div className="mb-6">
             <h1 className="text-2xl font-black text-white leading-tight drop-shadow-2xl">
@@ -812,6 +817,11 @@ export default function Index() {
                   fetchPriority="high"
                 />
               </div>
+
+              {/* Desktop Intro Text */}
+              <p className="text-lg text-white/80 text-center mb-6 drop-shadow-md">
+                Aproveite a oportunidade de vender uma das maiores marcas do Brasil e do mundo.
+              </p>
 
               {/* Desktop Heading */}
               <div>
