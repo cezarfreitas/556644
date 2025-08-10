@@ -773,7 +773,7 @@ export default function Index() {
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.6) 100%)",
+                "radial-gradient(ellipse 60% 50% at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.8) 100%)",
             }}
           ></div>
         </div>
