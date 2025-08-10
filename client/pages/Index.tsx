@@ -739,7 +739,23 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Mobile & Desktop Optimized */}
-      <section className="relative h-screen w-full bg-gradient-to-br from-primary via-red-600 to-red-700">
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2Fe8944e5525914e1f8994c2dc4f9b44eb?format=webp&width=800"
+            alt="Ecko Streetwear Background"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
+
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Additional gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/60"></div>
 
         {/* Mobile Layout (< md) */}
         <div className="md:hidden flex flex-col items-center justify-center h-full px-6 py-8 text-center">
