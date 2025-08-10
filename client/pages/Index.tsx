@@ -794,7 +794,7 @@ export default function Index() {
           {/* Mobile CTA */}
           <a
             href="#cadastro-lojistas"
-            className="w-full max-w-xs bg-primary hover:bg-red-600 text-white hover:text-white py-4 px-6 rounded-xl text-base font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl border border-white"
+            className="w-full max-w-sm bg-primary hover:bg-red-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl border border-white"
           >
             Começar Agora!
           </a>
