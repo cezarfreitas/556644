@@ -664,6 +664,7 @@ export default function Index() {
         }
       }, 100);
 
+      setIsSubmitting(false);
       return;
     }
 
