@@ -907,13 +907,13 @@ export default function Index() {
             </div>
 
             {/* Form Column - Otimizado para mobile */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-8 shadow-lg">
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl p-4 sm:p-8 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center space-y-2">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     Solicite Seu Atendimento
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-300">
                     Preencha o formulário e um analista da Ecko entrará em
                     contato para apresentar nosso catálogo digital exclusivo com
                     preços e condições especiais para lojistas oficiais.
