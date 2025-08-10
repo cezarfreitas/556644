@@ -1563,7 +1563,7 @@ export default function Index() {
                   <span className="block">SEJA UM</span>
                   <span className="block text-primary">LOJISTA OFICIAL</span>
                   <span className="block text-primary font-black">
-                    ECKO AGORA MESMO
+                    {BRAND_NAME.toUpperCase()} AGORA MESMO
                   </span>
                 </h2>
 
