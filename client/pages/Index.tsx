@@ -1502,181 +1502,38 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Slider Container with touch support */}
-            <div
-              className="relative"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
-              {/* Navigation Arrows - Unified for all devices */}
-              <div className="absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 z-10">
-                <button
-                  onClick={prevSlide}
-                  className="group bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 md:p-4 hover:bg-white hover:scale-110 transition-all duration-300 md:-ml-6"
-                  aria-label="Depoimento anterior"
-                >
-                  <FaChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-primary transition-colors" />
-                </button>
-              </div>
-
-              <div className="absolute right-2 md:right-0 top-1/2 transform -translate-y-1/2 z-10">
-                <button
-                  onClick={nextSlide}
-                  className="group bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 md:p-4 hover:bg-white hover:scale-110 transition-all duration-300 md:-mr-6"
-                  aria-label="Próximo depoimento"
-                >
-                  <FaChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-primary transition-colors" />
-                </button>
-              </div>
-
-              {/* Desktop Slider Content - 2 columns */}
-              <div className="hidden md:block overflow-hidden rounded-2xl">
+            {/* Simplified Testimonials Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {testimonials.slice(0, 6).map((testimonial) => (
                 <div
-                  className="flex transition-transform duration-700 ease-out"
-                  style={{
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                  }}
+                  key={testimonial.id}
+                  className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
                 >
-                  {Array.from({
-                    length: Math.ceil(testimonials.length / 2),
-                  }).map((_, slideIndex) => (
-                    <div key={slideIndex} className="w-full flex-shrink-0">
-                      <div className="grid grid-cols-2 gap-8">
-                        {testimonials
-                          .slice(slideIndex * 2, slideIndex * 2 + 2)
-                          .map((testimonial) => (
-                            <div
-                              key={testimonial.id}
-                              className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
-                            >
-                              <div className="space-y-6">
-                                <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★★</span>
-                                </div>
-                                <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
-                                  "{testimonial.text}"
-                                </blockquote>
-                                <div className="flex items-center space-x-4">
-                                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span className="text-white font-bold text-lg">
-                                      {testimonial.avatar}
-                                    </span>
-                                  </div>
-                                  <div>
-                                    <h3 className="font-bold text-gray-900">
-                                      {testimonial.name}
-                                    </h3>
-                                    <p className="text-sm text-gray-600">
-                                      {testimonial.store}
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-1 text-primary">
+                      <span className="text-2xl">★★★★★</span>
+                    </div>
+                    <blockquote className="text-base md:text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
+                      "{testimonial.text}"
+                    </blockquote>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg">
+                          {testimonial.avatar}
+                        </span>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-gray-900">
+                          {testimonial.name}
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          {testimonial.store}
+                        </p>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </div>
-
-              {/* Mobile Slider Content - 1 column */}
-              <div className="md:hidden overflow-hidden rounded-2xl">
-                <div
-                  className="flex transition-transform duration-700 ease-out"
-                  style={{
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                  }}
-                >
-                  {testimonials.map((testimonial) => (
-                    <div
-                      key={testimonial.id}
-                      className="w-full flex-shrink-0 px-3"
-                    >
-                      <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
-                        <div className="space-y-6">
-                          <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★★★★★</span>
-                          </div>
-                          <blockquote className="text-base text-gray-700 leading-relaxed italic">
-                            "{testimonial.text}"
-                          </blockquote>
-                          <div className="flex items-center space-x-4">
-                            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                              <span className="text-white font-bold text-lg">
-                                {testimonial.avatar}
-                              </span>
-                            </div>
-                            <div>
-                              <h3 className="font-bold text-gray-900">
-                                {testimonial.name}
-                              </h3>
-                              <p className="text-sm text-gray-600">
-                                {testimonial.store}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Unified Dots Navigation with progress indicators */}
-              <div className="flex justify-center mt-8 space-x-3">
-                {Array.from({
-                  length:
-                    typeof window !== "undefined" && window.innerWidth < 768
-                      ? testimonials.length
-                      : Math.ceil(testimonials.length / 2),
-                }).map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`relative overflow-hidden rounded-full transition-all duration-300 flex items-center justify-center ${
-                      currentSlide === index
-                        ? "w-12 h-12 bg-primary shadow-lg scale-110"
-                        : "w-10 h-10 bg-gray-300 hover:bg-gray-400 hover:scale-105"
-                    }`}
-                    aria-label={`Ir para slide ${index + 1}`}
-                    title={`Ir para slide ${index + 1}`}
-                  >
-                    {currentSlide === index && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-                    )}
-                    <span
-                      className={`w-3 h-3 rounded-full transition-all ${
-                        currentSlide === index
-                          ? "bg-white scale-110"
-                          : "bg-gray-600"
-                      }`}
-                    ></span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Progress Bar */}
-              <div className="mt-6 max-w-md mx-auto">
-                <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-primary to-red-600 transition-all duration-300 ease-out"
-                    style={{
-                      width: `${((currentSlide + 1) / (typeof window !== "undefined" && window.innerWidth < 768 ? testimonials.length : Math.ceil(testimonials.length / 2))) * 100}%`,
-                    }}
-                  ></div>
-                </div>
-                <div className="flex justify-between mt-2 text-xs text-gray-500">
-                  <span>{currentSlide + 1}</span>
-                  <span>
-                    de{" "}
-                    {typeof window !== "undefined" && window.innerWidth < 768
-                      ? testimonials.length
-                      : Math.ceil(testimonials.length / 2)}
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Call to Action */}
