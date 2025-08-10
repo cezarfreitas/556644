@@ -786,7 +786,7 @@ export default function Index() {
           <div className="mb-12 animate-fade-in relative">
             <div className="absolute inset-0 bg-primary/30 rounded-full blur-2xl scale-150 animate-pulse"></div>
             <img
-              src="/images/brand/ecko-logo.webp"
+              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F45492654d05e45aa9c0a6985c655603d?format=webp&width=800"
               alt="Logo Ecko - Líder em Streetwear e Moda Urbana no Brasil"
               className="relative h-20 sm:h-24 md:h-28 lg:h-32 w-auto mx-auto drop-shadow-2xl filter brightness-110 hover:scale-105 transition-transform duration-500"
               loading="eager"
