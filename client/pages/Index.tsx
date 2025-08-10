@@ -1298,6 +1298,37 @@ export default function Index() {
                     </button>
                   </div>
                 </form>
+
+                {/* Mensagens de Sucesso/Erro */}
+                {submitStatus !== 'idle' && (
+                  <div className={`text-center p-6 rounded-xl ${
+                    submitStatus === 'success' ? 'bg-green-100 border border-green-300' : 'bg-red-100 border border-red-300'
+                  }`}>
+                    <div className={`text-lg font-semibold mb-4 ${
+                      submitStatus === 'success' ? 'text-green-800' : 'text-red-800'
+                    }`}>
+                      {submitMessage}
+                    </div>
+
+                    {submitStatus === 'success' && selectedCnpj === "nao-consumidor" && (
+                      <div className="space-y-4">
+                        <button
+                          onClick={() => window.open("https://wa.me/5511999999999?text=Olá, quero receber o cupom de 10% de desconto!", "_blank")}
+                          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-300 mr-4"
+                        >
+                          🎁 Receber Cupom no WhatsApp
+                        </button>
+                      </div>
+                    )}
+
+                    <button
+                      onClick={handleBackToForm}
+                      className="mt-4 bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300"
+                    >
+                      ← Voltar ao Formulário
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
