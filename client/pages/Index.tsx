@@ -862,7 +862,7 @@ export default function Index() {
               <div className="pt-4 flex justify-center">
                 <a
                   href="#cadastro-lojistas"
-                  className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white hover:text-white px-10 py-4 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
+                  className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
                 >
                   Começar Agora!
                   <svg
@@ -993,7 +993,7 @@ export default function Index() {
                         type="text"
                         required
                         autoComplete="name"
-                        className={`w-full px-4 py-4 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-4 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.name
                             ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.name && !formErrors.name
@@ -1053,7 +1053,7 @@ export default function Index() {
                         type="tel"
                         required
                         autoComplete="tel"
-                        className={`w-full px-4 py-4 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-4 py-3 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.whatsapp
                             ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.whatsapp && !formErrors.whatsapp
@@ -1180,7 +1180,7 @@ export default function Index() {
                           name="cnpj-number"
                           type="text"
                           required
-                          className={`w-full px-4 py-4 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
+                          className={`w-full px-4 py-3 sm:py-3 pr-12 rounded-lg border bg-gray-800 text-white placeholder:text-gray-400  transition-all text-base sm:text-sm ${
                             formErrors.cnpj
                               ? "border-red-500"
                               : formValues.cnpj && !formErrors.cnpj
@@ -1227,7 +1227,7 @@ export default function Index() {
                   <div className="pt-1">
                     <button
                       type="submit"
-                      className="group relative w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
+                      className="group relative w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                       <span className="relative flex items-center justify-center gap-2">
@@ -1388,7 +1388,7 @@ export default function Index() {
             <div className="text-center mt-16">
               <a
                 href="#cadastro-lojistas"
-                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300"
+                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
                 Quero Ser Lojista Oficial
               </a>
@@ -1611,7 +1611,7 @@ export default function Index() {
               </p>
               <a
                 href="#cadastro-lojistas"
-                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors duration-300"
+                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
                 Quero Ser o Próximo Parceiro de Sucesso
               </a>
