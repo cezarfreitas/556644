@@ -25,7 +25,7 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Estados para validação de formulário
+  // Estados para valida��ão de formulário
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
@@ -993,7 +993,7 @@ export default function Index() {
                         type="text"
                         required
                         autoComplete="name"
-                        className={`w-full px-4 py-5 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-4 py-4 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.name
                             ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.name && !formErrors.name
@@ -1053,7 +1053,7 @@ export default function Index() {
                         type="tel"
                         required
                         autoComplete="tel"
-                        className={`w-full px-4 py-5 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
+                        className={`w-full px-4 py-4 pr-12 rounded-xl border-2 bg-gray-800/50 backdrop-blur-sm text-white placeholder:text-gray-400 transition-all duration-300 text-base hover:bg-gray-800/70 ${
                           formErrors.whatsapp
                             ? "border-red-400 shadow-red-400/20 shadow-lg"
                             : formValues.whatsapp && !formErrors.whatsapp
@@ -1227,7 +1227,7 @@ export default function Index() {
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="group relative w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
+                      className="group relative w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                       <span className="relative flex items-center justify-center gap-2">
