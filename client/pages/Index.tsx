@@ -2370,9 +2370,20 @@ export default function Index() {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 pt-8">
-              <div className="text-center">
+              <div className="text-center space-y-2">
                 <div className="text-gray-300 text-sm">
                   © {new Date().getFullYear()}. Todos os direitos reservados.
+                </div>
+                <div className="text-gray-400 text-xs">
+                  Desenvolvido com amor por IDE | Negócios digitais<br />
+                  <a
+                    href="https://www.idenegociosdigitais.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    www.idenegociosdigitais.com.br
+                  </a>
                 </div>
               </div>
             </div>
