@@ -22,6 +22,7 @@ interface ImportMeta {
 declare global {
   interface Window {
     formStartTime?: number;
+    formInteractionTracked?: boolean;
     gtag?: (...args: any[]) => void;
     fbq?: (...args: any[]) => void;
     dataLayer?: any[];
