@@ -996,7 +996,7 @@ export default function Index() {
     if (!numbers) return "WhatsApp é obrigatório";
     if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 dígitos";
     if (numbers.length < 11 && !numbers.startsWith("11"))
-      return "WhatsApp deve ter 11 d��gitos para celular";
+      return "WhatsApp deve ter 11 dígitos para celular";
     if (numbers.length > 11) return "WhatsApp não pode ter mais de 11 dígitos";
     return "";
   };
@@ -1462,7 +1462,7 @@ export default function Index() {
 
   // Track CompleteRegistration event (Facebook Standard Event)
   const trackCompleteRegistration = (method: string = "form") => {
-    console.log("📱 Facebook Event: CompleteRegistration -", method);
+    console.log("���� Facebook Event: CompleteRegistration -", method);
 
     const eventData = {
       content_name: "Lojista Registration",
