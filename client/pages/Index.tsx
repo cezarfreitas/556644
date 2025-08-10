@@ -57,9 +57,9 @@ export default function Index() {
     .VITE_GOOGLE_ADS_CONVERSION_LABEL;
 
   // Social Media URLs
-  const FACEBOOK_URL = import.meta.env.VITE_FACEBOOK_URL;
-  const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL;
-  const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL;
+  const FACEBOOK_URL = import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com/ecko";
+  const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/ecko";
+  const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/5511999999999";
 
   // Brand and Company Configuration
   const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Ecko";
@@ -401,7 +401,7 @@ export default function Index() {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target.id === "galeria-produtos") {
             console.log(
-              "📸 Galeria de produtos ficou visível, disparando ViewContent",
+              "��� Galeria de produtos ficou visível, disparando ViewContent",
             );
             trackViewContent(
               "product_gallery",
@@ -1551,7 +1551,7 @@ export default function Index() {
           {/* Mobile Subtitle */}
           <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
             <span className="font-bold text-white">Cadastre-se agora</span> e
-            tenha acesso à nossa plataforma digital com preços exclusivos para
+            tenha acesso à nossa plataforma digital com pre��os exclusivos para
             lojistas.
           </p>
 
