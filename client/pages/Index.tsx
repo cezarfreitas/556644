@@ -804,10 +804,10 @@ export default function Index() {
       let userMessage =
         "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
 
-      if (error.name === "AbortError") {
+      if (error?.name === "AbortError") {
         errorType = "timeout_error";
         userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
-      } else if (error.message?.includes("CORS")) {
+      } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
           "🔒 Erro de segurança. Recarregue a página e tente novamente.";
@@ -825,6 +825,7 @@ export default function Index() {
         },
       });
 
+      console.log("Form submission error:", errorType, userMessage);
       setSubmitStatus("error");
       setSubmitMessage(userMessage);
     } finally {
