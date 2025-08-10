@@ -752,13 +752,22 @@ export default function Index() {
         throw new Error("Invalid Access Token");
       }
 
+      // Add additional identifiers to improve attribution
+      if (!userData.fbp && !userData.fbc) {
+        // If no Facebook cookies, add external_id based on session/timestamp
+        userData.external_id = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        console.log("Meta API: Added external_id as fallback identifier");
+      }
+
       // Validate we have at least some user data for attribution
       const hasUserData =
-        userData.fbc || userData.fbp || userData.ph || userData.em;
+        userData.fbc || userData.fbp || userData.ph || userData.em || userData.external_id;
       if (!hasUserData) {
         console.warn(
-          "Meta API: Warning - No strong user identifiers found (fbc, fbp, phone, email). Attribution may be limited.",
+          "Meta API: Warning - No user identifiers found. This request may fail.",
         );
+      } else {
+        console.log("Meta API: User identifiers available:", Object.keys(userData).filter(key => key !== 'client_user_agent' && key !== 'client_ip_address'));
       }
 
       console.log("Meta Conversion API: Validated data for sending:", {
@@ -1320,7 +1329,7 @@ export default function Index() {
       // Detect specific error types for better user messaging
       let errorType = "network_error";
       let userMessage =
-        "🔌 Erro de conex��o. Verifique sua internet e tente novamente.";
+        "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
