@@ -150,6 +150,16 @@ export default function Index() {
     // Enviar pageview customizado
     trackEvent("pageview", pageviewData);
 
+    // Verificar se Meta Pixel carregou após 2 segundos
+    setTimeout(() => {
+      if (window.fbq) {
+        console.log("✅ Meta Pixel carregado e funcionando");
+        console.log("📊 Meta Pixel ID configurado:", META_PIXEL_ID);
+      } else {
+        console.warn("❌ Meta Pixel não foi carregado");
+      }
+    }, 2000);
+
     // Cleanup no unmount
     return () => {
       delete window.formStartTime;
