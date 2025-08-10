@@ -35,6 +35,14 @@ export default function Index() {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
+  // Função auxiliar para pegar cookies (movida para cima para disponibilidade)
+  const getCookie = (name: string) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop()?.split(";").shift();
+    return null;
+  };
+
   // Configurações de tracking via .env
   const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
   const GTM_ID = import.meta.env.VITE_GTM_ID;
@@ -793,13 +801,7 @@ export default function Index() {
     }
   };
 
-  // Função auxiliar para pegar cookies
-  const getCookie = (name: string) => {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop()?.split(";").shift();
-    return null;
-  };
+  // getCookie function moved above for earlier availability
 
   // Funções de formatação
   const formatWhatsApp = (value: string) => {
