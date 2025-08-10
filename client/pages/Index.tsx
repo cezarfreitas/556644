@@ -1224,7 +1224,7 @@ export default function Index() {
                     </div>
                   )}
 
-                  <div className="pt-2">
+                  <div className="pt-1">
                     <button
                       type="submit"
                       className="group relative w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-red-700 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
