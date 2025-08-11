@@ -803,8 +803,23 @@ export default function Index() {
         throw new Error("Invalid Pixel ID");
       }
 
-      if (!META_ACCESS_TOKEN || META_ACCESS_TOKEN.length < 20) {
-        throw new Error("Invalid Access Token");
+      // Enhanced access token validation with debugging
+      if (!META_ACCESS_TOKEN) {
+        throw new Error("Access Token is missing");
+      }
+
+      if (META_ACCESS_TOKEN.length < 50) {
+        console.error("Meta API: Access token seems too short:", {
+          length: META_ACCESS_TOKEN.length,
+          preview: META_ACCESS_TOKEN.substring(0, 20) + "...",
+        });
+        throw new Error(`Access Token appears invalid (length: ${META_ACCESS_TOKEN.length})`);
+      }
+
+      // Check if token starts with expected format (EAA for Facebook tokens)
+      if (!META_ACCESS_TOKEN.startsWith("EAA")) {
+        console.error("Meta API: Access token doesn't start with expected format");
+        throw new Error("Access Token format invalid - should start with EAA");
       }
 
       // Add additional identifiers to improve attribution
