@@ -1455,7 +1455,7 @@ export default function Index() {
       // Detect specific error types for better user messaging
       let errorType = "network_error";
       let userMessage =
-        "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
+        "���� Erro de conexão. Verifique sua internet e tente novamente.";
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
@@ -2182,7 +2182,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Galeria de Produtos Ecko Streetwear - Otimizado para mobile */}
+      {/* Galeria de Produtos Onbongo Surfwear - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32 bg-white"
         id="galeria-produtos"
@@ -2197,7 +2197,7 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                Descubra as coleções oficiais Ecko, com design autêntico e
+                Descubra as coleções oficiais Onbongo, com design autêntico e
                 qualidade premium. Produtos únicos que valorizam sua loja e
                 encantam seus clientes.
               </p>
