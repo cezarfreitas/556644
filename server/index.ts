@@ -1,7 +1,9 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import path from "path";
 import { handleDemo } from "./routes/demo";
+import uploadRoutes from "./routes/upload";
 
 export function createServer() {
   const app = express();
