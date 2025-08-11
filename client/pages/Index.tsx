@@ -2713,7 +2713,7 @@ export default function Index() {
       </section>
 
       {/* Footer - Accessible Version with Proper Contrast */}
-      <footer className="bg-gray-900 text-white py-12 sm:py-16">
+      <footer className="bg-black text-white py-12 sm:py-16">
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
