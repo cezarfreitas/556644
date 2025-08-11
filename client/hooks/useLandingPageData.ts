@@ -137,7 +137,7 @@ interface LandingPageData {
 // Dados padrão (mesmos da página de admin)
 const defaultData: LandingPageData = {
   hero: {
-    logo: "/images/brand/onbongo-logo.webp",
+    logo: "",
     introText:
       "Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.",
     title: "SEJA UM LOJISTA OFICIAL ONBONGO",
