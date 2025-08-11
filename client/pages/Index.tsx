@@ -1749,7 +1749,7 @@ export default function Index() {
                   href="#cadastro-lojistas"
                   className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
                 >
-                  Começar Agora!
+                  Come��ar Agora!
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -2193,7 +2193,7 @@ export default function Index() {
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Coleções Exclusivas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  {BRAND_NAME}
+                  Onbongo
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
@@ -2432,7 +2432,7 @@ export default function Index() {
               <button
                 onClick={nextSlide}
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 hover:bg-white hover:scale-110 transition-all duration-300"
-                aria-label="Próximo depoimento"
+                aria-label="Pr��ximo depoimento"
               >
                 <FaChevronRight className="w-5 h-5 text-gray-600 hover:text-primary transition-colors" />
               </button>
@@ -2589,7 +2589,7 @@ export default function Index() {
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se
                     sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf -
-                    marcou presença no futebol profissional, vestindo grandes nomes como Kak��, Roberto Carlos, Neymar e Amaral.
+                    marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz,
@@ -2630,7 +2630,7 @@ export default function Index() {
                 Perguntas Frequentes
               </h2>
               <p className="text-gray-600 text-lg">
-                Tire suas dúvidas sobre a parceria com a {BRAND_NAME}
+                Tire suas dúvidas sobre a parceria com a Onbongo
               </p>
             </div>
 
@@ -2638,13 +2638,13 @@ export default function Index() {
               {/* FAQ Item 1 */}
               <details className="group bg-white rounded-lg shadow-md">
                 <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Os produtos são oficiais da marca {BRAND_NAME}?</span>
+                  <span>Os produtos são oficiais da marca Onbongo?</span>
                   <span className="transform group-open:rotate-180 transition-transform text-primary">
                     ▼
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, os produtos são 100% oficiais da marca {BRAND_NAME}.
+                  Sim, os produtos são 100% oficiais da marca Onbongo.
                   Quando você se torna um lojista oficial, você tem a garantia
                   de estar adquirindo produtos autênticos e de qualidade da
                   marca.
