@@ -2758,7 +2758,7 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="text-center space-y-2">
                 <div className="text-gray-300 text-sm">
-                  {new Date().getFullYear()}. {landingData.footer.copyright}
+                  {new Date().getFullYear()}. {landingData.footer.copyright || "Todos os direitos reservados."}
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
