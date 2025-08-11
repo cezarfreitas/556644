@@ -386,14 +386,15 @@ export default function Admin() {
   };
 
   const tabs = [
-    { id: "hero", name: "Hero", icon: "��" },
+    { id: "hero", name: "Hero", icon: "🏠" },
     { id: "form", name: "Formulário", icon: "📝" },
     { id: "gallery", name: "Galeria", icon: "🖼️" },
     { id: "showroom", name: "Showroom", icon: "🏢" },
     { id: "testimonials", name: "Depoimentos", icon: "💬" },
     { id: "history", name: "História", icon: "📖" },
     { id: "faq", name: "FAQ", icon: "❓" },
-    { id: "footer", name: "Rodapé", icon: "📍" }
+    { id: "footer", name: "Rodapé", icon: "📍" },
+    { id: "integrations", name: "Integrações", icon: "🔌" }
   ];
 
   return (
@@ -797,7 +798,7 @@ export default function Admin() {
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Descrição da Experi��ncia
+                        Descrição da Experiência
                       </label>
                       <textarea
                         value={data.showroom.experienceDescription}
