@@ -1778,7 +1778,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Cadastro de Lojistas - Formul��rio de Parceria - Otimizado para mobile */}
+      {/* Cadastro de Lojistas - Formul���rio de Parceria - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32 bg-black"
         id="cadastro-lojistas"
@@ -2814,6 +2814,9 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* SEO Head */}
+      <SEOHead seo={landingData.seo} />
 
       {/* Tracking Scripts */}
       <TrackingScripts integrations={landingData.integrations} />
