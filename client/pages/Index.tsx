@@ -2569,8 +2569,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* História da Marca Ecko - Líder em Streetwear - Otimizado para mobile */}
-      <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-ecko">
+      {/* História da Marca Onbongo - Surfwear e Streetwear - Otimizado para mobile */}
+      <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-onbongo">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -2579,25 +2579,41 @@ export default function Index() {
                 <div className="space-y-3 sm:space-y-6">
                   <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                     História da Marca
-                    <span className="block text-primary">{BRAND_NAME}</span>
+                    <span className="block text-primary">Onbongo</span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-                    Nascida nas ruas de Nova York em 1993, a Ecko Unltd. chegou
-                    ao Brasil para revolucionar o streetwear nacional. Mais que
-                    uma marca, somos um movimento cultural que une música, arte
-                    urbana e moda autêntica.
+                    Desde 1988, a Onbongo é sinônimo de autenticidade e atitude no surfwear e streetwear brasileiro.
+                    Nascida nas praias e nas ruas, a marca construiu uma trajetória sólida vestindo surfistas,
+                    skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    De graffitis nas paredes às passarelas, nossa essência
-                    permanece a mesma: criar produtos que expressam a identidade
-                    e atitude da nova geração. Cada peça conta uma história,
-                    cada design carrega a alma das ruas.
+                    Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se
+                    sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf -
+                    marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.
                   </p>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                    Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz,
+                    e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca
+                    expressar personalidade através da moda.
+                  </p>
+
+                  {/* Vantagens para Lojistas */}
+                  <div className="bg-gray-50 rounded-xl p-6 space-y-4">
+                    <h3 className="text-lg font-bold text-gray-900">Para Lojistas Oficiais:</h3>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Produtos exclusivos e coleções limitadas</li>
+                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Margens competitivas e alta rotatividade</li>
+                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Suporte comercial completo: fotos, materiais de marketing</li>
+                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Coleções sazonais (verão e inverno)</li>
+                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Compra mínima R$ 2.500 com logística otimizada</li>
+                    </ul>
+                  </div>
                 </div>
+
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      30+
+                      36+
                     </div>
                     <div className="text-gray-600 text-sm">
                       Anos de História
@@ -2605,18 +2621,18 @@ export default function Index() {
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      500+
+                      R$ 2.5K
                     </div>
                     <div className="text-gray-600 text-sm">
-                      Lojistas Parceiros
+                      Compra Mínima
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      1M+
+                      2x
                     </div>
                     <div className="text-gray-600 text-sm">
-                      Clientes Satisfeitos
+                      Coleções/Ano
                     </div>
                   </div>
                   <div className="text-center">
@@ -2624,7 +2640,7 @@ export default function Index() {
                       #1
                     </div>
                     <div className="text-gray-600 text-sm">
-                      Marca de Streetwear
+                      Surfwear Nacional
                     </div>
                   </div>
                 </div>
