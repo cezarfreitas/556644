@@ -1455,7 +1455,7 @@ export default function Index() {
       // Detect specific error types for better user messaging
       let errorType = "network_error";
       let userMessage =
-        "��� Erro de conexão. Verifique sua internet e tente novamente.";
+        "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
@@ -2342,11 +2342,55 @@ export default function Index() {
                     Experiência Completa do Produto
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    No nosso showroom, você tem acesso exclusivo a toda nossa
-                    coleção. Conheça de perto a qualidade dos tecidos, o
-                    acabamento perfeito e os detalhes únicos que fazem da Onbongo a
-                    marca líder em surfwear.
+                    No nosso showroom em São Paulo, você tem acesso exclusivo a toda nossa coleção.
+                    Toque, sinta e experimente a qualidade dos tecidos, o acabamento perfeito e os
+                    detalhes únicos que fazem da Onbongo a marca líder em streetwear e lifestyle.
                   </p>
+                </div>
+
+                {/* Benefits List */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm">Coleções Completas</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm">Atendimento Especializado</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm">Lançamentos Exclusivos</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm">Consultoria Comercial</span>
+                  </div>
+                </div>
+
+                {/* Contact Info */}
+                <div className="bg-gray-800/50 rounded-xl p-6 space-y-4">
+                  <h4 className="text-lg font-bold text-white">Agende sua Visita</h4>
+                  <div className="space-y-2 text-gray-300 text-sm">
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      <span>(11) 9999-9999</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>showroom@onbongo.com.br</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                      </svg>
+                      <span>Segunda a Sexta: 9h às 18h</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
