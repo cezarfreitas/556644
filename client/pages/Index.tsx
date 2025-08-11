@@ -2356,9 +2356,9 @@ export default function Index() {
               <div className="text-center">
                 <div className="relative">
                   <img
-                    src="/images/gallery/onbongo-1.jpg"
+                    src="/images/gallery/onbongo-1.webp"
                     alt="Showroom Ecko - Espaço exclusivo para lojistas"
-                    className="w-full max-w-lg rounded-2xl shadow-2xl mx-auto"
+                    className="w-full max-w-lg aspect-square object-cover rounded-2xl shadow-2xl mx-auto"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
