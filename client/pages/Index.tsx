@@ -1683,7 +1683,7 @@ export default function Index() {
           {/* Mobile CTA */}
           <a
             href="#cadastro-lojistas"
-            className="inline-flex items-center justify-center max-w-xs bg-primary hover:bg-red-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
+            className="inline-flex items-center justify-center max-w-xs bg-primary hover:bg-onbongo-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
           >
             Começar Agora!
             <svg
@@ -1746,7 +1746,7 @@ export default function Index() {
               <div className="pt-4 flex justify-center">
                 <a
                   href="#cadastro-lojistas"
-                  className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
+                  className="inline-flex items-center justify-center bg-primary hover:bg-onbongo-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
                 >
                   Começar Agora!
                   <svg
@@ -2313,7 +2313,7 @@ export default function Index() {
             <div className="text-center mt-16">
               <a
                 href="#cadastro-lojistas"
-                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
+                className="inline-block bg-primary hover:bg-onbongo-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
                 Quero Ser Lojista Oficial
               </a>
@@ -2373,7 +2373,7 @@ export default function Index() {
                   </p>
                   <a
                     href="#cadastro-lojistas"
-                    className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
+                    className="inline-flex items-center justify-center bg-primary hover:bg-onbongo-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
                   >
                     <FaArrowRight className="w-5 h-5" />
                     Quero Ser Lojista
@@ -2565,7 +2565,7 @@ export default function Index() {
               </p>
               <a
                 href="#cadastro-lojistas"
-                className="inline-block bg-primary hover:bg-red-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
+                className="inline-block bg-primary hover:bg-onbongo-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
                 Quero Ser o Próximo Parceiro de Sucesso
               </a>
@@ -2593,7 +2593,7 @@ export default function Index() {
                     surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com mais de três décadas de história, a Onbongo se
+                    Com mais de tr��s décadas de história, a Onbongo se
                     reinventou a cada geração, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
                     muito além do surf - marcou presença no futebol
@@ -2716,7 +2716,7 @@ export default function Index() {
               </p>
               <a
                 href="#cadastro-lojistas"
-                className="inline-block bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
+                className="inline-block bg-primary hover:bg-onbongo-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
                 Quero Ser Lojista
               </a>
