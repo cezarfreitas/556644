@@ -358,7 +358,7 @@ export default function Admin() {
                 onClick={resetData}
                 className="inline-flex items-center px-3 py-2 border border-red-300 shadow-sm text-sm leading-4 font-medium rounded-md text-red-700 bg-white hover:bg-red-50"
               >
-                <FaReset className="mr-2" />
+                <FaUndo className="mr-2" />
                 Reset
               </button>
             </div>
