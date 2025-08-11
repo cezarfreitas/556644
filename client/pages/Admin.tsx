@@ -525,9 +525,10 @@ export default function Admin() {
                       value={data.hero.backgroundImage}
                       onChange={(url) => updateSection("hero", { ...data.hero, backgroundImage: url })}
                       label="Imagem de Fundo do Hero"
-                      maxSizeMB={3}
+                      maxSizeMB={compressionSettings.maxSizeMB}
                       maxWidth={1920}
                       maxHeight={1080}
+                      quality={compressionSettings.quality}
                     />
                   </div>
                 </div>
@@ -808,7 +809,7 @@ export default function Admin() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Descriç��o
+                      Descrição
                     </label>
                     <textarea
                       value={data.testimonials.description}
