@@ -19,12 +19,12 @@ export default function CompressionSettingsComponent({
   settings,
   onChange,
   isOpen,
-  onToggle
+  onToggle,
 }: CompressionSettingsProps) {
   const updateSetting = (key: keyof CompressionSettings, value: number) => {
     onChange({
       ...settings,
-      [key]: value
+      [key]: value,
     });
   };
 
@@ -37,19 +37,27 @@ export default function CompressionSettingsComponent({
       >
         <div className="flex items-center space-x-2">
           <FaCog className="text-gray-600" />
-          <span className="font-medium text-gray-900">Configurações de Compressão</span>
+          <span className="font-medium text-gray-900">
+            Configurações de Compressão
+          </span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-xs text-gray-500">
-            {Math.round(settings.quality * 100)}% • {settings.maxWidth}x{settings.maxHeight} • {settings.maxSizeMB}MB
+            {Math.round(settings.quality * 100)}% • {settings.maxWidth}x
+            {settings.maxHeight} • {settings.maxSizeMB}MB
           </span>
           <svg
-            className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
           </svg>
         </div>
       </button>
@@ -59,8 +67,9 @@ export default function CompressionSettingsComponent({
           <div className="flex items-start space-x-2 text-sm text-blue-600 bg-blue-50 p-3 rounded-md">
             <FaInfoCircle className="mt-0.5 flex-shrink-0" />
             <p>
-              Estas configurações são aplicadas automaticamente no servidor quando você faz upload de imagens.
-              As imagens são salvas na pasta 'imagens' com compressão otimizada para web.
+              Estas configurações são aplicadas automaticamente no servidor
+              quando você faz upload de imagens. As imagens são salvas na pasta
+              'imagens' com compressão otimizada para web.
             </p>
           </div>
 
@@ -76,12 +85,16 @@ export default function CompressionSettingsComponent({
                   max="1"
                   step="0.1"
                   value={settings.quality}
-                  onChange={(e) => updateSetting('quality', parseFloat(e.target.value))}
+                  onChange={(e) =>
+                    updateSetting("quality", parseFloat(e.target.value))
+                  }
                   className="w-full"
                 />
                 <div className="flex justify-between text-xs text-gray-500">
                   <span>Baixa (10%)</span>
-                  <span className="font-medium">{Math.round(settings.quality * 100)}%</span>
+                  <span className="font-medium">
+                    {Math.round(settings.quality * 100)}%
+                  </span>
                   <span>Alta (100%)</span>
                 </div>
               </div>
@@ -97,7 +110,9 @@ export default function CompressionSettingsComponent({
                 max="10"
                 step="0.5"
                 value={settings.maxSizeMB}
-                onChange={(e) => updateSetting('maxSizeMB', parseFloat(e.target.value))}
+                onChange={(e) =>
+                  updateSetting("maxSizeMB", parseFloat(e.target.value))
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -108,7 +123,9 @@ export default function CompressionSettingsComponent({
               </label>
               <select
                 value={settings.maxWidth}
-                onChange={(e) => updateSetting('maxWidth', parseInt(e.target.value))}
+                onChange={(e) =>
+                  updateSetting("maxWidth", parseInt(e.target.value))
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value={400}>400px (Pequeno)</option>
@@ -125,7 +142,9 @@ export default function CompressionSettingsComponent({
               </label>
               <select
                 value={settings.maxHeight}
-                onChange={(e) => updateSetting('maxHeight', parseInt(e.target.value))}
+                onChange={(e) =>
+                  updateSetting("maxHeight", parseInt(e.target.value))
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value={300}>300px (Pequeno)</option>
@@ -138,9 +157,18 @@ export default function CompressionSettingsComponent({
           </div>
 
           <div className="text-xs text-gray-500 space-y-1">
-            <p><strong>Dica:</strong> Para logos e ícones, use qualidade alta (80-100%) e dimensões menores.</p>
-            <p><strong>Dica:</strong> Para fotos de fundo, você pode usar qualidade menor (60-80%) para reduzir o tamanho do arquivo.</p>
-            <p><strong>Dica:</strong> Imagens maiores que as dimensões máximas serão redimensionadas proporcionalmente.</p>
+            <p>
+              <strong>Dica:</strong> Para logos e ícones, use qualidade alta
+              (80-100%) e dimensões menores.
+            </p>
+            <p>
+              <strong>Dica:</strong> Para fotos de fundo, você pode usar
+              qualidade menor (60-80%) para reduzir o tamanho do arquivo.
+            </p>
+            <p>
+              <strong>Dica:</strong> Imagens maiores que as dimensões máximas
+              serão redimensionadas proporcionalmente.
+            </p>
           </div>
         </div>
       )}

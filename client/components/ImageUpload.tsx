@@ -18,7 +18,7 @@ export default function ImageUpload({
   maxSizeMB = 1,
   quality = 0.8,
   maxWidth = 1920,
-  maxHeight = 1080
+  maxHeight = 1080,
 }: ImageUploadProps) {
   const [isUploading, setIsUploading] = useState(false);
   const [dragActive, setDragActive] = useState(false);
@@ -27,18 +27,18 @@ export default function ImageUpload({
 
   const uploadImageToServer = async (file: File): Promise<string> => {
     const formData = new FormData();
-    formData.append('image', file);
-    formData.append('quality', Math.round(quality * 100).toString());
-    formData.append('maxWidth', maxWidth.toString());
-    formData.append('maxHeight', maxHeight.toString());
+    formData.append("image", file);
+    formData.append("quality", Math.round(quality * 100).toString());
+    formData.append("maxWidth", maxWidth.toString());
+    formData.append("maxHeight", maxHeight.toString());
 
-    const response = await fetch('/api/upload/image', {
-      method: 'POST',
+    const response = await fetch("/api/upload/image", {
+      method: "POST",
       body: formData,
     });
 
     if (!response.ok) {
-      throw new Error('Failed to upload image');
+      throw new Error("Failed to upload image");
     }
 
     const result = await response.json();
@@ -46,8 +46,8 @@ export default function ImageUpload({
   };
 
   const handleFileSelect = async (file: File) => {
-    if (!file.type.startsWith('image/')) {
-      alert('Por favor, selecione apenas arquivos de imagem.');
+    if (!file.type.startsWith("image/")) {
+      alert("Por favor, selecione apenas arquivos de imagem.");
       return;
     }
 
@@ -63,8 +63,8 @@ export default function ImageUpload({
       setPreviewUrl(imageUrl);
       onChange(imageUrl);
     } catch (error) {
-      console.error('Erro ao fazer upload da imagem:', error);
-      alert('Erro ao fazer upload da imagem. Tente novamente.');
+      console.error("Erro ao fazer upload da imagem:", error);
+      alert("Erro ao fazer upload da imagem. Tente novamente.");
     } finally {
       setIsUploading(false);
     }
@@ -73,7 +73,7 @@ export default function ImageUpload({
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setDragActive(false);
-    
+
     const files = Array.from(e.dataTransfer.files);
     if (files.length > 0) {
       handleFileSelect(files[0]);
@@ -88,10 +88,10 @@ export default function ImageUpload({
   };
 
   const clearImage = () => {
-    setPreviewUrl('');
-    onChange('');
+    setPreviewUrl("");
+    onChange("");
     if (fileInputRef.current) {
-      fileInputRef.current.value = '';
+      fileInputRef.current.value = "";
     }
   };
 
@@ -101,18 +101,16 @@ export default function ImageUpload({
 
   return (
     <div className="space-y-3">
-      <label className="block text-sm font-medium text-gray-700">
-        {label}
-      </label>
-      
+      <label className="block text-sm font-medium text-gray-700">{label}</label>
+
       {/* Upload Area */}
       <div
         className={`relative border-2 border-dashed rounded-lg p-6 transition-colors ${
           dragActive
-            ? 'border-primary bg-primary/5'
+            ? "border-primary bg-primary/5"
             : previewUrl
-            ? 'border-gray-200'
-            : 'border-gray-300 hover:border-gray-400'
+              ? "border-gray-200"
+              : "border-gray-300 hover:border-gray-400"
         }`}
         onDrop={handleDrop}
         onDragOver={(e) => {
@@ -147,7 +145,7 @@ export default function ImageUpload({
             <FaImage className="mx-auto h-12 w-12 text-gray-400 mb-4" />
             <div className="space-y-2">
               <p className="text-sm text-gray-600">
-                Arraste uma imagem aqui ou{' '}
+                Arraste uma imagem aqui ou{" "}
                 <button
                   onClick={openFileDialog}
                   className="text-primary hover:text-primary/80 font-medium"
@@ -185,9 +183,9 @@ export default function ImageUpload({
           type="button"
         >
           <FaUpload className="mr-2" />
-          {isUploading ? 'Fazendo Upload...' : 'Selecionar Arquivo'}
+          {isUploading ? "Fazendo Upload..." : "Selecionar Arquivo"}
         </button>
-        
+
         {previewUrl && (
           <button
             onClick={clearImage}

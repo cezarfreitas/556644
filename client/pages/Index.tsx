@@ -1779,7 +1779,9 @@ export default function Index() {
                   {landingData.form.benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">{index + 1}</span>
+                        <span className="text-white font-bold text-sm">
+                          {index + 1}
+                        </span>
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-white mb-1">
@@ -2758,7 +2760,9 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="text-center space-y-2">
                 <div className="text-gray-300 text-sm">
-                  {new Date().getFullYear()}. {landingData.footer.copyright || "Todos os direitos reservados."}
+                  {new Date().getFullYear()}.{" "}
+                  {landingData.footer.copyright ||
+                    "Todos os direitos reservados."}
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
@@ -2783,7 +2787,8 @@ export default function Index() {
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors duration-300"
                   >
-                    {landingData.footer.developedBy?.name || "IDE | Negócios digitais"}
+                    {landingData.footer.developedBy?.name ||
+                      "IDE | Negócios digitais"}
                   </a>
                 </div>
               </div>

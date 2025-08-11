@@ -18,7 +18,7 @@ export default function MultipleImageUpload({
   maxSizeMB = 2,
   quality = 0.8,
   maxWidth = 800,
-  maxHeight = 600
+  maxHeight = 600,
 }: MultipleImageUploadProps) {
   const [isUploading, setIsUploading] = useState(false);
   const [dragActive, setDragActive] = useState(false);
@@ -27,21 +27,21 @@ export default function MultipleImageUpload({
   const uploadImagesToServer = async (files: File[]): Promise<string[]> => {
     const formData = new FormData();
 
-    files.forEach(file => {
-      formData.append('images', file);
+    files.forEach((file) => {
+      formData.append("images", file);
     });
 
-    formData.append('quality', Math.round(quality * 100).toString());
-    formData.append('maxWidth', maxWidth.toString());
-    formData.append('maxHeight', maxHeight.toString());
+    formData.append("quality", Math.round(quality * 100).toString());
+    formData.append("maxWidth", maxWidth.toString());
+    formData.append("maxHeight", maxHeight.toString());
 
-    const response = await fetch('/api/upload/images', {
-      method: 'POST',
+    const response = await fetch("/api/upload/images", {
+      method: "POST",
       body: formData,
     });
 
     if (!response.ok) {
-      throw new Error('Failed to upload images');
+      throw new Error("Failed to upload images");
     }
 
     const result = await response.json();
@@ -49,8 +49,8 @@ export default function MultipleImageUpload({
   };
 
   const handleFilesSelect = async (files: FileList) => {
-    const validFiles = Array.from(files).filter(file => {
-      if (!file.type.startsWith('image/')) {
+    const validFiles = Array.from(files).filter((file) => {
+      if (!file.type.startsWith("image/")) {
         alert(`${file.name} não é um arquivo de imagem válido.`);
         return false;
       }
@@ -64,7 +64,9 @@ export default function MultipleImageUpload({
     if (validFiles.length === 0) return;
 
     if (images.length + validFiles.length > maxImages) {
-      alert(`Você pode adicionar no máximo ${maxImages} imagens. Remova algumas antes de adicionar mais.`);
+      alert(
+        `Você pode adicionar no máximo ${maxImages} imagens. Remova algumas antes de adicionar mais.`,
+      );
       return;
     }
 
@@ -74,8 +76,8 @@ export default function MultipleImageUpload({
       const uploadedUrls = await uploadImagesToServer(validFiles);
       onChange([...images, ...uploadedUrls]);
     } catch (error) {
-      console.error('Erro ao fazer upload das imagens:', error);
-      alert('Erro ao fazer upload das imagens. Tente novamente.');
+      console.error("Erro ao fazer upload das imagens:", error);
+      alert("Erro ao fazer upload das imagens. Tente novamente.");
     } finally {
       setIsUploading(false);
     }
@@ -84,7 +86,7 @@ export default function MultipleImageUpload({
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setDragActive(false);
-    
+
     if (e.dataTransfer.files) {
       handleFilesSelect(e.dataTransfer.files);
     }
@@ -121,8 +123,8 @@ export default function MultipleImageUpload({
       <div
         className={`border-2 border-dashed rounded-lg p-6 transition-colors ${
           dragActive
-            ? 'border-primary bg-primary/5'
-            : 'border-gray-300 hover:border-gray-400'
+            ? "border-primary bg-primary/5"
+            : "border-gray-300 hover:border-gray-400"
         }`}
         onDrop={handleDrop}
         onDragOver={(e) => {
@@ -135,7 +137,7 @@ export default function MultipleImageUpload({
           <FaUpload className="mx-auto h-8 w-8 text-gray-400 mb-3" />
           <div className="space-y-2">
             <p className="text-sm text-gray-600">
-              Arraste múltiplas imagens aqui ou{' '}
+              Arraste múltiplas imagens aqui ou{" "}
               <button
                 onClick={openFileDialog}
                 disabled={isUploading || images.length >= maxImages}
@@ -158,7 +160,9 @@ export default function MultipleImageUpload({
         {isUploading && (
           <div className="text-center mt-4">
             <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary mx-auto mb-2"></div>
-            <p className="text-sm text-gray-600">Fazendo upload das imagens...</p>
+            <p className="text-sm text-gray-600">
+              Fazendo upload das imagens...
+            </p>
           </div>
         )}
       </div>
@@ -171,7 +175,7 @@ export default function MultipleImageUpload({
         type="button"
       >
         <FaUpload className="mr-2" />
-        {isUploading ? 'Fazendo Upload...' : 'Adicionar Imagens'}
+        {isUploading ? "Fazendo Upload..." : "Adicionar Imagens"}
       </button>
 
       {/* Images Grid */}
@@ -180,7 +184,9 @@ export default function MultipleImageUpload({
           {images.map((image, index) => (
             <div key={index} className="border border-gray-200 rounded-lg p-4">
               <div className="flex justify-between items-start mb-3">
-                <h4 className="font-medium text-gray-900">Imagem {index + 1}</h4>
+                <h4 className="font-medium text-gray-900">
+                  Imagem {index + 1}
+                </h4>
                 <button
                   onClick={() => removeImage(index)}
                   className="text-red-600 hover:text-red-800"
