@@ -1357,7 +1357,7 @@ export default function Index() {
         trackCompleteRegistration("business_form");
       } else {
         console.log(
-          "ℹ️ Usuário sem CNPJ - eventos de conversão Facebook não enviados",
+          "ℹ️ Usuário sem CNPJ - eventos de conversão Facebook n��o enviados",
         );
       }
 
@@ -2686,10 +2686,10 @@ export default function Index() {
                     className="text-red-500 inline-block"
                     style={{
                       fontSize: "16px",
-                      animation: "heartbeat 1.5s ease-in-out infinite",
+                      animation: "heartbeat 2s ease-in-out infinite",
                       transformOrigin: "center",
                       display: "inline-block",
-                      transition: "transform 0.15s ease-in-out"
+                      transition: "transform 0.2s ease-in-out"
                     }}
                     title="Coração animado"
                     data-heart="true"
