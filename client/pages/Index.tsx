@@ -1085,7 +1085,7 @@ export default function Index() {
     }
   };
 
-  // Fun��ões de validação
+  // Funções de validação
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
@@ -1463,7 +1463,7 @@ export default function Index() {
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
-        userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
+        userMessage = "��️ Tempo limite excedido. Tente novamente.";
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
@@ -1771,11 +1771,7 @@ export default function Index() {
             <div className="space-y-6 sm:space-y-10">
               <div className="space-y-6 sm:space-y-8">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white leading-[0.9] uppercase tracking-wide">
-                  <span className="block">SEJA UM</span>
-                  <span className="block text-primary">LOJISTA OFICIAL</span>
-                  <span className="block text-primary font-black">
-                    ONBONGO AGORA MESMO
-                  </span>
+                  {landingData.form.sectionTitle}
                 </h2>
 
                 {/* 4 Motivos */}
