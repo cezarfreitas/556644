@@ -1459,7 +1459,7 @@ export default function Index() {
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
-        userMessage = "⏱�� Tempo limite excedido. Tente novamente.";
+        userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
@@ -2393,7 +2393,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Depoimentos de Lojistas Parceiros Ecko - Otimizado para mobile */}
+      {/* Depoimentos de Lojistas Parceiros Onbongo - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32 bg-gray-100"
         id="depoimentos-lojistas"
@@ -2404,12 +2404,12 @@ export default function Index() {
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Depoimentos de Lojistas
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  Ecko Oficiais
+                  Onbongo Oficiais
                 </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 Histórias reais de sucesso de parceiros que triplicaram o
-                faturamento com a Ecko
+                faturamento com a Onbongo
               </p>
             </div>
 
