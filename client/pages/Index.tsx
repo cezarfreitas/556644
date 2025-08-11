@@ -1107,7 +1107,7 @@ export default function Index() {
     // Validação de CNPJ
     if (numbers === "00000000000000") return "CNPJ inválido";
 
-    // Algoritmo de validação de CNPJ
+    // Algoritmo de valida��ão de CNPJ
     let sum = 0;
     let weight = 2;
 
@@ -2313,7 +2313,7 @@ export default function Index() {
       <section className="py-8 sm:py-12 md:py-16 bg-black" id="showroom">
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
+            <div className="text-center space-y-2 sm:space-y-4 mb-8 sm:mb-10">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white">
                 Conheça o Show Room da
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
