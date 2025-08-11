@@ -1776,69 +1776,21 @@ export default function Index() {
 
                 {/* 4 Motivos */}
                 <div className="mt-8 space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">1</span>
+                  {landingData.form.benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-white mb-1">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm">
+                          {benefit.description}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">
-                        Marca Internacional
-                      </h3>
-                      <p className="text-gray-300 text-sm">
-                        Revenda uma marca brasileira de streetwear com
-                        reconhecimento mundial e mais de três décadas de
-                        história.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">2</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">
-                        Pronta Entrega
-                      </h3>
-                      <p className="text-gray-300 text-sm">
-                        Mais de 100.000 peças disponíveis para envio imediato,
-                        garantindo giro rápido e novidades constantes na sua
-                        loja.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">3</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">
-                        Plataforma Online
-                      </h3>
-                      <p className="text-gray-300 text-sm">
-                        Acesse nosso catálogo digital com preços exclusivos para
-                        lojistas e coleções que respiram o espírito urbano e
-                        esportivo.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">4</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">
-                        Apoio às Vendas
-                      </h3>
-                      <p className="text-gray-300 text-sm">
-                        Conte com treinamento, materiais de marketing e suporte
-                        comercial especializado para aumentar suas vendas e
-                        fortalecer sua vitrine.
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
