@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
 
   # Para desenvolvimento - descomente se necessário
-  # ecko-landing-dev:
+  # onbongo-landing-dev:
   #   build:
   #     context: .
   #     dockerfile: Dockerfile
