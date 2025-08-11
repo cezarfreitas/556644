@@ -1327,7 +1327,13 @@ export default function Admin() {
               {/* Integrations Section */}
               {activeTab === "integrations" && (
                 <div className="space-y-6">
-                  <h2 className="text-xl font-semibold text-gray-900">Configurações de Integrações</h2>
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-xl font-semibold text-gray-900">Configurações de Integrações</h2>
+                    <div className="flex items-center space-x-2 text-sm text-green-600 bg-green-50 px-3 py-1 rounded-full">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span>Ativo na Landing Page</span>
+                    </div>
+                  </div>
 
                   {/* Form API */}
                   <div className="border border-gray-200 rounded-lg p-4">
