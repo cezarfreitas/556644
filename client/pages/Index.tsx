@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { MdStar, MdAttachMoney } from "react-icons/md";
 import { useLandingPageData } from "../hooks/useLandingPageData";
 import TrackingScripts, { trackFormSubmission, submitToFormAPI } from "../components/TrackingScripts";
+import SEOHead from "../components/SEOHead";
 import {
   FaFacebook,
   FaInstagram,
