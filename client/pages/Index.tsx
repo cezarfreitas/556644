@@ -831,6 +831,15 @@ export default function Index() {
         throw new Error("Access Token format invalid - should start with EAA");
       }
 
+      // Check for common token issues
+      if (META_ACCESS_TOKEN.includes(" ") || META_ACCESS_TOKEN.includes("\n")) {
+        console.error("Meta API: Access token contains whitespace characters");
+        throw new Error("Access Token contains invalid whitespace characters");
+      }
+
+      // Log token validation success
+      console.log("✅ Meta API: Access token format validation passed");
+
       // Add additional identifiers to improve attribution
       if (!userData.fbp && !userData.fbc) {
         // If no Facebook cookies, add external_id based on session/timestamp
