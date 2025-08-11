@@ -39,7 +39,7 @@ export default function Index() {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
-  // Função auxiliar para pegar cookies (movida para cima para disponibilidade)
+  // Fun��ão auxiliar para pegar cookies (movida para cima para disponibilidade)
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -1105,7 +1105,7 @@ export default function Index() {
 
   const validateCNPJ = (cnpj: string) => {
     const numbers = cnpj.replace(/\D/g, "");
-    if (!numbers) return "CNPJ é obrigatório";
+    if (!numbers) return "CNPJ �� obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
     // Validação de CNPJ
@@ -2778,12 +2778,12 @@ export default function Index() {
                   </span>{" "}
                   por{" "}
                   <a
-                    href={DEVELOPER_URL}
+                    href={landingData.footer.developedBy.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors duration-300"
                   >
-                    {DEVELOPER_NAME}
+                    {landingData.footer.developedBy.name}
                   </a>
                 </div>
               </div>
