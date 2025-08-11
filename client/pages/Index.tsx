@@ -1793,8 +1793,7 @@ export default function Index() {
                         Marca Internacional
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Representa uma marca de streetwear reconhecida
-                        mundialmente.
+                        Revenda uma marca brasileira de streetwear com reconhecimento mundial e mais de três décadas de história.
                       </p>
                     </div>
                   </div>
@@ -1808,7 +1807,7 @@ export default function Index() {
                         Pronta Entrega
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Mais de 100.000 itens disponíveis para envio imediato.
+                        Mais de 100.000 peças disponíveis para envio imediato, garantindo giro rápido e novidades constantes na sua loja.
                       </p>
                     </div>
                   </div>
@@ -1822,8 +1821,7 @@ export default function Index() {
                         Plataforma Online
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Acesse nosso catálogo digital com preços exclusivos para
-                        lojistas.
+                        Acesse nosso catálogo digital com preços exclusivos para lojistas e coleções que respiram o espírito urbano e esportivo.
                       </p>
                     </div>
                   </div>
@@ -1837,8 +1835,7 @@ export default function Index() {
                         Apoio às Vendas
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Treinamento, materiais de marketing e suporte comercial
-                        especializado.
+                        Conte com treinamento, materiais de marketing e suporte comercial especializado para aumentar suas vendas e fortalecer sua vitrine.
                       </p>
                     </div>
                   </div>
