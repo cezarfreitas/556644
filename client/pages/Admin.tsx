@@ -402,6 +402,22 @@ export default function Admin() {
               ...defaultData.integrations.googleAds,
               ...parsedData.integrations?.googleAds
             }
+          },
+          seo: {
+            ...defaultData.seo,
+            ...parsedData.seo,
+            openGraph: {
+              ...defaultData.seo.openGraph,
+              ...parsedData.seo?.openGraph
+            },
+            twitter: {
+              ...defaultData.seo.twitter,
+              ...parsedData.seo?.twitter
+            },
+            structured: {
+              ...defaultData.seo.structured,
+              ...parsedData.seo?.structured
+            }
           }
         };
         setData(mergedData);
