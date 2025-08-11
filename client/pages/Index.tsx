@@ -78,12 +78,18 @@ export default function Index() {
 
   // Debug Meta API configuration
   console.log("🎯 Meta API Debug:");
-  console.log("Raw VITE_META_ACCESS_TOKEN:", import.meta.env.VITE_META_ACCESS_TOKEN);
+  console.log(
+    "Raw VITE_META_ACCESS_TOKEN:",
+    import.meta.env.VITE_META_ACCESS_TOKEN,
+  );
   console.log("META_PIXEL_ID:", META_PIXEL_ID);
   console.log("META_ACCESS_TOKEN type:", typeof META_ACCESS_TOKEN);
   console.log("META_ACCESS_TOKEN present:", !!META_ACCESS_TOKEN);
   console.log("META_ACCESS_TOKEN length:", META_ACCESS_TOKEN?.length || 0);
-  console.log("META_ACCESS_TOKEN format:", META_ACCESS_TOKEN ? (META_ACCESS_TOKEN.substring(0, 10) + "...") : "Missing");
+  console.log(
+    "META_ACCESS_TOKEN format:",
+    META_ACCESS_TOKEN ? META_ACCESS_TOKEN.substring(0, 10) + "..." : "Missing",
+  );
   console.log("META_API_VERSION:", META_API_VERSION);
   console.log("META_TEST_EVENT_CODE:", META_TEST_EVENT_CODE);
 
@@ -824,12 +830,16 @@ export default function Index() {
         console.error("Length:", META_ACCESS_TOKEN.length);
         console.error("Preview:", META_ACCESS_TOKEN.substring(0, 20) + "...");
         console.error("Type:", typeof META_ACCESS_TOKEN);
-        throw new Error(`Access Token appears invalid (length: ${META_ACCESS_TOKEN.length})`);
+        throw new Error(
+          `Access Token appears invalid (length: ${META_ACCESS_TOKEN.length})`,
+        );
       }
 
       // Check if token starts with expected format (EAA for Facebook tokens)
       if (!META_ACCESS_TOKEN.startsWith("EAA")) {
-        console.error("Meta API: Access token doesn't start with expected format");
+        console.error(
+          "Meta API: Access token doesn't start with expected format",
+        );
         throw new Error("Access Token format invalid - should start with EAA");
       }
 
@@ -2666,7 +2676,10 @@ export default function Index() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, os produtos são 100% oficiais da marca {BRAND_NAME}. Quando você se torna um lojista oficial, você tem a garantia de estar adquirindo produtos autênticos e de qualidade da marca.
+                  Sim, os produtos são 100% oficiais da marca {BRAND_NAME}.
+                  Quando você se torna um lojista oficial, você tem a garantia
+                  de estar adquirindo produtos autênticos e de qualidade da
+                  marca.
                 </div>
               </details>
 
@@ -2679,7 +2692,10 @@ export default function Index() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, temos um showroom em São Paulo que está aberto para visitações. É uma ótima oportunidade para conhecer nossos produtos pessoalmente. Faça o cadastro e um representante entrará em contato para agendar sua visita.
+                  Sim, temos um showroom em São Paulo que está aberto para
+                  visitações. É uma ótima oportunidade para conhecer nossos
+                  produtos pessoalmente. Faça o cadastro e um representante
+                  entrará em contato para agendar sua visita.
                 </div>
               </details>
 
@@ -2692,7 +2708,10 @@ export default function Index() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, existe um valor de pedido mínimo para iniciar sua parceria como lojista oficial {BRAND_NAME}. Os detalhes específicos sobre valores serão informados em nosso primeiro contato.
+                  Sim, existe um valor de pedido mínimo para iniciar sua
+                  parceria como lojista oficial {BRAND_NAME}. Os detalhes
+                  específicos sobre valores serão informados em nosso primeiro
+                  contato.
                 </div>
               </details>
 
@@ -2705,7 +2724,9 @@ export default function Index() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Aceitamos pagamentos através do PIX e cartão de crédito parcelado. No momento, não aceitamos pagamentos via boleto bancário.
+                  Aceitamos pagamentos através do PIX e cartão de crédito
+                  parcelado. No momento, não aceitamos pagamentos via boleto
+                  bancário.
                 </div>
               </details>
             </div>
@@ -2818,7 +2839,6 @@ export default function Index() {
                 </div>
               </div>
             </div>
-
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 pt-8">
