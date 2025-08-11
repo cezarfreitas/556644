@@ -318,6 +318,26 @@ export default function Admin() {
               ...defaultData.footer.developedBy,
               ...parsedData.footer?.developedBy
             }
+          },
+          integrations: {
+            ...defaultData.integrations,
+            ...parsedData.integrations,
+            googleAnalytics: {
+              ...defaultData.integrations.googleAnalytics,
+              ...parsedData.integrations?.googleAnalytics
+            },
+            metaPixel: {
+              ...defaultData.integrations.metaPixel,
+              ...parsedData.integrations?.metaPixel
+            },
+            googleTagManager: {
+              ...defaultData.integrations.googleTagManager,
+              ...parsedData.integrations?.googleTagManager
+            },
+            googleAds: {
+              ...defaultData.integrations.googleAds,
+              ...parsedData.integrations?.googleAds
+            }
           }
         };
         setData(mergedData);
@@ -1033,7 +1053,7 @@ export default function Admin() {
               {/* FAQ Section */}
               {activeTab === "faq" && (
                 <div className="space-y-6">
-                  <h2 className="text-xl font-semibold text-gray-900">Seção FAQ</h2>
+                  <h2 className="text-xl font-semibold text-gray-900">Se��ão FAQ</h2>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
