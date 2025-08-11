@@ -2650,15 +2650,14 @@ export default function Index() {
               <div className="text-center lg:text-right">
                 <div className="inline-block">
                   <img
-                    src="/images/gallery/onbongo-2.jpg"
-                    alt="Ecko Streetwear - Autenticidade da Marca - Cultura Urbana"
+                    src="/images/gallery/onbongo-2.webp"
+                    alt="Onbongo Surfwear - Autenticidade da Marca - Cultura Urbana e Esportiva"
                     className="w-full max-w-md rounded-xl shadow-2xl"
                     loading="lazy"
                   />
                   <div className="mt-8 space-y-3">
                     <p className="text-gray-500 text-sm italic">
-                      "Desde 1993, conectando gerações através do streetwear
-                      autêntico"
+                      "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na Onda."
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                   </div>
