@@ -1714,7 +1714,7 @@ export default function Index() {
               {/* Desktop Logo */}
               <div className="mb-8 flex justify-center">
                 <img
-                  src="/images/brand/onbongo-logo.webp"
+                  src={landingData.hero.logo}
                   alt="Logo Onbongo"
                   className="h-20 lg:h-24 w-auto"
                   loading="eager"
@@ -2347,7 +2347,7 @@ export default function Index() {
                 São Paulo - Capital
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
-                Conhe��a o Show Room da
+                Conheça o Show Room da
                 <span className="block text-primary">Onbongo em SP</span>
               </h2>
               <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
