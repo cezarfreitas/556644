@@ -135,7 +135,7 @@ export default function Index() {
     import.meta.env.VITE_HUB_DESCRIPTION ||
     "Uma iniciativa do NTK Grupo Textil para democratizar o acesso dos lojistas às grandes marcas do mercado.";
 
-  // Inicializar tracking na página
+  // Inicializar tracking na p��gina
   useEffect(() => {
     // Marcar início do tempo para cálculo de completion time
     window.formStartTime = performance.now();
@@ -1878,7 +1878,7 @@ export default function Index() {
                         htmlFor="whatsapp"
                         className="block text-sm font-semibold text-white"
                       >
-                        WhatsApp para Contato
+                        {landingData.form.whatsappLabel}
                       </label>
                       <div className="relative">
                         <input
