@@ -61,11 +61,23 @@ interface LandingPageData {
     }>;
   };
   footer: {
+    logo: string;
     description: string;
     socialLinks: {
       facebook: string;
       instagram: string;
       whatsapp: string;
+    };
+    hubMultimarcas: {
+      url: string;
+      logoUrl: string;
+      description: string;
+      companyName: string;
+    };
+    copyright: string;
+    developedBy: {
+      name: string;
+      url: string;
     };
   };
 }
