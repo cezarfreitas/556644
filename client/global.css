@@ -408,8 +408,13 @@ img[fetchpriority="high"] {
 
   /* Simple pulse animation as fallback */
   @keyframes simple-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
   }
 
   .heart-pulse {

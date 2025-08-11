@@ -274,14 +274,14 @@ export default function Index() {
       isAnimating = true;
 
       // First gentle beat
-      heartElement.style.transform = 'scale(1.15)';
+      heartElement.style.transform = "scale(1.15)";
       setTimeout(() => {
-        heartElement.style.transform = 'scale(1)';
+        heartElement.style.transform = "scale(1)";
         setTimeout(() => {
           // Second gentle beat
-          heartElement.style.transform = 'scale(1.15)';
+          heartElement.style.transform = "scale(1.15)";
           setTimeout(() => {
-            heartElement.style.transform = 'scale(1)';
+            heartElement.style.transform = "scale(1)";
             isAnimating = false;
           }, 200);
         }, 280);
@@ -2689,7 +2689,7 @@ export default function Index() {
                       animation: "heartbeat 2s ease-in-out infinite",
                       transformOrigin: "center",
                       display: "inline-block",
-                      transition: "transform 0.2s ease-in-out"
+                      transition: "transform 0.2s ease-in-out",
                     }}
                     title="Coração animado"
                     data-heart="true"
