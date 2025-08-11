@@ -1021,7 +1021,7 @@ export default function Index() {
         }
       }
     } catch (error) {
-      console.error("❌ Meta Conversion API: Network error", error);
+      console.error("��� Meta Conversion API: Network error", error);
 
       // Enhanced error logging for debugging
       console.error("Meta API Error Details:", {
@@ -1092,7 +1092,7 @@ export default function Index() {
   const validateWhatsApp = (phone: string) => {
     const numbers = phone.replace(/\D/g, "");
     if (!numbers) return "WhatsApp é obrigatório";
-    if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 dígitos";
+    if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 d��gitos";
     if (numbers.length < 11 && !numbers.startsWith("11"))
       return "WhatsApp deve ter 11 dígitos para celular";
     if (numbers.length > 11) return "WhatsApp não pode ter mais de 11 dígitos";
@@ -1631,7 +1631,7 @@ export default function Index() {
         <div className="absolute inset-0">
           <img
             src="/images/hero/onbongo-background.webp"
-            alt={`${BRAND_NAME} Streetwear Background`}
+            alt="Onbongo Surfwear Background"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
@@ -1749,7 +1749,7 @@ export default function Index() {
                   href="#cadastro-lojistas"
                   className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
                 >
-                  Come��ar Agora!
+                  Começar Agora!
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -2432,7 +2432,7 @@ export default function Index() {
               <button
                 onClick={nextSlide}
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white/90 backdrop-blur-sm shadow-lg rounded-full p-3 hover:bg-white hover:scale-110 transition-all duration-300"
-                aria-label="Pr��ximo depoimento"
+                aria-label="Próximo depoimento"
               >
                 <FaChevronRight className="w-5 h-5 text-gray-600 hover:text-primary transition-colors" />
               </button>
@@ -2677,7 +2677,7 @@ export default function Index() {
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
                   Sim, existe um valor de pedido mínimo para iniciar sua
-                  parceria como lojista oficial {BRAND_NAME}. Os detalhes
+                  parceria como lojista oficial Onbongo. Os detalhes
                   específicos sobre valores serão informados em nosso primeiro
                   contato.
                 </div>
