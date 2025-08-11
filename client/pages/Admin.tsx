@@ -467,9 +467,10 @@ export default function Admin() {
                       value={data.hero.logo}
                       onChange={(url) => updateSection("hero", { ...data.hero, logo: url })}
                       label="Logo do Hero"
-                      maxSizeMB={2}
-                      maxWidth={800}
-                      maxHeight={400}
+                      maxSizeMB={compressionSettings.maxSizeMB}
+                      maxWidth={compressionSettings.maxWidth}
+                      maxHeight={compressionSettings.maxHeight}
+                      quality={compressionSettings.quality}
                     />
                     
                     <div>
@@ -807,7 +808,7 @@ export default function Admin() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Descrição
+                      Descriç��o
                     </label>
                     <textarea
                       value={data.testimonials.description}
