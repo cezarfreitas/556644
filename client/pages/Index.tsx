@@ -1670,7 +1670,7 @@ export default function Index() {
               <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-1">
                 LOJISTA OFICIAL
               </span>
-              <span className="block">{BRAND_NAME.toUpperCase()}</span>
+              <span className="block">ONBONGO</span>
             </h1>
           </div>
 
@@ -2589,7 +2589,7 @@ export default function Index() {
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se
                     sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf -
-                    marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.
+                    marcou presença no futebol profissional, vestindo grandes nomes como Kak��, Roberto Carlos, Neymar e Amaral.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz,
