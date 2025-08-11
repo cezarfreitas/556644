@@ -422,7 +422,7 @@ export default function Index() {
       name: "Marcos Silva",
       store: "Street Style Store - São Paulo, SP",
       avatar: "M",
-      text: "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lan��amentos da marca.",
+      text: "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca.",
     },
     {
       id: 2,
@@ -2207,7 +2207,7 @@ export default function Index() {
               {/* Photo 1 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-1.jpg"
+                  src="/images/gallery/onbongo-1.webp"
                   alt="Coleção Ecko Streetwear"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2221,7 +2221,7 @@ export default function Index() {
               {/* Photo 2 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-2.jpg"
+                  src="/images/gallery/onbongo-2.webp"
                   alt="Estilo Urbano Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2235,7 +2235,7 @@ export default function Index() {
               {/* Photo 3 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-3.jpg"
+                  src="/images/gallery/onbongo-3.webp"
                   alt="Moda Urbana Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2249,7 +2249,7 @@ export default function Index() {
               {/* Photo 4 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-4.jpg"
+                  src="/images/gallery/onbongo-4.webp"
                   alt="Streetwear Premium Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
