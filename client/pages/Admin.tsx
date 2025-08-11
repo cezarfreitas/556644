@@ -1219,7 +1219,7 @@ export default function Admin() {
                         </label>
                         <input
                           type="text"
-                          value={data.footer.copyright}
+                          value={data.footer.copyright || ""}
                           onChange={(e) => updateSection("footer", { ...data.footer, copyright: e.target.value })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
