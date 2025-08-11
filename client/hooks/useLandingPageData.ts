@@ -153,19 +153,9 @@ const defaultData: LandingPageData = {
     submitButtonText: "",
   },
   gallery: {
-    title: "Coleções Exclusivas Onbongo",
-    description:
-      "Descubra as coleções oficiais Onbongo, com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.",
-    images: [
-      "/images/gallery/onbongo-1.webp",
-      "/images/gallery/onbongo-2.webp",
-      "/images/gallery/onbongo-3.webp",
-      "/images/gallery/onbongo-4.webp",
-      "/images/gallery/onbongo-5.webp",
-      "/images/gallery/onbongo-6.webp",
-      "/images/gallery/onbongo-7.webp",
-      "/images/gallery/onbongo-8.webp",
-    ],
+    title: "",
+    description: "",
+    images: [],
   },
   showroom: {
     title: "Conheça o Show Room da Onbongo em SP",
