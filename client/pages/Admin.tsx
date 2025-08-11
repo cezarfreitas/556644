@@ -191,7 +191,7 @@ const defaultData: LandingPageData = {
     title: "História da Marca Onbongo",
     paragraphs: [
       "Desde 1988, a Onbongo é sinônimo de autenticidade e atitude no surfwear e streetwear brasileiro. Nascida nas praias e nas ruas, a marca construiu uma trajetória sólida vestindo surfistas, skatistas e apaixonados pela cultura urbana.",
-      "Com mais de três décadas de história, a Onbongo se reinventou a cada gera��ão, mantendo-se sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf - marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.",
+      "Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf - marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.",
       "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade através da moda."
     ],
     image: "/images/gallery/onbongo-2.webp",
@@ -245,6 +245,13 @@ export default function Admin() {
   const [data, setData] = useState<LandingPageData>(defaultData);
   const [activeTab, setActiveTab] = useState("hero");
   const [message, setMessage] = useState("");
+  const [compressionSettings, setCompressionSettings] = useState({
+    quality: 0.8,
+    maxWidth: 1200,
+    maxHeight: 800,
+    maxSizeMB: 2
+  });
+  const [showCompressionSettings, setShowCompressionSettings] = useState(false);
 
   // Carregar dados do localStorage
   useEffect(() => {
