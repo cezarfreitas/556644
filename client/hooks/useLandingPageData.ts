@@ -134,7 +134,7 @@ interface LandingPageData {
   };
 }
 
-// Dados padrão (mesmos da página de admin)
+// Dados padrão - completamente vazios para não mostrar nada antes do JSON
 const defaultData: LandingPageData = {
   hero: {
     logo: "",
@@ -172,78 +172,50 @@ const defaultData: LandingPageData = {
     testimonials: [],
   },
   history: {
-    title: "História da Marca Onbongo",
-    paragraphs: [
-      "Desde 1988, a Onbongo é sinônimo de autenticidade e atitude no surfwear e streetwear brasileiro. Nascida nas praias e nas ruas, a marca construiu uma trajetória sólida vestindo surfistas, skatistas e apaixonados pela cultura urbana.",
-      "Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf - marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.",
-      "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade através da moda.",
-    ],
-    image: "/images/gallery/onbongo-2.webp",
-    quote: "Onbongo ��� Sempre à Frente. Sempre no Jogo. Sempre na Onda.",
+    title: "",
+    paragraphs: [],
+    image: "",
+    quote: "",
   },
   faq: {
-    title: "Perguntas Frequentes",
-    description: "Tire suas dúvidas sobre a parceria com a Onbongo",
-    items: [
-      {
-        question: "Os produtos são oficiais da marca Onbongo?",
-        answer:
-          "Sim, os produtos são 100% oficiais da marca Onbongo. Quando você se torna um lojista oficial, você tem a garantia de estar adquirindo produtos autênticos e de qualidade da marca.",
-      },
-      {
-        question: "Posso visitar o showroom em São Paulo?",
-        answer:
-          "Sim, temos um showroom em São Paulo que está aberto para visitações. É uma ótima oportunidade para conhecer nossos produtos pessoalmente. Faça o cadastro e um representante entrará em contato para agendar sua visita.",
-      },
-      {
-        question: "Existe um valor de pedido mínimo?",
-        answer:
-          "Sim, existe um valor de pedido mínimo para iniciar sua parceria como lojista oficial Onbongo. Os detalhes específicos sobre valores serão informados em nosso primeiro contato.",
-      },
-      {
-        question: "Quais as formas de pagamento?",
-        answer:
-          "Aceitamos pagamentos através do PIX e cartão de crédito parcelado. No momento, não aceitamos pagamentos via boleto bancário.",
-      },
-    ],
+    title: "",
+    description: "",
+    items: [],
   },
   footer: {
     logo: "",
-    description:
-      "A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.",
+    description: "",
     socialLinks: {
-      facebook: "https://www.facebook.com/onbongo",
-      instagram: "https://www.instagram.com/onbongo_oficial/",
-      whatsapp: "https://onbongo.com.br",
+      facebook: "",
+      instagram: "",
+      whatsapp: "",
     },
     hubMultimarcas: {
-      url: "https://hubmultimarcas.com.br/",
-      logoUrl:
-        "https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F8a4c71f1296940d088b5de8207ba30f4?format=webp&width=800",
-      description:
-        "Uma iniciativa do NTK Grupo Textil para democratizar o acesso dos lojistas às grandes marcas do mercado. Conectamos empreendedores com as melhores oportunidades de negócio, oferecendo suporte completo para o crescimento do seu comércio.",
-      companyName: "NTK Grupo Textil - Conectando marcas e lojistas",
+      url: "",
+      logoUrl: "",
+      description: "",
+      companyName: "",
     },
-    copyright: "© Todos os direitos reservados.",
+    copyright: "",
     developedBy: {
-      name: "IDE | Negócios digitais",
-      url: "https://www.idenegociosdigitais.com.br",
+      name: "",
+      url: "",
     },
   },
   integrations: {
-    formApi: "https://api.idenegociosdigitais.com.br/webhook/ntk-leads",
+    formApi: "",
     googleAnalytics: {
-      measurementId: "G-GSDX6XV3V6"
+      measurementId: ""
     },
     metaPixel: {
-      pixelId: "1052506589717984",
-      conversionName: "Lead_Ecko",
-      apiVersion: "v18.0",
-      testEventCode: "TEST48830",
-      accessToken: "EAAJpULqxTvgBPEZCvLn9cEgPfIFikaWiBeuia34MFmH0nUn5bq57BHW6vaZAwZCYHiPE3ic6Gb91V6yEFWs8LMktOni9JQbij6M2lPTfSly7ePl5FtQWZBm1Dxp7ICMfR2P4s4gpNjWCuuRZB5Pn21uFCZBe6YZBoqCq0JxcfycaIqhZAHtpMiMatTdw2aH9l63DzQZDZD"
+      pixelId: "",
+      conversionName: "",
+      apiVersion: "",
+      testEventCode: "",
+      accessToken: ""
     },
     googleTagManager: {
-      containerId: "GTM-XXXXXXX"
+      containerId: ""
     },
     googleAds: {
       conversionId: "",
@@ -251,35 +223,35 @@ const defaultData: LandingPageData = {
     }
   },
   seo: {
-    title: "Seja um Lojista Oficial Onbongo | Revenda Streetwear Premium",
-    description: "Torne-se um lojista oficial Onbongo e tenha acesso a produtos exclusivos de streetwear. Mais de 30 anos de história, pronta entrega e suporte especializado.",
-    keywords: "onbongo, lojista, revenda, streetwear, surfwear, atacado, moda urbana, franquia",
-    author: "Onbongo Brasil",
-    canonicalUrl: "https://onbongo.com.br/",
-    favicon: "/favicon.ico",
-    appleTouchIcon: "/apple-touch-icon.png",
+    title: "",
+    description: "",
+    keywords: "",
+    author: "",
+    canonicalUrl: "",
+    favicon: "",
+    appleTouchIcon: "",
     openGraph: {
-      title: "Seja um Lojista Oficial Onbongo | Streetwear Premium",
-      description: "Revenda uma das maiores marcas de streetwear do Brasil. Produtos exclusivos, pronta entrega e suporte especializado para lojistas.",
-      image: "/images/og-image.jpg",
-      url: "https://onbongo.com.br/",
-      type: "website",
-      siteName: "Onbongo Lojistas"
+      title: "",
+      description: "",
+      image: "",
+      url: "",
+      type: "",
+      siteName: ""
     },
     twitter: {
-      card: "summary_large_image",
-      title: "Seja um Lojista Oficial Onbongo",
-      description: "Revenda uma das maiores marcas de streetwear do Brasil. Produtos exclusivos, pronta entrega e suporte especializado.",
-      image: "/images/twitter-card.jpg",
-      creator: "@onbongo_oficial",
-      site: "@onbongo_oficial"
+      card: "",
+      title: "",
+      description: "",
+      image: "",
+      creator: "",
+      site: ""
     },
     structured: {
-      organizationName: "Onbongo Brasil",
-      organizationLogo: "/images/brand/onbongo-logo.webp",
-      organizationUrl: "https://onbongo.com.br/",
-      contactPhone: "+55 11 99999-9999",
-      contactEmail: "lojistas@onbongo.com.br"
+      organizationName: "",
+      organizationLogo: "",
+      organizationUrl: "",
+      contactPhone: "",
+      contactEmail: ""
     }
   },
 };
