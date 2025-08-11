@@ -1085,7 +1085,7 @@ export default function Index() {
     }
   };
 
-  // Funções de validação
+  // Fun��ões de validação
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
@@ -1634,7 +1634,7 @@ export default function Index() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero/onbongo-background.webp"
+            src={landingData.hero.backgroundImage}
             alt="Onbongo Surfwear Background"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
