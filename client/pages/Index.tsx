@@ -481,7 +481,7 @@ export default function Index() {
               "Coleções Exclusivas Ecko",
             );
             observer.unobserve(entry.target); // Track only once
-            console.log("✅ ViewContent da galeria disparado (só uma vez)");
+            console.log("��� ViewContent da galeria disparado (só uma vez)");
           }
         });
       },
@@ -1649,7 +1649,7 @@ export default function Index() {
           {/* Mobile Logo */}
           <div className="mb-6">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F80a6e973bfef4f77b353c1d8a22d7c7c?format=webp&width=800"
+              src="/images/brand/onbongo-logo.webp"
               alt={`Logo ${BRAND_NAME}`}
               className="h-20 w-auto mx-auto"
               loading="eager"
@@ -1711,7 +1711,7 @@ export default function Index() {
               {/* Desktop Logo */}
               <div className="mb-8 flex justify-center">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F80a6e973bfef4f77b353c1d8a22d7c7c?format=webp&width=800"
+                  src="/images/brand/onbongo-logo.webp"
                   alt={`Logo ${BRAND_NAME}`}
                   className="h-20 lg:h-24 w-auto"
                   loading="eager"
@@ -2459,7 +2459,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★★</span>
+                                  <span className="text-2xl">★★★���★</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
@@ -2756,7 +2756,7 @@ export default function Index() {
               <div className="space-y-6 max-w-md mx-auto">
                 <div className="flex items-center justify-center space-x-3">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F80a6e973bfef4f77b353c1d8a22d7c7c?format=webp&width=800"
+                    src="/images/brand/onbongo-logo.webp"
                     alt="Logo - Marca de Streetwear"
                     className="h-12 w-auto"
                     loading="lazy"
