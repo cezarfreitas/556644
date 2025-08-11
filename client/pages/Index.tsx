@@ -39,7 +39,7 @@ export default function Index() {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
-  // Fun��ão auxiliar para pegar cookies (movida para cima para disponibilidade)
+  // Função auxiliar para pegar cookies (movida para cima para disponibilidade)
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -1105,7 +1105,7 @@ export default function Index() {
 
   const validateCNPJ = (cnpj: string) => {
     const numbers = cnpj.replace(/\D/g, "");
-    if (!numbers) return "CNPJ �� obrigatório";
+    if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
     // Validação de CNPJ
@@ -2728,7 +2728,7 @@ export default function Index() {
               <div className="text-center max-w-4xl mx-auto">
                 <div className="flex items-center justify-center mb-4">
                   <a
-                    href={landingData.footer.hubMultimarcas.url}
+                    href={landingData.footer.hubMultimarcas?.url || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-3 hover:opacity-80 transition-opacity duration-300"
@@ -2736,7 +2736,7 @@ export default function Index() {
                     title="HUB Multimarcas"
                   >
                     <img
-                      src={landingData.footer.hubMultimarcas.logoUrl}
+                      src={landingData.footer.hubMultimarcas?.logoUrl || ""}
                       alt="Logo HUB Multimarcas"
                       className="h-12 w-auto"
                       loading="lazy"
