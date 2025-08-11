@@ -70,7 +70,7 @@ export default function Index() {
   console.log("VITE_FACEBOOK_URL:", import.meta.env.VITE_FACEBOOK_URL);
   console.log("VITE_INSTAGRAM_URL:", import.meta.env.VITE_INSTAGRAM_URL);
   console.log("VITE_WHATSAPP_URL:", import.meta.env.VITE_WHATSAPP_URL);
-  console.log("📱 Final Social Media URLs:", {
+  console.log("���� Final Social Media URLs:", {
     facebook: FACEBOOK_URL,
     instagram: INSTAGRAM_URL,
     whatsapp: WHATSAPP_URL,
@@ -481,7 +481,7 @@ export default function Index() {
               "Coleções Exclusivas Ecko",
             );
             observer.unobserve(entry.target); // Track only once
-            console.log("��� ViewContent da galeria disparado (só uma vez)");
+            console.log("✅ ViewContent da galeria disparado (só uma vez)");
           }
         });
       },
@@ -1630,7 +1630,7 @@ export default function Index() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero/hero-background.webp"
+            src="/images/hero/onbongo-background.webp"
             alt={`${BRAND_NAME} Streetwear Background`}
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
@@ -2459,7 +2459,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★���★</span>
+                                  <span className="text-2xl">★★★★★</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
