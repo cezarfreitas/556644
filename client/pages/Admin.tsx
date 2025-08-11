@@ -1053,7 +1053,7 @@ export default function Admin() {
               {/* FAQ Section */}
               {activeTab === "faq" && (
                 <div className="space-y-6">
-                  <h2 className="text-xl font-semibold text-gray-900">Se��ão FAQ</h2>
+                  <h2 className="text-xl font-semibold text-gray-900">Seção FAQ</h2>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -1320,6 +1320,238 @@ export default function Admin() {
                         />
                       </div>
                     </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Integrations Section */}
+              {activeTab === "integrations" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Configurações de Integrações</h2>
+
+                  {/* Form API */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">📧 API de Formulário</h3>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Endpoint da API para envio de leads
+                      </label>
+                      <input
+                        type="text"
+                        value={data.integrations?.formApi || ""}
+                        onChange={(e) => updateSection("integrations", {
+                          ...data.integrations,
+                          formApi: e.target.value
+                        })}
+                        placeholder="https://api.exemplo.com.br/webhook/leads"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Google Analytics */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">📊 Google Analytics 4</h3>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Measurement ID (GA4)
+                      </label>
+                      <input
+                        type="text"
+                        value={data.integrations?.googleAnalytics?.measurementId || ""}
+                        onChange={(e) => updateSection("integrations", {
+                          ...data.integrations,
+                          googleAnalytics: {
+                            ...data.integrations?.googleAnalytics,
+                            measurementId: e.target.value
+                          }
+                        })}
+                        placeholder="G-XXXXXXXXXX"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Meta Pixel */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">👥 Meta Pixel & Conversions API</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Pixel ID
+                        </label>
+                        <input
+                          type="text"
+                          value={data.integrations?.metaPixel?.pixelId || ""}
+                          onChange={(e) => updateSection("integrations", {
+                            ...data.integrations,
+                            metaPixel: {
+                              ...data.integrations?.metaPixel,
+                              pixelId: e.target.value
+                            }
+                          })}
+                          placeholder="1234567890123456"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Nome da Conversão
+                          </label>
+                          <input
+                            type="text"
+                            value={data.integrations?.metaPixel?.conversionName || ""}
+                            onChange={(e) => updateSection("integrations", {
+                              ...data.integrations,
+                              metaPixel: {
+                                ...data.integrations?.metaPixel,
+                                conversionName: e.target.value
+                              }
+                            })}
+                            placeholder="Lead_Exemplo"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Versão da API
+                          </label>
+                          <input
+                            type="text"
+                            value={data.integrations?.metaPixel?.apiVersion || ""}
+                            onChange={(e) => updateSection("integrations", {
+                              ...data.integrations,
+                              metaPixel: {
+                                ...data.integrations?.metaPixel,
+                                apiVersion: e.target.value
+                              }
+                            })}
+                            placeholder="v18.0"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Código de Teste
+                          </label>
+                          <input
+                            type="text"
+                            value={data.integrations?.metaPixel?.testEventCode || ""}
+                            onChange={(e) => updateSection("integrations", {
+                              ...data.integrations,
+                              metaPixel: {
+                                ...data.integrations?.metaPixel,
+                                testEventCode: e.target.value
+                              }
+                            })}
+                            placeholder="TEST12345"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Access Token (Conversions API)
+                        </label>
+                        <textarea
+                          value={data.integrations?.metaPixel?.accessToken || ""}
+                          onChange={(e) => updateSection("integrations", {
+                            ...data.integrations,
+                            metaPixel: {
+                              ...data.integrations?.metaPixel,
+                              accessToken: e.target.value
+                            }
+                          })}
+                          placeholder="EAAxxxxxxxxxxxxxxxxxxxxxxxx"
+                          rows={3}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Google Tag Manager */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🏷️ Google Tag Manager</h3>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Container ID
+                      </label>
+                      <input
+                        type="text"
+                        value={data.integrations?.googleTagManager?.containerId || ""}
+                        onChange={(e) => updateSection("integrations", {
+                          ...data.integrations,
+                          googleTagManager: {
+                            ...data.integrations?.googleTagManager,
+                            containerId: e.target.value
+                          }
+                        })}
+                        placeholder="GTM-XXXXXXX"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Google Ads */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🎯 Google Ads (Opcional)</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Conversion ID
+                        </label>
+                        <input
+                          type="text"
+                          value={data.integrations?.googleAds?.conversionId || ""}
+                          onChange={(e) => updateSection("integrations", {
+                            ...data.integrations,
+                            googleAds: {
+                              ...data.integrations?.googleAds,
+                              conversionId: e.target.value
+                            }
+                          })}
+                          placeholder="AW-123456789"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Conversion Label
+                        </label>
+                        <input
+                          type="text"
+                          value={data.integrations?.googleAds?.conversionLabel || ""}
+                          onChange={(e) => updateSection("integrations", {
+                            ...data.integrations,
+                            googleAds: {
+                              ...data.integrations?.googleAds,
+                              conversionLabel: e.target.value
+                            }
+                          })}
+                          placeholder="AbCdEfGhIj_example"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Instructions */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h4 className="text-sm font-medium text-blue-900 mb-2">💡 Instruções</h4>
+                    <ul className="text-sm text-blue-700 space-y-1">
+                      <li>• <strong>Form API:</strong> Endpoint para onde os dados do formulário serão enviados</li>
+                      <li>• <strong>Google Analytics:</strong> Para rastreamento de tráfego e conversões</li>
+                      <li>• <strong>Meta Pixel:</strong> Para rastreamento do Facebook/Instagram</li>
+                      <li>• <strong>Google Tag Manager:</strong> Para gerenciar tags de rastreamento</li>
+                      <li>• <strong>Google Ads:</strong> Para rastreamento de conversões do Google Ads</li>
+                    </ul>
                   </div>
                 </div>
               )}
