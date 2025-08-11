@@ -1819,7 +1819,7 @@ export default function Index() {
                         htmlFor="name"
                         className="block text-sm font-semibold text-white"
                       >
-                        Nome Completo
+                        {landingData.form.nameLabel}
                       </label>
                       <div className="relative">
                         <input
