@@ -70,7 +70,7 @@ export default function Index() {
   console.log("VITE_FACEBOOK_URL:", import.meta.env.VITE_FACEBOOK_URL);
   console.log("VITE_INSTAGRAM_URL:", import.meta.env.VITE_INSTAGRAM_URL);
   console.log("VITE_WHATSAPP_URL:", import.meta.env.VITE_WHATSAPP_URL);
-  console.log("���� Final Social Media URLs:", {
+  console.log("📱 Final Social Media URLs:", {
     facebook: FACEBOOK_URL,
     instagram: INSTAGRAM_URL,
     whatsapp: WHATSAPP_URL,
@@ -2207,7 +2207,7 @@ export default function Index() {
               {/* Photo 1 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/collection-1.webp"
+                  src="/images/gallery/onbongo-1.webp"
                   alt="Coleção Ecko Streetwear"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2221,7 +2221,7 @@ export default function Index() {
               {/* Photo 2 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/urban-style.webp"
+                  src="/images/gallery/onbongo-2.webp"
                   alt="Estilo Urbano Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2235,7 +2235,7 @@ export default function Index() {
               {/* Photo 3 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/urban-fashion.webp"
+                  src="/images/gallery/onbongo-3.webp"
                   alt="Moda Urbana Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2249,7 +2249,7 @@ export default function Index() {
               {/* Photo 4 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/streetwear-premium.webp"
+                  src="/images/gallery/onbongo-4.webp"
                   alt="Streetwear Premium Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2263,7 +2263,7 @@ export default function Index() {
               {/* Photo 5 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/lifestyle.webp"
+                  src="/images/gallery/onbongo-5.webp"
                   alt="Lifestyle Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2274,7 +2274,7 @@ export default function Index() {
               {/* Photo 6 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/products-exclusive.webp"
+                  src="/images/gallery/onbongo-6.webp"
                   alt="Produtos Exclusivos Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2285,7 +2285,7 @@ export default function Index() {
               {/* Photo 7 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/complete-collection.webp"
+                  src="/images/gallery/onbongo-7.webp"
                   alt="Coleção Completa Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2296,7 +2296,7 @@ export default function Index() {
               {/* Photo 8 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/premium-quality.webp"
+                  src="/images/gallery/onbongo-8.webp"
                   alt="Qualidade Premium Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
