@@ -2622,7 +2622,7 @@ export default function Index() {
                 <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
                   <span>Existe um valor de pedido mínimo?</span>
                   <span className="transform group-open:rotate-180 transition-transform text-primary">
-                    ▼
+                    ���
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
@@ -2778,12 +2778,12 @@ export default function Index() {
                   </span>{" "}
                   por{" "}
                   <a
-                    href={landingData.footer.developedBy.url}
+                    href={landingData.footer.developedBy?.url || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors duration-300"
                   >
-                    {landingData.footer.developedBy.name}
+                    {landingData.footer.developedBy?.name || "IDE | Negócios digitais"}
                   </a>
                 </div>
               </div>
