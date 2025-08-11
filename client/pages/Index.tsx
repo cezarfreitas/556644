@@ -1217,7 +1217,7 @@ export default function Index() {
     const value = e.target.value;
     const formatted = formatCNPJ(value);
 
-    // Prevenir input além do limite
+    // Prevenir input al��m do limite
     if (formatted.length <= 18) {
       e.target.value = formatted;
       setFormValues((prev) => ({ ...prev, cnpj: formatted }));
@@ -1486,7 +1486,7 @@ export default function Index() {
     }
   };
 
-  // Função para voltar ao formulário
+  // Funç��o para voltar ao formulário
   const handleBackToForm = () => {
     setSubmitStatus("idle");
     setSubmitMessage("");
@@ -2263,7 +2263,7 @@ export default function Index() {
               {/* Photo 5 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-5.jpg"
+                  src="/images/gallery/onbongo-5.webp"
                   alt="Lifestyle Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2274,7 +2274,7 @@ export default function Index() {
               {/* Photo 6 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-6.jpg"
+                  src="/images/gallery/onbongo-6.webp"
                   alt="Produtos Exclusivos Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2285,7 +2285,7 @@ export default function Index() {
               {/* Photo 7 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-7.jpg"
+                  src="/images/gallery/onbongo-7.webp"
                   alt="Coleção Completa Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2296,7 +2296,7 @@ export default function Index() {
               {/* Photo 8 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-8.jpg"
+                  src="/images/gallery/onbongo-8.webp"
                   alt="Qualidade Premium Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
