@@ -2310,7 +2310,7 @@ export default function Index() {
       </section>
 
       {/* Conheça o nosso Show Room - Otimizado para mobile */}
-      <section className="py-12 sm:py-20 md:py-32 bg-gray-900" id="showroom">
+      <section className="py-8 sm:py-12 md:py-16 bg-black" id="showroom">
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
