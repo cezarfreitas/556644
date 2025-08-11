@@ -11,6 +11,7 @@ import {
   FaHome,
   FaEye
 } from "react-icons/fa";
+import ImageUpload from "../components/ImageUpload";
 
 interface LandingPageData {
   hero: {
@@ -443,17 +444,14 @@ export default function Admin() {
                   <h2 className="text-xl font-semibold text-gray-900">Seção Hero</h2>
                   
                   <div className="grid grid-cols-1 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Logo (URL da imagem)
-                      </label>
-                      <input
-                        type="text"
-                        value={data.hero.logo}
-                        onChange={(e) => updateSection("hero", { ...data.hero, logo: e.target.value })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
+                    <ImageUpload
+                      value={data.hero.logo}
+                      onChange={(url) => updateSection("hero", { ...data.hero, logo: url })}
+                      label="Logo do Hero"
+                      maxSizeMB={2}
+                      maxWidth={800}
+                      maxHeight={400}
+                    />
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -503,17 +501,14 @@ export default function Admin() {
                       />
                     </div>
                     
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Imagem de Fundo (URL)
-                      </label>
-                      <input
-                        type="text"
-                        value={data.hero.backgroundImage}
-                        onChange={(e) => updateSection("hero", { ...data.hero, backgroundImage: e.target.value })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
+                    <ImageUpload
+                      value={data.hero.backgroundImage}
+                      onChange={(url) => updateSection("hero", { ...data.hero, backgroundImage: url })}
+                      label="Imagem de Fundo do Hero"
+                      maxSizeMB={3}
+                      maxWidth={1920}
+                      maxHeight={1080}
+                    />
                   </div>
                 </div>
               )}
@@ -673,27 +668,31 @@ export default function Admin() {
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-4">Imagens da Galeria</h3>
                     {data.gallery.images.map((image, index) => (
-                      <div key={index} className="flex items-center space-x-3 mb-3">
-                        <input
-                          type="text"
-                          placeholder="URL da imagem"
+                      <div key={index} className="border border-gray-200 rounded-lg p-4 mb-4">
+                        <div className="flex justify-between items-start mb-3">
+                          <h4 className="font-medium text-gray-900">Imagem {index + 1}</h4>
+                          <button
+                            onClick={() => {
+                              const newImages = data.gallery.images.filter((_, i) => i !== index);
+                              updateSection("gallery", { ...data.gallery, images: newImages });
+                            }}
+                            className="text-red-600 hover:text-red-800"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+                        <ImageUpload
                           value={image}
-                          onChange={(e) => {
+                          onChange={(url) => {
                             const newImages = [...data.gallery.images];
-                            newImages[index] = e.target.value;
+                            newImages[index] = url;
                             updateSection("gallery", { ...data.gallery, images: newImages });
                           }}
-                          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          label={`Imagem da Galeria ${index + 1}`}
+                          maxSizeMB={2}
+                          maxWidth={800}
+                          maxHeight={600}
                         />
-                        <button
-                          onClick={() => {
-                            const newImages = data.gallery.images.filter((_, i) => i !== index);
-                            updateSection("gallery", { ...data.gallery, images: newImages });
-                          }}
-                          className="text-red-600 hover:text-red-800"
-                        >
-                          <FaTrash />
-                        </button>
                       </div>
                     ))}
                     <button
@@ -776,17 +775,14 @@ export default function Admin() {
                       />
                     </div>
                     
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Imagem (URL)
-                      </label>
-                      <input
-                        type="text"
-                        value={data.showroom.image}
-                        onChange={(e) => updateSection("showroom", { ...data.showroom, image: e.target.value })}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
-                    </div>
+                    <ImageUpload
+                      value={data.showroom.image}
+                      onChange={(url) => updateSection("showroom", { ...data.showroom, image: url })}
+                      label="Imagem do Showroom"
+                      maxSizeMB={2}
+                      maxWidth={1200}
+                      maxHeight={800}
+                    />
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -976,17 +972,14 @@ export default function Admin() {
                     </button>
                   </div>
                   
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Imagem (URL)
-                    </label>
-                    <input
-                      type="text"
-                      value={data.history.image}
-                      onChange={(e) => updateSection("history", { ...data.history, image: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                  </div>
+                  <ImageUpload
+                    value={data.history.image}
+                    onChange={(url) => updateSection("history", { ...data.history, image: url })}
+                    label="Imagem da História"
+                    maxSizeMB={2}
+                    maxWidth={1200}
+                    maxHeight={800}
+                  />
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -1092,17 +1085,14 @@ export default function Admin() {
                 <div className="space-y-6">
                   <h2 className="text-xl font-semibold text-gray-900">Seção Rodapé</h2>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Logo do Rodapé (URL)
-                    </label>
-                    <input
-                      type="text"
-                      value={data.footer.logo}
-                      onChange={(e) => updateSection("footer", { ...data.footer, logo: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                  </div>
+                  <ImageUpload
+                    value={data.footer.logo}
+                    onChange={(url) => updateSection("footer", { ...data.footer, logo: url })}
+                    label="Logo do Rodapé"
+                    maxSizeMB={1}
+                    maxWidth={400}
+                    maxHeight={200}
+                  />
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -1184,20 +1174,17 @@ export default function Admin() {
                         />
                       </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Logo URL
-                        </label>
-                        <input
-                          type="text"
-                          value={data.footer.hubMultimarcas?.logoUrl || ""}
-                          onChange={(e) => updateSection("footer", {
-                            ...data.footer,
-                            hubMultimarcas: { ...data.footer.hubMultimarcas, logoUrl: e.target.value }
-                          })}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
+                      <ImageUpload
+                        value={data.footer.hubMultimarcas?.logoUrl || ""}
+                        onChange={(url) => updateSection("footer", {
+                          ...data.footer,
+                          hubMultimarcas: { ...data.footer.hubMultimarcas, logoUrl: url }
+                        })}
+                        label="Logo HUB Multimarcas"
+                        maxSizeMB={1}
+                        maxWidth={600}
+                        maxHeight={300}
+                      />
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
