@@ -182,7 +182,7 @@ const defaultData: LandingPageData = {
       "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade através da moda."
     ],
     image: "/images/gallery/onbongo-2.webp",
-    quote: "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na Onda."
+    quote: "Onbongo ��� Sempre à Frente. Sempre no Jogo. Sempre na Onda."
   },
   faq: {
     title: "Perguntas Frequentes",
@@ -207,11 +207,23 @@ const defaultData: LandingPageData = {
     ]
   },
   footer: {
+    logo: "/images/brand/onbongo-logo.webp",
     description: "A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.",
     socialLinks: {
       facebook: "https://www.facebook.com/onbongo",
       instagram: "https://www.instagram.com/onbongo_oficial/",
       whatsapp: "https://onbongo.com.br"
+    },
+    hubMultimarcas: {
+      url: "https://hubmultimarcas.com.br/",
+      logoUrl: "https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F8a4c71f1296940d088b5de8207ba30f4?format=webp&width=800",
+      description: "Uma iniciativa do NTK Grupo Textil para democratizar o acesso dos lojistas às grandes marcas do mercado. Conectamos empreendedores com as melhores oportunidades de negócio, oferecendo suporte completo para o crescimento do seu comércio.",
+      companyName: "NTK Grupo Textil - Conectando marcas e lojistas"
+    },
+    copyright: "© Todos os direitos reservados.",
+    developedBy: {
+      name: "IDE | Negócios digitais",
+      url: "https://www.idenegociosdigitais.com.br"
     }
   }
 };
