@@ -185,7 +185,7 @@ export default function ImageUpload({
           type="button"
         >
           <FaUpload className="mr-2" />
-          {isUploading ? 'Processando...' : 'Selecionar Arquivo'}
+          {isUploading ? 'Fazendo Upload...' : 'Selecionar Arquivo'}
         </button>
         
         {previewUrl && (
