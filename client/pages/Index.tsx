@@ -273,24 +273,24 @@ export default function Index() {
       if (isAnimating) return;
       isAnimating = true;
 
-      // First beat
-      heartElement.style.transform = 'scale(1.4)';
+      // First gentle beat
+      heartElement.style.transform = 'scale(1.15)';
       setTimeout(() => {
         heartElement.style.transform = 'scale(1)';
         setTimeout(() => {
-          // Second beat
-          heartElement.style.transform = 'scale(1.4)';
+          // Second gentle beat
+          heartElement.style.transform = 'scale(1.15)';
           setTimeout(() => {
             heartElement.style.transform = 'scale(1)';
             isAnimating = false;
-          }, 150);
-        }, 200);
-      }, 150);
+          }, 200);
+        }, 280);
+      }, 200);
     };
 
-    // Start animation immediately and repeat every 1.5 seconds
+    // Start animation immediately and repeat every 2 seconds (slower)
     animateHeart();
-    const interval = setInterval(animateHeart, 1500);
+    const interval = setInterval(animateHeart, 2000);
 
     return () => clearInterval(interval);
   }, []);
