@@ -1675,9 +1675,7 @@ export default function Index() {
 
           {/* Mobile Subtitle */}
           <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
-            <span className="font-bold text-white">Cadastre-se</span> e tenha
-            acesso a produtos exclusivos, preços especiais e coleções com o
-            autêntico espírito urbano e esportivo da marca.
+            {landingData.hero.subtitle}
           </p>
 
           {/* Mobile CTA */}
@@ -1733,7 +1731,7 @@ export default function Index() {
               {/* Desktop Subtitle */}
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
                 <span className="font-bold text-white">Cadastre-se</span> e
-                tenha acesso a produtos exclusivos, pre��os especiais e coleções
+                tenha acesso a produtos exclusivos, preços especiais e coleções
                 com o autêntico espírito urbano e esportivo da marca.
               </p>
 
