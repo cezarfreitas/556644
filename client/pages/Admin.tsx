@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { 
-  FaSave, 
-  FaDownload, 
-  FaUpload, 
-  FaReset, 
-  FaImage, 
+import {
+  FaSave,
+  FaDownload,
+  FaUpload,
+  FaUndo,
+  FaImage,
   FaEdit,
   FaPlus,
   FaTrash,
