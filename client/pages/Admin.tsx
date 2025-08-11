@@ -668,44 +668,14 @@ export default function Admin() {
                   
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-4">Imagens da Galeria</h3>
-                    {data.gallery.images.map((image, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-4 mb-4">
-                        <div className="flex justify-between items-start mb-3">
-                          <h4 className="font-medium text-gray-900">Imagem {index + 1}</h4>
-                          <button
-                            onClick={() => {
-                              const newImages = data.gallery.images.filter((_, i) => i !== index);
-                              updateSection("gallery", { ...data.gallery, images: newImages });
-                            }}
-                            className="text-red-600 hover:text-red-800"
-                          >
-                            <FaTrash />
-                          </button>
-                        </div>
-                        <ImageUpload
-                          value={image}
-                          onChange={(url) => {
-                            const newImages = [...data.gallery.images];
-                            newImages[index] = url;
-                            updateSection("gallery", { ...data.gallery, images: newImages });
-                          }}
-                          label={`Imagem da Galeria ${index + 1}`}
-                          maxSizeMB={2}
-                          maxWidth={800}
-                          maxHeight={600}
-                        />
-                      </div>
-                    ))}
-                    <button
-                      onClick={() => {
-                        const newImages = [...data.gallery.images, ""];
-                        updateSection("gallery", { ...data.gallery, images: newImages });
-                      }}
-                      className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
-                    >
-                      <FaPlus className="mr-2" />
-                      Adicionar Imagem
-                    </button>
+                    <MultipleImageUpload
+                      images={data.gallery.images}
+                      onChange={(newImages) => updateSection("gallery", { ...data.gallery, images: newImages })}
+                      maxImages={12}
+                      maxSizeMB={2}
+                      maxWidth={800}
+                      maxHeight={600}
+                    />
                   </div>
                 </div>
               )}
