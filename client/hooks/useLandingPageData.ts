@@ -205,22 +205,22 @@ const defaultData: LandingPageData = {
   integrations: {
     formApi: "",
     googleAnalytics: {
-      measurementId: ""
+      measurementId: "",
     },
     metaPixel: {
       pixelId: "",
       conversionName: "",
       apiVersion: "",
       testEventCode: "",
-      accessToken: ""
+      accessToken: "",
     },
     googleTagManager: {
-      containerId: ""
+      containerId: "",
     },
     googleAds: {
       conversionId: "",
-      conversionLabel: ""
-    }
+      conversionLabel: "",
+    },
   },
   seo: {
     title: "",
@@ -236,7 +236,7 @@ const defaultData: LandingPageData = {
       image: "",
       url: "",
       type: "",
-      siteName: ""
+      siteName: "",
     },
     twitter: {
       card: "",
@@ -244,15 +244,15 @@ const defaultData: LandingPageData = {
       description: "",
       image: "",
       creator: "",
-      site: ""
+      site: "",
     },
     structured: {
       organizationName: "",
       organizationLogo: "",
       organizationUrl: "",
       contactPhone: "",
-      contactEmail: ""
-    }
+      contactEmail: "",
+    },
   },
 };
 
