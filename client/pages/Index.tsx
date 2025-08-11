@@ -1675,7 +1675,9 @@ export default function Index() {
 
           {/* Mobile Subtitle */}
           <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
-            <span className="font-bold text-white">Cadastre-se</span> e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico espírito urbano e esportivo da marca.
+            <span className="font-bold text-white">Cadastre-se</span> e tenha
+            acesso a produtos exclusivos, preços especiais e coleções com o
+            autêntico espírito urbano e esportivo da marca.
           </p>
 
           {/* Mobile CTA */}
@@ -1718,7 +1720,8 @@ export default function Index() {
 
               {/* Desktop Intro Text */}
               <p className="text-lg text-white/80 text-center mb-6 drop-shadow-md">
-                Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.
+                Revenda uma das maiores marcas de streetwear e lifestyle do
+                Brasil.
               </p>
 
               {/* Desktop Heading */}
@@ -1734,7 +1737,9 @@ export default function Index() {
 
               {/* Desktop Subtitle */}
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-                <span className="font-bold text-white">Cadastre-se</span> e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico espírito urbano e esportivo da marca.
+                <span className="font-bold text-white">Cadastre-se</span> e
+                tenha acesso a produtos exclusivos, preços especiais e coleções
+                com o autêntico espírito urbano e esportivo da marca.
               </p>
 
               {/* Desktop CTA */}
@@ -1793,7 +1798,9 @@ export default function Index() {
                         Marca Internacional
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Revenda uma marca brasileira de streetwear com reconhecimento mundial e mais de três décadas de história.
+                        Revenda uma marca brasileira de streetwear com
+                        reconhecimento mundial e mais de três décadas de
+                        história.
                       </p>
                     </div>
                   </div>
@@ -1807,7 +1814,9 @@ export default function Index() {
                         Pronta Entrega
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Mais de 100.000 peças disponíveis para envio imediato, garantindo giro rápido e novidades constantes na sua loja.
+                        Mais de 100.000 peças disponíveis para envio imediato,
+                        garantindo giro rápido e novidades constantes na sua
+                        loja.
                       </p>
                     </div>
                   </div>
@@ -1821,7 +1830,9 @@ export default function Index() {
                         Plataforma Online
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Acesse nosso catálogo digital com preços exclusivos para lojistas e coleções que respiram o espírito urbano e esportivo.
+                        Acesse nosso catálogo digital com preços exclusivos para
+                        lojistas e coleções que respiram o espírito urbano e
+                        esportivo.
                       </p>
                     </div>
                   </div>
@@ -1835,7 +1846,9 @@ export default function Index() {
                         Apoio às Vendas
                       </h3>
                       <p className="text-gray-300 text-sm">
-                        Conte com treinamento, materiais de marketing e suporte comercial especializado para aumentar suas vendas e fortalecer sua vitrine.
+                        Conte com treinamento, materiais de marketing e suporte
+                        comercial especializado para aumentar suas vendas e
+                        fortalecer sua vitrine.
                       </p>
                     </div>
                   </div>
@@ -2316,8 +2329,16 @@ export default function Index() {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 São Paulo - Capital
               </div>
@@ -2326,8 +2347,10 @@ export default function Index() {
                 <span className="block text-primary">Onbongo em SP</span>
               </h2>
               <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
-                Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção Onbongo.
-                Um espaço moderno e exclusivo para lojistas conhecerem de perto o que há de melhor no streetwear brasileiro.
+                Visite nosso showroom no coração de São Paulo e descubra
+                pessoalmente toda a coleção Onbongo. Um espaço moderno e
+                exclusivo para lojistas conhecerem de perto o que há de melhor
+                no streetwear brasileiro.
               </p>
             </div>
 
@@ -2339,9 +2362,10 @@ export default function Index() {
                   Experiência Completa do Produto
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  No nosso showroom em São Paulo, você tem acesso exclusivo a toda nossa coleção.
-                  Toque, sinta e experimente a qualidade dos tecidos, o acabamento perfeito e os
-                  detalhes únicos que fazem da Onbongo a marca líder em streetwear e lifestyle.
+                  No nosso showroom em São Paulo, você tem acesso exclusivo a
+                  toda nossa coleção. Toque, sinta e experimente a qualidade dos
+                  tecidos, o acabamento perfeito e os detalhes únicos que fazem
+                  da Onbongo a marca líder em streetwear e lifestyle.
                 </p>
                 <div className="text-center lg:text-left">
                   <p className="text-gray-300 mb-4">
@@ -2563,19 +2587,25 @@ export default function Index() {
                     <span className="block text-primary">Onbongo</span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-                    Desde 1988, a Onbongo é sinônimo de autenticidade e atitude no surfwear e streetwear brasileiro.
-                    Nascida nas praias e nas ruas, a marca construiu uma trajetória sólida vestindo surfistas,
-                    skatistas e apaixonados pela cultura urbana.
+                    Desde 1988, a Onbongo é sinônimo de autenticidade e atitude
+                    no surfwear e streetwear brasileiro. Nascida nas praias e
+                    nas ruas, a marca construiu uma trajetória sólida vestindo
+                    surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se
-                    sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf -
-                    marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.
+                    Com mais de três décadas de história, a Onbongo se
+                    reinventou a cada geração, mantendo-se sempre à frente em
+                    estilo, inovação e conexão com o esporte. A ligação vai
+                    muito além do surf - marcou presença no futebol
+                    profissional, vestindo grandes nomes como Kaká, Roberto
+                    Carlos, Neymar e Amaral.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz,
-                    e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca
-                    expressar personalidade através da moda.
+                    Essa versatilidade faz da Onbongo uma marca única: capaz de
+                    transitar do alto rendimento ao esporte de raiz, e das ondas
+                    do mar às ruas das grandes cidades, sempre conectada com a
+                    cultura jovem e com quem busca expressar personalidade
+                    através da moda.
                   </p>
                 </div>
               </div>
@@ -2591,7 +2621,8 @@ export default function Index() {
                   />
                   <div className="mt-8 space-y-3">
                     <p className="text-gray-500 text-sm italic">
-                      "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na Onda."
+                      "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na
+                      Onda."
                     </p>
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                   </div>
@@ -2625,10 +2656,9 @@ export default function Index() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, os produtos são 100% oficiais da marca Onbongo.
-                  Quando você se torna um lojista oficial, você tem a garantia
-                  de estar adquirindo produtos autênticos e de qualidade da
-                  marca.
+                  Sim, os produtos são 100% oficiais da marca Onbongo. Quando
+                  você se torna um lojista oficial, você tem a garantia de estar
+                  adquirindo produtos autênticos e de qualidade da marca.
                 </div>
               </details>
 
@@ -2658,9 +2688,8 @@ export default function Index() {
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
                   Sim, existe um valor de pedido mínimo para iniciar sua
-                  parceria como lojista oficial Onbongo. Os detalhes
-                  específicos sobre valores serão informados em nosso primeiro
-                  contato.
+                  parceria como lojista oficial Onbongo. Os detalhes específicos
+                  sobre valores serão informados em nosso primeiro contato.
                 </div>
               </details>
 
