@@ -1467,7 +1467,7 @@ export default function Index() {
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
-          "🔒 Erro de seguran��a. Recarregue a página e tente novamente.";
+          "🔒 Erro de segurança. Recarregue a página e tente novamente.";
       }
 
       // Track erro de conexão
@@ -2748,7 +2748,7 @@ export default function Index() {
                 </p>
                 <div className="mt-4">
                   <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-xs">
-                    {HUB_COMPANY} - Conectando marcas e lojistas
+                    {landingData.footer.hubMultimarcas.companyName}
                   </span>
                 </div>
               </div>
