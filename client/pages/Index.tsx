@@ -422,7 +422,7 @@ export default function Index() {
       name: "Marcos Silva",
       store: "Street Style Store - São Paulo, SP",
       avatar: "M",
-      text: "Trabalhar com a Onbongo foi um divisor de águas para minha loja. As margens s��o excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca.",
+      text: "Trabalhar com a Onbongo foi um divisor de águas para minha loja. As margens s���o excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca.",
     },
     {
       id: 2,
@@ -1857,7 +1857,7 @@ export default function Index() {
             </div>
 
             {/* Form Column - Otimizado para mobile */}
-            <div className="bg-primary border border-red-700 rounded-2xl p-4 sm:p-6 shadow-lg">
+            <div className="bg-primary border border-onbongo-700 rounded-2xl p-4 sm:p-6 shadow-lg">
               <div className="space-y-6">
                 <div className="text-center">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
@@ -2593,7 +2593,7 @@ export default function Index() {
                     surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com mais de tr��s décadas de história, a Onbongo se
+                    Com mais de três décadas de história, a Onbongo se
                     reinventou a cada geração, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
                     muito além do surf - marcou presença no futebol
