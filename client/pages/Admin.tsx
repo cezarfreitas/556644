@@ -1231,7 +1231,7 @@ export default function Admin() {
                         </label>
                         <input
                           type="text"
-                          value={data.footer.developedBy.name}
+                          value={data.footer.developedBy?.name || ""}
                           onChange={(e) => updateSection("footer", {
                             ...data.footer,
                             developedBy: { ...data.footer.developedBy, name: e.target.value }
