@@ -1455,7 +1455,7 @@ export default function Index() {
       // Detect specific error types for better user messaging
       let errorType = "network_error";
       let userMessage =
-        "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
+        "��� Erro de conexão. Verifique sua internet e tente novamente.";
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
@@ -2315,16 +2315,23 @@ export default function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white">
-                Conheça o nosso
+                Conheça o Show Room da
                 <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
-                  Show Room
+                  Onbongo em SP
                 </span>
               </h2>
-              <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                Espaço exclusivo onde você pode tocar, sentir e experimentar
-                toda a qualidade e autenticidade dos produtos Onbongo antes de
-                levar para sua loja.
+              <p className="text-gray-400 text-base sm:text-xl max-w-3xl mx-auto px-3">
+                Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção Onbongo.
+                Um espaço moderno e exclusivo para lojistas conhecerem de perto o que há de melhor no streetwear brasileiro.
               </p>
+
+              {/* Location Badge */}
+              <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-6 py-2 text-primary font-semibold text-sm">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                São Paulo - Capital
+              </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
