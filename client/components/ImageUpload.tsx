@@ -59,12 +59,12 @@ export default function ImageUpload({
     setIsUploading(true);
 
     try {
-      const compressedDataUrl = await compressImage(file);
-      setPreviewUrl(compressedDataUrl);
-      onChange(compressedDataUrl);
+      const imageUrl = await uploadImageToServer(file);
+      setPreviewUrl(imageUrl);
+      onChange(imageUrl);
     } catch (error) {
-      console.error('Erro ao processar imagem:', error);
-      alert('Erro ao processar a imagem. Tente novamente.');
+      console.error('Erro ao fazer upload da imagem:', error);
+      alert('Erro ao fazer upload da imagem. Tente novamente.');
     } finally {
       setIsUploading(false);
     }
