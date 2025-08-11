@@ -1431,7 +1431,7 @@ export default function Index() {
 
       // Mensagem de sucesso simples
       setSubmitMessage(
-        "✅ Formulário enviado com sucesso! Nossa equipe entrará em contato em breve com todas as informações sobre a parceria.",
+        "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
       );
 
       // Reset form values
@@ -1770,7 +1770,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Cadastro de Lojistas - Formulário de Parceria - Otimizado para mobile */}
+      {/* Cadastro de Lojistas - Formul��rio de Parceria - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32 bg-black"
         id="cadastro-lojistas"
