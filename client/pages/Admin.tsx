@@ -249,7 +249,28 @@ export default function Admin() {
     if (savedData) {
       try {
         const parsedData = JSON.parse(savedData);
-        setData({ ...defaultData, ...parsedData });
+        // Deep merge to ensure all nested objects exist
+        const mergedData = {
+          ...defaultData,
+          ...parsedData,
+          footer: {
+            ...defaultData.footer,
+            ...parsedData.footer,
+            socialLinks: {
+              ...defaultData.footer.socialLinks,
+              ...parsedData.footer?.socialLinks
+            },
+            hubMultimarcas: {
+              ...defaultData.footer.hubMultimarcas,
+              ...parsedData.footer?.hubMultimarcas
+            },
+            developedBy: {
+              ...defaultData.footer.developedBy,
+              ...parsedData.footer?.developedBy
+            }
+          }
+        };
+        setData(mergedData);
       } catch (error) {
         console.error('Erro ao carregar dados:', error);
       }
