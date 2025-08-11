@@ -12,6 +12,7 @@ import {
   FaEye
 } from "react-icons/fa";
 import ImageUpload from "../components/ImageUpload";
+import MultipleImageUpload from "../components/MultipleImageUpload";
 
 interface LandingPageData {
   hero: {
