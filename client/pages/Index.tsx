@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MdStar, MdAttachMoney } from "react-icons/md";
+import { useLandingPageData } from "../hooks/useLandingPageData";
 import {
   FaFacebook,
   FaInstagram,
@@ -1769,7 +1770,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Cadastro de Lojistas - Formul��rio de Parceria - Otimizado para mobile */}
+      {/* Cadastro de Lojistas - Formul����rio de Parceria - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32 bg-black"
         id="cadastro-lojistas"
