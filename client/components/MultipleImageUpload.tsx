@@ -158,7 +158,7 @@ export default function MultipleImageUpload({
         {isUploading && (
           <div className="text-center mt-4">
             <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary mx-auto mb-2"></div>
-            <p className="text-sm text-gray-600">Processando imagens...</p>
+            <p className="text-sm text-gray-600">Fazendo upload das imagens...</p>
           </div>
         )}
       </div>
