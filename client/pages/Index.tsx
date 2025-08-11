@@ -1091,7 +1091,7 @@ export default function Index() {
 
   const validateCNPJ = (cnpj: string) => {
     const numbers = cnpj.replace(/\D/g, "");
-    if (!numbers) return "CNPJ é obrigat��rio";
+    if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
     // Validação de CNPJ
@@ -2494,7 +2494,7 @@ export default function Index() {
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★���★★★</span>
+                            <span className="text-2xl">★★★★★</span>
                           </div>
                           <blockquote className="text-base text-gray-700 leading-relaxed italic">
                             "{testimonial.text}"
@@ -2638,6 +2638,89 @@ export default function Index() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - Above Footer */}
+      <section className="py-12 sm:py-20 bg-gray-50" id="faq">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
+                Perguntas Frequentes
+              </h2>
+              <p className="text-gray-600 text-lg">
+                Tire suas dúvidas sobre a parceria com a {BRAND_NAME}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {/* FAQ Item 1 */}
+              <details className="group bg-white rounded-lg shadow-md">
+                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                  <span>Os produtos são oficiais da marca {BRAND_NAME}?</span>
+                  <span className="transform group-open:rotate-180 transition-transform text-primary">
+                    ▼
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                  Sim, os produtos são 100% oficiais da marca {BRAND_NAME}. Quando você se torna um lojista oficial, você tem a garantia de estar adquirindo produtos autênticos e de qualidade da marca.
+                </div>
+              </details>
+
+              {/* FAQ Item 2 */}
+              <details className="group bg-white rounded-lg shadow-md">
+                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                  <span>Posso visitar o showroom em São Paulo?</span>
+                  <span className="transform group-open:rotate-180 transition-transform text-primary">
+                    ▼
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                  Sim, temos um showroom em São Paulo que está aberto para visitações. É uma ótima oportunidade para conhecer nossos produtos pessoalmente. Faça o cadastro e um representante entrará em contato para agendar sua visita.
+                </div>
+              </details>
+
+              {/* FAQ Item 3 */}
+              <details className="group bg-white rounded-lg shadow-md">
+                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                  <span>Existe um valor de pedido mínimo?</span>
+                  <span className="transform group-open:rotate-180 transition-transform text-primary">
+                    ▼
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                  Sim, existe um valor de pedido mínimo para iniciar sua parceria como lojista oficial {BRAND_NAME}. Os detalhes específicos sobre valores serão informados em nosso primeiro contato.
+                </div>
+              </details>
+
+              {/* FAQ Item 4 */}
+              <details className="group bg-white rounded-lg shadow-md">
+                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                  <span>Quais as formas de pagamento?</span>
+                  <span className="transform group-open:rotate-180 transition-transform text-primary">
+                    ▼
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                  Aceitamos pagamentos através do PIX e cartão de crédito parcelado. No momento, não aceitamos pagamentos via boleto bancário.
+                </div>
+              </details>
+            </div>
+
+            {/* CTA após FAQ */}
+            <div className="text-center mt-12">
+              <p className="text-gray-600 mb-6">
+                Ainda tem dúvidas? Entre em contato conosco!
+              </p>
+              <a
+                href="#cadastro-lojistas"
+                className="inline-block bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
+              >
+                Quero Ser Lojista
+              </a>
             </div>
           </div>
         </div>
