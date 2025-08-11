@@ -65,7 +65,7 @@ export default function Index() {
   const WHATSAPP_URL =
     import.meta.env.VITE_WHATSAPP_URL || "https://eckoshop.com.br";
 
-  // Debug: Log social media URLs to verify they're loaded correctly
+  // Debug: Log environment variables and Meta API status
   console.log("🔧 Environment Variables Debug:");
   console.log("VITE_FACEBOOK_URL:", import.meta.env.VITE_FACEBOOK_URL);
   console.log("VITE_INSTAGRAM_URL:", import.meta.env.VITE_INSTAGRAM_URL);
@@ -75,6 +75,15 @@ export default function Index() {
     instagram: INSTAGRAM_URL,
     whatsapp: WHATSAPP_URL,
   });
+
+  // Debug Meta API configuration
+  console.log("🎯 Meta API Debug:");
+  console.log("META_PIXEL_ID:", META_PIXEL_ID);
+  console.log("META_ACCESS_TOKEN present:", !!META_ACCESS_TOKEN);
+  console.log("META_ACCESS_TOKEN length:", META_ACCESS_TOKEN?.length || 0);
+  console.log("META_ACCESS_TOKEN format:", META_ACCESS_TOKEN ? (META_ACCESS_TOKEN.substring(0, 10) + "...") : "Missing");
+  console.log("META_API_VERSION:", META_API_VERSION);
+  console.log("META_TEST_EVENT_CODE:", META_TEST_EVENT_CODE);
 
   // Brand and Company Configuration
   const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Ecko";
