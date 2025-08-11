@@ -80,6 +80,26 @@ interface LandingPageData {
       url: string;
     };
   };
+  integrations: {
+    formApi: string;
+    googleAnalytics: {
+      measurementId: string;
+    };
+    metaPixel: {
+      pixelId: string;
+      conversionName: string;
+      apiVersion: string;
+      testEventCode: string;
+      accessToken: string;
+    };
+    googleTagManager: {
+      containerId: string;
+    };
+    googleAds: {
+      conversionId: string;
+      conversionLabel: string;
+    };
+  };
 }
 
 // Dados padrão (mesmos da página de admin)
