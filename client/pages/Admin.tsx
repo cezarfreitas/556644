@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import ImageUpload from "../components/ImageUpload";
 import MultipleImageUpload from "../components/MultipleImageUpload";
+import CompressionSettings from "../components/CompressionSettings";
 
 interface LandingPageData {
   hero: {
@@ -190,7 +191,7 @@ const defaultData: LandingPageData = {
     title: "História da Marca Onbongo",
     paragraphs: [
       "Desde 1988, a Onbongo é sinônimo de autenticidade e atitude no surfwear e streetwear brasileiro. Nascida nas praias e nas ruas, a marca construiu uma trajetória sólida vestindo surfistas, skatistas e apaixonados pela cultura urbana.",
-      "Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf - marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.",
+      "Com mais de três décadas de história, a Onbongo se reinventou a cada gera��ão, mantendo-se sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf - marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.",
       "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade através da moda."
     ],
     image: "/images/gallery/onbongo-2.webp",
