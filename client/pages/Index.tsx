@@ -2207,7 +2207,7 @@ export default function Index() {
               {/* Photo 1 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-1.webp"
+                  src="/images/gallery/onbongo-1.jpg"
                   alt="Coleção Ecko Streetwear"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2221,7 +2221,7 @@ export default function Index() {
               {/* Photo 2 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-2.webp"
+                  src="/images/gallery/onbongo-2.jpg"
                   alt="Estilo Urbano Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2235,7 +2235,7 @@ export default function Index() {
               {/* Photo 3 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-3.webp"
+                  src="/images/gallery/onbongo-3.jpg"
                   alt="Moda Urbana Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2249,7 +2249,7 @@ export default function Index() {
               {/* Photo 4 */}
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
-                  src="/images/gallery/onbongo-4.webp"
+                  src="/images/gallery/onbongo-4.jpg"
                   alt="Streetwear Premium Ecko"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
@@ -2459,7 +2459,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★���★★</span>
+                                  <span className="text-2xl">★★★★★</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
