@@ -2674,9 +2674,6 @@ export default function Index() {
                       loading="lazy"
                     />
                   </a>
-                  <h3 className="text-xl font-bold text-white">
-                    {HUB_NAME}
-                  </h3>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {HUB_DESCRIPTION} Conectamos empreendedores com as melhores
