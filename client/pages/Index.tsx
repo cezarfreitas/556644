@@ -1002,11 +1002,24 @@ export default function Index() {
     } catch (error) {
       console.error("❌ Meta Conversion API: Network error", error);
 
-      // Push network error to GTM if available
+      // Enhanced error logging for debugging
+      console.error("Meta API Error Details:", {
+        message: error?.message,
+        name: error?.name,
+        stack: error?.stack?.substring(0, 200),
+        eventName: standardEventName,
+        pixelId: META_PIXEL_ID,
+        tokenLength: META_ACCESS_TOKEN?.length || 0,
+        apiVersion: META_API_VERSION,
+      });
+
+      // Push detailed network error to GTM if available
       if (window.dataLayer) {
         window.dataLayer.push({
           event: "meta_conversion_network_error",
           meta_error: error?.message || "Unknown error",
+          meta_error_type: error?.name || "Unknown",
+          meta_event_name: standardEventName,
         });
       }
     }
