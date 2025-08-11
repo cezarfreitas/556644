@@ -422,28 +422,28 @@ export default function Index() {
       name: "Marcos Silva",
       store: "Street Style Store - São Paulo, SP",
       avatar: "M",
-      text: "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca.",
+      text: "Trabalhar com a Onbongo foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca.",
     },
     {
       id: 2,
       name: "Amanda Costa",
       store: "Urban Fashion - Rio de Janeiro, RJ",
       avatar: "A",
-      text: "O suporte da equipe Ecko é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério.",
+      text: "O suporte da equipe Onbongo é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério.",
     },
     {
       id: 3,
       name: "Rafael Oliveira",
       store: "Streetwear BH - Belo Horizonte, MG",
       avatar: "R",
-      text: "Em 2 anos como parceiro Ecko, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional.",
+      text: "Em 2 anos como parceiro Onbongo, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional.",
     },
     {
       id: 4,
       name: "Carla Santos",
       store: "Fashion Hub - Curitiba, PR",
       avatar: "C",
-      text: "A Ecko transformou minha loja multimarca. Agora somos referência em streetwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido.",
+      text: "A Onbongo transformou minha loja multimarca. Agora somos referência em surfwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido.",
     },
   ];
 
