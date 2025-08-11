@@ -77,7 +77,7 @@ export default function Index() {
   });
 
   // Debug Meta API configuration
-  console.log("🎯 Meta API Debug:");
+  console.log("��� Meta API Debug:");
   console.log(
     "Raw VITE_META_ACCESS_TOKEN:",
     import.meta.env.VITE_META_ACCESS_TOKEN,
@@ -1718,8 +1718,7 @@ export default function Index() {
 
               {/* Desktop Intro Text */}
               <p className="text-lg text-white/80 text-center mb-6 drop-shadow-md">
-                Aproveite a oportunidade de vender uma das maiores marcas do
-                Brasil e do mundo.
+                Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.
               </p>
 
               {/* Desktop Heading */}
@@ -1735,9 +1734,7 @@ export default function Index() {
 
               {/* Desktop Subtitle */}
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-                <span className="font-bold text-white">Cadastre-se agora</span>{" "}
-                e tenha acesso à nossa plataforma digital com preços exclusivos
-                para lojistas.
+                <span className="font-bold text-white">Cadastre-se</span> e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico espírito urbano e esportivo da marca.
               </p>
 
               {/* Desktop CTA */}
