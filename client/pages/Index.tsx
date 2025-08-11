@@ -422,7 +422,7 @@ export default function Index() {
       name: "Marcos Silva",
       store: "Street Style Store - São Paulo, SP",
       avatar: "M",
-      text: "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca.",
+      text: "Trabalhar com a Ecko foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lan��amentos da marca.",
     },
     {
       id: 2,
@@ -2356,7 +2356,7 @@ export default function Index() {
               <div className="text-center">
                 <div className="relative">
                   <img
-                    src="/images/gallery/onbongo-1.webp"
+                    src="/images/gallery/onbongo-1.jpg"
                     alt="Showroom Ecko - Espaço exclusivo para lojistas"
                     className="w-full max-w-lg rounded-2xl shadow-2xl mx-auto"
                     loading="lazy"
@@ -2634,7 +2634,7 @@ export default function Index() {
               <div className="text-center lg:text-right">
                 <div className="inline-block">
                   <img
-                    src="/images/gallery/onbongo-2.webp"
+                    src="/images/gallery/onbongo-2.jpg"
                     alt="Ecko Streetwear - Autenticidade da Marca - Cultura Urbana"
                     className="w-full max-w-md rounded-xl shadow-2xl"
                     loading="lazy"
