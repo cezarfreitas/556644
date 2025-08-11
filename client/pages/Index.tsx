@@ -2688,9 +2688,11 @@ export default function Index() {
                       fontSize: "16px",
                       animation: "heartbeat 1.5s ease-in-out infinite",
                       transformOrigin: "center",
-                      display: "inline-block"
+                      display: "inline-block",
+                      transition: "transform 0.15s ease-in-out"
                     }}
                     title="Coração animado"
+                    data-heart="true"
                   >
                     ❤️
                   </span>{" "}
