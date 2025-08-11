@@ -78,7 +78,9 @@ export default function Index() {
 
   // Debug Meta API configuration
   console.log("🎯 Meta API Debug:");
+  console.log("Raw VITE_META_ACCESS_TOKEN:", import.meta.env.VITE_META_ACCESS_TOKEN);
   console.log("META_PIXEL_ID:", META_PIXEL_ID);
+  console.log("META_ACCESS_TOKEN type:", typeof META_ACCESS_TOKEN);
   console.log("META_ACCESS_TOKEN present:", !!META_ACCESS_TOKEN);
   console.log("META_ACCESS_TOKEN length:", META_ACCESS_TOKEN?.length || 0);
   console.log("META_ACCESS_TOKEN format:", META_ACCESS_TOKEN ? (META_ACCESS_TOKEN.substring(0, 10) + "...") : "Missing");
