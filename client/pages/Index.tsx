@@ -2658,9 +2658,17 @@ export default function Index() {
             {/* HUB Multimarcas Section */}
             <div className="border-t border-gray-800 pt-8 pb-8">
               <div className="text-center max-w-4xl mx-auto">
-                <h3 className="text-xl font-bold text-white mb-4">
-                  {HUB_NAME}
-                </h3>
+                <div className="flex items-center justify-center mb-4">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F8a4c71f1296940d088b5de8207ba30f4?format=webp&width=800"
+                    alt="Logo HUB Multimarcas"
+                    className="h-12 w-auto mr-3"
+                    loading="lazy"
+                  />
+                  <h3 className="text-xl font-bold text-white">
+                    {HUB_NAME}
+                  </h3>
+                </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {HUB_DESCRIPTION} Conectamos empreendedores com as melhores
                   oportunidades de negócio, oferecendo suporte completo para o
