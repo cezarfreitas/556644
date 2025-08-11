@@ -59,8 +59,8 @@ export default function CompressionSettingsComponent({
           <div className="flex items-start space-x-2 text-sm text-blue-600 bg-blue-50 p-3 rounded-md">
             <FaInfoCircle className="mt-0.5 flex-shrink-0" />
             <p>
-              Estas configurações são aplicadas automaticamente quando você faz upload de imagens.
-              Valores menores resultam em arquivos menores, mas podem reduzir a qualidade visual.
+              Estas configurações são aplicadas automaticamente no servidor quando você faz upload de imagens.
+              As imagens são salvas na pasta 'imagens' com compressão otimizada para web.
             </p>
           </div>
 
