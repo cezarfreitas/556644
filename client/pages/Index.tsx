@@ -1726,18 +1726,14 @@ export default function Index() {
               {/* Desktop Heading */}
               <div>
                 <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] drop-shadow-2xl">
-                  <span className="block mb-2">SEJA UM</span>
-                  <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-2">
-                    LOJISTA OFICIAL
-                  </span>
-                  <span className="block">ONBONGO</span>
+                  {landingData.hero.title}
                 </h1>
               </div>
 
               {/* Desktop Subtitle */}
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
                 <span className="font-bold text-white">Cadastre-se</span> e
-                tenha acesso a produtos exclusivos, preços especiais e coleções
+                tenha acesso a produtos exclusivos, pre��os especiais e coleções
                 com o autêntico espírito urbano e esportivo da marca.
               </p>
 
@@ -2664,7 +2660,7 @@ export default function Index() {
               {/* FAQ Item 2 */}
               <details className="group bg-white rounded-lg shadow-md">
                 <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Posso visitar o showroom em S��o Paulo?</span>
+                  <span>Posso visitar o showroom em São Paulo?</span>
                   <span className="transform group-open:rotate-180 transition-transform text-primary">
                     ▼
                   </span>
