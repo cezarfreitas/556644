@@ -1,0 +1,1120 @@
+import React, { useState, useEffect } from "react";
+import { 
+  FaSave, 
+  FaDownload, 
+  FaUpload, 
+  FaReset, 
+  FaImage, 
+  FaEdit,
+  FaPlus,
+  FaTrash,
+  FaHome,
+  FaEye
+} from "react-icons/fa";
+
+interface LandingPageData {
+  hero: {
+    logo: string;
+    introText: string;
+    title: string;
+    subtitle: string;
+    ctaText: string;
+    backgroundImage: string;
+  };
+  form: {
+    sectionTitle: string;
+    benefits: Array<{
+      title: string;
+      description: string;
+    }>;
+    nameLabel: string;
+    whatsappLabel: string;
+    cnpjLabel: string;
+    submitButtonText: string;
+  };
+  gallery: {
+    title: string;
+    description: string;
+    images: string[];
+  };
+  showroom: {
+    title: string;
+    location: string;
+    description: string;
+    experienceTitle: string;
+    experienceDescription: string;
+    image: string;
+    ctaText: string;
+  };
+  testimonials: {
+    title: string;
+    description: string;
+    testimonials: Array<{
+      id: number;
+      name: string;
+      store: string;
+      avatar: string;
+      text: string;
+    }>;
+  };
+  history: {
+    title: string;
+    paragraphs: string[];
+    image: string;
+    quote: string;
+  };
+  faq: {
+    title: string;
+    description: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  footer: {
+    description: string;
+    socialLinks: {
+      facebook: string;
+      instagram: string;
+      whatsapp: string;
+    };
+  };
+}
+
+const defaultData: LandingPageData = {
+  hero: {
+    logo: "/images/brand/onbongo-logo.webp",
+    introText: "Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.",
+    title: "SEJA UM LOJISTA OFICIAL ONBONGO",
+    subtitle: "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico espírito urbano e esportivo da marca.",
+    ctaText: "Começar Agora!",
+    backgroundImage: "/images/hero/onbongo-background.webp"
+  },
+  form: {
+    sectionTitle: "SEJA UM LOJISTA OFICIAL ONBONGO AGORA MESMO",
+    benefits: [
+      {
+        title: "Marca Internacional",
+        description: "Revenda uma marca brasileira de streetwear com reconhecimento mundial e mais de três décadas de história."
+      },
+      {
+        title: "Pronta Entrega",
+        description: "Mais de 100.000 peças disponíveis para envio imediato, garantindo giro rápido e novidades constantes na sua loja."
+      },
+      {
+        title: "Plataforma Online",
+        description: "Acesse nosso catálogo digital com preços exclusivos para lojistas e coleções que respiram o espírito urbano e esportivo."
+      },
+      {
+        title: "Apoio às Vendas",
+        description: "Conte com treinamento, materiais de marketing e suporte comercial especializado para aumentar suas vendas e fortalecer sua vitrine."
+      }
+    ],
+    nameLabel: "Nome Completo",
+    whatsappLabel: "WhatsApp para Contato", 
+    cnpjLabel: "Agora precisamos do seu CNPJ",
+    submitButtonText: "Começar Agora!"
+  },
+  gallery: {
+    title: "Coleções Exclusivas Onbongo",
+    description: "Descubra as coleções oficiais Onbongo, com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.",
+    images: [
+      "/images/gallery/onbongo-1.webp",
+      "/images/gallery/onbongo-2.webp",
+      "/images/gallery/onbongo-3.webp",
+      "/images/gallery/onbongo-4.webp",
+      "/images/gallery/onbongo-5.webp",
+      "/images/gallery/onbongo-6.webp",
+      "/images/gallery/onbongo-7.webp",
+      "/images/gallery/onbongo-8.webp"
+    ]
+  },
+  showroom: {
+    title: "Conheça o Show Room da Onbongo em SP",
+    location: "São Paulo - Capital",
+    description: "Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção Onbongo. Um espaço moderno e exclusivo para lojistas conhecerem de perto o que há de melhor no streetwear brasileiro.",
+    experienceTitle: "Experiência Completa do Produto",
+    experienceDescription: "No nosso showroom em São Paulo, você tem acesso exclusivo a toda nossa coleção. Toque, sinta e experimente a qualidade dos tecidos, o acabamento perfeito e os detalhes únicos que fazem da Onbongo a marca líder em streetwear e lifestyle.",
+    image: "/images/gallery/onbongo-1.webp",
+    ctaText: "Quero Ser Lojista"
+  },
+  testimonials: {
+    title: "Depoimentos de Lojistas Onbongo Oficiais",
+    description: "Histórias reais de sucesso de parceiros que triplicaram o faturamento com a Onbongo",
+    testimonials: [
+      {
+        id: 1,
+        name: "Marcos Silva",
+        store: "Street Style Store - São Paulo, SP",
+        avatar: "M",
+        text: "Trabalhar com a Onbongo foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca."
+      },
+      {
+        id: 2,
+        name: "Amanda Costa", 
+        store: "Urban Fashion - Rio de Janeiro, RJ",
+        avatar: "A",
+        text: "O suporte da equipe Onbongo é incrível. Eles nos ajudam com materiais de marketing e sempre estão disponíveis para dúvidas. Recomendo para qualquer lojista sério."
+      },
+      {
+        id: 3,
+        name: "Rafael Oliveira",
+        store: "Streetwear BH - Belo Horizonte, MG", 
+        avatar: "R",
+        text: "Em 2 anos como parceiro Onbongo, tripliquei meu faturamento. A marca tem um apelo incrível com o público jovem e as peças têm qualidade excepcional."
+      },
+      {
+        id: 4,
+        name: "Carla Santos",
+        store: "Fashion Hub - Curitiba, PR",
+        avatar: "C", 
+        text: "A Onbongo transformou minha loja multimarca. Agora somos referência em surfwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido."
+      }
+    ]
+  },
+  history: {
+    title: "História da Marca Onbongo",
+    paragraphs: [
+      "Desde 1988, a Onbongo é sinônimo de autenticidade e atitude no surfwear e streetwear brasileiro. Nascida nas praias e nas ruas, a marca construiu uma trajetória sólida vestindo surfistas, skatistas e apaixonados pela cultura urbana.",
+      "Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf - marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.",
+      "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade através da moda."
+    ],
+    image: "/images/gallery/onbongo-2.webp",
+    quote: "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na Onda."
+  },
+  faq: {
+    title: "Perguntas Frequentes",
+    description: "Tire suas dúvidas sobre a parceria com a Onbongo",
+    items: [
+      {
+        question: "Os produtos são oficiais da marca Onbongo?",
+        answer: "Sim, os produtos são 100% oficiais da marca Onbongo. Quando você se torna um lojista oficial, você tem a garantia de estar adquirindo produtos autênticos e de qualidade da marca."
+      },
+      {
+        question: "Posso visitar o showroom em São Paulo?",
+        answer: "Sim, temos um showroom em São Paulo que está aberto para visitações. É uma ótima oportunidade para conhecer nossos produtos pessoalmente. Faça o cadastro e um representante entrará em contato para agendar sua visita."
+      },
+      {
+        question: "Existe um valor de pedido mínimo?",
+        answer: "Sim, existe um valor de pedido mínimo para iniciar sua parceria como lojista oficial Onbongo. Os detalhes específicos sobre valores serão informados em nosso primeiro contato."
+      },
+      {
+        question: "Quais as formas de pagamento?",
+        answer: "Aceitamos pagamentos através do PIX e cartão de crédito parcelado. No momento, não aceitamos pagamentos via boleto bancário."
+      }
+    ]
+  },
+  footer: {
+    description: "A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.",
+    socialLinks: {
+      facebook: "https://www.facebook.com/onbongo",
+      instagram: "https://www.instagram.com/onbongo_oficial/",
+      whatsapp: "https://onbongo.com.br"
+    }
+  }
+};
+
+export default function Admin() {
+  const [data, setData] = useState<LandingPageData>(defaultData);
+  const [activeTab, setActiveTab] = useState("hero");
+  const [message, setMessage] = useState("");
+
+  // Carregar dados do localStorage
+  useEffect(() => {
+    const savedData = localStorage.getItem('landingPageData');
+    if (savedData) {
+      try {
+        const parsedData = JSON.parse(savedData);
+        setData({ ...defaultData, ...parsedData });
+      } catch (error) {
+        console.error('Erro ao carregar dados:', error);
+      }
+    }
+  }, []);
+
+  // Salvar dados
+  const saveData = () => {
+    localStorage.setItem('landingPageData', JSON.stringify(data));
+    setMessage("✅ Dados salvos com sucesso!");
+    setTimeout(() => setMessage(""), 3000);
+  };
+
+  // Download JSON
+  const downloadJSON = () => {
+    const dataStr = JSON.stringify(data, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'landing-page-data.json';
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
+  // Upload JSON
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const result = e.target?.result as string;
+          const parsedData = JSON.parse(result);
+          setData({ ...defaultData, ...parsedData });
+          setMessage("✅ Dados carregados do arquivo!");
+          setTimeout(() => setMessage(""), 3000);
+        } catch (error) {
+          setMessage("❌ Erro ao carregar arquivo!");
+          setTimeout(() => setMessage(""), 3000);
+        }
+      };
+      reader.readAsText(file);
+    }
+  };
+
+  // Reset dados
+  const resetData = () => {
+    if (confirm("Tem certeza que deseja resetar todos os dados?")) {
+      setData(defaultData);
+      localStorage.removeItem('landingPageData');
+      setMessage("🔄 Dados resetados!");
+      setTimeout(() => setMessage(""), 3000);
+    }
+  };
+
+  // Atualizar seção
+  const updateSection = (section: string, newData: any) => {
+    setData(prev => ({
+      ...prev,
+      [section]: newData
+    }));
+  };
+
+  const tabs = [
+    { id: "hero", name: "Hero", icon: "🏠" },
+    { id: "form", name: "Formulário", icon: "📝" },
+    { id: "gallery", name: "Galeria", icon: "🖼️" },
+    { id: "showroom", name: "Showroom", icon: "🏢" },
+    { id: "testimonials", name: "Depoimentos", icon: "💬" },
+    { id: "history", name: "História", icon: "📖" },
+    { id: "faq", name: "FAQ", icon: "❓" },
+    { id: "footer", name: "Rodapé", icon: "📍" }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-4">
+              <h1 className="text-2xl font-bold text-gray-900">
+                Administração - Landing Page
+              </h1>
+              {message && (
+                <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg">
+                  {message}
+                </div>
+              )}
+            </div>
+            
+            <div className="flex items-center space-x-3">
+              <a
+                href="/"
+                className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+              >
+                <FaHome className="mr-2" />
+                Ver LP
+              </a>
+              
+              <button
+                onClick={saveData}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-onbongo-600"
+              >
+                <FaSave className="mr-2" />
+                Salvar
+              </button>
+              
+              <button
+                onClick={downloadJSON}
+                className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+              >
+                <FaDownload className="mr-2" />
+                Download JSON
+              </button>
+              
+              <label className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 cursor-pointer">
+                <FaUpload className="mr-2" />
+                Upload JSON
+                <input
+                  type="file"
+                  accept=".json"
+                  onChange={handleFileUpload}
+                  className="hidden"
+                />
+              </label>
+              
+              <button
+                onClick={resetData}
+                className="inline-flex items-center px-3 py-2 border border-red-300 shadow-sm text-sm leading-4 font-medium rounded-md text-red-700 bg-white hover:bg-red-50"
+              >
+                <FaReset className="mr-2" />
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex">
+          {/* Sidebar */}
+          <div className="w-64 bg-white rounded-lg shadow-sm p-4 h-fit">
+            <nav className="space-y-2">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    activeTab === tab.id
+                      ? "bg-primary text-white"
+                      : "text-gray-700 hover:bg-gray-100"
+                  }`}
+                >
+                  <span className="mr-3">{tab.icon}</span>
+                  {tab.name}
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 ml-8">
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              
+              {/* Hero Section */}
+              {activeTab === "hero" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção Hero</h2>
+                  
+                  <div className="grid grid-cols-1 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Logo (URL da imagem)
+                      </label>
+                      <input
+                        type="text"
+                        value={data.hero.logo}
+                        onChange={(e) => updateSection("hero", { ...data.hero, logo: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Texto Introdutório
+                      </label>
+                      <input
+                        type="text"
+                        value={data.hero.introText}
+                        onChange={(e) => updateSection("hero", { ...data.hero, introText: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Título Principal
+                      </label>
+                      <input
+                        type="text"
+                        value={data.hero.title}
+                        onChange={(e) => updateSection("hero", { ...data.hero, title: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Subtítulo
+                      </label>
+                      <textarea
+                        value={data.hero.subtitle}
+                        onChange={(e) => updateSection("hero", { ...data.hero, subtitle: e.target.value })}
+                        rows={3}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Texto do Botão CTA
+                      </label>
+                      <input
+                        type="text"
+                        value={data.hero.ctaText}
+                        onChange={(e) => updateSection("hero", { ...data.hero, ctaText: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Imagem de Fundo (URL)
+                      </label>
+                      <input
+                        type="text"
+                        value={data.hero.backgroundImage}
+                        onChange={(e) => updateSection("hero", { ...data.hero, backgroundImage: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Form Section */}
+              {activeTab === "form" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção Formulário</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Título da Seção
+                    </label>
+                    <input
+                      type="text"
+                      value={data.form.sectionTitle}
+                      onChange={(e) => updateSection("form", { ...data.form, sectionTitle: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Benefícios</h3>
+                    {data.form.benefits.map((benefit, index) => (
+                      <div key={index} className="border border-gray-200 rounded-lg p-4 mb-4">
+                        <div className="flex justify-between items-start mb-3">
+                          <h4 className="font-medium text-gray-900">Benefício {index + 1}</h4>
+                          <button
+                            onClick={() => {
+                              const newBenefits = data.form.benefits.filter((_, i) => i !== index);
+                              updateSection("form", { ...data.form, benefits: newBenefits });
+                            }}
+                            className="text-red-600 hover:text-red-800"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+                        <div className="space-y-3">
+                          <input
+                            type="text"
+                            placeholder="Título do benefício"
+                            value={benefit.title}
+                            onChange={(e) => {
+                              const newBenefits = [...data.form.benefits];
+                              newBenefits[index].title = e.target.value;
+                              updateSection("form", { ...data.form, benefits: newBenefits });
+                            }}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                          <textarea
+                            placeholder="Descrição do benefício"
+                            value={benefit.description}
+                            onChange={(e) => {
+                              const newBenefits = [...data.form.benefits];
+                              newBenefits[index].description = e.target.value;
+                              updateSection("form", { ...data.form, benefits: newBenefits });
+                            }}
+                            rows={3}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                    <button
+                      onClick={() => {
+                        const newBenefits = [...data.form.benefits, { title: "", description: "" }];
+                        updateSection("form", { ...data.form, benefits: newBenefits });
+                      }}
+                      className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                    >
+                      <FaPlus className="mr-2" />
+                      Adicionar Benefício
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Label do Campo Nome
+                      </label>
+                      <input
+                        type="text"
+                        value={data.form.nameLabel}
+                        onChange={(e) => updateSection("form", { ...data.form, nameLabel: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Label do Campo WhatsApp
+                      </label>
+                      <input
+                        type="text"
+                        value={data.form.whatsappLabel}
+                        onChange={(e) => updateSection("form", { ...data.form, whatsappLabel: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Label do Campo CNPJ
+                      </label>
+                      <input
+                        type="text"
+                        value={data.form.cnpjLabel}
+                        onChange={(e) => updateSection("form", { ...data.form, cnpjLabel: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Texto do Botão
+                      </label>
+                      <input
+                        type="text"
+                        value={data.form.submitButtonText}
+                        onChange={(e) => updateSection("form", { ...data.form, submitButtonText: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Gallery Section */}
+              {activeTab === "gallery" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção Galeria</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Título
+                    </label>
+                    <input
+                      type="text"
+                      value={data.gallery.title}
+                      onChange={(e) => updateSection("gallery", { ...data.gallery, title: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Descrição
+                    </label>
+                    <textarea
+                      value={data.gallery.description}
+                      onChange={(e) => updateSection("gallery", { ...data.gallery, description: e.target.value })}
+                      rows={3}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Imagens da Galeria</h3>
+                    {data.gallery.images.map((image, index) => (
+                      <div key={index} className="flex items-center space-x-3 mb-3">
+                        <input
+                          type="text"
+                          placeholder="URL da imagem"
+                          value={image}
+                          onChange={(e) => {
+                            const newImages = [...data.gallery.images];
+                            newImages[index] = e.target.value;
+                            updateSection("gallery", { ...data.gallery, images: newImages });
+                          }}
+                          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                        <button
+                          onClick={() => {
+                            const newImages = data.gallery.images.filter((_, i) => i !== index);
+                            updateSection("gallery", { ...data.gallery, images: newImages });
+                          }}
+                          className="text-red-600 hover:text-red-800"
+                        >
+                          <FaTrash />
+                        </button>
+                      </div>
+                    ))}
+                    <button
+                      onClick={() => {
+                        const newImages = [...data.gallery.images, ""];
+                        updateSection("gallery", { ...data.gallery, images: newImages });
+                      }}
+                      className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                    >
+                      <FaPlus className="mr-2" />
+                      Adicionar Imagem
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Showroom Section */}
+              {activeTab === "showroom" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção Showroom</h2>
+                  
+                  <div className="grid grid-cols-1 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Título
+                      </label>
+                      <input
+                        type="text"
+                        value={data.showroom.title}
+                        onChange={(e) => updateSection("showroom", { ...data.showroom, title: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Localização
+                      </label>
+                      <input
+                        type="text"
+                        value={data.showroom.location}
+                        onChange={(e) => updateSection("showroom", { ...data.showroom, location: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Descrição
+                      </label>
+                      <textarea
+                        value={data.showroom.description}
+                        onChange={(e) => updateSection("showroom", { ...data.showroom, description: e.target.value })}
+                        rows={3}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Título da Experiência
+                      </label>
+                      <input
+                        type="text"
+                        value={data.showroom.experienceTitle}
+                        onChange={(e) => updateSection("showroom", { ...data.showroom, experienceTitle: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Descrição da Experiência
+                      </label>
+                      <textarea
+                        value={data.showroom.experienceDescription}
+                        onChange={(e) => updateSection("showroom", { ...data.showroom, experienceDescription: e.target.value })}
+                        rows={4}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Imagem (URL)
+                      </label>
+                      <input
+                        type="text"
+                        value={data.showroom.image}
+                        onChange={(e) => updateSection("showroom", { ...data.showroom, image: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Texto do Botão CTA
+                      </label>
+                      <input
+                        type="text"
+                        value={data.showroom.ctaText}
+                        onChange={(e) => updateSection("showroom", { ...data.showroom, ctaText: e.target.value })}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Testimonials Section */}
+              {activeTab === "testimonials" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção Depoimentos</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Título
+                    </label>
+                    <input
+                      type="text"
+                      value={data.testimonials.title}
+                      onChange={(e) => updateSection("testimonials", { ...data.testimonials, title: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Descrição
+                    </label>
+                    <textarea
+                      value={data.testimonials.description}
+                      onChange={(e) => updateSection("testimonials", { ...data.testimonials, description: e.target.value })}
+                      rows={2}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Depoimentos</h3>
+                    {data.testimonials.testimonials.map((testimonial, index) => (
+                      <div key={testimonial.id} className="border border-gray-200 rounded-lg p-4 mb-4">
+                        <div className="flex justify-between items-start mb-3">
+                          <h4 className="font-medium text-gray-900">Depoimento {index + 1}</h4>
+                          <button
+                            onClick={() => {
+                              const newTestimonials = data.testimonials.testimonials.filter((_, i) => i !== index);
+                              updateSection("testimonials", { ...data.testimonials, testimonials: newTestimonials });
+                            }}
+                            className="text-red-600 hover:text-red-800"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <input
+                            type="text"
+                            placeholder="Nome"
+                            value={testimonial.name}
+                            onChange={(e) => {
+                              const newTestimonials = [...data.testimonials.testimonials];
+                              newTestimonials[index].name = e.target.value;
+                              updateSection("testimonials", { ...data.testimonials, testimonials: newTestimonials });
+                            }}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                          <input
+                            type="text"
+                            placeholder="Loja"
+                            value={testimonial.store}
+                            onChange={(e) => {
+                              const newTestimonials = [...data.testimonials.testimonials];
+                              newTestimonials[index].store = e.target.value;
+                              updateSection("testimonials", { ...data.testimonials, testimonials: newTestimonials });
+                            }}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                          <input
+                            type="text"
+                            placeholder="Avatar (letra)"
+                            value={testimonial.avatar}
+                            onChange={(e) => {
+                              const newTestimonials = [...data.testimonials.testimonials];
+                              newTestimonials[index].avatar = e.target.value;
+                              updateSection("testimonials", { ...data.testimonials, testimonials: newTestimonials });
+                            }}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                        <textarea
+                          placeholder="Depoimento"
+                          value={testimonial.text}
+                          onChange={(e) => {
+                            const newTestimonials = [...data.testimonials.testimonials];
+                            newTestimonials[index].text = e.target.value;
+                            updateSection("testimonials", { ...data.testimonials, testimonials: newTestimonials });
+                          }}
+                          rows={3}
+                          className="w-full mt-4 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    ))}
+                    <button
+                      onClick={() => {
+                        const newId = Math.max(...data.testimonials.testimonials.map(t => t.id)) + 1;
+                        const newTestimonials = [...data.testimonials.testimonials, {
+                          id: newId,
+                          name: "",
+                          store: "",
+                          avatar: "",
+                          text: ""
+                        }];
+                        updateSection("testimonials", { ...data.testimonials, testimonials: newTestimonials });
+                      }}
+                      className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                    >
+                      <FaPlus className="mr-2" />
+                      Adicionar Depoimento
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* History Section */}
+              {activeTab === "history" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção História</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Título
+                    </label>
+                    <input
+                      type="text"
+                      value={data.history.title}
+                      onChange={(e) => updateSection("history", { ...data.history, title: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Parágrafos</h3>
+                    {data.history.paragraphs.map((paragraph, index) => (
+                      <div key={index} className="mb-4">
+                        <div className="flex justify-between items-start mb-2">
+                          <label className="text-sm font-medium text-gray-700">
+                            Parágrafo {index + 1}
+                          </label>
+                          <button
+                            onClick={() => {
+                              const newParagraphs = data.history.paragraphs.filter((_, i) => i !== index);
+                              updateSection("history", { ...data.history, paragraphs: newParagraphs });
+                            }}
+                            className="text-red-600 hover:text-red-800"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+                        <textarea
+                          value={paragraph}
+                          onChange={(e) => {
+                            const newParagraphs = [...data.history.paragraphs];
+                            newParagraphs[index] = e.target.value;
+                            updateSection("history", { ...data.history, paragraphs: newParagraphs });
+                          }}
+                          rows={4}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    ))}
+                    <button
+                      onClick={() => {
+                        const newParagraphs = [...data.history.paragraphs, ""];
+                        updateSection("history", { ...data.history, paragraphs: newParagraphs });
+                      }}
+                      className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                    >
+                      <FaPlus className="mr-2" />
+                      Adicionar Parágrafo
+                    </button>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Imagem (URL)
+                    </label>
+                    <input
+                      type="text"
+                      value={data.history.image}
+                      onChange={(e) => updateSection("history", { ...data.history, image: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Citação
+                    </label>
+                    <input
+                      type="text"
+                      value={data.history.quote}
+                      onChange={(e) => updateSection("history", { ...data.history, quote: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* FAQ Section */}
+              {activeTab === "faq" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção FAQ</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Título
+                    </label>
+                    <input
+                      type="text"
+                      value={data.faq.title}
+                      onChange={(e) => updateSection("faq", { ...data.faq, title: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Descrição
+                    </label>
+                    <input
+                      type="text"
+                      value={data.faq.description}
+                      onChange={(e) => updateSection("faq", { ...data.faq, description: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Perguntas e Respostas</h3>
+                    {data.faq.items.map((item, index) => (
+                      <div key={index} className="border border-gray-200 rounded-lg p-4 mb-4">
+                        <div className="flex justify-between items-start mb-3">
+                          <h4 className="font-medium text-gray-900">FAQ {index + 1}</h4>
+                          <button
+                            onClick={() => {
+                              const newItems = data.faq.items.filter((_, i) => i !== index);
+                              updateSection("faq", { ...data.faq, items: newItems });
+                            }}
+                            className="text-red-600 hover:text-red-800"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
+                        <div className="space-y-3">
+                          <input
+                            type="text"
+                            placeholder="Pergunta"
+                            value={item.question}
+                            onChange={(e) => {
+                              const newItems = [...data.faq.items];
+                              newItems[index].question = e.target.value;
+                              updateSection("faq", { ...data.faq, items: newItems });
+                            }}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                          <textarea
+                            placeholder="Resposta"
+                            value={item.answer}
+                            onChange={(e) => {
+                              const newItems = [...data.faq.items];
+                              newItems[index].answer = e.target.value;
+                              updateSection("faq", { ...data.faq, items: newItems });
+                            }}
+                            rows={3}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                    <button
+                      onClick={() => {
+                        const newItems = [...data.faq.items, { question: "", answer: "" }];
+                        updateSection("faq", { ...data.faq, items: newItems });
+                      }}
+                      className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                    >
+                      <FaPlus className="mr-2" />
+                      Adicionar FAQ
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Footer Section */}
+              {activeTab === "footer" && (
+                <div className="space-y-6">
+                  <h2 className="text-xl font-semibold text-gray-900">Seção Rodapé</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Descrição
+                    </label>
+                    <textarea
+                      value={data.footer.description}
+                      onChange={(e) => updateSection("footer", { ...data.footer, description: e.target.value })}
+                      rows={3}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Links Sociais</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Facebook
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.socialLinks.facebook}
+                          onChange={(e) => updateSection("footer", { 
+                            ...data.footer, 
+                            socialLinks: { ...data.footer.socialLinks, facebook: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Instagram
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.socialLinks.instagram}
+                          onChange={(e) => updateSection("footer", { 
+                            ...data.footer, 
+                            socialLinks: { ...data.footer.socialLinks, instagram: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          WhatsApp
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.socialLinks.whatsapp}
+                          onChange={(e) => updateSection("footer", { 
+                            ...data.footer, 
+                            socialLinks: { ...data.footer.socialLinks, whatsapp: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
