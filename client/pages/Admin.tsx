@@ -157,7 +157,7 @@ const defaultData: LandingPageData = {
       {
         id: 1,
         name: "Marcos Silva",
-        store: "Street Style Store - São Paulo, SP",
+        store: "Street Style Store - S��o Paulo, SP",
         avatar: "M",
         text: "Trabalhar com a Onbongo foi um divisor de águas para minha loja. As margens são excelentes e os produtos saem rapidamente. Meus clientes sempre perguntam pelos lançamentos da marca."
       },
@@ -1154,7 +1154,7 @@ export default function Admin() {
                         </label>
                         <input
                           type="text"
-                          value={data.footer.hubMultimarcas.url}
+                          value={data.footer.hubMultimarcas?.url || ""}
                           onChange={(e) => updateSection("footer", {
                             ...data.footer,
                             hubMultimarcas: { ...data.footer.hubMultimarcas, url: e.target.value }
