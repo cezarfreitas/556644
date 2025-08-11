@@ -1455,7 +1455,7 @@ export default function Index() {
       // Detect specific error types for better user messaging
       let errorType = "network_error";
       let userMessage =
-        "���� Erro de conexão. Verifique sua internet e tente novamente.";
+        "🔌 Erro de conexão. Verifique sua internet e tente novamente.";
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
@@ -2208,7 +2208,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-1.webp"
-                  alt="Coleção Ecko Streetwear"
+                  alt="Coleção Onbongo Surfwear"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
@@ -2222,7 +2222,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-2.webp"
-                  alt="Estilo Urbano Ecko"
+                  alt="Estilo Urbano Onbongo"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
@@ -2236,7 +2236,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-3.webp"
-                  alt="Moda Urbana Ecko"
+                  alt="Moda Urbana Onbongo"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
@@ -2250,7 +2250,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-4.webp"
-                  alt="Streetwear Premium Ecko"
+                  alt="Surfwear Premium Onbongo"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
