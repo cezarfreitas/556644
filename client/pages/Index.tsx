@@ -2596,53 +2596,6 @@ export default function Index() {
                     e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca
                     expressar personalidade através da moda.
                   </p>
-
-                  {/* Vantagens para Lojistas */}
-                  <div className="bg-gray-50 rounded-xl p-6 space-y-4">
-                    <h3 className="text-lg font-bold text-gray-900">Para Lojistas Oficiais:</h3>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Produtos exclusivos e coleções limitadas</li>
-                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Margens competitivas e alta rotatividade</li>
-                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Suporte comercial completo: fotos, materiais de marketing</li>
-                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Coleções sazonais (verão e inverno)</li>
-                      <li className="flex items-start"><span className="text-primary mr-2">✓</span>Compra mínima R$ 2.500 com logística otimizada</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      36+
-                    </div>
-                    <div className="text-gray-600 text-sm">
-                      Anos de História
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      R$ 2.5K
-                    </div>
-                    <div className="text-gray-600 text-sm">
-                      Compra Mínima
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      2x
-                    </div>
-                    <div className="text-gray-600 text-sm">
-                      Coleções/Ano
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                      #1
-                    </div>
-                    <div className="text-gray-600 text-sm">
-                      Surfwear Nacional
-                    </div>
-                  </div>
                 </div>
               </div>
 
