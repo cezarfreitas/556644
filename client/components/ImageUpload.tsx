@@ -25,49 +25,24 @@ export default function ImageUpload({
   const [previewUrl, setPreviewUrl] = useState(value);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const compressImage = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      const img = new Image();
+  const uploadImageToServer = async (file: File): Promise<string> => {
+    const formData = new FormData();
+    formData.append('image', file);
+    formData.append('quality', Math.round(quality * 100).toString());
+    formData.append('maxWidth', maxWidth.toString());
+    formData.append('maxHeight', maxHeight.toString());
 
-      img.onload = () => {
-        // Calculate new dimensions
-        let { width, height } = img;
-        
-        if (width > maxWidth || height > maxHeight) {
-          const ratio = Math.min(maxWidth / width, maxHeight / height);
-          width *= ratio;
-          height *= ratio;
-        }
-
-        canvas.width = width;
-        canvas.height = height;
-
-        // Draw and compress
-        ctx?.drawImage(img, 0, 0, width, height);
-        
-        // Convert to blob with compression
-        canvas.toBlob(
-          (blob) => {
-            if (blob) {
-              // Convert blob to base64
-              const reader = new FileReader();
-              reader.onload = () => resolve(reader.result as string);
-              reader.onerror = reject;
-              reader.readAsDataURL(blob);
-            } else {
-              reject(new Error('Failed to compress image'));
-            }
-          },
-          'image/webp',
-          quality
-        );
-      };
-
-      img.onerror = reject;
-      img.src = URL.createObjectURL(file);
+    const response = await fetch('/api/upload/image', {
+      method: 'POST',
+      body: formData,
     });
+
+    if (!response.ok) {
+      throw new Error('Failed to upload image');
+    }
+
+    const result = await response.json();
+    return result.url;
   };
 
   const handleFileSelect = async (file: File) => {
