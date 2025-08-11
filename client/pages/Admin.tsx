@@ -1070,7 +1070,19 @@ export default function Admin() {
               {activeTab === "footer" && (
                 <div className="space-y-6">
                   <h2 className="text-xl font-semibold text-gray-900">Seção Rodapé</h2>
-                  
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Logo do Rodapé (URL)
+                    </label>
+                    <input
+                      type="text"
+                      value={data.footer.logo}
+                      onChange={(e) => updateSection("footer", { ...data.footer, logo: e.target.value })}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Descrição
@@ -1093,14 +1105,14 @@ export default function Admin() {
                         <input
                           type="text"
                           value={data.footer.socialLinks.facebook}
-                          onChange={(e) => updateSection("footer", { 
-                            ...data.footer, 
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
                             socialLinks: { ...data.footer.socialLinks, facebook: e.target.value }
                           })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Instagram
@@ -1108,24 +1120,136 @@ export default function Admin() {
                         <input
                           type="text"
                           value={data.footer.socialLinks.instagram}
-                          onChange={(e) => updateSection("footer", { 
-                            ...data.footer, 
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
                             socialLinks: { ...data.footer.socialLinks, instagram: e.target.value }
                           })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          WhatsApp
+                          WhatsApp / Site
                         </label>
                         <input
                           type="text"
                           value={data.footer.socialLinks.whatsapp}
-                          onChange={(e) => updateSection("footer", { 
-                            ...data.footer, 
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
                             socialLinks: { ...data.footer.socialLinks, whatsapp: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">HUB Multimarcas</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          URL do Site
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.hubMultimarcas.url}
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
+                            hubMultimarcas: { ...data.footer.hubMultimarcas, url: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Logo URL
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.hubMultimarcas.logoUrl}
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
+                            hubMultimarcas: { ...data.footer.hubMultimarcas, logoUrl: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Descrição
+                        </label>
+                        <textarea
+                          value={data.footer.hubMultimarcas.description}
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
+                            hubMultimarcas: { ...data.footer.hubMultimarcas, description: e.target.value }
+                          })}
+                          rows={3}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Nome da Empresa
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.hubMultimarcas.companyName}
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
+                            hubMultimarcas: { ...data.footer.hubMultimarcas, companyName: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Copyright e Créditos</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Texto de Copyright
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.copyright}
+                          onChange={(e) => updateSection("footer", { ...data.footer, copyright: e.target.value })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Desenvolvido por - Nome
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.developedBy.name}
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
+                            developedBy: { ...data.footer.developedBy, name: e.target.value }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Desenvolvido por - URL
+                        </label>
+                        <input
+                          type="text"
+                          value={data.footer.developedBy.url}
+                          onChange={(e) => updateSection("footer", {
+                            ...data.footer,
+                            developedBy: { ...data.footer.developedBy, url: e.target.value }
                           })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
