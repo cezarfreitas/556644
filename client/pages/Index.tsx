@@ -477,8 +477,8 @@ export default function Index() {
             );
             trackViewContent(
               "product_gallery",
-              "ecko_collection",
-              "Coleções Exclusivas Ecko",
+              "onbongo_collection",
+              "Coleções Exclusivas Onbongo",
             );
             observer.unobserve(entry.target); // Track only once
             console.log("✅ ViewContent da galeria disparado (só uma vez)");
@@ -620,7 +620,7 @@ export default function Index() {
     if (META_PIXEL_ID && window.fbq) {
       const pixelData = {
         content_category: "Lojistas",
-        content_name: "Ecko Lojista Registration",
+        content_name: "Onbongo Lojista Registration",
         lead_type: fullEventData.lead_type || "unknown",
         traffic_source: fullEventData.traffic_source || "unknown",
         value: fullEventData.engagement_score || 1,
