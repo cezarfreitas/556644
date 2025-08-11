@@ -71,14 +71,11 @@ export default function MultipleImageUpload({
     setIsUploading(true);
 
     try {
-      const compressedImages = await Promise.all(
-        validFiles.map(file => compressImage(file))
-      );
-      
-      onChange([...images, ...compressedImages]);
+      const uploadedUrls = await uploadImagesToServer(validFiles);
+      onChange([...images, ...uploadedUrls]);
     } catch (error) {
-      console.error('Erro ao processar imagens:', error);
-      alert('Erro ao processar algumas imagens. Tente novamente.');
+      console.error('Erro ao fazer upload das imagens:', error);
+      alert('Erro ao fazer upload das imagens. Tente novamente.');
     } finally {
       setIsUploading(false);
     }
