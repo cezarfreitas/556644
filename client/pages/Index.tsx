@@ -1659,8 +1659,7 @@ export default function Index() {
 
           {/* Mobile Intro Text */}
           <p className="text-xs text-white/80 text-center mb-4 px-3 drop-shadow-md">
-            Aproveite a oportunidade de vender uma das maiores marcas do Brasil
-            e do mundo.
+            Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.
           </p>
 
           {/* Mobile Heading */}
@@ -1676,9 +1675,7 @@ export default function Index() {
 
           {/* Mobile Subtitle */}
           <p className="text-sm text-white/90 leading-relaxed mb-8 px-2 drop-shadow-lg">
-            <span className="font-bold text-white">Cadastre-se agora</span> e
-            tenha acesso à nossa plataforma digital com preços exclusivos para
-            lojistas.
+            <span className="font-bold text-white">Cadastre-se</span> e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico espírito urbano e esportivo da marca.
           </p>
 
           {/* Mobile CTA */}
@@ -2638,7 +2635,7 @@ export default function Index() {
               {/* FAQ Item 1 */}
               <details className="group bg-white rounded-lg shadow-md">
                 <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Os produtos s��o oficiais da marca Onbongo?</span>
+                  <span>Os produtos são oficiais da marca Onbongo?</span>
                   <span className="transform group-open:rotate-180 transition-transform text-primary">
                     ▼
                   </span>
