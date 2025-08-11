@@ -258,6 +258,26 @@ const defaultData: LandingPageData = {
       name: "IDE | Negócios digitais",
       url: "https://www.idenegociosdigitais.com.br"
     }
+  },
+  integrations: {
+    formApi: "https://api.idenegociosdigitais.com.br/webhook/ntk-leads",
+    googleAnalytics: {
+      measurementId: "G-GSDX6XV3V6"
+    },
+    metaPixel: {
+      pixelId: "1052506589717984",
+      conversionName: "Lead_Ecko",
+      apiVersion: "v18.0",
+      testEventCode: "TEST48830",
+      accessToken: "EAAJpULqxTvgBPEZCvLn9cEgPfIFikaWiBeuia34MFmH0nUn5bq57BHW6vaZAwZCYHiPE3ic6Gb91V6yEFWs8LMktOni9JQbij6M2lPTfSly7ePl5FtQWZBm1Dxp7ICMfR2P4s4gpNjWCuuRZB5Pn21uFCZBe6YZBoqCq0JxcfycaIqhZAHtpMiMatTdw2aH9l63DzQZDZD"
+    },
+    googleTagManager: {
+      containerId: "GTM-XXXXXXX"
+    },
+    googleAds: {
+      conversionId: "",
+      conversionLabel: ""
+    }
   }
 };
 
@@ -366,7 +386,7 @@ export default function Admin() {
   };
 
   const tabs = [
-    { id: "hero", name: "Hero", icon: "🏠" },
+    { id: "hero", name: "Hero", icon: "��" },
     { id: "form", name: "Formulário", icon: "📝" },
     { id: "gallery", name: "Galeria", icon: "🖼️" },
     { id: "showroom", name: "Showroom", icon: "🏢" },
@@ -777,7 +797,7 @@ export default function Admin() {
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Descrição da Experiência
+                        Descrição da Experi��ncia
                       </label>
                       <textarea
                         value={data.showroom.experienceDescription}
