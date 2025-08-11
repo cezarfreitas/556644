@@ -1328,7 +1328,7 @@ export default function Index() {
       form_completion_time:
         performance.now() - (window.formStartTime || performance.now()),
 
-      // Informações de conversão
+      // Informaç��es de conversão
       conversion_page: "/",
       conversion_element: "main_form",
       conversion_position: "hero_section",
@@ -2370,8 +2370,8 @@ export default function Index() {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-16">
-              <div className="space-y-4">
+            <div className="text-center mt-10">
+              <div className="space-y-3">
                 <p className="text-lg text-gray-300">
                   Pronto para conhecer de perto a qualidade Onbongo?
                 </p>
