@@ -262,6 +262,39 @@ export default function Index() {
     };
   }, [GA4_MEASUREMENT_ID, META_PIXEL_ID]);
 
+  // Heartbeat animation fallback using JavaScript
+  useEffect(() => {
+    const heartElement = document.querySelector('[data-heart="true"]');
+    if (!heartElement) return;
+
+    let isAnimating = false;
+
+    const animateHeart = () => {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      // First beat
+      heartElement.style.transform = 'scale(1.4)';
+      setTimeout(() => {
+        heartElement.style.transform = 'scale(1)';
+        setTimeout(() => {
+          // Second beat
+          heartElement.style.transform = 'scale(1.4)';
+          setTimeout(() => {
+            heartElement.style.transform = 'scale(1)';
+            isAnimating = false;
+          }, 150);
+        }, 200);
+      }, 150);
+    };
+
+    // Start animation immediately and repeat every 1.5 seconds
+    animateHeart();
+    const interval = setInterval(animateHeart, 1500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   // Form API endpoint from environment variable
   const API_FORM_ENDPOINT =
     import.meta.env.VITE_api_form ||
