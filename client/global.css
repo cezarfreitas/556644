@@ -406,6 +406,18 @@ img[fetchpriority="high"] {
     animation-fill-mode: both !important;
   }
 
+  /* Simple pulse animation as fallback */
+  @keyframes simple-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  .heart-pulse {
+    animation: simple-pulse 1s ease-in-out infinite !important;
+    transform-origin: center !important;
+    display: inline-block !important;
+  }
+
   /* Add a subtle glow animation for the heart */
   @keyframes heart-glow {
     0%,
