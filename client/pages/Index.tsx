@@ -58,12 +58,12 @@ export default function Index() {
 
   // Social Media URLs
   const FACEBOOK_URL =
-    import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com/ecko";
+    import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com/onbongo";
   const INSTAGRAM_URL =
     import.meta.env.VITE_INSTAGRAM_URL ||
-    "https://www.instagram.com/ecko_unltd_br/";
+    "https://www.instagram.com/onbongo_oficial/";
   const WHATSAPP_URL =
-    import.meta.env.VITE_WHATSAPP_URL || "https://eckoshop.com.br";
+    import.meta.env.VITE_WHATSAPP_URL || "https://onbongo.com.br";
 
   // Debug: Log environment variables and Meta API status
   console.log("🔧 Environment Variables Debug:");
@@ -94,14 +94,14 @@ export default function Index() {
   console.log("META_TEST_EVENT_CODE:", META_TEST_EVENT_CODE);
 
   // Brand and Company Configuration
-  const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Ecko";
+  const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Onbongo";
   const COMPANY_NAME =
     import.meta.env.VITE_COMPANY_NAME || "IDE | Negócios digitais";
   const COMPANY_URL =
     import.meta.env.VITE_COMPANY_URL ||
     "https://www.idenegociosdigitais.com.br";
   const PAGE_TITLE =
-    import.meta.env.VITE_PAGE_TITLE || "Seja Lojista Oficial Ecko";
+    import.meta.env.VITE_PAGE_TITLE || "Seja Lojista Oficial Onbongo";
 
   // API URLs
   const FACEBOOK_CONNECT_URL =
