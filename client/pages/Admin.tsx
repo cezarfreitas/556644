@@ -692,9 +692,10 @@ export default function Admin() {
                       images={data.gallery.images}
                       onChange={(newImages) => updateSection("gallery", { ...data.gallery, images: newImages })}
                       maxImages={12}
-                      maxSizeMB={2}
-                      maxWidth={800}
-                      maxHeight={600}
+                      maxSizeMB={compressionSettings.maxSizeMB}
+                      maxWidth={compressionSettings.maxWidth}
+                      maxHeight={compressionSettings.maxHeight}
+                      quality={compressionSettings.quality}
                     />
                   </div>
                 </div>
@@ -770,9 +771,10 @@ export default function Admin() {
                       value={data.showroom.image}
                       onChange={(url) => updateSection("showroom", { ...data.showroom, image: url })}
                       label="Imagem do Showroom"
-                      maxSizeMB={2}
-                      maxWidth={1200}
-                      maxHeight={800}
+                      maxSizeMB={compressionSettings.maxSizeMB}
+                      maxWidth={compressionSettings.maxWidth}
+                      maxHeight={compressionSettings.maxHeight}
+                      quality={compressionSettings.quality}
                     />
                     
                     <div>
@@ -967,9 +969,10 @@ export default function Admin() {
                     value={data.history.image}
                     onChange={(url) => updateSection("history", { ...data.history, image: url })}
                     label="Imagem da História"
-                    maxSizeMB={2}
-                    maxWidth={1200}
-                    maxHeight={800}
+                    maxSizeMB={compressionSettings.maxSizeMB}
+                    maxWidth={compressionSettings.maxWidth}
+                    maxHeight={compressionSettings.maxHeight}
+                    quality={compressionSettings.quality}
                   />
                   
                   <div>
@@ -1080,9 +1083,10 @@ export default function Admin() {
                     value={data.footer.logo}
                     onChange={(url) => updateSection("footer", { ...data.footer, logo: url })}
                     label="Logo do Rodapé"
-                    maxSizeMB={1}
+                    maxSizeMB={compressionSettings.maxSizeMB}
                     maxWidth={400}
                     maxHeight={200}
+                    quality={compressionSettings.quality}
                   />
 
                   <div>
@@ -1172,9 +1176,10 @@ export default function Admin() {
                           hubMultimarcas: { ...data.footer.hubMultimarcas, logoUrl: url }
                         })}
                         label="Logo HUB Multimarcas"
-                        maxSizeMB={1}
+                        maxSizeMB={compressionSettings.maxSizeMB}
                         maxWidth={600}
                         maxHeight={300}
+                        quality={compressionSettings.quality}
                       />
 
                       <div>
