@@ -40,7 +40,7 @@ export default function Index() {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
-  // Função auxiliar para pegar cookies (movida para cima para disponibilidade)
+  // Funç��o auxiliar para pegar cookies (movida para cima para disponibilidade)
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -1410,7 +1410,7 @@ export default function Index() {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 30000);
 
-      const response = await fetch(API_FORM_ENDPOINT, {
+      const response = await fetch(formApiEndpoint, {
         method: "POST",
         body: formData, // Send as FormData instead of JSON
         signal: controller.signal,
