@@ -1724,8 +1724,7 @@ export default function Index() {
 
               {/* Desktop Intro Text */}
               <p className="text-lg text-white/80 text-center mb-6 drop-shadow-md">
-                Revenda uma das maiores marcas de streetwear e lifestyle do
-                Brasil.
+                {landingData.hero.introText}
               </p>
 
               {/* Desktop Heading */}
