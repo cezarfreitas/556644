@@ -70,7 +70,7 @@
 
 ```
 ├── client/
-│   ├── lib/utils.ts        # Apenas utils essenciais
+│   ��── lib/utils.ts        # Apenas utils essenciais
 │   ├── pages/              # Páginas da aplicação
 │   ├── App.tsx             # App principal
 │   ├── global.css          # Estilos globais
@@ -110,7 +110,7 @@
 ### **Assets Utilizados**
 
 - ✅ `public/images/hero/hero-background.webp`
-- ✅ `public/images/brand/ecko-logo.webp`
+- ✅ `public/images/brand/onbongo-logo.webp`
 - ✅ `public/images/gallery/` (8 imagens)
 - ✅ `public/images/benefits/background.webp`
 
