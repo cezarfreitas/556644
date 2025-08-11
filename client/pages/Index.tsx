@@ -2819,55 +2819,6 @@ export default function Index() {
               </div>
             </div>
 
-            {/* FAQ Section */}
-            <div className="border-t border-gray-800 pt-8 pb-8">
-              <div className="max-w-4xl mx-auto">
-                <h3 className="text-xl font-bold text-white text-center mb-8">
-                  Perguntas Frequentes
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* FAQ Item 1 */}
-                  <div className="bg-gray-800 rounded-lg p-6">
-                    <h4 className="text-white font-semibold mb-3 text-sm">
-                      Os produtos são oficiais da marca Ecko?
-                    </h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Sim, os produtos são 100% oficiais da marca Ecko. Quando você se torna um lojista oficial, você tem a garantia de estar adquirindo produtos autênticos e de qualidade da marca.
-                    </p>
-                  </div>
-
-                  {/* FAQ Item 2 */}
-                  <div className="bg-gray-800 rounded-lg p-6">
-                    <h4 className="text-white font-semibold mb-3 text-sm">
-                      Posso visitar o showroom em São Paulo?
-                    </h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Sim, temos um showroom em São Paulo que está aberto para visitações. É uma ótima oportunidade para conhecer nossos produtos pessoalmente. Faça o cadastro e um representante entrará em contato para agendar sua visita.
-                    </p>
-                  </div>
-
-                  {/* FAQ Item 3 */}
-                  <div className="bg-gray-800 rounded-lg p-6">
-                    <h4 className="text-white font-semibold mb-3 text-sm">
-                      Existe um valor de pedido mínimo?
-                    </h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Sim, existe um valor de pedido mínimo para iniciar sua parceria como lojista oficial Ecko. Os detalhes específicos sobre valores serão informados em nosso primeiro contato.
-                    </p>
-                  </div>
-
-                  {/* FAQ Item 4 */}
-                  <div className="bg-gray-800 rounded-lg p-6">
-                    <h4 className="text-white font-semibold mb-3 text-sm">
-                      Quais as formas de pagamento?
-                    </h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Aceitamos pagamentos através do PIX e cartão de crédito parcelado. No momento, não aceitamos pagamentos via boleto bancário.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 pt-8">
