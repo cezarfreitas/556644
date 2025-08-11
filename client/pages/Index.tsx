@@ -1669,11 +1669,7 @@ export default function Index() {
           {/* Mobile Heading */}
           <div className="mb-6">
             <h1 className="text-2xl font-black text-white leading-tight drop-shadow-2xl">
-              <span className="block mb-1">SEJA UM</span>
-              <span className="block bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-1">
-                LOJISTA OFICIAL
-              </span>
-              <span className="block">ONBONGO</span>
+              {landingData.hero.title}
             </h1>
           </div>
 
@@ -2668,7 +2664,7 @@ export default function Index() {
               {/* FAQ Item 2 */}
               <details className="group bg-white rounded-lg shadow-md">
                 <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Posso visitar o showroom em São Paulo?</span>
+                  <span>Posso visitar o showroom em S��o Paulo?</span>
                   <span className="transform group-open:rotate-180 transition-transform text-primary">
                     ▼
                   </span>
