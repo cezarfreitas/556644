@@ -1405,6 +1405,481 @@ export default function Admin() {
                 </div>
               )}
 
+              {/* SEO Section */}
+              {activeTab === "seo" && (
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-xl font-semibold text-gray-900">Configurações de SEO</h2>
+                    <div className="flex items-center space-x-2 text-sm text-green-600 bg-green-50 px-3 py-1 rounded-full">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span>Aplicado Automaticamente</span>
+                    </div>
+                  </div>
+
+                  {/* Basic SEO */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🔍 Meta Tags Básicas</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Título da Página (Title Tag)
+                        </label>
+                        <input
+                          type="text"
+                          value={data.seo?.title || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            title: e.target.value
+                          })}
+                          placeholder="Título otimizado para SEO (até 60 caracteres)"
+                          maxLength={60}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                        <p className="text-xs text-gray-500 mt-1">
+                          {data.seo?.title?.length || 0}/60 caracteres
+                        </p>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Meta Descrição
+                        </label>
+                        <textarea
+                          value={data.seo?.description || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            description: e.target.value
+                          })}
+                          placeholder="Descrição da página para resultados de busca (até 160 caracteres)"
+                          maxLength={160}
+                          rows={3}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                        <p className="text-xs text-gray-500 mt-1">
+                          {data.seo?.description?.length || 0}/160 caracteres
+                        </p>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Palavras-chave (Keywords)
+                        </label>
+                        <input
+                          type="text"
+                          value={data.seo?.keywords || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            keywords: e.target.value
+                          })}
+                          placeholder="palavra1, palavra2, palavra3"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Autor
+                          </label>
+                          <input
+                            type="text"
+                            value={data.seo?.author || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              author: e.target.value
+                            })}
+                            placeholder="Nome do autor/empresa"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            URL Canônica
+                          </label>
+                          <input
+                            type="url"
+                            value={data.seo?.canonicalUrl || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              canonicalUrl: e.target.value
+                            })}
+                            placeholder="https://seusite.com.br/"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Favicon */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🎯 Favicon e Ícones</h3>
+                    <div className="space-y-4">
+                      <ImageUpload
+                        value={data.seo?.favicon || ""}
+                        onChange={(url) => updateSection("seo", {
+                          ...data.seo,
+                          favicon: url
+                        })}
+                        label="Favicon (32x32px ou 16x16px)"
+                        maxSizeMB={0.5}
+                        maxWidth={32}
+                        maxHeight={32}
+                        quality={1}
+                      />
+
+                      <ImageUpload
+                        value={data.seo?.appleTouchIcon || ""}
+                        onChange={(url) => updateSection("seo", {
+                          ...data.seo,
+                          appleTouchIcon: url
+                        })}
+                        label="Apple Touch Icon (180x180px)"
+                        maxSizeMB={1}
+                        maxWidth={180}
+                        maxHeight={180}
+                        quality={0.9}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Open Graph */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">📱 Open Graph (Facebook/WhatsApp)</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Título Open Graph
+                        </label>
+                        <input
+                          type="text"
+                          value={data.seo?.openGraph?.title || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            openGraph: {
+                              ...data.seo?.openGraph,
+                              title: e.target.value
+                            }
+                          })}
+                          placeholder="Título para compartilhamento"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Descrição Open Graph
+                        </label>
+                        <textarea
+                          value={data.seo?.openGraph?.description || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            openGraph: {
+                              ...data.seo?.openGraph,
+                              description: e.target.value
+                            }
+                          })}
+                          placeholder="Descrição para compartilhamento"
+                          rows={2}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <ImageUpload
+                        value={data.seo?.openGraph?.image || ""}
+                        onChange={(url) => updateSection("seo", {
+                          ...data.seo,
+                          openGraph: {
+                            ...data.seo?.openGraph,
+                            image: url
+                          }
+                        })}
+                        label="Imagem Open Graph (1200x630px)"
+                        maxSizeMB={2}
+                        maxWidth={1200}
+                        maxHeight={630}
+                        quality={0.9}
+                      />
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            URL do Site
+                          </label>
+                          <input
+                            type="url"
+                            value={data.seo?.openGraph?.url || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              openGraph: {
+                                ...data.seo?.openGraph,
+                                url: e.target.value
+                              }
+                            })}
+                            placeholder="https://seusite.com.br/"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Nome do Site
+                          </label>
+                          <input
+                            type="text"
+                            value={data.seo?.openGraph?.siteName || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              openGraph: {
+                                ...data.seo?.openGraph,
+                                siteName: e.target.value
+                              }
+                            })}
+                            placeholder="Nome do Site"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Twitter Card */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🐦 Twitter Card</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Tipo do Card
+                        </label>
+                        <select
+                          value={data.seo?.twitter?.card || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            twitter: {
+                              ...data.seo?.twitter,
+                              card: e.target.value
+                            }
+                          })}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        >
+                          <option value="summary">Summary</option>
+                          <option value="summary_large_image">Summary Large Image</option>
+                          <option value="app">App</option>
+                          <option value="player">Player</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Título Twitter
+                        </label>
+                        <input
+                          type="text"
+                          value={data.seo?.twitter?.title || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            twitter: {
+                              ...data.seo?.twitter,
+                              title: e.target.value
+                            }
+                          })}
+                          placeholder="Título para Twitter"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Descrição Twitter
+                        </label>
+                        <textarea
+                          value={data.seo?.twitter?.description || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            twitter: {
+                              ...data.seo?.twitter,
+                              description: e.target.value
+                            }
+                          })}
+                          placeholder="Descrição para Twitter"
+                          rows={2}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <ImageUpload
+                        value={data.seo?.twitter?.image || ""}
+                        onChange={(url) => updateSection("seo", {
+                          ...data.seo,
+                          twitter: {
+                            ...data.seo?.twitter,
+                            image: url
+                          }
+                        })}
+                        label="Imagem Twitter Card"
+                        maxSizeMB={2}
+                        maxWidth={1200}
+                        maxHeight={600}
+                        quality={0.9}
+                      />
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            @creator
+                          </label>
+                          <input
+                            type="text"
+                            value={data.seo?.twitter?.creator || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              twitter: {
+                                ...data.seo?.twitter,
+                                creator: e.target.value
+                              }
+                            })}
+                            placeholder="@usuario_criador"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            @site
+                          </label>
+                          <input
+                            type="text"
+                            value={data.seo?.twitter?.site || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              twitter: {
+                                ...data.seo?.twitter,
+                                site: e.target.value
+                              }
+                            })}
+                            placeholder="@usuario_site"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Structured Data */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🏢 Dados Estruturados (Schema.org)</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Nome da Organização
+                        </label>
+                        <input
+                          type="text"
+                          value={data.seo?.structured?.organizationName || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            structured: {
+                              ...data.seo?.structured,
+                              organizationName: e.target.value
+                            }
+                          })}
+                          placeholder="Nome da empresa"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <ImageUpload
+                        value={data.seo?.structured?.organizationLogo || ""}
+                        onChange={(url) => updateSection("seo", {
+                          ...data.seo,
+                          structured: {
+                            ...data.seo?.structured,
+                            organizationLogo: url
+                          }
+                        })}
+                        label="Logo da Organização"
+                        maxSizeMB={1}
+                        maxWidth={600}
+                        maxHeight={600}
+                        quality={0.9}
+                      />
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          URL da Organização
+                        </label>
+                        <input
+                          type="url"
+                          value={data.seo?.structured?.organizationUrl || ""}
+                          onChange={(e) => updateSection("seo", {
+                            ...data.seo,
+                            structured: {
+                              ...data.seo?.structured,
+                              organizationUrl: e.target.value
+                            }
+                          })}
+                          placeholder="https://seusite.com.br/"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Telefone de Contato
+                          </label>
+                          <input
+                            type="tel"
+                            value={data.seo?.structured?.contactPhone || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              structured: {
+                                ...data.seo?.structured,
+                                contactPhone: e.target.value
+                              }
+                            })}
+                            placeholder="+55 11 99999-9999"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Email de Contato
+                          </label>
+                          <input
+                            type="email"
+                            value={data.seo?.structured?.contactEmail || ""}
+                            onChange={(e) => updateSection("seo", {
+                              ...data.seo,
+                              structured: {
+                                ...data.seo?.structured,
+                                contactEmail: e.target.value
+                              }
+                            })}
+                            placeholder="contato@empresa.com.br"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Instructions */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h4 className="text-sm font-medium text-blue-900 mb-2">💡 Dicas de SEO</h4>
+                    <ul className="text-sm text-blue-700 space-y-1">
+                      <li>• <strong>Título:</strong> Use até 60 caracteres e inclua palavras-chave principais</li>
+                      <li>• <strong>Descrição:</strong> Use até 160 caracteres e torne-a atrativa para cliques</li>
+                      <li>• <strong>Favicon:</strong> Use formato ICO ou PNG, 32x32px ou 16x16px</li>
+                      <li>• <strong>Open Graph:</strong> Imagem ideal 1200x630px para melhor visualização</li>
+                      <li>• <strong>Estruturados:</strong> Ajudam o Google a entender melhor seu negócio</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
               {/* Integrations Section */}
               {activeTab === "integrations" && (
                 <div className="space-y-6">
