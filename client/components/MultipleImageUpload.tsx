@@ -171,7 +171,7 @@ export default function MultipleImageUpload({
         type="button"
       >
         <FaUpload className="mr-2" />
-        {isUploading ? 'Processando...' : 'Adicionar Imagens'}
+        {isUploading ? 'Fazendo Upload...' : 'Adicionar Imagens'}
       </button>
 
       {/* Images Grid */}
