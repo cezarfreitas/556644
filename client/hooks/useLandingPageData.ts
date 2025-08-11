@@ -273,7 +273,7 @@ const defaultData: LandingPageData = {
     ],
   },
   footer: {
-    logo: "/images/brand/onbongo-logo.webp",
+    logo: "",
     description:
       "A maior marca de streetwear do Brasil. Conectando a cultura urbana através da moda autêntica.",
     socialLinks: {
