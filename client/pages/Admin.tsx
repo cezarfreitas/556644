@@ -1199,7 +1199,7 @@ export default function Admin() {
                         </label>
                         <input
                           type="text"
-                          value={data.footer.hubMultimarcas.companyName}
+                          value={data.footer.hubMultimarcas?.companyName || ""}
                           onChange={(e) => updateSection("footer", {
                             ...data.footer,
                             hubMultimarcas: { ...data.footer.hubMultimarcas, companyName: e.target.value }
