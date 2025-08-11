@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  ecko-landing:
+  onbongo-landing:
     build:
       context: .
       dockerfile: Dockerfile.safe
