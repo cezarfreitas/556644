@@ -2650,8 +2650,13 @@ export default function Index() {
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
                   <span
-                    className="text-red-500 animate-heartbeat"
-                    style={{ fontSize: "16px" }}
+                    className="text-red-500 inline-block"
+                    style={{
+                      fontSize: "16px",
+                      animation: "heartbeat 1.5s ease-in-out infinite",
+                      transformOrigin: "center",
+                      display: "inline-block"
+                    }}
                     title="Coração animado"
                   >
                     ❤️
