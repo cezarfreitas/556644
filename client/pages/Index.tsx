@@ -1021,7 +1021,7 @@ export default function Index() {
         }
       }
     } catch (error) {
-      console.error("��� Meta Conversion API: Network error", error);
+      console.error("❌ Meta Conversion API: Network error", error);
 
       // Enhanced error logging for debugging
       console.error("Meta API Error Details:", {
@@ -1092,7 +1092,7 @@ export default function Index() {
   const validateWhatsApp = (phone: string) => {
     const numbers = phone.replace(/\D/g, "");
     if (!numbers) return "WhatsApp é obrigatório";
-    if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 d��gitos";
+    if (numbers.length < 10) return "WhatsApp deve ter pelo menos 10 dígitos";
     if (numbers.length < 11 && !numbers.startsWith("11"))
       return "WhatsApp deve ter 11 dígitos para celular";
     if (numbers.length > 11) return "WhatsApp não pode ter mais de 11 dígitos";
@@ -1314,7 +1314,7 @@ export default function Index() {
       cnpj: showCnpjField ? formData.get("cnpj-number") : null,
 
       // Dados da marca/campanha
-      marca: BRAND_NAME,
+      marca: "Onbongo",
       origem: "Landing Page Lojistas",
       campaign_type: "Lead Generation",
       lead_source: "Website Form",
@@ -1650,7 +1650,7 @@ export default function Index() {
           <div className="mb-6">
             <img
               src="/images/brand/onbongo-logo.webp"
-              alt={`Logo ${BRAND_NAME}`}
+              alt="Logo Onbongo"
               className="h-20 w-auto mx-auto"
               loading="eager"
               fetchPriority="high"
@@ -1712,7 +1712,7 @@ export default function Index() {
               <div className="mb-8 flex justify-center">
                 <img
                   src="/images/brand/onbongo-logo.webp"
-                  alt={`Logo ${BRAND_NAME}`}
+                  alt="Logo Onbongo"
                   className="h-20 lg:h-24 w-auto"
                   loading="eager"
                   fetchPriority="high"
@@ -2638,7 +2638,7 @@ export default function Index() {
               {/* FAQ Item 1 */}
               <details className="group bg-white rounded-lg shadow-md">
                 <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Os produtos são oficiais da marca Onbongo?</span>
+                  <span>Os produtos s��o oficiais da marca Onbongo?</span>
                   <span className="transform group-open:rotate-180 transition-transform text-primary">
                     ▼
                   </span>
