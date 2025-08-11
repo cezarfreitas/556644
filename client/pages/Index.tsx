@@ -1107,7 +1107,7 @@ export default function Index() {
     // Validação de CNPJ
     if (numbers === "00000000000000") return "CNPJ inválido";
 
-    // Algoritmo de valida��ão de CNPJ
+    // Algoritmo de validação de CNPJ
     let sum = 0;
     let weight = 2;
 
@@ -1402,7 +1402,7 @@ export default function Index() {
       // Facebook Standard Events - only for business leads (with CNPJ)
       if (selectedCnpj === "sim") {
         console.log(
-          "🎯 Disparando eventos padrões Facebook para lead com CNPJ",
+          "���� Disparando eventos padrões Facebook para lead com CNPJ",
         );
 
         // 1. Lead event (someone showed interest)
@@ -2334,7 +2334,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
               {/* Content */}
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-4">
