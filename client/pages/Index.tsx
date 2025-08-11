@@ -47,7 +47,7 @@ export default function Index() {
     return null;
   };
 
-  // Configura��ões de tracking via .env
+  // Configurações de tracking via .env
   const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
   const GTM_ID = import.meta.env.VITE_GTM_ID;
   const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
@@ -2684,38 +2684,38 @@ export default function Index() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href={FACEBOOK_URL}
+                    href={landingData.footer.socialLinks.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Siga no Facebook - Abre em nova aba"
                     title="Siga no Facebook"
                     data-social="facebook"
-                    data-url={FACEBOOK_URL}
+                    data-url={landingData.footer.socialLinks.facebook}
                   >
                     <FaFacebook className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href={INSTAGRAM_URL}
+                    href={landingData.footer.socialLinks.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Siga no Instagram - Abre em nova aba"
                     title="Siga no Instagram"
                     data-social="instagram"
-                    data-url={INSTAGRAM_URL}
+                    data-url={landingData.footer.socialLinks.instagram}
                   >
                     <FaInstagram className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href={WHATSAPP_URL}
+                    href={landingData.footer.socialLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
                     aria-label="Entre em contato via WhatsApp - Abre em nova aba"
                     title="Entre em contato via WhatsApp"
                     data-social="whatsapp"
-                    data-url={WHATSAPP_URL}
+                    data-url={landingData.footer.socialLinks.whatsapp}
                   >
                     <FaStore className="w-6 h-6 text-white" />
                   </a>
