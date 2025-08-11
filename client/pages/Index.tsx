@@ -1663,7 +1663,7 @@ export default function Index() {
 
           {/* Mobile Intro Text */}
           <p className="text-xs text-white/80 text-center mb-4 px-3 drop-shadow-md">
-            Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.
+            {landingData.hero.introText}
           </p>
 
           {/* Mobile Heading */}
