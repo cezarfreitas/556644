@@ -2506,7 +2506,7 @@ export default function Index() {
                 href="#cadastro-lojistas"
                 className="inline-block bg-primary hover:bg-onbongo-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
-                Quero Ser o Próximo Parceiro de Sucesso
+                Quero Ser o Pr��ximo Parceiro de Sucesso
               </a>
             </div>
           </div>
@@ -2744,7 +2744,7 @@ export default function Index() {
                   </a>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {landingData.footer.hubMultimarcas.description}
+                  {landingData.footer.hubMultimarcas?.description || ""}
                 </p>
                 <div className="mt-4">
                   <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-xs">
