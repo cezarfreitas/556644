@@ -47,7 +47,7 @@ export default function Index() {
     return null;
   };
 
-  // Configurações de tracking via .env
+  // Configura��ões de tracking via .env
   const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
   const GTM_ID = import.meta.env.VITE_GTM_ID;
   const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
@@ -2680,8 +2680,7 @@ export default function Index() {
                   />
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  A maior marca de streetwear do Brasil. Conectando a cultura
-                  urbana através da moda autêntica.
+                  {landingData.footer.description}
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
