@@ -445,6 +445,16 @@ export default function Admin() {
 
           {/* Content */}
           <div className="flex-1 ml-8">
+            {/* Compression Settings */}
+            <div className="mb-6">
+              <CompressionSettings
+                settings={compressionSettings}
+                onChange={setCompressionSettings}
+                isOpen={showCompressionSettings}
+                onToggle={() => setShowCompressionSettings(!showCompressionSettings)}
+              />
+            </div>
+
             <div className="bg-white rounded-lg shadow-sm p-6">
               
               {/* Hero Section */}
