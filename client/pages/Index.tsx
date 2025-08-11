@@ -1463,7 +1463,7 @@ export default function Index() {
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
-          "🔒 Erro de segurança. Recarregue a página e tente novamente.";
+          "��� Erro de segurança. Recarregue a página e tente novamente.";
       }
 
       // Track erro de conexão
@@ -2264,7 +2264,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-5.webp"
-                  alt="Lifestyle Ecko"
+                  alt="Lifestyle Onbongo"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -2275,7 +2275,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-6.webp"
-                  alt="Produtos Exclusivos Ecko"
+                  alt="Produtos Exclusivos Onbongo"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -2286,7 +2286,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-7.webp"
-                  alt="Coleção Completa Ecko"
+                  alt="Coleção Completa Onbongo"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -2297,7 +2297,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-8.webp"
-                  alt="Qualidade Premium Ecko"
+                  alt="Qualidade Premium Onbongo"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
