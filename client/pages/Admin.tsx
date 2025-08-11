@@ -1183,7 +1183,7 @@ export default function Admin() {
                           Descrição
                         </label>
                         <textarea
-                          value={data.footer.hubMultimarcas.description}
+                          value={data.footer.hubMultimarcas?.description || ""}
                           onChange={(e) => updateSection("footer", {
                             ...data.footer,
                             hubMultimarcas: { ...data.footer.hubMultimarcas, description: e.target.value }
