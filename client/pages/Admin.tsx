@@ -114,6 +114,38 @@ interface LandingPageData {
       conversionLabel: string;
     };
   };
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+    author: string;
+    canonicalUrl: string;
+    favicon: string;
+    appleTouchIcon: string;
+    openGraph: {
+      title: string;
+      description: string;
+      image: string;
+      url: string;
+      type: string;
+      siteName: string;
+    };
+    twitter: {
+      card: string;
+      title: string;
+      description: string;
+      image: string;
+      creator: string;
+      site: string;
+    };
+    structured: {
+      organizationName: string;
+      organizationLogo: string;
+      organizationUrl: string;
+      contactPhone: string;
+      contactEmail: string;
+    };
+  };
 }
 
 const defaultData: LandingPageData = {
