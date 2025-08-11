@@ -2309,119 +2309,65 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Conheça o nosso Show Room - Redesigned Modern Layout */}
-      <section className="py-8 sm:py-12 md:py-16 bg-black relative overflow-hidden" id="showroom">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10"></div>
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="grid grid-cols-12 gap-4 h-full opacity-30">
-              {Array.from({ length: 12 }).map((_, i) => (
-                <div key={i} className="w-full h-full border-l border-primary/10"></div>
-              ))}
+      {/* Conheça o nosso Show Room - Simple Layout */}
+      <section className="py-8 sm:py-12 md:py-16 bg-black" id="showroom">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                São Paulo - Capital
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
+                Conheça o Show Room da
+                <span className="block text-primary">Onbongo em SP</span>
+              </h2>
+              <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
+                Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção Onbongo.
+                Um espaço moderno e exclusivo para lojistas conhecerem de perto o que há de melhor no streetwear brasileiro.
+              </p>
             </div>
-          </div>
-        </div>
 
-        <div className="container mx-auto px-3 sm:px-6 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            {/* Hero Card Layout */}
-            <div className="bg-gradient-to-r from-gray-900/80 to-black/80 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-primary/20 shadow-2xl">
-              {/* Header Section */}
-              <div className="text-center mb-10">
-                {/* Location Badge */}
-                <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-6 py-2 text-primary font-semibold text-sm mb-6">
-                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                  São Paulo - Capital
-                </div>
-
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-                  Conheça o
-                  <span className="block bg-gradient-to-r from-primary via-red-500 to-primary bg-clip-text text-transparent">
-                    Show Room da Onbongo
-                  </span>
-                  <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-300 mt-2">
-                    em SP
-                  </span>
-                </h2>
-
-                <p className="text-gray-300 text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed">
-                  Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção Onbongo.
-                  Um espaço moderno e exclusivo para lojistas conhecerem de perto o que há de melhor no streetwear brasileiro.
+            {/* Content Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Text Content */}
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
+                  Experiência Completa do Produto
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  No nosso showroom em São Paulo, você tem acesso exclusivo a toda nossa coleção.
+                  Toque, sinta e experimente a qualidade dos tecidos, o acabamento perfeito e os
+                  detalhes únicos que fazem da Onbongo a marca líder em streetwear e lifestyle.
                 </p>
+                <div className="text-center lg:text-left">
+                  <p className="text-gray-300 mb-4">
+                    Pronto para conhecer de perto a qualidade Onbongo?
+                  </p>
+                  <a
+                    href="#cadastro-lojistas"
+                    className="inline-flex items-center justify-center bg-primary hover:bg-red-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
+                  >
+                    <FaArrowRight className="w-5 h-5" />
+                    Quero Ser Lojista
+                  </a>
+                </div>
               </div>
 
-              {/* Main Content Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                {/* Left Column - Content */}
-                <div className="space-y-6">
-                  {/* Feature Box */}
-                  <div className="bg-black/40 border border-primary/20 rounded-2xl p-6 backdrop-blur-sm">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-primary to-red-600 rounded-xl flex items-center justify-center">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-                          Experiência Completa do Produto
-                        </h3>
-                        <p className="text-gray-300 leading-relaxed">
-                          No nosso showroom em São Paulo, você tem acesso exclusivo a toda nossa coleção.
-                          Toque, sinta e experimente a qualidade dos tecidos, o acabamento perfeito e os
-                          detalhes únicos que fazem da Onbongo a marca líder em streetwear e lifestyle.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Call to Action */}
-                  <div className="text-center lg:text-left">
-                    <p className="text-lg text-gray-300 mb-4">
-                      Pronto para conhecer de perto a qualidade Onbongo?
-                    </p>
-                    <a
-                      href="#cadastro-lojistas"
-                      className="inline-flex items-center justify-center bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 gap-3 shadow-lg hover:shadow-xl hover:scale-105 transform"
-                    >
-                      <FaArrowRight className="w-5 h-5" />
-                      Quero Ser Lojista
-                    </a>
-                  </div>
-                </div>
-
-                {/* Right Column - Image */}
-                <div className="relative">
-                  <div className="relative group">
-                    {/* Decorative Elements */}
-                    <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-red-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                    <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 to-red-600/30 rounded-2xl"></div>
-
-                    {/* Main Image */}
-                    <div className="relative">
-                      <img
-                        src="/images/gallery/onbongo-1.webp"
-                        alt="Showroom Onbongo - Espa��o exclusivo para lojistas"
-                        className="w-full aspect-square object-cover rounded-2xl shadow-2xl relative z-10 transition-transform duration-300 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-2xl z-20"></div>
-
-                      {/* Overlay Content */}
-                      <div className="absolute bottom-6 left-6 right-6 z-30">
-                        <div className="bg-black/60 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                          <p className="text-white text-sm font-medium text-center">
-                            "Viva a experiência Onbongo em nosso showroom exclusivo"
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {/* Image */}
+              <div className="text-center">
+                <img
+                  src="/images/gallery/onbongo-1.webp"
+                  alt="Showroom Onbongo - Espaço exclusivo para lojistas"
+                  className="w-full max-w-lg aspect-square object-cover rounded-2xl shadow-xl mx-auto"
+                  loading="lazy"
+                />
+                <p className="text-gray-400 text-sm mt-4 italic">
+                  "Viva a experiência Onbongo em nosso showroom exclusivo"
+                </p>
               </div>
             </div>
           </div>
