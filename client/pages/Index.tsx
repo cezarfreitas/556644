@@ -1459,7 +1459,7 @@ export default function Index() {
 
       if (error?.name === "AbortError") {
         errorType = "timeout_error";
-        userMessage = "⏱️ Tempo limite excedido. Tente novamente.";
+        userMessage = "⏱�� Tempo limite excedido. Tente novamente.";
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
@@ -2365,7 +2365,7 @@ export default function Index() {
                 </div>
                 <div className="mt-6 space-y-3">
                   <p className="text-gray-400 text-sm italic">
-                    "Viva a experiência Ecko em nosso showroom exclusivo"
+                    "Viva a experiência Onbongo em nosso showroom exclusivo"
                   </p>
                   <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                 </div>
@@ -2376,7 +2376,7 @@ export default function Index() {
             <div className="text-center mt-16">
               <div className="space-y-4">
                 <p className="text-lg text-gray-300">
-                  Pronto para conhecer de perto a qualidade Ecko?
+                  Pronto para conhecer de perto a qualidade Onbongo?
                 </p>
                 <div className="flex justify-center">
                   <a
