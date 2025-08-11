@@ -1683,7 +1683,7 @@ export default function Index() {
             href="#cadastro-lojistas"
             className="inline-flex items-center justify-center max-w-xs bg-primary hover:bg-onbongo-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
           >
-            Começar Agora!
+            {landingData.hero.ctaText}
             <svg
               className="w-4 h-4"
               fill="none"
