@@ -24,44 +24,28 @@ export default function MultipleImageUpload({
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const compressImage = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      const img = new Image();
+  const uploadImagesToServer = async (files: File[]): Promise<string[]> => {
+    const formData = new FormData();
 
-      img.onload = () => {
-        let { width, height } = img;
-        
-        if (width > maxWidth || height > maxHeight) {
-          const ratio = Math.min(maxWidth / width, maxHeight / height);
-          width *= ratio;
-          height *= ratio;
-        }
-
-        canvas.width = width;
-        canvas.height = height;
-        ctx?.drawImage(img, 0, 0, width, height);
-        
-        canvas.toBlob(
-          (blob) => {
-            if (blob) {
-              const reader = new FileReader();
-              reader.onload = () => resolve(reader.result as string);
-              reader.onerror = reject;
-              reader.readAsDataURL(blob);
-            } else {
-              reject(new Error('Failed to compress image'));
-            }
-          },
-          'image/webp',
-          quality
-        );
-      };
-
-      img.onerror = reject;
-      img.src = URL.createObjectURL(file);
+    files.forEach(file => {
+      formData.append('images', file);
     });
+
+    formData.append('quality', Math.round(quality * 100).toString());
+    formData.append('maxWidth', maxWidth.toString());
+    formData.append('maxHeight', maxHeight.toString());
+
+    const response = await fetch('/api/upload/images', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to upload images');
+    }
+
+    const result = await response.json();
+    return result.images.map((img: any) => img.url);
   };
 
   const handleFilesSelect = async (files: FileList) => {
