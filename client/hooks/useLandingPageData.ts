@@ -145,33 +145,12 @@ const defaultData: LandingPageData = {
     backgroundImage: "",
   },
   form: {
-    sectionTitle: "SEJA UM LOJISTA OFICIAL ONBONGO AGORA MESMO",
-    benefits: [
-      {
-        title: "Marca Internacional",
-        description:
-          "Revenda uma marca brasileira de streetwear com reconhecimento mundial e mais de três décadas de história.",
-      },
-      {
-        title: "Pronta Entrega",
-        description:
-          "Mais de 100.000 peças disponíveis para envio imediato, garantindo giro rápido e novidades constantes na sua loja.",
-      },
-      {
-        title: "Plataforma Online",
-        description:
-          "Acesse nosso catálogo digital com preços exclusivos para lojistas e coleções que respiram o espírito urbano e esportivo.",
-      },
-      {
-        title: "Apoio às Vendas",
-        description:
-          "Conte com treinamento, materiais de marketing e suporte comercial especializado para aumentar suas vendas e fortalecer sua vitrine.",
-      },
-    ],
-    nameLabel: "Nome Completo",
-    whatsappLabel: "WhatsApp para Contato",
-    cnpjLabel: "Agora precisamos do seu CNPJ",
-    submitButtonText: "Começar Agora!",
+    sectionTitle: "",
+    benefits: [],
+    nameLabel: "",
+    whatsappLabel: "",
+    cnpjLabel: "",
+    submitButtonText: "",
   },
   gallery: {
     title: "Coleções Exclusivas Onbongo",
