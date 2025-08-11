@@ -1350,9 +1350,25 @@ export default function Index() {
     console.log("Payload sendo enviado:", payload);
 
     try {
-      console.log("Submitting form to:", API_FORM_ENDPOINT);
+      const formApiEndpoint = landingData.integrations?.formApi || API_FORM_ENDPOINT;
+      console.log("Submitting form to:", formApiEndpoint);
 
-      // Create FormData with individual fields instead of JSON
+      // Try using the new form API function first
+      try {
+        await submitToFormAPI(landingData.integrations, payload);
+
+        // Track the successful submission
+        trackFormSubmission(landingData.integrations, payload);
+
+        console.log("Form submitted successfully via new API");
+        setSubmitStatus("success");
+        setSubmitMessage("✅ Dados enviados com sucesso! Em breve entraremos em contato.");
+        return;
+      } catch (apiError) {
+        console.log("New API failed, falling back to original method:", apiError);
+      }
+
+      // Fallback to original FormData method
       const formData = new FormData();
 
       // Add essential form fields
