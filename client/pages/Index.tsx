@@ -2356,7 +2356,7 @@ export default function Index() {
               <div className="text-center">
                 <div className="relative">
                   <img
-                    src="/images/gallery/showroom.webp"
+                    src="/images/gallery/onbongo-1.webp"
                     alt="Showroom Ecko - Espaço exclusivo para lojistas"
                     className="w-full max-w-lg rounded-2xl shadow-2xl mx-auto"
                     loading="lazy"
@@ -2459,7 +2459,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★★</span>
+                                  <span className="text-2xl">★★���★★</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
@@ -2634,7 +2634,7 @@ export default function Index() {
               <div className="text-center lg:text-right">
                 <div className="inline-block">
                   <img
-                    src="/images/gallery/brand-history.webp"
+                    src="/images/gallery/onbongo-2.webp"
                     alt="Ecko Streetwear - Autenticidade da Marca - Cultura Urbana"
                     className="w-full max-w-md rounded-xl shadow-2xl"
                     loading="lazy"
