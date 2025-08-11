@@ -310,6 +310,38 @@ const defaultData: LandingPageData = {
       conversionId: "",
       conversionLabel: ""
     }
+  },
+  seo: {
+    title: "Seja um Lojista Oficial Onbongo | Revenda Streetwear Premium",
+    description: "Torne-se um lojista oficial Onbongo e tenha acesso a produtos exclusivos de streetwear. Mais de 30 anos de história, pronta entrega e suporte especializado.",
+    keywords: "onbongo, lojista, revenda, streetwear, surfwear, atacado, moda urbana, franquia",
+    author: "Onbongo Brasil",
+    canonicalUrl: "https://onbongo.com.br/",
+    favicon: "/favicon.ico",
+    appleTouchIcon: "/apple-touch-icon.png",
+    openGraph: {
+      title: "Seja um Lojista Oficial Onbongo | Streetwear Premium",
+      description: "Revenda uma das maiores marcas de streetwear do Brasil. Produtos exclusivos, pronta entrega e suporte especializado para lojistas.",
+      image: "/images/og-image.jpg",
+      url: "https://onbongo.com.br/",
+      type: "website",
+      siteName: "Onbongo Lojistas"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Seja um Lojista Oficial Onbongo",
+      description: "Revenda uma das maiores marcas de streetwear do Brasil. Produtos exclusivos, pronta entrega e suporte especializado.",
+      image: "/images/twitter-card.jpg",
+      creator: "@onbongo_oficial",
+      site: "@onbongo_oficial"
+    },
+    structured: {
+      organizationName: "Onbongo Brasil",
+      organizationLogo: "/images/brand/onbongo-logo.webp",
+      organizationUrl: "https://onbongo.com.br/",
+      contactPhone: "+55 11 99999-9999",
+      contactEmail: "lojistas@onbongo.com.br"
+    }
   }
 };
 
