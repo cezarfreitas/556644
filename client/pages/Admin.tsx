@@ -478,6 +478,7 @@ export default function Admin() {
     { id: "history", name: "História", icon: "📖" },
     { id: "faq", name: "FAQ", icon: "❓" },
     { id: "footer", name: "Rodapé", icon: "📍" },
+    { id: "seo", name: "SEO", icon: "🔍" },
     { id: "integrations", name: "Integrações", icon: "🔌" }
   ];
 
