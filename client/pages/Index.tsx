@@ -2673,7 +2673,7 @@ export default function Index() {
               <div className="space-y-6 max-w-md mx-auto">
                 <div className="flex items-center justify-center space-x-3">
                   <img
-                    src="/images/brand/onbongo-logo.webp"
+                    src={landingData.footer.logo}
                     alt="Logo - Marca de Streetwear"
                     className="h-12 w-auto"
                     loading="lazy"
