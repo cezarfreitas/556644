@@ -16,6 +16,9 @@ import {
 } from "react-icons/fa";
 
 export default function Index() {
+  // Carregar dados editáveis do admin
+  const landingData = useLandingPageData();
+
   const [showCnpjField, setShowCnpjField] = useState(false);
   const [selectedCnpj, setSelectedCnpj] = useState("");
   const [showCouponMessage, setShowCouponMessage] = useState(false);
@@ -1770,7 +1773,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Cadastro de Lojistas - Formul����rio de Parceria - Otimizado para mobile */}
+      {/* Cadastro de Lojistas - Formul��rio de Parceria - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32 bg-black"
         id="cadastro-lojistas"
