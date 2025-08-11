@@ -135,7 +135,7 @@ export default function Index() {
     import.meta.env.VITE_HUB_DESCRIPTION ||
     "Uma iniciativa do NTK Grupo Textil para democratizar o acesso dos lojistas às grandes marcas do mercado.";
 
-  // Inicializar tracking na p��gina
+  // Inicializar tracking na página
   useEffect(() => {
     // Marcar início do tempo para cálculo de completion time
     window.formStartTime = performance.now();
@@ -2007,7 +2007,7 @@ export default function Index() {
                           htmlFor="cnpj-number"
                           className="text-sm font-medium text-white"
                         >
-                          Agora precisamos do seu CNPJ *
+                          {landingData.form.cnpjLabel} *
                         </label>
                         <div className="relative">
                           <input
