@@ -1463,7 +1463,7 @@ export default function Index() {
       } else if (error?.message?.includes("CORS")) {
         errorType = "cors_error";
         userMessage =
-          "��� Erro de segurança. Recarregue a página e tente novamente.";
+          "🔒 Erro de segurança. Recarregue a página e tente novamente.";
       }
 
       // Track erro de conexão
@@ -2331,7 +2331,7 @@ export default function Index() {
               </h2>
               <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 Espaço exclusivo onde você pode tocar, sentir e experimentar
-                toda a qualidade e autenticidade dos produtos Ecko antes de
+                toda a qualidade e autenticidade dos produtos Onbongo antes de
                 levar para sua loja.
               </p>
             </div>
@@ -2346,8 +2346,8 @@ export default function Index() {
                   <p className="text-gray-300 leading-relaxed">
                     No nosso showroom, você tem acesso exclusivo a toda nossa
                     coleção. Conheça de perto a qualidade dos tecidos, o
-                    acabamento perfeito e os detalhes únicos que fazem da Ecko a
-                    marca líder em streetwear.
+                    acabamento perfeito e os detalhes únicos que fazem da Onbongo a
+                    marca líder em surfwear.
                   </p>
                 </div>
               </div>
@@ -2357,7 +2357,7 @@ export default function Index() {
                 <div className="relative">
                   <img
                     src="/images/gallery/onbongo-1.webp"
-                    alt="Showroom Ecko - Espaço exclusivo para lojistas"
+                    alt="Showroom Onbongo - Espaço exclusivo para lojistas"
                     className="w-full max-w-lg aspect-square object-cover rounded-2xl shadow-2xl mx-auto"
                     loading="lazy"
                   />
