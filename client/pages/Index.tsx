@@ -820,10 +820,10 @@ export default function Index() {
       }
 
       if (META_ACCESS_TOKEN.length < 50) {
-        console.error("Meta API: Access token seems too short:", {
-          length: META_ACCESS_TOKEN.length,
-          preview: META_ACCESS_TOKEN.substring(0, 20) + "...",
-        });
+        console.error("Meta API: Access token seems too short");
+        console.error("Length:", META_ACCESS_TOKEN.length);
+        console.error("Preview:", META_ACCESS_TOKEN.substring(0, 20) + "...");
+        console.error("Type:", typeof META_ACCESS_TOKEN);
         throw new Error(`Access Token appears invalid (length: ${META_ACCESS_TOKEN.length})`);
       }
 
@@ -1091,7 +1091,7 @@ export default function Index() {
 
   const validateCNPJ = (cnpj: string) => {
     const numbers = cnpj.replace(/\D/g, "");
-    if (!numbers) return "CNPJ é obrigatório";
+    if (!numbers) return "CNPJ é obrigat��rio";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
     // Validação de CNPJ
@@ -2494,7 +2494,7 @@ export default function Index() {
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★★★★★</span>
+                            <span className="text-2xl">★���★★★</span>
                           </div>
                           <blockquote className="text-base text-gray-700 leading-relaxed italic">
                             "{testimonial.text}"
