@@ -2083,7 +2083,7 @@ export default function Index() {
                           ) : (
                             <>
                               <FaRocket className="w-5 h-5" />
-                              Começar Agora!
+                              {landingData.form.submitButtonText}
                             </>
                           )}
                         </span>
