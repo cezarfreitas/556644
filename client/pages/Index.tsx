@@ -2813,6 +2813,9 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Tracking Scripts */}
+      <TrackingScripts integrations={landingData.integrations} />
     </div>
   );
 }
