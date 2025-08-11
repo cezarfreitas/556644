@@ -1402,7 +1402,7 @@ export default function Index() {
       // Facebook Standard Events - only for business leads (with CNPJ)
       if (selectedCnpj === "sim") {
         console.log(
-          "���� Disparando eventos padrões Facebook para lead com CNPJ",
+          "🎯 Disparando eventos padrões Facebook para lead com CNPJ",
         );
 
         // 1. Lead event (someone showed interest)
@@ -2336,8 +2336,8 @@ export default function Index() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
               {/* Content */}
-              <div className="space-y-6 sm:space-y-8">
-                <div className="space-y-4">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3">
                   <h3 className="text-xl sm:text-2xl font-bold text-white">
                     Experiência Completa do Produto
                   </h3>
