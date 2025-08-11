@@ -2651,7 +2651,7 @@ export default function Index() {
                   Desenvolvido com{" "}
                   <span
                     className="text-red-500 animate-heartbeat"
-                    style={{ fontSize: '16px' }}
+                    style={{ fontSize: "16px" }}
                     title="Coração animado"
                   >
                     ❤️
