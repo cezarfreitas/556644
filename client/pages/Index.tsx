@@ -2659,12 +2659,21 @@ export default function Index() {
             <div className="border-t border-gray-800 pt-8 pb-8">
               <div className="text-center max-w-4xl mx-auto">
                 <div className="flex items-center justify-center mb-4">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F8a4c71f1296940d088b5de8207ba30f4?format=webp&width=800"
-                    alt="Logo HUB Multimarcas"
-                    className="h-12 w-auto mr-3"
-                    loading="lazy"
-                  />
+                  <a
+                    href="https://hubmultimarcas.com.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-3 hover:opacity-80 transition-opacity duration-300"
+                    aria-label="Visite o site do HUB Multimarcas - Abre em nova aba"
+                    title="HUB Multimarcas"
+                  >
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F8a4c71f1296940d088b5de8207ba30f4?format=webp&width=800"
+                      alt="Logo HUB Multimarcas"
+                      className="h-12 w-auto"
+                      loading="lazy"
+                    />
+                  </a>
                   <h3 className="text-xl font-bold text-white">
                     {HUB_NAME}
                   </h3>
