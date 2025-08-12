@@ -2579,7 +2579,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* História da Marca Onbongo - Surfwear e Streetwear - Otimizado para mobile */}
+      {/* História da Marca - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
         style={{ backgroundColor: "var(--section-history-bg, #ffffff)" }}
