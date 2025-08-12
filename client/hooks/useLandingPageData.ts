@@ -313,7 +313,20 @@ export const useLandingPageData = () => {
     if (savedData) {
       try {
         const parsedData = JSON.parse(savedData);
-        setData({ ...defaultData, ...parsedData });
+        const mergedData = {
+          ...defaultData,
+          ...parsedData,
+          form: {
+            ...defaultData.form,
+            ...parsedData.form,
+            consumerMessage: {
+              ...defaultData.form.consumerMessage,
+              ...parsedData.form?.consumerMessage,
+            },
+          },
+        };
+        console.log("📥 Dados carregados do localStorage:", mergedData);
+        setData(mergedData);
       } catch (error) {
         console.error("Erro ao carregar dados da landing page:", error);
       }
