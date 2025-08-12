@@ -85,6 +85,7 @@ interface LandingPageData {
     developedBy: {
       name: string;
       url: string;
+      creditText?: string;
     };
   };
   integrations: {
