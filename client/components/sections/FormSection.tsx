@@ -44,7 +44,7 @@ interface FormSectionProps {
 const benefitIcons = [FaRocket, FaStore, FaGift, FaCheck];
 
 function FormSection({
-  data,
+  landingData,
   formValues,
   formErrors,
   selectedCnpj,
