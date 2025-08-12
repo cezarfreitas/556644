@@ -948,6 +948,94 @@ export default function Admin() {
                       />
                     </div>
                   </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Mensagem de Sucesso
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={data.form.successMessage}
+                      onChange={(e) =>
+                        updateSection("form", {
+                          ...data.form,
+                          successMessage: e.target.value,
+                        })
+                      }
+                      placeholder="Mensagem exibida quando o formulário é enviado com sucesso"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">
+                      Mensagem para Consumidores
+                    </h3>
+                    <div className="space-y-4 border border-gray-200 rounded-lg p-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Título da Mensagem
+                        </label>
+                        <input
+                          type="text"
+                          value={data.form.consumerMessage.title}
+                          onChange={(e) =>
+                            updateSection("form", {
+                              ...data.form,
+                              consumerMessage: {
+                                ...data.form.consumerMessage,
+                                title: e.target.value,
+                              }
+                            })
+                          }
+                          placeholder="Ex: Este cadastro é exclusivo para lojistas com CNPJ"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Descrição
+                        </label>
+                        <input
+                          type="text"
+                          value={data.form.consumerMessage.description}
+                          onChange={(e) =>
+                            updateSection("form", {
+                              ...data.form,
+                              consumerMessage: {
+                                ...data.form.consumerMessage,
+                                description: e.target.value,
+                              }
+                            })
+                          }
+                          placeholder="Ex: Mas não fique triste! Temos um cupom com"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Texto do Desconto
+                        </label>
+                        <input
+                          type="text"
+                          value={data.form.consumerMessage.discountText}
+                          onChange={(e) =>
+                            updateSection("form", {
+                              ...data.form,
+                              consumerMessage: {
+                                ...data.form.consumerMessage,
+                                discountText: e.target.value,
+                              }
+                            })
+                          }
+                          placeholder="Ex: 10% de desconto"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
 
@@ -2494,7 +2582,7 @@ export default function Admin() {
                         entre seções
                       </li>
                       <li>
-                        • Cores claras (#ffffff, #f8f9fa) são ideais para
+                        • Cores claras (#ffffff, #f8f9fa) s��o ideais para
                         conteúdo principal
                       </li>
                       <li>
