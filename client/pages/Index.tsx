@@ -2625,13 +2625,11 @@ export default function Index() {
                       </span>
                     )}
                   </h2>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-                    {landingData.history?.paragraphs?.[0]?.split(".")[0] ||
-                      "Desde 1988, nossa marca é sinônimo de autenticidade e atitude"}
-                    no surfwear e streetwear brasileiro. Nascida nas praias e
-                    nas ruas, a marca construiu uma trajetória sólida vestindo
-                    surfistas, skatistas e apaixonados pela cultura urbana.
-                  </p>
+                  {landingData.history?.paragraphs?.[0] && (
+                    <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
+                      {landingData.history.paragraphs[0]}
+                    </p>
+                  )}
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com mais de três décadas de história, a Onbongo se
                     reinventou a cada geração, mantendo-se sempre à frente em
