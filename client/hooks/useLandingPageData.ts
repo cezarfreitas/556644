@@ -71,6 +71,8 @@ interface LandingPageData {
     paragraphs: string[];
     image: string;
     quote: string;
+    titleSuffix?: string;
+    imageAlt?: string;
   };
   faq: {
     title: string;
