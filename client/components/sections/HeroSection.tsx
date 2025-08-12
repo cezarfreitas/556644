@@ -34,7 +34,28 @@ const heroBlurPlaceholder = `data:image/svg+xml;base64,${btoa(
 function HeroSection({ landingData, isLoading, onCtaClick }: HeroSectionProps) {
   const data = landingData.hero;
 
-  // Early return if loading or no data
+  // Preload critical images immediately - always run hooks
+  useEffect(() => {
+    if (!isLoading && data?.backgroundImage) {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = data.backgroundImage;
+      link.setAttribute("fetchpriority", "high");
+      document.head.appendChild(link);
+    }
+
+    if (!isLoading && data?.logo) {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = data.logo;
+      link.setAttribute("fetchpriority", "high");
+      document.head.appendChild(link);
+    }
+  }, [isLoading, data?.backgroundImage, data?.logo]);
+
+  // Conditional rendering after hooks
   if (isLoading || !data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -45,27 +66,6 @@ function HeroSection({ landingData, isLoading, onCtaClick }: HeroSectionProps) {
       </div>
     );
   }
-
-  // Preload critical images immediately
-  useEffect(() => {
-    if (data?.backgroundImage) {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.as = "image";
-      link.href = data.backgroundImage;
-      link.setAttribute("fetchpriority", "high");
-      document.head.appendChild(link);
-    }
-
-    if (data?.logo) {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.as = "image";
-      link.href = data.logo;
-      link.setAttribute("fetchpriority", "high");
-      document.head.appendChild(link);
-    }
-  }, [data?.backgroundImage, data?.logo]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
