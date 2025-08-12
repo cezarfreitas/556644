@@ -1471,10 +1471,10 @@ export default function Admin() {
                     </div>
                   </div>
 
-                  {/* Primary Colors */}
+                  {/* Main Colors */}
                   <div className="border border-gray-200 rounded-lg p-4">
                     <h3 className="text-lg font-medium text-gray-900 mb-4">🎨 Cores Principais</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Cor Primária
@@ -1504,67 +1504,7 @@ export default function Admin() {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor Primária Escura
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.primaryDark || "#d35400"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              primaryDark: e.target.value
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.primaryDark || "#d35400"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              primaryDark: e.target.value
-                            })}
-                            placeholder="#d35400"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor Primária Clara
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.primaryLight || "#f39c12"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              primaryLight: e.target.value
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.primaryLight || "#f39c12"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              primaryLight: e.target.value
-                            })}
-                            placeholder="#f39c12"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Secondary Colors */}
-                  <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">🌈 Cores Secundárias</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor Secundária
+                          Cor Segunda
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
@@ -1591,24 +1531,24 @@ export default function Admin() {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor de Destaque
+                          Cor Terciária
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.accent || "#3498db"}
+                            value={data.colors?.tertiary || "#3498db"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              accent: e.target.value
+                              tertiary: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.accent || "#3498db"}
+                            value={data.colors?.tertiary || "#3498db"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              accent: e.target.value
+                              tertiary: e.target.value
                             })}
                             placeholder="#3498db"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
@@ -1616,6 +1556,39 @@ export default function Admin() {
                         </div>
                       </div>
 
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Cor Quaternária
+                        </label>
+                        <div className="flex items-center space-x-3">
+                          <input
+                            type="color"
+                            value={data.colors?.quaternary || "#f39c12"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              quaternary: e.target.value
+                            })}
+                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={data.colors?.quaternary || "#f39c12"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              quaternary: e.target.value
+                            })}
+                            placeholder="#f39c12"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Utility Colors */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🛠️ Cores Utilitárias</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Cor de Borda
