@@ -2351,7 +2351,7 @@ export default function Index() {
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
                 {landingData.showroom?.title || "Conheça o Show Room da"}
-                <span className="block text-primary">{BRAND_NAME} em SP</span>
+                <span className="block text-primary">{landingData.showroom?.brandName} em SP</span>
               </h2>
               <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
                 {landingData.showroom?.description || `Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção ${BRAND_NAME}.`}
