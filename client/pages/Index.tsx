@@ -1750,7 +1750,7 @@ export default function Index() {
           <div className="mb-6">
             <img
               src={landingData.hero.logo}
-              alt={`Logo ${BRAND_NAME}`}
+              alt={`Logo ${landingData.brandName}`}
               className="h-20 w-auto mx-auto"
               loading="eager"
               fetchPriority="high"
