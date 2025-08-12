@@ -2363,7 +2363,7 @@ export default function Index() {
               {/* Text Content */}
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                  Experiência Completa do Produto
+                  {landingData.showroom?.experienceTitle}
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
                   {landingData.showroom?.experienceDescription}
