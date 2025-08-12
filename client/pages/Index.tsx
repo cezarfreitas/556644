@@ -21,7 +21,6 @@ import LazySection from "../components/LazySection";
 import IconLoader from "../components/IconLoader";
 
 // Lazy load non-critical components
-const TrackingScripts = lazy(() => import("../components/TrackingScripts"));
 const LazyGallery = lazy(() => import("../components/LazyGallery"));
 
 // Lazy load heavy sections
@@ -219,7 +218,7 @@ export default function Index() {
               debug: false, // Set to true for debugging
             });
             window.fbq("track", "PageView");
-            console.log("✅ Meta Pixel: PageView tracked on page load");
+            console.log("��� Meta Pixel: PageView tracked on page load");
 
             // Ensure _fbp cookie is set immediately
             setTimeout(() => {
@@ -1826,7 +1825,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Cadastro de Lojistas - Formul�����rio de Parceria - Otimizado para mobile */}
+      {/* Cadastro de Lojistas - Formul���rio de Parceria - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
         style={{ backgroundColor: "var(--section-form-bg, #000000)" }}
