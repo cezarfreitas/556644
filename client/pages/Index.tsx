@@ -2356,14 +2356,18 @@ export default function Index() {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
-                <span className="mr-2">📍</span>
+                {landingData.showroom.locationIcon && (
+                  <span className="mr-2">{landingData.showroom.locationIcon}</span>
+                )}
                 {landingData.showroom.location}
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
-                {landingData.showroom?.title || "Conheça o Show Room da"}
-                <span className="block text-primary">
-                  {landingData.showroom?.brandName} em SP
-                </span>
+                {landingData.showroom?.title}
+                {landingData.showroom?.titleSuffix && (
+                  <span className="block text-primary">
+                    {landingData.showroom?.titleSuffix}
+                  </span>
+                )}
               </h2>
               <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
                 {landingData.showroom?.description}
@@ -2381,10 +2385,11 @@ export default function Index() {
                   {landingData.showroom?.experienceDescription}
                 </p>
                 <div className="text-center lg:text-left">
-                  <p className="text-gray-300 mb-4">
-                    Pronto para conhecer de perto a qualidade{" "}
-                    {landingData.showroom?.brandName}?
-                  </p>
+                  {landingData.showroom?.ctaQuestion && (
+                    <p className="text-gray-300 mb-4">
+                      {landingData.showroom?.ctaQuestion}
+                    </p>
+                  )}
                   <a
                     href="#cadastro-lojistas"
                     className="inline-flex items-center justify-center bg-primary hover:bg-onbongo-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
@@ -2398,15 +2403,16 @@ export default function Index() {
               {/* Image */}
               <div className="text-center">
                 <img
-                  src="/images/gallery/onbongo-1.webp"
-                  alt={`Showroom ${landingData.showroom?.brandName} - Espaço exclusivo para lojistas`}
+                  src={landingData.showroom?.image || landingData.showroom?.imageUrl}
+                  alt={landingData.showroom?.imageAlt || `Showroom ${landingData.brandName}`}
                   className="w-full max-w-lg aspect-square object-cover rounded-2xl shadow-xl mx-auto"
                   loading="lazy"
                 />
-                <p className="text-gray-400 text-sm mt-4 italic">
-                  "Viva a experiência {landingData.showroom?.brandName} em nosso
-                  showroom exclusivo"
-                </p>
+                {landingData.showroom?.imageCaption && (
+                  <p className="text-gray-400 text-sm mt-4 italic">
+                    "{landingData.showroom?.imageCaption}"
+                  </p>
+                )}
               </div>
             </div>
           </div>
