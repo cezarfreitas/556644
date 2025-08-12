@@ -34,6 +34,12 @@ interface LandingPageData {
     whatsappLabel: string;
     cnpjLabel: string;
     submitButtonText: string;
+    successMessage: string;
+    consumerMessage: {
+      title: string;
+      description: string;
+      discountText: string;
+    };
   };
   gallery: {
     title: string;
@@ -207,7 +213,7 @@ const defaultData: LandingPageData = {
     submitButtonText: "Começar Agora!",
   },
   gallery: {
-    title: "Coleções Exclusivas Onbongo",
+    title: "Coleç��es Exclusivas Onbongo",
     description:
       "Descubra as coleções oficiais Onbongo, com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.",
     images: [
