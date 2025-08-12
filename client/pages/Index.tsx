@@ -670,8 +670,15 @@ export default function Index() {
     pixelData: any,
     fullEventData: any,
   ) => {
+    // Skip in development or if configuration is incomplete
     if (!META_ACCESS_TOKEN || !META_PIXEL_ID) {
-      console.log("Meta Conversion API: Missing access token or pixel ID");
+      console.log("Meta Conversion API: Skipping - missing configuration");
+      return;
+    }
+
+    // Additional safety check for valid token format
+    if (!META_ACCESS_TOKEN.startsWith("EAA") || META_ACCESS_TOKEN.length < 100) {
+      console.warn("Meta Conversion API: Skipping - invalid token format");
       return;
     }
 
