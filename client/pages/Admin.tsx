@@ -724,7 +724,7 @@ export default function Admin() {
   const tabs = [
     { id: "hero", name: "Hero", icon: "🏠" },
     { id: "form", name: "Formulário", icon: "📝" },
-    { id: "gallery", name: "Galeria", icon: "🖼️" },
+    { id: "gallery", name: "Galeria", icon: "���️" },
     { id: "showroom", name: "Showroom", icon: "🏢" },
     { id: "testimonials", name: "Depoimentos", icon: "💬" },
     { id: "history", name: "História", icon: "📖" },
@@ -3601,9 +3601,41 @@ export default function Admin() {
 
                   {/* Google Ads */}
                   <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">
-                      🎯 Google Ads (Opcional)
-                    </h3>
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-lg font-medium text-gray-900">
+                        🎯 Google Ads (Opcional)
+                      </h3>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={data.integrations?.googleAds?.enabled || false}
+                          onChange={(e) =>
+                            updateSection("integrations", {
+                              ...data.integrations,
+                              googleAds: {
+                                ...data.integrations?.googleAds,
+                                enabled: e.target.checked,
+                              },
+                            })
+                          }
+                          className="sr-only"
+                        />
+                        <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                          data.integrations?.googleAds?.enabled
+                            ? 'bg-primary'
+                            : 'bg-gray-200'
+                        }`}>
+                          <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                            data.integrations?.googleAds?.enabled
+                              ? 'translate-x-6'
+                              : 'translate-x-1'
+                          }`} />
+                        </div>
+                        <span className="ml-2 text-sm text-gray-600">
+                          {data.integrations?.googleAds?.enabled ? 'Ativo' : 'Inativo'}
+                        </span>
+                      </label>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
