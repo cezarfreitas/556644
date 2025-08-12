@@ -1390,7 +1390,7 @@ export default function Index() {
       cnpj: showCnpjField ? formData.get("cnpj-number") : null,
 
       // Dados da marca/campanha
-      marca: "Onbongo",
+      marca: BRAND_NAME,
       origem: "Landing Page Lojistas",
       campaign_type: "Lead Generation",
       lead_source: "Website Form",
