@@ -70,7 +70,6 @@ export default function Index() {
     return null;
   };
 
-
   // Social Media URLs
   const FACEBOOK_URL =
     import.meta.env.VITE_FACEBOOK_URL || "https://www.facebook.com/onbongo";
@@ -2062,8 +2061,15 @@ export default function Index() {
                             <span className="font-bold text-yellow-300">
                               {landingData.form.consumerMessage.discountText}
                             </span>
-                            {landingData.form.consumerMessage.discountSuffix && (
-                              <span> {landingData.form.consumerMessage.discountSuffix}</span>
+                            {landingData.form.consumerMessage
+                              .discountSuffix && (
+                              <span>
+                                {" "}
+                                {
+                                  landingData.form.consumerMessage
+                                    .discountSuffix
+                                }
+                              </span>
                             )}
                           </p>
                         </div>
@@ -2150,14 +2156,19 @@ export default function Index() {
                           ) : showCouponMessage ? (
                             <>
                               {landingData.form.couponButtonIcon && (
-                                <span className="mr-2">{landingData.form.couponButtonIcon}</span>
+                                <span className="mr-2">
+                                  {landingData.form.couponButtonIcon}
+                                </span>
                               )}
-                              {landingData.form.couponButtonText || "Receber Acesso Exclusivo"}
+                              {landingData.form.couponButtonText ||
+                                "Receber Acesso Exclusivo"}
                             </>
                           ) : (
                             <>
                               {landingData.form.submitButtonIcon && (
-                                <span className="mr-2">{landingData.form.submitButtonIcon}</span>
+                                <span className="mr-2">
+                                  {landingData.form.submitButtonIcon}
+                                </span>
                               )}
                               {landingData.form.submitButtonText}
                             </>
@@ -2191,7 +2202,8 @@ export default function Index() {
                       onClick={handleBackToForm}
                       className="mt-4 bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300"
                     >
-                      {landingData.form.backButtonText || "��� Voltar ao Formulário"}
+                      {landingData.form.backButtonText ||
+                        "��� Voltar ao Formulário"}
                     </button>
                   </div>
                 )}
@@ -2348,7 +2360,9 @@ export default function Index() {
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
                 {landingData.showroom.locationIcon && (
-                  <span className="mr-2">{landingData.showroom.locationIcon}</span>
+                  <span className="mr-2">
+                    {landingData.showroom.locationIcon}
+                  </span>
                 )}
                 {landingData.showroom.location}
               </div>
@@ -2394,8 +2408,14 @@ export default function Index() {
               {/* Image */}
               <div className="text-center">
                 <img
-                  src={landingData.showroom?.image || landingData.showroom?.imageUrl}
-                  alt={landingData.showroom?.imageAlt || `Showroom ${landingData.brandName}`}
+                  src={
+                    landingData.showroom?.image ||
+                    landingData.showroom?.imageUrl
+                  }
+                  alt={
+                    landingData.showroom?.imageAlt ||
+                    `Showroom ${landingData.brandName}`
+                  }
                   className="w-full max-w-lg aspect-square object-cover rounded-2xl shadow-xl mx-auto"
                   loading="lazy"
                 />
@@ -2630,7 +2650,10 @@ export default function Index() {
                 <div className="inline-block">
                   <img
                     src={landingData.history?.image}
-                    alt={landingData.history?.imageAlt || `História ${landingData.brandName}`}
+                    alt={
+                      landingData.history?.imageAlt ||
+                      `História ${landingData.brandName}`
+                    }
                     className="w-full max-w-md rounded-xl shadow-2xl"
                     loading="lazy"
                   />
@@ -2772,12 +2795,14 @@ export default function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-3 hover:opacity-80 transition-opacity duration-300"
-                    aria-label={`Visite o site ${landingData.footer.hubMultimarcas?.companyName || 'HUB'} - Abre em nova aba`}
-                    title={landingData.footer.hubMultimarcas?.companyName || 'HUB'}
+                    aria-label={`Visite o site ${landingData.footer.hubMultimarcas?.companyName || "HUB"} - Abre em nova aba`}
+                    title={
+                      landingData.footer.hubMultimarcas?.companyName || "HUB"
+                    }
                   >
                     <img
                       src={landingData.footer.hubMultimarcas?.logoUrl || ""}
-                      alt={`Logo ${landingData.footer.hubMultimarcas?.companyName || 'HUB'}`}
+                      alt={`Logo ${landingData.footer.hubMultimarcas?.companyName || "HUB"}`}
                       className="h-12 w-auto"
                       loading="lazy"
                     />
@@ -2802,7 +2827,9 @@ export default function Index() {
                 </div>
                 {landingData.footer.developedBy?.name && (
                   <div className="text-gray-400 text-xs">
-                    {landingData.footer.developedBy.creditText || landingData.footer.developedBy.defaultCreditText || "Desenvolvido com"}{" "}
+                    {landingData.footer.developedBy.creditText ||
+                      landingData.footer.developedBy.defaultCreditText ||
+                      "Desenvolvido com"}{" "}
                     <span
                       className="text-red-500 inline-block"
                       style={{
@@ -2812,7 +2839,9 @@ export default function Index() {
                         display: "inline-block",
                         transition: "transform 0.2s ease-in-out",
                       }}
-                      title={landingData.footer.developedBy.heartTitle || "Coração"}
+                      title={
+                        landingData.footer.developedBy.heartTitle || "Coração"
+                      }
                       data-heart="true"
                     >
                       ❤️
@@ -2836,8 +2865,6 @@ export default function Index() {
 
       {/* Dynamic Colors */}
       <DynamicColors colors={landingData.colors} />
-
-
     </div>
   );
 }
