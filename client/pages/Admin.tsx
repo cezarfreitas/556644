@@ -1458,16 +1458,154 @@ export default function Admin() {
               {activeTab === "colors" && (
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-semibold text-gray-900">Cores de Fundo das Seções</h2>
+                    <h2 className="text-xl font-semibold text-gray-900">Configurações de Cores</h2>
                     <div className="flex items-center space-x-2 text-sm text-green-600 bg-green-50 px-3 py-1 rounded-full">
                       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                       <span>Aplicado em Tempo Real</span>
                     </div>
                   </div>
 
+                  {/* Main Colors */}
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🎨 Cores Principais do Site</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Cor Primária
+                        </label>
+                        <div className="flex items-center space-x-3">
+                          <input
+                            type="color"
+                            value={data.colors?.main?.primary || "#e86001"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                primary: e.target.value
+                              }
+                            })}
+                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={data.colors?.main?.primary || "#e86001"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                primary: e.target.value
+                              }
+                            })}
+                            placeholder="#e86001"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Cor Secundária
+                        </label>
+                        <div className="flex items-center space-x-3">
+                          <input
+                            type="color"
+                            value={data.colors?.main?.secondary || "#2c3e50"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                secondary: e.target.value
+                              }
+                            })}
+                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={data.colors?.main?.secondary || "#2c3e50"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                secondary: e.target.value
+                              }
+                            })}
+                            placeholder="#2c3e50"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Cor Terciária
+                        </label>
+                        <div className="flex items-center space-x-3">
+                          <input
+                            type="color"
+                            value={data.colors?.main?.tertiary || "#3498db"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                tertiary: e.target.value
+                              }
+                            })}
+                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={data.colors?.main?.tertiary || "#3498db"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                tertiary: e.target.value
+                              }
+                            })}
+                            placeholder="#3498db"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Cor Quaternária
+                        </label>
+                        <div className="flex items-center space-x-3">
+                          <input
+                            type="color"
+                            value={data.colors?.main?.quaternary || "#f39c12"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                quaternary: e.target.value
+                              }
+                            })}
+                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={data.colors?.main?.quaternary || "#f39c12"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              main: {
+                                ...data.colors?.main,
+                                quaternary: e.target.value
+                              }
+                            })}
+                            placeholder="#f39c12"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Section Background Colors */}
                   <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">🎨 Cores de Fundo por Seção</h3>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">📄 Cores de Fundo das Seções</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
