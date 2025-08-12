@@ -350,16 +350,24 @@ export const useLandingPageData = () => {
   const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
-    const loadData = async () => {
+    const loadData = async (attempt = 0) => {
       try {
         // Use native fetch to avoid FullStory interference
         const nativeFetch = window.fetch.bind(window);
+
+        // Add timeout to prevent hanging requests
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+
         const response = await nativeFetch("/api/data", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
+          signal: controller.signal,
         });
+
+        clearTimeout(timeoutId);
 
         if (response.ok) {
           const parsedData = await response.json();
