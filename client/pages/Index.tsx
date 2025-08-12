@@ -653,7 +653,7 @@ export default function Index() {
     // Facebook Pixel
     if (META_PIXEL_ID && window.fbq) {
       const pixelData = {
-        content_category: "Lojistas",
+        content_category: "Business Partners",
         content_name: `${BRAND_NAME} Lojista Registration`,
         lead_type: fullEventData.lead_type || "unknown",
         traffic_source: fullEventData.traffic_source || "unknown",
@@ -1216,7 +1216,7 @@ export default function Index() {
 
     const eventData = {
       content_name: contentName,
-      content_category: "Lojistas",
+      content_category: "Business Partners",
       currency: "BRL",
       value: 0,
     };
@@ -1640,7 +1640,7 @@ export default function Index() {
 
     const eventData = {
       content_name: contentName,
-      content_category: "Lojistas",
+      content_category: "Business Partners",
       currency: "BRL",
       value: 1,
     };
@@ -1669,7 +1669,7 @@ export default function Index() {
 
     const eventData = {
       content_name: "Lojista Registration",
-      content_category: "Lojistas",
+      content_category: "Business Partners",
       currency: "BRL",
       value: 1,
       status: "completed",
