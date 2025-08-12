@@ -427,9 +427,11 @@ export default function Admin() {
   });
   const [showCompressionSettings, setShowCompressionSettings] = useState(false);
   const [compressionLastSaved, setCompressionLastSaved] = useState<Date | null>(null);
+  const [compressionSettingsLoaded, setCompressionSettingsLoaded] = useState(false);
 
   // Auto-save compression settings when they change
   useEffect(() => {
+    if (!compressionSettingsLoaded) return; // Don't save on initial load
     const saveCompressionSettings = async () => {
       try {
         const response = await fetch("/api/data/compression-settings", {
@@ -680,7 +682,7 @@ export default function Admin() {
           throw new Error("Erro ao resetar no servidor");
         }
       } catch (error) {
-        console.error("❌ Erro ao resetar:", error);
+        console.error("��� Erro ao resetar:", error);
         setMessage("❌ Erro ao resetar dados");
       }
       setTimeout(() => setMessage(""), 3000);
