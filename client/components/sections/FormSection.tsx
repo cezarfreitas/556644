@@ -2,20 +2,23 @@ import { memo, useState } from "react";
 import { FaCheck, FaRocket, FaStore, FaGift } from "react-icons/fa";
 
 interface FormSectionProps {
-  data: {
-    sectionTitle: string;
-    benefits: Array<{
-      title: string;
-      description: string;
-    }>;
-    nameLabel: string;
-    whatsappLabel: string;
-    cnpjLabel: string;
-    submitButtonText: string;
-    consumerMessage: {
-      title: string;
-      description: string;
-      discountText: string;
+  landingData: {
+    form?: {
+      sectionTitle: string;
+      benefits: Array<{
+        title: string;
+        description: string;
+      }>;
+      nameLabel: string;
+      whatsappLabel: string;
+      cnpjLabel: string;
+      submitButtonText: string;
+      consumerMessage: {
+        title: string;
+        description: string;
+        discountText: string;
+      };
+      successMessage?: string;
     };
   };
   formValues: {
