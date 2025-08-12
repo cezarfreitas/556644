@@ -2253,7 +2253,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-3.webp"
-                  alt="Moda Urbana Onbongo"
+                  alt={`Moda Urbana ${landingData.gallery?.brandName}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
@@ -2267,7 +2267,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-4.webp"
-                  alt="Surfwear Premium Onbongo"
+                  alt={`Surfwear Premium ${landingData.gallery?.brandName}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
@@ -2281,7 +2281,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-5.webp"
-                  alt="Lifestyle Onbongo"
+                  alt={`Lifestyle ${landingData.gallery?.brandName}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -2292,7 +2292,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-6.webp"
-                  alt="Produtos Exclusivos Onbongo"
+                  alt={`Produtos Exclusivos ${landingData.gallery?.brandName}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -2303,7 +2303,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-7.webp"
-                  alt="Coleção Completa Onbongo"
+                  alt={`Coleção Completa ${landingData.gallery?.brandName}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -2314,7 +2314,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-8.webp"
-                  alt="Qualidade Premium Onbongo"
+                  alt={`Qualidade Premium ${landingData.gallery?.brandName}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
