@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import OptimizedImage from "../OptimizedImage";
 
 interface FooterProps {
-  data: {
+  data?: {
     logo: string;
     description: string;
     socialLinks: {
