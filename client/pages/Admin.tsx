@@ -449,16 +449,9 @@ export default function Admin() {
       }
     };
 
-    // Only save if the settings have actually changed from defaults
-    const isDefault = compressionSettings.quality === 0.8 &&
-                     compressionSettings.maxWidth === 1200 &&
-                     compressionSettings.maxHeight === 800 &&
-                     compressionSettings.maxSizeMB === 2;
-
-    if (!isDefault) {
-      const timeoutId = setTimeout(saveCompressionSettings, 1000); // Save after 1 second of no changes
-      return () => clearTimeout(timeoutId);
-    }
+    // Save configurations after a short delay (debounce)
+    const timeoutId = setTimeout(saveCompressionSettings, 1000); // Save after 1 second of no changes
+    return () => clearTimeout(timeoutId);
   }, [compressionSettings]);
 
   // Carregar dados do localStorage
