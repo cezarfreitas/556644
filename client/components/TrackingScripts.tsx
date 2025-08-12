@@ -49,6 +49,7 @@ export default function TrackingScripts({
 
     // Google Tag Manager
     if (
+      integrations?.googleTagManager?.enabled &&
       integrations?.googleTagManager?.containerId &&
       integrations.googleTagManager.containerId !== "GTM-XXXXXXX"
     ) {
