@@ -99,7 +99,7 @@ export default function Index() {
     import.meta.env.VITE_WHATSAPP_URL || "https://onbongo.com.br";
 
   // Debug: Log environment variables and Meta API status
-  console.log("��� Environment Variables Debug:");
+  console.log("���� Environment Variables Debug:");
   console.log("VITE_FACEBOOK_URL:", import.meta.env.VITE_FACEBOOK_URL);
   console.log("VITE_INSTAGRAM_URL:", import.meta.env.VITE_INSTAGRAM_URL);
   console.log("VITE_WHATSAPP_URL:", import.meta.env.VITE_WHATSAPP_URL);
@@ -2130,7 +2130,7 @@ export default function Index() {
                                 });
                             }}
                           />
-                          {/* Ícone de validação */}
+                          {/* Ícone de validaç��o */}
                           {formValues.cnpj && (
                             <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                               {formErrors.cnpj ? (
@@ -2630,14 +2630,11 @@ export default function Index() {
                       {landingData.history.paragraphs[0]}
                     </p>
                   )}
-                  <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com mais de três décadas de história, a Onbongo se
-                    reinventou a cada geração, mantendo-se sempre à frente em
-                    estilo, inovação e conexão com o esporte. A ligação vai
-                    muito além do surf - marcou presença no futebol
-                    profissional, vestindo grandes nomes como Kaká, Roberto
-                    Carlos, Neymar e Amaral.
-                  </p>
+                  {landingData.history?.paragraphs?.[1] && (
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                      {landingData.history.paragraphs[1]}
+                    </p>
+                  )}
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Essa versatilidade faz da Onbongo uma marca única: capaz de
                     transitar do alto rendimento ao esporte de raiz, e das ondas
