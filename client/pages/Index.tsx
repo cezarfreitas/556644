@@ -1,5 +1,17 @@
 import { useState, useEffect, lazy, Suspense } from "react";
-import { FaRocket } from "react-icons/fa";
+import {
+  FaRocket,
+  FaCheck,
+  FaExclamationTriangle,
+  FaGift,
+  FaArrowRight,
+  FaChevronLeft,
+  FaChevronRight,
+  FaChevronDown,
+  FaFacebook,
+  FaInstagram,
+  FaStore
+} from "react-icons/fa";
 import { useLandingPageData } from "../hooks/useLandingPageData";
 import { trackFormSubmission, submitToFormAPI } from "../components/TrackingScripts";
 import SEOHead from "../components/SEOHead";
@@ -2483,7 +2495,7 @@ export default function Index() {
                       <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
                         <div className="space-y-6">
                           <div className="flex items-center space-x-1 text-primary">
-                            <span className="text-2xl">★★���★★</span>
+                            <span className="text-2xl">★★★★★</span>
                           </div>
                           <blockquote className="text-base text-gray-700 leading-relaxed italic">
                             "{testimonial.text}"
