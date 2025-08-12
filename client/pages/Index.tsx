@@ -20,6 +20,7 @@ import DynamicColors from "../components/DynamicColors";
 import HeroSection from "../components/sections/HeroSection";
 import FormSection from "../components/sections/FormSection";
 import LazySection from "../components/LazySection";
+import IconLoader from "../components/IconLoader";
 
 // Lazy load non-critical components
 const TrackingScripts = lazy(() => import("../components/TrackingScripts"));
