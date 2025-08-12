@@ -1649,7 +1649,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Mobile & Desktop Optimized */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-screen w-full overflow-hidden" style={{ backgroundColor: 'var(--section-hero-bg, #000000)' }}>
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
