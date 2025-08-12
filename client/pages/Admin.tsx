@@ -441,15 +441,7 @@ export default function Admin() {
           },
           colors: {
             ...defaultData.colors,
-            ...parsedData.colors,
-            text: {
-              ...defaultData.colors.text,
-              ...parsedData.colors?.text
-            },
-            button: {
-              ...defaultData.colors.button,
-              ...parsedData.colors?.button
-            }
+            ...parsedData.colors
           }
         };
         setData(mergedData);
