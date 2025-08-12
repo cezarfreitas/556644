@@ -1434,184 +1434,37 @@ export default function Admin() {
               {activeTab === "colors" && (
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-semibold text-gray-900">Configurações de Cores</h2>
+                    <h2 className="text-xl font-semibold text-gray-900">Cores de Fundo das Seções</h2>
                     <div className="flex items-center space-x-2 text-sm text-green-600 bg-green-50 px-3 py-1 rounded-full">
                       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                       <span>Aplicado em Tempo Real</span>
                     </div>
                   </div>
 
-                  {/* Main Colors */}
+                  {/* Section Background Colors */}
                   <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">🎨 Cores Principais</h3>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">🎨 Cores de Fundo por Seção</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor Primária
+                          🏠 Seção Hero
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.primary || "#e86001"}
+                            value={data.colors?.hero || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              primary: e.target.value
+                              hero: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.primary || "#e86001"}
+                            value={data.colors?.hero || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              primary: e.target.value
-                            })}
-                            placeholder="#e86001"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor Segunda
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.secondary || "#2c3e50"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              secondary: e.target.value
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.secondary || "#2c3e50"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              secondary: e.target.value
-                            })}
-                            placeholder="#2c3e50"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor Terciária
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.tertiary || "#3498db"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              tertiary: e.target.value
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.tertiary || "#3498db"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              tertiary: e.target.value
-                            })}
-                            placeholder="#3498db"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor Quaternária
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.quaternary || "#f39c12"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              quaternary: e.target.value
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.quaternary || "#f39c12"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              quaternary: e.target.value
-                            })}
-                            placeholder="#f39c12"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Utility Colors */}
-                  <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">🛠️ Cores Utilitárias</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Cor de Borda
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.border || "#dee2e6"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              border: e.target.value
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.border || "#dee2e6"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              border: e.target.value
-                            })}
-                            placeholder="#dee2e6"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Background Colors */}
-                  <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">📄 Cores de Fundo</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Fundo Principal
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.background || "#ffffff"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              background: e.target.value
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.background || "#ffffff"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              background: e.target.value
+                              hero: e.target.value
                             })}
                             placeholder="#ffffff"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
@@ -1621,170 +1474,80 @@ export default function Admin() {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Fundo de Superfície
+                          📝 Seção Formulário
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.surface || "#f8f9fa"}
+                            value={data.colors?.form || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              surface: e.target.value
+                              form: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.surface || "#f8f9fa"}
+                            value={data.colors?.form || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              surface: e.target.value
+                              form: e.target.value
                             })}
                             placeholder="#f8f9fa"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                           />
                         </div>
                       </div>
-                    </div>
-                  </div>
 
-                  {/* Text Colors */}
-                  <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">📝 Cores de Texto</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Texto Principal
+                          🖼️ Seção Galeria
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.text?.primary || "#2c3e50"}
+                            value={data.colors?.gallery || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              text: {
-                                ...data.colors?.text,
-                                primary: e.target.value
-                              }
+                              gallery: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.text?.primary || "#2c3e50"}
+                            value={data.colors?.gallery || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              text: {
-                                ...data.colors?.text,
-                                primary: e.target.value
-                              }
-                            })}
-                            placeholder="#2c3e50"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Texto Secundário
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.text?.secondary || "#7f8c8d"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              text: {
-                                ...data.colors?.text,
-                                secondary: e.target.value
-                              }
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.text?.secondary || "#7f8c8d"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              text: {
-                                ...data.colors?.text,
-                                secondary: e.target.value
-                              }
-                            })}
-                            placeholder="#7f8c8d"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Texto Inverso
-                        </label>
-                        <div className="flex items-center space-x-3">
-                          <input
-                            type="color"
-                            value={data.colors?.text?.inverse || "#ffffff"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              text: {
-                                ...data.colors?.text,
-                                inverse: e.target.value
-                              }
-                            })}
-                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={data.colors?.text?.inverse || "#ffffff"}
-                            onChange={(e) => updateSection("colors", {
-                              ...data.colors,
-                              text: {
-                                ...data.colors?.text,
-                                inverse: e.target.value
-                              }
+                              gallery: e.target.value
                             })}
                             placeholder="#ffffff"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                           />
                         </div>
                       </div>
-                    </div>
-                  </div>
 
-                  {/* Button Colors */}
-                  <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">🔘 Cores de Botões</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Botão Primário
+                          🏢 Seção Showroom
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.button?.primary || "#e86001"}
+                            value={data.colors?.showroom || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                primary: e.target.value
-                              }
+                              showroom: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.button?.primary || "#e86001"}
+                            value={data.colors?.showroom || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                primary: e.target.value
-                              }
+                              showroom: e.target.value
                             })}
-                            placeholder="#e86001"
+                            placeholder="#f8f9fa"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                           />
                         </div>
@@ -1792,32 +1555,26 @@ export default function Admin() {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Botão Primário (Hover)
+                          💬 Seção Depoimentos
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.button?.primaryHover || "#d35400"}
+                            value={data.colors?.testimonials || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                primaryHover: e.target.value
-                              }
+                              testimonials: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.button?.primaryHover || "#d35400"}
+                            value={data.colors?.testimonials || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                primaryHover: e.target.value
-                              }
+                              testimonials: e.target.value
                             })}
-                            placeholder="#d35400"
+                            placeholder="#ffffff"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                           />
                         </div>
@@ -1825,32 +1582,26 @@ export default function Admin() {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Botão Secundário
+                          📖 Seção História
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.button?.secondary || "#6c757d"}
+                            value={data.colors?.history || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                secondary: e.target.value
-                              }
+                              history: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.button?.secondary || "#6c757d"}
+                            value={data.colors?.history || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                secondary: e.target.value
-                              }
+                              history: e.target.value
                             })}
-                            placeholder="#6c757d"
+                            placeholder="#f8f9fa"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                           />
                         </div>
@@ -1858,32 +1609,53 @@ export default function Admin() {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Botão Secundário (Hover)
+                          ❓ Seção FAQ
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.button?.secondaryHover || "#5a6268"}
+                            value={data.colors?.faq || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                secondaryHover: e.target.value
-                              }
+                              faq: e.target.value
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.button?.secondaryHover || "#5a6268"}
+                            value={data.colors?.faq || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              button: {
-                                ...data.colors?.button,
-                                secondaryHover: e.target.value
-                              }
+                              faq: e.target.value
                             })}
-                            placeholder="#5a6268"
+                            placeholder="#ffffff"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          📍 Seção Rodapé
+                        </label>
+                        <div className="flex items-center space-x-3">
+                          <input
+                            type="color"
+                            value={data.colors?.footer || "#2c3e50"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              footer: e.target.value
+                            })}
+                            className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
+                          />
+                          <input
+                            type="text"
+                            value={data.colors?.footer || "#2c3e50"}
+                            onChange={(e) => updateSection("colors", {
+                              ...data.colors,
+                              footer: e.target.value
+                            })}
+                            placeholder="#2c3e50"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                           />
                         </div>
@@ -1897,35 +1669,96 @@ export default function Admin() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="text-center">
                         <div
-                          className="w-full h-20 rounded-lg border"
-                          style={{ backgroundColor: data.colors?.primary || "#e86001" }}
-                        ></div>
-                        <p className="text-sm mt-2 font-medium">Primária</p>
-                        <p className="text-xs text-gray-500">{data.colors?.primary || "#e86001"}</p>
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.hero || "#ffffff",
+                            color: data.colors?.hero === "#ffffff" ? "#000" : "#fff"
+                          }}
+                        >
+                          Hero
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.hero || "#ffffff"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-20 rounded-lg border"
-                          style={{ backgroundColor: data.colors?.secondary || "#2c3e50" }}
-                        ></div>
-                        <p className="text-sm mt-2 font-medium">Segunda</p>
-                        <p className="text-xs text-gray-500">{data.colors?.secondary || "#2c3e50"}</p>
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.form || "#f8f9fa",
+                            color: "#000"
+                          }}
+                        >
+                          Form
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.form || "#f8f9fa"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-20 rounded-lg border"
-                          style={{ backgroundColor: data.colors?.tertiary || "#3498db" }}
-                        ></div>
-                        <p className="text-sm mt-2 font-medium">Terciária</p>
-                        <p className="text-xs text-gray-500">{data.colors?.tertiary || "#3498db"}</p>
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.gallery || "#ffffff",
+                            color: data.colors?.gallery === "#ffffff" ? "#000" : "#fff"
+                          }}
+                        >
+                          Gallery
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.gallery || "#ffffff"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-20 rounded-lg border"
-                          style={{ backgroundColor: data.colors?.quaternary || "#f39c12" }}
-                        ></div>
-                        <p className="text-sm mt-2 font-medium">Quaternária</p>
-                        <p className="text-xs text-gray-500">{data.colors?.quaternary || "#f39c12"}</p>
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.showroom || "#f8f9fa",
+                            color: "#000"
+                          }}
+                        >
+                          Showroom
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.showroom || "#f8f9fa"}</p>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.testimonials || "#ffffff",
+                            color: data.colors?.testimonials === "#ffffff" ? "#000" : "#fff"
+                          }}
+                        >
+                          Testimonials
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.testimonials || "#ffffff"}</p>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.history || "#f8f9fa",
+                            color: "#000"
+                          }}
+                        >
+                          History
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.history || "#f8f9fa"}</p>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.faq || "#ffffff",
+                            color: data.colors?.faq === "#ffffff" ? "#000" : "#fff"
+                          }}
+                        >
+                          FAQ
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.faq || "#ffffff"}</p>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium text-white"
+                          style={{ backgroundColor: data.colors?.footer || "#2c3e50" }}
+                        >
+                          Footer
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.footer || "#2c3e50"}</p>
                       </div>
                     </div>
                   </div>
@@ -1934,12 +1767,11 @@ export default function Admin() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h4 className="text-sm font-medium text-blue-900 mb-2">💡 Como Usar</h4>
                     <ul className="text-sm text-blue-700 space-y-1">
-                      <li>• <strong>Cor Primária:</strong> Usada para botões principais, links e elementos de destaque</li>
-                      <li>• <strong>Cor Segunda:</strong> Usada para textos de cabeçalho e elementos secundários</li>
-                      <li>• <strong>Cor Terciária:</strong> Usada para ícones, badges e elementos de apoio</li>
-                      <li>• <strong>Cor Quaternária:</strong> Usada para acentos e elementos decorativos</li>
-                      <li>• <strong>Cores de Texto:</strong> Aplicadas automaticamente em títulos e parágrafos</li>
-                      <li>• <strong>Salve as alterações:</strong> As cores são aplicadas automaticamente ao salvar</li>
+                      <li>• Cada seção do site pode ter sua própria cor de fundo</li>
+                      <li>• Use cores contrastantes para criar separação visual entre seções</li>
+                      <li>• Cores claras (#ffffff, #f8f9fa) são ideais para conteúdo principal</li>
+                      <li>• Cores escuras (#2c3e50) funcionam bem para rodapé e cabeçalho</li>
+                      <li>• As alterações são aplicadas automaticamente ao salvar</li>
                     </ul>
                   </div>
                 </div>
