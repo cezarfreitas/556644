@@ -449,7 +449,8 @@ export default function Index() {
   };
 
   // Testimonials data
-  const testimonials = [
+  // Use only testimonials from JSON data
+  const testimonials = landingData.testimonials?.testimonials || [
     {
       id: 1,
       name: "Marcos Silva",
