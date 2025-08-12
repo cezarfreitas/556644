@@ -353,7 +353,7 @@ export const useLandingPageData = () => {
     loadData();
   }, []);
 
-  return data;
+  return { data, isLoading };
 };
 
 export type { LandingPageData };
