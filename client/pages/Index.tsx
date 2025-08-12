@@ -653,7 +653,7 @@ export default function Index() {
     if (META_PIXEL_ID && window.fbq) {
       const pixelData = {
         content_category: "Lojistas",
-        content_name: "Onbongo Lojista Registration",
+        content_name: `${BRAND_NAME} Lojista Registration`,
         lead_type: fullEventData.lead_type || "unknown",
         traffic_source: fullEventData.traffic_source || "unknown",
         value: fullEventData.engagement_score || 1,
