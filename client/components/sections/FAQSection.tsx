@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 interface FAQProps {
-  data: {
+  data?: {
     title: string;
     description: string;
     items: Array<{
@@ -14,6 +14,19 @@ interface FAQProps {
 
 function FAQSection({ data }: FAQProps) {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+
+  if (!data) {
+    return (
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-orange-500 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Carregando FAQ...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const toggleItem = (index: number) => {
     const newOpenItems = new Set(openItems);
