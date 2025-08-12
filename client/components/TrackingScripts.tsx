@@ -87,7 +87,7 @@ export default function TrackingScripts({
     }
 
     // Meta Pixel
-    if (integrations?.metaPixel?.pixelId) {
+    if (integrations?.metaPixel?.enabled && integrations?.metaPixel?.pixelId) {
       const pixelId = integrations.metaPixel.pixelId;
 
       // Remove existing Meta Pixel script if any
