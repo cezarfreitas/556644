@@ -273,14 +273,22 @@ const defaultData: LandingPageData = {
     },
   },
   colors: {
-    hero: "",
-    form: "",
-    gallery: "",
-    showroom: "",
-    testimonials: "",
-    history: "",
-    faq: "",
-    footer: "",
+    main: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+      quaternary: "",
+    },
+    sections: {
+      hero: "",
+      form: "",
+      gallery: "",
+      showroom: "",
+      testimonials: "",
+      history: "",
+      faq: "",
+      footer: "",
+    },
   },
 };
 
