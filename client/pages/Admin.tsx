@@ -284,7 +284,7 @@ const defaultData: LandingPageData = {
     paragraphs: [
       "Desde 1988, a Onbongo é sinônimo de autenticidade e atitude no surfwear e streetwear brasileiro. Nascida nas praias e nas ruas, a marca construiu uma trajetória sólida vestindo surfistas, skatistas e apaixonados pela cultura urbana.",
       "Com mais de três décadas de história, a Onbongo se reinventou a cada geração, mantendo-se sempre à frente em estilo, inovação e conexão com o esporte. A ligação vai muito além do surf - marcou presença no futebol profissional, vestindo grandes nomes como Kaká, Roberto Carlos, Neymar e Amaral.",
-      "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade através da moda.",
+      "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade atrav��s da moda.",
     ],
     image: "/images/gallery/onbongo-2.webp",
     quote: "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na Onda.",
@@ -552,21 +552,35 @@ export default function Admin() {
   };
 
   // Upload JSON
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = (e) => {
+      reader.onload = async (e) => {
         try {
           const result = e.target?.result as string;
           const parsedData = JSON.parse(result);
-          setData({ ...defaultData, ...parsedData });
-          setMessage("✅ Dados carregados do arquivo!");
-          setTimeout(() => setMessage(""), 3000);
+
+          // Salvar dados no servidor
+          const response = await fetch("/api/data", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(parsedData),
+          });
+
+          if (response.ok) {
+            setData({ ...defaultData, ...parsedData });
+            setMessage("✅ Dados carregados e salvos no servidor!");
+          } else {
+            throw new Error("Erro ao salvar no servidor");
+          }
         } catch (error) {
-          setMessage("❌ Erro ao carregar arquivo!");
-          setTimeout(() => setMessage(""), 3000);
+          console.error("❌ Erro:", error);
+          setMessage("❌ Erro ao carregar arquivo JSON");
         }
+        setTimeout(() => setMessage(""), 3000);
       };
       reader.readAsText(file);
     }
@@ -2095,7 +2109,7 @@ export default function Admin() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          🏠 Seção Hero
+                          ���� Seção Hero
                         </label>
                         <div className="flex items-center space-x-3">
                           <input
@@ -3460,7 +3474,7 @@ export default function Admin() {
                   {/* Instructions */}
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h4 className="text-sm font-medium text-blue-900 mb-2">
-                      💡 Instru��ões
+                      💡 Instruções
                     </h4>
                     <ul className="text-sm text-blue-700 space-y-1">
                       <li>
