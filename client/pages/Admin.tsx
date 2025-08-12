@@ -1680,19 +1680,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.gallery || "#ffffff"}
+                            value={data.colors?.sections?.gallery || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              gallery: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                gallery: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.gallery || "#ffffff"}
+                            value={data.colors?.sections?.gallery || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              gallery: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                gallery: e.target.value
+                              }
                             })}
                             placeholder="#ffffff"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
@@ -1707,19 +1713,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.showroom || "#f8f9fa"}
+                            value={data.colors?.sections?.showroom || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              showroom: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                showroom: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.showroom || "#f8f9fa"}
+                            value={data.colors?.sections?.showroom || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              showroom: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                showroom: e.target.value
+                              }
                             })}
                             placeholder="#f8f9fa"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
@@ -1734,19 +1746,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.testimonials || "#ffffff"}
+                            value={data.colors?.sections?.testimonials || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              testimonials: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                testimonials: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.testimonials || "#ffffff"}
+                            value={data.colors?.sections?.testimonials || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              testimonials: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                testimonials: e.target.value
+                              }
                             })}
                             placeholder="#ffffff"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
@@ -1761,19 +1779,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.history || "#f8f9fa"}
+                            value={data.colors?.sections?.history || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              history: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                history: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.history || "#f8f9fa"}
+                            value={data.colors?.sections?.history || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              history: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                history: e.target.value
+                              }
                             })}
                             placeholder="#f8f9fa"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
@@ -1788,19 +1812,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.faq || "#ffffff"}
+                            value={data.colors?.sections?.faq || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              faq: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                faq: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.faq || "#ffffff"}
+                            value={data.colors?.sections?.faq || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              faq: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                faq: e.target.value
+                              }
                             })}
                             placeholder="#ffffff"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
@@ -1815,19 +1845,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.footer || "#2c3e50"}
+                            value={data.colors?.sections?.footer || "#2c3e50"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              footer: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                footer: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.footer || "#2c3e50"}
+                            value={data.colors?.sections?.footer || "#2c3e50"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              footer: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                footer: e.target.value
+                              }
                             })}
                             placeholder="#2c3e50"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
