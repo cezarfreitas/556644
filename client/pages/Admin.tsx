@@ -222,7 +222,7 @@ const defaultData: LandingPageData = {
   gallery: {
     title: "Coleç��es Exclusivas Onbongo",
     description:
-      "Descubra as coleções oficiais Onbongo, com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.",
+      "Descubra as coleções oficiais Onbongo, com design aut��ntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.",
     images: [
       "/images/gallery/onbongo-1.webp",
       "/images/gallery/onbongo-2.webp",
@@ -709,7 +709,8 @@ export default function Admin() {
     if (confirm("Tem certeza que deseja resetar todos os dados?")) {
       try {
         // Salvar dados padrão no servidor
-        const response = await fetch("/api/data", {
+        const nativeFetch = window.fetch.bind(window);
+        const response = await nativeFetch("/api/data", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
