@@ -2346,7 +2346,7 @@ export default function Index() {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
-                <span className="mr-2">📍</span>
+                <span className="mr-2">��</span>
                 {landingData.showroom.location}
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
@@ -2566,7 +2566,7 @@ export default function Index() {
             {/* Call to Action */}
             <div className="text-center mt-16">
               <p className="text-lg text-gray-600 mb-6">
-                Junte-se a mais de 500 lojistas parceiros de sucesso
+                {landingData.testimonials?.ctaMessage || "Junte-se aos nossos parceiros de sucesso"}
               </p>
               <a
                 href="#cadastro-lojistas"
