@@ -50,7 +50,7 @@ function ShowroomSection({ data, onCtaClick }: ShowroomProps) {
               </div>
 
               <button
-                onClick={onCtaClick}
+                onClick={onCtaClick || (() => {})}
                 className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300"
               >
                 {data.ctaText}
