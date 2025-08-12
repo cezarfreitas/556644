@@ -221,7 +221,7 @@ const defaultData: LandingPageData = {
   showroom: {
     title: "Conheça o Show Room da Onbongo em SP",
     location: "São Paulo - Capital",
-    description: "Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção Onbongo. Um espaço moderno e exclusivo para lojistas conhecerem de perto o que há de melhor no streetwear brasileiro.",
+    description: "Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção Onbongo. Um espaço moderno e exclusivo para lojistas conhecerem de perto o que h�� de melhor no streetwear brasileiro.",
     experienceTitle: "Experiência Completa do Produto",
     experienceDescription: "No nosso showroom em São Paulo, você tem acesso exclusivo a toda nossa coleção. Toque, sinta e experimente a qualidade dos tecidos, o acabamento perfeito e os detalhes únicos que fazem da Onbongo a marca líder em streetwear e lifestyle.",
     image: "/images/gallery/onbongo-1.webp",
@@ -538,6 +538,7 @@ export default function Admin() {
     { id: "history", name: "História", icon: "📖" },
     { id: "faq", name: "FAQ", icon: "❓" },
     { id: "footer", name: "Rodapé", icon: "📍" },
+    { id: "colors", name: "Cores", icon: "🎨" },
     { id: "seo", name: "SEO", icon: "🔍" },
     { id: "integrations", name: "Integrações", icon: "🔌" }
   ];
