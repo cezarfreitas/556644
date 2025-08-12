@@ -2855,8 +2855,10 @@ export default function Index() {
       {/* Dynamic Colors */}
       <DynamicColors colors={landingData.colors} />
 
-      {/* SEO Head */}
-      <SEOHead seo={landingData.seo} />
+      {/* SEO Head - only render when data is loaded */}
+      {!isLoading && landingData.seo && (
+        <SEOHead seo={landingData.seo} />
+      )}
 
       {/* Tracking Scripts */}
       <TrackingScripts integrations={landingData.integrations} />
