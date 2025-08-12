@@ -1794,15 +1794,17 @@ export default function Index() {
             {/* Centered Content */}
             <div className="text-center space-y-8">
               {/* Desktop Logo */}
-              <div className="mb-8 flex justify-center">
-                <img
-                  src={landingData.hero.logo}
-                  alt={`Logo ${landingData.brandName}`}
-                  className="h-20 lg:h-24 w-auto"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </div>
+              {!isLoading && landingData.hero.logo && (
+                <div className="mb-8 flex justify-center">
+                  <img
+                    src={landingData.hero.logo}
+                    alt={`Logo ${landingData.brandName}`}
+                    className="h-20 lg:h-24 w-auto"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </div>
+              )}
 
               {/* Desktop Intro Text */}
               <p className="text-lg text-white/80 text-center mb-6 drop-shadow-md">
