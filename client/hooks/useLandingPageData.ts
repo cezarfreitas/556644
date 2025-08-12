@@ -233,6 +233,7 @@ const defaultData: LandingPageData = {
     developedBy: {
       name: "",
       url: "",
+      creditText: "",
     },
   },
   integrations: {
