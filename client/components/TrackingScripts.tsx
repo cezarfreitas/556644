@@ -177,7 +177,7 @@ export const trackFormSubmission = (
   }
 
   // Google Tag Manager event
-  if (integrations?.googleTagManager?.containerId && window.dataLayer) {
+  if (integrations?.googleTagManager?.enabled && integrations?.googleTagManager?.containerId && window.dataLayer) {
     window.dataLayer.push({
       event: "form_submission",
       form_type: "lojista_registration",
