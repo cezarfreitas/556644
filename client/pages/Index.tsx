@@ -2652,7 +2652,7 @@ export default function Index() {
                 Perguntas Frequentes
               </h2>
               <p className="text-gray-600 text-lg">
-                Tire suas dúvidas sobre a parceria com a Onbongo
+                {landingData.faq?.description || `Tire suas dúvidas sobre a parceria com a ${BRAND_NAME}`}
               </p>
             </div>
 
