@@ -1938,24 +1938,24 @@ export default function Admin() {
                           className="w-full h-20 rounded-lg border"
                           style={{ backgroundColor: data.colors?.secondary || "#2c3e50" }}
                         ></div>
-                        <p className="text-sm mt-2 font-medium">Secundária</p>
+                        <p className="text-sm mt-2 font-medium">Segunda</p>
                         <p className="text-xs text-gray-500">{data.colors?.secondary || "#2c3e50"}</p>
                       </div>
                       <div className="text-center">
                         <div
                           className="w-full h-20 rounded-lg border"
-                          style={{ backgroundColor: data.colors?.accent || "#3498db" }}
+                          style={{ backgroundColor: data.colors?.tertiary || "#3498db" }}
                         ></div>
-                        <p className="text-sm mt-2 font-medium">Destaque</p>
-                        <p className="text-xs text-gray-500">{data.colors?.accent || "#3498db"}</p>
+                        <p className="text-sm mt-2 font-medium">Terciária</p>
+                        <p className="text-xs text-gray-500">{data.colors?.tertiary || "#3498db"}</p>
                       </div>
                       <div className="text-center">
                         <div
                           className="w-full h-20 rounded-lg border"
-                          style={{ backgroundColor: data.colors?.surface || "#f8f9fa" }}
+                          style={{ backgroundColor: data.colors?.quaternary || "#f39c12" }}
                         ></div>
-                        <p className="text-sm mt-2 font-medium">Superfície</p>
-                        <p className="text-xs text-gray-500">{data.colors?.surface || "#f8f9fa"}</p>
+                        <p className="text-sm mt-2 font-medium">Quaternária</p>
+                        <p className="text-xs text-gray-500">{data.colors?.quaternary || "#f39c12"}</p>
                       </div>
                     </div>
                   </div>
