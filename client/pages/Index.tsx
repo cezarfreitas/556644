@@ -1369,7 +1369,7 @@ export default function Index() {
         console.log("Form submitted successfully via new API");
         setSubmitStatus("success");
         setSubmitMessage(
-          "✅ Dados enviados com sucesso! Em breve entraremos em contato.",
+          landingData.form.successMessage || "✅ Dados enviados com sucesso! Em breve entraremos em contato.",
         );
         return;
       } catch (apiError) {
@@ -1463,7 +1463,7 @@ export default function Index() {
 
       // Mensagem de sucesso simples
       setSubmitMessage(
-        "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
+        landingData.form.successMessage || "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
       );
 
       // Reset form values
@@ -2018,12 +2018,12 @@ export default function Index() {
                       <div className="bg-white/10 border border-white/30 rounded-lg p-4">
                         <div className="text-center space-y-1">
                           <p className="text-white font-medium">
-                            Este cadastro é exclusivo para lojistas com CNPJ
+                            {landingData.form.consumerMessage.title || "Este cadastro é exclusivo para lojistas com CNPJ"}
                           </p>
                           <p className="text-gray-200">
-                            Mas não fique triste! Temos um cupom com{" "}
+                            {landingData.form.consumerMessage.description || "Mas não fique triste! Temos um cupom com"}{" "}
                             <span className="font-bold text-yellow-300">
-                              10% de desconto
+                              {landingData.form.consumerMessage.discountText || "10% de desconto"}
                             </span>{" "}
                             para você
                           </p>
