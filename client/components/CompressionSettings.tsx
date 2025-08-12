@@ -47,6 +47,11 @@ export default function CompressionSettingsComponent({
           <span className="text-xs text-gray-500">
             {Math.round(settings.quality * 100)}% • {settings.maxWidth}x
             {settings.maxHeight} • {settings.maxSizeMB}MB
+            {lastSaved && (
+              <span className="text-green-600 ml-2">
+                • Salvo {lastSaved.toLocaleTimeString()}
+              </span>
+            )}
           </span>
           <svg
             className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
