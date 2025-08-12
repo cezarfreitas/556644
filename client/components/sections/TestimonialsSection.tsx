@@ -21,7 +21,16 @@ interface TestimonialsProps {
   onTouchEnd?: () => void;
 }
 
-function TestimonialsSection({ data }: TestimonialsProps) {
+function TestimonialsSection({
+  data,
+  currentSlide = 0,
+  onNextSlide = () => {},
+  onPrevSlide = () => {},
+  onGoToSlide = () => {},
+  onTouchStart = () => {},
+  onTouchMove = () => {},
+  onTouchEnd = () => {}
+}: TestimonialsProps) {
   if (!data?.testimonials?.length) return null;
 
   return (
