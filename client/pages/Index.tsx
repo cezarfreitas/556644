@@ -2216,7 +2216,7 @@ export default function Index() {
                 <span className="block text-primary">{landingData.gallery?.brandName || BRAND_NAME}</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                {landingData.gallery?.description || `Descubra as coleções oficiais ${BRAND_NAME}, com design autêntico e qualidade premium.`}
+                {landingData.gallery?.description}
               </p>
             </div>
 
