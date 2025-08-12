@@ -19,7 +19,6 @@ docker build -t onbongo-landing:latest \
   --build-arg VITE_META_API_VERSION="v18.0" \
   --build-arg VITE_META_TEST_EVENT_CODE="TEST48830" \
   --build-arg VITE_GTM_ID="GTM-XXXXXXX" \
-  --build-arg VITE_BRAND_NAME="Onbongo" \
   --build-arg VITE_COMPANY_NAME="IDE | Negócios digitais" \
   --build-arg VITE_PAGE_TITLE="Seja Lojista Oficial Onbongo" \
   .
@@ -41,7 +40,6 @@ if [ $? -eq 0 ]; then
     echo "   - VITE_META_API_VERSION"
     echo "   - VITE_META_TEST_EVENT_CODE"
     echo "   - VITE_GTM_ID"
-    echo "   - VITE_BRAND_NAME"
     echo "   - VITE_COMPANY_NAME"
     echo "   - VITE_PAGE_TITLE"
     echo ""
