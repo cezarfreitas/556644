@@ -211,7 +211,8 @@ const defaultData: LandingPageData = {
     whatsappLabel: "WhatsApp para Contato",
     cnpjLabel: "Agora precisamos do seu CNPJ",
     submitButtonText: "Começar Agora!",
-    successMessage: "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
+    successMessage:
+      "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
     consumerMessage: {
       title: "Este cadastro é exclusivo para lojistas com CNPJ",
       description: "Mas não fique triste! Temos um cupom com",
@@ -426,8 +427,11 @@ export default function Admin() {
     maxSizeMB: 2,
   });
   const [showCompressionSettings, setShowCompressionSettings] = useState(false);
-  const [compressionLastSaved, setCompressionLastSaved] = useState<Date | null>(null);
-  const [compressionSettingsLoaded, setCompressionSettingsLoaded] = useState(false);
+  const [compressionLastSaved, setCompressionLastSaved] = useState<Date | null>(
+    null,
+  );
+  const [compressionSettingsLoaded, setCompressionSettingsLoaded] =
+    useState(false);
 
   // Auto-save compression settings when they change
   useEffect(() => {
@@ -447,7 +451,10 @@ export default function Admin() {
           console.log("🗜️ Configurações de compressão salvas automaticamente");
         }
       } catch (error) {
-        console.warn("⚠️ Erro ao salvar configurações de compressão automaticamente:", error);
+        console.warn(
+          "⚠️ Erro ao salvar configurações de compressão automaticamente:",
+          error,
+        );
       }
     };
 
@@ -557,11 +564,19 @@ export default function Admin() {
 
         // Carregar configurações de compressão
         try {
-          const compressionResponse = await fetch("/api/data/compression-settings");
+          const compressionResponse = await fetch(
+            "/api/data/compression-settings",
+          );
           if (compressionResponse.ok) {
             const savedCompressionSettings = await compressionResponse.json();
-            if (savedCompressionSettings && Object.keys(savedCompressionSettings).length > 0) {
-              console.log("🗜️ Configurações de compressão carregadas:", savedCompressionSettings);
+            if (
+              savedCompressionSettings &&
+              Object.keys(savedCompressionSettings).length > 0
+            ) {
+              console.log(
+                "🗜️ Configurações de compressão carregadas:",
+                savedCompressionSettings,
+              );
               setCompressionSettings(savedCompressionSettings);
             }
             setCompressionSettingsLoaded(true);
@@ -596,16 +611,21 @@ export default function Admin() {
       }
 
       // Salvar configurações de compressão separadamente
-      const compressionResponse = await fetch("/api/data/compression-settings", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const compressionResponse = await fetch(
+        "/api/data/compression-settings",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(compressionSettings),
         },
-        body: JSON.stringify(compressionSettings),
-      });
+      );
 
       if (!compressionResponse.ok) {
-        console.warn("⚠️ Não foi possível salvar as configurações de compressão, mas os dados da landing page foram salvos");
+        console.warn(
+          "⚠️ Não foi possível salvar as configurações de compressão, mas os dados da landing page foram salvos",
+        );
       } else {
         setCompressionLastSaved(new Date());
       }
@@ -630,7 +650,9 @@ export default function Admin() {
   };
 
   // Upload JSON
-  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
@@ -1130,7 +1152,7 @@ export default function Admin() {
                               consumerMessage: {
                                 ...data.form.consumerMessage,
                                 title: e.target.value,
-                              }
+                              },
                             })
                           }
                           placeholder="Ex: Este cadastro é exclusivo para lojistas com CNPJ"
@@ -1151,7 +1173,7 @@ export default function Admin() {
                               consumerMessage: {
                                 ...data.form.consumerMessage,
                                 description: e.target.value,
-                              }
+                              },
                             })
                           }
                           placeholder="Ex: Mas não fique triste! Temos um cupom com"
@@ -1172,7 +1194,7 @@ export default function Admin() {
                               consumerMessage: {
                                 ...data.form.consumerMessage,
                                 discountText: e.target.value,
-                              }
+                              },
                             })
                           }
                           placeholder="Ex: 10% de desconto"

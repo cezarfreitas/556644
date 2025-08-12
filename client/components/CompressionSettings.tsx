@@ -76,11 +76,12 @@ export default function CompressionSettingsComponent({
             <div>
               <p className="mb-2">
                 Estas configurações são aplicadas automaticamente no servidor
-                quando você faz upload de imagens. As imagens são salvas na pasta
-                'imagens' com compressão otimizada para web.
+                quando você faz upload de imagens. As imagens são salvas na
+                pasta 'imagens' com compressão otimizada para web.
               </p>
               <p className="text-xs text-blue-500">
-                💾 As configurações são salvas automaticamente após as alterações.
+                💾 As configurações são salvas automaticamente após as
+                alterações.
               </p>
             </div>
           </div>

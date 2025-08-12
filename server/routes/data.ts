@@ -7,7 +7,10 @@ const router = Router();
 // Pasta onde os dados serão salvos
 const DATA_DIR = path.join(process.cwd(), "dados");
 const DATA_FILE = path.join(DATA_DIR, "landing-page-data.json");
-const COMPRESSION_SETTINGS_FILE = path.join(DATA_DIR, "compression-settings.json");
+const COMPRESSION_SETTINGS_FILE = path.join(
+  DATA_DIR,
+  "compression-settings.json",
+);
 
 // Criar pasta de dados se não existir
 if (!fs.existsSync(DATA_DIR)) {
@@ -37,11 +40,11 @@ router.post("/", (req: Request, res: Response) => {
   try {
     const data = req.body;
     const jsonString = JSON.stringify(data, null, 2);
-    
+
     fs.writeFileSync(DATA_FILE, jsonString, "utf8");
     console.log("📦 Dados salvos no arquivo:", DATA_FILE);
     console.log("📄 Tamanho do arquivo:", fs.statSync(DATA_FILE).size, "bytes");
-    
+
     res.json({ success: true, message: "Dados salvos com sucesso!" });
   } catch (error) {
     console.error("❌ Erro ao salvar dados:", error);
@@ -70,15 +73,22 @@ router.get("/compression-settings", (req: Request, res: Response) => {
     if (fs.existsSync(COMPRESSION_SETTINGS_FILE)) {
       const data = fs.readFileSync(COMPRESSION_SETTINGS_FILE, "utf8");
       const jsonData = JSON.parse(data);
-      console.log("🗜️ Configurações de compressão carregadas:", COMPRESSION_SETTINGS_FILE);
+      console.log(
+        "🗜️ Configurações de compressão carregadas:",
+        COMPRESSION_SETTINGS_FILE,
+      );
       res.json(jsonData);
     } else {
-      console.log("📁 Arquivo de configurações de compressão não existe, retornando configurações padrão");
+      console.log(
+        "📁 Arquivo de configurações de compressão não existe, retornando configurações padrão",
+      );
       res.json({});
     }
   } catch (error) {
     console.error("❌ Erro ao carregar configurações de compressão:", error);
-    res.status(500).json({ error: "Erro ao carregar configurações de compressão" });
+    res
+      .status(500)
+      .json({ error: "Erro ao carregar configurações de compressão" });
   }
 });
 
@@ -89,13 +99,25 @@ router.post("/compression-settings", (req: Request, res: Response) => {
     const jsonString = JSON.stringify(settings, null, 2);
 
     fs.writeFileSync(COMPRESSION_SETTINGS_FILE, jsonString, "utf8");
-    console.log("🗜️ Configurações de compressão salvas:", COMPRESSION_SETTINGS_FILE);
-    console.log("📄 Tamanho do arquivo:", fs.statSync(COMPRESSION_SETTINGS_FILE).size, "bytes");
+    console.log(
+      "🗜️ Configurações de compressão salvas:",
+      COMPRESSION_SETTINGS_FILE,
+    );
+    console.log(
+      "📄 Tamanho do arquivo:",
+      fs.statSync(COMPRESSION_SETTINGS_FILE).size,
+      "bytes",
+    );
 
-    res.json({ success: true, message: "Configurações de compressão salvas com sucesso!" });
+    res.json({
+      success: true,
+      message: "Configurações de compressão salvas com sucesso!",
+    });
   } catch (error) {
     console.error("❌ Erro ao salvar configurações de compressão:", error);
-    res.status(500).json({ error: "Erro ao salvar configurações de compressão" });
+    res
+      .status(500)
+      .json({ error: "Erro ao salvar configurações de compressão" });
   }
 });
 
