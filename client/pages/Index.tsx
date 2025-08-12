@@ -1161,7 +1161,7 @@ export default function Index() {
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
-    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(name)) return "Nome deve conter apenas letras";
+    if (!/^[a-zA-ZÀ-��\s]+$/.test(name)) return "Nome deve conter apenas letras";
     return "";
   };
 
@@ -1824,15 +1824,17 @@ export default function Index() {
               </p>
 
               {/* Desktop CTA */}
-              <div className="pt-4 flex justify-center">
-                <a
-                  href="#cadastro-lojistas"
-                  className="inline-flex items-center justify-center bg-primary hover:bg-onbongo-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
-                >
-                  {landingData.hero.ctaText}
-                  <span className="text-xl ml-2">→</span>
-                </a>
-              </div>
+              {!isLoading && landingData.hero.ctaText && (
+                <div className="pt-4 flex justify-center">
+                  <a
+                    href="#cadastro-lojistas"
+                    className="inline-flex items-center justify-center bg-primary hover:bg-onbongo-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
+                  >
+                    {landingData.hero.ctaText}
+                    <span className="text-xl ml-2">→</span>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
