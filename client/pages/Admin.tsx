@@ -568,6 +568,7 @@ export default function Admin() {
           }
         } catch (error) {
           console.log("📝 Usando configurações de compressão padrão");
+          setCompressionSettingsLoaded(true);
         }
       } catch (error) {
         console.error("❌ Erro ao carregar dados do servidor:", error);
@@ -2794,7 +2795,7 @@ export default function Admin() {
                               description: e.target.value,
                             })
                           }
-                          placeholder="Descriç��o da página para resultados de busca (até 160 caracteres)"
+                          placeholder="Descrição da página para resultados de busca (até 160 caracteres)"
                           maxLength={160}
                           rows={3}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
