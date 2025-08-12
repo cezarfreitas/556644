@@ -1587,7 +1587,7 @@ export default function Index() {
     }
   };
 
-  // Funç��o para voltar ao formulário
+  // Funç���o para voltar ao formulário
   const handleBackToForm = () => {
     setSubmitStatus("idle");
     setSubmitMessage("");
@@ -2200,7 +2200,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Galeria de Produtos Onbongo Surfwear - Otimizado para mobile */}
+      {/* Galeria de Produtos - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
         style={{ backgroundColor: "var(--section-gallery-bg, #ffffff)" }}
@@ -2346,7 +2346,7 @@ export default function Index() {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
-                <span className="mr-2">��</span>
+                <span className="mr-2">📍</span>
                 {landingData.showroom.location}
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
@@ -2469,7 +2469,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★★</span>
+                                  <span className="text-2xl">★★★★��</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
