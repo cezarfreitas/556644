@@ -287,7 +287,7 @@ const defaultData: LandingPageData = {
       "Essa versatilidade faz da Onbongo uma marca única: capaz de transitar do alto rendimento ao esporte de raiz, e das ondas do mar às ruas das grandes cidades, sempre conectada com a cultura jovem e com quem busca expressar personalidade através da moda.",
     ],
     image: "/images/gallery/onbongo-2.webp",
-    quote: "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na Onda.",
+    quote: "Onbongo ��� Sempre à Frente. Sempre no Jogo. Sempre na Onda.",
   },
   faq: {
     title: "Perguntas Frequentes",
@@ -2878,10 +2878,10 @@ export default function Admin() {
                           })
                         }
                         label="Favicon (32x32px ou 16x16px)"
-                        maxSizeMB={0.5}
+                        maxSizeMB={Math.min(compressionSettings.maxSizeMB, 0.5)}
                         maxWidth={32}
                         maxHeight={32}
-                        quality={1}
+                        quality={compressionSettings.quality}
                       />
 
                       <ImageUpload
@@ -2893,10 +2893,10 @@ export default function Admin() {
                           })
                         }
                         label="Apple Touch Icon (180x180px)"
-                        maxSizeMB={1}
+                        maxSizeMB={Math.min(compressionSettings.maxSizeMB, 1)}
                         maxWidth={180}
                         maxHeight={180}
-                        quality={0.9}
+                        quality={compressionSettings.quality}
                       />
                     </div>
                   </div>
@@ -2961,10 +2961,10 @@ export default function Admin() {
                           })
                         }
                         label="Imagem Open Graph (1200x630px)"
-                        maxSizeMB={2}
+                        maxSizeMB={compressionSettings.maxSizeMB}
                         maxWidth={1200}
                         maxHeight={630}
-                        quality={0.9}
+                        quality={compressionSettings.quality}
                       />
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
