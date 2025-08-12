@@ -110,7 +110,7 @@ export default function Index() {
   });
 
   // Debug Meta API configuration
-  console.log("����� Meta API Debug:");
+  console.log("���� Meta API Debug:");
   console.log(
     "Raw VITE_META_ACCESS_TOKEN:",
     import.meta.env.VITE_META_ACCESS_TOKEN,
@@ -2377,7 +2377,7 @@ export default function Index() {
                     className="inline-flex items-center justify-center bg-primary hover:bg-onbongo-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300 gap-2"
                   >
                     <FaArrowRight className="w-5 h-5" />
-                    Quero Ser Lojista
+                    {landingData.showroom?.ctaText}
                   </a>
                 </div>
               </div>
