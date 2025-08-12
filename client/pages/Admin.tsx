@@ -679,7 +679,8 @@ export default function Admin() {
           const parsedData = JSON.parse(result);
 
           // Salvar dados no servidor
-          const response = await fetch("/api/data", {
+          const nativeFetch = window.fetch.bind(window);
+          const response = await nativeFetch("/api/data", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
