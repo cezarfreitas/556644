@@ -537,6 +537,7 @@ export default function Admin() {
   // Salvar dados
   const saveData = async () => {
     try {
+      // Salvar dados da landing page
       const response = await fetch("/api/data", {
         method: "POST",
         headers: {
@@ -545,13 +546,26 @@ export default function Admin() {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        const result = await response.json();
-        console.log("📦 Dados salvos no servidor:", result);
-        setMessage("✅ Dados salvos com sucesso no servidor!");
-      } else {
-        throw new Error("Erro ao salvar dados");
+      if (!response.ok) {
+        throw new Error("Erro ao salvar dados da landing page");
       }
+
+      // Salvar configurações de compressão separadamente
+      const compressionResponse = await fetch("/api/compression-settings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(compressionSettings),
+      });
+
+      if (!compressionResponse.ok) {
+        console.warn("⚠️ Não foi possível salvar as configurações de compressão, mas os dados da landing page foram salvos");
+      }
+
+      const result = await response.json();
+      console.log("📦 Dados salvos no servidor:", result);
+      setMessage("✅ Dados e configurações salvos com sucesso!");
     } catch (error) {
       console.error("❌ Erro ao salvar:", error);
       setMessage("❌ Erro ao salvar dados no servidor");
@@ -3272,7 +3286,7 @@ export default function Admin() {
                   {/* Google Analytics */}
                   <div className="border border-gray-200 rounded-lg p-4">
                     <h3 className="text-lg font-medium text-gray-900 mb-4">
-                      📊 Google Analytics 4
+                      ��� Google Analytics 4
                     </h3>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
