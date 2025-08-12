@@ -429,92 +429,109 @@ export default function Admin() {
 
   // Carregar dados do localStorage
   useEffect(() => {
-    const savedData = localStorage.getItem("landingPageData");
-    if (savedData) {
+    const loadData = async () => {
       try {
-        const parsedData = JSON.parse(savedData);
-        // Deep merge to ensure all nested objects exist
-        const mergedData = {
-          ...defaultData,
-          ...parsedData,
-          form: {
-            ...defaultData.form,
-            ...parsedData.form,
-            consumerMessage: {
-              ...defaultData.form.consumerMessage,
-              ...parsedData.form?.consumerMessage,
+        const response = await fetch("/api/data");
+        if (response.ok) {
+          const parsedData = await response.json();
+
+          // Se não há dados salvos, usar dados padrão
+          if (Object.keys(parsedData).length === 0) {
+            console.log("📁 Nenhum dado encontrado, usando dados padrão");
+            setData(defaultData);
+            return;
+          }
+
+          // Deep merge to ensure all nested objects exist
+          const mergedData = {
+            ...defaultData,
+            ...parsedData,
+            form: {
+              ...defaultData.form,
+              ...parsedData.form,
+              consumerMessage: {
+                ...defaultData.form.consumerMessage,
+                ...parsedData.form?.consumerMessage,
+              },
             },
-          },
-          footer: {
-            ...defaultData.footer,
-            ...parsedData.footer,
-            socialLinks: {
-              ...defaultData.footer.socialLinks,
-              ...parsedData.footer?.socialLinks,
+            footer: {
+              ...defaultData.footer,
+              ...parsedData.footer,
+              socialLinks: {
+                ...defaultData.footer.socialLinks,
+                ...parsedData.footer?.socialLinks,
+              },
+              hubMultimarcas: {
+                ...defaultData.footer.hubMultimarcas,
+                ...parsedData.footer?.hubMultimarcas,
+              },
+              developedBy: {
+                ...defaultData.footer.developedBy,
+                ...parsedData.footer?.developedBy,
+              },
             },
-            hubMultimarcas: {
-              ...defaultData.footer.hubMultimarcas,
-              ...parsedData.footer?.hubMultimarcas,
+            integrations: {
+              ...defaultData.integrations,
+              ...parsedData.integrations,
+              googleAnalytics: {
+                ...defaultData.integrations.googleAnalytics,
+                ...parsedData.integrations?.googleAnalytics,
+              },
+              metaPixel: {
+                ...defaultData.integrations.metaPixel,
+                ...parsedData.integrations?.metaPixel,
+              },
+              googleTagManager: {
+                ...defaultData.integrations.googleTagManager,
+                ...parsedData.integrations?.googleTagManager,
+              },
+              googleAds: {
+                ...defaultData.integrations.googleAds,
+                ...parsedData.integrations?.googleAds,
+              },
             },
-            developedBy: {
-              ...defaultData.footer.developedBy,
-              ...parsedData.footer?.developedBy,
+            seo: {
+              ...defaultData.seo,
+              ...parsedData.seo,
+              openGraph: {
+                ...defaultData.seo.openGraph,
+                ...parsedData.seo?.openGraph,
+              },
+              twitter: {
+                ...defaultData.seo.twitter,
+                ...parsedData.seo?.twitter,
+              },
+              structured: {
+                ...defaultData.seo.structured,
+                ...parsedData.seo?.structured,
+              },
             },
-          },
-          integrations: {
-            ...defaultData.integrations,
-            ...parsedData.integrations,
-            googleAnalytics: {
-              ...defaultData.integrations.googleAnalytics,
-              ...parsedData.integrations?.googleAnalytics,
+            colors: {
+              ...defaultData.colors,
+              ...parsedData.colors,
+              main: {
+                ...defaultData.colors.main,
+                ...parsedData.colors?.main,
+              },
+              sections: {
+                ...defaultData.colors.sections,
+                ...parsedData.colors?.sections,
+              },
             },
-            metaPixel: {
-              ...defaultData.integrations.metaPixel,
-              ...parsedData.integrations?.metaPixel,
-            },
-            googleTagManager: {
-              ...defaultData.integrations.googleTagManager,
-              ...parsedData.integrations?.googleTagManager,
-            },
-            googleAds: {
-              ...defaultData.integrations.googleAds,
-              ...parsedData.integrations?.googleAds,
-            },
-          },
-          seo: {
-            ...defaultData.seo,
-            ...parsedData.seo,
-            openGraph: {
-              ...defaultData.seo.openGraph,
-              ...parsedData.seo?.openGraph,
-            },
-            twitter: {
-              ...defaultData.seo.twitter,
-              ...parsedData.seo?.twitter,
-            },
-            structured: {
-              ...defaultData.seo.structured,
-              ...parsedData.seo?.structured,
-            },
-          },
-          colors: {
-            ...defaultData.colors,
-            ...parsedData.colors,
-            main: {
-              ...defaultData.colors.main,
-              ...parsedData.colors?.main,
-            },
-            sections: {
-              ...defaultData.colors.sections,
-              ...parsedData.colors?.sections,
-            },
-          },
-        };
-        setData(mergedData);
+          };
+          console.log("📥 Dados carregados do servidor:", mergedData);
+          setData(mergedData);
+        } else {
+          console.log("📁 Erro ao carregar dados, usando dados padrão");
+          setData(defaultData);
+        }
       } catch (error) {
-        console.error("Erro ao carregar dados:", error);
+        console.error("❌ Erro ao carregar dados do servidor:", error);
+        setData(defaultData);
       }
-    }
+    };
+
+    loadData();
   }, []);
 
   // Salvar dados
