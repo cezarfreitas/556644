@@ -1987,7 +1987,7 @@ export default function Index() {
                               });
                           }}
                         />
-                        {/* Ícone de validação */}
+                        {/* Ícone de validaç��o */}
                         {formValues.whatsapp && (
                           <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                             {formErrors.whatsapp ? (
@@ -2583,7 +2583,7 @@ export default function Index() {
       <section
         className="py-12 sm:py-20 md:py-32"
         style={{ backgroundColor: "var(--section-history-bg, #ffffff)" }}
-        id="sobre-onbongo"
+        id="sobre-marca"
       >
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
