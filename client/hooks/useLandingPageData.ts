@@ -317,7 +317,9 @@ export const useLandingPageData = () => {
 
           // Se não há dados salvos, usar dados padrão (vazios)
           if (Object.keys(parsedData).length === 0) {
-            console.log("📁 Nenhum dado encontrado no servidor, usando dados padrão vazios");
+            console.log(
+              "📁 Nenhum dado encontrado no servidor, usando dados padrão vazios",
+            );
             setData(defaultData);
             setIsLoading(false);
             return;
@@ -339,7 +341,9 @@ export const useLandingPageData = () => {
           setData(mergedData);
           setIsLoading(false);
         } else {
-          console.log("📁 Erro ao carregar dados do servidor, usando dados padrão");
+          console.log(
+            "📁 Erro ao carregar dados do servidor, usando dados padrão",
+          );
           setData(defaultData);
           setIsLoading(false);
         }

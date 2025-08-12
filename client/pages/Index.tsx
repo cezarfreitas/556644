@@ -1161,7 +1161,8 @@ export default function Index() {
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
-    if (!/^[a-zA-ZÀ-��\s]+$/.test(name)) return "Nome deve conter apenas letras";
+    if (!/^[a-zA-ZÀ-��\s]+$/.test(name))
+      return "Nome deve conter apenas letras";
     return "";
   };
 
@@ -1634,7 +1635,9 @@ export default function Index() {
   };
 
   // Track Lead event (Facebook Standard Event)
-  const trackLead = (contentName: string = `${landingData.brandName} Registration`) => {
+  const trackLead = (
+    contentName: string = `${landingData.brandName} Registration`,
+  ) => {
     console.log("📱 Facebook Event: Lead -", contentName);
 
     const eventData = {
@@ -2573,7 +2576,8 @@ export default function Index() {
             {/* Call to Action */}
             <div className="text-center mt-16">
               <p className="text-lg text-gray-600 mb-6">
-                {landingData.testimonials?.ctaMessage || "Junte-se aos nossos parceiros de sucesso"}
+                {landingData.testimonials?.ctaMessage ||
+                  "Junte-se aos nossos parceiros de sucesso"}
               </p>
               <a
                 href="#cadastro-lojistas"
@@ -2600,10 +2604,13 @@ export default function Index() {
                 <div className="space-y-3 sm:space-y-6">
                   <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                     {landingData.history?.title || "História da Marca"}
-                    <span className="block text-primary">{landingData.brandName}</span>
+                    <span className="block text-primary">
+                      {landingData.brandName}
+                    </span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-                    {landingData.history?.paragraphs?.[0]?.split('.')[0] || 'Desde 1988, nossa marca é sinônimo de autenticidade e atitude'}
+                    {landingData.history?.paragraphs?.[0]?.split(".")[0] ||
+                      "Desde 1988, nossa marca é sinônimo de autenticidade e atitude"}
                     no surfwear e streetwear brasileiro. Nascida nas praias e
                     nas ruas, a marca construiu uma trajetória s��lida vestindo
                     surfistas, skatistas e apaixonados pela cultura urbana.
