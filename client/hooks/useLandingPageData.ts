@@ -109,9 +109,11 @@ interface LandingPageData {
   integrations: {
     formApi: string;
     googleAnalytics: {
+      enabled: boolean;
       measurementId: string;
     };
     metaPixel: {
+      enabled: boolean;
       pixelId: string;
       conversionName: string;
       apiVersion: string;
@@ -119,9 +121,11 @@ interface LandingPageData {
       accessToken: string;
     };
     googleTagManager: {
+      enabled: boolean;
       containerId: string;
     };
     googleAds: {
+      enabled: boolean;
       conversionId: string;
       conversionLabel: string;
     };
