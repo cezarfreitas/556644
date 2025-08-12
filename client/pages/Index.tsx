@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { MdStar, MdAttachMoney } from "react-icons/md";
 import { useLandingPageData } from "../hooks/useLandingPageData";
-import TrackingScripts, { trackFormSubmission, submitToFormAPI } from "../components/TrackingScripts";
+import TrackingScripts, {
+  trackFormSubmission,
+  submitToFormAPI,
+} from "../components/TrackingScripts";
 import SEOHead from "../components/SEOHead";
 import DynamicColors from "../components/DynamicColors";
 import {
@@ -1352,7 +1355,8 @@ export default function Index() {
     console.log("Payload sendo enviado:", payload);
 
     try {
-      const formApiEndpoint = landingData.integrations?.formApi || API_FORM_ENDPOINT;
+      const formApiEndpoint =
+        landingData.integrations?.formApi || API_FORM_ENDPOINT;
       console.log("Submitting form to:", formApiEndpoint);
 
       // Try using the new form API function first
@@ -1364,10 +1368,15 @@ export default function Index() {
 
         console.log("Form submitted successfully via new API");
         setSubmitStatus("success");
-        setSubmitMessage("✅ Dados enviados com sucesso! Em breve entraremos em contato.");
+        setSubmitMessage(
+          "✅ Dados enviados com sucesso! Em breve entraremos em contato.",
+        );
         return;
       } catch (apiError) {
-        console.log("New API failed, falling back to original method:", apiError);
+        console.log(
+          "New API failed, falling back to original method:",
+          apiError,
+        );
       }
 
       // Fallback to original FormData method
@@ -1649,7 +1658,10 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Mobile & Desktop Optimized */}
-      <section className="relative h-screen w-full overflow-hidden" style={{ backgroundColor: 'var(--section-hero-bg, #000000)' }}>
+      <section
+        className="relative h-screen w-full overflow-hidden"
+        style={{ backgroundColor: "var(--section-hero-bg, #000000)" }}
+      >
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -1663,7 +1675,6 @@ export default function Index() {
 
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
-
 
         {/* Mobile Layout (< md) */}
         <div className="md:hidden flex flex-col items-center justify-center h-full px-6 py-8 text-center relative z-10">
@@ -1780,7 +1791,7 @@ export default function Index() {
       {/* Cadastro de Lojistas - Formul���rio de Parceria - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
-        style={{ backgroundColor: 'var(--section-form-bg, #000000)' }}
+        style={{ backgroundColor: "var(--section-form-bg, #000000)" }}
         id="cadastro-lojistas"
       >
         <div className="container mx-auto px-3 sm:px-6">
@@ -2147,7 +2158,7 @@ export default function Index() {
       {/* Galeria de Produtos Onbongo Surfwear - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
-        style={{ backgroundColor: 'var(--section-gallery-bg, #ffffff)' }}
+        style={{ backgroundColor: "var(--section-gallery-bg, #ffffff)" }}
         id="galeria-produtos"
       >
         <div className="container mx-auto px-3 sm:px-6">
@@ -2155,9 +2166,7 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Coleções Exclusivas
-                <span className="block text-primary">
-                  Onbongo
-                </span>
+                <span className="block text-primary">Onbongo</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 Descubra as coleções oficiais Onbongo, com design autêntico e
@@ -2282,7 +2291,11 @@ export default function Index() {
       </section>
 
       {/* Conheça o nosso Show Room - Simple Layout */}
-      <section className="py-8 sm:py-12 md:py-16" style={{ backgroundColor: 'var(--section-showroom-bg, #000000)' }} id="showroom">
+      <section
+        className="py-8 sm:py-12 md:py-16"
+        style={{ backgroundColor: "var(--section-showroom-bg, #000000)" }}
+        id="showroom"
+      >
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -2360,7 +2373,7 @@ export default function Index() {
       {/* Depoimentos de Lojistas Parceiros Onbongo - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
-        style={{ backgroundColor: 'var(--section-testimonials-bg, #f3f4f6)' }}
+        style={{ backgroundColor: "var(--section-testimonials-bg, #f3f4f6)" }}
         id="depoimentos-lojistas"
       >
         <div className="container mx-auto px-6">
@@ -2368,9 +2381,7 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Depoimentos de Lojistas
-                <span className="block text-primary">
-                  Onbongo Oficiais
-                </span>
+                <span className="block text-primary">Onbongo Oficiais</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 Histórias reais de sucesso de parceiros que triplicaram o
@@ -2535,7 +2546,11 @@ export default function Index() {
       </section>
 
       {/* História da Marca Onbongo - Surfwear e Streetwear - Otimizado para mobile */}
-      <section className="py-12 sm:py-20 md:py-32" style={{ backgroundColor: 'var(--section-history-bg, #ffffff)' }} id="sobre-onbongo">
+      <section
+        className="py-12 sm:py-20 md:py-32"
+        style={{ backgroundColor: "var(--section-history-bg, #ffffff)" }}
+        id="sobre-onbongo"
+      >
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -2594,7 +2609,11 @@ export default function Index() {
       </section>
 
       {/* FAQ Section - Above Footer */}
-      <section className="py-12 sm:py-20" style={{ backgroundColor: 'var(--section-faq-bg, #f9fafb)' }} id="faq">
+      <section
+        className="py-12 sm:py-20"
+        style={{ backgroundColor: "var(--section-faq-bg, #f9fafb)" }}
+        id="faq"
+      >
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -2686,7 +2705,10 @@ export default function Index() {
       </section>
 
       {/* Footer - Accessible Version with Proper Contrast */}
-      <footer className="text-white py-12 sm:py-16" style={{ backgroundColor: 'var(--section-footer-bg, #000000)' }}>
+      <footer
+        className="text-white py-12 sm:py-16"
+        style={{ backgroundColor: "var(--section-footer-bg, #000000)" }}
+      >
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
