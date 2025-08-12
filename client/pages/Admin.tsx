@@ -179,7 +179,7 @@ const defaultData: LandingPageData = {
       "Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.",
     title: "SEJA UM LOJISTA OFICIAL ONBONGO",
     subtitle:
-      "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico espírito urbano e esportivo da marca.",
+      "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico esp��rito urbano e esportivo da marca.",
     ctaText: "Começar Agora!",
     backgroundImage: "/images/hero/onbongo-background.webp",
   },
@@ -519,7 +519,9 @@ export default function Admin() {
 
   // Salvar dados
   const saveData = () => {
-    localStorage.setItem("landingPageData", JSON.stringify(data));
+    const jsonData = JSON.stringify(data, null, 2);
+    localStorage.setItem("landingPageData", jsonData);
+    console.log("📦 Dados salvos no localStorage:", jsonData);
     setMessage("✅ Dados salvos com sucesso!");
     setTimeout(() => setMessage(""), 3000);
   };
@@ -865,7 +867,7 @@ export default function Admin() {
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                           />
                           <textarea
-                            placeholder="Descri����o do benefício"
+                            placeholder="Descri��ão do benefício"
                             value={benefit.description}
                             onChange={(e) => {
                               const newBenefits = [...data.form.benefits];
@@ -1540,7 +1542,7 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      T��tulo
+                      Título
                     </label>
                     <input
                       type="text"
@@ -3174,7 +3176,7 @@ export default function Admin() {
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
                     <h2 className="text-xl font-semibold text-gray-900">
-                      Configura��ões de Integrações
+                      Configurações de Integrações
                     </h2>
                     <div className="flex items-center space-x-2 text-sm text-green-600 bg-green-50 px-3 py-1 rounded-full">
                       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -3453,7 +3455,7 @@ export default function Admin() {
                         do formulário serão enviados
                       </li>
                       <li>
-                        �� <strong>Google Analytics:</strong> Para rastreamento
+                        • <strong>Google Analytics:</strong> Para rastreamento
                         de tráfego e conversões
                       </li>
                       <li>
