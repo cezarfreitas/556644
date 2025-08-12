@@ -194,7 +194,7 @@ const defaultData: LandingPageData = {
       {
         title: "Pronta Entrega",
         description:
-          "Mais de 100.000 peças disponíveis para envio imediato, garantindo giro rápido e novidades constantes na sua loja.",
+          "Mais de 100.000 peças disponíveis para envio imediato, garantindo giro r��pido e novidades constantes na sua loja.",
       },
       {
         title: "Plataforma Online",
@@ -525,6 +525,20 @@ export default function Admin() {
           console.log("📁 Erro ao carregar dados, usando dados padrão");
           setData(defaultData);
         }
+
+        // Carregar configurações de compressão
+        try {
+          const compressionResponse = await fetch("/api/compression-settings");
+          if (compressionResponse.ok) {
+            const savedCompressionSettings = await compressionResponse.json();
+            if (savedCompressionSettings && Object.keys(savedCompressionSettings).length > 0) {
+              console.log("🗜️ Configurações de compressão carregadas:", savedCompressionSettings);
+              setCompressionSettings(savedCompressionSettings);
+            }
+          }
+        } catch (error) {
+          console.log("📝 Usando configurações de compressão padrão");
+        }
       } catch (error) {
         console.error("❌ Erro ao carregar dados do servidor:", error);
         setData(defaultData);
@@ -609,7 +623,7 @@ export default function Admin() {
           }
         } catch (error) {
           console.error("❌ Erro:", error);
-          setMessage("❌ Erro ao carregar arquivo JSON");
+          setMessage("�� Erro ao carregar arquivo JSON");
         }
         setTimeout(() => setMessage(""), 3000);
       };
