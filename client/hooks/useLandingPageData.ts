@@ -467,7 +467,7 @@ export const useLandingPageData = () => {
       }
     };
 
-    loadData();
+    loadData(0);
   }, []);
 
   return { data, isLoading };
