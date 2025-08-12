@@ -19,7 +19,7 @@ export default function TrackingScripts({
 }: TrackingScriptsProps) {
   useEffect(() => {
     // Google Analytics 4
-    if (integrations?.googleAnalytics?.measurementId) {
+    if (integrations?.googleAnalytics?.enabled && integrations?.googleAnalytics?.measurementId) {
       const measurementId = integrations.googleAnalytics.measurementId;
 
       // Remove existing GA script if any
