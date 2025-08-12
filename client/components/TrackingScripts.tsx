@@ -164,6 +164,7 @@ export const trackFormSubmission = (
 
   // Google Ads conversion
   if (
+    integrations?.googleAds?.enabled &&
     integrations?.googleAds?.conversionId &&
     integrations.googleAds.conversionLabel &&
     window.gtag
