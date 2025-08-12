@@ -15,6 +15,7 @@ export default function SEOHead({ seo }: SEOHeadProps) {
 
     // Update document title
     if (seo.title) {
+      console.log("📝 Atualizando título:", seo.title);
       document.title = seo.title;
     }
 
