@@ -354,25 +354,14 @@ const defaultData: LandingPageData = {
     }
   },
   colors: {
-    primary: "#e86001",
-    secondary: "#2c3e50",
-    tertiary: "#3498db",
-    quaternary: "#f39c12",
-    background: "#ffffff",
-    surface: "#f8f9fa",
-    text: {
-      primary: "#2c3e50",
-      secondary: "#7f8c8d",
-      inverse: "#ffffff"
-    },
-    button: {
-      primary: "#e86001",
-      primaryHover: "#d35400",
-      secondary: "#6c757d",
-      secondaryHover: "#5a6268"
-    },
-    border: "#dee2e6",
-    overlay: "rgba(0, 0, 0, 0.5)"
+    hero: "#ffffff",
+    form: "#f8f9fa",
+    gallery: "#ffffff",
+    showroom: "#f8f9fa",
+    testimonials: "#ffffff",
+    history: "#f8f9fa",
+    faq: "#ffffff",
+    footer: "#2c3e50"
   }
 };
 
@@ -537,7 +526,7 @@ export default function Admin() {
     { id: "history", name: "História", icon: "📖" },
     { id: "faq", name: "FAQ", icon: "❓" },
     { id: "footer", name: "Rodapé", icon: "📍" },
-    { id: "colors", name: "Cores", icon: "����" },
+    { id: "colors", name: "Cores", icon: "🎨" },
     { id: "seo", name: "SEO", icon: "🔍" },
     { id: "integrations", name: "Integrações", icon: "🔌" }
   ];
