@@ -147,25 +147,14 @@ interface LandingPageData {
     };
   };
   colors: {
-    primary: string;
-    secondary: string;
-    tertiary: string;
-    quaternary: string;
-    background: string;
-    surface: string;
-    text: {
-      primary: string;
-      secondary: string;
-      inverse: string;
-    };
-    button: {
-      primary: string;
-      primaryHover: string;
-      secondary: string;
-      secondaryHover: string;
-    };
-    border: string;
-    overlay: string;
+    hero: string;
+    form: string;
+    gallery: string;
+    showroom: string;
+    testimonials: string;
+    history: string;
+    faq: string;
+    footer: string;
   };
 }
 
@@ -548,7 +537,7 @@ export default function Admin() {
     { id: "history", name: "História", icon: "📖" },
     { id: "faq", name: "FAQ", icon: "❓" },
     { id: "footer", name: "Rodapé", icon: "📍" },
-    { id: "colors", name: "Cores", icon: "🎨" },
+    { id: "colors", name: "Cores", icon: "����" },
     { id: "seo", name: "SEO", icon: "🔍" },
     { id: "integrations", name: "Integrações", icon: "🔌" }
   ];
