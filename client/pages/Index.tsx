@@ -1856,7 +1856,7 @@ export default function Index() {
                                 ? "border-green-500 shadow-green-500/20 shadow-lg"
                                 : "border-gray-300 hover:border-gray-400"
                           }`}
-                          placeholder="Digite seu nome completo"
+                          placeholder={landingData.form.namePlaceholder}
                           value={formValues.name}
                           onChange={handleNameChange}
                           onFocus={() =>
