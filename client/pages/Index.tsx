@@ -2293,17 +2293,7 @@ export default function Index() {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
-                <svg
-                  className="w-4 h-4 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <FaMapMarkerAlt className="w-4 h-4 mr-2" />
                 São Paulo - Capital
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
