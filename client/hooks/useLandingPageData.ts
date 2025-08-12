@@ -408,6 +408,13 @@ export const useLandingPageData = () => {
       } catch (error) {
         console.error("❌ Erro ao carregar dados do servidor:", error);
 
+        // Retry up to 2 times before falling back to XHR
+        if (attempt < 2) {
+          console.log(`🔄 Tentativa ${attempt + 1} de recarregar dados...`);
+          setTimeout(() => loadData(attempt + 1), 1000 * (attempt + 1)); // Progressive delay
+          return;
+        }
+
         // Fallback: try XMLHttpRequest if fetch fails due to third-party interference
         try {
           const xhr = new XMLHttpRequest();
