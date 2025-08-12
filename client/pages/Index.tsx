@@ -2596,7 +2596,7 @@ export default function Index() {
                     Com mais de três décadas de história, a Onbongo se
                     reinventou a cada geração, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
-                    muito al��m do surf - marcou presença no futebol
+                    muito além do surf - marcou presença no futebol
                     profissional, vestindo grandes nomes como Kaká, Roberto
                     Carlos, Neymar e Amaral.
                   </p>
@@ -2805,8 +2805,7 @@ export default function Index() {
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors duration-300"
                   >
-                    {landingData.footer.developedBy?.name ||
-                      "IDE | Negócios digitais"}
+                    {landingData.footer.developedBy?.name}
                   </a>
                 </div>
               </div>
