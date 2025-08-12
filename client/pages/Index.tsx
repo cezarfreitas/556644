@@ -1793,7 +1793,7 @@ export default function Index() {
               <div className="mb-8 flex justify-center">
                 <img
                   src={landingData.hero.logo}
-                  alt={`Logo ${BRAND_NAME}`}
+                  alt={`Logo ${landingData.brandName}`}
                   className="h-20 lg:h-24 w-auto"
                   loading="eager"
                   fetchPriority="high"
