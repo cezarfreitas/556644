@@ -1587,7 +1587,7 @@ export default function Index() {
     }
   };
 
-  // Funç���o para voltar ao formulário
+  // Funç��o para voltar ao formulário
   const handleBackToForm = () => {
     setSubmitStatus("idle");
     setSubmitMessage("");
@@ -2403,7 +2403,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Depoimentos de Lojistas Parceiros Onbongo - Otimizado para mobile */}
+      {/* Depoimentos de Lojistas Parceiros - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
         style={{ backgroundColor: "var(--section-testimonials-bg, #f3f4f6)" }}
@@ -2469,7 +2469,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★��</span>
+                                  <span className="text-2xl">★★★★★</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
