@@ -46,7 +46,7 @@ const FooterSection = lazy(
 
 export default function Index() {
   // Carregar dados editáveis do admin
-  const landingData = useLandingPageData();
+  const { data: landingData, isLoading } = useLandingPageData();
 
   const [showCnpjField, setShowCnpjField] = useState(false);
   const [selectedCnpj, setSelectedCnpj] = useState("");
@@ -110,7 +110,7 @@ export default function Index() {
   });
 
   // Debug Meta API configuration
-  console.log("���� Meta API Debug:");
+  console.log("����� Meta API Debug:");
   console.log(
     "Raw VITE_META_ACCESS_TOKEN:",
     import.meta.env.VITE_META_ACCESS_TOKEN,
