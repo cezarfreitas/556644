@@ -4,14 +4,17 @@ import OptimizedImage from "../OptimizedImage";
 import IconLoader from "../IconLoader";
 
 interface HeroSectionProps {
-  data: {
-    logo: string;
-    introText: string;
-    title: string;
-    subtitle: string;
-    ctaText: string;
-    backgroundImage?: string;
+  landingData: {
+    hero?: {
+      logo: string;
+      introText: string;
+      title: string;
+      subtitle: string;
+      ctaText: string;
+      backgroundImage?: string;
+    };
   };
+  isLoading: boolean;
   onCtaClick: () => void;
 }
 
