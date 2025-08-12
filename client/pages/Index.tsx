@@ -14,11 +14,6 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { useLandingPageData } from "../hooks/useLandingPageData";
-import {
-  trackFormSubmission,
-  submitToFormAPI,
-} from "../components/TrackingScripts";
-import SEOHead from "../components/SEOHead";
 import DynamicColors from "../components/DynamicColors";
 import HeroSection from "../components/sections/HeroSection";
 import FormSection from "../components/sections/FormSection";
@@ -1831,7 +1826,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Cadastro de Lojistas - Formul���rio de Parceria - Otimizado para mobile */}
+      {/* Cadastro de Lojistas - Formul�����rio de Parceria - Otimizado para mobile */}
       <section
         className="py-12 sm:py-20 md:py-32"
         style={{ backgroundColor: "var(--section-form-bg, #000000)" }}
