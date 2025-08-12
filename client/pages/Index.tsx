@@ -10,7 +10,8 @@ import {
   FaChevronDown,
   FaFacebook,
   FaInstagram,
-  FaStore
+  FaStore,
+  FaMapMarkerAlt
 } from "react-icons/fa";
 import { useLandingPageData } from "../hooks/useLandingPageData";
 import { trackFormSubmission, submitToFormAPI } from "../components/TrackingScripts";
