@@ -85,7 +85,13 @@ export default function OptimizedImage({
 
       {/* Loading placeholder */}
       {!blurDataURL && !isLoaded && !error && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 opacity-40">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-400 animate-spin">
+              <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" />
+            </svg>
+          </div>
+        </div>
       )}
 
       {/* Main image */}
