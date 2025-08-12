@@ -103,7 +103,9 @@ function HeroSection({ data, onCtaClick }: HeroSectionProps) {
           className="group inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 animate-slide-up"
         >
           {data.ctaText}
-          <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+          <IconLoader className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+            <FaArrowRight />
+          </IconLoader>
         </button>
 
         {/* Scroll Indicator */}
