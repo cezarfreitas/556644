@@ -237,6 +237,9 @@ const defaultData: LandingPageData = {
       name: "",
       url: "",
       creditText: "",
+      defaultCreditText: "",
+      heartTitle: "",
+      byText: "",
     },
   },
   integrations: {
