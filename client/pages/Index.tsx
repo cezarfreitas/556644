@@ -2634,7 +2634,7 @@ export default function Index() {
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com mais de três décadas de história, a Onbongo se
-                    reinventou a cada geraç��o, mantendo-se sempre à frente em
+                    reinventou a cada geração, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
                     muito além do surf - marcou presença no futebol
                     profissional, vestindo grandes nomes como Kaká, Roberto
