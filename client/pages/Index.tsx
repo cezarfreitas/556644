@@ -1667,7 +1667,7 @@ export default function Index() {
 
   // Track CompleteRegistration event (Facebook Standard Event)
   const trackCompleteRegistration = (method: string = "form") => {
-    console.log("����� Facebook Event: CompleteRegistration -", method);
+    console.log("������� Facebook Event: CompleteRegistration -", method);
 
     const eventData = {
       content_name: "Lojista Registration",
@@ -2855,10 +2855,8 @@ export default function Index() {
       {/* Dynamic Colors */}
       <DynamicColors colors={landingData.colors} />
 
-      {/* SEO Head - only render when data is loaded */}
-      {!isLoading && landingData.seo && (
-        <SEOHead seo={landingData.seo} />
-      )}
+      {/* SEO Head - aplicar imediatamente */}
+      <SEOHead seo={landingData.seo} />
 
       {/* Tracking Scripts */}
       <TrackingScripts integrations={landingData.integrations} />
