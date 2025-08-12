@@ -179,7 +179,7 @@ const defaultData: LandingPageData = {
       "Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.",
     title: "SEJA UM LOJISTA OFICIAL ONBONGO",
     subtitle:
-      "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o aut��ntico esp��rito urbano e esportivo da marca.",
+      "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico esp��rito urbano e esportivo da marca.",
     ctaText: "Começar Agora!",
     backgroundImage: "/images/hero/onbongo-background.webp",
   },
@@ -427,6 +427,39 @@ export default function Admin() {
   });
   const [showCompressionSettings, setShowCompressionSettings] = useState(false);
   const [compressionLastSaved, setCompressionLastSaved] = useState<Date | null>(null);
+
+  // Auto-save compression settings when they change
+  useEffect(() => {
+    const saveCompressionSettings = async () => {
+      try {
+        const response = await fetch("/api/data/compression-settings", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(compressionSettings),
+        });
+
+        if (response.ok) {
+          setCompressionLastSaved(new Date());
+          console.log("🗜️ Configurações de compressão salvas automaticamente");
+        }
+      } catch (error) {
+        console.warn("⚠️ Erro ao salvar configurações de compressão automaticamente:", error);
+      }
+    };
+
+    // Only save if the settings have actually changed from defaults
+    const isDefault = compressionSettings.quality === 0.8 &&
+                     compressionSettings.maxWidth === 1200 &&
+                     compressionSettings.maxHeight === 800 &&
+                     compressionSettings.maxSizeMB === 2;
+
+    if (!isDefault) {
+      const timeoutId = setTimeout(saveCompressionSettings, 1000); // Save after 1 second of no changes
+      return () => clearTimeout(timeoutId);
+    }
+  }, [compressionSettings]);
 
   // Carregar dados do localStorage
   useEffect(() => {
