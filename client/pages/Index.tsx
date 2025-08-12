@@ -1779,7 +1779,8 @@ export default function Index() {
 
       {/* Cadastro de Lojistas - Formul���rio de Parceria - Otimizado para mobile */}
       <section
-        className="py-12 sm:py-20 md:py-32 bg-black"
+        className="py-12 sm:py-20 md:py-32"
+        style={{ backgroundColor: 'var(--section-form-bg, #000000)' }}
         id="cadastro-lojistas"
       >
         <div className="container mx-auto px-3 sm:px-6">
@@ -2145,7 +2146,8 @@ export default function Index() {
 
       {/* Galeria de Produtos Onbongo Surfwear - Otimizado para mobile */}
       <section
-        className="py-12 sm:py-20 md:py-32 bg-white"
+        className="py-12 sm:py-20 md:py-32"
+        style={{ backgroundColor: 'var(--section-gallery-bg, #ffffff)' }}
         id="galeria-produtos"
       >
         <div className="container mx-auto px-3 sm:px-6">
@@ -2280,7 +2282,7 @@ export default function Index() {
       </section>
 
       {/* Conheça o nosso Show Room - Simple Layout */}
-      <section className="py-8 sm:py-12 md:py-16 bg-black" id="showroom">
+      <section className="py-8 sm:py-12 md:py-16" style={{ backgroundColor: 'var(--section-showroom-bg, #000000)' }} id="showroom">
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -2357,7 +2359,8 @@ export default function Index() {
 
       {/* Depoimentos de Lojistas Parceiros Onbongo - Otimizado para mobile */}
       <section
-        className="py-12 sm:py-20 md:py-32 bg-gray-100"
+        className="py-12 sm:py-20 md:py-32"
+        style={{ backgroundColor: 'var(--section-testimonials-bg, #f3f4f6)' }}
         id="depoimentos-lojistas"
       >
         <div className="container mx-auto px-6">
@@ -2532,7 +2535,7 @@ export default function Index() {
       </section>
 
       {/* História da Marca Onbongo - Surfwear e Streetwear - Otimizado para mobile */}
-      <section className="py-12 sm:py-20 md:py-32 bg-white" id="sobre-onbongo">
+      <section className="py-12 sm:py-20 md:py-32" style={{ backgroundColor: 'var(--section-history-bg, #ffffff)' }} id="sobre-onbongo">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -2591,7 +2594,7 @@ export default function Index() {
       </section>
 
       {/* FAQ Section - Above Footer */}
-      <section className="py-12 sm:py-20 bg-gray-50" id="faq">
+      <section className="py-12 sm:py-20" style={{ backgroundColor: 'var(--section-faq-bg, #f9fafb)' }} id="faq">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -2683,7 +2686,7 @@ export default function Index() {
       </section>
 
       {/* Footer - Accessible Version with Proper Contrast */}
-      <footer className="bg-black text-white py-12 sm:py-16">
+      <footer className="text-white py-12 sm:py-16" style={{ backgroundColor: 'var(--section-footer-bg, #000000)' }}>
         <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
