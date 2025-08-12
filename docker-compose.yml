@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
   onbongo-landing:
@@ -13,7 +13,6 @@ services:
         - VITE_META_API_VERSION=v18.0
         - VITE_META_TEST_EVENT_CODE=TEST48830
         - VITE_GTM_ID=GTM-XXXXXXX
-        - VITE_BRAND_NAME=Onbongo
         - VITE_COMPANY_NAME="IDE | Negócios digitais"
         - VITE_PAGE_TITLE="Seja Lojista Oficial Onbongo"
     ports:
@@ -26,19 +25,12 @@ services:
       - ./public/imagens:/app/public/imagens
     restart: unless-stopped
     healthcheck:
-      test:
-        [
-          "CMD",
-          "wget",
-          "--no-verbose",
-          "--tries=1",
-          "--spider",
-          "http://localhost:80/health",
-        ]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
+
 # Para testing local, descomente as linhas abaixo:
 # networks:
 #   default:
