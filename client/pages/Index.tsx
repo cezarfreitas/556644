@@ -1075,7 +1075,7 @@ export default function Index() {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
 
-    // Aplica a máscara (XX) XXXXX-XXXX
+    // Aplica a m��scara (XX) XXXXX-XXXX
     if (numbers.length <= 2) {
       return `(${numbers}`;
     } else if (numbers.length <= 7) {
@@ -1770,7 +1770,7 @@ export default function Index() {
                   className="inline-flex items-center justify-center bg-primary hover:bg-onbongo-600 text-white hover:text-white px-10 py-3 rounded-xl text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
                 >
                   {landingData.hero.ctaText}
-                  <FaArrowRight className="w-5 h-5" />
+                  <span className="text-xl ml-2">→</span>
                 </a>
               </div>
             </div>
