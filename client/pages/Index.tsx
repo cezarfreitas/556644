@@ -353,7 +353,7 @@ export default function Index() {
   // Log endpoint being used (for debugging)
   console.log("Form API Endpoint:", API_FORM_ENDPOINT);
 
-  // Função para capturar dados de visitação e analytics
+  // Função para capturar dados de visitaç��o e analytics
   const getAnalyticsData = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const referrer = document.referrer || "direct";
@@ -935,16 +935,34 @@ export default function Index() {
         "characters",
       );
 
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "User-Agent": navigator.userAgent,
-        },
-        body: JSON.stringify(conversionData),
-        mode: "cors",
-        credentials: "omit",
-      });
+      let response: Response;
+      try {
+        response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "User-Agent": navigator.userAgent,
+          },
+          body: JSON.stringify(conversionData),
+          mode: "cors",
+          credentials: "omit",
+        });
+      } catch (fetchError) {
+        console.warn("❌ Meta Conversion API: Fetch failed (this is expected in some environments)");
+        console.warn("Error details:", fetchError?.message || fetchError);
+
+        // Log for analytics but don't fail the user experience
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: "meta_conversion_fetch_error",
+            meta_error: fetchError?.message || "Network error",
+            meta_event_name: standardEventName,
+          });
+        }
+
+        // Return early - don't break user experience
+        return;
+      }
 
       // Enhanced error handling with CORS considerations
       let responseData: string = "";
