@@ -61,6 +61,7 @@ export default function SEOHead({ seo }: SEOHeadProps) {
     };
 
     // Basic meta tags
+    console.log("📝 Atualizando meta description:", seo.description);
     updateMetaTag("description", seo.description);
     updateMetaTag("keywords", seo.keywords);
     updateMetaTag("author", seo.author);
