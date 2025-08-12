@@ -347,6 +347,7 @@ const defaultData: LandingPageData = {
 export const useLandingPageData = () => {
   const [data, setData] = useState<LandingPageData>(defaultData);
   const [isLoading, setIsLoading] = useState(true);
+  const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
     const loadData = async () => {
