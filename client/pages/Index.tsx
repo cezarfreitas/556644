@@ -53,7 +53,7 @@ export default function Index() {
   const [showCouponMessage, setShowCouponMessage] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Estados para validação de formulário
+  // Estados para valida��ão de formulário
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
   const [formValues, setFormValues] = useState({
     name: "",
@@ -1667,7 +1667,7 @@ export default function Index() {
 
   // Track CompleteRegistration event (Facebook Standard Event)
   const trackCompleteRegistration = (method: string = "form") => {
-    console.log("���� Facebook Event: CompleteRegistration -", method);
+    console.log("����� Facebook Event: CompleteRegistration -", method);
 
     const eventData = {
       content_name: "Lojista Registration",
@@ -2721,7 +2721,7 @@ export default function Index() {
                 <div className="flex items-center justify-center space-x-3">
                   <img
                     src={landingData.footer.logo}
-                    alt="Logo - Marca de Streetwear"
+                    alt={`Logo ${landingData.brandName}`}
                     className="h-12 w-auto"
                     loading="lazy"
                   />
@@ -2735,8 +2735,8 @@ export default function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
-                    aria-label="Siga no Facebook - Abre em nova aba"
-                    title="Siga no Facebook"
+                    aria-label={`Siga ${landingData.brandName} no Facebook - Abre em nova aba`}
+                    title={`Siga ${landingData.brandName} no Facebook`}
                     data-social="facebook"
                     data-url={landingData.footer.socialLinks.facebook}
                   >
@@ -2747,8 +2747,8 @@ export default function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
-                    aria-label="Siga no Instagram - Abre em nova aba"
-                    title="Siga no Instagram"
+                    aria-label={`Siga ${landingData.brandName} no Instagram - Abre em nova aba`}
+                    title={`Siga ${landingData.brandName} no Instagram`}
                     data-social="instagram"
                     data-url={landingData.footer.socialLinks.instagram}
                   >
@@ -2759,8 +2759,8 @@ export default function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-700 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300"
-                    aria-label="Entre em contato via WhatsApp - Abre em nova aba"
-                    title="Entre em contato via WhatsApp"
+                    aria-label={`Entre em contato com ${landingData.brandName} via WhatsApp - Abre em nova aba`}
+                    title={`Entre em contato com ${landingData.brandName} via WhatsApp`}
                     data-social="whatsapp"
                     data-url={landingData.footer.socialLinks.whatsapp}
                   >
@@ -2784,7 +2784,7 @@ export default function Index() {
                   >
                     <img
                       src={landingData.footer.hubMultimarcas?.logoUrl || ""}
-                      alt="Logo HUB Multimarcas"
+                      alt={landingData.footer.hubMultimarcas?.companyName || "Logo HUB"}
                       className="h-12 w-auto"
                       loading="lazy"
                     />
@@ -2807,32 +2807,34 @@ export default function Index() {
                 <div className="text-gray-300 text-sm">
                   {new Date().getFullYear()}. {landingData.footer.copyright}
                 </div>
-                <div className="text-gray-400 text-xs">
-                  Desenvolvido com{" "}
-                  <span
-                    className="text-red-500 inline-block"
-                    style={{
-                      fontSize: "16px",
-                      animation: "heartbeat 2s ease-in-out infinite",
-                      transformOrigin: "center",
-                      display: "inline-block",
-                      transition: "transform 0.2s ease-in-out",
-                    }}
-                    title="Coração animado"
-                    data-heart="true"
-                  >
-                    ❤️
-                  </span>{" "}
-                  por{" "}
-                  <a
-                    href={landingData.footer.developedBy?.url || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors duration-300"
-                  >
-                    {landingData.footer.developedBy?.name}
-                  </a>
-                </div>
+                {landingData.footer.developedBy?.name && (
+                  <div className="text-gray-400 text-xs">
+                    {landingData.footer.developedBy.creditText || "Desenvolvido com"}{" "}
+                    <span
+                      className="text-red-500 inline-block"
+                      style={{
+                        fontSize: "16px",
+                        animation: "heartbeat 2s ease-in-out infinite",
+                        transformOrigin: "center",
+                        display: "inline-block",
+                        transition: "transform 0.2s ease-in-out",
+                      }}
+                      title="Coração animado"
+                      data-heart="true"
+                    >
+                      ❤️
+                    </span>{" "}
+                    por{" "}
+                    <a
+                      href={landingData.footer.developedBy?.url || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors duration-300"
+                    >
+                      {landingData.footer.developedBy?.name}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
