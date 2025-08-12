@@ -2366,10 +2366,7 @@ export default function Index() {
                   Experiência Completa do Produto
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  No nosso showroom em São Paulo, você tem acesso exclusivo a
-                  toda nossa coleção. Toque, sinta e experimente a qualidade dos
-                  tecidos, o acabamento perfeito e os detalhes únicos que fazem
-                  da Onbongo a marca líder em streetwear e lifestyle.
+                  {landingData.showroom?.experienceDescription}
                 </p>
                 <div className="text-center lg:text-left">
                   <p className="text-gray-300 mb-4">
