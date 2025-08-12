@@ -179,7 +179,7 @@ const defaultData: LandingPageData = {
       "Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.",
     title: "SEJA UM LOJISTA OFICIAL ONBONGO",
     subtitle:
-      "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico esp��rito urbano e esportivo da marca.",
+      "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o aut��ntico esp��rito urbano e esportivo da marca.",
     ctaText: "Começar Agora!",
     backgroundImage: "/images/hero/onbongo-background.webp",
   },
@@ -680,7 +680,7 @@ export default function Admin() {
     { id: "footer", name: "Rodapé", icon: "📍" },
     { id: "colors", name: "Cores", icon: "🎨" },
     { id: "seo", name: "SEO", icon: "🔍" },
-    { id: "integrations", name: "Integrações", icon: "��" },
+    { id: "integrations", name: "Integrações", icon: "🔌" },
   ];
 
   return (
@@ -781,6 +781,7 @@ export default function Admin() {
                 onToggle={() =>
                   setShowCompressionSettings(!showCompressionSettings)
                 }
+                lastSaved={compressionLastSaved}
               />
             </div>
 
