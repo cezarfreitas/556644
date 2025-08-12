@@ -2062,8 +2062,7 @@ export default function Index() {
                       <div className="bg-white/10 border border-white/30 rounded-lg p-4">
                         <div className="text-center space-y-1">
                           <p className="text-white font-medium">
-                            {landingData.form.consumerMessage.title ||
-                              "Este cadastro é exclusivo para lojistas com CNPJ"}
+                            {landingData.form.consumerMessage.title}
                           </p>
                           <p className="text-gray-200">
                             {landingData.form.consumerMessage.description ||
