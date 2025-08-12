@@ -11,7 +11,7 @@ export default defineConfig({
       formats: ["es"],
     },
     outDir: "dist/server",
-    target: "node22",
+    target: "node18",
     ssr: true,
     rollupOptions: {
       external: [
@@ -32,6 +32,9 @@ export default defineConfig({
         // External dependencies that should not be bundled
         "express",
         "cors",
+        "dotenv",
+        "multer",
+        "sharp",
       ],
       output: {
         format: "es",
