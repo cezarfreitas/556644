@@ -558,7 +558,7 @@ export default function Admin() {
           console.log("📥 Dados carregados do servidor:", mergedData);
           setData(mergedData);
         } else {
-          console.log("📁 Erro ao carregar dados, usando dados padrão");
+          console.log("��� Erro ao carregar dados, usando dados padrão");
           setData(defaultData);
         }
 
@@ -3385,9 +3385,41 @@ export default function Admin() {
 
                   {/* Meta Pixel */}
                   <div className="border border-gray-200 rounded-lg p-4">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">
-                      👥 Meta Pixel & Conversions API
-                    </h3>
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-lg font-medium text-gray-900">
+                        👥 Meta Pixel & Conversions API
+                      </h3>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={data.integrations?.metaPixel?.enabled || false}
+                          onChange={(e) =>
+                            updateSection("integrations", {
+                              ...data.integrations,
+                              metaPixel: {
+                                ...data.integrations?.metaPixel,
+                                enabled: e.target.checked,
+                              },
+                            })
+                          }
+                          className="sr-only"
+                        />
+                        <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                          data.integrations?.metaPixel?.enabled
+                            ? 'bg-primary'
+                            : 'bg-gray-200'
+                        }`}>
+                          <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                            data.integrations?.metaPixel?.enabled
+                              ? 'translate-x-6'
+                              : 'translate-x-1'
+                          }`} />
+                        </div>
+                        <span className="ml-2 text-sm text-gray-600">
+                          {data.integrations?.metaPixel?.enabled ? 'Ativo' : 'Inativo'}
+                        </span>
+                      </label>
+                    </div>
                     <div className="space-y-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
