@@ -438,7 +438,8 @@ export default function Admin() {
     if (!compressionSettingsLoaded) return; // Don't save on initial load
     const saveCompressionSettings = async () => {
       try {
-        const response = await fetch("/api/data/compression-settings", {
+        const nativeFetch = window.fetch.bind(window);
+        const response = await nativeFetch("/api/data/compression-settings", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -3652,7 +3653,7 @@ export default function Admin() {
                   <div className="border border-gray-200 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-medium text-gray-900">
-                        🎯 Google Ads (Opcional)
+                        ���� Google Ads (Opcional)
                       </h3>
                       <label className="flex items-center">
                         <input
