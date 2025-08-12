@@ -3099,10 +3099,10 @@ export default function Admin() {
                           })
                         }
                         label="Imagem Twitter Card"
-                        maxSizeMB={2}
+                        maxSizeMB={compressionSettings.maxSizeMB}
                         maxWidth={1200}
                         maxHeight={600}
-                        quality={0.9}
+                        quality={compressionSettings.quality}
                       />
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
