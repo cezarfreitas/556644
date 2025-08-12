@@ -308,29 +308,44 @@ export const useLandingPageData = () => {
   const [data, setData] = useState<LandingPageData>(defaultData);
 
   useEffect(() => {
-    // Carregar dados do localStorage
-    const savedData = localStorage.getItem("landingPageData");
-    if (savedData) {
+    const loadData = async () => {
       try {
-        const parsedData = JSON.parse(savedData);
-        const mergedData = {
-          ...defaultData,
-          ...parsedData,
-          form: {
-            ...defaultData.form,
-            ...parsedData.form,
-            consumerMessage: {
-              ...defaultData.form.consumerMessage,
-              ...parsedData.form?.consumerMessage,
+        const response = await fetch("/api/data");
+        if (response.ok) {
+          const parsedData = await response.json();
+
+          // Se não há dados salvos, usar dados padrão (vazios)
+          if (Object.keys(parsedData).length === 0) {
+            console.log("📁 Nenhum dado encontrado no servidor, usando dados padrão vazios");
+            setData(defaultData);
+            return;
+          }
+
+          const mergedData = {
+            ...defaultData,
+            ...parsedData,
+            form: {
+              ...defaultData.form,
+              ...parsedData.form,
+              consumerMessage: {
+                ...defaultData.form.consumerMessage,
+                ...parsedData.form?.consumerMessage,
+              },
             },
-          },
-        };
-        console.log("📥 Dados carregados do localStorage:", mergedData);
-        setData(mergedData);
+          };
+          console.log("📥 Dados carregados do servidor:", mergedData);
+          setData(mergedData);
+        } else {
+          console.log("📁 Erro ao carregar dados do servidor, usando dados padrão");
+          setData(defaultData);
+        }
       } catch (error) {
-        console.error("Erro ao carregar dados da landing page:", error);
+        console.error("❌ Erro ao carregar dados do servidor:", error);
+        setData(defaultData);
       }
-    }
+    };
+
+    loadData();
   }, []);
 
   return data;
