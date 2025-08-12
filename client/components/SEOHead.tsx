@@ -7,11 +7,21 @@ interface SEOHeadProps {
 
 export default function SEOHead({ seo }: SEOHeadProps) {
   useEffect(() => {
-    console.log("🔍 SEOHead recebeu dados:", seo);
+    console.log("🔍 SEOHead executando com dados:", seo);
+
     if (!seo) {
-      console.log("❌ SEO dados não encontrados");
+      console.log("❌ SEO dados são null/undefined");
       return;
     }
+
+    if (typeof seo !== 'object') {
+      console.log("❌ SEO dados não são um objeto:", typeof seo);
+      return;
+    }
+
+    console.log("✅ SEO dados recebidos corretamente");
+    console.log("📝 Title:", seo.title);
+    console.log("📝 Description:", seo.description);
 
     // Update document title
     if (seo.title) {
