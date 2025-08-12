@@ -478,8 +478,7 @@ export default function Index() {
       store: "Fashion Hub - Curitiba, PR",
       avatar: "C",
       text: "A Onbongo transformou minha loja multimarca. Agora somos referência em surfwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido.",
-    },
-  ];
+    }];
 
   // Auto-slide functionality
   useEffect(() => {
@@ -1515,7 +1514,7 @@ export default function Index() {
         trackCompleteRegistration("business_form");
       } else {
         console.log(
-          "ℹ️ Usuário sem CNPJ - eventos de conversão Facebook n��o enviados",
+          "ℹ️ Usuário sem CNPJ - eventos de convers��o Facebook n��o enviados",
         );
       }
 
