@@ -13,6 +13,7 @@ interface CompressionSettingsProps {
   onChange: (settings: CompressionSettings) => void;
   isOpen: boolean;
   onToggle: () => void;
+  lastSaved?: Date | null;
 }
 
 export default function CompressionSettingsComponent({
