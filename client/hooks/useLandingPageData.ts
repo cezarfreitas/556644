@@ -404,6 +404,8 @@ export const useLandingPageData = () => {
           };
           console.log("📥 Dados carregados do servidor:", mergedData);
           console.log("🔍 Dados SEO carregados:", mergedData.seo);
+          console.log("🔍 SEO title:", mergedData.seo?.title);
+          console.log("🔍 SEO description:", mergedData.seo?.description);
           setData(mergedData);
           setIsLoading(false);
         } else {
