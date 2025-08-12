@@ -110,7 +110,7 @@ export default function Index() {
   });
 
   // Debug Meta API configuration
-  console.log("����� Meta API Debug:");
+  console.log("���� Meta API Debug:");
   console.log(
     "Raw VITE_META_ACCESS_TOKEN:",
     import.meta.env.VITE_META_ACCESS_TOKEN,
@@ -1747,15 +1747,17 @@ export default function Index() {
         {/* Mobile Layout (< md) */}
         <div className="md:hidden flex flex-col items-center justify-center h-full px-6 py-8 text-center relative z-10">
           {/* Mobile Logo */}
-          <div className="mb-6">
-            <img
-              src={landingData.hero.logo}
-              alt={`Logo ${landingData.brandName}`}
-              className="h-20 w-auto mx-auto"
-              loading="eager"
-              fetchPriority="high"
-            />
-          </div>
+          {!isLoading && landingData.hero.logo && (
+            <div className="mb-6">
+              <img
+                src={landingData.hero.logo}
+                alt={`Logo ${landingData.brandName}`}
+                className="h-20 w-auto mx-auto"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+          )}
 
           {/* Mobile Intro Text */}
           <p className="text-xs text-white/80 text-center mb-4 px-3 drop-shadow-md">
