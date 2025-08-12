@@ -240,6 +240,8 @@ const defaultData: LandingPageData = {
     paragraphs: [],
     image: "",
     quote: "",
+    titleSuffix: "",
+    imageAlt: "",
   },
   faq: {
     title: "",
