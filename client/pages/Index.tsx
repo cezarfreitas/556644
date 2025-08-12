@@ -1712,7 +1712,7 @@ export default function Index() {
     // Facebook Standard Event: SubmitApplication
     if (META_PIXEL_ID && window.fbq) {
       window.fbq("track", "SubmitApplication", eventData);
-      console.log("✅ Facebook SubmitApplication tracked:", eventData);
+      console.log("�� Facebook SubmitApplication tracked:", eventData);
     }
 
     // Custom tracking
@@ -2843,7 +2843,7 @@ export default function Index() {
       <DynamicColors colors={landingData.colors} />
 
       {/* SEO Head */}
-      <SEOHead seo={landingData.seo} />
+      {!isLoading && <SEOHead seo={landingData.seo} />}
 
       {/* Tracking Scripts */}
       <TrackingScripts integrations={landingData.integrations} />
