@@ -1614,19 +1614,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.hero || "#ffffff"}
+                            value={data.colors?.sections?.hero || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              hero: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                hero: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.hero || "#ffffff"}
+                            value={data.colors?.sections?.hero || "#ffffff"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              hero: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                hero: e.target.value
+                              }
                             })}
                             placeholder="#ffffff"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
