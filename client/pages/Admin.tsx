@@ -1647,19 +1647,25 @@ export default function Admin() {
                         <div className="flex items-center space-x-3">
                           <input
                             type="color"
-                            value={data.colors?.form || "#f8f9fa"}
+                            value={data.colors?.sections?.form || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              form: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                form: e.target.value
+                              }
                             })}
                             className="w-12 h-12 border border-gray-300 rounded-lg cursor-pointer"
                           />
                           <input
                             type="text"
-                            value={data.colors?.form || "#f8f9fa"}
+                            value={data.colors?.sections?.form || "#f8f9fa"}
                             onChange={(e) => updateSection("colors", {
                               ...data.colors,
-                              form: e.target.value
+                              sections: {
+                                ...data.colors?.sections,
+                                form: e.target.value
+                              }
                             })}
                             placeholder="#f8f9fa"
                             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
