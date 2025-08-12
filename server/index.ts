@@ -25,7 +25,7 @@ export function createServer() {
     res.status(200).json({
       status: "ok",
       timestamp: new Date().toISOString(),
-      uptime: process.uptime()
+      uptime: process.uptime(),
     });
   });
 

@@ -18,7 +18,11 @@ app.use(express.static(distPath));
 // Handle React Router - serve index.html for all non-API routes
 app.get("*", (req, res) => {
   // Don't serve index.html for API routes or health check
-  if (req.path.startsWith("/api/") || req.path.startsWith("/health") || req.path.startsWith("/imagens/")) {
+  if (
+    req.path.startsWith("/api/") ||
+    req.path.startsWith("/health") ||
+    req.path.startsWith("/imagens/")
+  ) {
     return res.status(404).json({ error: "Endpoint not found" });
   }
 
