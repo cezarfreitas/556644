@@ -207,6 +207,12 @@ const defaultData: LandingPageData = {
     experienceDescription: "",
     image: "",
     ctaText: "",
+    locationIcon: "",
+    titleSuffix: "",
+    ctaQuestion: "",
+    imageUrl: "",
+    imageAlt: "",
+    imageCaption: "",
   },
   testimonials: {
     title: "",
