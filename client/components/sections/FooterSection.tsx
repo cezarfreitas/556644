@@ -26,6 +26,19 @@ interface FooterProps {
 }
 
 function FooterSection({ data }: FooterProps) {
+  if (!data) {
+    return (
+      <footer className="bg-black text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-orange-500 mx-auto"></div>
+            <p className="mt-4 text-white">Carregando footer...</p>
+          </div>
+        </div>
+      </footer>
+    );
+  }
+
   return (
     <footer className="bg-black text-white py-16">
       <div className="container mx-auto px-4">
