@@ -4,6 +4,7 @@ import cors from "cors";
 import path from "path";
 import { handleDemo } from "./routes/demo";
 import uploadRoutes from "./routes/upload";
+import dataRoutes from "./routes/data";
 
 export function createServer() {
   const app = express();
