@@ -571,8 +571,14 @@ export default function Admin() {
 
         // Carregar configurações de compressão
         try {
-          const compressionResponse = await fetch(
+          const compressionResponse = await nativeFetch(
             "/api/data/compression-settings",
+            {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
           );
           if (compressionResponse.ok) {
             const savedCompressionSettings = await compressionResponse.json();
