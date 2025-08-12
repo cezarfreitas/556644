@@ -5,6 +5,8 @@ interface LazyGalleryProps {
   images: string[];
   title: string;
   description: string;
+  ctaText?: string;
+  onCtaClick?: () => void;
 }
 
 // Generate tiny blur placeholder
