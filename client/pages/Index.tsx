@@ -2067,8 +2067,7 @@ export default function Index() {
                           <p className="text-gray-200">
                             {landingData.form.consumerMessage.description}{" "}
                             <span className="font-bold text-yellow-300">
-                              {landingData.form.consumerMessage.discountText ||
-                                "10% de desconto"}
+                              {landingData.form.consumerMessage.discountText}
                             </span>{" "}
                             para você
                           </p>
