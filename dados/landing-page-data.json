@@ -48,8 +48,10 @@
     "cnpjNoLabel": "Sou Consumidor Final"
   },
   "gallery": {
-    "title": "Coleções Exclusivas Onbongo",
-    "description": "Descubra as coleções oficiais Onbongo, com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.",
+    "title": "Coleções Exclusivas",
+    "brandName": "Onbongo",
+    "description": "Descubra as coleções oficiais com design autêntico e qualidade premium. Produtos únicos que valorizam sua loja e encantam seus clientes.",
+    "ctaText": "Quero Ser Lojista Oficial",
     "images": [
       "/images/gallery/onbongo-1.webp",
       "/images/gallery/onbongo-2.webp",
