@@ -69,6 +69,7 @@ export default function SEOHead({ seo }: SEOHeadProps) {
 
     // Open Graph meta tags
     if (seo.openGraph) {
+      console.log("📝 Atualizando Open Graph tags:", seo.openGraph);
       updateMetaTag("og:title", seo.openGraph.title, "property");
       updateMetaTag("og:description", seo.openGraph.description, "property");
       updateMetaTag("og:image", seo.openGraph.image, "property");
