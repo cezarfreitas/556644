@@ -28,8 +28,14 @@
       }
     ],
     "nameLabel": "Nome Completo",
+    "namePlaceholder": "Digite seu nome completo",
     "whatsappLabel": "WhatsApp para Contato",
+    "whatsappPlaceholder": "(11) 99999-9999",
     "cnpjLabel": "Agora precisamos do seu CNPJ",
+    "cnpjPlaceholder": "00.000.000/0000-00",
+    "formTitle": "Cadastre-se como Lojista!",
+    "formSuccessTitle": "Formulário Enviado!",
+    "formErrorTitle": "Ops! Algo deu errado",
     "submitButtonText": "Começar Agora!",
     "successMessage": "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
     "consumerMessage": {
