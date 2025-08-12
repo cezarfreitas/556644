@@ -132,6 +132,28 @@ interface LandingPageData {
       contactEmail: string;
     };
   };
+  colors: {
+    primary: string;
+    primaryDark: string;
+    primaryLight: string;
+    secondary: string;
+    accent: string;
+    background: string;
+    surface: string;
+    text: {
+      primary: string;
+      secondary: string;
+      inverse: string;
+    };
+    button: {
+      primary: string;
+      primaryHover: string;
+      secondary: string;
+      secondaryHover: string;
+    };
+    border: string;
+    overlay: string;
+  };
 }
 
 // Dados padrão - completamente vazios para não mostrar nada antes do JSON
