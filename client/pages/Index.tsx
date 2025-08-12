@@ -2629,7 +2629,7 @@ export default function Index() {
                     {landingData.history?.paragraphs?.[0]?.split(".")[0] ||
                       "Desde 1988, nossa marca é sinônimo de autenticidade e atitude"}
                     no surfwear e streetwear brasileiro. Nascida nas praias e
-                    nas ruas, a marca construiu uma trajetória s��lida vestindo
+                    nas ruas, a marca construiu uma trajetória sólida vestindo
                     surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
