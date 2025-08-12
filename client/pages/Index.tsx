@@ -2856,8 +2856,6 @@ export default function Index() {
       <DynamicColors colors={landingData.colors} />
 
 
-      {/* Tracking Scripts */}
-      <TrackingScripts integrations={landingData.integrations} />
     </div>
   );
 }
