@@ -1390,7 +1390,7 @@ export default function Index() {
       cnpj: showCnpjField ? formData.get("cnpj-number") : null,
 
       // Dados da marca/campanha
-      marca: BRAND_NAME,
+      marca: landingData.brandName,
       origem: "Landing Page Lojistas",
       campaign_type: "Lead Generation",
       lead_source: "Website Form",
@@ -2345,7 +2345,7 @@ export default function Index() {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
-                <span className="mr-2">���</span>
+                <span className="mr-2">📍</span>
                 {landingData.showroom.location}
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
