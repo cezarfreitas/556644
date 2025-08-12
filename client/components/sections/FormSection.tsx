@@ -86,7 +86,7 @@ function FormSection({
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Benefits */}
             <div className="space-y-8">
-              {data.benefits.map((benefit, index) => {
+              {data.benefits?.map((benefit, index) => {
                 const Icon = benefitIcons[index] || FaCheck;
                 return (
                   <div key={index} className="flex items-start space-x-4">
