@@ -68,7 +68,7 @@ export default function Index() {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
-  // Fun����o auxiliar para pegar cookies (movida para cima para disponibilidade)
+  // Funç��o auxiliar para pegar cookies (movida para cima para disponibilidade)
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -2596,7 +2596,7 @@ export default function Index() {
                     Com mais de três décadas de história, a Onbongo se
                     reinventou a cada geração, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
-                    muito além do surf - marcou presença no futebol
+                    muito al��m do surf - marcou presença no futebol
                     profissional, vestindo grandes nomes como Kaká, Roberto
                     Carlos, Neymar e Amaral.
                   </p>
@@ -2780,8 +2780,7 @@ export default function Index() {
               <div className="text-center space-y-2">
                 <div className="text-gray-300 text-sm">
                   {new Date().getFullYear()}.{" "}
-                  {landingData.footer.copyright ||
-                    "Todos os direitos reservados."}
+                  {landingData.footer.copyright}
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}
