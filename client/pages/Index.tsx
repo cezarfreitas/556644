@@ -1777,13 +1777,15 @@ export default function Index() {
           </p>
 
           {/* Mobile CTA */}
-          <a
-            href="#cadastro-lojistas"
-            className="inline-flex items-center justify-center max-w-xs bg-primary hover:bg-onbongo-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
-          >
-            {landingData.hero.ctaText}
-            <span className="text-lg">→</span>
-          </a>
+          {!isLoading && landingData.hero.ctaText && (
+            <a
+              href="#cadastro-lojistas"
+              className="inline-flex items-center justify-center max-w-xs bg-primary hover:bg-onbongo-600 text-white hover:text-white py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white gap-2"
+            >
+              {landingData.hero.ctaText}
+              <span className="text-lg">→</span>
+            </a>
+          )}
         </div>
 
         {/* Desktop Layout (md+) */}
