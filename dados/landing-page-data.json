@@ -74,8 +74,9 @@
     "ctaText": "Quero Ser Lojista"
   },
   "testimonials": {
-    "title": "Depoimentos de Lojistas Onbongo Oficiais",
-    "description": "Histórias reais de sucesso de parceiros que triplicaram o faturamento com a Onbongo",
+    "title": "Depoimentos de Lojistas",
+    "subtitle": "Oficiais",
+    "description": "Histórias reais de sucesso de parceiros que triplicaram o faturamento conosco",
     "testimonials": [
       {
         "id": 1,
