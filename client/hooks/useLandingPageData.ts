@@ -86,6 +86,9 @@ interface LandingPageData {
       name: string;
       url: string;
       creditText?: string;
+      defaultCreditText?: string;
+      heartTitle?: string;
+      byText?: string;
     };
   };
   integrations: {
