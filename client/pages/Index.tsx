@@ -2416,8 +2416,7 @@ export default function Index() {
                 <span className="block text-primary">{BRAND_NAME} Oficiais</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                Histórias reais de sucesso de parceiros que triplicaram o
-                faturamento com a Onbongo
+                {landingData.testimonials?.description || `Histórias reais de sucesso de parceiros que triplicaram o faturamento com a ${BRAND_NAME}`}
               </p>
             </div>
 
