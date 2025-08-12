@@ -682,6 +682,12 @@ export default function Index() {
       return;
     }
 
+    // Check if fetch is available
+    if (typeof fetch === 'undefined') {
+      console.warn("Meta Conversion API: Skipping - fetch not available");
+      return;
+    }
+
     // Create cache key to prevent duplicate requests
     const cacheKey = `${eventName}_${fullEventData?.session_id || "unknown"}_${Math.floor(Date.now() / 5000)}`;
     if (metaApiRequestCache.has(cacheKey)) {
@@ -2573,7 +2579,7 @@ export default function Index() {
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
                     Desde 1988, a Onbongo é sinônimo de autenticidade e atitude
                     no surfwear e streetwear brasileiro. Nascida nas praias e
-                    nas ruas, a marca construiu uma trajetória sólida vestindo
+                    nas ruas, a marca construiu uma trajetória s��lida vestindo
                     surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
