@@ -1965,8 +1965,9 @@ export default function Admin() {
                     <h4 className="text-sm font-medium text-blue-900 mb-2">💡 Como Usar</h4>
                     <ul className="text-sm text-blue-700 space-y-1">
                       <li>• <strong>Cor Primária:</strong> Usada para botões principais, links e elementos de destaque</li>
-                      <li>• <strong>Cor Secundária:</strong> Usada para textos de cabeçalho e elementos secundários</li>
-                      <li>• <strong>Cor de Destaque:</strong> Usada para ícones, badges e elementos especiais</li>
+                      <li>• <strong>Cor Segunda:</strong> Usada para textos de cabeçalho e elementos secundários</li>
+                      <li>• <strong>Cor Terciária:</strong> Usada para ícones, badges e elementos de apoio</li>
+                      <li>• <strong>Cor Quaternária:</strong> Usada para acentos e elementos decorativos</li>
                       <li>• <strong>Cores de Texto:</strong> Aplicadas automaticamente em títulos e parágrafos</li>
                       <li>• <strong>Salve as alterações:</strong> As cores são aplicadas automaticamente ao salvar</li>
                     </ul>
