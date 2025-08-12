@@ -7,6 +7,7 @@ const router = Router();
 // Pasta onde os dados serão salvos
 const DATA_DIR = path.join(process.cwd(), "dados");
 const DATA_FILE = path.join(DATA_DIR, "landing-page-data.json");
+const COMPRESSION_SETTINGS_FILE = path.join(DATA_DIR, "compression-settings.json");
 
 // Criar pasta de dados se não existir
 if (!fs.existsSync(DATA_DIR)) {
