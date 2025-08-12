@@ -306,6 +306,7 @@ const defaultData: LandingPageData = {
 
 export const useLandingPageData = () => {
   const [data, setData] = useState<LandingPageData>(defaultData);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
