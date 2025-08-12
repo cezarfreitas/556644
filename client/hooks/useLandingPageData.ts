@@ -133,26 +133,14 @@ interface LandingPageData {
     };
   };
   colors: {
-    primary: string;
-    primaryDark: string;
-    primaryLight: string;
-    secondary: string;
-    accent: string;
-    background: string;
-    surface: string;
-    text: {
-      primary: string;
-      secondary: string;
-      inverse: string;
-    };
-    button: {
-      primary: string;
-      primaryHover: string;
-      secondary: string;
-      secondaryHover: string;
-    };
-    border: string;
-    overlay: string;
+    hero: string;
+    form: string;
+    gallery: string;
+    showroom: string;
+    testimonials: string;
+    history: string;
+    faq: string;
+    footer: string;
   };
 }
 
