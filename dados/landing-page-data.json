@@ -120,7 +120,9 @@
   },
   "faq": {
     "title": "Perguntas Frequentes",
-    "description": "Tire suas dúvidas sobre a parceria com a Onbongo",
+    "description": "Tire suas dúvidas sobre a parceria conosco",
+    "ctaMessage": "Ainda tem dúvidas? Entre em contato conosco!",
+    "ctaText": "Quero Ser Lojista",
     "items": [
       {
         "question": "Os produtos são oficiais da marca Onbongo?",
