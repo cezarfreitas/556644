@@ -514,7 +514,7 @@ export default function Index() {
               "Coleções Exclusivas Onbongo",
             );
             observer.unobserve(entry.target); // Track only once
-            console.log("�� ViewContent da galeria disparado (só uma vez)");
+            console.log("✅ ViewContent da galeria disparado (só uma vez)");
           }
         });
       },
@@ -2216,9 +2216,7 @@ export default function Index() {
                 <span className="block text-primary">{BRAND_NAME}</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                Descubra as coleções oficiais Onbongo, com design autêntico e
-                qualidade premium. Produtos únicos que valorizam sua loja e
-                encantam seus clientes.
+                {landingData.gallery?.description || `Descubra as coleções oficiais ${BRAND_NAME}, com design autêntico e qualidade premium.`}
               </p>
             </div>
 
