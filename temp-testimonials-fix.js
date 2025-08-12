@@ -1,2 +1,2 @@
-// Use only testimonials from JSON data  
-  const testimonials = landingData.testimonials?.testimonials || [];
+// Use only testimonials from JSON data
+const testimonials = landingData.testimonials?.testimonials || [];

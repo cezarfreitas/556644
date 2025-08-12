@@ -46,13 +46,14 @@ Configure estes volumes no EasyPanel para persistir dados:
 
 ```yaml
 volumes:
-  - ./dados:/app/dados              # Dados da landing page
-  - ./public/imagens:/app/public/imagens  # Imagens uploaded
+  - ./dados:/app/dados # Dados da landing page
+  - ./public/imagens:/app/public/imagens # Imagens uploaded
 ```
 
 ### 🏥 Health Check
 
 O health check está configurado para:
+
 - **Endpoint**: `http://localhost:80/health`
 - **Intervalo**: 30s
 - **Timeout**: 10s
@@ -69,14 +70,17 @@ Após o deploy, verifique:
 ### 🚨 Problemas Comuns
 
 **Build falha:**
+
 - Verifique se todas as dependências estão no package.json
 - Confirme que o Node.js 18 está sendo usado
 
 **Aplicação não inicia:**
+
 - Verifique se a porta 80 está exposta
 - Confirme que o build foi criado corretamente
 
 **Upload de imagens não funciona:**
+
 - Verifique se o volume `./public/imagens` está montado
 - Confirme permissões de escrita no volume
 
@@ -97,6 +101,7 @@ docker run -p 80:80 onbongo-landing
 ### 📊 Métricas de Performance
 
 O projeto inclui:
+
 - ⚡ **Lazy Loading**: Componentes carregados sob demanda
 - 🗜️ **Compressão**: Imagens otimizadas automaticamente
 - 📦 **Code Splitting**: Bundle otimizado por seção

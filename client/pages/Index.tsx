@@ -478,7 +478,8 @@ export default function Index() {
       store: "Fashion Hub - Curitiba, PR",
       avatar: "C",
       text: "A Onbongo transformou minha loja multimarca. Agora somos referência em surfwear na cidade. O processo de se tornar parceiro foi super tranquilo e rápido.",
-    }];
+    },
+  ];
 
   // Auto-slide functionality
   useEffect(() => {
@@ -2210,7 +2211,9 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 {landingData.gallery?.title || "Coleções Exclusivas"}
-                <span className="block text-primary">{landingData.gallery?.brandName || BRAND_NAME}</span>
+                <span className="block text-primary">
+                  {landingData.gallery?.brandName || BRAND_NAME}
+                </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 {landingData.gallery?.description}
@@ -2348,7 +2351,9 @@ export default function Index() {
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
                 {landingData.showroom?.title || "Conheça o Show Room da"}
-                <span className="block text-primary">{landingData.showroom?.brandName} em SP</span>
+                <span className="block text-primary">
+                  {landingData.showroom?.brandName} em SP
+                </span>
               </h2>
               <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
                 {landingData.showroom?.description}
@@ -2367,7 +2372,8 @@ export default function Index() {
                 </p>
                 <div className="text-center lg:text-left">
                   <p className="text-gray-300 mb-4">
-                    Pronto para conhecer de perto a qualidade {landingData.showroom?.brandName}?
+                    Pronto para conhecer de perto a qualidade{" "}
+                    {landingData.showroom?.brandName}?
                   </p>
                   <a
                     href="#cadastro-lojistas"
@@ -2388,7 +2394,8 @@ export default function Index() {
                   loading="lazy"
                 />
                 <p className="text-gray-400 text-sm mt-4 italic">
-                  "Viva a experiência {landingData.showroom?.brandName} em nosso showroom exclusivo"
+                  "Viva a experiência {landingData.showroom?.brandName} em nosso
+                  showroom exclusivo"
                 </p>
               </div>
             </div>
@@ -2407,7 +2414,9 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 {landingData.testimonials?.title || "Depoimentos de Lojistas"}
-                <span className="block text-primary">{landingData.testimonials?.subtitle || "Oficiais"}</span>
+                <span className="block text-primary">
+                  {landingData.testimonials?.subtitle || "Oficiais"}
+                </span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 {landingData.testimonials?.description}
@@ -2652,7 +2661,10 @@ export default function Index() {
 
             <div className="space-y-4">
               {landingData.faq?.items?.map((item, index) => (
-                <details key={index} className="group bg-white rounded-lg shadow-md">
+                <details
+                  key={index}
+                  className="group bg-white rounded-lg shadow-md"
+                >
                   <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
                     <span>{item.question}</span>
                     <span className="transform group-open:rotate-180 transition-transform text-primary">
@@ -2779,8 +2791,7 @@ export default function Index() {
             <div className="border-t border-gray-700 pt-8">
               <div className="text-center space-y-2">
                 <div className="text-gray-300 text-sm">
-                  {new Date().getFullYear()}.{" "}
-                  {landingData.footer.copyright}
+                  {new Date().getFullYear()}. {landingData.footer.copyright}
                 </div>
                 <div className="text-gray-400 text-xs">
                   Desenvolvido com{" "}

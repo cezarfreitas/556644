@@ -7,11 +7,11 @@ build:
 
 networking:
   port: 80
-  
+
 volumes:
   - name: dados
     path: /app/dados
-  - name: imagens  
+  - name: imagens
     path: /app/public/imagens
 
 environment:

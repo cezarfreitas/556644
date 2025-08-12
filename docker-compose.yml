@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   onbongo-landing:
@@ -26,12 +26,19 @@ services:
       - ./public/imagens:/app/public/imagens
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
+      test:
+        [
+          "CMD",
+          "wget",
+          "--no-verbose",
+          "--tries=1",
+          "--spider",
+          "http://localhost:80/health",
+        ]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
-
 # Para testing local, descomente as linhas abaixo:
 # networks:
 #   default:
