@@ -319,6 +319,7 @@ export const useLandingPageData = () => {
           if (Object.keys(parsedData).length === 0) {
             console.log("📁 Nenhum dado encontrado no servidor, usando dados padrão vazios");
             setData(defaultData);
+            setIsLoading(false);
             return;
           }
 
@@ -336,13 +337,16 @@ export const useLandingPageData = () => {
           };
           console.log("📥 Dados carregados do servidor:", mergedData);
           setData(mergedData);
+          setIsLoading(false);
         } else {
           console.log("📁 Erro ao carregar dados do servidor, usando dados padrão");
           setData(defaultData);
+          setIsLoading(false);
         }
       } catch (error) {
         console.error("❌ Erro ao carregar dados do servidor:", error);
         setData(defaultData);
+        setIsLoading(false);
       }
     };
 
