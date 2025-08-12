@@ -653,7 +653,7 @@ export default function Index() {
     if (META_PIXEL_ID && window.fbq) {
       const pixelData = {
         content_category: "Business Partners",
-        content_name: `${BRAND_NAME} Lojista Registration`,
+        content_name: `${landingData.brandName} Lojista Registration`,
         lead_type: fullEventData.lead_type || "unknown",
         traffic_source: fullEventData.traffic_source || "unknown",
         value: fullEventData.engagement_score || 1,
@@ -2345,7 +2345,7 @@ export default function Index() {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-primary font-semibold text-sm mb-4">
-                <span className="mr-2">📍</span>
+                <span className="mr-2">���</span>
                 {landingData.showroom.location}
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
