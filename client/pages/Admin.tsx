@@ -211,6 +211,12 @@ const defaultData: LandingPageData = {
     whatsappLabel: "WhatsApp para Contato",
     cnpjLabel: "Agora precisamos do seu CNPJ",
     submitButtonText: "Começar Agora!",
+    successMessage: "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
+    consumerMessage: {
+      title: "Este cadastro é exclusivo para lojistas com CNPJ",
+      description: "Mas não fique triste! Temos um cupom com",
+      discountText: "10% de desconto",
+    },
   },
   gallery: {
     title: "Coleç��es Exclusivas Onbongo",
@@ -851,7 +857,7 @@ export default function Admin() {
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                           />
                           <textarea
-                            placeholder="Descrição do benefício"
+                            placeholder="Descri��ão do benefício"
                             value={benefit.description}
                             onChange={(e) => {
                               const newBenefits = [...data.form.benefits];
