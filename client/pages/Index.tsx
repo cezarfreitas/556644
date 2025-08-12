@@ -2662,7 +2662,7 @@ export default function Index() {
                 <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
                   <span>Existe um valor de pedido mínimo?</span>
                   <span className="transform group-open:rotate-180 transition-transform text-primary">
-                    ���
+                    <FaChevronDown className="w-5 h-5" />
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed">
