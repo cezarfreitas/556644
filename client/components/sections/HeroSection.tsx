@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import OptimizedImage from "../OptimizedImage";
 
