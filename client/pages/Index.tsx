@@ -653,8 +653,12 @@ export default function Index() {
       // Eventos específicos do Facebook
       if (eventName === "form_submission_success") {
         window.fbq("track", META_CONVERSION_NAME, pixelData);
-        // Também enviar via API de conversão
-        sendMetaConversionAPI(eventName, pixelData, fullEventData);
+        // Também enviar via API de conversão (com try-catch para não quebrar UX)
+        try {
+          sendMetaConversionAPI(eventName, pixelData, fullEventData);
+        } catch (apiError) {
+          console.warn("Meta Conversion API call failed:", apiError?.message);
+        }
       } else {
         window.fbq("trackCustom", eventName, pixelData);
       }
