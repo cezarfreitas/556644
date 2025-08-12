@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 interface TestimonialsProps {
-  data: {
+  data?: {
     title: string;
     description: string;
     testimonials: Array<{
