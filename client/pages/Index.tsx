@@ -1157,7 +1157,7 @@ export default function Index() {
     }
   };
 
-  // Funções de validação
+  // Funç��es de validação
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
@@ -2391,7 +2391,7 @@ export default function Index() {
                   loading="lazy"
                 />
                 <p className="text-gray-400 text-sm mt-4 italic">
-                  "Viva a experiência Onbongo em nosso showroom exclusivo"
+                  "Viva a experiência {landingData.showroom?.brandName} em nosso showroom exclusivo"
                 </p>
               </div>
             </div>
@@ -2596,7 +2596,7 @@ export default function Index() {
                     surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com mais de três d��cadas de história, a Onbongo se
+                    Com mais de três décadas de história, a Onbongo se
                     reinventou a cada geração, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
                     muito além do surf - marcou presença no futebol
