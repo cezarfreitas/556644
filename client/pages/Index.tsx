@@ -1664,8 +1664,6 @@ export default function Index() {
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Additional gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/60"></div>
 
         {/* Mobile Layout (< md) */}
         <div className="md:hidden flex flex-col items-center justify-center h-full px-6 py-8 text-center relative z-10">
@@ -2089,7 +2087,6 @@ export default function Index() {
                             : "bg-black hover:bg-gray-900 hover:scale-[1.02] hover:shadow-xl"
                         } text-white`}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                         <span className="relative flex items-center justify-center gap-2">
                           {isSubmitting ? (
                             <>
@@ -2156,7 +2153,7 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Coleções Exclusivas
-                <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                <span className="block text-primary">
                   Onbongo
                 </span>
               </h2>
@@ -2368,7 +2365,7 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 Depoimentos de Lojistas
-                <span className="block text-primary bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">
+                <span className="block text-primary">
                   Onbongo Oficiais
                 </span>
               </h2>
