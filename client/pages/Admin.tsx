@@ -2020,7 +2020,8 @@ export default function Admin() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h4 className="text-sm font-medium text-blue-900 mb-2">💡 Como Usar</h4>
                     <ul className="text-sm text-blue-700 space-y-1">
-                      <li>• Cada seção do site pode ter sua própria cor de fundo</li>
+                      <li>• <strong>Cores Principais:</strong> Usadas em botões, links e elementos importantes do site</li>
+                      <li>• <strong>Cores das Seções:</strong> Definem o fundo de cada seção da landing page</li>
                       <li>• Use cores contrastantes para criar separação visual entre seções</li>
                       <li>• Cores claras (#ffffff, #f8f9fa) são ideais para conteúdo principal</li>
                       <li>• Cores escuras (#2c3e50) funcionam bem para rodapé e cabeçalho</li>
