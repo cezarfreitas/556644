@@ -2079,8 +2079,10 @@ export default function Index() {
                             {landingData.form.consumerMessage.description}{" "}
                             <span className="font-bold text-yellow-300">
                               {landingData.form.consumerMessage.discountText}
-                            </span>{" "}
-                            para você
+                            </span>
+                            {landingData.form.consumerMessage.discountSuffix && (
+                              <span> {landingData.form.consumerMessage.discountSuffix}</span>
+                            )}
                           </p>
                         </div>
                       </div>
@@ -2093,7 +2095,10 @@ export default function Index() {
                           htmlFor="cnpj-number"
                           className="text-sm font-medium text-white"
                         >
-                          {landingData.form.cnpjLabel} *
+                          {landingData.form.cnpjLabel}
+                          {landingData.form.requiredIndicator && (
+                            <span> {landingData.form.requiredIndicator}</span>
+                          )}
                         </label>
                         <div className="relative">
                           <input
@@ -2158,16 +2163,20 @@ export default function Index() {
                           {isSubmitting ? (
                             <>
                               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                              Enviando...
+                              {landingData.form.submittingText || "Enviando..."}
                             </>
                           ) : showCouponMessage ? (
                             <>
-                              <span className="mr-2">🎁</span>
-                              Receber Acesso Exclusivo
+                              {landingData.form.couponButtonIcon && (
+                                <span className="mr-2">{landingData.form.couponButtonIcon}</span>
+                              )}
+                              {landingData.form.couponButtonText || "Receber Acesso Exclusivo"}
                             </>
                           ) : (
                             <>
-                              <span className="mr-2">🚀</span>
+                              {landingData.form.submitButtonIcon && (
+                                <span className="mr-2">{landingData.form.submitButtonIcon}</span>
+                              )}
                               {landingData.form.submitButtonText}
                             </>
                           )}
@@ -2200,7 +2209,7 @@ export default function Index() {
                       onClick={handleBackToForm}
                       className="mt-4 bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300"
                     >
-                      ← Voltar ao Formulário
+                      {landingData.form.backButtonText || "��� Voltar ao Formulário"}
                     </button>
                   </div>
                 )}
