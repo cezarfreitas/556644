@@ -1988,7 +1988,7 @@ export default function Index() {
                           />
                           <div>
                             <span className="text-sm sm:text-base font-medium text-white block">
-                              Sou Consumidor Final
+                              {landingData.form.cnpjNoLabel}
                             </span>
                           </div>
                         </label>
@@ -2418,7 +2418,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★��★</span>
+                                  <span className="text-2xl">★★★★★</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
