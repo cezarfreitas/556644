@@ -28,6 +28,7 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
   app.use("/api/upload", uploadRoutes);
+  app.use("/api/data", dataRoutes);
 
   return app;
 }
