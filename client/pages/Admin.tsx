@@ -426,6 +426,7 @@ export default function Admin() {
     maxSizeMB: 2,
   });
   const [showCompressionSettings, setShowCompressionSettings] = useState(false);
+  const [compressionLastSaved, setCompressionLastSaved] = useState<Date | null>(null);
 
   // Carregar dados do localStorage
   useEffect(() => {
@@ -532,7 +533,7 @@ export default function Admin() {
           if (compressionResponse.ok) {
             const savedCompressionSettings = await compressionResponse.json();
             if (savedCompressionSettings && Object.keys(savedCompressionSettings).length > 0) {
-              console.log("🗜️ Configurações de compressão carregadas:", savedCompressionSettings);
+              console.log("🗜�� Configurações de compressão carregadas:", savedCompressionSettings);
               setCompressionSettings(savedCompressionSettings);
             }
           }
@@ -675,7 +676,7 @@ export default function Admin() {
     { id: "history", name: "História", icon: "📖" },
     { id: "faq", name: "FAQ", icon: "❓" },
     { id: "footer", name: "Rodapé", icon: "📍" },
-    { id: "colors", name: "Cores", icon: "���" },
+    { id: "colors", name: "Cores", icon: "🎨" },
     { id: "seo", name: "SEO", icon: "🔍" },
     { id: "integrations", name: "Integrações", icon: "🔌" },
   ];
