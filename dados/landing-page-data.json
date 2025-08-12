@@ -36,6 +36,9 @@
     "formTitle": "Cadastre-se como Lojista!",
     "formSuccessTitle": "Formulário Enviado!",
     "formErrorTitle": "Ops! Algo deu errado",
+    "cnpjTypeLabel": "Tipo de Cadastro *",
+    "cnpjYesLabel": "Sou Lojista (Tenho CNPJ)",
+    "cnpjNoLabel": "Sou Consumidor Final",
     "submitButtonText": "Começar Agora!",
     "successMessage": "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
     "consumerMessage": {
