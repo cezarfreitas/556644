@@ -133,14 +133,22 @@ interface LandingPageData {
     };
   };
   colors: {
-    hero: string;
-    form: string;
-    gallery: string;
-    showroom: string;
-    testimonials: string;
-    history: string;
-    faq: string;
-    footer: string;
+    main: {
+      primary: string;
+      secondary: string;
+      tertiary: string;
+      quaternary: string;
+    };
+    sections: {
+      hero: string;
+      form: string;
+      gallery: string;
+      showroom: string;
+      testimonials: string;
+      history: string;
+      faq: string;
+      footer: string;
+    };
   };
 }
 
