@@ -1915,7 +1915,7 @@ export default function Index() {
                                 ? "border-green-500 shadow-green-500/20 shadow-lg"
                                 : "border-gray-300 hover:border-gray-400"
                           }`}
-                          placeholder="(11) 99999-9999"
+                          placeholder={landingData.form.whatsappPlaceholder}
                           maxLength={15}
                           onChange={handleWhatsAppChange}
                           onFocus={() =>
