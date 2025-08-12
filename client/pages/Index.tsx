@@ -2386,7 +2386,7 @@ export default function Index() {
               <div className="text-center">
                 <img
                   src="/images/gallery/onbongo-1.webp"
-                  alt="Showroom Onbongo - Espaço exclusivo para lojistas"
+                  alt={`Showroom ${landingData.showroom?.brandName} - Espaço exclusivo para lojistas`}
                   className="w-full max-w-lg aspect-square object-cover rounded-2xl shadow-xl mx-auto"
                   loading="lazy"
                 />
@@ -2596,7 +2596,7 @@ export default function Index() {
                     surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                    Com mais de três décadas de história, a Onbongo se
+                    Com mais de três d��cadas de história, a Onbongo se
                     reinventou a cada geração, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
                     muito além do surf - marcou presença no futebol
