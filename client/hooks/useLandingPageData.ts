@@ -161,6 +161,7 @@ interface LandingPageData {
 
 // Dados padrão - completamente vazios para não mostrar nada antes do JSON
 const defaultData: LandingPageData = {
+  brandName: "",
   hero: {
     logo: "",
     introText: "",
