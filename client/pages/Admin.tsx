@@ -366,10 +366,9 @@ const defaultData: LandingPageData = {
   },
   colors: {
     primary: "#e86001",
-    primaryDark: "#d35400",
-    primaryLight: "#f39c12",
     secondary: "#2c3e50",
-    accent: "#3498db",
+    tertiary: "#3498db",
+    quaternary: "#f39c12",
     background: "#ffffff",
     surface: "#f8f9fa",
     text: {
