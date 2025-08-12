@@ -467,7 +467,14 @@ export default function Admin() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch("/api/data");
+        // Use native fetch to avoid FullStory interference
+        const nativeFetch = window.fetch.bind(window);
+        const response = await nativeFetch("/api/data", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         if (response.ok) {
           const parsedData = await response.json();
 
