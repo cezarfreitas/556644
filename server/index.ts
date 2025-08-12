@@ -20,6 +20,15 @@ export function createServer() {
     express.static(path.join(process.cwd(), "public", "imagens")),
   );
 
+  // Health check endpoint
+  app.get("/health", (_req, res) => {
+    res.status(200).json({
+      status: "ok",
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime()
+    });
+  });
+
   // API routes
   app.get("/api/ping", (_req, res) => {
     const ping = process.env.PING_MESSAGE ?? "ping";
