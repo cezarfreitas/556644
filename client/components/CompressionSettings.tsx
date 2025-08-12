@@ -21,6 +21,7 @@ export default function CompressionSettingsComponent({
   onChange,
   isOpen,
   onToggle,
+  lastSaved,
 }: CompressionSettingsProps) {
   const updateSetting = (key: keyof CompressionSettings, value: number) => {
     onChange({
