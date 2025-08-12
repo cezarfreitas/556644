@@ -564,6 +564,7 @@ export default function Admin() {
               console.log("🗜️ Configurações de compressão carregadas:", savedCompressionSettings);
               setCompressionSettings(savedCompressionSettings);
             }
+            setCompressionSettingsLoaded(true);
           }
         } catch (error) {
           console.log("📝 Usando configurações de compressão padrão");
@@ -682,7 +683,7 @@ export default function Admin() {
           throw new Error("Erro ao resetar no servidor");
         }
       } catch (error) {
-        console.error("��� Erro ao resetar:", error);
+        console.error("❌ Erro ao resetar:", error);
         setMessage("❌ Erro ao resetar dados");
       }
       setTimeout(() => setMessage(""), 3000);
@@ -2793,7 +2794,7 @@ export default function Admin() {
                               description: e.target.value,
                             })
                           }
-                          placeholder="Descrição da página para resultados de busca (até 160 caracteres)"
+                          placeholder="Descriç��o da página para resultados de busca (até 160 caracteres)"
                           maxLength={160}
                           rows={3}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
