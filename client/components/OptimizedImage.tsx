@@ -83,8 +83,8 @@ export default function OptimizedImage({
         />
       )}
 
-      {/* Loading placeholder */}
-      {!blurDataURL && !isLoaded && !error && (
+      {/* Loading placeholder - hidden for priority images */}
+      {!blurDataURL && !priority && !isLoaded && !error && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse flex items-center justify-center">
           <div className="w-8 h-8 opacity-40">
             <svg
