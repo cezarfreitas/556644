@@ -2100,12 +2100,12 @@ export default function Index() {
                             </>
                           ) : showCouponMessage ? (
                             <>
-                              <FaGift className="w-5 h-5" />
+                              <span className="mr-2">🎁</span>
                               Receber Acesso Exclusivo
                             </>
                           ) : (
                             <>
-                              <FaRocket className="w-5 h-5" />
+                              <span className="mr-2">🚀</span>
                               {landingData.form.submitButtonText}
                             </>
                           )}
