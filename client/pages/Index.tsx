@@ -1157,7 +1157,7 @@ export default function Index() {
     }
   };
 
-  // Funç��es de validação
+  // Funções de validação
   const validateName = (name: string) => {
     if (!name.trim()) return "Nome é obrigatório";
     if (name.trim().length < 2) return "Nome deve ter pelo menos 2 caracteres";
@@ -2410,7 +2410,7 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 {landingData.testimonials?.title || "Depoimentos de Lojistas"}
-                <span className="block text-primary">{BRAND_NAME} Oficiais</span>
+                <span className="block text-primary">{landingData.testimonials?.subtitle || "Oficiais"}</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 {landingData.testimonials?.description || `Histórias reais de sucesso de parceiros que triplicaram o faturamento com a ${BRAND_NAME}`}
