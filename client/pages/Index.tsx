@@ -45,7 +45,7 @@ const FooterSection = lazy(
 );
 
 export default function Index() {
-  // Carregar dados editáveis do admin
+  // Carregar dados edit��veis do admin
   const { data: landingData, isLoading } = useLandingPageData();
 
   const [showCnpjField, setShowCnpjField] = useState(false);
@@ -514,7 +514,7 @@ export default function Index() {
               "Coleções Exclusivas Onbongo",
             );
             observer.unobserve(entry.target); // Track only once
-            console.log("✅ ViewContent da galeria disparado (só uma vez)");
+            console.log("�� ViewContent da galeria disparado (só uma vez)");
           }
         });
       },
@@ -1667,7 +1667,7 @@ export default function Index() {
 
   // Track CompleteRegistration event (Facebook Standard Event)
   const trackCompleteRegistration = (method: string = "form") => {
-    console.log("📱 Facebook Event: CompleteRegistration -", method);
+    console.log("���� Facebook Event: CompleteRegistration -", method);
 
     const eventData = {
       content_name: "Lojista Registration",
@@ -2843,7 +2843,7 @@ export default function Index() {
       <DynamicColors colors={landingData.colors} />
 
       {/* SEO Head */}
-      {!isLoading && <SEOHead seo={landingData.seo} />}
+      <SEOHead seo={landingData.seo} />
 
       {/* Tracking Scripts */}
       <TrackingScripts integrations={landingData.integrations} />
