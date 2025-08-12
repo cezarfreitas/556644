@@ -2660,10 +2660,11 @@ export default function Index() {
                     loading="lazy"
                   />
                   <div className="mt-8 space-y-3">
-                    <p className="text-gray-500 text-sm italic">
-                      "Onbongo – Sempre à Frente. Sempre no Jogo. Sempre na
-                      Onda."
-                    </p>
+                    {landingData.history?.quote && (
+                      <p className="text-gray-500 text-sm italic">
+                        "{landingData.history.quote}"
+                      </p>
+                    )}
                     <div className="w-16 h-0.5 bg-primary mx-auto"></div>
                   </div>
                 </div>
