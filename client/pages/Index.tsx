@@ -2239,7 +2239,7 @@ export default function Index() {
               <div className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <img
                   src="/images/gallery/onbongo-2.webp"
-                  alt="Estilo Urbano Onbongo"
+                  alt={`Estilo Urbano ${landingData.gallery?.brandName}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
