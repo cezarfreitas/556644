@@ -2065,8 +2065,7 @@ export default function Index() {
                             {landingData.form.consumerMessage.title}
                           </p>
                           <p className="text-gray-200">
-                            {landingData.form.consumerMessage.description ||
-                              "Mas não fique triste! Temos um cupom com"}{" "}
+                            {landingData.form.consumerMessage.description}{" "}
                             <span className="font-bold text-yellow-300">
                               {landingData.form.consumerMessage.discountText ||
                                 "10% de desconto"}
