@@ -194,7 +194,7 @@ const defaultData: LandingPageData = {
       {
         title: "Pronta Entrega",
         description:
-          "Mais de 100.000 peças disponíveis para envio imediato, garantindo giro r��pido e novidades constantes na sua loja.",
+          "Mais de 100.000 peças disponíveis para envio imediato, garantindo giro rápido e novidades constantes na sua loja.",
       },
       {
         title: "Plataforma Online",
@@ -528,7 +528,7 @@ export default function Admin() {
 
         // Carregar configurações de compressão
         try {
-          const compressionResponse = await fetch("/api/compression-settings");
+          const compressionResponse = await fetch("/api/data/compression-settings");
           if (compressionResponse.ok) {
             const savedCompressionSettings = await compressionResponse.json();
             if (savedCompressionSettings && Object.keys(savedCompressionSettings).length > 0) {
@@ -565,7 +565,7 @@ export default function Admin() {
       }
 
       // Salvar configurações de compressão separadamente
-      const compressionResponse = await fetch("/api/compression-settings", {
+      const compressionResponse = await fetch("/api/data/compression-settings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -623,7 +623,7 @@ export default function Admin() {
           }
         } catch (error) {
           console.error("❌ Erro:", error);
-          setMessage("�� Erro ao carregar arquivo JSON");
+          setMessage("❌ Erro ao carregar arquivo JSON");
         }
         setTimeout(() => setMessage(""), 3000);
       };
@@ -675,7 +675,7 @@ export default function Admin() {
     { id: "history", name: "História", icon: "📖" },
     { id: "faq", name: "FAQ", icon: "❓" },
     { id: "footer", name: "Rodapé", icon: "📍" },
-    { id: "colors", name: "Cores", icon: "🎨" },
+    { id: "colors", name: "Cores", icon: "���" },
     { id: "seo", name: "SEO", icon: "🔍" },
     { id: "integrations", name: "Integrações", icon: "🔌" },
   ];
