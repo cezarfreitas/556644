@@ -146,7 +146,7 @@ export const trackFormSubmission = (
   }
 
   // Meta Pixel conversion
-  if (integrations?.metaPixel?.pixelId && window.fbq) {
+  if (integrations?.metaPixel?.enabled && integrations?.metaPixel?.pixelId && window.fbq) {
     window.fbq("track", "Lead", {
       content_name: "Lojista Registration",
       content_category: "Lead Generation",
