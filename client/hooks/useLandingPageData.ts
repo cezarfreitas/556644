@@ -338,6 +338,7 @@ export const useLandingPageData = () => {
             },
           };
           console.log("📥 Dados carregados do servidor:", mergedData);
+          console.log("🔍 Dados SEO carregados:", mergedData.seo);
           setData(mergedData);
           setIsLoading(false);
         } else {
