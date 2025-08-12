@@ -2617,7 +2617,7 @@ export default function Index() {
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Com mais de três décadas de história, a Onbongo se
-                    reinventou a cada geração, mantendo-se sempre à frente em
+                    reinventou a cada geraç��o, mantendo-se sempre à frente em
                     estilo, inovação e conexão com o esporte. A ligação vai
                     muito além do surf - marcou presença no futebol
                     profissional, vestindo grandes nomes como Kaká, Roberto
@@ -2779,12 +2779,12 @@ export default function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-3 hover:opacity-80 transition-opacity duration-300"
-                    aria-label="Visite o site do HUB Multimarcas - Abre em nova aba"
-                    title="HUB Multimarcas"
+                    aria-label={`Visite o site ${landingData.footer.hubMultimarcas?.companyName || 'HUB'} - Abre em nova aba`}
+                    title={landingData.footer.hubMultimarcas?.companyName || 'HUB'}
                   >
                     <img
                       src={landingData.footer.hubMultimarcas?.logoUrl || ""}
-                      alt={landingData.footer.hubMultimarcas?.companyName || "Logo HUB"}
+                      alt={`Logo ${landingData.footer.hubMultimarcas?.companyName || 'HUB'}`}
                       className="h-12 w-auto"
                       loading="lazy"
                     />
@@ -2809,7 +2809,7 @@ export default function Index() {
                 </div>
                 {landingData.footer.developedBy?.name && (
                   <div className="text-gray-400 text-xs">
-                    {landingData.footer.developedBy.creditText || "Desenvolvido com"}{" "}
+                    {landingData.footer.developedBy.creditText || landingData.footer.developedBy.defaultCreditText || "Desenvolvido com"}{" "}
                     <span
                       className="text-red-500 inline-block"
                       style={{
@@ -2819,12 +2819,12 @@ export default function Index() {
                         display: "inline-block",
                         transition: "transform 0.2s ease-in-out",
                       }}
-                      title="Coração animado"
+                      title={landingData.footer.developedBy.heartTitle || "Coração"}
                       data-heart="true"
                     >
                       ❤️
                     </span>{" "}
-                    por{" "}
+                    {landingData.footer.developedBy.byText || "por"}{" "}
                     <a
                       href={landingData.footer.developedBy?.url || "#"}
                       target="_blank"
