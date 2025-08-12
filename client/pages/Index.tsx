@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { MdStar, MdAttachMoney } from "react-icons/md";
 import { useLandingPageData } from "../hooks/useLandingPageData";
-import TrackingScripts, {
-  trackFormSubmission,
-  submitToFormAPI,
-} from "../components/TrackingScripts";
+import TrackingScripts, { trackFormSubmission, submitToFormAPI } from "../components/TrackingScripts";
 import SEOHead from "../components/SEOHead";
+import DynamicColors from "../components/DynamicColors";
 import {
   FaFacebook,
   FaInstagram,
@@ -1110,7 +1108,7 @@ export default function Index() {
 
   const validateCNPJ = (cnpj: string) => {
     const numbers = cnpj.replace(/\D/g, "");
-    if (!numbers) return "CNPJ é obrigatório";
+    if (!numbers) return "CNPJ �� obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
     // Validação de CNPJ
@@ -1354,8 +1352,7 @@ export default function Index() {
     console.log("Payload sendo enviado:", payload);
 
     try {
-      const formApiEndpoint =
-        landingData.integrations?.formApi || API_FORM_ENDPOINT;
+      const formApiEndpoint = landingData.integrations?.formApi || API_FORM_ENDPOINT;
       console.log("Submitting form to:", formApiEndpoint);
 
       // Try using the new form API function first
@@ -1367,15 +1364,10 @@ export default function Index() {
 
         console.log("Form submitted successfully via new API");
         setSubmitStatus("success");
-        setSubmitMessage(
-          "✅ Dados enviados com sucesso! Em breve entraremos em contato.",
-        );
+        setSubmitMessage("✅ Dados enviados com sucesso! Em breve entraremos em contato.");
         return;
       } catch (apiError) {
-        console.log(
-          "New API failed, falling back to original method:",
-          apiError,
-        );
+        console.log("New API failed, falling back to original method:", apiError);
       }
 
       // Fallback to original FormData method
