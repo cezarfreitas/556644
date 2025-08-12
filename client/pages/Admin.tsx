@@ -364,6 +364,28 @@ const defaultData: LandingPageData = {
       contactPhone: "+55 11 99999-9999",
       contactEmail: "lojistas@onbongo.com.br"
     }
+  },
+  colors: {
+    primary: "#e86001",
+    primaryDark: "#d35400",
+    primaryLight: "#f39c12",
+    secondary: "#2c3e50",
+    accent: "#3498db",
+    background: "#ffffff",
+    surface: "#f8f9fa",
+    text: {
+      primary: "#2c3e50",
+      secondary: "#7f8c8d",
+      inverse: "#ffffff"
+    },
+    button: {
+      primary: "#e86001",
+      primaryHover: "#d35400",
+      secondary: "#6c757d",
+      secondaryHover: "#5a6268"
+    },
+    border: "#dee2e6",
+    overlay: "rgba(0, 0, 0, 0.5)"
   }
 };
 
