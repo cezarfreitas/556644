@@ -12,6 +12,13 @@ interface TestimonialsProps {
       text: string;
     }>;
   };
+  currentSlide?: number;
+  onNextSlide?: () => void;
+  onPrevSlide?: () => void;
+  onGoToSlide?: (index: number) => void;
+  onTouchStart?: (e: React.TouchEvent) => void;
+  onTouchMove?: (e: React.TouchEvent) => void;
+  onTouchEnd?: () => void;
 }
 
 function TestimonialsSection({ data }: TestimonialsProps) {
