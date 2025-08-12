@@ -1108,7 +1108,7 @@ export default function Index() {
 
   const validateCNPJ = (cnpj: string) => {
     const numbers = cnpj.replace(/\D/g, "");
-    if (!numbers) return "CNPJ �� obrigatório";
+    if (!numbers) return "CNPJ é obrigatório";
     if (numbers.length !== 14) return "CNPJ deve ter 14 dígitos";
 
     // Validação de CNPJ
@@ -2815,6 +2815,9 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Dynamic Colors */}
+      <DynamicColors colors={landingData.colors} />
 
       {/* SEO Head */}
       <SEOHead seo={landingData.seo} />
