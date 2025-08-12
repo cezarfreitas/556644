@@ -5,7 +5,7 @@
     "title": "SEJA UM LOJISTA OFICIAL ONBONGO",
     "subtitle": "Cadastre-se e tenha acesso a produtos exclusivos, preços especiais e coleções com o autêntico espírito urbano e esportivo da marca.",
     "ctaText": "Começar Agora",
-    "backgroundImage": "/images/hero/onbongo-background.webp"
+    "backgroundImage": ""
   },
   "form": {
     "sectionTitle": "SEJA UM LOJISTA OFICIAL ONBONGO AGORA MESMO",
@@ -28,24 +28,24 @@
       }
     ],
     "nameLabel": "Nome Completo",
-    "namePlaceholder": "Digite seu nome completo",
     "whatsappLabel": "WhatsApp para Contato",
-    "whatsappPlaceholder": "(11) 99999-9999",
     "cnpjLabel": "Agora precisamos do seu CNPJ",
-    "cnpjPlaceholder": "00.000.000/0000-00",
-    "formTitle": "Cadastre-se como Lojista!",
-    "formSuccessTitle": "Formulário Enviado!",
-    "formErrorTitle": "Ops! Algo deu errado",
-    "cnpjTypeLabel": "Tipo de Cadastro *",
-    "cnpjYesLabel": "Sou Lojista (Tenho CNPJ)",
-    "cnpjNoLabel": "Sou Consumidor Final",
     "submitButtonText": "Começar Agora!",
     "successMessage": "✅ Formulário enviado com sucesso! Fique atento, pois em breve nossa equipe vai te chamar no WhatsApp com todos os detalhes da parceria.",
     "consumerMessage": {
       "title": "Este cadastro é exclusivo para lojistas com CNPJ",
       "description": "Mas não fique triste! Temos um cupom com",
       "discountText": "10% de desconto"
-    }
+    },
+    "namePlaceholder": "Digite seu nome completo",
+    "whatsappPlaceholder": "(11) 99999-9999",
+    "cnpjPlaceholder": "00.000.000/0000-00",
+    "formTitle": "Cadastre-se como Lojista!",
+    "formSuccessTitle": "Formulário Enviado!",
+    "formErrorTitle": "Ops! Algo deu errado",
+    "cnpjTypeLabel": "Tipo de Cadastro *",
+    "cnpjYesLabel": "Sou Lojista (Tenho CNPJ)",
+    "cnpjNoLabel": "Sou Consumidor Final"
   },
   "gallery": {
     "title": "Coleções Exclusivas Onbongo",
@@ -182,7 +182,7 @@
     "keywords": "onbongo, lojista, revenda, streetwear, surfwear, atacado, moda urbana, franquia",
     "author": "Onbongo Brasil",
     "canonicalUrl": "https://onbongo.com.br/",
-    "favicon": "/favicon.ico",
+    "favicon": "",
     "appleTouchIcon": "/apple-touch-icon.png",
     "openGraph": {
       "title": "Seja um Lojista Oficial Onbongo | Streetwear Premium",
