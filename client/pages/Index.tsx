@@ -2592,7 +2592,7 @@ export default function Index() {
                 <div className="space-y-3 sm:space-y-6">
                   <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
                     {landingData.history?.title || "História da Marca"}
-                    <span className="block text-primary">{BRAND_NAME}</span>
+                    <span className="block text-primary">{landingData.brandName}</span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
                     {landingData.history?.paragraphs?.[0]?.split('.')[0] || 'Desde 1988, nossa marca é sinônimo de autenticidade e atitude'}
