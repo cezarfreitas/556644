@@ -457,7 +457,15 @@ export default function Admin() {
           },
           colors: {
             ...defaultData.colors,
-            ...parsedData.colors
+            ...parsedData.colors,
+            main: {
+              ...defaultData.colors.main,
+              ...parsedData.colors?.main
+            },
+            sections: {
+              ...defaultData.colors.sections,
+              ...parsedData.colors?.sections
+            }
           }
         };
         setData(mergedData);
