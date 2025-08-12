@@ -110,7 +110,7 @@ export default function Index() {
   });
 
   // Debug Meta API configuration
-  console.log("���� Meta API Debug:");
+  console.log("����� Meta API Debug:");
   console.log(
     "Raw VITE_META_ACCESS_TOKEN:",
     import.meta.env.VITE_META_ACCESS_TOKEN,
@@ -2370,7 +2370,7 @@ export default function Index() {
                 </p>
                 <div className="text-center lg:text-left">
                   <p className="text-gray-300 mb-4">
-                    Pronto para conhecer de perto a qualidade Onbongo?
+                    Pronto para conhecer de perto a qualidade {landingData.showroom?.brandName}?
                   </p>
                   <a
                     href="#cadastro-lojistas"
