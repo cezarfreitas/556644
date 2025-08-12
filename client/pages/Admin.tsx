@@ -518,11 +518,27 @@ export default function Admin() {
   }, []);
 
   // Salvar dados
-  const saveData = () => {
-    const jsonData = JSON.stringify(data, null, 2);
-    localStorage.setItem("landingPageData", jsonData);
-    console.log("📦 Dados salvos no localStorage:", jsonData);
-    setMessage("✅ Dados salvos com sucesso!");
+  const saveData = async () => {
+    try {
+      const response = await fetch("/api/data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("📦 Dados salvos no servidor:", result);
+        setMessage("✅ Dados salvos com sucesso no servidor!");
+      } else {
+        throw new Error("Erro ao salvar dados");
+      }
+    } catch (error) {
+      console.error("❌ Erro ao salvar:", error);
+      setMessage("❌ Erro ao salvar dados no servidor");
+    }
     setTimeout(() => setMessage(""), 3000);
   };
 
