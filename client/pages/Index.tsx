@@ -2354,10 +2354,7 @@ export default function Index() {
                 <span className="block text-primary">{BRAND_NAME} em SP</span>
               </h2>
               <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
-                Visite nosso showroom no coração de São Paulo e descubra
-                pessoalmente toda a coleção Onbongo. Um espaço moderno e
-                exclusivo para lojistas conhecerem de perto o que há de melhor
-                no streetwear brasileiro.
+                {landingData.showroom?.description || `Visite nosso showroom no coração de São Paulo e descubra pessoalmente toda a coleção ${BRAND_NAME}.`}
               </p>
             </div>
 
@@ -2599,7 +2596,7 @@ export default function Index() {
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
                     Desde 1988, a Onbongo é sinônimo de autenticidade e atitude
                     no surfwear e streetwear brasileiro. Nascida nas praias e
-                    nas ruas, a marca construiu uma trajetória s��lida vestindo
+                    nas ruas, a marca construiu uma trajetória s����lida vestindo
                     surfistas, skatistas e apaixonados pela cultura urbana.
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
