@@ -1986,7 +1986,7 @@ export default function Index() {
                               });
                           }}
                         />
-                        {/* Ícone de validaç��o */}
+                        {/* Ícone de validação */}
                         {formValues.whatsapp && (
                           <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                             {formErrors.whatsapp ? (
@@ -2769,7 +2769,7 @@ export default function Index() {
                 </p>
                 <div className="mt-4">
                   <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-xs">
-                    {landingData.footer.hubMultimarcas?.companyName || ""}
+                    {landingData.footer.hubMultimarcas?.companyName}
                   </span>
                 </div>
               </div>
