@@ -1734,7 +1734,7 @@ export default function Index() {
         <div className="absolute inset-0">
           <img
             src={landingData.hero.backgroundImage}
-            alt="Onbongo Surfwear Background"
+            alt={`${landingData.hero.title} Background`}
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
