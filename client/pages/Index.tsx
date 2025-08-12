@@ -573,7 +573,12 @@ export default function Index() {
       {/* Showroom Section */}
       <LazySection>
         <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse" />}>
-          <ShowroomSection data={landingData.showroom} />
+          <ShowroomSection data={landingData.showroom} onCtaClick={() => {
+            document.getElementById("formulario")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }} />
         </Suspense>
       </LazySection>
 
