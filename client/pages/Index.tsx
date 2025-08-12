@@ -99,7 +99,7 @@ export default function Index() {
     import.meta.env.VITE_WHATSAPP_URL || "https://onbongo.com.br";
 
   // Debug: Log environment variables and Meta API status
-  console.log("🔧 Environment Variables Debug:");
+  console.log("��� Environment Variables Debug:");
   console.log("VITE_FACEBOOK_URL:", import.meta.env.VITE_FACEBOOK_URL);
   console.log("VITE_INSTAGRAM_URL:", import.meta.env.VITE_INSTAGRAM_URL);
   console.log("VITE_WHATSAPP_URL:", import.meta.env.VITE_WHATSAPP_URL);
@@ -2618,10 +2618,12 @@ export default function Index() {
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-3 sm:space-y-6">
                   <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
-                    {landingData.history?.title || "História da Marca"}
-                    <span className="block text-primary">
-                      {landingData.brandName}
-                    </span>
+                    {landingData.history?.title}
+                    {landingData.history?.titleSuffix && (
+                      <span className="block text-primary">
+                        {landingData.history?.titleSuffix}
+                      </span>
+                    )}
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
                     {landingData.history?.paragraphs?.[0]?.split(".")[0] ||
