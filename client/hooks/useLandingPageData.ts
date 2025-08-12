@@ -276,6 +276,28 @@ const defaultData: LandingPageData = {
       contactEmail: "",
     },
   },
+  colors: {
+    primary: "",
+    primaryDark: "",
+    primaryLight: "",
+    secondary: "",
+    accent: "",
+    background: "",
+    surface: "",
+    text: {
+      primary: "",
+      secondary: "",
+      inverse: "",
+    },
+    button: {
+      primary: "",
+      primaryHover: "",
+      secondary: "",
+      secondaryHover: "",
+    },
+    border: "",
+    overlay: "",
+  },
 };
 
 export const useLandingPageData = () => {
