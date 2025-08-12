@@ -19,7 +19,7 @@ const generateBlurPlaceholder = (width: number = 40, height: number = 30) => {
   )}`;
 };
 
-function LazyGallery({ images, title, description }: LazyGalleryProps) {
+function LazyGallery({ images, title, description, ctaText, onCtaClick }: LazyGalleryProps) {
   if (!images?.length) return null;
 
   return (
