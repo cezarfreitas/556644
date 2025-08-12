@@ -2460,7 +2460,7 @@ export default function Index() {
                             >
                               <div className="space-y-6">
                                 <div className="flex items-center space-x-1 text-primary">
-                                  <span className="text-2xl">★★★★★</span>
+                                  <span className="text-2xl">★★★★��</span>
                                 </div>
                                 <blockquote className="text-lg text-gray-700 leading-relaxed italic group-hover:text-gray-900 transition-colors">
                                   "{testimonial.text}"
@@ -2651,66 +2651,19 @@ export default function Index() {
             </div>
 
             <div className="space-y-4">
-              {/* FAQ Item 1 */}
-              <details className="group bg-white rounded-lg shadow-md">
-                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Os produtos são oficiais da marca Onbongo?</span>
-                  <span className="transform group-open:rotate-180 transition-transform text-primary">
-                    ▼
-                  </span>
-                </summary>
-                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, os produtos são 100% oficiais da marca Onbongo. Quando
-                  você se torna um lojista oficial, você tem a garantia de estar
-                  adquirindo produtos autênticos e de qualidade da marca.
-                </div>
-              </details>
-
-              {/* FAQ Item 2 */}
-              <details className="group bg-white rounded-lg shadow-md">
-                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Posso visitar o showroom em São Paulo?</span>
-                  <span className="transform group-open:rotate-180 transition-transform text-primary">
-                    ▼
-                  </span>
-                </summary>
-                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, temos um showroom em São Paulo que está aberto para
-                  visitações. É uma ótima oportunidade para conhecer nossos
-                  produtos pessoalmente. Faça o cadastro e um representante
-                  entrará em contato para agendar sua visita.
-                </div>
-              </details>
-
-              {/* FAQ Item 3 */}
-              <details className="group bg-white rounded-lg shadow-md">
-                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Existe um valor de pedido mínimo?</span>
-                  <span className="transform group-open:rotate-180 transition-transform text-primary">
-                    <FaChevronDown className="w-5 h-5" />
-                  </span>
-                </summary>
-                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Sim, existe um valor de pedido mínimo para iniciar sua
-                  parceria como lojista oficial Onbongo. Os detalhes específicos
-                  sobre valores serão informados em nosso primeiro contato.
-                </div>
-              </details>
-
-              {/* FAQ Item 4 */}
-              <details className="group bg-white rounded-lg shadow-md">
-                <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                  <span>Quais as formas de pagamento?</span>
-                  <span className="transform group-open:rotate-180 transition-transform text-primary">
-                    ▼
-                  </span>
-                </summary>
-                <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                  Aceitamos pagamentos através do PIX e cartão de crédito
-                  parcelado. No momento, não aceitamos pagamentos via boleto
-                  bancário.
-                </div>
-              </details>
+              {landingData.faq?.items?.map((item, index) => (
+                <details key={index} className="group bg-white rounded-lg shadow-md">
+                  <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+                    <span>{item.question}</span>
+                    <span className="transform group-open:rotate-180 transition-transform text-primary">
+                      ▼
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                    {item.answer}
+                  </div>
+                </details>
+              ))}
             </div>
 
             {/* CTA após FAQ */}
