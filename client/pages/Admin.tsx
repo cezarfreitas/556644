@@ -611,7 +611,7 @@ export default function Admin() {
       }
 
       const result = await response.json();
-      console.log("📦 Dados salvos no servidor:", result);
+      console.log("��� Dados salvos no servidor:", result);
       setMessage("✅ Dados e configurações salvos com sucesso!");
     } catch (error) {
       console.error("❌ Erro ao salvar:", error);
@@ -3190,10 +3190,10 @@ export default function Admin() {
                           })
                         }
                         label="Logo da Organização"
-                        maxSizeMB={1}
-                        maxWidth={600}
-                        maxHeight={600}
-                        quality={0.9}
+                        maxSizeMB={compressionSettings.maxSizeMB}
+                        maxWidth={Math.min(compressionSettings.maxWidth, 600)}
+                        maxHeight={Math.min(compressionSettings.maxHeight, 600)}
+                        quality={compressionSettings.quality}
                       />
 
                       <div>
