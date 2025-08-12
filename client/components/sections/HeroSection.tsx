@@ -28,6 +28,27 @@ const heroBlurPlaceholder = `data:image/svg+xml;base64,${btoa(
 )}`;
 
 function HeroSection({ data, onCtaClick }: HeroSectionProps) {
+  // Preload critical images immediately
+  useEffect(() => {
+    if (data.backgroundImage) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = data.backgroundImage;
+      link.setAttribute('fetchpriority', 'high');
+      document.head.appendChild(link);
+    }
+
+    if (data.logo) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = data.logo;
+      link.setAttribute('fetchpriority', 'high');
+      document.head.appendChild(link);
+    }
+  }, [data.backgroundImage, data.logo]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
       {/* Background Image */}
