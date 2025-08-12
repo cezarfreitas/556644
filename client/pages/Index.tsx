@@ -2213,7 +2213,7 @@ export default function Index() {
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
                 {landingData.gallery?.title || "Coleções Exclusivas"}
-                <span className="block text-primary">{BRAND_NAME}</span>
+                <span className="block text-primary">{landingData.gallery?.brandName || BRAND_NAME}</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 {landingData.gallery?.description || `Descubra as coleções oficiais ${BRAND_NAME}, com design autêntico e qualidade premium.`}
