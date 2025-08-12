@@ -2655,7 +2655,7 @@ export default function Index() {
                 <div className="inline-block">
                   <img
                     src={landingData.history?.image}
-                    alt="Onbongo Surfwear - Autenticidade da Marca - Cultura Urbana e Esportiva"
+                    alt={landingData.history?.imageAlt || `História ${landingData.brandName}`}
                     className="w-full max-w-md rounded-xl shadow-2xl"
                     loading="lazy"
                   />
