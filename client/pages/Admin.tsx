@@ -1881,94 +1881,137 @@ export default function Admin() {
                         <div
                           className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
                           style={{
-                            backgroundColor: data.colors?.hero || "#ffffff",
-                            color: data.colors?.hero === "#ffffff" ? "#000" : "#fff"
+                            backgroundColor: data.colors?.main?.primary || "#e86001",
+                            color: "#fff"
+                          }}
+                        >
+                          Primária
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.main?.primary || "#e86001"}</p>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium text-white"
+                          style={{ backgroundColor: data.colors?.main?.secondary || "#2c3e50" }}
+                        >
+                          Secundária
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.main?.secondary || "#2c3e50"}</p>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium text-white"
+                          style={{ backgroundColor: data.colors?.main?.tertiary || "#3498db" }}
+                        >
+                          Terciária
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.main?.tertiary || "#3498db"}</p>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium text-white"
+                          style={{ backgroundColor: data.colors?.main?.quaternary || "#f39c12" }}
+                        >
+                          Quaternária
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.main?.quaternary || "#f39c12"}</p>
+                      </div>
+                    </div>
+
+                    <h4 className="text-md font-medium text-gray-900 mt-6 mb-4">Cores das Seções:</h4>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      <div className="text-center">
+                        <div
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          style={{
+                            backgroundColor: data.colors?.sections?.hero || "#ffffff",
+                            color: data.colors?.sections?.hero === "#ffffff" ? "#000" : "#fff"
                           }}
                         >
                           Hero
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.hero || "#ffffff"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.hero || "#ffffff"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium"
                           style={{
-                            backgroundColor: data.colors?.form || "#f8f9fa",
+                            backgroundColor: data.colors?.sections?.form || "#f8f9fa",
                             color: "#000"
                           }}
                         >
                           Form
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.form || "#f8f9fa"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.form || "#f8f9fa"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium"
                           style={{
-                            backgroundColor: data.colors?.gallery || "#ffffff",
-                            color: data.colors?.gallery === "#ffffff" ? "#000" : "#fff"
+                            backgroundColor: data.colors?.sections?.gallery || "#ffffff",
+                            color: data.colors?.sections?.gallery === "#ffffff" ? "#000" : "#fff"
                           }}
                         >
                           Gallery
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.gallery || "#ffffff"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.gallery || "#ffffff"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium"
                           style={{
-                            backgroundColor: data.colors?.showroom || "#f8f9fa",
+                            backgroundColor: data.colors?.sections?.showroom || "#f8f9fa",
                             color: "#000"
                           }}
                         >
                           Showroom
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.showroom || "#f8f9fa"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.showroom || "#f8f9fa"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium"
                           style={{
-                            backgroundColor: data.colors?.testimonials || "#ffffff",
-                            color: data.colors?.testimonials === "#ffffff" ? "#000" : "#fff"
+                            backgroundColor: data.colors?.sections?.testimonials || "#ffffff",
+                            color: data.colors?.sections?.testimonials === "#ffffff" ? "#000" : "#fff"
                           }}
                         >
                           Testimonials
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.testimonials || "#ffffff"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.testimonials || "#ffffff"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium"
                           style={{
-                            backgroundColor: data.colors?.history || "#f8f9fa",
+                            backgroundColor: data.colors?.sections?.history || "#f8f9fa",
                             color: "#000"
                           }}
                         >
                           History
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.history || "#f8f9fa"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.history || "#f8f9fa"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium"
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium"
                           style={{
-                            backgroundColor: data.colors?.faq || "#ffffff",
-                            color: data.colors?.faq === "#ffffff" ? "#000" : "#fff"
+                            backgroundColor: data.colors?.sections?.faq || "#ffffff",
+                            color: data.colors?.sections?.faq === "#ffffff" ? "#000" : "#fff"
                           }}
                         >
                           FAQ
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.faq || "#ffffff"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.faq || "#ffffff"}</p>
                       </div>
                       <div className="text-center">
                         <div
-                          className="w-full h-16 rounded-lg border flex items-center justify-center text-xs font-medium text-white"
-                          style={{ backgroundColor: data.colors?.footer || "#2c3e50" }}
+                          className="w-full h-12 rounded-lg border flex items-center justify-center text-xs font-medium text-white"
+                          style={{ backgroundColor: data.colors?.sections?.footer || "#2c3e50" }}
                         >
                           Footer
                         </div>
-                        <p className="text-xs text-gray-500 mt-1">{data.colors?.footer || "#2c3e50"}</p>
+                        <p className="text-xs text-gray-500 mt-1">{data.colors?.sections?.footer || "#2c3e50"}</p>
                       </div>
                     </div>
                   </div>
