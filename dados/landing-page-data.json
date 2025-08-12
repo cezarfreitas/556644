@@ -1,5 +1,4 @@
 {
-  "brandName": "Onbongo",
   "hero": {
     "logo": "/imagens/1754947410122_lm3k0sdyc9c.webp",
     "introText": "Revenda uma das maiores marcas de streetwear e lifestyle do Brasil.",
@@ -241,5 +240,6 @@
     "history": "#f8f9fa",
     "faq": "#ffffff",
     "footer": "#0080ff"
-  }
+  },
+  "brandName": "Onbongo"
 }
