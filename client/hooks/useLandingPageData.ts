@@ -26,7 +26,14 @@ interface LandingPageData {
       title: string;
       description: string;
       discountText: string;
+      discountSuffix?: string;
     };
+    requiredIndicator?: string;
+    submittingText?: string;
+    couponButtonIcon?: string;
+    couponButtonText?: string;
+    submitButtonIcon?: string;
+    backButtonText?: string;
   };
   gallery: {
     title: string;
