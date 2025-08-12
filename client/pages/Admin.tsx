@@ -587,7 +587,7 @@ export default function Admin() {
               Object.keys(savedCompressionSettings).length > 0
             ) {
               console.log(
-                "🗜️ Configurações de compressão carregadas:",
+                "🗜️ Configura��ões de compressão carregadas:",
                 savedCompressionSettings,
               );
               setCompressionSettings(savedCompressionSettings);
@@ -610,8 +610,11 @@ export default function Admin() {
   // Salvar dados
   const saveData = async () => {
     try {
+      // Use native fetch to avoid FullStory interference
+      const nativeFetch = window.fetch.bind(window);
+
       // Salvar dados da landing page
-      const response = await fetch("/api/data", {
+      const response = await nativeFetch("/api/data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -624,7 +627,7 @@ export default function Admin() {
       }
 
       // Salvar configurações de compressão separadamente
-      const compressionResponse = await fetch(
+      const compressionResponse = await nativeFetch(
         "/api/data/compression-settings",
         {
           method: "POST",
