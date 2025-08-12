@@ -2046,7 +2046,7 @@ export default function Index() {
                                   ? "border-green-500"
                                   : "border-gray-300"
                             }`}
-                            placeholder="00.000.000/0000-00"
+                            placeholder={landingData.form.cnpjPlaceholder}
                             maxLength={18}
                             onChange={handleCnpjChange}
                             onFocus={() =>
