@@ -1634,7 +1634,7 @@ export default function Index() {
   };
 
   // Track Lead event (Facebook Standard Event)
-  const trackLead = (contentName: string = `${BRAND_NAME} Registration`) => {
+  const trackLead = (contentName: string = `${landingData.brandName} Registration`) => {
     console.log("📱 Facebook Event: Lead -", contentName);
 
     const eventData = {
