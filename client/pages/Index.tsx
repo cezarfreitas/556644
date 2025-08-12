@@ -2328,7 +2328,7 @@ export default function Index() {
                 href="#cadastro-lojistas"
                 className="inline-block bg-primary hover:bg-onbongo-600 text-white px-10 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
-                Quero Ser Lojista Oficial
+                {landingData.gallery?.ctaText}
               </a>
             </div>
           </div>
