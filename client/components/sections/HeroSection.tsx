@@ -31,10 +31,24 @@ const heroBlurPlaceholder = `data:image/svg+xml;base64,${btoa(
   </svg>`,
 )}`;
 
-function HeroSection({ data, onCtaClick }: HeroSectionProps) {
+function HeroSection({ landingData, isLoading, onCtaClick }: HeroSectionProps) {
+  const data = landingData.hero;
+
+  // Early return if loading or no data
+  if (isLoading || !data) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-500 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Carregando...</p>
+        </div>
+      </div>
+    );
+  }
+
   // Preload critical images immediately
   useEffect(() => {
-    if (data.backgroundImage) {
+    if (data?.backgroundImage) {
       const link = document.createElement("link");
       link.rel = "preload";
       link.as = "image";
@@ -43,7 +57,7 @@ function HeroSection({ data, onCtaClick }: HeroSectionProps) {
       document.head.appendChild(link);
     }
 
-    if (data.logo) {
+    if (data?.logo) {
       const link = document.createElement("link");
       link.rel = "preload";
       link.as = "image";
@@ -51,7 +65,7 @@ function HeroSection({ data, onCtaClick }: HeroSectionProps) {
       link.setAttribute("fetchpriority", "high");
       document.head.appendChild(link);
     }
-  }, [data.backgroundImage, data.logo]);
+  }, [data?.backgroundImage, data?.logo]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
