@@ -514,7 +514,7 @@ export default function Index() {
               "Coleções Exclusivas Onbongo",
             );
             observer.unobserve(entry.target); // Track only once
-            console.log("✅ ViewContent da galeria disparado (só uma vez)");
+            console.log("�� ViewContent da galeria disparado (só uma vez)");
           }
         });
       },
@@ -2212,8 +2212,8 @@ export default function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-3 sm:space-y-6 mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900">
-                Coleções Exclusivas
-                <span className="block text-primary">Onbongo</span>
+                {landingData.gallery?.title || "Coleções Exclusivas"}
+                <span className="block text-primary">{BRAND_NAME}</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
                 Descubra as coleções oficiais Onbongo, com design autêntico e
