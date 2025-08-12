@@ -1335,7 +1335,7 @@ export default function Index() {
       cnpj: cnpjError,
     });
 
-    // Se houver erros, n��o enviar
+    // Se houver erros, n���o enviar
     if (nameError || whatsappError || cnpjError) {
       trackEvent("form_validation_error", {
         errors: {
@@ -1750,7 +1750,7 @@ export default function Index() {
           <div className="mb-6">
             <img
               src={landingData.hero.logo}
-              alt="Logo Onbongo"
+              alt={`Logo ${BRAND_NAME}`}
               className="h-20 w-auto mx-auto"
               loading="eager"
               fetchPriority="high"
@@ -1793,7 +1793,7 @@ export default function Index() {
               <div className="mb-8 flex justify-center">
                 <img
                   src={landingData.hero.logo}
-                  alt="Logo Onbongo"
+                  alt={`Logo ${BRAND_NAME}`}
                   className="h-20 lg:h-24 w-auto"
                   loading="eager"
                   fetchPriority="high"
