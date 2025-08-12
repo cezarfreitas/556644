@@ -1,0 +1,33 @@
+name: onbongo-landing
+type: docker
+
+build:
+  dockerfile: Dockerfile
+  context: .
+
+networking:
+  port: 80
+  
+volumes:
+  - name: dados
+    path: /app/dados
+  - name: imagens  
+    path: /app/public/imagens
+
+environment:
+  NODE_ENV: production
+  PORT: 80
+
+health_check:
+  path: /health
+  interval: 30
+  timeout: 10
+  retries: 3
+
+resources:
+  memory: 512MB
+  cpu: 0.5
+
+scaling:
+  min: 1
+  max: 3
