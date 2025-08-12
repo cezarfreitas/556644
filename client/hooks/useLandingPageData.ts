@@ -351,7 +351,15 @@ export const useLandingPageData = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch("/api/data");
+        // Use native fetch to avoid FullStory interference
+        const nativeFetch = window.fetch.bind(window);
+        const response = await nativeFetch("/api/data", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
         if (response.ok) {
           const parsedData = await response.json();
 
@@ -390,8 +398,56 @@ export const useLandingPageData = () => {
         }
       } catch (error) {
         console.error("❌ Erro ao carregar dados do servidor:", error);
-        setData(defaultData);
-        setIsLoading(false);
+
+        // Fallback: try XMLHttpRequest if fetch fails due to third-party interference
+        try {
+          const xhr = new XMLHttpRequest();
+          xhr.open("GET", "/api/data", true);
+          xhr.setRequestHeader("Content-Type", "application/json");
+
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              try {
+                const parsedData = JSON.parse(xhr.responseText);
+                const mergedData = {
+                  ...defaultData,
+                  ...parsedData,
+                  form: {
+                    ...defaultData.form,
+                    ...parsedData.form,
+                    consumerMessage: {
+                      ...defaultData.form.consumerMessage,
+                      ...parsedData.form?.consumerMessage,
+                    },
+                  },
+                };
+                console.log("📥 Dados carregados via XHR fallback:", mergedData);
+                setData(mergedData);
+                setIsLoading(false);
+              } catch (parseError) {
+                console.error("❌ Erro ao parsear dados do XHR:", parseError);
+                setData(defaultData);
+                setIsLoading(false);
+              }
+            } else {
+              console.log("📁 XHR falhou, usando dados padrão");
+              setData(defaultData);
+              setIsLoading(false);
+            }
+          };
+
+          xhr.onerror = function() {
+            console.log("📁 XHR error, usando dados padrão");
+            setData(defaultData);
+            setIsLoading(false);
+          };
+
+          xhr.send();
+        } catch (xhrError) {
+          console.error("❌ Fallback XHR também falhou:", xhrError);
+          setData(defaultData);
+          setIsLoading(false);
+        }
       }
     };
 
