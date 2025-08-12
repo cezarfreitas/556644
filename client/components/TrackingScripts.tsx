@@ -137,7 +137,7 @@ export const trackFormSubmission = (
   formData: any,
 ) => {
   // Google Analytics conversion
-  if (integrations?.googleAnalytics?.measurementId && window.gtag) {
+  if (integrations?.googleAnalytics?.enabled && integrations?.googleAnalytics?.measurementId && window.gtag) {
     window.gtag("event", "generate_lead", {
       event_category: "Form",
       event_label: "Lojista Registration",
