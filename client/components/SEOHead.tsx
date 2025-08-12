@@ -161,6 +161,14 @@ export default function SEOHead({ seo }: SEOHeadProps) {
     updateMetaTag("apple-mobile-web-app-capable", "yes");
     updateMetaTag("apple-mobile-web-app-status-bar-style", "default");
     updateMetaTag("apple-mobile-web-app-title", seo.title);
+
+    // Final verification
+    console.log("✅ SEO tags aplicados:");
+    console.log("   Title atual:", document.title);
+    console.log("   Meta description:", document.querySelector('meta[name="description"]')?.getAttribute('content'));
+    console.log("   Meta keywords:", document.querySelector('meta[name="keywords"]')?.getAttribute('content'));
+    console.log("   OG title:", document.querySelector('meta[property="og:title"]')?.getAttribute('content'));
+    console.log("   Total meta tags:", document.querySelectorAll('meta').length);
   }, [seo]);
 
   return null; // This component doesn't render anything
