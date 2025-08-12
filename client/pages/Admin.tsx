@@ -362,14 +362,22 @@ const defaultData: LandingPageData = {
     }
   },
   colors: {
-    hero: "#ffffff",
-    form: "#f8f9fa",
-    gallery: "#ffffff",
-    showroom: "#f8f9fa",
-    testimonials: "#ffffff",
-    history: "#f8f9fa",
-    faq: "#ffffff",
-    footer: "#2c3e50"
+    main: {
+      primary: "#e86001",
+      secondary: "#2c3e50",
+      tertiary: "#3498db",
+      quaternary: "#f39c12"
+    },
+    sections: {
+      hero: "#ffffff",
+      form: "#f8f9fa",
+      gallery: "#ffffff",
+      showroom: "#f8f9fa",
+      testimonials: "#ffffff",
+      history: "#f8f9fa",
+      faq: "#ffffff",
+      footer: "#2c3e50"
+    }
   }
 };
 
