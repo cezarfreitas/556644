@@ -3358,6 +3358,39 @@ export default function Admin() {
                     <h3 className="text-lg font-medium text-gray-900 mb-4">
                       ��� Google Analytics 4
                     </h3>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm text-gray-600">Ativar integração</span>
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={data.integrations?.googleAnalytics?.enabled || false}
+                          onChange={(e) =>
+                            updateSection("integrations", {
+                              ...data.integrations,
+                              googleAnalytics: {
+                                ...data.integrations?.googleAnalytics,
+                                enabled: e.target.checked,
+                              },
+                            })
+                          }
+                          className="sr-only"
+                        />
+                        <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                          data.integrations?.googleAnalytics?.enabled
+                            ? 'bg-primary'
+                            : 'bg-gray-200'
+                        }`}>
+                          <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                            data.integrations?.googleAnalytics?.enabled
+                              ? 'translate-x-6'
+                              : 'translate-x-1'
+                          }`} />
+                        </div>
+                        <span className="ml-2 text-sm text-gray-600">
+                          {data.integrations?.googleAnalytics?.enabled ? 'Ativo' : 'Inativo'}
+                        </span>
+                      </label>
+                    </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Measurement ID (GA4)
