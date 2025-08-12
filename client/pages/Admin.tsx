@@ -437,6 +437,14 @@ export default function Admin() {
         const mergedData = {
           ...defaultData,
           ...parsedData,
+          form: {
+            ...defaultData.form,
+            ...parsedData.form,
+            consumerMessage: {
+              ...defaultData.form.consumerMessage,
+              ...parsedData.form?.consumerMessage,
+            },
+          },
           footer: {
             ...defaultData.footer,
             ...parsedData.footer,
@@ -857,7 +865,7 @@ export default function Admin() {
                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                           />
                           <textarea
-                            placeholder="Descri��ão do benefício"
+                            placeholder="Descri����o do benefício"
                             value={benefit.description}
                             onChange={(e) => {
                               const newBenefits = [...data.form.benefits];
@@ -1532,7 +1540,7 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Título
+                      T��tulo
                     </label>
                     <input
                       type="text"
@@ -3166,7 +3174,7 @@ export default function Admin() {
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
                     <h2 className="text-xl font-semibold text-gray-900">
-                      Configurações de Integrações
+                      Configura��ões de Integrações
                     </h2>
                     <div className="flex items-center space-x-2 text-sm text-green-600 bg-green-50 px-3 py-1 rounded-full">
                       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -3445,7 +3453,7 @@ export default function Admin() {
                         do formulário serão enviados
                       </li>
                       <li>
-                        • <strong>Google Analytics:</strong> Para rastreamento
+                        �� <strong>Google Analytics:</strong> Para rastreamento
                         de tráfego e conversões
                       </li>
                       <li>
