@@ -1061,18 +1061,19 @@ export default function Index() {
         }
       }
     } catch (error) {
-      console.error("❌ Meta Conversion API: Network error", error);
+      console.warn("❌ Meta Conversion API: Error occurred (this won't affect user experience)");
+      console.warn("Error message:", error?.message || "Unknown error");
 
-      // Enhanced error logging for debugging
-      console.error("Meta API Error Details:", {
-        message: error?.message,
-        name: error?.name,
-        stack: error?.stack?.substring(0, 200),
-        eventName: standardEventName,
-        pixelId: META_PIXEL_ID,
-        tokenLength: META_ACCESS_TOKEN?.length || 0,
-        apiVersion: META_API_VERSION,
-      });
+      // Don't log sensitive details in production, just basic info
+      if (process.env.NODE_ENV === 'development') {
+        console.error("Meta API Error Details:", {
+          message: error?.message,
+          name: error?.name,
+          eventName: standardEventName,
+          pixelId: META_PIXEL_ID ? "Present" : "Missing",
+          tokenLength: META_ACCESS_TOKEN?.length || 0,
+        });
+      }
 
       // Push detailed network error to GTM if available
       if (window.dataLayer) {
