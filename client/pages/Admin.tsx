@@ -544,14 +544,11 @@ export default function Admin() {
 
   // Download JSON
   const downloadJSON = () => {
-    const dataStr = JSON.stringify(data, null, 2);
-    const dataBlob = new Blob([dataStr], { type: "application/json" });
-    const url = URL.createObjectURL(dataBlob);
+    // Download direto do servidor
     const link = document.createElement("a");
-    link.href = url;
+    link.href = "/api/data/download";
     link.download = "landing-page-data.json";
     link.click();
-    URL.revokeObjectURL(url);
   };
 
   // Upload JSON
@@ -3463,7 +3460,7 @@ export default function Admin() {
                   {/* Instructions */}
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h4 className="text-sm font-medium text-blue-900 mb-2">
-                      💡 Instruções
+                      💡 Instru��ões
                     </h4>
                     <ul className="text-sm text-blue-700 space-y-1">
                       <li>
