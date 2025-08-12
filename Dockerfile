@@ -1,8 +1,8 @@
-# Single stage build - mais simples e confiável
+# Optimized for EasyPanel deployment
 FROM node:18-alpine
 
-# Install wget for healthcheck
-RUN apk add --no-cache wget
+# Install system dependencies
+RUN apk add --no-cache wget dumb-init
 
 # Set working directory
 WORKDIR /app
