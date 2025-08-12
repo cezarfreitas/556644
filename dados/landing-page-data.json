@@ -166,7 +166,8 @@
   "integrations": {
     "formApi": "https://api.idenegociosdigitais.com.br/webhook/ntk-leads",
     "googleAnalytics": {
-      "measurementId": "G-GSDX6XV3V6"
+      "measurementId": "G-GSDX6XV3V6",
+      "enabled": true
     },
     "metaPixel": {
       "pixelId": "1052506589717984",
@@ -178,7 +179,7 @@
     },
     "googleTagManager": {
       "containerId": "",
-      "enabled": true
+      "enabled": false
     },
     "googleAds": {
       "conversionId": "",
