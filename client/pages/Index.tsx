@@ -126,8 +126,7 @@ export default function Index() {
   console.log("META_API_VERSION:", META_API_VERSION);
   console.log("META_TEST_EVENT_CODE:", META_TEST_EVENT_CODE);
 
-  // Brand and Company Configuration
-  const BRAND_NAME = import.meta.env.VITE_BRAND_NAME || "Onbongo";
+  // Company Configuration (brand name now comes from landing data)
   const COMPANY_NAME =
     import.meta.env.VITE_COMPANY_NAME || "IDE | Negócios digitais";
   const COMPANY_URL =
