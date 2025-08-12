@@ -2,7 +2,7 @@ import { memo } from "react";
 import OptimizedImage from "../OptimizedImage";
 
 interface HistoryProps {
-  data: {
+  data?: {
     title: string;
     paragraphs: string[];
     image: string;
@@ -11,6 +11,19 @@ interface HistoryProps {
 }
 
 function HistorySection({ data }: HistoryProps) {
+  if (!data) {
+    return (
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-orange-500 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Carregando história...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
