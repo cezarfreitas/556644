@@ -533,7 +533,7 @@ export default function Admin() {
           if (compressionResponse.ok) {
             const savedCompressionSettings = await compressionResponse.json();
             if (savedCompressionSettings && Object.keys(savedCompressionSettings).length > 0) {
-              console.log("🗜�� Configurações de compressão carregadas:", savedCompressionSettings);
+              console.log("🗜️ Configurações de compressão carregadas:", savedCompressionSettings);
               setCompressionSettings(savedCompressionSettings);
             }
           }
@@ -576,6 +576,8 @@ export default function Admin() {
 
       if (!compressionResponse.ok) {
         console.warn("⚠️ Não foi possível salvar as configurações de compressão, mas os dados da landing page foram salvos");
+      } else {
+        setCompressionLastSaved(new Date());
       }
 
       const result = await response.json();
@@ -678,7 +680,7 @@ export default function Admin() {
     { id: "footer", name: "Rodapé", icon: "📍" },
     { id: "colors", name: "Cores", icon: "🎨" },
     { id: "seo", name: "SEO", icon: "🔍" },
-    { id: "integrations", name: "Integrações", icon: "🔌" },
+    { id: "integrations", name: "Integrações", icon: "��" },
   ];
 
   return (
