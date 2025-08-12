@@ -1,31 +1,48 @@
-version: "3.8"
+version: '3.8'
 
 services:
   onbongo-landing:
     build:
       context: .
-      dockerfile: Dockerfile.safe
+      dockerfile: Dockerfile
       args:
-        VITE_api_form: https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads
+        - VITE_api_form=https://api.idenegociosdigitais.com.br/webhook/ntk-leads
+        - VITE_GA4_MEASUREMENT_ID=G-GSDX6XV3V6
+        - VITE_META_PIXEL_ID=1052506589717984
+        - VITE_META_CONVERSION_NAME=Lead_Onbongo
+        - VITE_META_API_VERSION=v18.0
+        - VITE_META_TEST_EVENT_CODE=TEST48830
+        - VITE_GTM_ID=GTM-XXXXXXX
+        - VITE_BRAND_NAME=Onbongo
+        - VITE_COMPANY_NAME="IDE | Negócios digitais"
+        - VITE_PAGE_TITLE="Seja Lojista Oficial Onbongo"
     ports:
       - "80:80"
     environment:
       - NODE_ENV=production
       - PORT=80
+    volumes:
+      - ./dados:/app/dados
+      - ./public/imagens:/app/public/imagens
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
-  # Para desenvolvimento - descomente se necessário
-  # onbongo-landing-dev:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #     target: builder
-  #   ports:
-  #     - "8080:8080"
-  #   environment:
-  #     - NODE_ENV=development
-  #     - VITE_api_form=https://470187c48f0a4640803d23a0491ae11b-a421d35e00a9431bb90c3d034.fly.dev/api/leads
-  #   volumes:
-  #     - .:/app
-  #     - /app/node_modules
-  #   command: npm run dev
+# Para testing local, descomente as linhas abaixo:
+# networks:
+#   default:
+#     name: onbongo-network
+
+# Para adicionar um proxy reverso (opcional):
+# nginx:
+#   image: nginx:alpine
+#   ports:
+#     - "443:443"
+#   volumes:
+#     - ./nginx.conf:/etc/nginx/nginx.conf
+#   depends_on:
+#     - onbongo-landing
