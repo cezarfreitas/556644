@@ -2,7 +2,7 @@ import { memo } from "react";
 import OptimizedImage from "../OptimizedImage";
 
 interface ShowroomProps {
-  data: {
+  data?: {
     title: string;
     location: string;
     description: string;
@@ -11,7 +11,7 @@ interface ShowroomProps {
     image: string;
     ctaText: string;
   };
-  onCtaClick: () => void;
+  onCtaClick?: () => void;
 }
 
 function ShowroomSection({ data, onCtaClick }: ShowroomProps) {
