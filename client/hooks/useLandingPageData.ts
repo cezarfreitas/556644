@@ -20,6 +20,12 @@ interface LandingPageData {
     whatsappLabel: string;
     cnpjLabel: string;
     submitButtonText: string;
+    successMessage: string;
+    consumerMessage: {
+      title: string;
+      description: string;
+      discountText: string;
+    };
   };
   gallery: {
     title: string;
@@ -169,6 +175,12 @@ const defaultData: LandingPageData = {
     whatsappLabel: "",
     cnpjLabel: "",
     submitButtonText: "",
+    successMessage: "",
+    consumerMessage: {
+      title: "",
+      description: "",
+      discountText: "",
+    },
   },
   gallery: {
     title: "",
