@@ -68,7 +68,7 @@ export default function Index() {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
-  // Funç��o auxiliar para pegar cookies (movida para cima para disponibilidade)
+  // Fun����o auxiliar para pegar cookies (movida para cima para disponibilidade)
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
@@ -2669,13 +2669,13 @@ export default function Index() {
             {/* CTA após FAQ */}
             <div className="text-center mt-12">
               <p className="text-gray-600 mb-6">
-                Ainda tem dúvidas? Entre em contato conosco!
+                {landingData.faq?.ctaMessage}
               </p>
               <a
                 href="#cadastro-lojistas"
                 className="inline-block bg-primary hover:bg-onbongo-600 text-white px-8 py-3 rounded-lg font-bold text-lg transition-colors duration-300"
               >
-                Quero Ser Lojista
+                {landingData.faq?.ctaText}
               </a>
             </div>
           </div>
