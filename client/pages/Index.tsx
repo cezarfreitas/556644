@@ -2413,7 +2413,7 @@ export default function Index() {
                 <span className="block text-primary">{landingData.testimonials?.subtitle || "Oficiais"}</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-xl max-w-2xl mx-auto px-3">
-                {landingData.testimonials?.description || `Histórias reais de sucesso de parceiros que triplicaram o faturamento com a ${BRAND_NAME}`}
+                {landingData.testimonials?.description}
               </p>
             </div>
 
