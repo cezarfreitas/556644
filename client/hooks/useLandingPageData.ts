@@ -41,6 +41,12 @@ interface LandingPageData {
     experienceDescription: string;
     image: string;
     ctaText: string;
+    locationIcon?: string;
+    titleSuffix?: string;
+    ctaQuestion?: string;
+    imageUrl?: string;
+    imageAlt?: string;
+    imageCaption?: string;
   };
   testimonials: {
     title: string;
