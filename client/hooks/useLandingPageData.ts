@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 // Mesma interface da página Admin
 interface LandingPageData {
+  brandName: string;
   hero: {
     logo: string;
     introText: string;
