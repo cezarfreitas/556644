@@ -19,7 +19,10 @@ export default function TrackingScripts({
 }: TrackingScriptsProps) {
   useEffect(() => {
     // Google Analytics 4
-    if (integrations?.googleAnalytics?.enabled && integrations?.googleAnalytics?.measurementId) {
+    if (
+      integrations?.googleAnalytics?.enabled &&
+      integrations?.googleAnalytics?.measurementId
+    ) {
       const measurementId = integrations.googleAnalytics.measurementId;
 
       // Remove existing GA script if any
@@ -137,7 +140,11 @@ export const trackFormSubmission = (
   formData: any,
 ) => {
   // Google Analytics conversion
-  if (integrations?.googleAnalytics?.enabled && integrations?.googleAnalytics?.measurementId && window.gtag) {
+  if (
+    integrations?.googleAnalytics?.enabled &&
+    integrations?.googleAnalytics?.measurementId &&
+    window.gtag
+  ) {
     window.gtag("event", "generate_lead", {
       event_category: "Form",
       event_label: "Lojista Registration",
@@ -146,7 +153,11 @@ export const trackFormSubmission = (
   }
 
   // Meta Pixel conversion
-  if (integrations?.metaPixel?.enabled && integrations?.metaPixel?.pixelId && window.fbq) {
+  if (
+    integrations?.metaPixel?.enabled &&
+    integrations?.metaPixel?.pixelId &&
+    window.fbq
+  ) {
     window.fbq("track", "Lead", {
       content_name: "Lojista Registration",
       content_category: "Lead Generation",
@@ -177,7 +188,11 @@ export const trackFormSubmission = (
   }
 
   // Google Tag Manager event
-  if (integrations?.googleTagManager?.enabled && integrations?.googleTagManager?.containerId && window.dataLayer) {
+  if (
+    integrations?.googleTagManager?.enabled &&
+    integrations?.googleTagManager?.containerId &&
+    window.dataLayer
+  ) {
     window.dataLayer.push({
       event: "form_submission",
       form_type: "lojista_registration",
