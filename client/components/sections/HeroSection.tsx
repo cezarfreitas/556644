@@ -1,6 +1,7 @@
 import { memo, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import OptimizedImage from "../OptimizedImage";
+import IconLoader from "../IconLoader";
 
 interface HeroSectionProps {
   data: {
