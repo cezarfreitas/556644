@@ -2596,7 +2596,7 @@ export default function Index() {
                     <span className="block text-primary">{BRAND_NAME}</span>
                   </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-                    Desde 1988, a Onbongo é sinônimo de autenticidade e atitude
+                    {landingData.history?.paragraphs?.[0]?.split('.')[0] || 'Desde 1988, nossa marca é sinônimo de autenticidade e atitude'}
                     no surfwear e streetwear brasileiro. Nascida nas praias e
                     nas ruas, a marca construiu uma trajetória s��lida vestindo
                     surfistas, skatistas e apaixonados pela cultura urbana.
