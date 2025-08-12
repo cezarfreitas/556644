@@ -148,10 +148,9 @@ interface LandingPageData {
   };
   colors: {
     primary: string;
-    primaryDark: string;
-    primaryLight: string;
     secondary: string;
-    accent: string;
+    tertiary: string;
+    quaternary: string;
     background: string;
     surface: string;
     text: {
