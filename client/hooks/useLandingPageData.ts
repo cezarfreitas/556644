@@ -279,9 +279,11 @@ const defaultData: LandingPageData = {
   integrations: {
     formApi: "",
     googleAnalytics: {
+      enabled: false,
       measurementId: "",
     },
     metaPixel: {
+      enabled: false,
       pixelId: "",
       conversionName: "",
       apiVersion: "",
@@ -289,9 +291,11 @@ const defaultData: LandingPageData = {
       accessToken: "",
     },
     googleTagManager: {
+      enabled: false,
       containerId: "",
     },
     googleAds: {
+      enabled: false,
       conversionId: "",
       conversionLabel: "",
     },
