@@ -113,7 +113,7 @@ function FormSection({
                     htmlFor="name"
                     className="block text-sm font-medium mb-2"
                   >
-                    {data.nameLabel}
+                    {data.nameLabel || "Nome Completo"}
                   </label>
                   <input
                     type="text"
@@ -139,7 +139,7 @@ function FormSection({
                     htmlFor="whatsapp"
                     className="block text-sm font-medium mb-2"
                   >
-                    {data.whatsappLabel}
+                    {data.whatsappLabel || "WhatsApp para Contato"}
                   </label>
                   <input
                     type="tel"
@@ -199,7 +199,7 @@ function FormSection({
                       htmlFor="cnpj-number"
                       className="block text-sm font-medium mb-2"
                     >
-                      {data.cnpjLabel}
+                      {data.cnpjLabel || "CNPJ"}
                     </label>
                     <input
                       type="text"
@@ -224,12 +224,12 @@ function FormSection({
                 {showCouponMessage && (
                   <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 animate-slide-up">
                     <h4 className="font-bold text-orange-800 mb-2">
-                      {data.consumerMessage.title}
+                      {data.consumerMessage?.title || "Cadastro exclusivo para lojistas"}
                     </h4>
                     <p className="text-orange-700">
-                      {data.consumerMessage.description}{" "}
+                      {data.consumerMessage?.description || "Mas não fique triste! Temos um cupom com"}{" "}
                       <span className="font-bold text-orange-800">
-                        {data.consumerMessage.discountText}
+                        {data.consumerMessage?.discountText || "10% de desconto"}
                       </span>
                     </p>
                   </div>
@@ -241,7 +241,7 @@ function FormSection({
                   disabled={isSubmitting}
                   className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300"
                 >
-                  {isSubmitting ? "Enviando..." : data.submitButtonText}
+                  {isSubmitting ? "Enviando..." : (data.submitButtonText || "Começar Agora!")}
                 </button>
 
                 {/* Status Message */}
