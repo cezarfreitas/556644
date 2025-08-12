@@ -6,7 +6,11 @@ interface IconLoaderProps {
   className?: string;
 }
 
-export default function IconLoader({ children, fallback, className }: IconLoaderProps) {
+export default function IconLoader({
+  children,
+  fallback,
+  className,
+}: IconLoaderProps) {
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {

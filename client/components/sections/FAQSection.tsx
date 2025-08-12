@@ -30,7 +30,9 @@ function FAQSection({ data }: FAQProps) {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">{data.title}</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              {data.title}
+            </h2>
             <p className="text-xl text-gray-600">{data.description}</p>
           </div>
 
@@ -41,17 +43,21 @@ function FAQSection({ data }: FAQProps) {
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <span className="font-semibold text-gray-900">{item.question}</span>
+                  <span className="font-semibold text-gray-900">
+                    {item.question}
+                  </span>
                   {openItems.has(index) ? (
                     <FaChevronUp className="text-orange-600" />
                   ) : (
                     <FaChevronDown className="text-gray-400" />
                   )}
                 </button>
-                
+
                 {openItems.has(index) && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-700 leading-relaxed">{item.answer}</p>
+                    <p className="text-gray-700 leading-relaxed">
+                      {item.answer}
+                    </p>
                   </div>
                 )}
               </div>

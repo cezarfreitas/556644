@@ -13,7 +13,7 @@ const generateBlurPlaceholder = (width: number = 40, height: number = 30) => {
     `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
       <rect width="100%" height="100%" fill="#f3f4f6"/>
       <rect width="60%" height="20%" x="20%" y="40%" fill="#e5e7eb" rx="2"/>
-    </svg>`
+    </svg>`,
   )}`;
 };
 
@@ -25,7 +25,9 @@ function LazyGallery({ images, title, description }: LazyGalleryProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">{title}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {description}
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">

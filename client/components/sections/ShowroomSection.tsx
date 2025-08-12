@@ -21,12 +21,18 @@ function ShowroomSection({ data, onCtaClick }: ShowroomProps) {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">{data.title}</h2>
-              <p className="text-orange-600 font-semibold mb-6">{data.location}</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                {data.title}
+              </h2>
+              <p className="text-orange-600 font-semibold mb-6">
+                {data.location}
+              </p>
               <p className="text-lg text-gray-700 mb-8">{data.description}</p>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{data.experienceTitle}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {data.experienceTitle}
+                </h3>
                 <p className="text-gray-700">{data.experienceDescription}</p>
               </div>
 

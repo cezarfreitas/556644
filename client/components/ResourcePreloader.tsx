@@ -5,7 +5,10 @@ interface ResourcePreloaderProps {
   logo?: string;
 }
 
-export default function ResourcePreloader({ heroImage, logo }: ResourcePreloaderProps) {
+export default function ResourcePreloader({
+  heroImage,
+  logo,
+}: ResourcePreloaderProps) {
   useEffect(() => {
     // Preload critical images
     const preloadImage = (src: string, priority: "high" | "low" = "high") => {
@@ -41,8 +44,9 @@ export default function ResourcePreloader({ heroImage, logo }: ResourcePreloader
     };
 
     // Preload Inter font (if using Google Fonts)
-    preloadFont("https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2");
-
+    preloadFont(
+      "https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2",
+    );
   }, [heroImage, logo]);
 
   return null; // This component doesn't render anything

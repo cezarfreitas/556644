@@ -15,16 +15,21 @@ function HistorySection({ data }: HistoryProps) {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">{data.title}</h2>
-          
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
+            {data.title}
+          </h2>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               {data.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed">
+                <p
+                  key={index}
+                  className="text-lg text-gray-700 leading-relaxed"
+                >
                   {paragraph}
                 </p>
               ))}
-              
+
               {data.quote && (
                 <blockquote className="text-xl font-bold text-orange-600 italic border-l-4 border-orange-600 pl-6 mt-8">
                   {data.quote}

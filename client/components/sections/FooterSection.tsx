@@ -41,7 +41,7 @@ function FooterSection({ data }: FooterProps) {
                 height={48}
               />
               <p className="text-gray-300 mb-6">{data.description}</p>
-              
+
               <div className="flex space-x-4">
                 <a
                   href={data.socialLinks.facebook}
@@ -73,7 +73,9 @@ function FooterSection({ data }: FooterProps) {
                   height={64}
                 />
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{data.hubMultimarcas.companyName}</h3>
+                  <h3 className="text-xl font-bold mb-2">
+                    {data.hubMultimarcas.companyName}
+                  </h3>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {data.hubMultimarcas.description}
                   </p>

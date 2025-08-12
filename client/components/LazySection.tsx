@@ -31,7 +31,7 @@ export default function LazySection({
       {
         rootMargin,
         threshold,
-      }
+      },
     );
 
     if (sectionRef.current) {
@@ -47,7 +47,7 @@ export default function LazySection({
 
   return (
     <div ref={sectionRef} className={className}>
-      {isVisible ? children : (fallback || <div className="h-96 bg-gray-50" />)}
+      {isVisible ? children : fallback || <div className="h-96 bg-gray-50" />}
     </div>
   );
 }

@@ -25,27 +25,27 @@ const heroBlurPlaceholder = `data:image/svg+xml;base64,${btoa(
       </linearGradient>
     </defs>
     <rect width="100%" height="100%" fill="url(#bg)"/>
-  </svg>`
+  </svg>`,
 )}`;
 
 function HeroSection({ data, onCtaClick }: HeroSectionProps) {
   // Preload critical images immediately
   useEffect(() => {
     if (data.backgroundImage) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
       link.href = data.backgroundImage;
-      link.setAttribute('fetchpriority', 'high');
+      link.setAttribute("fetchpriority", "high");
       document.head.appendChild(link);
     }
 
     if (data.logo) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
       link.href = data.logo;
-      link.setAttribute('fetchpriority', 'high');
+      link.setAttribute("fetchpriority", "high");
       document.head.appendChild(link);
     }
   }, [data.backgroundImage, data.logo]);
@@ -103,7 +103,9 @@ function HeroSection({ data, onCtaClick }: HeroSectionProps) {
           className="group inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 animate-slide-up"
         >
           {data.ctaText}
-          <span className="ml-2 text-xl transition-transform duration-300 group-hover:translate-x-1">→</span>
+          <span className="ml-2 text-xl transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
         </button>
 
         {/* Scroll Indicator */}

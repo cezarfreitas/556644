@@ -75,7 +75,9 @@ function FormSection({
                       <Icon className="text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+                      <h3 className="text-xl font-bold mb-2">
+                        {benefit.title}
+                      </h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
                   </div>
@@ -88,7 +90,10 @@ function FormSection({
               <form onSubmit={onFormSubmit} className="space-y-6">
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-2"
+                  >
                     {data.nameLabel}
                   </label>
                   <input
@@ -103,13 +108,18 @@ function FormSection({
                     placeholder="Digite seu nome completo"
                   />
                   {formErrors.name && (
-                    <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
+                    <p className="text-red-500 text-sm mt-1">
+                      {formErrors.name}
+                    </p>
                   )}
                 </div>
 
                 {/* WhatsApp Field */}
                 <div>
-                  <label htmlFor="whatsapp" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="whatsapp"
+                    className="block text-sm font-medium mb-2"
+                  >
                     {data.whatsappLabel}
                   </label>
                   <input
@@ -124,7 +134,9 @@ function FormSection({
                     placeholder="(11) 99999-9999"
                   />
                   {formErrors.whatsapp && (
-                    <p className="text-red-500 text-sm mt-1">{formErrors.whatsapp}</p>
+                    <p className="text-red-500 text-sm mt-1">
+                      {formErrors.whatsapp}
+                    </p>
                   )}
                 </div>
 
@@ -154,7 +166,9 @@ function FormSection({
                         onChange={(e) => onCnpjRadioChange(e.target.value)}
                         className="text-orange-600 focus:ring-orange-500"
                       />
-                      <span className="ml-2">Não possuo, mas tenho interesse</span>
+                      <span className="ml-2">
+                        Não possuo, mas tenho interesse
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -162,7 +176,10 @@ function FormSection({
                 {/* CNPJ Field */}
                 {showCnpjField && (
                   <div className="animate-slide-up">
-                    <label htmlFor="cnpj-number" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="cnpj-number"
+                      className="block text-sm font-medium mb-2"
+                    >
                       {data.cnpjLabel}
                     </label>
                     <input
@@ -177,7 +194,9 @@ function FormSection({
                       placeholder="00.000.000/0000-00"
                     />
                     {formErrors.cnpj && (
-                      <p className="text-red-500 text-sm mt-1">{formErrors.cnpj}</p>
+                      <p className="text-red-500 text-sm mt-1">
+                        {formErrors.cnpj}
+                      </p>
                     )}
                   </div>
                 )}

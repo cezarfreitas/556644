@@ -20,35 +20,35 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: (id) => {
           // React core
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'vendor-react';
+          if (id.includes("react") || id.includes("react-dom")) {
+            return "vendor-react";
           }
           // Icons
-          if (id.includes('react-icons')) {
-            return 'vendor-icons';
+          if (id.includes("react-icons")) {
+            return "vendor-icons";
           }
           // Radix UI components
-          if (id.includes('@radix-ui')) {
-            return 'vendor-ui';
+          if (id.includes("@radix-ui")) {
+            return "vendor-ui";
           }
           // Large dependencies
-          if (id.includes('framer-motion')) {
-            return 'vendor-animation';
+          if (id.includes("framer-motion")) {
+            return "vendor-animation";
           }
           // Node modules
-          if (id.includes('node_modules')) {
-            return 'vendor';
+          if (id.includes("node_modules")) {
+            return "vendor";
           }
         },
         // Optimize chunk names
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
+        assetFileNames: "assets/[name]-[hash].[ext]",
       },
     },
     // Improve build performance
-    target: 'es2020',
-    minify: 'esbuild',
+    target: "es2020",
+    minify: "esbuild",
     sourcemap: false, // Disable in production for smaller bundles
   },
   plugins: [react(), expressPlugin()],

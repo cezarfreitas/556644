@@ -11,10 +11,13 @@ import {
   FaFacebook,
   FaInstagram,
   FaStore,
-  FaMapMarkerAlt
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 import { useLandingPageData } from "../hooks/useLandingPageData";
-import { trackFormSubmission, submitToFormAPI } from "../components/TrackingScripts";
+import {
+  trackFormSubmission,
+  submitToFormAPI,
+} from "../components/TrackingScripts";
 import SEOHead from "../components/SEOHead";
 import DynamicColors from "../components/DynamicColors";
 import HeroSection from "../components/sections/HeroSection";
@@ -27,11 +30,19 @@ const TrackingScripts = lazy(() => import("../components/TrackingScripts"));
 const LazyGallery = lazy(() => import("../components/LazyGallery"));
 
 // Lazy load heavy sections
-const TestimonialsSection = lazy(() => import("../components/sections/TestimonialsSection"));
-const ShowroomSection = lazy(() => import("../components/sections/ShowroomSection"));
-const HistorySection = lazy(() => import("../components/sections/HistorySection"));
+const TestimonialsSection = lazy(
+  () => import("../components/sections/TestimonialsSection"),
+);
+const ShowroomSection = lazy(
+  () => import("../components/sections/ShowroomSection"),
+);
+const HistorySection = lazy(
+  () => import("../components/sections/HistorySection"),
+);
 const FAQSection = lazy(() => import("../components/sections/FAQSection"));
-const FooterSection = lazy(() => import("../components/sections/FooterSection"));
+const FooterSection = lazy(
+  () => import("../components/sections/FooterSection"),
+);
 
 export default function Index() {
   // Carregar dados editáveis do admin
@@ -681,13 +692,16 @@ export default function Index() {
     }
 
     // Additional safety check for valid token format
-    if (!META_ACCESS_TOKEN.startsWith("EAA") || META_ACCESS_TOKEN.length < 100) {
+    if (
+      !META_ACCESS_TOKEN.startsWith("EAA") ||
+      META_ACCESS_TOKEN.length < 100
+    ) {
       console.warn("Meta Conversion API: Skipping - invalid token format");
       return;
     }
 
     // Check if fetch is available
-    if (typeof fetch === 'undefined') {
+    if (typeof fetch === "undefined") {
       console.warn("Meta Conversion API: Skipping - fetch not available");
       return;
     }
@@ -965,7 +979,9 @@ export default function Index() {
           credentials: "omit",
         });
       } catch (fetchError) {
-        console.warn("❌ Meta Conversion API: Fetch failed (this is expected in some environments)");
+        console.warn(
+          "❌ Meta Conversion API: Fetch failed (this is expected in some environments)",
+        );
         console.warn("Error details:", fetchError?.message || fetchError);
 
         // Log for analytics but don't fail the user experience
@@ -1078,11 +1094,13 @@ export default function Index() {
         }
       }
     } catch (error) {
-      console.warn("❌ Meta Conversion API: Error occurred (this won't affect user experience)");
+      console.warn(
+        "❌ Meta Conversion API: Error occurred (this won't affect user experience)",
+      );
       console.warn("Error message:", error?.message || "Unknown error");
 
       // Don't log sensitive details in production, just basic info
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === "development") {
         console.error("Meta API Error Details:", {
           message: error?.message,
           name: error?.name,
