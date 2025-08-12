@@ -59,6 +59,22 @@ function FormSection({
   onCnpjChange,
   onCnpjRadioChange,
 }: FormSectionProps) {
+  const data = landingData.form;
+
+  // Early return if no data
+  if (!data) {
+    return (
+      <section className="py-20 bg-black text-white" id="formulario">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-orange-500 mx-auto"></div>
+            <p className="mt-4 text-white">Carregando formulário...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-20 bg-black text-white" id="formulario">
       <div className="container mx-auto px-4">
