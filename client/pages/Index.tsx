@@ -1,25 +1,22 @@
-import { useState, useEffect } from "react";
-import { MdStar, MdAttachMoney } from "react-icons/md";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { useLandingPageData } from "../hooks/useLandingPageData";
-import TrackingScripts, {
-  trackFormSubmission,
-  submitToFormAPI,
-} from "../components/TrackingScripts";
+import { trackFormSubmission, submitToFormAPI } from "../components/TrackingScripts";
 import SEOHead from "../components/SEOHead";
 import DynamicColors from "../components/DynamicColors";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaStore,
-  FaArrowRight,
-  FaChevronDown,
-  FaChevronLeft,
-  FaChevronRight,
-  FaCheck,
-  FaExclamationTriangle,
-  FaGift,
-  FaRocket,
-} from "react-icons/fa";
+import HeroSection from "../components/sections/HeroSection";
+import FormSection from "../components/sections/FormSection";
+import LazySection from "../components/LazySection";
+
+// Lazy load non-critical components
+const TrackingScripts = lazy(() => import("../components/TrackingScripts"));
+const LazyGallery = lazy(() => import("../components/LazyGallery"));
+
+// Lazy load heavy sections
+const TestimonialsSection = lazy(() => import("../components/sections/TestimonialsSection"));
+const ShowroomSection = lazy(() => import("../components/sections/ShowroomSection"));
+const HistorySection = lazy(() => import("../components/sections/HistorySection"));
+const FAQSection = lazy(() => import("../components/sections/FAQSection"));
+const FooterSection = lazy(() => import("../components/sections/FooterSection"));
 
 export default function Index() {
   // Carregar dados editáveis do admin
@@ -1269,7 +1266,7 @@ export default function Index() {
       cnpj: cnpjError,
     });
 
-    // Se houver erros, não enviar
+    // Se houver erros, n��o enviar
     if (nameError || whatsappError || cnpjError) {
       trackEvent("form_validation_error", {
         errors: {
