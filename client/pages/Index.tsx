@@ -1822,10 +1822,10 @@ export default function Index() {
                 <div className="text-center">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                     {submitStatus === "idle"
-                      ? "Cadastre-se como Lojista!"
+                      ? landingData.form.formTitle
                       : submitStatus === "success"
-                        ? "Formulário Enviado!"
-                        : "Ops! Algo deu errado"}
+                        ? landingData.form.formSuccessTitle
+                        : landingData.form.formErrorTitle}
                   </h3>
                 </div>
 
